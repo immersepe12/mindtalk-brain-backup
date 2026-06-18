@@ -1,6 +1,6 @@
 # BRAIN — Mindtalk SEO Growth Engine
 
-**Last updated:** 2026-06-15 (autonomous loop initialized)
+**Last updated:** 2026-06-18 (Strategist — quiet day; W16 pos-100 reconciliation closed as noise; trust-issues confirmed drop held under algo_watch)
 **Read by:** Strategist (Task 10), Executor (Task 11), Learner (Task 12)
 **Written by:** Strategist + Learner (in their respective scheduled runs)
 
@@ -69,13 +69,31 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 
 4. **Homepage app-first redesign** (shipped 2026-06-12, merge `c35193f`)
    - Expected: app CTA click-through becomes #1 hero conversion path
-   - Status: Mixpanel-tracked; 7-day check pending
+   - Status: Mixpanel-tracked; 7-day check pending (2026-06-19) — ⚠ Mixpanel MCP access BLOCKED, so 06-19 read will be rank/impr proxy only
+
+5. **Sleep/insomnia cluster coordinated weakness** (detected 2026-06-15) — ✅ **REFUTED 2026-06-16**
+   - Hypothesis was: simultaneous sibling drops to *exactly* position 100 = technical deindex.
+   - Result: GSC 06-16 re-pull found all 3 siblings indexed, positions *improved* WoW, signal=NOISE. CBT-i had its best week of the series inside the alleged-drop window. Root cause: DataForSEO single-keyword tracker "100" is a "not-in-top-100-this-pull" sentinel, **not** a Google index signal. No content action taken. Log: `memory/experiments/investigation-sleep-cluster-2026-06-16.md`.
+   - **Carry-forward learning:** the *same* exact-100 pattern recurred 06-16 (10 URLs). The data-quality gate now auto-quarantines ≥4 uniform pos-100 drops. W16 reconciles them against the 06-18 pull. Treat exact-100 as DataForSEO noise by default (AP5).
+   - **W16 CLOSED 2026-06-18 — noise confirmed a 3rd time.** The 06-16 ten recovered (none in the 06-18 pos-100 set) and the 06-18 pull produced a *different* 15-URL pos-100 set. The exact-100 set rotates run-to-run → conclusively a DataForSEO API/parsing artefact, not deindex. The auto-quarantine gate works as designed; keep treating exact-100 as noise and only escalate if the *same* URLs report 100 across two consecutive pulls.
+
+6. **Conversion layer reframes growth strategy** (T19 inaugural 2026-06-17, Mixpanel 4011856)
+   - Signal: the strongest converters are /doctors (🟢 Goldmine, 321% intent), /experts/expert-therapists (62%), and /doctors/telugu- & tamil-speaking-doctors (🟡 Rockets, 91-95%). High-traffic discovery blogs (dry-begging, hamilton-anxiety-scale, dominant-personality, etc.) convert **~0 booking intent**. Geo: Bengaluru = 65% of all booking intent; Mumbai/Chennai/Delhi = high-intent low-volume (expansion); Hyderabad/Telangana = leak (11% intent).
+   - Hypothesis: the autonomous loop has been optimizing a **vanity axis** (clicks on blogs) while the real booking engine (doctor/expert pages) sits mostly outside the SEO tracked set (config tracks illnesses/treatments/blogs + doctors-LISTINGS, but the converting pages are /doctors, /experts/, /doctors/{lang}-speaking-doctors). The highest-leverage SEO move is to route blog link-equity into doctor Goldmines and to build language/metro doctor pages — NOT to keep harvesting CTR on discovery blogs.
+   - Status: LIMITED_BASELINE (week 1 of data). Patterns need ≥3 weeks before T5 fires (D9). Acting cautiously: draft internal-link reorientation sprint now (BACKLOG #8, draft-only/staged), defer new doctor-page content (D9) until pattern confirmed. P9 scoring modifiers now active.
+   - Open dependency: cross-domain revenue validation BLOCKED (consult project 3986277 absent) — can't yet confirm intent → real bookings. Escalated (BACKLOG #11a).
 
 ### Open structural gaps
 
 - 185 inventory items (assessments + journeys + worksheets) have no dedicated SEO page (16% → 95% coverage opportunity)
 - Refresh briefs in algo_watch HOLD until Core Update settles (~7-14 days)
 - 2 recovery-followup briefs need strategic angle decision (ERP + life-coach round-2)
+
+### Operational notes (2026-06-15)
+
+- **Auto-Ship push path — ✅ RESOLVED 2026-06-17.** The 3 inaugural NEW blogs shipped via `549dac3` (Task 9 manual completion); 32/32 NEW briefs now live, 254 blogs total. The Vercel attribution block (`user.email` mismatch → Venkat-P7) was fixed 06-16 (`89e293a`); the deploy pipeline is unblocked for T9/T11/T16. Auto-ship 06-17 ran clean ("nothing to ship — all shipped"). Indexation watches W12-W14 opened.
+- **May 2026 core update is receding:** /treatments/psychotherapy impressions rebounded +109% (89→186) on 06-15 GSC and dropped off the flagged queue as noise. This is the first concrete "update settling" signal. Hold YMYL refreshes one more cycle; plan to **resume the held refresh queue after ~06-23** if the trend holds. Don't refresh mid-rebound (muddies attribution).
+- **Real blog schema (confirmed by T9 against 251 live files):** quickAnswer + keyTakeaways + faqs live in **frontmatter** (not `<QuickAnswer>`/`<KeyTakeaways>` body components as some specs/briefs show); semantic `category` (e.g. relationship-issues/ocd/general) + `reviewer:` slug; FAQs render as FAQPage JSON-LD; body is plain GFM. Verifier quality-bar checks should match the frontmatter schema, not body components.
 
 ### Anti-patterns to avoid (hard rules)
 

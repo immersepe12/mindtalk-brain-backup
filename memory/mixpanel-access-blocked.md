@@ -1,34 +1,26 @@
-# Mixpanel Access Blocked — Mindtalk website (project 4011856)
+# Mixpanel access — partial resolution, 2026-06-16
 
-**Detected:** 2026-06-15 (Task 15 inaugural run)
-**Status:** BLOCKED — no conversion data reachable. Two independent blockers, both admin-side.
+## Resolved sources (autonomous loop has access)
 
-## Diagnosis
+| Project | Region | Method | Status |
+|---|---|---|---|
+| 4011856 Mindtalk website | US | MCP (mcp.mixpanel.com) | ✅ Working |
+| 3986277 Cadabams consult | US | MCP (mcp.mixpanel.com) | ✅ Working |
 
-### Blocker 1 — Direct API is plan-gated
-- Endpoint: `https://mixpanel.com/api/2.0/*`
-- Auth: project-scoped API Secret (`secrets/mixpanel-mindtalk.txt`) — **VALID** (no 401; request was recognised).
-- Result: **HTTP 402**, body: `{"error": "Your plan does not allow API calls. Upgrade at mixpanel.com/pricing"}`
-- Reproduced on `events/names` AND `segmentation`; on both US and EU clusters → not endpoint- or region-specific.
-- **Meaning:** the project's Mixpanel plan tier does not include the data/query API. This is NOT an auth/secret problem — do not regenerate the secret.
+## Blocked source (intentionally unaddressed)
 
-### Blocker 2 — Mixpanel MCP per-project access toggle is OFF
-- Account: connected via Kushal's login (owner of org "cadabams group", id 3076134).
-- `Get-Projects` → project 4011856 "Mindtalk website" IS visible (workspace 4507622). Account-level access is fine.
-- `Get-Events` / `Get-Business-Context` on 4011856 → `"MCP access is not enabled for this project"`.
-- Same error on a 2nd project (3986277 "Cadabams consult") → org/project-level setting, not Mindtalk-specific.
+| Project | Region | Wall | Decision |
+|---|---|---|---|
+| 3984638 cadabams group (Mindtalk app) | EU | Two stacked blockers: (a) no Mixpanel EU MCP connector in Cowork registry, (b) project plan tier blocks Data Export API (HTTP 402 on all /api/2.0/ endpoints) | **Kushal decided NOT to upgrade Mixpanel plan.** Wait for Anthropic to add EU MCP connector. No timeline. App engagement signals (assessments, journeys, Riya, audio) stay out of autonomous loop for now. |
 
-## Fixes — either one unblocks Task 15 (both are admin actions, not autonomous)
+## What this means for the loop
 
-**Option A — enable MCP access (recommended: likely free; account already connected)**
-1. Mixpanel admin → Settings → Integrations → enable MCP / AI access for project 4011856.
-2. T15 then pulls data through the MCP. No plan change required.
+The autonomous loop's primary job is SEO + conversion. The two working sources cover:
+- Marketing-site traffic, content engagement, top-of-funnel behaviour (4011856)
+- Booking funnel, payment flow, doctor selection UX (3986277)
 
-**Option B — upgrade plan for API access**
-1. Upgrade "Mindtalk website" (4011856) to a Mixpanel plan that includes API calls — mixpanel.com/pricing.
-2. Unblocks the direct-API secret path used by the current T15 script.
+App engagement signals are product/UX inputs more than SEO inputs. Strategist + Learner have enough data to do their job; Meta-Learner can flag if they ever NEED the missing data to make a specific decision, at which point we revisit the cost/wait tradeoff.
 
-## Until fixed
-- Recurring T15 (Wed 10 AM IST) retries weekly; the full pipeline auto-runs the moment either toggle flips.
-- TRAJECTORY.md "Conversion KPIs" rows stay TBD (no data). TRAJECTORY left untouched this run — it is Learner-owned (single-writer).
-- Autonomous SEO loop continues on SEO-only data, exactly as the task's first-run fallback specifies.
+## Service account rotation pending
+
+EU service account (`mp-autonomous-seo-loop.d7e328.mp-service-account`) was created and secret was exposed in chat. Since the loop can't use it anyway, Kushal should delete it from eu.mixpanel.com → Settings → Service Accounts when convenient. No urgency — secret is useless without API access.

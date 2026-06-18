@@ -1,0 +1,56 @@
+{
+  "amaha.com": {
+    "kw_count": 0,
+    "cost": 0.01,
+    "top5": []
+  },
+  "yourdost.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "top5": [
+      "counselling websites",
+      "counsellors online",
+      "dost.com",
+      "yourdost",
+      "yourdost careers"
+    ]
+  },
+  "betterhelp.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "top5": [
+      "best jokes about love",
+      "funny boyfriend jokes",
+      "funny joke about love",
+      "funny joke for boyfriend",
+      "funny jokes for bf"
+    ]
+  },
+  "manastha.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "top5": [
+      "manastha",
+      "manastha",
+      "psychiatric job",
+      "psychiatrist job",
+      "best therapist online"
+    ]
+  },
+  "mfine.com": {
+    "kw_count": 0,
+    "cost": 0.01,
+    "top5": []
+  },
+  "mindtalk.in": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "top5": [
+      "cadabams mind talk",
+      "mindtalk",
+      "therapist near me relationship",
+      "cadabams indiranagar",
+      "healthy relationship slogan"
+    ]
+  }
+}

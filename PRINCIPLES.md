@@ -45,3 +45,34 @@ Each entry: principle + evidence + when it applies.
 ---
 
 (Learner appends new principles weekly. Strategist consults this file every run.)
+
+## P9 — Conversion-validated tiers weight Strategist scoring more than impression-only signals (2026-06-16)
+
+**Source:** Kushal's insight + T19 architecture. The loop was optimizing for clicks (proxy) — should optimize for bookings (real).
+
+**Rule:** When Strategist scores actions, conversion-tier classification (Goldmine/Rocket/Leaky/Dead from T19's PAGE-CONVERSION-MAP) carries more weight than raw impressions/CTR signals.
+
+**Specific scoring updates Strategist applies starting 2026-06-17:**
+
+| Signal | Score |
+|---|---|
+| Action target is a 🟢 Goldmine | +50 |
+| Action target is a 🟡 Rocket (traffic-driving action: refresh, internal links) | +30 |
+| Action target is a 🟡 Rocket (anything else) | +20 |
+| Action target is a 🔴 Leaky Bucket (UX fix / professional input action) | +25 |
+| Action target is a 🔴 Leaky Bucket (traffic-growth action) | -30 |
+| Action target is ⚫ Dead Weight | -40 |
+| Action target unclassified (page not yet in T19's analyzed set) | 0 (no penalty, no boost) |
+| GEO bonus: action targets a high-converting state/city | +20 |
+| Action matches a confirmed High-Converter Pattern (4+ weeks evidence) | +25 |
+| Stated intent_rate "expected impact" exceeds 2x current tier baseline | -20 (impact realism check) |
+
+**Sanity-check via cross-domain validation:** Strategist must also read the validated-revenue layer (real bookings on consult.cadabams.com attributed back to Mindtalk pages). If a page is classified Goldmine on intent but has 0 attributable bookings in 4 weeks, treat as "intent inflated" — score normally but flag for Learner review.
+
+**Why this matters:**
+- Strategy now optimizes for the business
+- Vanity clicks penalized; conversion-validated investment rewarded
+- Geographic insights mean SEO investment goes where Bangalore + tier-1 cities convert
+
+**How to apply:** Before any action's score is finalized, Strategist must read brain/PAGE-CONVERSION-MAP.md, GEO-CONVERSION-MAP.md, and HIGH-CONVERTER-PATTERNS.md. The strategist-signal-feed.md is the digest version Strategist reads first; the full maps are read when scoring a specific action.
+

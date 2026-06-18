@@ -9,11 +9,11 @@
 
 | Domain | Brand | Notes |
 |---|---|---|
-| amaha.com | Amaha (formerly InnerHour) | Strongest Indian competitor on SEO |
-| yourdost.com | YourDOST | Heavy on emotional support / chat |
-| betterhelp.com | BetterHelp India | Global brand with India market push |
-| manastha.com | Manastha | Smaller, growing |
-| mfine.com | MFine | Broader telehealth with mental health vertical |
+| amahahealth.com | Amaha (formerly InnerHour) | Strongest Indian competitor on SEO + AI citations. ⚠ ranks on **amahahealth.com**, not amaha.com (corrected 2026-06-18) |
+| yourdost.com | YourDOST | Owns the counselling-intent cluster (counselling, online/student/free counsellor) |
+| betterhelp.com | BetterHelp India | India footprint weak/off-topic (love jokes, relationship-base queries) — low real MH threat |
+| manastha.com | Manastha | Smaller; brand + generic psychiatry-job terms |
+| mfine.co | MFine | ⚠ ranks on **mfine.co**, not mfine.com (corrected 2026-06-18). Pivoted to general telehealth — minimal MH overlap; deprioritize |
 
 ## Adjacent (Cadabams group — coordinate, don't cannibalize)
 

@@ -1,0 +1,25 @@
+# Verifier Audit Log
+
+Appended by the executor on behalf of the VERIFIER sub-agent (brain/VERIFIER.md §11).
+One line per verdict. Format:
+`{TIMESTAMP} | {action_type} | target: {target} | verdict: APPROVE/VETO/NEEDS_HUMAN | reason: {detail}`
+
+(Seeded 2026-06-16 — file did not previously exist; the VERIFIER sub-agent flagged it missing.)
+
+---
+
+2026-06-16 ~15:00 IST | ship_NEW_blog | target: /blogs/couple-therapy-techniques | verdict: APPROVE | reason: All quality bars pass on the REAL frontmatter schema (quickAnswer/keyTakeaways/faqs in frontmatter, not JSX); metaTitle 50ch +"| Mindtalk"; metaDesc 136; 5 FAQs; 10 links all resolve; reviewer swarupa-mohan-udgiri (sole couples/relationship specialist, +1, within +3/run cap); §9 cluster at-cap not over (2 manual ships 2026-06-09 + this NEW addition, not a modification). MDX compiles clean. NOT pushed — environment blocked (no git creds + unlink-restricted mount).
+2026-06-16 ~15:00 IST | ship_NEW_blog | target: /blogs/how-to-find-a-therapist-for-ocd | verdict: APPROVE | reason: Clean across checklist; OCD is its own cluster (no blast radius with the other two); ERP framed first-line without unsourced efficacy %; reviewer krishna-k-r (OCD map) +1. MDX compiles clean. NOT pushed — environment blocked.
+2026-06-16 ~15:00 IST | ship_NEW_blog | target: /blogs/how-to-find-a-therapist-in-india | verdict: APPROVE | reason: Fills confirmed zero-coverage general "find a therapist" gap; broadest demand of the three; reviewer suhita-saha +1; single numeric claim hedged per YMYL rule. MDX compiles clean. NOT pushed — environment blocked.
+
+# Run summary 2026-06-16: 3 APPROVE / 0 VETO / 0 NEEDS_HUMAN. Content cleared to ship; live publish deferred to authenticated machine. reviewer-load-state.json is stale (last_updated 2026-05-26) — refresh recommended before next load-based assignment.
+
+2026-06-16 16:35 IST | investigate_regression | target: /treatments/exposure-response-therapy-ert | verdict: NEEDS_HUMAN | reason: Read-only SERP/entity research is path-safe (§1: writes to brain/memory/experiments/, not the YMYL MDX; no 301/title/H1/slug change; no push) and does not literally violate AP3 (no auto-ship) or AP1 (no migration fired). BUT §8 prior-failure clause applies — round-1 body fix (ff7f459, 2026-05-28) on this exact target already FAILED its 14d eval (06-11 RECOVERY_FAILED), and the whole purpose of this pass is to tee up a human-gated 301+title/H1 migration on a YMYL /treatments/ page that sits under the strictest "Manual only" gate and one step from an AP1-class staged-rollout risk. The page is also in the current algo_watch "Held this cycle" list (core update receding, resume ~06-23), adding ranking sensitivity. Per VERIFIER's drift-prevention mandate + BRAIN "Touch YMYL → human", round-2 recovery research on a failed YMYL page should be surfaced to Kushal, not run silently in the autonomous loop. Research may proceed AS a human-routed step; output stays recommendation-only for sign-off (matches BACKLOG #5 "research only — migration is human-gated").
+
+2026-06-16 16:35 IST | investigate_regression | target: sleep-cluster (how-anxiety-affects-sleep + cognitive-behavioral-therapy-for-insomnia + sleep-disorder-tests) | verdict: APPROVE | reason: Read-only diagnostic, 0 pages modified, output to allowed brain/memory/experiments/ + BACKLOG row close. IS the AP5-mandated verification BRAIN flagged UNVERIFIED. Non-YMYL /blogs/ inspection (AP3 governs shipping, not inspecting). §9 blast radius 0/3. §10 PII: aggregated GSC keyword/impr/position only — no emails/phones/user-ids.
+
+# Run summary 2026-06-16 16:35 IST (Executor T11): 1 APPROVE (sleep-cluster investigate) / 0 VETO / 1 NEEDS_HUMAN (ERT round-2 investigate). Sleep investigation executed → deindex REFUTED (DataForSEO tracker noise). ERT routed to brain/needs-human-review/2026-06-16-ert-round2/.
+
+2026-06-17 16:30 IST | investigate_regression | target: /treatments/life-coach-therapy | verdict: APPROVE | reason: Read-only SERP/AI-Overview/GSC diagnostic; writes only to brain/memory/experiments/, 0 pages modified/shipped, no 301/title/H1/slug, no push (§1,§4,§9 clean). §8 prior-failure clause does NOT trigger NEEDS_HUMAN: this is a *different action type* (diagnostic) than the failed round-1 *content refresh*, not a re-attempt — matches sleep-cluster APPROVE precedent. Diverges from yesterday's ERT NEEDS_HUMAN because (a) it tees up NO human-gated migration (downstream rec is a reversible meta/title CTR test, not a 301/slug change), and (b) life-coaching is less clinically YMYL than ERP. algo_watch "Held" gates content changes, not reads. §10 PII: aggregated GSC keyword/impr/pos only — output kept aggregated. AP5-aligned verify-before-act.
+
+# Run summary 2026-06-17 16:30 IST (Executor T11): 1 APPROVE (life-coach-therapy investigate) / 0 VETO / 0 NEEDS_HUMAN. Investigation executed → "regression" REFUTED: "what is a life coach" is permanent SERP-eligibility loss (zero impr pre-refresh), page is actually a growing CTR-harvest candidate (footprint 95→172, pos ~10.8, ~0% CTR). BACKLOG #6 replaced with deferred meta-test row, HELD until 06-25.

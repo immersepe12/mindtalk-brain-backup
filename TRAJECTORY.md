@@ -41,6 +41,24 @@
 
 ---
 
+## Conversion KPIs — weekly (Mixpanel T15 / project 4011856)
+
+_Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (inaugural 06-15 was access-blocked, so no true WoW baseline yet)._
+
+| Week (7d) | Page views | book CTA clicks | form_submitted | lp_form_submitted | lead_create_failed | Doctor→book CTA % | Flags |
+|---|---:|---:|---:|---:|---:|---:|---|
+| 2026-06-17 | 3,805 | 1,620 | 8 | 130 | 70 | 69% | lp:form 16x ⚠; on-site booking funnel ~0%; backend fail ~34% ⚠; riya(5)+where-to-start(3) invisible |
+
+**Variance > 20% WoW:** No true baseline yet (last week blocked). Manual-rerun WoW vs cited prior: book CTA +6.5%, form_submitted +33% (6→8, tiny absolute), lp_form +5%, lead_fail −3%. None material on absolute volume.
+
+**Standing conversion concerns for Strategist:**
+- Real lead capture = landing-page forms (130/wk), not the on-site multi-step booking form (8/wk; sequential conversion from page view ≈ 0%).
+- ~34% backend lead-creation failure (lead_create_failed 70 vs form_started 18 + lp path) — persistent 3 weeks. Engineering/backend issue, not SEO; flag to Kushal.
+- Doctor-profile path is the strongest intent signal (69% profile→book CTA) — prioritize doctor page SEO/coverage.
+- riya_page (5) and where-to-start (3) effectively undiscovered — internal linking / surfacing opportunity.
+
+---
+
 ## Adaptive learning — monthly rollup
 
 | Month | Principles added | Anti-patterns added | Watches opened | Watches closed | Recovery rate | Notes |
@@ -111,3 +129,29 @@ Every Sunday 6 PM, Learner:
 11. Includes TRAJECTORY snapshot in Sunday Slack digest
 
 Strategist reads this every day before deciding actions — knows where the gaps are.
+
+---
+
+## Conversion KPIs (T19-owned — Conversion Intelligence, Wed weekly)
+
+> Written by T19, not Learner. Source: Mixpanel 4011856, trailing 7d.
+
+| Week | Site intent rate | Median page intent | 🟢 Goldmines | 🟡 Rockets | 🔴 Leaky | ⚫ Dead | Top geo (share) | Revenue-validated bookings | Notes |
+|---|---:|---:|---:|---:|---:|---:|---|---:|---|
+| 2026-06-15 to 06-21 | 42% | 39.6% | 2 | 2 | 1 | 6 | Bengaluru (65%) | n/a (3986277 unavailable) | INAUGURAL · LIMITED_BASELINE · vol gates scaled · book_appointment-only intent |
+
+**Geographic concentration metric:** Bengaluru = 65% of all booking intent (high single-market dependence).
+**Tier movement:** n/a (no prior week).
+
+---
+
+## AI Search Citation KPIs (T17-owned — Competitive + AI Monitor, Thursday weekly)
+
+> Written by T17, not Learner. Source: live queries vs Perplexity / ChatGPT / Claude / Google AI Overview, 10 priority queries.
+
+| Week | Confirmed citations | Perplexity | ChatGPT | Claude | Google AI OV | Commercial-query citations (1-5) | Notes |
+|---|---:|---|---|---|---|---:|---|
+| 2026-06-18 | 3 / 40 cells | 2/10 (branded only) | SKIPPED (logout) | 0 clean (3 tested; branded contaminated) | 1/10 (AI OV present on only 1 query) | 0 | INAUGURAL BASELINE · Amaha = most-cited competitor · ChatGPT login needed · AI OV detection unreliable |
+
+**AI Overview citation share:** 1 of 10 priority queries rendered a Google AI Overview this run; Mindtalk was cited in it (ocd specialist bangalore, #3). Commercial-intent queries (online therapy / anxiety / depression / cbt / best platform) = 0 citations across all engines — the primary AI-visibility gap to close. Branded recall works on Perplexity ("mindtalk cadabams", "cadabams app").
+**Tier movement:** n/a (inaugural — first WoW diff next Thursday 2026-06-25).
