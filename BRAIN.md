@@ -1,6 +1,6 @@
 # BRAIN — Mindtalk SEO Growth Engine
 
-**Last updated:** 2026-06-18 (Strategist — quiet day; W16 pos-100 reconciliation closed as noise; trust-issues confirmed drop held under algo_watch)
+**Last updated:** 2026-06-19 (Strategist — quiet day; 0 new confirmed drops; pos-100 noise confirmed 4th time via zero-overlap; T17-1 online-therapy hub promoted to BACKLOG #12; flagged Jun-9 cohort url_locked monitoring gap)
 **Read by:** Strategist (Task 10), Executor (Task 11), Learner (Task 12)
 **Written by:** Strategist + Learner (in their respective scheduled runs)
 
@@ -93,6 +93,8 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 
 - **Auto-Ship push path — ✅ RESOLVED 2026-06-17.** The 3 inaugural NEW blogs shipped via `549dac3` (Task 9 manual completion); 32/32 NEW briefs now live, 254 blogs total. The Vercel attribution block (`user.email` mismatch → Venkat-P7) was fixed 06-16 (`89e293a`); the deploy pipeline is unblocked for T9/T11/T16. Auto-ship 06-17 ran clean ("nothing to ship — all shipped"). Indexation watches W12-W14 opened.
 - **May 2026 core update is receding:** /treatments/psychotherapy impressions rebounded +109% (89→186) on 06-15 GSC and dropped off the flagged queue as noise. This is the first concrete "update settling" signal. Hold YMYL refreshes one more cycle; plan to **resume the held refresh queue after ~06-23** if the trend holds. Don't refresh mid-rebound (muddies attribution).
+- **Monitoring gap (2026-06-19) — Jun-9 NEW_CONTENT cohort silently un-monitored.** Obs-monitor flagged that 6 NEW pages (anger-management-therapy, codependency-signs-causes-treatment, dbt-skills-modules, people-pleasing-how-to-stop, relationship-problems-signs-causes-solutions, what-is-somatic-therapy) carry `status=PUBLISHED` but have **no `url_locked` flag**, so the Step-1 filter (requires `url_locked==true`) skips them — their day-21 midpoint (~06-30) will be silently missed. This is the *missing-flag* sibling of the 06-16 *status-dimension* filter fix. Tracking-db edits are outside Strategist write scope → escalated to Kushal as BACKLOG #13 (set `url_locked=true` before 06-30). Recurrence of this class → Meta-Learner should propose hardening the Obs-monitor filter to lock-on-publish.
+- **pos-100 noise — now confirmed 4×.** The DataForSEO exact-position-100 quarantine set rotates run-to-run (06-16 → 06-18 → 06-19 sets share zero URLs). Established rule (AP5/P5): treat exact-100 as API/parsing noise by default; only escalate to a deindex investigation if the *same* ≥4 URLs report 100 across two consecutive pulls. The auto-quarantine gate is working as designed.
 - **Real blog schema (confirmed by T9 against 251 live files):** quickAnswer + keyTakeaways + faqs live in **frontmatter** (not `<QuickAnswer>`/`<KeyTakeaways>` body components as some specs/briefs show); semantic `category` (e.g. relationship-issues/ocd/general) + `reviewer:` slug; FAQs render as FAQPage JSON-LD; body is plain GFM. Verifier quality-bar checks should match the frontmatter schema, not body components.
 
 ### Anti-patterns to avoid (hard rules)
