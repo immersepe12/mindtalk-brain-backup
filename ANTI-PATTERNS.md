@@ -33,6 +33,15 @@
 - Counter-example: Task 2 was re-confirming /treatments/psychotherapy 1 day after its brief was created, would have caused duplicate briefs with conflicting recommendations.
 - Rule: workflow already handles this (logged 2026-06-12) — Strategist double-checks tracking-db before fire.
 
+## AP8. Never treat an exact position-100 reading from the DataForSEO single-keyword tracker as a deindex/drop signal
+- Specific sub-case of AP5. "Position 100" from the DataForSEO single-keyword tracker is a "not-in-top-100-on-this-pull" **sentinel value**, not a measured Google rank. The quarantined exact-100 set **rotates run-to-run** (different URLs every pull) — proof it is an API/parsing artefact, not real ranking movement.
+- Evidence (3+ closed confirmations):
+  1. **Sleep-cluster investigation 2026-06-16** — 3 siblings flagged at pos 100; GSC re-pull found all indexed, positions *improved* WoW; signal = NOISE (`memory/experiments/investigation-sleep-cluster-2026-06-16.md`).
+  2. **W16 closed 2026-06-18** — the 06-16 ten recovered (none in the 06-18 pos-100 set); 06-18 produced a *different* 15-URL set → rotates = noise.
+  3. **06-19 reconcile** — zero overlap (`comm -12` empty) between the 06-18 and 06-19 pos-100 sets → 4th confirmation.
+- Rule: auto-quarantine any pull with ≥4 uniform exact-100 readings; assume noise by default and take **no content/deindex action**. Escalate to a genuine deindex investigation ONLY if the **same ≥4 URLs** report exactly 100 across **two consecutive pulls**. (Open carry: the 06-19 set re-checks Mon 06-22 — assume noise until then.)
+- Established: 2026-06-21 (Learner), 3 closed confirmations.
+
 ---
 
 (Learner appends new anti-patterns when closed watch windows reveal harmful actions to avoid.)

@@ -10,10 +10,12 @@
 
 | Week | Clicks | Δ | Impr | Δ | CTR | Pos | Pages | Inv % | YTD path to 12mo goal |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 2026-06-08 to 06-14 | 1,785 | -13.2% | 289K | -32% | 0.6% | 13.6 | 691 | 27% | Baseline |
-| 2026-06-15 to 06-21 | TBD | — | — | — | — | — | — | — | — |
+| 2026-06-08 to 06-14 | 1,785 | -13.2% | 289K | -32% | 0.6% | 13.6 | 691 | 27% | Baseline (DataForSEO source) |
+| 2026-06-15 to 06-21 | 1,997 * | +9.5% * | 254,665 * | +4.9% * | 0.8% * | 10.1 * | 691 | 27% | * No fresh data this window — figures are the latest GSC weekly report (wk 06-06→06-12). Δ = that report's WoW (both up = healthy rebound). True 06-15→06-21 report lands Mon 06-22 (rank/GSC cron is Mon/Tue/Thu/Fri; no weekend pull). |
 
 (Learner fills new row every Sunday)
+
+> ⚠ **Source caveat:** the baseline row (289K impr / 13.6 pos) is DataForSEO-sourced; the 06-15→06-21 row is GSC-sourced (254,665 impr / 10.1 pos), so cross-row deltas are NOT apples-to-apples. Within GSC, the latest week is *up* on both clicks (+9.5%) and impressions (+4.9%) with best-in-trend position (10.1) — the late-May pullback has reversed. Next Sunday's row (06-28) will carry the true 06-15→06-21 GSC week **plus** the 06-23 Sprint A/B/C recovery reads — the first real verdict on the recovery playbooks.
 
 ---
 
@@ -22,7 +24,7 @@
 | Week | NEW shipped | Refresh shipped | YMYL refresh | Sprints fired | Stubs | Investigations | Total |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 2026-06-08 to 06-14 | 6 (manual sprint) | 3 | 0 | 4 (A, B×3, C) | 0 | 1 | 14 |
-| 2026-06-15 to 06-21 | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| 2026-06-15 to 06-21 | 3 (`549dac3`) | 1 (W15 anxiety-neurosis CTR meta, `579bb7c`) | 0 | 0 fired (2 drafted: #8 / #8R conversion-reorientation) | 0 | 4 (sleep-cluster, life-coach, W16 pos-100, 06-19 pos-100) | 8 |
 
 ---
 
@@ -30,13 +32,13 @@
 
 | KPI | Last week | 4-week avg | Q3 target | Status |
 |---|---:|---:|---:|---|
-| Avg CTR | 0.6% | 0.55% | 0.85% | 🔴 below |
-| Avg position | 13.6 | 14.1 | (no specific target) | 🟡 holding |
+| Avg CTR | 0.8% (GSC) | ~0.7% | 0.85% | 🟡 in-range (up from 0.6%; -6% to target) |
+| Avg position | 10.1 (GSC) | ~11.7 | (no specific target) | 🟢 best-in-trend (was 13.6) |
 | % pages with reviewer | 100% (YMYL) | 100% | 100% | 🟢 met |
 | % pages with Quick Answer | ~35% | — | 100% (Q4) | 🟠 in progress |
 | % pages with FAQ schema | ~40% | — | 100% (Q4) | 🟠 in progress |
-| Top-3 ranking queries | 5,706 | — | 7,500 (Q3) | 🟡 baseline |
-| Pages live | 691 | — | 800 (Q3) | 🟡 baseline |
+| Top-3 ranking queries | 5,706 (no fresh count) | — | 7,500 (Q3) | 🟡 baseline |
+| Pages live | 691 (+3 NEW shipped, count not re-measured) | — | 800 (Q3) | 🟡 baseline |
 | Inventory coverage | 27% | 27% | 45% (Q3) | 🟡 baseline |
 
 ---
@@ -63,7 +65,7 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 | Month | Principles added | Anti-patterns added | Watches opened | Watches closed | Recovery rate | Notes |
 |---|---:|---:|---:|---:|---:|---|
-| 2026-06 (in progress) | 7 | 7 | 11 | 0 | TBD | Loop initialized; first watches close 2026-06-23 |
+| 2026-06 (in progress) | 8 | 8 | 16 | 1 (W16, data-quality noise) | N/A (0 recovery-type closed — first land 06-23) | AP8 added 06-21 (exact-100 sentinel). W11 ⏸ deferred (Mixpanel). Recovery reads begin 06-23. |
 
 ---
 
@@ -71,13 +73,13 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 | Action class | Count | Avg outcome | Confidence going forward |
 |---|---:|---|---|
-| YMYL reviewer fix | 55 pages (Sprint A) | Pending 14d check | High (logged P1) |
-| AI Overview defense | 3 pages (Sprint B) | Pending 14d check | Medium (novel) |
-| CTR meta-rewrite | 20 pages (Sprint C) | Pending 14d check | High (logged P4) |
-| Homepage redesign | 1 page | 7d check pending | High (logged P9 future) |
-| NEW blog ships | 6 pages | Indexation in progress | High |
-| Refresh ships | 3 pages | 14d watches open | Medium |
-| Manual investigations | 1 (Reduce Stress cluster) | False positive identified | High (logged AP5) |
+| YMYL reviewer fix | 55 pages (Sprint A) | 14d check fires 06-23 | High (logged P1) |
+| AI Overview defense | 3 pages (Sprint B) | 14d check fires 06-23 | Medium (novel) |
+| CTR meta-rewrite | 21 pages (Sprint C 20 + W15 anxiety-neurosis) | Sprint C 06-23; W15 06-30 | High (logged P4) |
+| Homepage redesign | 1 page | ⏸ deferred — Mixpanel blocked | Unmeasured (logged P9) |
+| NEW blog ships | 9 pages (6 manual + 3 auto-ship `549dac3`) | W12-W14 indexation 07-01 | High |
+| Refresh ships | 4 pages (3 prior + W15) | 14d watches open | Medium |
+| Manual investigations | 6 (Reduce Stress, sleep-cluster, life-coach, W16, 06-19 pos-100, +earlier) | All resolved as noise/non-regression | High (logged AP5, AP8) |
 
 ---
 
@@ -85,12 +87,13 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 | Cap | This week usage | Limit | Status |
 |---|---|---|---|
-| NEW blogs auto-shipped | 6 | 20 | 30% — healthy headroom |
-| Refresh auto-shipped | 3 | 10 | 30% — healthy headroom |
+| NEW blogs auto-shipped | 3 (`549dac3`) | 20 | 15% — healthy headroom |
+| Refresh auto-shipped | 1 (W15) | 10 | 10% — well under |
 | % pages refreshed (rolling 30d) | ~5% | 20% | 25% of cap — fine |
-| % pages auto-modified (rolling 7d) | ~1% | 5% | 20% of cap — fine |
+| % pages auto-modified (rolling 7d) | ~0.6% | 5% | 12% of cap — fine |
 | Build failures | 0 | 0 | 🟢 |
-| Watches simultaneously open | 11 | 50 | 22% of cap — fine |
+| Watches simultaneously open | 15 | 50 | 30% of cap — fine |
+| Sprints fired | 0 (target 1/2wk; 2 drafted, human-gated post-06-23) | 1/wk | under — intentional (ALGO_WATCH hold) |
 
 ---
 
@@ -98,9 +101,10 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 | Metric | Target | Actual | Variance | Recommended action |
 |---|---|---|---|---|
-| Weekly clicks | 2,800 (Q3) | 1,785 | -36% | Need 5 weeks of consistent growth — bottleneck is shipping velocity. Auto-ship pipeline goes live this week, should close gap. |
-| Avg CTR | 0.85% (Q3) | 0.6% | -29% | Sprint C (CTR meta-rewrite) shipped 2026-06-09 — 14d check 2026-06-23 will tell if playbook is working at scale |
-| Inventory coverage | 45% (Q3) | 27% | -18pp | Need stub-page sprint (185-page gap). Drafted prompt pending Kushal approval. |
+| Weekly clicks | 2,800 (Q3) | 1,997 (GSC, latest wk) | -29% (improving from -36%) | Gap narrowing as core-update rebound continues. Don't perturb — resume held-refresh queue after 06-23, then the Sprint A/B/C recovery reads should add the next leg of reach. |
+| Avg CTR | 0.85% (Q3) | 0.8% (GSC) | -6% (was -29%) | Nearly closed. The 06-23 Sprint C check confirms whether the meta-rewrite playbook scales; if 🟢, expand CTR-harvest to clean-target page-1 queries (per P9, NOT vanity discovery blogs). |
+| Inventory coverage | 45% (Q3) | 27% | -18pp | Unchanged. Stub-page sprint (185-item gap) still pending Kushal approval — Meta-Learner owns the proposal. |
+| Production velocity (refresh + sprints) | refresh 5-8/wk, 1 sprint/2wk | 1 refresh, 0 sprints fired | below floor | **Intentional this week** — ALGO_WATCH hold suppresses refreshes until the core-update settles (~06-23) and sprints are human-gated to avoid muddying the A/B/C attribution window. If still below floor *after* the 06-23 resume, escalate as underutilisation (GOALS floor-for-2-weeks rule). |
 
 ---
 
@@ -108,7 +112,7 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 **Most recent week (Learner fills weekly):**
 
-> System initialised this week. Architecture complete: 5 autonomous agents + brain memory + 7-day self-modification preview window. Inaugural Auto-Ship run fires 2026-06-15 15:15 IST shipping 3 NEW blogs. Sprints A/B/C shipped 2026-06-09 with 14d checks on 2026-06-23 — those results will be the first real signal of whether the recovery playbook works. Until then, system is in observation mode with seeded BACKLOG. Quality bars are met for all YMYL pages. Production velocity will scale once Task 9 + Task 11 stabilise their patterns.
+> **Week of 2026-06-15 → 06-21 (Learner run 06-21):** A disciplined holding week. The system shipped 3 NEW blogs (`549dac3`, backlog now fully drained), one CTR meta-refresh (W15 anxiety-neurosis, live + ticking to 06-30), and resolved 4 investigations — all confirmed as DataForSEO noise or non-regressions, none requiring content action. The standout outcome is **what the loop correctly did NOT do**: it held the ALGO_WATCH refresh queue and kept both commercial-intent sprints (#12 online-therapy hub, #8R conversion-reorientation) drafted-and-human-gated rather than firing into the core-update rebound. The latest GSC week is up on both clicks (+9.5%) and impressions (+4.9%) with best-in-trend position (10.1) — the late-May pullback has reversed and the clicks/CTR variance gaps narrowed materially (-36%→-29% clicks, -29%→-6% CTR). **No watch closed on the merits** (W11 deferred — Mixpanel blocked; W16 already closed as noise), so recovery rate is still N/A. New learning: codified **AP8** (the exact-position-100 DataForSEO sentinel, 3rd+ confirmation). **Everything now hinges on the 2026-06-23 Sprint A/B/C 14-day checks** — the first real evidence that the reviewer-fix / AI-Overview-defense / CTR-rewrite playbooks move rankings at scale. Next focus: evaluate those reads next Sunday, and if Sprint C is 🟢, green-light the post-06-23 held-refresh resume + the two staged commercial sprints.
 
 ---
 

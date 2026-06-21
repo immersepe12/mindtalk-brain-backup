@@ -15,7 +15,7 @@
 | W8 | /blogs/20-quotes-to-inspire-healthy-relationships | relationship quotes | AI_overview_defense | 2026-06-09 | Sprint B/2 (`5dfe080`) | 1.7k → 4k | 2026-06-23 | open |
 | W9 | /blogs/emotional-distress-all-you-need-to-know | emotional distress | AI_overview_defense | 2026-06-09 | Sprint B/3 (`c1e0d67`) | 2.2k → 5k | 2026-06-23 | open |
 | W10 | top 20 pages from W12 analyst | (multiple) | CTR_metarewrite | 2026-06-09 | Sprint C (`7c3c2c4`) | +2,180 clicks/wk total | 2026-06-23 | open |
-| W11 | / (homepage) | mindtalk | conversion_redesign | 2026-06-12 | Homepage app-first (merge `c35193f`) | "Get the App" becomes #1 hero CTA | 2026-06-19 | open |
+| W11 | / (homepage) | mindtalk | conversion_redesign | 2026-06-12 | Homepage app-first (merge `c35193f`) | "Get the App" becomes #1 hero CTA | 2026-06-19 | open — ⏸ **DEFERRED by Learner 06-21** (Mixpanel access blocked; no rank/impr harm; verdict unmeasurable, not failed — `memory/experiments/deferred-W11-2026-06-21.md`) |
 | W15 | /blogs/understanding-anxiety-neurosis | anxiety neurosis | CTR_metarewrite | 2026-06-16 | Sprint C-2 clean-target round (`579bb7c`) | CTR ≥ 3% (from 0.9% at pos 4.6) | 2026-06-30 | open |
 | W12 | /blogs/couple-therapy-techniques | couple therapy techniques | NEW_indexation | 2026-06-17 | Auto-ship NEW blog (`549dac3`) | indexed + impressing within 4-6wk | 2026-07-01 | scheduled (check task created 06-19, Executor T11) |
 | W13 | /blogs/how-to-find-a-therapist-for-ocd | how to find a therapist for ocd | NEW_indexation | 2026-06-17 | Auto-ship NEW blog (`549dac3`) | indexed + impressing within 4-6wk | 2026-07-01 | scheduled (check task created 06-19, Executor T11) |
@@ -120,3 +120,16 @@ Verified deployed via direct fetch of https://www.mindtalk.in/blogs/understandin
 Vercel attribution block: RESOLVED — empty commit 89e293a triggered fresh deploy, new commit author kushal@exar.fit mapped to immersepe12 GitHub on the Vercel team. Deploy proceeded normally. The full autonomous loop deploy pipeline is unblocked.
 
 T9 Auto-Ship at 15:06 IST (in 30 min) is now expected to ship cleanly. T11 Executor at 16:35 IST same.
+
+## 2026-06-21 — Learner weekly evaluation stamp
+
+**Watches with check date in the past 7 days (06-15 → 06-21):** 2 — W11 (due 06-19) and W16 (due 06-18).
+
+- **W11 (homepage conversion)** → ⏸ **DEFERRED** — Mixpanel access blocked, verdict unmeasurable (not a strategy failure). No rank/impr harm. Stays open. Log: `memory/experiments/deferred-W11-2026-06-21.md`.
+- **W16 (10 pos-100 URLs)** → already ✅ CLOSED 06-18 by daily reconcile (confirmed DataForSEO noise). No re-close needed.
+
+**No watches closed on the merits this week** → recovery-rate denominator unchanged. The first real recovery reads (Sprint A/B/C, W1-W10) land **2026-06-23**; W15 06-30; W12-W14 07-01.
+
+**Pattern codified this run:** the exact-position-100 DataForSEO sentinel is now its own anti-pattern (**AP8**) — 3+ closed confirmations (sleep-cluster 06-16, W16 06-18, 06-19 set reconcile). See ANTI-PATTERNS.md.
+
+**Escalation check:** 0 watches verdicted 🔴/⚫ this week → no `⚠ LEARNER FLAG`.
