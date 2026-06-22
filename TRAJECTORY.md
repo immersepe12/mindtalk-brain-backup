@@ -103,7 +103,7 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 |---|---|---|---|---|
 | Weekly clicks | 2,800 (Q3) | 1,997 (GSC, latest wk) | -29% (improving from -36%) | Gap narrowing as core-update rebound continues. Don't perturb — resume held-refresh queue after 06-23, then the Sprint A/B/C recovery reads should add the next leg of reach. |
 | Avg CTR | 0.85% (Q3) | 0.8% (GSC) | -6% (was -29%) | Nearly closed. The 06-23 Sprint C check confirms whether the meta-rewrite playbook scales; if 🟢, expand CTR-harvest to clean-target page-1 queries (per P9, NOT vanity discovery blogs). |
-| Inventory coverage | 45% (Q3) | 27% | -18pp | Unchanged. Stub-page sprint (185-item gap) still pending Kushal approval — Meta-Learner owns the proposal. |
+| Inventory coverage | 45% (Q3) | 27% | -18pp | **Status corrected 2026-06-22:** Meta-Learner is OUT OF SCOPE for this (content sprint, not task-spec edit). Pilot 20 plan now drafted at `dev-specs/2026-06-22-stub-page-pilot-20.md` (5 per type × 4 batches, earliest fire 2026-06-30 post-Sprint readout). Awaiting Kushal sign-off on picks + reviewer assignment + authoring path. |
 | Production velocity (refresh + sprints) | refresh 5-8/wk, 1 sprint/2wk | 1 refresh, 0 sprints fired | below floor | **Intentional this week** — ALGO_WATCH hold suppresses refreshes until the core-update settles (~06-23) and sprints are human-gated to avoid muddying the A/B/C attribution window. If still below floor *after* the 06-23 resume, escalate as underutilisation (GOALS floor-for-2-weeks rule). |
 
 ---
