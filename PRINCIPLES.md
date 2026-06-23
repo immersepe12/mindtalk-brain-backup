@@ -16,6 +16,7 @@ Each entry: principle + evidence + when it applies.
 - Evidence: dominant-personality (pos 7.7→6.6 BETTER but -84% impr), 20-quotes (-74%), emotional-distress (-67%) — positions improved while impressions collapsed = textbook AI Overview snippet stealing
 - Action: when position improves but impressions drop ≥50% over 4 weeks, the page needs interactive content (self-assessment, matcher, calculator) + unique India-specific stat (NIMHANS, NIMHS-2023, AIIMS) + breadcrumb JSON-LD sitelink schema
 - Established: 2026-06-09 via Sprint B
+- ✅ **CONFIRMED 2026-06-23 (Sprint B 14-day check):** all 3 treated pages reclaimed AI Overview citation on their money terms (cited 5×/3×/5× in live India-geo AIO) and impressions recovered (96→1,152, 64→549, 41→128 impr/wk). 2/3 GREEN, 1/3 YELLOW. The fix works — but see P10 for the limit. Memo: `memory/patterns/sprint-b-result-2026-06-23.md`
 
 ## P3. Per-content-type URL builders > generic wrappers
 - Evidence: 2026-05-28 `buildReturnToUrl` was wrapping every CTA in `/login?returnTo=...` which got stripped by consult.cadabams.com auth redirect (verified via `curl -sIL`). Direct URLs preserve the param correctly.
@@ -75,4 +76,31 @@ Each entry: principle + evidence + when it applies.
 - Geographic insights mean SEO investment goes where Bangalore + tier-1 cities convert
 
 **How to apply:** Before any action's score is finalized, Strategist must read brain/PAGE-CONVERSION-MAP.md, GEO-CONVERSION-MAP.md, and HIGH-CONVERTER-PATTERNS.md. The strategist-signal-feed.md is the digest version Strategist reads first; the full maps are read when scoring a specific action.
+
+## P10 — AI Overview citation is reclaimed by interactive/original content, but citation ≠ guaranteed impression recovery (2026-06-23)
+
+**Source:** Sprint B 14-day check (W7/W8/W9). Refines P2.
+
+**What works (validated):** On AIO-cannibalised viral blogs, the reliable lever for *reclaiming AI Overview citation* is content the AIO cannot cleanly summarise — an **interactive self-assessment** (banded results + CTA) or **original per-item expert commentary**. All 3 Sprint B pages regained AIO citation this way (cited 5×/3×/5× in live India-geo AIO). The strongest impression recovery came from the interactive tool (W7: 96→1,152 impr/wk, pos 7.6→3.2) and original commentary (W8: 64→549, pos 9.1→6.1).
+
+**The limit (new):** Quick-Answer + FAQ schema + India stat **alone** correlate with citation but **not** with proportional impression/rank recovery. W9 reclaimed citation (5×) yet head-term rank moved only +0.5..+1.0 and impressions stayed low — and its bare head term's SERP **flipped from AIO to a competitor `featured_snippet`**. So: reclaiming AIO citation does not guarantee traffic when (a) no interactive/original layer was added, or (b) the page is stuck in the 6–10 band, or (c) a rival owns the featured snippet.
+
+**Rule:** (1) Prioritise the interactive-tool / original-commentary treatment, not FAQ-schema-only, for impression-bleeding pages. (2) **Judge AIO-defense on the page's own highest-impression query** from `reports/query-history.json`, not the brief's generic head term — W8's tracked query "relationship quotes" (pos ~39, non-clinical) nearly buried a clean GREEN that lived on "healthy relationship quotes" (pos 6.1, cited).
+
+## P11 — Meta-rewrite CTR depends on *style*, not the act of rewriting: add a number + credibility token + match intent (2026-06-23)
+
+**Source:** Sprint C 14-day check (W10 — top-20 by impression, commit `7c3c2c4`). Bulk meta-only rewrite. Impressions held flat (+1.1%), so it was a clean CTR test.
+
+**What happened:** 4 GREEN / 8 YELLOW / 8 RED. Cluster clicks **net −12/wk** (321→309), impression-weighted CTR **−0.022pp** (0.453%→0.432%). Target (+400–680/wk; W10 +2,180) **missed**. Rewriting the top 20 with an inconsistent style guide was a coin-flip — wins and losses roughly cancelled.
+
+**The lever that actually moves CTR (validated both directions):**
+- ✅ **Add a specific number** to the title where the page is steps/list content — "8 Steps" (+0.173pp, clicks +75%), "7 Poses" (+0.18pp, +50%), both on flat impressions.
+- ✅ **Front-load the exact keyword + drop filler + add a credibility/curiosity token** ("Explained", "That Actually Work") — hamilton-anxiety +0.314pp on a high-base page.
+- 🔴 **Removing an existing number** kills CTR — "Top 11 Reasons"→none (−0.127pp), "7 Approaches Explained"→"Which One Is Right for You?" (−0.357pp).
+- 🔴 **Swapping informational → geo-commercial** ("[X] in Bangalore") on a nationally/informationally-searched query mismatches intent and craters CTR — drug-deaddiction −0.402pp (worst), rtms-therapy −0.113pp.
+- It is NOT about character length or emotional tone; it is number + specificity + intent-match.
+
+**Rule:** When rewriting a meta title for CTR: (1) front-load the exact head keyword; (2) add a specific number iff the page is list/steps content; (3) add one credibility/curiosity token; (4) **never delete an existing number**; (5) **never convert an informational title to a geo-commercial "…in Bangalore" angle unless GSC confirms the query's own intent is local-commercial.** (6) A meta change cannot fix a snippet-starved top-3 page with ~0 CTR (dementia, pos 2.7) — that is an AI-Overview/featured-snippet problem (P2/P10), not a copy problem. (7) Read meta-only verdicts on **page-level CTR at flat impressions and stable position** — segregate pages whose impressions/rank moved materially.
+
+**Ties to AP1:** Sprint C bulk-shipped 20 ranking pages with no staged 10% sample → 8 went RED. Sprint C v2 must ship a 2-page (10%) sample with a 7-day CTR read before the rest. Memo: `memory/patterns/sprint-c-meta-rewrite-result-2026-06-23.md`
 
