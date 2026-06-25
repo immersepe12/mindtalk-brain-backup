@@ -50,14 +50,31 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | Week (7d) | Page views | book CTA clicks | form_submitted | lp_form_submitted | lead_create_failed | Doctor→book CTA % | Flags |
 |---|---:|---:|---:|---:|---:|---:|---|
 | 2026-06-17 | 3,805 | 1,620 | 8 | 130 | 70 | 69% | lp:form 16x ⚠; on-site booking funnel ~0%; backend fail ~34% ⚠; riya(5)+where-to-start(3) invisible |
+| 2026-06-24 | 5,941 | 745 | 6 | 136 | 79 | 69% | Page views +56%✅; book_click -54%⚠⚠ (intent dilution — SEO/blog surge, not commercial pages); LP form +5% (136, leads stable); backend fail ~36% (stable⚠); where-to-start +367%✅ (3→14); riya 10 (doubled, still tiny) |
 
-**Variance > 20% WoW:** No true baseline yet (last week blocked). Manual-rerun WoW vs cited prior: book CTA +6.5%, form_submitted +33% (6→8, tiny absolute), lp_form +5%, lead_fail −3%. None material on absolute volume.
+**Variance > 20% WoW (2026-06-24 reading):**
+- book_appointment_clicked: **-54%** ⚠⚠ (1,620→745) — page views surged +56% simultaneously; new traffic is low-intent SEO/blog content. Sequential funnel rate: 17%→13%. LP form absolute stable — actual leads not impacted.
+- Page views: **+56%** ✅ — SEO traffic growing strongly
+- form_submitted rate (/ page views): -52% (0.21%→0.10%) — denominator inflation; absolute leads stable
+- lp_form_submitted rate (/ page views): -33% (3.42%→2.29%) — same; absolute +5% (130→136)
+- call_clicked: **-32%** ⚠ (57→39)
+- where_to_start discovery: **+367%** ✅ (3→14) — internal linking improvement working
+- riya_page_viewed: +100% (5→10) — still effectively invisible
 
 **Standing conversion concerns for Strategist:**
-- Real lead capture = landing-page forms (130/wk), not the on-site multi-step booking form (8/wk; sequential conversion from page view ≈ 0%).
-- ~34% backend lead-creation failure (lead_create_failed 70 vs form_started 18 + lp path) — persistent 3 weeks. Engineering/backend issue, not SEO; flag to Kushal.
-- Doctor-profile path is the strongest intent signal (69% profile→book CTA) — prioritize doctor page SEO/coverage.
-- riya_page (5) and where-to-start (3) effectively undiscovered — internal linking / surfacing opportunity.
+- Real lead capture = landing-page forms (136/wk), not the on-site multi-step booking form (6/wk; sequential conversion ~0%).
+- ~36% backend lead-creation failure (lead_create_failed 79 / ~221 form attempts) — persistent 3+ weeks. Engineering issue; escalate to Kushal.
+- Doctor-profile path is the strongest intent signal (69% profile→book CTA, stable) — prioritize doctor page SEO/coverage.
+- Traffic growth outpacing commercial engagement — new visitors land on blog/SEO content, not booking pages. Add CTAs on high-traffic content pages OR focus acquisition toward commercial-intent queries.
+- where_to_start internal linking worked (3→14 viewers). Apply same treatment to riya_page.
+
+**T19 W26 Addendum (2026-06-25) — Paid/Organic separation + revenue layer:**
+- Organic book_appointment_clicked: 1,026 (57.6% of 1,781 total). 42.4% was GMB/residual tags (ads paused — not active paid traffic).
+- UTM attribution (first full week): 15 payments + 15 appointment-bookings confirmed from mindtalk.in CTAs via mindtalk_web utm_source. Doctor card CTAs = 66.7%; Homepage hero = 20%; Global CTAs = 13.3%.
+- Revenue baseline W26: Payment Successful 104, Appointment Booked 87 — both 100% organic (ads paused since May 26).
+- UX friction (consult.cadabams.com): booking/53196 = 444 rage+dead clicks (CRITICAL). find-therapist wizard = 293 (HIGH). These are downstream conversion blockers post-mindtalk.in referral.
+- AI search: chatgpt.com = 57 book intent events (3.2% of total) — new organic channel, week 1 of tracking.
+- See PAGE-CONVERSION-MAP.md + UX-FRICTION-PAGES.md for full tier data.
 
 ---
 
@@ -156,6 +173,9 @@ Strategist reads this every day before deciding actions — knows where the gaps
 | Week | Confirmed citations | Perplexity | ChatGPT | Claude | Google AI OV | Commercial-query citations (1-5) | Notes |
 |---|---:|---|---|---|---|---:|---|
 | 2026-06-18 | 3 / 40 cells | 2/10 (branded only) | SKIPPED (logout) | 0 clean (3 tested; branded contaminated) | 1/10 (AI OV present on only 1 query) | 0 | INAUGURAL BASELINE · Amaha = most-cited competitor · ChatGPT login needed · AI OV detection unreliable |
+| 2026-06-25 | 4 / 25 cells tested | 2/10 (branded only — unchanged) | 1/3 sampled (NEW — login restored) | 0/2 commercial (cites group hospital, not MT) | 1/10 (ocd-specialist, MT #3 — unchanged) | 1 (ChatGPT "online therapy bangalore" → Cadabam's Mindtalk) | +1 citation WoW · ChatGPT now ACCESSIBLE · first commercial-intent citation · brand-fragmentation finding (group domain wins Cadabams citations) · Amaha still #1 competitor |
 
-**AI Overview citation share:** 1 of 10 priority queries rendered a Google AI Overview this run; Mindtalk was cited in it (ocd specialist bangalore, #3). Commercial-intent queries (online therapy / anxiety / depression / cbt / best platform) = 0 citations across all engines — the primary AI-visibility gap to close. Branded recall works on Perplexity ("mindtalk cadabams", "cadabams app").
-**Tier movement:** n/a (inaugural — first WoW diff next Thursday 2026-06-25).
+**AI Overview citation share:** Unchanged — 1 of 10 priority queries rendered a Google AI Overview ("ocd specialist bangalore"); Mindtalk cited #3 (mindtalk.in/Doctors). All 9 others: no AI OV block.
+**This week's gain:** ChatGPT login restored → first-ever commercial-intent citation ("online therapy bangalore" → Cadabam's Mindtalk, via local-results). Commercial-query citations 0→1.
+**Strategic finding:** brand fragmentation — for commercial/condition queries, AI engines cite cadabamshospitals.com (group) or the Google business listing, NOT the mindtalk.in domain. AEO entity-consolidation needed to route Cadabams AI citations to mindtalk.in.
+**Tier movement:** baseline → +1 confirmed citation (3→4); commercial bucket 0→1. Amaha remains the most-cited competitor across all engines.

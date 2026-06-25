@@ -25,6 +25,33 @@ One line per Task 15 run. Most recent at bottom.
 
 | Week | Page views | book_click | form_submit | lp_form_submit | lead_fail | doctor→book % | Notes |
 | 2026-06-17 (7d) | 3,805 | 1,620 | 8 | 130 | 70 | 69% | Full T15. lp:form=16x; on-site booking funnel ~0%; backend fail ~34%; riya+where-to-start invisible |
+| 2026-06-24 (7d) | 5,941 | 745 | 6 | 136 | 79 | 69% | Page views +56%✅; book_click -54%⚠⚠ (intent dilution — new traffic is SEO/blog, not commercial); LP form +5% (absolute leads stable); backend fail ~36% (stable); where-to-start +367%✅ (3→14); riya 10 (doubled, still tiny) |
 
 2026-06-17T11:00 IST | T19 SCHEDULED FIRE — attribution recheck | Cadabams consult (3986277) STILL not visible in Get-Projects. Searched accessible US projects for migrated consult booking events: 4026555 cadabams-org (none), 4015752 professionals (none), 4013942 cadabams hospitals (`book_appointment_clicked` only — hospital funnel, not consult), 3984638 cadabams group (EU-locked). Conclusion: consult revenue-validation funnel not reachable from US MCP. Cross-domain attribution remains blocked. No website re-pull (inaugural classification already current for this week).
+
+2026-06-25T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d unique users |
+  VOLUME:
+  - $mp_web_page_view: 5,941 (+56% WoW ✅ traffic surge)
+  - blog_viewed: 1,077 | doctor_profile_viewed: 522 | treatment_page_viewed: 228 | illness_page_viewed: 144 | riya_page_viewed: 10 (doubled from 5, still tiny ⚠)
+  - where_to_start_page_viewed: 14 (+367% WoW ✅; was 3 — internal linking working)
+  - book_appointment_clicked: 745 (-54% WoW ⚠⚠ CRITICAL — page views surged +56% but book clicks halved; intent dilution from SEO/blog traffic)
+  - form_submitted: 6 (-25%) | lp_form_submitted: 136 (+5% ✅ absolute leads stable)
+  - form_started: 12 (-33%) | form_error: 2 | lead_create_failed: 79 (+13%)
+  - whatsapp_clicked: 90 (+13%) | call_clicked: 39 (-32% ⚠) | cta_clicked: 130 (first recorded)
+  FUNNELS:
+  - A (main): page view 5,941 → book CTA 744 (13%, was 17%) → form_submit 2 (<0.1%)
+  - B (doctor-driven): doctor_profile 522 → book CTA 359 (69%, STABLE ✅) → form_submit 2 (0.6%)
+  - C (where-to-start): viewed 14 → started 6 (43%) → completed 6 (100%)
+  KEY METRICS:
+  - lp:form ratio = 22.7x (up from 16x ⚠ — LP form still the real lead channel)
+  - Backend fail rate: 79/(136+6+79) = 35.7% (was ~34%; STABLE, persistent engineering issue ⚠)
+  - Doctor→book CTA: 69% (no change, strongest intent path ✅)
+  WoW FLAGS (>20%):
+  ⚠⚠ book_appointment_clicked -54% (intent dilution — new traffic is low-commercial-intent SEO content)
+  ✅ Page views +56% (SEO traffic growing strongly)
+  ⚠ form_submitted rate from page views: 0.10% vs 0.21% (-52%) — denominator effect; absolute leads stable
+  ⚠ lp_form_submitted rate: 2.29% vs 3.42% (-33%) — same denominator effect
+  ⚠ call_clicked -32% (57→39)
+  ✅ where_to_start_page_viewed +367% (3→14)
+  ✅ riya_page_viewed +100% (5→10, still tiny)
 
