@@ -13,9 +13,11 @@
 - Counter-example: original `buildReturnToUrl` did this; the auth-redirect chain stripped the `returnTo` param entirely. Every CTA across 64+ pages went to a generic login page.
 - Rule: use direct destination URLs only. Let the target site handle auth flow internally.
 
-## AP3. Never auto-ship YMYL content (illness / treatment / suicide-safety)
+## AP3. Never auto-ship YMYL content without prior clinical sign-off
 - Counter-example: hypothetical — auto-shipping an illness brief without clinical review could publish incorrect medical guidance, harming users and getting demoted by Google.
-- Rule: hard block in code. Auto-shipper script must skip any brief targeting these directories.
+- Rule: auto-shipper script must skip any brief targeting `/illnesses/*`, `/treatments/*`, or suicide/self-harm topics **UNLESS** the brief frontmatter has a valid `clinical_reviewer_signed_off` field — i.e., a named clinician + date ≤90 days old. With a valid sign-off, auto-ship proceeds (the clinician has already reviewed the content; the ship is just the publish step).
+- Updated 2026-06-26: previously a hard block (Option A). Moved to conditional sign-off gate (Option B) after Sprint A (55 YMYL pages, all with named reviewers) proved the named-reviewer pattern works and the hard block created throughput bottleneck (T9 shipped 0/20 W26 — every queued brief was YMYL with no path to ship).
+- Verifier check (T9 step 5): `if path matches /illnesses/* or /treatments/* or suicide-safety topic: require frontmatter.clinical_reviewer_signed_off.reviewer + frontmatter.clinical_reviewer_signed_off.date AND date ≤ 90 days ago. If missing or expired → VETO with reason "AP3: missing clinical sign-off".`
 
 ## AP4. Never refresh a page within 14 days of its last refresh
 - Counter-example: if life-coach-therapy was refreshed 2026-05-28 (commit `58b7e39`), don't refresh again until 2026-06-11 (first opportunity).

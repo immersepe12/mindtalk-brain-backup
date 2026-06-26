@@ -101,6 +101,12 @@ For `ship_NEW_blog` or `ship_REFRESH_brief`:
 - [ ] ≥ 3 internal links (`href="/illnesses/...|/treatments/...|/blogs/...|/journeys/...|/assessments/...|/worksheets/...|/journaling/...`)
 - [ ] Indian English check (sample 3 likely problem words: "behavior"/"behaviour", "organization"/"organisation", "counseling"/"counselling")
 - [ ] No "TODO" / "TBD" / "FIXME" / "{placeholder}" left in body
+- [ ] **AP3 Option B gate (updated 2026-06-26)** — if target path matches `/illnesses/*`, `/treatments/*`, or topic is suicide-safety:
+  - frontmatter.clinical_reviewer_signed_off.reviewer present + non-empty + matches a known reviewer slug
+  - frontmatter.clinical_reviewer_signed_off.date present + ISO-format + ≤ 90 days before TODAY
+  - frontmatter.clinical_reviewer_signed_off.scope present (typically "full")
+  - If ANY of the three missing/stale: VETO with reason `"AP3 (Option B): YMYL content requires clinical_reviewer_signed_off with reviewer + date≤90d + scope"`
+  - If all three present and valid: AP3 satisfied — proceed to the rest of Check 5 as normal
 
 ### 6. Build precheck
 - [ ] If action results in MDX/config change, the verifier should mentally trace whether `npm run build` would succeed:

@@ -179,15 +179,3 @@ T9 Auto-Ship at 15:06 IST (in 30 min) is now expected to ship cleanly. T11 Execu
 **Monitor-next:** /blogs/understanding-anxiety-and-headache — GSC flagged it borderline (impr −12.8%, avg pos 30.8→34.3, two per-keyword slips) but it has 0 clicks so fails the confirmation rules → left as NOISE; **re-pull Monday 06-29** — if it acquires clicks while impressions keep sliding it could promote to a real drop.
 
 **Escalation check:** 0 CRITICAL/MAJOR daily drops; 0 watches breached; DataForSEO + GSC pulls both ran clean; tracked-URL count stable. **No `⚠ STRATEGIST FLAG`.** One **dev escalation passed through** (not a Strategist flag): T19 W26 booking/53196 = 444 rage+dead clicks on consult.cadabams.com → #11(e), Slack.
-
-## 2026-06-26 — Strategist daily stamp (Friday)
-
-**Watch board:** No watch breached today; no status changes from rank/GSC (0 CRITICAL / 0 MAJOR; 2 MODERATE both GSC-validated NOISE). No new watch opened by me (no sprint shipped, no new confirmed drop). **W18** (/treatments/online-therapy) remains ⏸ **PENDING PUSH** — branch `feat/online-therapy-hub-2026-06-26` commit `6768c7f` authored + clinical-signed (dr-arun-kumar) but not yet pushed (Kushal pushes from Mac; sandbox auth-blocked). Its 14d/28d clocks (07-10 / 07-24) start only once it deploys live.
-
-**Upcoming checks (next 7 days):** **06-28** Learner formal close of W1-W6 (Sprint A YMYL — already evaluated 🟢×1 biofeedback / 🟡×1 dementia pos-only / 🔴×4). **06-30** triple: W3 **PTSD 21-day re-verify** (−70% impr with *rising* query count 57→61 = possible GSC under-report — confirm before any heavy ptsd rewrite), **W15** anxiety-neurosis CTR verdict (target ≥3%), **Jun-9 cohort Day-21 midpoint** (6 URLs, correctly `url_locked`). **07-01** W12-W14 NEW-blog indexation. **07-02** W17 ocd-thoughts re-check + **algo_watch clears** (#18 held-refresh + YMYL-recovery batch fires).
-
-**Closed/cleared today:** 06-26 pos-100 set (13 URLs: perinatal-mental-health, counselling-therapy, positive-psychology, how-to-manage-bipolar-disorder-daily, managing-teen-depression, setting-new-year-goals, teens-guide-to-journaling, anxiety-and-headache, chronic-insomnia, dominant-personality, insomnia-in-children, hamilton-anxiety-rating-scale, psychiatrists-in-mysore) → **confirmed DataForSEO noise, 7th consecutive confirmation** (zero overlap with the 06-25 set; positive-psychology/hamilton recur from older sets but are absent from the intervening 06-25 pull → fail "same ≥4 across two consecutive pulls"). 2 MODERATE rank flags GSC-validated NOISE + removed from flagged-drops (10→8). confirmed-drops `{}`.
-
-**New watch context (not opened by me):** the **4 Option-B YMYL briefs** ship Tue 06-30 via T9 — first-ever conditional-YMYL auto-ship; if any fires a post-publish Verifier flag in its 14d window, escalate immediately (AP3 Option B revert trigger). Folded into the BACKLOG #11 standing-flag monitor.
-
-**Escalation check:** 0 CRITICAL/MAJOR daily drops; 0 watches breached; DataForSEO + GSC pulls both ran clean (DataForSEO balance $64.33); tracked-URL count stable; no new alert in `alerts/` since the 06-23 URGENT (already handled). **No `⚠ STRATEGIST FLAG`.**
