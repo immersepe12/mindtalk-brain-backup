@@ -1,0 +1,240 @@
+# Cowork Scheduled Task 3: SERP Analysis + Content Brief Generation
+# Cadence: Monday, Tuesday, Thursday, Friday at 12:00 PM (after Task 2)
+# Working folder: ~/Seo-workflow-mindtalk/mindtalk-setup/
+# Requires: Claude in Chrome (enable browser access for this task)
+
+---
+
+You are running the SERP analysis and content brief generation task for Mindtalk.
+This is the most important task — it produces the content briefs that writers will use.
+
+## Context you must know about this website
+
+- Site: mindtalk.in — a mental health and psychiatry platform by Cadabam's Group in Bangalore, Hyderabad, and Mysore, India
+- All condition and treatment pages target ADULTS AND FAMILIES seeking mental health support
+- Content categories: illnesses (conditions), treatments (therapies), blogs (informational), doctors-listings (local SEO hubs)
+- Content follows strict AEO (AI Engine Optimization) rules:
+  - First paragraph directly answers the primary question (no filler)
+  - Every paragraph is 2-5 sentences, self-contained
+  - H2/H3 headings are actual user questions
+  - 3-5 FAQs per page with direct answers
+  - Specific data: percentages, age ranges, timeframes
+- Title max 65 chars, must include "Mindtalk"
+- Description max 160 chars
+
+## Steps
+
+### Step 1 — Check queue
+
+Read `~/Seo-workflow-mindtalk/mindtalk-setup/confirmed-drops.json`.
+
+If empty: log "No confirmed drops to process" and stop.
+
+Check `~/Seo-workflow-mindtalk/mindtalk-setup/tracking-db.json` to see how many URLs were already processed 
+into briefs this week (status = BRIEF_CREATED with date this week).
+Maximum 20 per week total. If already at 20, log "Weekly limit reached" and stop.
+
+> **Cap:** 20 refresh briefs per week (config.json `max_urls_per_week=20`). NEW content has its own 20/week cap — see Task 5.
+
+Process URLs in order of severity: CRITICAL first, then MAJOR, then MODERATE.
+
+### Step 2 — For each confirmed drop URL (up to 20 total this week)
+
+#### 2a. SERP Analysis
+Open browser and go to Google.co.in (important — India results).
+Search for the primary keyword (e.g. "Depression Treatment Bangalore").
+
+Record:
+- Our current position (look for mindtalk.in)
+- The top 5 ranking URLs above ours
+- For each URL above ours, classify as:
+  - DIRECT_COMPETITOR: another mental health clinic/hospital in India (e.g. Amaha, Practo listings, NIMHANS, Cadabam's hospitals)
+  - AGGREGATOR: Practo, 1mg, Lybrate, JustDial, Sulekha, etc.
+  - HIGH_DA_ADJACENT: WebMD, Healthline, Wikipedia, WHO, NIMHANS
+  - FORUM: Reddit, Quora
+  - VIDEO: YouTube
+  - MEDIA: news site, magazine
+
+Note if HIGH_DA or AGGREGATOR is dominating top 3 → set qdf_flag = true in brief
+
+#### 2b. Competitor Page Analysis (DIRECT_COMPETITOR only)
+Visit the top 3 DIRECT_COMPETITOR URLs above ours.
+
+For each competitor page, extract:
+- All H2 and H3 headings
+- Approximate word count (count paragraphs × avg words)
+- Whether they have: FAQ section, statistics/data, named doctors, video, infographic
+- Any sections/topics they cover that our MDX file does NOT
+
+Compare against our current headings (from confirmed-drops.json → current_h2_headings).
+
+Identify the top 3-5 content gaps: topics covered by 2+ competitors but missing from our page.
+
+#### 2c. People Also Ask (PAA) Extraction
+On the Google SERP, expand the "People Also Ask" box.
+Record all visible PAA questions for this keyword.
+
+Check which PAA questions are NOT already answered in our MDX file's FAQ section 
+(read the MDX file from the repo path in config.json).
+
+These unanswered PAA questions become high-priority additions.
+
+#### 2d. Duplicate / Thin Content Check
+Read the full MDX file body.
+Flag any:
+- Sections under 50 words with no clear unique value
+- Paragraphs that repeat information already covered in a previous section
+- Any statistics older than 2023 (flag for fact-check)
+- Sections that don't answer a clear user question
+
+### Step 3 — Generate Content Brief
+
+Write a content brief to `~/Seo-workflow-mindtalk/mindtalk-setup/briefs/[slug]-brief.md`.
+
+Use this exact structure:
+
+```markdown
+# Content Brief: [Page Title]
+**Date:** [TODAY]
+**URL:** [url_path]
+**File:** [file_path in repo]
+**Primary Keyword:** [keyword]
+**Current Word Count:** [N]
+**Target Addition:** 300-500 words net new
+**Severity:** [CRITICAL/MAJOR/MODERATE]
+**QDF Flag:** [Yes/No — if Yes, note which high-DA site is ranking above]
+
+---
+
+## Our Current Position
+- Rank tracker: position [N] (was [N])
+- GSC: clicks [delta]% | impressions [delta]%
+
+## What We Need to Add
+
+### New Sections (from competitor gap analysis)
+[List each missing section as a heading + 1-sentence content direction]
+
+**[Heading: written as a user question]**
+Direction: [What to cover. Reference which competitor(s) had this.]
+Keywords to include: [2-3 secondary keywords]
+Target length: ~[N] words
+
+### PAA Questions to Answer
+[List each unanswered PAA question]
+
+**Q: [Question]?**
+Direction: [Brief answer direction from PAA snippet]
+Where to add: [FAQ section / inline under relevant H2]
+
+## What to Remove
+[List redundant/thin sections to cut]
+
+- Section "[heading]": [reason — too thin / duplicate of X / outdated]
+
+## Meta Updates Needed
+- [ ] Title update needed? Current: "[current title]" ([N] chars)
+      Suggested: "[improved title]" ([N] chars)
+- [ ] Description update needed? Current: "[current desc]" ([N] chars)
+      Suggested: "[improved desc]" ([N] chars)
+
+## Internal Linking to Add
+- Link text: "[anchor text]" → Target: [/url/path] (reason: [hub/spoke relationship])
+
+## Content Rules Reminder
+- First paragraph of each new section: directly answer the section question
+- Every paragraph: 2-5 sentences, self-contained (no "as mentioned above")
+- Include specific data: percentages, age ranges, timeframes where possible
+- Mention Mindtalk naturally in at least one new section
+- All links to /contact or /centers for CTAs
+
+## Competitor Reference
+[List top 3 competitor URLs with 1-line note on what they do better]
+
+## Clinical Input Requested
+Open-ended questions for the Mindtalk clinical team (e.g. Sandesh Cadabam and senior practitioners) to optionally weigh in on. The brief author should generate 3-5 questions specific to this page's topic — areas where lived clinical perspective would strengthen the page beyond general SEO direction.
+
+Examples of useful question shapes (the brief author should write topic-specific versions, not generic ones):
+1. What's a common patient misconception about [topic] that you'd want to correct on a public page?
+2. In your clinical practice, what's one signal that distinguishes [condition X] from [adjacent condition Y]?
+3. What does the early-stage version of [condition / treatment journey] typically look like in real cases?
+4. Is there a specific treatment combination or sequencing that you find works better than what general guidance recommends?
+5. What would you tell a family member who's reading this page because they're worried about someone they love?
+
+The clinical team's responses will be incorporated into the page during writing — direct quotes preferred where the practitioner is comfortable being named. Otherwise, paraphrase as anonymous clinical observation.
+
+## Notes for SEO Manager
+[Any flags: QDF warning, algo watch status, technical issues noticed on the page]
+```
+
+### Step 4 — Update tracking DB
+
+Update `~/Seo-workflow-mindtalk/mindtalk-setup/tracking-db.json` for this URL:
+```json
+{
+  "/illnesses/depression": {
+    "status": "BRIEF_CREATED",
+    "brief_created_at": "[TODAY]",
+    "brief_path": "briefs/depression-brief.md",
+    "primary_keyword": "Depression Treatment Bangalore",
+    "severity": "MAJOR",
+    "qdf_flag": false,
+    "url_locked": false
+  }
+}
+```
+
+Remove this URL from `~/Seo-workflow-mindtalk/mindtalk-setup/confirmed-drops.json` (it's been processed).
+
+### Step 5 — Weekly brief summary
+
+After processing all URLs for today, write/append to 
+`~/Seo-workflow-mindtalk/mindtalk-setup/logs/briefs-[WEEK-START-DATE].txt`:
+- List of all briefs created this week with URLs and keywords
+- Running count toward the 20/week limit
+
+## Important rules
+
+- Write briefs in clear, actionable language — a non-SEO content writer must understand them
+- Do NOT write the actual content — only the brief and direction
+- Do NOT edit any MDX files during this task
+- If a competitor page blocks browser access, note it and use the next competitor
+- If no DIRECT_COMPETITORs rank above us (only HIGH_DA/aggregators), still write the 
+  brief — use PAA questions and our own thin sections as the gap analysis source
+- Clinical accuracy matters: do not suggest adding medical claims without a source
+- All suggested content must align with Mindtalk's mental health and psychiatry focus
+
+## Step 6 — Post to Slack
+
+Post a summary to **#seo-workflow-mindtalk** (channel ID: `C0AUAPS4J83`) using `slack_send_message`.
+
+Format:
+
+```
+📝 *Content Briefs — [TODAY'S DATE]*
+Site: mindtalk.in
+
+Briefs created today: [N]
+Weekly total: [N]/20
+
+[For each brief:]
+> 📄 *[Primary Keyword]* — [severity]
+> URL: [url_path]
+> Top gap: [1-line summary of biggest content gap found]
+> QDF: [Yes ⚠️ / No]
+> Brief: briefs/[slug]-brief.md
+
+[If weekly limit reached:]
+⛔ Weekly limit reached (20/20) — remaining drops queued for next week.
+
+[If no confirmed drops to process:]
+> No confirmed drops in queue today.
+```
+
+## Output
+
+When done, tell me:
+- Number of briefs created
+- List of URLs with their primary keywords and top gap finding
+- Any QDF flags raised
+- Total briefs created this week vs weekly limit (X/10)

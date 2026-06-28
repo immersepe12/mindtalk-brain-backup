@@ -11,11 +11,12 @@
 | Week | Clicks | Δ | Impr | Δ | CTR | Pos | Pages | Inv % | YTD path to 12mo goal |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | 2026-06-08 to 06-14 | 1,785 | -13.2% | 289K | -32% | 0.6% | 13.6 | 691 | 27% | Baseline (DataForSEO source) |
-| 2026-06-15 to 06-21 | 1,997 * | +9.5% * | 254,665 * | +4.9% * | 0.8% * | 10.1 * | 691 | 27% | * No fresh data this window — figures are the latest GSC weekly report (wk 06-06→06-12). Δ = that report's WoW (both up = healthy rebound). True 06-15→06-21 report lands Mon 06-22 (rank/GSC cron is Mon/Tue/Thu/Fri; no weekend pull). |
+| 2026-06-15 to 06-21 | 2,302 * | +15.3% * | 290,898 * | +14.2% * | 0.8% | 11.3 | 691 | 27% | * GSC figures from Mon 06-22 report covering wk 06-13→06-19. True 06-15→06-21 data approximated here; Δ vs prior GSC report. Clicks/impr both climbing (2nd straight green week). Position slipped 10.1→11.3 — new impressions skew page-2 (life-coach + counselling surges, near-zero CTR). |
+| 2026-06-22 to 06-28 | — †† | — | — †† | — | — | — | 691 | 27% | †† GSC wk 06-22→06-28 not yet available (lands Mon 06-30 after GSC lag). TRAJECTORY snapshot: production velocity 0 NEW / 0 refresh / 3 investigations / 6 formal watch closes (Sprint A W1-W6). Sprint A recovery rate: 1/6 = 17% (well below 60% target). W18 online-therapy hub authored pending push. Posture: hold + reinforce. |
 
 (Learner fills new row every Sunday)
 
-> ⚠ **Source caveat:** the baseline row (289K impr / 13.6 pos) is DataForSEO-sourced; the 06-15→06-21 row is GSC-sourced (254,665 impr / 10.1 pos), so cross-row deltas are NOT apples-to-apples. Within GSC, the latest week is *up* on both clicks (+9.5%) and impressions (+4.9%) with best-in-trend position (10.1) — the late-May pullback has reversed. Next Sunday's row (06-28) will carry the true 06-15→06-21 GSC week **plus** the 06-23 Sprint A/B/C recovery reads — the first real verdict on the recovery playbooks.
+> ⚠ **Source caveat:** the baseline row (289K impr / 13.6 pos) is DataForSEO-sourced; subsequent rows are GSC-sourced, so cross-row deltas prior to 06-15 are NOT apples-to-apples. Within GSC, the trend is clear: clicks 1,785 → 1,997 → 2,302 = consistent weekly growth. The 06-22→06-28 row will be back-filled on Monday 06-30 when the GSC weekly report runs. **Key verdict from this Learner run (06-28):** Sprint A YMYL reviewer playbook confirmed as insufficient alone for top-20 YMYL pages (AP9 codified). Content-depth batch #18 is the primary recovery lever; fire eligibility 07-02.
 
 ---
 
@@ -25,6 +26,7 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 2026-06-08 to 06-14 | 6 (manual sprint) | 3 | 0 | 4 (A, B×3, C) | 0 | 1 | 14 |
 | 2026-06-15 to 06-21 | 3 (`549dac3`) | 1 (W15 anxiety-neurosis CTR meta, `579bb7c`) | 0 | 0 fired (2 drafted: #8 / #8R conversion-reorientation) | 0 | 4 (sleep-cluster, life-coach, W16 pos-100, 06-19 pos-100) | 8 |
+| 2026-06-22 to 06-28 | 0 (T9 vetoed all 4 YMYL briefs; AP3 Option B signed-off but ship pending 06-30) | 0 (ALGO_WATCH hold, 3rd wk below floor) | 0 | 0 fired; #8R conversion sprint flagged to human (human-gated) | 0 | 3 (#19 cannibalization diagnostic, #8R flag_for_human, tech-health batch flag) + 6 formal watch closes (W1-W6 Sprint A Learner close) | 3 (+6 closes) |
 
 ---
 
@@ -82,7 +84,7 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 | Month | Principles added | Anti-patterns added | Watches opened | Watches closed | Recovery rate | Notes |
 |---|---:|---:|---:|---:|---:|---|
-| 2026-06 (in progress) | 8 | 8 | 16 | 1 (W16, data-quality noise) | N/A (0 recovery-type closed — first land 06-23) | AP8 added 06-21 (exact-100 sentinel). W11 ⏸ deferred (Mixpanel). Recovery reads begin 06-23. |
+| 2026-06 (closed) | 9 (+1 AP9) | 9 (+1 AP9) | 18 | 13 (W1-W10, W15-W18 + W16 data-quality + W11 deferred) | 17% (Sprint A: 1/6; Sprint B: 2/3 on merit; Sprint C: 0/1 disconfirmed) | AP9 added 06-28 (YMYL reviewer-only fails top-20 YMYL). Sprint A YMYL recovery 1/6 = below target. Sprint B AI-overview defense confirmed (P2/P10). Sprint C CTR bulk-rewrite disconfirmed (P11). Watch recovery across all types = 3 🟢 + 1 🟡 + 4 🔴 + 1 ⚫ = 9 closed on merits (excl. noise/deferred). |
 
 ---
 
@@ -118,10 +120,11 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 | Metric | Target | Actual | Variance | Recommended action |
 |---|---|---|---|---|
-| Weekly clicks | 2,800 (Q3) | 1,997 (GSC, latest wk) | -29% (improving from -36%) | Gap narrowing as core-update rebound continues. Don't perturb — resume held-refresh queue after 06-23, then the Sprint A/B/C recovery reads should add the next leg of reach. |
-| Avg CTR | 0.85% (Q3) | 0.8% (GSC) | -6% (was -29%) | Nearly closed. The 06-23 Sprint C check confirms whether the meta-rewrite playbook scales; if 🟢, expand CTR-harvest to clean-target page-1 queries (per P9, NOT vanity discovery blogs). |
-| Inventory coverage | 45% (Q3) | 27% | -18pp | **Status corrected 2026-06-22:** Meta-Learner is OUT OF SCOPE for this (content sprint, not task-spec edit). Pilot 20 plan now drafted at `dev-specs/2026-06-22-stub-page-pilot-20.md` (5 per type × 4 batches, earliest fire 2026-06-30 post-Sprint readout). Awaiting Kushal sign-off on picks + reviewer assignment + authoring path. |
-| Production velocity (refresh + sprints) | refresh 5-8/wk, 1 sprint/2wk | 1 refresh, 0 sprints fired | below floor | **Intentional this week** — ALGO_WATCH hold suppresses refreshes until the core-update settles (~06-23) and sprints are human-gated to avoid muddying the A/B/C attribution window. If still below floor *after* the 06-23 resume, escalate as underutilisation (GOALS floor-for-2-weeks rule). |
+| Weekly clicks | 2,800 (Q3) | 2,302 (GSC, wk 06-13→06-19) | -18% | Gap narrowing (was -36% in June baseline). YMYL recovery (#18 batch 07-02) + CTR v2 (#17 staged) + online-therapy hub (#12 push) are the next levers. W15 anxiety-neurosis CTR verdict (06-30) unlocks or gates #17. |
+| Avg CTR | 0.85% (Q3) | 0.8% (GSC) | -6% | Nearly on target. Sprint C disconfirmed bulk approach (P11). W15 verdict 06-30 determines if staged P11 approach is viable. If yes: #17 2-page CTR sample unlocks. If no: hold CTR lever, focus on content-depth + commercial-intent pages (P9). |
+| Inventory coverage | 45% (Q3) | 27% | -18pp | Pilot 20 plan at `dev-specs/2026-06-22-stub-page-pilot-20.md` awaiting Kushal sign-off. Earliest fire 06-30. Gap wide; this is the most behind metric. |
+| Production velocity (NEW) | 7-10/wk | 0/wk (this week) | below floor (3rd wk) | **⚠ UNDERUTILISATION FLAG.** 3 consecutive weeks below floor (GOALS rule: 2 wks → flag). Root: T9 vetoed all YMYL briefs (old AP3); AP3 Option B now unlocks them. Expected: 4 YMYL blogs ship 06-30 (first T9 delivery since 06-17). If T9 ships cleanly, floor met again next week. |
+| Production velocity (refresh + sprints) | refresh 5-8/wk, 1 sprint/2wk | 0 refresh, 0 sprints (this week) | below floor (3rd wk) | **⚠ UNDERUTILISATION FLAG.** 3rd consecutive zero-refresh week. ALGO_WATCH hold justified through 07-02. After 07-02: #18 YMYL-recovery batch + held-refresh queue must resume immediately. If not, escalate as system underutilisation to Kushal. |
 
 ---
 
@@ -130,6 +133,8 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 **Most recent week (Learner fills weekly):**
 
 > **Week of 2026-06-15 → 06-21 (Learner run 06-21):** A disciplined holding week. The system shipped 3 NEW blogs (`549dac3`, backlog now fully drained), one CTR meta-refresh (W15 anxiety-neurosis, live + ticking to 06-30), and resolved 4 investigations — all confirmed as DataForSEO noise or non-regressions, none requiring content action. The standout outcome is **what the loop correctly did NOT do**: it held the ALGO_WATCH refresh queue and kept both commercial-intent sprints (#12 online-therapy hub, #8R conversion-reorientation) drafted-and-human-gated rather than firing into the core-update rebound. The latest GSC week is up on both clicks (+9.5%) and impressions (+4.9%) with best-in-trend position (10.1) — the late-May pullback has reversed and the clicks/CTR variance gaps narrowed materially (-36%→-29% clicks, -29%→-6% CTR). **No watch closed on the merits** (W11 deferred — Mixpanel blocked; W16 already closed as noise), so recovery rate is still N/A. New learning: codified **AP8** (the exact-position-100 DataForSEO sentinel, 3rd+ confirmation). **Everything now hinges on the 2026-06-23 Sprint A/B/C 14-day checks** — the first real evidence that the reviewer-fix / AI-Overview-defense / CTR-rewrite playbooks move rankings at scale. Next focus: evaluate those reads next Sunday, and if Sprint C is 🟢, green-light the post-06-23 held-refresh resume + the two staged commercial sprints.
+
+> **Week of 2026-06-22 → 06-28 (Learner run 06-28):** A consolidation week with a hard lesson locked in. The system closed Sprint A (W1-W6) formally: **1/6 RECOVERED, 1/6 PARTIAL, 3/6 STALLED, 1/6 WORSE** — a 17% recovery rate against a 60% target. The verdict is clear: **reviewer + JSON-LD alone is not a recovery sprint for YMYL pages already in top-20 positions** (AP9 codified). Production velocity hit zero for the 3rd consecutive week (T9 vetoed all YMYL briefs pre-AP3 Option B; refresh queue intentionally on ALGO_WATCH hold) — this is now an underutilisation flag. The system is in a well-structured hold, but the hold ends 07-02. **Next week's pivots:** (1) 06-30 triple-check (PTSD re-verify + W15 CTR verdict + Jun-9 cohort midpoint) sets direction; (2) 07-02 ALGO_WATCH clears → #18 content-depth YMYL recovery batch fires + held-refresh queue resumes; (3) T9 should ship the 4 Option-B YMYL briefs 06-30 (first T9 delivery in 10 days). The clicks trajectory is healthy (1,785 → 2,302, +29% over 4 weeks); the system just needs to convert its backlog into live pages to sustain it.
 
 ---
 

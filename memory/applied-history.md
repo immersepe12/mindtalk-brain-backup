@@ -1,0 +1,3 @@
+2026-06-28T20:00:00+05:30 | proposal: strategist-read-ai-overview-targets-2026-06-21-2004 | file: cowork-tasks/task10-strategist.md | snapshot: brain/before-snapshots/task10-strategist.md-20260628-144330.bak
+2026-06-28T20:00:00+05:30 | proposal: task2-skip-brief-created-2026-06-21-2004 | file: cowork-tasks/task2-gsc-validator.md | snapshot: brain/before-snapshots/task2-gsc-validator.md-20260628-144330.bak
+2026-06-28T20:00:00+05:30 | proposal: cap-mismatch-task3-log-template-2026-06-21-2004 | file: cowork-tasks/task3-serp-analysis-briefs.md | snapshot: brain/before-snapshots/task3-serp-analysis-briefs.md-20260628-144330.bak

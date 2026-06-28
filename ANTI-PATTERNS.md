@@ -44,6 +44,20 @@
 - Rule: auto-quarantine any pull with ≥4 uniform exact-100 readings; assume noise by default and take **no content/deindex action**. Escalate to a genuine deindex investigation ONLY if the **same ≥4 URLs** report exactly 100 across **two consecutive pulls**. (Open carry: the 06-19 set re-checks Mon 06-22 — assume noise until then.)
 - Established: 2026-06-21 (Learner), 3 closed confirmations.
 
+## AP9. Never treat a YMYL reviewer fix + reviewedBy JSON-LD alone as a content-recovery sprint for pages already ranking in top-20 positions
+- **What happened:** Sprint A (commit `270cf0c`, 2026-06-09) added named clinical reviewers + `reviewedBy: Physician` JSON-LD to 55 YMYL illness/treatment pages. 14-day check (W1-W6): 4/6 watched URLs STALLED or WORSE despite verified implementation in prod (3/3 byline + 3/3 JSON-LD confirmed). All 4 failures were on pages starting at pos 7.5–17.6 (top-20 territory).
+- **Evidence (4 closed-watch failures, same action class):**
+  1. **W2 /illnesses/alzheimers** — ⚫ WORSE (pos 10.5→13.1, impr −20.7%) — cannibalization by dementia sibling compounded lack of content differentiation (`closed-W2-2026-06-28.md`)
+  2. **W3 /illnesses/ptsd** — 🔴 STALLED (impr −70%, pos stable ~10, query count rising = GSC anomaly still open 06-30 re-verify) (`closed-W3-2026-06-28.md`)
+  3. **W4 /illnesses/drug-addiction** — 🔴 STALLED (pos 17.6→19.4, impr −11.9%) (`closed-W4-2026-06-28.md`)
+  4. **W5 /treatments/eclectic-therapy** — 🔴 STALLED (pos 10.2→9.9, impr −3.7%) (`closed-W5-2026-06-28.md`)
+- **The exception (NOT an AP9 violation):** W6 /treatments/biofeedback-therapy at pos 31.9 (page-3+) RECOVERED with the same reviewer fix — suggesting the rule is position-conditional (see below).
+- **Why it fails for top-20 pages:** Pages already positioned in top-20 are competing against established content that outranks them. Google's Core Update demotion was driven by **content depth deficit** — the pages lacked clinical detail, India-specific data, and structured expert evidence. Adding a reviewer name signals that a clinician exists, but does NOT add the content depth Google penalised them for. The E-E-A-T signal is necessary (P1) but insufficient alone.
+- **Rule:** When a YMYL page is demoted by a Core Update AND is starting from pos ≤ 20 (top-20 territory), the recovery sprint MUST include **both** (1) reviewer + reviewedBy JSON-LD AND (2) a content-depth refresh (India-specific data, clinical detail, FAQ coverage, schema depth). Reviewer-only fix is an E-E-A-T baseline, not a recovery sprint.
+- **Position condition (seeded, 1 data point — not yet a principle):** W6 (pos 31.9, RECOVERED with reviewer-only) suggests that for deeply buried YMYL pages (pos > 25), the reviewer fix alone may be sufficient because the quality gap there IS primarily E-E-A-T signal rather than content depth. This is a seed — needs 2+ more deep-page recoveries to confirm as P12.
+- **Established:** 2026-06-28 (Learner), 4 closed-watch failures (W2/W3/W4/W5) — ≥3 threshold met.
+- **Applies to:** Any action that adds reviewer metadata to a YMYL page without simultaneously refreshing content depth, on pages at pos ≤ 20. Do NOT replicate the reviewer-only playbook to Cadabams Hospitals or CDC YMYL pages without a paired content-depth sprint.
+
 ---
 
 (Learner appends new anti-patterns when closed watch windows reveal harmful actions to avoid.)

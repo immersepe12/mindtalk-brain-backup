@@ -1,0 +1,122 @@
+# Cowork Scheduled Task 2: GSC Trend Validator
+# Cadence: Monday, Tuesday, Thursday, Friday at 9:30 AM (2.5 hours after Task 1)
+# Working folder: ~/Seo-workflow-mindtalk/mindtalk-setup/
+
+---
+
+You are running the GSC validation task for Mindtalk (mindtalk.in).
+
+## Your job
+
+Cross-reference the rank drops flagged in Task 1 against Google Search Console data. 
+Only keep drops that are confirmed by BOTH rank tracker AND GSC. This filters out noise.
+
+## Steps
+
+1. Check if `~/Seo-workflow-mindtalk/mindtalk-setup/flagged-drops.json` exists and has entries from today.
+   - If empty or from a previous day with no new entries: log "No flagged drops to validate" and stop.
+
+2. Run the GSC pull for flagged URLs:
+   ```
+   python3 ~/Seo-workflow-mindtalk/mindtalk-setup/scripts/gsc-pull.py --flagged
+   ```
+
+3. Read each result from `~/Seo-workflow-mindtalk/mindtalk-setup/gsc-data/`
+
+4. Apply the confirmation logic:
+   - CONFIRMED DROP: rank tracker shows drop AND GSC signal is "HIGH_PRIORITY_DROP" or "CTR_DROP"
+   - NOISE: rank tracker shows drop but GSC signal is "IMPROVING" or "NOISE" → remove from flagged list
+   - MONITOR: CTR_DROP signal only → keep but lower priority
+
+5. For each CONFIRMED DROP, read the actual MDX file from the repo:
+   - Repo is cloned at the path in `~/Seo-workflow-mindtalk/mindtalk-setup/config.json` → `site.repo_local_path`
+   - Read the file at `src/content/[category]/[slug].mdx`
+   - Extract: current word count, all H2 headings, H3 headings, keyword frequency of primary keyword
+
+6. Check `~/Seo-workflow-mindtalk/mindtalk-setup/tracking-db.json`:
+   - If URL has status OBSERVING with observation_window_end in the future → skip it, log as "still in observation"
+   - **Also remove this URL from `flagged-drops.json`** — once a URL is in observation, it is tracked through the observation pipeline (Task 4), not the flagged pipeline. Leaving it in flagged-drops causes it to be re-validated every run forever.
+
+7. Check for Google algorithm updates:
+   - Use web search to look for: "Google algorithm update [current month] [current year]"
+   - Check: https://moz.com/google-algorithm-change
+   - Note any updates from the last 30 days
+   - For each confirmed drop, assess: does any recent algorithm update target healthcare/mental health content?
+   - If yes: flag as ALGO_WATCH, do not queue for content refresh
+
+8. Write `~/Seo-workflow-mindtalk/mindtalk-setup/confirmed-drops.json` with structure:
+   ```json
+   {
+     "/illnesses/depression": {
+       "url_path": "/illnesses/depression",
+       "file_path": "src/content/illnesses/depression.mdx",
+       "live_url": "https://www.mindtalk.in/illnesses/depression",
+       "primary_keyword": "Depression Treatment Bangalore",
+       "keyword_cluster": [...],
+       "category": "illnesses",
+       "severity": "MAJOR",
+       "rank_delta": 8.2,
+       "gsc_signal": "HIGH_PRIORITY_DROP",
+       "gsc_clicks_delta_pct": -32,
+       "gsc_impressions_delta_pct": -18,
+       "dropping_gsc_keywords": [...],
+       "current_word_count": 1847,
+       "current_h2_headings": [...],
+       "current_h3_headings": [...],
+       "primary_keyword_frequency": 12,
+       "algo_watch": false,
+       "confirmed_date": "[TODAY]"
+     }
+   }
+   ```
+
+9. Update `~/Seo-workflow-mindtalk/mindtalk-setup/flagged-drops.json`:
+   - Remove any URLs that were classified as NOISE (not confirmed by GSC)
+   - Remove any URLs that are currently in OBSERVING state (transitioned out per step 6)
+   - Final flagged-drops.json should contain only URLs that are still pending validation or are confirmed-and-pending-action
+
+10. Write summary log to `~/Seo-workflow-mindtalk/mindtalk-setup/logs/gsc-validation-[TODAY'S DATE].txt`
+
+## Important rules
+
+- Never modify any MDX content files during this task
+- The 3-day GSC delay is handled by the script — do not try to adjust dates manually
+- If GSC API authentication fails, log the error with instructions to re-run OAuth
+- Maximum 15 confirmed drops total this week — check how many have already been 
+  processed this week in tracking-db.json and cap accordingly
+
+## Step 11 — Post to Slack
+
+Post a summary to **#seo-workflow-mindtalk** (channel ID: `C0AUAPS4J83`) using `slack_send_message`.
+
+Format:
+
+```
+🔬 *GSC Validation — [TODAY'S DATE]*
+Site: mindtalk.in
+
+Validated: [N] flagged drops
+✅ Confirmed: [N] | 🗑️ Noise removed: [N] | 👁️ Monitor: [N]
+
+[For each confirmed drop:]
+> 🔴 *[Primary Keyword]* — [severity]
+> Rank: [before] → [after] | GSC: clicks [delta]%, impressions [delta]%
+> Signal: [HIGH_PRIORITY_DROP / CTR_DROP]
+
+[If algo_watch is active:]
+⚠️ *Algorithm Watch Active* — Google [update name] ([date]). All confirmed drops held — no content refreshes queued.
+
+[If no drops to validate:]
+> No flagged drops to validate today.
+
+Weekly cap: [N]/15 confirmed this week
+```
+
+## Output
+
+When done, tell me:
+- How many flagged drops were validated
+- How many were confirmed (both rank + GSC agree)
+- How many were discarded as noise
+- Whether any algorithm update risk was detected
+- The confirmed drops list with severity and GSC signal
