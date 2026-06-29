@@ -22,7 +22,36 @@
 | W14 | /blogs/how-to-find-a-therapist-in-india | how to find a therapist in india | NEW_indexation | 2026-06-17 | Auto-ship NEW blog (`549dac3`) | indexed + impressing within 4-6wk | 2026-07-01 | scheduled (check task created 06-19, Executor T11) |
 | W17 | /blogs/how-to-manage-ocd-thoughts | dealing with ocd thoughts | NEW_CONFIRMED_DROP | 2026-06-23 | GSC validation Task 2 (clicks −50%, impr −67.3%, avgpos 16.1→21.8) | clicks + impr recover to pre-drop baseline after refresh | 2026-07-02 | ⏸ **ALGO_WATCH HELD** — YMYL/mental-health; May core update window. No brief created yet. Re-evaluate 07-02 when algo_watch clears. Add to post-07-02 held-refresh batch (#18). |
 | W16 | (10 URLs at exactly pos 100) | data-quality | indexation_reconcile | 2026-06-17 | DataForSEO 06-16 quarantine (data-quality gate) | recover to prior pos on 06-18 pull (= confirmed noise) | 2026-06-18 | ✅ **CLOSED 2026-06-18 — confirmed DataForSEO noise.** The 06-16 ten recovered (none in today's pos-100 set); today's 15 pos-100 URLs are a *different* set → exact-100 rotates run-to-run = API noise, not deindex. "≥4 still at 100" NOT met. No action (AP5). |
-| W18 | /treatments/online-therapy | therapy online india · therapist online · online counsellor · psychological consultation online | NEW_indexation + AEO_citation + AP3_optionB_first_ship | 2026-06-26 | Manual ship of T17-1/BACKLOG #12 hub (feat branch `feat/online-therapy-hub-2026-06-26` commit `6768c7f`, **pending push**). Path/slug + AP3 sign-off LOCKED 2026-06-26. | (a) indexed within 4-6wk; (b) impressing on ≥1 of 4 head terms within 14d; (c) AI Overview / Perplexity / ChatGPT citation on "online therapy india" by D21; (d) booking conversions via T19 mt_marketing UTM | 2026-07-10 (14d) + 2026-07-24 (28d AEO) | ⏸ **PENDING PUSH** — branch authored + committed (6768c7f) but sandbox couldn't push (auth) or amend (sandbox `.git/HEAD.lock`). Kushal to push from his Mac. Also: this is the **first-ever Option B AP3 ship** — if any post-publish flag fires in the 14d window, escalate immediately and reconsider Option B vs Option A revert. |
+| W18 | /treatments/online-therapy | therapy online india · therapist online · online counsellor · psychological consultation online | NEW_indexation + AEO_citation + AP3_optionB_first_ship | 2026-06-26 | Manual ship of T17-1/BACKLOG #12 hub (commit `6768c7f`). Path/slug + AP3 sign-off LOCKED 2026-06-26. **LIVE 2026-06-29.** | (a) indexed within 4-6wk; (b) impressing on ≥1 of 4 head terms within 14d; (c) AI Overview / Perplexity / ChatGPT citation on "online therapy india" by D21; (d) booking conversions via T19 mt_marketing UTM | 2026-07-13 (14d) + 2026-07-27 (28d AEO) | 🟢 **LIVE** — 200 confirmed 2026-06-29. **First-ever Option B AP3 ship in production.** If any post-publish flag fires in the 14d window, escalate immediately and reconsider Option B vs Option A revert. |
+| W19 | /treatments/emdr-for-ptsd | emdr for ptsd | NEW_indexation + AP3_optionB | 2026-06-29 | T9 auto-ship via AP3 Option B (commit `f4b8b0d`); merged to main 06-29. **LIVE.** Reviewer abhimanyu-chandak. | (a) indexed within 4-6wk; (b) impressing on "emdr for ptsd" head term within 21d (baseline 115 impr/90d, pos 13.2); (c) per-page clinical review by 2026-07-13 (14d from sign-off date) | 2026-07-13 (14d clinical review) + 2026-08-10 (42d indexation) | 🟢 **LIVE** 2026-06-29. Option B clinical review window open. |
+| W20 | /treatments/biofeedback-therapy-for-anxiety | biofeedback therapy for anxiety | NEW_indexation + AP3_optionB | 2026-06-29 | T9 auto-ship via AP3 Option B (commit `8438777`); merged to main 06-29. **LIVE.** Reviewer krishna-k-r. | (a) indexed within 4-6wk; (b) impressing on "biofeedback therapy for anxiety" within 21d (baseline 74 impr/90d, pos 11.1); (c) per-page clinical review by 2026-07-13 | 2026-07-13 + 2026-08-10 | 🟢 **LIVE** 2026-06-29. Option B clinical review window open. |
+| W21 | /treatments/talk-therapy-for-depression | talk therapy for depression | NEW_indexation + AP3_optionB | 2026-06-29 | T9 auto-ship via AP3 Option B (commit `b3b4f46`); merged to main 06-29. **LIVE.** Reviewer dr-arun-kumar. | (a) indexed within 4-6wk; (b) impressing on "talk therapy for depression" within 21d (baseline 68 impr/90d, pos 11.7); (c) per-page clinical review by 2026-07-13 | 2026-07-13 + 2026-08-10 | 🟢 **LIVE** 2026-06-29. Option B clinical review window open. |
+
+| W22 | /blogs/burnout-treatment | burnout treatment | investigate_regression (CRITICAL) | 2026-06-29 | Weekly summary Jun 20-26 flagged pos 6.8→85.9 (-79.1). Page published 2026-05-18; 4 sibling pages exist (possible cannibalization with guide-to-burnout-syndrome.mdx 184817 bytes). AP5 check needed: was 6.8 a QDF spike for a newly published page (~33 days post-publish at the peak reading)? Read-only investigation. ⚠ HELD under ALGO_WATCH through 07-02. | AP5 spike check + cannibalization diagnostic by 2026-07-02 | 🔴 PENDING INVESTIGATION (ALGO_WATCH held; read-only; DO NOT refresh until 07-02 + AP5 confirms real drop) |
+
+## 2026-06-29 — Strategist daily stamp (Monday) ⚠ STRATEGIST FLAG
+
+**Weekly summary (Jun 20-26) triggered:**
+- "burnout treatment" CRITICAL (pos 6.8→85.9 = -79.1): NEW W22 opened as read-only investigation. ⚠ STRATEGIST FLAG raised in Slack. AP5 check pending.
+- HIGH drops (AP5 check needed — ALGO_WATCH hold regardless): relationship-problem (15.6→38.8), psychosis (5.8→12.7), counsellor-bangalore (8.8→19.0), therapists-in-bangalore (9.8→16.7), therapist-in-hyderabad (14.5→20.9). Bangalore geo terms are P9 priority (65% of booking intent). All gated under ALGO_WATCH.
+- REBT cluster breakout: +316.7% WoW (981→4,088 impr); life-coach-therapy "what is a life coach" -4,654 impr WoW (natural QDF deflation).
+
+**Rank pull today:** 0 CRITICAL / 1 MAJOR (ocd-thoughts W17 = pre-existing HELD) / 5 MODERATE (all pre-existing HELD) / 0 new additions.
+
+**New watches opened:** W22 (burnout-treatment investigation).
+
+**Watch board:** W15 (anxiety-neurosis CTR verdict DUE TOMORROW 06-30), Jun-9 cohort midpoint DUE TOMORROW 06-30, W12-W14 indexation 07-01, W17 re-check 07-02, W18/W19/W20/W21 14d checks 07-13. W11 homepage remains ⏸ deferred.
+
+**Pending AP5 spike-checks (from weekly summary — NOT formal watches yet):**
+- relationship-problem (pos 15.6→38.8): was prior week a spike? Low footprint.
+- psychosis (pos 5.8→12.7): was 5.8 a spike (183 impr base, pos fluctuates)?
+- counsellor-bangalore + therapists-bangalore + therapist-hyderabad: geo commercial — P9 GEO priority; check after ALGO_WATCH clears 07-02.
+- separation-anxiety-in-babies (pos 5.7→11.6): was 5.7 a spike?
+These are MONITORING ONLY; no action until AP5 check + ALGO_WATCH clear.
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals (t13/t7/t9) have Apply on: 2026-07-05. None vetoed, none early-approved. Next apply-pass: Sunday 07-05 (Strategist run).
+
+**Escalation:** `⚠ STRATEGIST FLAG` raised in Slack for burnout-treatment CRITICAL drop. Not a Watched page, but 79.1-position collapse on a commercial-adjacent therapy term warrants human review.
 
 ## Pending observations (activate as watches when condition met) — added 2026-06-15
 

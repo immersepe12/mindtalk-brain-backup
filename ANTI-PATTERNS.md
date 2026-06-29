@@ -58,6 +58,15 @@
 - **Established:** 2026-06-28 (Learner), 4 closed-watch failures (W2/W3/W4/W5) — ≥3 threshold met.
 - **Applies to:** Any action that adds reviewer metadata to a YMYL page without simultaneously refreshing content depth, on pages at pos ≤ 20. Do NOT replicate the reviewer-only playbook to Cadabams Hospitals or CDC YMYL pages without a paired content-depth sprint.
 
+## AP10. Never trust local repo state as proof of production state
+- Counter-example seen 2026-06-26: T9 auto-shipped 3 YMYL pages (emdr-for-ptsd, biofeedback-therapy-for-anxiety, talk-therapy-for-depression) by writing MDX + committing on `feat/auto-ship-blogs-2026-06-26`. T9's spec defined success as "git push succeeded." But the merge-to-main step never ran (or pushed to a stale remote silently), and the 3 pages sat at HTTP 404 on production for 3 full days. The brain (tracking-db.json + the next Strategist run) read the local repo and thought the pages were live; downstream observation pipeline (T4) was assigned to monitor pages that didn't exist. Discovered only because the user asked "are the YMYL pages live?" and a manual `curl -sIL` returned 404s. Manual merge + push 2026-06-29 resolved.
+- Rule: any action that claims to publish or update production must verify production state directly before marking complete. Concretely:
+  1. **T9 auto-ship** — Step 5.5 must `curl -sI` each shipped URL with up to 4 retries over ~7 min after Vercel deploy window; URLs that don't return 200 get `status: AUTHORED_PENDING_VERIFY` (not PUBLISHED) in tracking-db, plus a Slack escalation.
+  2. **Executor (T11) sprint fires** — after any sprint that adds or modifies live pages, the Executor's run-summary MUST include a "production-verified" line listing the URLs and the HTTP codes observed; missing this line = run incomplete.
+  3. **Strategist (T10)** — when reading tracking-db to assess inventory growth, treat `status: PUBLISHED` as authoritative ONLY if `verified_live_at` is populated and ≤30 days old. `status: AUTHORED_PENDING_VERIFY` rows count against the inventory backlog, not the inventory live count.
+- The deeper principle: **the source of truth on what's live is the live web server, not a git ref, not a tracking file, not a Slack post.** Every brain action that depends on "page X is live" needs a direct verification step or an explicit fallback to AUTHORED_PENDING_VERIFY.
+- Established: 2026-06-29 (after the 06-26 stuck-branch incident), 1 confirmed instance.
+
 ---
 
 (Learner appends new anti-patterns when closed watch windows reveal harmful actions to avoid.)

@@ -22,10 +22,15 @@
 | Top-3 ranking queries | ~5,706 | **12,000** | 18,000 |
 | Inventory coverage (Track B) | 27% (64/240) | **90%** (216/240) | 100% |
 | Brand search volume (mindtalk + variants) | TBD | +200% | +400% |
-| Organic → consult booking rate | TBD | TBD | TBD |
-| Organic → app download rate | TBD | TBD | TBD |
+| Weekly book_appointment_clicked (T15) | 745 unique (W26, 06-24) | **4,000** | 6,000 |
+| Weekly UTM-attributed payments (T19, organic) | 15 (W26) | **150** | 250 |
+| Weekly Payment Successful (T19, all channels) | 104 (W26, 100% organic) | **800** | 1,200 |
+| Doctor-card → booking attribution share | 66.7% (W26) | maintain ≥50% | maintain ≥60% |
+| Backend lead_create_failed rate | 0% (since 06-25 fix) | **≤2%** | 0% |
 
-(The 3 TBD rows are conversion KPIs — auto-populated by Task 15 Mixpanel Conversion Monitor every Wednesday once Mixpanel MCP access is enabled on project "Mindtalk website" (id: 4011856). Until access enabled, autonomous loop optimises proxy metrics like CTR + dwell time. Once filled, Strategist scoring includes conversion lift as a primary input.)
+(Conversion KPIs above are LIVE — populated by Task 15 Mixpanel Conversion Monitor on the unified project id 4011856 (marketing site + consult web app + Mindtalk mobile app, merged 2026-06-17). T15 writes weekly to `logs/conversion-intelligence-YYYY-MM-DD.md`; T19 W26 (2026-06-25) added UTM attribution + revenue dimension. Strategist scoring now includes conversion lift as a primary input — see HIGH-CONVERTER-PATTERNS.md, PAGE-CONVERSION-MAP.md, GEO-CONVERSION-MAP.md.)
+
+**Activated 2026-06-29:** the four "TBD" rows that existed in this section before today have been replaced with the live W26 baseline figures. The historical phrasing was "Mixpanel MCP access enabled" — that gate cleared 2026-06-17 when the Mindtalk mobile-app token landed in the same project as marketing + consult. Three rows worth of conversion KPI optimisation now feed Strategist.
 
 ---
 

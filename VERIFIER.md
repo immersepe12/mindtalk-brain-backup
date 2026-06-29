@@ -127,14 +127,24 @@ For `ship_NEW_blog` or `ship_REFRESH_brief`:
 - [ ] Is this action targeting a page currently in WATCH with open verdict? If yes → VETO ("don't perturb open watch")
 
 ### 9. Cluster blast radius
-- [ ] How many pages in the same content cluster (illness category, treatment cluster, blog category) have been modified in the past 7 days?
-- [ ] If ≥ 3, VETO ("cluster blast radius exceeded")
+- [ ] How many pages in the same content cluster have been modified in the past 7 days?
+- [ ] Cluster caps differ by content folder (updated 2026-06-29 per Decision 2 strategy):
+
+  | Cluster | 7-day modification cap | Rationale |
+  |---|---|---|
+  | `/treatments/*` | **5** | Strategic growth cluster — Decision 2 (W26 T19) confirms /treatments/ + doctor cards = 80% of UTM-attributed payments. Inventory target ~50-100 pages; cap of 3 would take a year just to ship the queue. |
+  | `/illnesses/*` | 3 | YMYL high-cannibalization risk (e.g., alzheimers ↔ dementia 06-24 finding; #19 diagnostic). Conservative cap protects against compositional ranking damage. |
+  | `/blogs/*` | 3 | Discovery cluster — converts ~0% per W26 T19. Higher caps would just inflate vanity inventory; no revenue justification for raising. |
+  | `/lps/*`, `/journeys/*`, `/assessments/*`, `/worksheets/*`, `/mindful-minutes/*` | 3 | Less rigorously profiled. Hold at the conservative default; revisit when T19 has 3+ weeks of conversion data on each cluster (currently <3 weeks for several). |
+
+- [ ] If the count exceeds the cluster's cap → VETO ("cluster blast radius exceeded — {N} ships in {cluster} in last 7d, cap is {cap}")
+- [ ] Note: emdr-for-anxiety was deferred 2026-06-26 by the old uniform cap of 3 in /treatments/; with the raised cap (5), the same scenario today would auto-ship without needing to wait for the 7-day window to clear.
 
 ### 10. PII redaction check (NEW)
 
 For any action that outputs to logs, Slack, or files outside `secrets/`:
 - [ ] Scan the proposed output for these patterns:
-  - Email addresses (`\b[\w._%+-]+@[\w.-]+\.\w+\b`) — VETO if present (unless explicitly Kushal's `kushal@cadabams.com`)
+  - Email addresses (`\b[\w._%+-]+@[\w.-]+\.\w+\b`) — VETO if present, **unless** the address is one of Kushal's own attesting emails (allowed: `kushal@cadabams.com`, `kushal@exar.fit`) and the field is admin-attestation metadata (e.g., `clinical_reviewer_signed_off.attested_by`) that does NOT render to public HTML. Verify the rendering claim by grepping `app/`, `components/`, `lib/` for the field name; if it renders publicly, VETO regardless of address. Added 2026-06-29 from 2026-06-26 emdr-for-ptsd ship audit log.
   - Phone numbers (Indian format: `\+?91[-\s]?\d{10}` or 10-digit sequences)
   - Mixpanel `$user_id`, `$device_id`, `distinct_id` raw values — VETO (these are PII-adjacent)
   - Names of patients / consult clients (cross-check against any known patient list)
