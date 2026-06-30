@@ -7,7 +7,7 @@
 |---|---|---|---|---|---|---|---|---|
 | W1 | /illnesses/dementia | dementia treatment | YMYL_recovery | 2026-06-09 | Sprint A (commit `270cf0c`) | impressions +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🟡 PARTIAL (position-only).** GSC impr 84→75 (−10.7%), pos 7.5→**4.9** (+2.6). Position improved but query base collapsed (33 vs 280-420). Target MISSED. AP9 instance. Next: content-depth recovery in #18 batch (07-02). Log: `memory/experiments/closed-W1-2026-06-28.md` |
 | W2 | /illnesses/alzheimers | alzheimers treatment | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — ⚫ WORSE.** GSC impr 29→23 (−20.7%), pos 10.5→**13.1** (worsened). AP9 instance #1. Cannibalization by dementia (W1) confirmed (#19 verdict: DIFFERENTIATE). Recovery brief HELD in #18 batch. Log: `memory/experiments/closed-W2-2026-06-28.md` |
-| W3 | /illnesses/posttraumatic-stress-disorder-ptsd | ptsd | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🔴 STALLED (with re-verify flag).** GSC impr 803→**241** (−70.0%), pos ~10 stable, query count ROSE 57→61 = possible GSC under-report. AP9 instance #2. **⚠ Re-verify 06-30 (21-day window) before heavy rewrite.** Log: `memory/experiments/closed-W3-2026-06-28.md` |
+| W3 | /illnesses/posttraumatic-stress-disorder-ptsd | ptsd | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🔴 STALLED (with re-verify flag).** GSC impr 803→**241** (−70.0%), pos ~10 stable, query count ROSE 57→61 = possible GSC under-report. AP9 instance #2. **⚠ Re-verify 06-30 (21-day window) before heavy rewrite** — **DEFERRED to 07-01**: DataForSEO API timed out + GSC google.auth missing in obs sandbox. Retry 07-01. Brief unlock conditional on 07-01 result. Log: `memory/experiments/closed-W3-2026-06-28.md` |
 | W4 | /illnesses/drug-addiction | drug addiction | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🔴 STALLED.** GSC impr 511→450 (−11.9%), pos 17.6→**19.4**. AP9 instance #3. Recovery brief needed (#18, 3rd in batch). Log: `memory/experiments/closed-W4-2026-06-28.md` |
 | W5 | /treatments/eclectic-therapy | eclectic therapy | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🔴 STALLED.** GSC impr 433→417 (−3.7%), pos 10.2→9.9 (flat). AP9 instance #4. Lowest-priority in #18 batch. Log: `memory/experiments/closed-W5-2026-06-28.md` |
 | W6 | /treatments/biofeedback-therapy | biofeedback therapy | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🟢 RECOVERED.** GSC impr 326→**375** (+15.0%), pos 31.9→**25.7** (+6.2). The 1/6 that recovered. Unique: had lowest starting position (pos 31.9 = page-3+). 1 data point toward potential P12 (deep-page recovery; 2 more needed to confirm). Log: `memory/experiments/closed-W6-2026-06-28.md` |
@@ -16,7 +16,7 @@
 | W9 | /blogs/emotional-distress-all-you-need-to-know | emotional distress | AI_overview_defense | 2026-06-09 | Sprint B/3 (`c1e0d67`) | 2.2k → 5k | 2026-06-23 | ✅ **CLOSED 2026-06-23 — 🟡 YELLOW.** AIO citation **reclaimed**: mindtalk cited **5×** in live AI Overview for "what is emotional distress", organic **#6**. GSC rising: "emotional distress" 153→**294** impr/wk pos 7.8→6.8; "what is emotional distress" 41→**128** pos 11.2→10.7 — but head-term rank gain modest (+0.5..+1.0, sub-3). Bare "emotional distress" SERP flipped to a **competitor featured_snippet** (no AIO present). Partial: citation won, rank/impr recovery below target. tracking-db RESOLVED, url_locked=false. |
 | W10 | top 20 pages from W12 analyst | (multiple) | CTR_metarewrite | 2026-06-09 | Sprint C (`7c3c2c4`) | +2,180 clicks/wk total | 2026-06-23 | ✅ **CLOSED 2026-06-23 — 🔴 hypothesis DISCONFIRMED (4🟢/8🟡/8🔴).** Clean test (impr held flat +1.1%): cluster clicks **net −12/wk** (321→309), impr-weighted CTR **−0.022pp** (0.453%→0.432%). Targets (+400–680/wk; +2,180 stretch) **missed**. **8 RED > 5 → spike-detection fired → flagged for Meta-Learner; Sprint C is an AP1 violation** (bulk-rewrote 20 ranking pages, no staged 10% sample). **Real finding — rewrite STYLE decides CTR:** 🟢 winners *added a number* (guide "8 Steps" +0.173pp/clicks+75%; yoga "7 Poses" +0.18pp/+50%) or *front-loaded keyword + "Explained"* (hamilton +0.314pp); 🔴 losers *removed an existing number* (divorce "Top 11"→none −0.127pp; types-of-family "7 Approaches Explained"→question −0.357pp) or *swapped informational→geo-commercial* (drug-deaddiction "…in Bangalore" −0.402pp worst; rtms −0.113pp). 3 YELLOWs (20-quotes/dominant/emotional-distress) confounded by same-day Sprint B body rewrites. dementia 🔴 = snippet-starved top-3 (0 CTR @ pos 2.7) = AIO problem, not copy. tracking-db: 3 RESOLVED / 9 MONITOR (re-check day-28 2026-07-07) / 8 NEEDS_REFRESH. → **P11**. Full per-URL table: `memory/patterns/sprint-c-meta-rewrite-result-2026-06-23.md`. |
 | W11 | / (homepage) | mindtalk | conversion_redesign | 2026-06-12 | Homepage app-first (merge `c35193f`) | "Get the App" becomes #1 hero CTA | 2026-06-19 | open — ⏸ **DEFERRED by Learner 06-21** (Mixpanel access blocked; no rank/impr harm; verdict unmeasurable, not failed — `memory/experiments/deferred-W11-2026-06-21.md`) |
-| W15 | /blogs/understanding-anxiety-neurosis | anxiety neurosis | CTR_metarewrite | 2026-06-16 | Sprint C-2 clean-target round (`579bb7c`) | CTR ≥ 3% (from 0.9% at pos 4.6) | 2026-06-30 | open |
+| W15 | /blogs/understanding-anxiety-neurosis | anxiety neurosis | CTR_metarewrite | 2026-06-16 | Sprint C-2 clean-target round (`579bb7c`) | CTR ≥ 3% (from 0.9% at pos 4.6) | 2026-06-30 | ⏳ **PENDING EVALUATION (deferred from 06-30 → 07-01).** Check was due today but DataForSEO API timed out + GSC google.auth failed in obs monitor. APIs recover expected 07-01. Verdict unlocks (or gates) #17 CTR staged v2. |
 | W12 | /blogs/couple-therapy-techniques | couple therapy techniques | NEW_indexation | 2026-06-17 | Auto-ship NEW blog (`549dac3`) | indexed + impressing within 4-6wk | 2026-07-01 | scheduled (check task created 06-19, Executor T11) |
 | W13 | /blogs/how-to-find-a-therapist-for-ocd | how to find a therapist for ocd | NEW_indexation | 2026-06-17 | Auto-ship NEW blog (`549dac3`) | indexed + impressing within 4-6wk | 2026-07-01 | scheduled (check task created 06-19, Executor T11) |
 | W14 | /blogs/how-to-find-a-therapist-in-india | how to find a therapist in india | NEW_indexation | 2026-06-17 | Auto-ship NEW blog (`549dac3`) | indexed + impressing within 4-6wk | 2026-07-01 | scheduled (check task created 06-19, Executor T11) |
@@ -27,7 +27,7 @@
 | W20 | /treatments/biofeedback-therapy-for-anxiety | biofeedback therapy for anxiety | NEW_indexation + AP3_optionB | 2026-06-29 | T9 auto-ship via AP3 Option B (commit `8438777`); merged to main 06-29. **LIVE.** Reviewer krishna-k-r. | (a) indexed within 4-6wk; (b) impressing on "biofeedback therapy for anxiety" within 21d (baseline 74 impr/90d, pos 11.1); (c) per-page clinical review by 2026-07-13 | 2026-07-13 + 2026-08-10 | 🟢 **LIVE** 2026-06-29. Option B clinical review window open. |
 | W21 | /treatments/talk-therapy-for-depression | talk therapy for depression | NEW_indexation + AP3_optionB | 2026-06-29 | T9 auto-ship via AP3 Option B (commit `b3b4f46`); merged to main 06-29. **LIVE.** Reviewer dr-arun-kumar. | (a) indexed within 4-6wk; (b) impressing on "talk therapy for depression" within 21d (baseline 68 impr/90d, pos 11.7); (c) per-page clinical review by 2026-07-13 | 2026-07-13 + 2026-08-10 | 🟢 **LIVE** 2026-06-29. Option B clinical review window open. |
 
-| W22 | /blogs/burnout-treatment | burnout treatment | investigate_regression (CRITICAL) | 2026-06-29 | Weekly summary Jun 20-26 flagged pos 6.8→85.9 (-79.1). Page published 2026-05-18; 4 sibling pages exist (possible cannibalization with guide-to-burnout-syndrome.mdx 184817 bytes). AP5 check needed: was 6.8 a QDF spike for a newly published page (~33 days post-publish at the peak reading)? Read-only investigation. ⚠ HELD under ALGO_WATCH through 07-02. | AP5 spike check + cannibalization diagnostic by 2026-07-02 | 🔴 PENDING INVESTIGATION (ALGO_WATCH held; read-only; DO NOT refresh until 07-02 + AP5 confirms real drop) |
+| W22 | /blogs/burnout-treatment | burnout treatment | investigate_regression (CRITICAL) | 2026-06-29 | Weekly summary Jun 20-26 flagged pos 6.8→85.9 (-79.1). Page published 2026-05-18; 4 sibling pages exist. AP5 check ran 2026-06-30 (Executor T11). | AP5 spike check + cannibalization diagnostic completed 2026-06-30. | ✅ **CLOSED 2026-06-30 (Executor T11 + GSC validator confirmed) — 🟡 QDF CONFIRMED + TRACKER ERROR.** Peak pos 6.8 at day 26-32 post-publish = textbook QDF window; collapse at day 33-39 = standard QDF decay. GSC validator 2026-06-30 additionally confirmed the CRITICAL was a DataForSEO tracker error: GSC impressions 4→5 (+25%, IMPROVING). Cannibalization (guide-to-burnout-syndrome 184KB, pos 7.1) is pre-existing, not the cause. **NO content action.** DO NOT add to #18 recovery batch. Monitor organic floor mid-July; low-priority differentiation sprint candidate for Q3 2026. Log: `memory/experiments/investigation-burnout-treatment-2026-06-30.md` |
 
 ## 2026-06-29 — Strategist daily stamp (Monday) ⚠ STRATEGIST FLAG
 
@@ -52,6 +52,35 @@ These are MONITORING ONLY; no action until AP5 check + ALGO_WATCH clear.
 **Step 10 apply-pass:** NO-OP. All 3 proposals (t13/t7/t9) have Apply on: 2026-07-05. None vetoed, none early-approved. Next apply-pass: Sunday 07-05 (Strategist run).
 
 **Escalation:** `⚠ STRATEGIST FLAG` raised in Slack for burnout-treatment CRITICAL drop. Not a Watched page, but 79.1-position collapse on a commercial-adjacent therapy term warrants human review.
+
+## 2026-06-30 — Strategist daily stamp (Tuesday)
+
+**Rank pull:** DataForSEO API timed out — no fresh position data. Reporting on 06-29 carry-forward.
+
+**GSC validation run (06-30):** All 8 weekly flags cleared as NOISE in a single pass.
+- W22 burnout CRITICAL → **CLOSED** — QDF normalization + GSC tracker error confirmed (impr +25% IMPROVING)
+- Psychosis HIGH → NOISE (GSC impr +25.9% IMPROVING)
+- Separation anxiety HIGH → NOISE (GSC impr +90.1% IMPROVING)
+- Bangalore geo (counsellor/therapists) HIGH → tracker anomaly (zero GSC footprint)
+- Relationship-problem MODERATE → pre-existing ALGO_WATCH hold
+- Group therapy MODERATE → **⚠ SOFT SIGNAL** (8 dropping GSC keywords, impr −9.8%); below hard threshold but first real organic footprint decline in this cluster — monitoring only, no action
+
+**confirmed-drops.json:** cleared (remains `{}`).
+
+**ALGO_WATCH:** Still active; June Spam Update complete, no YMYL impact. Clears ~07-02.
+
+**Watch changes this run:**
+- W22 → CLOSED (QDF confirmed + tracker error)
+- W15 (anxiety-neurosis CTR) → ⏳ DEFERRED to 07-01 (API failures)
+- W3 (PTSD re-verify) → ⏳ DEFERRED to 07-01 (API failures)
+
+**Observation pipeline:** Jun-9 cohort midpoint (6 URLs, day 21) → DEFERRED to 07-01. May-28 cohort at day 33 — obs ends 07-09. Both deferred due to GSC google.auth missing in obs sandbox.
+
+**Watch board as of 06-30:** W3 re-verify 07-01 (deferred), W15 CTR verdict 07-01 (deferred), W12-W14 indexation 07-01, W17 re-check 07-02 (ALGO_WATCH clear day), W18/W19/W20/W21 14d checks 07-13. W11 homepage ⏸ deferred.
+
+**Backlog posture:** #18 YMYL batch = #1 priority (FIRE 07-02 pending W3 brief unlock). New #22 added to track W15/W3 deferred checks on 07-01.
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals (t13/t7/t9) have Apply on: 2026-07-05. Not yet eligible.
 
 ## Pending observations (activate as watches when condition met) — added 2026-06-15
 
