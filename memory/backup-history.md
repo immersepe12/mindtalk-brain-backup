@@ -17,3 +17,5 @@
 2026-06-27T17:40 UTC | 5 files changed | commit: bdb6b49 | push: success (tmp workaround — stale index.lock in brain/.git)
 2026-06-28T17:41 UTC | 26 files changed | commit: 382ec4c | push: ✅ success (force-push — remote had Jun27 bdb6b49 from Mac Mini native push, local diverged from 8793378; force safe as our commit is superset of all disk content. Workarounds: mv-aside stale index.lock, GIT_INDEX_FILE=/tmp seeded from HEAD, renamed bad .git/refs/*.mv stale lock artifacts.)
 2026-06-29 17:41 UTC | 9 files changed | commit: 30589b1 | push: success (ref-lock warning, push confirmed)
+
+2026-06-30T17:39 UTC | 7 files changed | commit: a35cc38 | push: ✅ success (temp-index + mv-aside workaround; stale index.lock moved aside; 7 files: BACKLOG, BRAIN, WATCH, backup-history, verifier-log, decisions/2026-06-30, experiments/investigation-burnout-treatment-2026-06-30)

@@ -55,3 +55,31 @@ One line per Task 15 run. Most recent at bottom.
   ✅ where_to_start_page_viewed +367% (3→14)
   ✅ riya_page_viewed +100% (5→10, still tiny)
 
+
+2026-07-01T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d unique users |
+  VOLUME:
+  - $mp_web_page_view: 6,397 (+7.7% WoW)
+  - blog_viewed: 1,275 | doctor_profile_viewed: 558 | treatment_page_viewed: 247 | illness_page_viewed: 161 | riya_page_viewed: 6 (down from 10 ⚠) | where_to_start_page_viewed: 17 (+21% ✅)
+  - book_appointment_clicked: 764 (+2.6% — stable ✅)
+  - form_submitted: 4 (-33%) | lp_form_submitted: 151 (+11% ✅)
+  - form_started: 15 | form_error: 2 | lead_create_failed: 17 (-78%!! WAS 79 ✅✅✅)
+  - whatsapp_clicked: 92 (+2%) | call_clicked: 54 (+38% ✅) | cta_clicked: 126 (-3%, stable)
+  FUNNELS:
+  - A (main): page view 6,397 → book CTA 758 (11.8%, was 13%) → form_submit 2 (~0%)
+  - B (doctor-driven): doctor_profile 558 → book CTA 369 (66%, was 69%) → form_submit 2 (0.5%)
+  - C (where-to-start): viewed 17 → started 11 (65%) → completed 11 (100% of started; 65% overall)
+  KEY METRICS:
+  - lp:form ratio = 37.75x (151/4) — up from 22.7x. LP form is the ONLY real lead channel ⚠
+  - Backend fail rate: 17/(151+4+17)=9.9% — DOWN from 35.7% ✅✅✅ MAJOR IMPROVEMENT
+  - Doctor→book CTA: 66% (was 69%, -4.3%, still stable)
+  - Riya discovery rate: 0.094% (was 0.168%, -44%; tiny absolute, inconclusive)
+  WoW FLAGS (>20%):
+  ✅✅✅ lead_create_failed -78% (79→17) — backend fail rate 35.7%→9.9%; may indicate engineering fix deployed
+  ✅ lp_form_submitted +11% (136→151)
+  ✅ call_clicked +38% (39→54) — recovery after -32% last week
+  ✅ where_to_start +21% (14→17)
+  ⚠ form_submitted -33% (6→4) — tiny sample, noise likely
+  ⚠ riya_page_viewed -40% (10→6) — tiny absolute, inconclusive (more blog traffic diluting discovery)
+  ⚠ lp:form ratio 22.7x→37.75x — on-site booking form increasingly irrelevant
+
+| 2026-07-01 (7d) | 6,397 | 764 | 4 | 151 | 17 | 66% | PAGE VIEWS +8%✅; BACKEND FAIL -78%✅✅✅ (35.7%→9.9% — possible engineering fix); LP form +11%✅; call_clicked +38%✅; book CTA stable; lp:form=38x⚠; riya still invisible |

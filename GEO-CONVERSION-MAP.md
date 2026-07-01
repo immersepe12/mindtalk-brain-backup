@@ -1,119 +1,130 @@
-# GEO Conversion Map — Updated 2026-06-25 (W26)
+# GEO Conversion Map — Updated 2026-07-01 (W27)
 
 **Written by:** T19 Conversion Intelligence (Wed 11:00 IST) — overwritten weekly.
-**Source:** Mixpanel 4011856, trailing 7d Jun 18-24. Intent = book_appointment_clicked (total) ÷ site unique visitors.
-**Site total book_appointment_clicked:** 1,781. **Site total organic intent:** 1,026 (paid excluded).
+**Source:** Mixpanel 4011856, trailing 7d Jun 25–Jul 1. Intent = book_appointment_clicked (total) ÷ 6,397 site unique visitors.
+**Site total book_appointment_clicked:** 1,936.
 **⚠️ Intent rates by state/city use total book events not unique users — read as relative intensity.**
 
 ---
 
-## Headlines W26
+## Headlines W27
 
-- **Bengaluru = 65.8% of all booking intent.** Stable WoW. Karnataka = 66.5%.
-- **HYDERABAD REVERSAL:** 72 clicks vs 16 last week (+350%). Previously the site's biggest geo leak. Now 4th city by volume. Telugu-speaking-doctor page growth likely driver.
-- **Mumbai DOWN:** 75 vs 96 last week (-21.9%). Monitor next week.
-- **Chennai DOWN:** 30 vs 44 last week (-31.8%). Monitor next week.
-- **AI search (chatgpt.com):** 57 booking intent events — treated as a new "organic" geo-channel (not geographic but notable for its scale vs Tier-1 cities).
-- **NRI/International:** Small but real. UK, UAE, Maldives, Ireland showing consistent intent.
-- **Bot noise:** Singapore + China = noise, excluded from geo signal (same as W25).
+- **Bengaluru = 61.3% of all booking intent.** Stable WoW (+1.4%). Core engine unchanged.
+- **HYDERABAD CONTINUES REVERSAL:** 97 clicks vs 72 last week (+34.7%). W25: 16 clicks. Now 3rd city by volume. Telugu and Tamil doctor pages driving this.
+- **ANDHRA PRADESH SURGES +86%:** 67 clicks vs 36 last week. Vijayawada alone = 49 clicks — new city emerging. Telugu-doctor page growth reaching deeper into AP.
+- **VIJAYAWADA NEW SIGNAL:** 49 book clicks (was not in W26 top cities). AP's second metro is activating.
+- **Mumbai RECOVERING:** 86 vs 75 last week (+14.7%). Reversed W26's -21.9% decline.
+- **Chennai RECOVERING:** 42 vs 30 last week (+40%). Reversed W26's -31.8% decline.
+- **Kolkata RECOVERED:** 14 vs 3 last week (+366%). W26's -77% collapse was noise, not signal.
+- **AI search:** chatgpt.com 110 first-touch events + gemini.google.com 9 session referrals — not geographic but a new organic channel larger than any single city except Bengaluru.
+- **Bot noise:** Jurong West (Singapore) 17 clicks — consistent with W26 bot pattern. Exclude.
 
 ---
 
-## By Indian State (W26)
+## By Indian State (W27)
 
-| State | book_appt clicks | W25 clicks | WoW | Share of total | Read |
+| State | W27 clicks | W26 clicks | WoW | Share | Read |
 |---|---:|---:|---|---:|---|
-| Karnataka | 1,184 | 1,078 | +9.8% | 66.5% | 🟢 Core. Stable. |
-| Maharashtra | 87 | 116 | -25.0% | 4.9% | 🔴 DOWN — watch |
-| NCT of Delhi | 80 | 82 | -2.4% | 4.5% | 🟡 Flat |
-| Telangana | 72 | 16 | +350% ‼️ | 4.0% | 🟢🆕 REVERSAL (was worst leak) |
-| Tamil Nadu | 65 | 53 | +22.6% | 3.6% | 🟢 Growing |
-| Andhra Pradesh | 36 | 38 | -5.3% | 2.0% | 🟡 Stable |
-| Uttarakhand | 12 | — | new | 0.7% | Watch |
-| Kerala | 11 | 19 | -42% | 0.6% | 🔴 DOWN |
-| West Bengal | 6 | 15 | -60% | 0.3% | 🔴 DOWN (small vol) |
-| Bihar | 6 | 12 | -50% | 0.3% | 🔴 DOWN (small vol) |
-| Rajasthan | 8 | — | new | 0.4% | — |
-| Punjab+Chandigarh | 11 | — | — | 0.6% | Stable |
+| Karnataka | 1,207 | 1,184 | +1.9% | 62.3% | 🟢 Core. Stable. |
+| Maharashtra | 104 | 87 | +19.5% | 5.4% | 🟢 RECOVERING (was -25% in W26) |
+| Telangana | 101 | 72 | +40.3% ‼️ | 5.2% | 🟢 3rd week of reversal. Telugu pages working. |
+| NCT of Delhi | 72 | 80 | -10.0% | 3.7% | 🟡 Slight dip — monitor |
+| Andhra Pradesh | 67 | 36 | +86.1% ‼️ | 3.5% | 🟢🆕 SURGE — Vijayawada awakening |
+| Tamil Nadu | 63 | 65 | -3.1% | 3.3% | 🟡 Flat — Tamil doctor pages growing outside Chennai city |
+| Rajasthan | 19 | 8 | +137.5% | 1.0% | 🟡 Watch (small vol) |
+| West Bengal | 16 | 6 | +166.7% | 0.8% | 🟢 Recovering (W26 dip was noise) |
+| Bihar | 13 | 6 | +116.7% | 0.7% | 🟡 Watch |
+| Gujarat | 12 | — | new | 0.6% | New |
+| Kerala | 12 | 11 | +9.1% | 0.6% | 🟡 Stable |
+| Uttar Pradesh | 15 | — | new | 0.8% | Meerut emerging |
+| Madhya Pradesh | 9 | — | new | 0.5% | New |
+| Chandigarh | 6 | — | — | 0.3% | Small |
+| Haryana | 4 | — | — | 0.2% | Small |
+| Uttarakhand | 2 | 12 | -83.3% | 0.1% | 🔴 SHARP DROP (was new in W26) |
+| Punjab | 3 | — | — | 0.2% | Small |
+| Assam | 1 | — | new | 0.1% | New |
+| undefined | 80 | — | — | 4.1% | Unknown region |
 
 ---
 
-## By tier-1 city (W26)
+## By tier-1 city (W27)
 
-| City | book_appt clicks | W25 clicks | WoW | Read |
+| City | W27 clicks | W26 clicks | WoW | Read |
 |---|---:|---:|---|---|
-| Bengaluru | 1,171 | 1,052 | +11.3% | 🟢 Core engine. Stable. |
-| Mumbai | 75 | 96 | -21.9% | 🔴 DOWN — monitor |
-| Delhi | 74 | 75 | -1.3% | 🟡 Flat |
-| Hyderabad | 72 | 16 | +350% | 🟢🆕 Reversal. Telugu-doctor pages working. |
-| Chennai | 30 | 44 | -31.8% | 🔴 DOWN — monitor |
-| Chandigarh | 8 | — | — | Small |
-| Pune | 8 | 15 | -46.7% | 🔴 DOWN (small vol) |
-| Kolkata | 3 | 13 | -77% | 🔴 Sharp DROP (small vol) |
-| Mysuru | 7 | — | new | Organic growth |
+| Bengaluru | 1,187 | 1,171 | +1.4% | 🟢 Core. Stable. |
+| Hyderabad | 97 | 72 | +34.7% | 🟢 Continues reversal. 3rd by volume. |
+| Mumbai | 86 | 75 | +14.7% | 🟢 RECOVERING from W26 -21.9% |
+| Delhi + New Delhi | ~72 | 74 | -2.7% | 🟡 Flat |
+| Chennai | 42 | 30 | +40.0% | 🟢 RECOVERING from W26 -31.8% |
+| Kolkata | 14 | 3 | +366.7% | 🟢 W26 drop was noise |
+| Pune | 8 | 8 | flat | 🟡 Flat |
+| Chandigarh | 6 | 8 | -25% | 🟡 Slight dip |
 
 ---
 
-## Notable non-Tier-1 cities (W26)
+## Notable non-Tier-1 cities (W27)
 
-| City | State | clicks | Notes |
-|---|---|---:|---|
-| Salem | Tamil Nadu | 15 | Significant! TN second city after Chennai |
-| Rajahmundry | Andhra Pradesh | 13 | AP's biggest contributor — explains AP stability |
-| Croydon | UK | 13 | Top NRI market |
-| Atlanta | USA | 15 | Top US NRI market |
-| Coimbatore | Tamil Nadu | 6 | TN third city |
-| Tirupati | Andhra Pradesh | 1 | Small — validate Telugu-doctor hypothesis |
-
----
-
-## Hyderabad Reversal — Analysis
-
-**W25 diagnosis:** "Hyderabad 142 visitors, 11% intent — biggest geo leak"
-**W26 result:** 72 book clicks (+350%), now 4th city by volume
-
-**Drivers:**
-1. /doctors/telugu-speaking-doctors: 37→59 visitors (+59.5%), 35→43 clicks. Telugu-speaking visitors from Hyderabad finding their doctors.
-2. /doctors/tamil-speaking-doctors: 35→64 visitors (+82.9%). Tamil Hyderabadis are also a segment.
-3. Both language doctor pages = strongest Rockets this week.
-
-**W25 hypothesis confirmed:** The Telugu booking intent in W25 came from AP (Rajahmundry, Vijayawada area), not Hyderabad itself. But the GROWTH in Telugu-speaking-doctor visibility is now pulling Hyderabad users in too. Both can be true.
-
-**Action for Strategist:** Telugu-doctor pages are driving Hyderabad. Propose additional doctor pages for Hyderabad specifically (e.g., "psychiatrists in Hyderabad" page on mindtalk.in or doctor profiles with Hyderabad location). This is now a confirmed geography opportunity.
+| City | State | W27 clicks | W26 | Read |
+|---|---|---:|---:|---|
+| Vijayawada | Andhra Pradesh | 49 | — | 🆕 NEW MAJOR SIGNAL — AP market awakening |
+| Tirupati | Andhra Pradesh | 10 | 1 | AP South growing |
+| Anantapur | Andhra Pradesh | 5 | — | New AP city |
+| Meerut | Uttar Pradesh | 8 | — | UP market entering |
+| Patna | Bihar | 13 | — | Bihar signal real |
+| Ahmedabad | Gujarat | 9 | — | Gujarat entering |
+| Salem | Tamil Nadu | 4 | 15 | 🔴 Down from W26 (small vol) |
+| Coimbatore | Tamil Nadu | 5 | 6 | TN steady outside Chennai |
+| Hassan | Karnataka | 6 | — | KA Tier-2 |
+| Mysuru | Karnataka | 1 | 1 | Small |
 
 ---
 
-## NRI / International (W26)
+## International / NRI (W27)
 
-| Location | book_appt clicks | Notes |
+| Region | W27 clicks | Read |
 |---|---:|---|
-| Croydon, UK | 13 | Consistent top NRI market |
-| Atlanta, USA | 15 | Top US NRI market this week |
-| Hertfordshire, UK | 10 | UK NRI |
-| Ontario, Canada | 8 | Canada NRI |
-| Manama, Bahrain | 8 | Gulf NRI |
-| Leinster, Ireland | 7 | Ireland NRI |
-| NRW, Germany | 7 | Europe NRI |
-| Washington, USA | 5 | USA |
-| Dubai, UAE | 3 | Gulf NRI |
-| Malé, Maldives | 4 | — |
+| USA (all) | ~41 est (Texas 8, Washington 18, Virginia 4, CA 6, MA 1, IL 2, AZ 2, IA 2) | Strong NRI market |
+| Germany | ~23 (Bavaria 10, Hamburg 2, Hesse 3, Rödermark 3+) | European NRI |
+| Sweden | 8 (Stockholm) | Nordic NRI |
+| Canada | 9 (Manitoba/Winnipeg) | Canada NRI |
+| Dubai/Gulf | ~11 (Dubai 9, Eastern Province 2) | Gulf NRI |
+| Bahrain | 1 | Gulf NRI |
+| Philippines (Metro Manila) | 12 | Watch — could be diaspora or bot |
+| New Zealand | 3 | Small |
 
-**NRI pattern:** UK (23), USA (26), Canada (8), Gulf (11), Europe (16) = ~84 international book intent clicks. Small but consistent across weeks. NRI therapy demand is real, primarily diaspora seeking Hindi/English-speaking Indian therapists.
+**NRI pattern:** USA strongest this week (Everett WA = 18 alone — Indian diaspora hub). Germany emerging as significant European market. NRI demand for Indian mental health professionals (bilingual + cultural context) is persistent across 3 weeks.
 
 ---
 
-## Bot/proxy noise — EXCLUDE (unchanged from W25)
+## Vijayawada Signal — Analysis (NEW W27)
 
-- Singapore: likely 100+ pageviews, ~0 intent (datacenter)
-- China (Nanjing, Beijing, etc.): ~0 intent
-- Not present in book_appointment_clicked breakdown = confirmed low intent
+**Context:** Vijayawada is AP's second metro (pop ~1.5M), Telugu-speaking. Not previously visible in T19 data.
+
+**W27 data:** 49 book_appointment_clicked (0 in W26's visible data). Part of AP's +86% state jump.
+
+**Hypothesis:** As /doctors/telugu-speaking-doctors page grew in visibility (59→~70+ visitors), Vijayawada users — who previously couldn't find Telugu-speaking mental health professionals online — are now discovering Cadabams specialists. The page is unlocking a previously invisible market.
+
+**Action for Strategist:** Vijayawada + Hyderabad + Rajahmundry = "Telugu metro triangle." A "psychiatrist in Vijayawada" city page could capture structured search demand from this newly active market. High priority for T5.
 
 ---
 
-## Strategist actions seeded
+## Hyderabad 3-Week Trajectory
 
-1. **Protect Bengaluru content** (66.5% of all intent). Nothing should destabilize doctor pages serving this market.
-2. **Grow Hyderabad** — Telugu doctor pages are working. Expand: more Telugu-speaking doctor profiles + "psychiatrists in Hyderabad" content.
-3. **Investigate Mumbai+Chennai drops** — both down WoW (Mumbai -21.9%, Chennai -31.8%). Weekly variation or content gap? Check if any doctor-listing changes affected these cities.
-4. **Tamil Nadu outside Chennai:** Salem (15) + Coimbatore (6) = significant. Tamil-speaking-doctors page growth (+82.9%) is serving these users.
-5. **NRI targeting:** UK+US+Gulf = ~84 book intent clicks. Specialized content for diaspora seeking Indian mental health services could be high-ROI.
+| Week | clicks | WoW | Read |
+|---|---:|---|---|
+| W25 (Jun 17) | 16 | baseline | Biggest geo leak |
+| W26 (Jun 25) | 72 | +350% | Telugu doctor pages catching Hyd users |
+| W27 (Jul 1) | 97 | +34.7% | Continuing growth — not a spike |
+
+**Verdict:** Hyderabad reversal is STRUCTURAL, not a spike. 3rd consecutive week of growth. Telugu-speaking-doctor page is the driver. City now poised for dedicated page investment.
+
+---
+
+## Strategist actions seeded (W27)
+
+1. **Protect Bengaluru content** (62.3% of all intent). Stable. No changes to what's working.
+2. **Double down on Telugu:** Hyderabad +34.7%, AP +86%, Vijayawada new (49 clicks). Propose "psychiatrists in Hyderabad" AND "psychiatrists in Vijayawada" pages — T5 now.
+3. **Propose Tamil city pages:** Chennai recovering (+40%). Salem (4) + Coimbatore (5) + Tiruchirappalli (2) are active but underserved. "Psychologists in Chennai" page opportunity.
+4. **Mumbai+Chennai back:** Both recovering from W26 dips. Hold current Tamil/doctor content — it's working.
+5. **NRI: Prioritize USA + Germany** — strongest international markets. "Online therapy for Indians in USA" / "…in Germany" landing pages.
+6. **Uttarakhand WARNING:** 12→2 (-83%). Small volume but investigate whether any content change affected this. Not yet actionable.

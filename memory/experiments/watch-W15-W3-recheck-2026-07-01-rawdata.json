@@ -1,0 +1,170 @@
+{
+  "W15": {
+    "baseline_pre_0602_0615": {
+      "clicks": 14,
+      "impressions": 1497,
+      "ctr_pct": 0.935,
+      "position": 4.82
+    },
+    "verdict_0617_0628": {
+      "clicks": 14,
+      "impressions": 1323,
+      "ctr_pct": 1.058,
+      "position": 4.91
+    },
+    "verdict_full_0616_0630": {
+      "clicks": 17,
+      "impressions": 1589,
+      "ctr_pct": 1.07,
+      "position": 4.78
+    },
+    "recent7_0622_0628": {
+      "clicks": 8,
+      "impressions": 812,
+      "ctr_pct": 0.985,
+      "position": 4.88
+    },
+    "page_top_queries_0617_0628": [
+      {
+        "q": "anxiety neurosis",
+        "clicks": 14,
+        "impr": 1323,
+        "ctr_pct": 1.06,
+        "pos": 4.9
+      },
+      {
+        "q": "anxiety neurosis meaning",
+        "clicks": 1,
+        "impr": 172,
+        "ctr_pct": 0.58,
+        "pos": 2.2
+      },
+      {
+        "q": "anxiety neurosis symptoms",
+        "clicks": 2,
+        "impr": 169,
+        "ctr_pct": 1.18,
+        "pos": 5.7
+      },
+      {
+        "q": "neurosis de ansiedad",
+        "clicks": 2,
+        "impr": 112,
+        "ctr_pct": 1.79,
+        "pos": 6.7
+      },
+      {
+        "q": "what is anxiety neurosis",
+        "clicks": 2,
+        "impr": 57,
+        "ctr_pct": 3.51,
+        "pos": 2.3
+      },
+      {
+        "q": "anxiety neurosis meaning in hindi",
+        "clicks": 0,
+        "impr": 52,
+        "ctr_pct": 0,
+        "pos": 4.6
+      },
+      {
+        "q": "anxiety neurosis definition",
+        "clicks": 1,
+        "impr": 37,
+        "ctr_pct": 2.7,
+        "pos": 2.6
+      },
+      {
+        "q": "que es neurosis de ansiedad",
+        "clicks": 0,
+        "impr": 24,
+        "ctr_pct": 0,
+        "pos": 4.4
+      }
+    ]
+  },
+  "W3": {
+    "wk_0601_0607": {
+      "clicks": 0,
+      "impressions": 56,
+      "avg_pos": 8.9,
+      "days_with_data": 7
+    },
+    "wk_0608_0614": {
+      "clicks": 0,
+      "impressions": 119,
+      "avg_pos": 5.9,
+      "days_with_data": 7
+    },
+    "wk_0615_0621": {
+      "clicks": 0,
+      "impressions": 96,
+      "avg_pos": 10.1,
+      "days_with_data": 7
+    },
+    "wk_0622_0628_RECENT": {
+      "clicks": 1,
+      "impressions": 127,
+      "avg_pos": 11.0,
+      "days_with_data": 7
+    },
+    "recent_query_count": 30,
+    "recent_top_queries": [
+      {
+        "q": "post traumatic stress disorder",
+        "impr": 11,
+        "clicks": 0,
+        "pos": 5.5
+      },
+      {
+        "q": "ptsd treatment",
+        "impr": 7,
+        "clicks": 0,
+        "pos": 23.1
+      },
+      {
+        "q": "ptsd",
+        "impr": 6,
+        "clicks": 0,
+        "pos": 39.3
+      },
+      {
+        "q": "counselling for post traumatic stress disorder",
+        "impr": 3,
+        "clicks": 0,
+        "pos": 49
+      },
+      {
+        "q": "can ptsd be cured",
+        "impr": 2,
+        "clicks": 0,
+        "pos": 1
+      },
+      {
+        "q": "counselling for ptsd",
+        "impr": 2,
+        "clicks": 0,
+        "pos": 78
+      },
+      {
+        "q": "what is ptsd",
+        "impr": 2,
+        "clicks": 0,
+        "pos": 48
+      },
+      {
+        "q": "how to treat ptsd",
+        "impr": 1,
+        "clicks": 1,
+        "pos": 9
+      }
+    ],
+    "agg_30d_0529_0628": {
+      "clicks": 1,
+      "impressions": 419,
+      "avg_pos": 9.0,
+      "days_with_data": 31
+    },
+    "query_count_wk_0615_0621": 16
+  }
+}

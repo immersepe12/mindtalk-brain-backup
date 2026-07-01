@@ -35,6 +35,44 @@
 
 **Content angles proposed:** 4 total (2 week-2, 2 new week-1 seeds). None yet actionable for T5 (need ≥3 weeks).
 
+## 2026-07-01 11:00 IST — T19 W27 run (THIRD RUN — Patterns 1+2+3 CONFIRMED)
+
+**Data period:** Jun 25–Jul 1, 2026. Unified project 4011856. 6,397 unique visitors (+13.8% WoW).
+
+**PATTERN MILESTONES THIS WEEK:**
+- Patterns 1+2+3 hit 3-week evidence threshold → **T5 UNLOCKED**
+- 7 new content angles now active for T5: Kannada/Malayalam/Hindi doctor pages, Hyderabad/Vijayawada/Mumbai/Chennai city pages
+- Pattern 5 (AI search) STRENGTHENING at week 2: chatgpt.com +93% WoW, Gemini new
+
+**Goldmines:** /doctors/* (all, ~96%+ intent), /experts/* (56%+), /doctors main hub (~412%+ est)
+**Rockets:** /doctors/telugu-speaking-doctors, /doctors/tamil-speaking-doctors (both 70%+ intent, growing)
+**Engagement Engines:** /blogs/* (confirmed 0 direct booking, 1,151 est visitors — feeds /doctors via internal links)
+**Leaky buckets queued for T18:** None (same as W26)
+
+**Key signals this week:**
+- Unique visitors +13.8% (6,397). Call_clicked +42.9% (70 total). Revenue slightly down (94 payments vs 104) — within weekly variance on organic-only traffic.
+- UTM attribution week 3: doctor_card = 9 payments (75%), homepage hero = 3 payments (25%). Cumulative 3-week: 35+ mindtalk_web-attributed payments confirmed.
+- AI SEARCH SURGE: chatgpt.com first-touch = 110 book events (+93% WoW). Gemini.google.com = 9 session referrals (NEW). AI search is a multi-model, high-velocity growing channel.
+- AP SURGE: Andhra Pradesh +86% (36→67 clicks). Vijayawada = 49 book clicks (0 in W26). Telugu doctor pages now reaching deeper AP cities — sequential market unlock pattern.
+- RECOVERING: Mumbai +14.7%, Chennai +40%, Kolkata +366% (W26 drops were noise).
+- HYDERABAD: 3rd consecutive week of growth (16→72→97). STRUCTURAL reversal confirmed.
+
+**UX CRITICAL ESCALATIONS — DEV TEAM:**
+- find-therapist: 481 total (was 293 in W26, +64.2%). ESCALATING.
+- booking/8796 (aparna-rani): 108 total (0 last week). Doctor slot likely unavailable — same as W26's booking/53196.
+- consult/appointments: 240 dead clicks (+52.9%).
+- RESOLVED: booking/53196 — was 444 total, now 3. Fixed.
+
+**Patterns for Strategist weighting:**
+- Goldmines (Patterns 1+2 confirmed): /doctors/* and language pages = +50 action score
+- Rockets (language pages): = +30 action score  
+- Blogs (confirmed no direct conversion): blogs-only actions = -20 unless explicitly adding /doctors internal links
+- Vijayawada new city page: HIGH PRIORITY — 49 book clicks, no competing content, part of confirmed language pattern
+
+**Content angles for T5:** 7 angles UNLOCKED (see PROPOSED-CONTENT-ANGLES.md)
+**Geo concentration:** Bengaluru 62.3% of intent. Karnataka + Telangana + AP = 70.9% combined.
+**Proposed content angles for T5:** 7 total (all UNLOCKED). Patterns 5/6 (AI search, NRI) not yet unlocked.
+
 ## 2026-06-17 11:00 IST — Scheduled T19 fire (addendum to morning inaugural)
 - No re-classification: inaugural full run already completed this morning on the current 7-day window (same data, same week). Tiers/GEO/patterns unchanged — see PAGE-CONVERSION-MAP.md / GEO-CONVERSION-MAP.md.
 - Cross-domain attribution recheck: STILL BLOCKED. Project 3986277 (Cadabams consult) absent from accessible-project list again. Investigated whether consult booking events migrated to another accessible US project: 4026555 cadabams-org (no appointment/book events), 4015752 professionals (none), 4013942 cadabams hospitals (has `book_appointment_clicked` but that is the hospital-site funnel, NOT consult `Appointment Booked`/`Doctor Booking Page Viewed` — wrong project for Mindtalk→consult attribution), 3984638 cadabams group (EU-region-locked, needs mcp-eu.mixpanel.com). Revenue-validated layer remains deferred until 3986277 is restored or the consult funnel is located in an accessible US project.

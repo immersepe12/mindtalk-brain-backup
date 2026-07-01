@@ -53,8 +53,17 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 |---|---:|---:|---:|---:|---:|---:|---|
 | 2026-06-17 | 3,805 | 1,620 | 8 | 130 | 70 | 69% | lp:form 16x ⚠; on-site booking funnel ~0%; backend fail ~34% ⚠; riya(5)+where-to-start(3) invisible |
 | 2026-06-24 | 5,941 | 745 | 6 | 136 | 79 | 69% | Page views +56%✅; book_click -54%⚠⚠ (intent dilution — SEO/blog surge, not commercial pages); LP form +5% (136, leads stable); backend fail ~36% (stable⚠); where-to-start +367%✅ (3→14); riya 10 (doubled, still tiny) |
+| 2026-07-01 | 6,397 | 764 | 4 | 151 | 17 | 66% | Page views +8%✅; **backend fail -78%✅✅✅** (35.7%→9.9% — possible engineering fix deployed); LP form +11%✅ (136→151); call_clicked +38%✅ recovery; book CTA stable (+3%); lp:form ratio 38x⚠ (on-site form irrelevant); riya 6⚠ (tiny, still invisible) |
 
-**Variance > 20% WoW (2026-06-24 reading):**
+**Variance > 20% WoW (2026-07-01 reading):**
+- lead_create_failed: **-78%** ✅✅✅ (79→17) — backend fail rate 35.7%→9.9%. Strongest signal in 3 weeks. Possible engineering fix. Verify in Freshsales: are ~136 LP leads actually arriving?
+- lp_form_submitted: **+11%** ✅ (136→151) — absolute lead volume growing
+- call_clicked: **+38%** ✅ (39→54) — recovery after last week's -32% drop
+- where_to_start_page_viewed: **+21%** ✅ (14→17)
+- form_submitted: **-33%** ⚠ (6→4) — tiny sample (noise likely)
+- riya_page_viewed: **-40%** ⚠ (10→6) — tiny absolute; more blog traffic diluting discovery rate
+
+**Variance > 20% WoW (2026-06-24 reading — archived):**
 - book_appointment_clicked: **-54%** ⚠⚠ (1,620→745) — page views surged +56% simultaneously; new traffic is low-intent SEO/blog content. Sequential funnel rate: 17%→13%. LP form absolute stable — actual leads not impacted.
 - Page views: **+56%** ✅ — SEO traffic growing strongly
 - form_submitted rate (/ page views): -52% (0.21%→0.10%) — denominator inflation; absolute leads stable
@@ -63,12 +72,12 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 - where_to_start discovery: **+367%** ✅ (3→14) — internal linking improvement working
 - riya_page_viewed: +100% (5→10) — still effectively invisible
 
-**Standing conversion concerns for Strategist:**
-- Real lead capture = landing-page forms (136/wk), not the on-site multi-step booking form (6/wk; sequential conversion ~0%).
-- ~36% backend lead-creation failure (lead_create_failed 79 / ~221 form attempts) — persistent 3+ weeks. Engineering issue; escalate to Kushal.
-- Doctor-profile path is the strongest intent signal (69% profile→book CTA, stable) — prioritize doctor page SEO/coverage.
-- Traffic growth outpacing commercial engagement — new visitors land on blog/SEO content, not booking pages. Add CTAs on high-traffic content pages OR focus acquisition toward commercial-intent queries.
-- where_to_start internal linking worked (3→14 viewers). Apply same treatment to riya_page.
+**Standing conversion concerns for Strategist (updated 2026-07-01):**
+- Real lead capture = landing-page forms (151/wk, +11%), not the on-site multi-step booking form (4/wk; sequential conversion ~0%).
+- Backend fail rate: 9.9% this week (was 35.7% persistently — POSSIBLE FIX). Verify with engineering: was anything deployed? Confirm with Freshsales that ~136+ leads are arriving.
+- Doctor-profile path is the strongest intent signal (66% profile→book CTA) — prioritize doctor page SEO/coverage.
+- Traffic growth (+8% page views) is still blog-weighted, not commercial. Book CTA rate: 11.8% of page views (was 13%). Add CTAs on high-traffic content pages.
+- where_to_start at 17 views/week (slow growth, 65% completion rate). Apply same internal-linking treatment to riya_page (6 views/week, effectively invisible).
 
 **T19 W26 Addendum (2026-06-25) — Paid/Organic separation + revenue layer:**
 - Organic book_appointment_clicked: 1,026 (57.6% of 1,781 total). 42.4% was GMB/residual tags (ads paused — not active paid traffic).
