@@ -1,0 +1,234 @@
+{
+  "date": "2026-07-02",
+  "prev_date": "2026-06-25",
+  "diffs": {
+    "amaha.com": {
+      "prev_total": 48,
+      "curr_total": 48,
+      "new_top10": [
+        "depression counselling online",
+        "last stages of depression"
+      ],
+      "lost_top10": [
+        "mental therapist online",
+        "free therapist online india"
+      ],
+      "big_gains": [],
+      "big_drops": [],
+      "mt_shared_moves": []
+    },
+    "yourdost.com": {
+      "prev_total": 50,
+      "curr_total": 50,
+      "new_top10": [
+        "free online counselling chat 24 7 india",
+        "mental therapist online"
+      ],
+      "lost_top10": [
+        "counselling psychology services"
+      ],
+      "big_gains": [],
+      "big_drops": [],
+      "mt_shared_moves": []
+    },
+    "betterhelp.com": {
+      "prev_total": 50,
+      "curr_total": 50,
+      "new_top10": [
+        "anger quotes in english",
+        "blood b personality",
+        "blood type b personality"
+      ],
+      "lost_top10": [
+        "a true friend",
+        "b blood group personality",
+        "childhood fun quotes"
+      ],
+      "big_gains": [],
+      "big_drops": [],
+      "mt_shared_moves": []
+    },
+    "manastha.com": {
+      "prev_total": 49,
+      "curr_total": 49,
+      "new_top10": [],
+      "lost_top10": [
+        "best therapy"
+      ],
+      "big_gains": [],
+      "big_drops": [],
+      "mt_shared_moves": []
+    },
+    "mfine.com": {
+      "prev_total": 50,
+      "curr_total": 50,
+      "new_top10": [
+        "dr online",
+        "how to become beautiful naturally",
+        "how to become beautiful without makeup",
+        "how to become pretty without makeup"
+      ],
+      "lost_top10": [
+        "corn flakes vs muesli",
+        "cornflakes vs muesli",
+        "ethiglo soap benefits in hindi",
+        "extend hair tablet results"
+      ],
+      "big_gains": [],
+      "big_drops": [],
+      "mt_shared_moves": []
+    },
+    "mindtalk.in": {
+      "gained_new": [
+        "hyderabad counselling"
+      ],
+      "lost": [
+        "nursing diagnosis sleep pattern disturbance"
+      ],
+      "improved": [],
+      "dropped": []
+    }
+  },
+  "content_gaps_top20": [
+    {
+      "keyword": "counselling",
+      "vol": 90500,
+      "competitor": "yourdost",
+      "comp_pos": 3,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "therapist for adhd",
+      "vol": 9900,
+      "competitor": "amaha",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "therapists for adhd",
+      "vol": 9900,
+      "competitor": "amaha",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "yourdost",
+      "vol": 9900,
+      "competitor": "yourdost",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "amaha health",
+      "vol": 5400,
+      "competitor": "amaha",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "free therapist online",
+      "vol": 5400,
+      "competitor": "yourdost",
+      "comp_pos": 9,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "health counsellor",
+      "vol": 4400,
+      "competitor": "yourdost",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "therapist online",
+      "vol": 4400,
+      "competitor": "yourdost",
+      "comp_pos": 6,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "therapy online",
+      "vol": 4400,
+      "competitor": "yourdost",
+      "comp_pos": 8,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "online counsellor",
+      "vol": 3600,
+      "competitor": "yourdost",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "counselling for students",
+      "vol": 3600,
+      "competitor": "yourdost",
+      "comp_pos": 3,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "student counselling",
+      "vol": 3600,
+      "competitor": "yourdost",
+      "comp_pos": 3,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "counsellor for students",
+      "vol": 3600,
+      "competitor": "yourdost",
+      "comp_pos": 5,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "amaha mental health centre new delhi",
+      "vol": 2900,
+      "competitor": "amaha",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "therapist mumbai",
+      "vol": 2900,
+      "competitor": "amaha",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "therapists mumbai",
+      "vol": 2900,
+      "competitor": "amaha",
+      "comp_pos": 1,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "counsellors online free",
+      "vol": 2900,
+      "competitor": "amaha",
+      "comp_pos": 2,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "free counselling online",
+      "vol": 2900,
+      "competitor": "yourdost",
+      "comp_pos": 4,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "counsellor free online",
+      "vol": 2900,
+      "competitor": "yourdost",
+      "comp_pos": 5,
+      "mt_pos": "not ranking"
+    },
+    {
+      "keyword": "counselor online for free",
+      "vol": 2900,
+      "competitor": "yourdost",
+      "comp_pos": 8,
+      "mt_pos": "not ranking"
+    }
+  ]
+}

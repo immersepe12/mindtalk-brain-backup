@@ -1,0 +1,312 @@
+{
+  "domain": "manastha.com",
+  "target_queried": "manastha.com",
+  "date": "2026-07-02",
+  "location": "India",
+  "source": "dataforseo_labs_ranked_keywords",
+  "total_ranked_keywords_domain": 142,
+  "total_keywords_returned": 50,
+  "cost_usd": 0.015,
+  "keywords": [
+    {
+      "keyword": "manastha",
+      "position": 1,
+      "url": "/",
+      "search_volume": 1600
+    },
+    {
+      "keyword": "manastha",
+      "position": 1,
+      "url": "/",
+      "search_volume": 1600
+    },
+    {
+      "keyword": "psychiatric job",
+      "position": 6,
+      "url": "/careers/psychiatrist-job",
+      "search_volume": 720
+    },
+    {
+      "keyword": "psychiatrist job",
+      "position": 8,
+      "url": "/careers/psychiatrist-job",
+      "search_volume": 720
+    },
+    {
+      "keyword": "best therapist online",
+      "position": 10,
+      "url": "/",
+      "search_volume": 320
+    },
+    {
+      "keyword": "psychologist free",
+      "position": 11,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 260
+    },
+    {
+      "keyword": "mind and manas",
+      "position": 13,
+      "url": "/",
+      "search_volume": 720
+    },
+    {
+      "keyword": "psychologist website",
+      "position": 13,
+      "url": "/",
+      "search_volume": 480
+    },
+    {
+      "keyword": "free counsellors",
+      "position": 16,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 1000
+    },
+    {
+      "keyword": "free counsellor for depression",
+      "position": 17,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "therapists online india",
+      "position": 18,
+      "url": "/",
+      "search_volume": 1900
+    },
+    {
+      "keyword": "counseling for depression for free",
+      "position": 19,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "free counselling depression",
+      "position": 19,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "online marriage counsellor",
+      "position": 19,
+      "url": "/services/relationship-counselling",
+      "search_volume": 260
+    },
+    {
+      "keyword": "online therapy free sessions",
+      "position": 19,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 480
+    },
+    {
+      "keyword": "therapists for stress management",
+      "position": 19,
+      "url": "/services/stress-management",
+      "search_volume": 320
+    },
+    {
+      "keyword": "therapist in india",
+      "position": 20,
+      "url": "/",
+      "search_volume": 320
+    },
+    {
+      "keyword": "counselling for depression free",
+      "position": 21,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "therapists india",
+      "position": 21,
+      "url": "/",
+      "search_volume": 260
+    },
+    {
+      "keyword": "therapy india",
+      "position": 21,
+      "url": "/",
+      "search_volume": 260
+    },
+    {
+      "keyword": "counseling for depression free",
+      "position": 22,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "counsellors online",
+      "position": 22,
+      "url": "/",
+      "search_volume": 590
+    },
+    {
+      "keyword": "counselor online for free",
+      "position": 22,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 2900
+    },
+    {
+      "keyword": "couple counselling online",
+      "position": 22,
+      "url": "/services/relationship-counselling",
+      "search_volume": 1600
+    },
+    {
+      "keyword": "free counselling for depression",
+      "position": 22,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "therapy sessions online free",
+      "position": 22,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 480
+    },
+    {
+      "keyword": "online counsellor",
+      "position": 23,
+      "url": "/",
+      "search_volume": 3600
+    },
+    {
+      "keyword": "online psychiatrist for free",
+      "position": 23,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 720
+    },
+    {
+      "keyword": "psychiatrist for free online",
+      "position": 23,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 480
+    },
+    {
+      "keyword": "therapy session online free",
+      "position": 23,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 480
+    },
+    {
+      "keyword": "website for counsellors",
+      "position": 23,
+      "url": "/",
+      "search_volume": 260
+    },
+    {
+      "keyword": "free therapist online",
+      "position": 24,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 5400
+    },
+    {
+      "keyword": "india therapist",
+      "position": 24,
+      "url": "/",
+      "search_volume": 210
+    },
+    {
+      "keyword": "best therapist in india",
+      "position": 25,
+      "url": "/",
+      "search_volume": 320
+    },
+    {
+      "keyword": "depression counselling free",
+      "position": 25,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "mental health counselor free",
+      "position": 25,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 1000
+    },
+    {
+      "keyword": "online free psychiatrist",
+      "position": 25,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 720
+    },
+    {
+      "keyword": "therapy online india",
+      "position": 25,
+      "url": "/",
+      "search_volume": 1900
+    },
+    {
+      "keyword": "consult a psychiatrist online for free",
+      "position": 26,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 480
+    },
+    {
+      "keyword": "counselling websites",
+      "position": 26,
+      "url": "/",
+      "search_volume": 260
+    },
+    {
+      "keyword": "marriage counselling online",
+      "position": 26,
+      "url": "/services/relationship-counselling",
+      "search_volume": 1600
+    },
+    {
+      "keyword": "counselling service online",
+      "position": 27,
+      "url": "/",
+      "search_volume": 480
+    },
+    {
+      "keyword": "free psychologist",
+      "position": 27,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 260
+    },
+    {
+      "keyword": "online counselling for relationship",
+      "position": 27,
+      "url": "/services/relationship-counselling",
+      "search_volume": 260
+    },
+    {
+      "keyword": "couple therapy online",
+      "position": 28,
+      "url": "/services/relationship-counselling",
+      "search_volume": 1000
+    },
+    {
+      "keyword": "depression counseling free",
+      "position": 28,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "free counselling online",
+      "position": 28,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 2900
+    },
+    {
+      "keyword": "free depression counseling",
+      "position": 28,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 390
+    },
+    {
+      "keyword": "free mental counseling",
+      "position": 28,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 1000
+    },
+    {
+      "keyword": "free online counselling chat 24 7 india",
+      "position": 28,
+      "url": "/blog/free-online-counselling-and-therapy",
+      "search_volume": 480
+    }
+  ]
+}
