@@ -21,3 +21,5 @@
 2026-06-30T17:39 UTC | 7 files changed | commit: a35cc38 | push: ✅ success (temp-index + mv-aside workaround; stale index.lock moved aside; 7 files: BACKLOG, BRAIN, WATCH, backup-history, verifier-log, decisions/2026-06-30, experiments/investigation-burnout-treatment-2026-06-30)
 
 2026-07-01T17:41Z | 20 files changed | commit: 6bfc69a | push: ✅ success (temp-index + mv-aside workaround; stale index.lock + HEAD.lock moved aside; 20 files: BACKLOG, BRAIN, GEO-CONVERSION-MAP, HIGH-CONVERTER-PATTERNS, PAGE-CONVERSION-MAP, PROPOSED-CONTENT-ANGLES, TRAJECTORY, WATCH, backup-history, verifier-log, mixpanel-history, page-conversion-history, strategist-signal-feed, tech-health-history, decisions/2026-07-01, 5 new experiment files)
+2026-07-02 23:10 IST | 16 files changed | commit: 8bd022b | push: success
+2026-07-03 23:11 IST | BLOCKED | stale lock files (HEAD.lock 07-01, index.lock 07-02) prevented commit — previous snapshot 8bd022b (07-02-2310) still at remote | action needed: rm brain/.git/HEAD.lock brain/.git/index.lock on Mac Mini

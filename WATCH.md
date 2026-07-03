@@ -330,3 +330,33 @@ T9 Auto-Ship at 15:06 IST (in 30 min) is now expected to ship cleanly. T11 Execu
 **Step 10 apply-pass:** NO-OP. All 3 proposals have Apply on: 2026-07-05. Not yet eligible. Next apply-pass: Sunday 07-05 Strategist run.
 
 **Escalation check:** 0 CRITICAL / 0 MAJOR rank drops. DataForSEO API recovered. GSC API blocked (disk space — infrastructure issue, outside Strategist scope). 1 MODERATE (growth-mindset) held in flagged-drops. No watches breached. **No `⚠ STRATEGIST FLAG`.**
+
+## 2026-07-03 — Strategist daily stamp (Friday) ⚠ STRATEGIST FLAG — Production frozen
+
+**⚠ STRATEGIST FLAG: Git push auth failure Day 3 — production completely frozen.**
+All 4 pages authored since 06-30 (what-is-dbt-therapy, what-is-play-therapy, what-is-rebt-therapy, emdr-for-anxiety) are committed locally but NOT on GitHub/Vercel. All return 404. Kushal must run from Mac Mini: `cd ~/Documents/GitHub/mindtalk && rm .git/index.lock && git restore --staged . && git push origin main`.
+
+**AP10 note — emdr-for-anxiety (no watch yet):** The 07-02 BRAIN.md header and BACKLOG claimed "emdr-for-anxiety T9 auto-ships 07-03." This was **incorrect**. T9 auto-ship log (auto-ship-2026-07-03.txt) confirms 0 pages shipped today. emdr-for-anxiety was authored 06-30 on the local main branch but is NOT on GitHub/Vercel (404) due to git push auth failure. **emdr-for-anxiety does NOT have a Watch entry yet** — Watch will be opened (next W-number after W21) when Kushal resolves the push and the page goes live. Note: W19 (/treatments/emdr-for-ptsd) IS correctly LIVE from the 06-29 ship — no correction needed to that row.
+
+**Rank pull (07-03):** DataForSEO API timed out again — 3rd timeout in 5 days (06-30 ✗, 07-01 ✗, 07-02 ✅, 07-03 ✗). Not 3 consecutive (07-02 was clean) → hard infra alert NOT triggered. Carrying 07-02 rank picture (0 CRITICAL / 0 MAJOR / 1 MODERATE growth-mindset).
+
+**GSC validation (07-03):** 1 flagged drop (growth-mindset) validated → NOISE (2 impr, 0 clicks). flagged-drops.json cleared. confirmed-drops.json remains `{}`. No ALGO_WATCH triggered.
+
+**Watch changes this run:**
+- No watch status changes (W19 /treatments/emdr-for-ptsd remains 🟢 LIVE as correct; emdr-for-anxiety has no watch entry yet — pending push resolution)
+- No new watches opened (emdr-for-anxiety failed to ship today; no sprint fired by Strategist; no confirmed drops)
+- No watches closed
+
+**Observation pipeline (07-03):** 11 URLs in pipeline. 0 alerts. May-28 cohort at day 36/42 (final eval due 07-09 — 6 days). Jun-9 cohort at day 24/42. AP3 Option-B cohort (5 pages) still missing url_locked=true — excluded from T4 automated pipeline. AP3-url-fix queued in BACKLOG.
+
+**Upcoming check board:**
+- **07-05 (Sunday):** Step 10 apply-pass — all 3 Meta-Learner proposals eligible (t13-cadence-shift, t7-wire-ai-overview-targets, t9-tracking-db-observation-fields)
+- **07-07 (Tuesday):** W10-D28 Sprint C MONITOR day-28 re-check fires (9 pages, scheduled task `mindtalk-watch-sprint-c-day28-2026-07-07`)
+- **07-09 (Thursday):** May-28 cohort final evaluation (5 URLs, 42d window closes)
+- **07-13 (Monday):** W18/W19/W20/W21 14d clinical reviews fire — W18/W19/W20/W21 clocks all running from 06-29 ship dates ✅; emdr-for-anxiety has no watch yet (ship pending push resolution)
+- **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship)
+- **W11:** homepage ⏸ deferred (Mixpanel — ongoing)
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals apply 07-05 (Sunday). None vetoed. Next apply-pass: Sunday 07-05 Strategist run.
+
+**Escalation check:** ⚠ STRATEGIST FLAG raised (git push Day 3 — production frozen; see BACKLOG PUSH-FAIL-01). 0 CRITICAL / 0 MAJOR rank drops from 07-02 carry. 0 watches breached. No new alerts in `alerts/` directory.

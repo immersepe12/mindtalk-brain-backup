@@ -128,14 +128,15 @@ For `ship_NEW_blog` or `ship_REFRESH_brief`:
 
 ### 9. Cluster blast radius
 - [ ] How many pages in the same content cluster have been modified in the past 7 days?
-- [ ] Cluster caps differ by content folder (updated 2026-06-29 per Decision 2 strategy):
+- [ ] Cluster caps differ by content folder (updated 2026-07-03 per 20-pages/week target):
 
   | Cluster | 7-day modification cap | Rationale |
   |---|---|---|
-  | `/treatments/*` | **5** | Strategic growth cluster — Decision 2 (W26 T19) confirms /treatments/ + doctor cards = 80% of UTM-attributed payments. Inventory target ~50-100 pages; cap of 3 would take a year just to ship the queue. |
-  | `/illnesses/*` | 3 | YMYL high-cannibalization risk (e.g., alzheimers ↔ dementia 06-24 finding; #19 diagnostic). Conservative cap protects against compositional ranking damage. |
-  | `/blogs/*` | 3 | Discovery cluster — converts ~0% per W26 T19. Higher caps would just inflate vanity inventory; no revenue justification for raising. |
-  | `/lps/*`, `/journeys/*`, `/assessments/*`, `/worksheets/*`, `/mindful-minutes/*` | 3 | Less rigorously profiled. Hold at the conservative default; revisit when T19 has 3+ weeks of conversion data on each cluster (currently <3 weeks for several). |
+  | `/treatments/*` | **7** (was 5) | Strategic growth cluster — Decision 2 confirms /treatments/ + doctor cards = 80% of UTM-attributed payments. Raised 07-03 to support 20/wk aggregate target. |
+  | `/illnesses/*` | **5** (was 3) | YMYL cluster; raised 07-03 from 3 given Sprint A findings + AP3 Option B gating. Cannibalization guard remains at Verifier §5 quality bars. |
+  | `/blogs/*` | **6** (was 3) | Discovery cluster; raised 07-03 to unblock T9 velocity for the pilot-20 mix + refresh queue. Note: still Verifier §5-gated so quality-bar failures block ship. |
+  | `/lps/*`, `/journeys/*`, `/assessments/*`, `/worksheets/*`, `/mindful-minutes/*` | **5** (was 3) | Raised 07-03 to allow Stub-Page Pilot 20 to ship 5/week × 4 weeks per pilot spec. |
+  | **Aggregate** (across all content folders) | 20 | Hard cap 07-03 to align with Kushal's stated 20-pages/week target. Any single T9 run limited to 7 pages (per-run cap; see task9 spec). |
 
 - [ ] If the count exceeds the cluster's cap → VETO ("cluster blast radius exceeded — {N} ships in {cluster} in last 7d, cap is {cap}")
 - [ ] Note: emdr-for-anxiety was deferred 2026-06-26 by the old uniform cap of 3 in /treatments/; with the raised cap (5), the same scenario today would auto-ship without needing to wait for the 7-day window to clear.
