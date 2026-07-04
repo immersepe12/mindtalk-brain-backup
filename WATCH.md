@@ -360,3 +360,33 @@ All 4 pages authored since 06-30 (what-is-dbt-therapy, what-is-play-therapy, wha
 **Step 10 apply-pass:** NO-OP. All 3 proposals apply 07-05 (Sunday). None vetoed. Next apply-pass: Sunday 07-05 Strategist run.
 
 **Escalation check:** ⚠ STRATEGIST FLAG raised (git push Day 3 — production frozen; see BACKLOG PUSH-FAIL-01). 0 CRITICAL / 0 MAJOR rank drops from 07-02 carry. 0 watches breached. No new alerts in `alerts/` directory.
+
+## 2026-07-04 — Strategist daily stamp (Saturday) 🚨 Day 4 production frozen + 2 task gaps corrected
+
+**🚨 STRATEGIST FLAG CONTINUES: Git push auth failure Day 4 — production frozen.**
+No change from Day 3 posture. 4 pages still at 404 (what-is-dbt-therapy, what-is-play-therapy, what-is-rebt-therapy, emdr-for-anxiety). Next auto-ship: Tue 07-07. If push not resolved by then, Stub-Page Pilot batch 1 is also blocked.
+
+**Rank pull:** Not pulled today (Saturday — DataForSEO not scheduled). Carrying 07-02/03 picture: 0 CRITICAL / 0 MAJOR / 1 MODERATE (growth-mindset = NOISE).
+
+**GSC validation:** Not run today (Saturday — no new signals; growth-mindset validated NOISE 07-03, confirmed-drops.json remains `{}`).
+
+**⚠ Two scheduled task gaps discovered and corrected this run:**
+1. **W10-D28 task (`mindtalk-watch-sprint-c-day28-2026-07-07`)** — BACKLOG showed COMPLETED by Executor 07-03 ("task created"). Verified NOT in scheduled tasks list (all 50+ tasks checked). AP10 violation: Executor claimed creation without verification. **Strategist created task directly this run.** Fires 2026-07-07 09:00 IST.
+2. **W18-W21 clinical review task** — WATCH.md 07-03 stamp listed "07-13 clinical reviews fire" as an upcoming check but no scheduled task existed. Confirmed scanning all 50+ tasks. **Strategist created `mindtalk-watch-w18-w21-clinical-review-2026-07-13` this run.** Fires 2026-07-13 09:00 IST.
+
+**Watch changes this run:** No watch status changes (Saturday — no new signals, no sprint, no confirmed drops).
+
+**Observation pipeline (07-04):** 15 URLs. 0 alerts. May-28 cohort at day 37/42 → final eval fires 07-09 (T4 auto-runs). W18 (/treatments/online-therapy): day 8 of 14-day obs window (short window ends 07-10 — human review recommended at final eval given limited data).
+
+**Upcoming check board:**
+- **07-05 (Sunday):** Step 10 apply-pass — all 3 Meta-Learner proposals eligible (t13-cadence-shift 8:30pm, t7-ai-overview-targets, t9-tracking-db-fields). T13 Part B (Cowork cron 8:00→8:30 PM) requires Kushal manual update.
+- **07-07 (Tuesday):** W10-D28 Sprint C MONITOR day-28 re-check (task `mindtalk-watch-sprint-c-day28-2026-07-07` **confirmed created ✅**). Also: next T9 auto-ship + T11 Executor — both blocked if git push still unresolved.
+- **07-09 (Thursday):** May-28 cohort final evaluation (5 URLs, 42d window closes — T4 auto-runs).
+- **07-10 (Friday):** W18 online-therapy short obs window END (human review recommended — limited data from 14d only).
+- **07-13 (Monday):** W18/W19/W20/W21 14d clinical reviews (task `mindtalk-watch-w18-w21-clinical-review-2026-07-13` **confirmed created ✅**). Also: Professional input skip-list expires for 6 W26 pages (nursing-care, DBT, family-therapy, ACT, personality-disorder, sleep-disorder).
+- **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship).
+- **W11:** homepage ⏸ deferred (Mixpanel — ongoing).
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals apply TOMORROW 07-05 (Sunday). Not yet eligible today.
+
+**Escalation check:** ⚠ STRATEGIST FLAG active (git push Day 4 — production frozen; BACKLOG PUSH-FAIL-01). 0 CRITICAL / 0 MAJOR rank drops. 0 watches breached. 2 watch task gaps found and corrected this run (see above).
