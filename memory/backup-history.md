@@ -24,3 +24,5 @@
 2026-07-02 23:10 IST | 16 files changed | commit: 8bd022b | push: success
 2026-07-03 23:11 IST | BLOCKED | stale lock files (HEAD.lock 07-01, index.lock 07-02) prevented commit — previous snapshot 8bd022b (07-02-2310) still at remote | action needed: rm brain/.git/HEAD.lock brain/.git/index.lock on Mac Mini
 2026-07-03 23:12 IST | 7 files changed | commit: df6723c | push: ✅ success (temp-index workaround; index.lock + HEAD.lock moved aside; 7 files: BACKLOG, BRAIN, VERIFIER, WATCH, backup-history, decisions/2026-07-03, verifier-log)
+
+2026-07-04-2311 | 4 files changed | commit: e4aa764 | push: success

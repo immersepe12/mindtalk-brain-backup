@@ -1,0 +1,99 @@
+# Cowork Scheduled Task 7: Monthly Site Audit
+# Cadence: First Monday of every month at 9:00 AM
+# Working folder: ~/Seo-workflow-mindtalk/mindtalk-setup/
+
+---
+
+You are running the monthly technical SEO audit for Mindtalk (mindtalk.in).
+
+## Your job
+
+Crawl every page on mindtalk.in and check for technical SEO issues that
+could be hurting rankings. Produce a report that the SEO team can act on.
+
+## Steps
+
+### Step 1 — Run the audit script
+```
+python3 ~/Seo-workflow-mindtalk/mindtalk-setup/scripts/site-audit.py
+```
+
+This will take 10-20 minutes to crawl all pages. Let it complete fully.
+
+### Step 2 — Read the generated report
+Read ~/Seo-workflow-mindtalk/mindtalk-setup/reports/site-audit-[TODAY'S DATE].md
+
+### Step 3 — Compare with last month
+Check ~/Seo-workflow-mindtalk/mindtalk-setup/reports/audit-history.json
+Compare this month's critical issue count vs last month.
+Is it improving or getting worse?
+
+### Step 4 — Write action summary
+Write to ~/Seo-workflow-mindtalk/mindtalk-setup/reports/audit-summary-[TODAY'S DATE].txt:
+
+Cover these points:
+- Total pages crawled and health score (healthy pages / total)
+- Critical issues: list each one with the affected URL and what to fix
+- Most common warning type and how many pages affected
+- Any duplicate titles or meta descriptions — list which pages
+- PageSpeed: which pages scored below 70 on mobile
+- Comparison vs last month: better or worse?
+- Top 5 priority fixes for the dev team this month
+
+### Step 5 — Flag critical issues
+If any page has a CRITICAL issue (missing title, missing H1, 404 error,
+HTTP error):
+- Write each to ~/Seo-workflow-mindtalk/mindtalk-setup/alerts/AUDIT-CRITICAL-[TODAY].txt
+- These need to be fixed within 48 hours
+
+## Important rules
+
+- Do NOT modify any files in the repo during this task
+- Do NOT run git commands
+- The crawl respects a 0.5 second delay between pages — do not try to speed it up
+- If the script times out on a page, that is expected and handled gracefully
+- PageSpeed checks are rate limited to 10 pages — this is by design
+
+## Step 6 — Post to Slack
+
+Post a summary to **#seo-workflow-mindtalk** (channel ID: `C0AUAPS4J83`) using `slack_send_message`.
+
+Format:
+
+```
+🏥 *Monthly Site Audit — [TODAY'S DATE]*
+Site: mindtalk.in
+
+Pages crawled: [N]
+Health: [healthy]/[total] ([N%])
+
+*Critical Issues:* [N]
+[For each critical issue:]
+> 🔴 [Issue type] — [affected URL]
+
+*Most Common Warning:* [type] ([N] pages)
+*PageSpeed Worst:* [URL] — score [N]/100
+
+*vs Last Month:*
+> Critical: [N] → [N] ([better ✅ / worse ⚠️])
+> Warnings: [N] → [N] ([better ✅ / worse ⚠️])
+
+*Top 5 Fixes for Dev Team:*
+> 1. [fix]
+> 2. [fix]
+> 3. [fix]
+> 4. [fix]
+> 5. [fix]
+
+📎 Full report: reports/site-audit-[DATE].md
+```
+
+## Output
+
+When done, tell me:
+- How many pages were crawled
+- Critical issues count with a brief list
+- Most common warning
+- PageSpeed worst performer
+- Whether things improved vs last month
+- Files created
