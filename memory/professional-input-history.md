@@ -16,4 +16,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W27 | /illnesses/schizophrenia | Dr. Thejus Kumar B R | 50 | brief_generated |
 | 2026-W27 | /illnesses/stress-disorder | Abhimanyu Chandak | 45 | brief_generated |
 | 2026-W27 | /blogs/sleep-disorders-insomnia-in-elderly | Sucheta Saha | 30 | brief_generated |
+| 2026-W28 | /illnesses/depression | Dr. Arun Kumar V | 85 | brief_generated |
+| 2026-W28 | /illnesses/anxiety | Dr. Krishna K R | 85 | brief_generated |
+| 2026-W28 | /illnesses/alzheimers | Dr. Arun Kumar V | 70 | brief_generated |
+| 2026-W28 | /treatments/counselling-therapy | Dr. Swarupa Mohan Udgiri | 60 | brief_generated |
+| 2026-W28 | /treatments/narrative-therapy | Sufia Nusrat | 60 | brief_generated |
+| 2026-W28 | /blogs/how-to-manage-ocd-thoughts | Ms. Tejal Jaiswal | 40 | brief_generated |
 
