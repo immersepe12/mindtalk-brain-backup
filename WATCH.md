@@ -390,3 +390,37 @@ No change from Day 3 posture. 4 pages still at 404 (what-is-dbt-therapy, what-is
 **Step 10 apply-pass:** NO-OP. All 3 proposals apply TOMORROW 07-05 (Sunday). Not yet eligible today.
 
 **Escalation check:** ⚠ STRATEGIST FLAG active (git push Day 4 — production frozen; BACKLOG PUSH-FAIL-01). 0 CRITICAL / 0 MAJOR rank drops. 0 watches breached. 2 watch task gaps found and corrected this run (see above).
+
+## 2026-07-07 — Strategist daily stamp (Tuesday) 🆕 June 2026 Core Update + 9 pages stuck
+
+**🚨 STRATEGIST FLAG CONTINUES: Git push auth failure Day 7+ — 9 pages stuck at 404.**
+Prior 4 (what-is-dbt-therapy, what-is-play-therapy, what-is-rebt-therapy, emdr-for-anxiety) + 5 new from T9 today (eft-therapy-explained, how-to-fix-trust-issues, signs-of-untreated-adhd-in-adults, what-is-family-counselling, why-do-people-talk-in-their-sleep — commits e7fceda + 503f463). All LOCAL ONLY — not on GitHub/Vercel. Kushal must run from Mac Mini: `cd ~/Documents/GitHub/mindtalk && rm .git/index.lock && git restore --staged . && git push origin main`.
+
+**🆕 Google June 2026 Core Update ACTIVE (Jun 30 – Jul 17, 2026).** HIGH relevance to YMYL/E-E-A-T for mental health content. Flagged by gsc-validation-2026-07-07.txt today. No confirmed drops triggered yet — **ALGO_WATCH NOT applied.** Monitor daily through 07-17; if confirmed drops appear on YMYL pages in a single GSC run, re-trigger ALGO_WATCH hold on new YMYL refreshes (same protocol as May 2026 core update).
+
+**Rank pull (07-07):** 0 CRITICAL, 0 MAJOR. 2 MODERATE (stress-hair-loss pos 5→11; sleep-talking pos 4→9). Both GSC-validated NOISE: stress-hair-loss GSC impr +2.2% (INCREASING); sleep-talking GSC avg pos 24.1→16.6 (IMPROVING). 7 pos-100 quarantined as AP8 noise. confirmed-drops.json = {} (empty).
+
+**Watch changes this run:**
+- No new watches opened (both MODERATEs = confirmed noise; no sprint fired by Strategist; no new confirmed drops)
+- No watches closed (Learner closes on merits)
+- **W18 (/treatments/online-therapy):** Day 12 of 14-day obs window. Final eval fires 07-10 (3 days). Human review recommended (short 14d window = limited indexation data). Still at 404 per push failure.
+- **W19 emdr-for-anxiety:** Still 404. 14d clinical clock NOT running — push failure blocking.
+- **W10-D28:** Sprint C day-28 check task fires TODAY at 09:00 IST (`mindtalk-watch-sprint-c-day28-2026-07-07`). Results arrive from that scheduled task run. Strategist will incorporate verdict in tomorrow's stamp.
+
+**Observation pipeline (07-07):** 15 URLs, 0 alerts. May-28 cohort at day 41/42 → final eval fires 07-09 (2 days). W18 at day 12/14 → final eval 07-10 (3 days). AP3 cohort (biofeedback-for-anxiety, emdr-for-ptsd, talk-therapy-for-depression) at day 12 → midpoint check 07-17. Jun-9 cohort at day 28/42 → final eval 07-21.
+
+**Upcoming check board:**
+- **07-07 TODAY:** W10-D28 Sprint C day-28 (fires this morning at 09:00 IST — verify it ran)
+- **07-09 (2 days):** May-28 cohort final evaluation — 5 URLs (detachment-disorder, clinical-psychologist, act-therapy, biofeedback-therapy, rtms-treatment)
+- **07-10 (3 days):** W18 /treatments/online-therapy short obs window END (14d final eval; human review recommended)
+- **07-13 (6 days):** W18/W19/W20/W21 14d clinical reviews (task `mindtalk-watch-w18-w21-clinical-review-2026-07-13` confirmed 07-04)
+- **07-17 (10 days):** AP3 cohort midpoint checks — biofeedback-for-anxiety, emdr-for-ptsd, talk-therapy-for-depression
+- **07-17 (10 days):** Professional input skip-list expires for 6 W27 pages (play-therapy, rtms-therapy, eclectic-therapy, schizophrenia, stress-disorder, sleep-disorders-insomnia-in-elderly)
+- **07-21 (14 days):** Jun-9 cohort final evaluations — 6 URLs (anger-management-therapy, codependency, dbt-skills-modules, people-pleasing, relationship-problems, somatic-therapy)
+- **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship)
+- **08-10:** AP3 cohort final evaluations (biofeedback-for-anxiety, emdr-for-ptsd, talk-therapy-for-depression)
+- **W11:** homepage ⏸ deferred (Mixpanel — ongoing)
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals (t1-api-failure-slack-alert, t11-watch-task-creation-verify, t9-rejection-notes-to-brief-file) Apply on: 2026-07-12. Next apply window: Sunday 07-12 Strategist run.
+
+**Escalation check:** ⚠ STRATEGIST FLAG active (git push Day 7+ — 9 pages stuck; BACKLOG PUSH-FAIL-01). 🆕 June 2026 Core Update active through 07-17 — YMYL monitoring elevated. 0 CRITICAL / 0 MAJOR rank drops today. 0 watches breached. **No additional `⚠ STRATEGIST FLAG`** beyond existing push-failure (Core Update = no confirmed drops yet).
