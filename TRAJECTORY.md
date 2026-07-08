@@ -56,8 +56,16 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-06-17 | 3,805 | 1,620 | 8 | 130 | 70 | 69% | lp:form 16x ⚠; on-site booking funnel ~0%; backend fail ~34% ⚠; riya(5)+where-to-start(3) invisible |
 | 2026-06-24 | 5,941 | 745 | 6 | 136 | 79 | 69% | Page views +56%✅; book_click -54%⚠⚠ (intent dilution — SEO/blog surge, not commercial pages); LP form +5% (136, leads stable); backend fail ~36% (stable⚠); where-to-start +367%✅ (3→14); riya 10 (doubled, still tiny) |
 | 2026-07-01 | 6,397 | 764 | 4 | 151 | 17 | 66% | Page views +8%✅; **backend fail -78%✅✅✅** (35.7%→9.9% — possible engineering fix deployed); LP form +11%✅ (136→151); call_clicked +38%✅ recovery; book CTA stable (+3%); lp:form ratio 38x⚠ (on-site form irrelevant); riya 6⚠ (tiny, still invisible) |
+| 2026-07-08 | 6,342 | 784 | 5 | 129 | 2 | 73% | Page views stable (-1%); **backend fail -88%✅✅✅** (9.9%→1.5% — continued recovery, now negligible); **riya +133%✅✅** (6→14, first real break from invisibility); illness -27%⚠ (161→118); lp_form -15%⚠ (151→129); doctor→book CTA 73% (new high✅✅); lp:form=25.8x |
 
-**Variance > 20% WoW (2026-07-01 reading):**
+**Variance > 20% WoW (2026-07-08 reading):**
+- lead_create_failed: **-88%** ✅✅✅ (17→2) — backend fail rate 9.9%→1.5%. Recovery holding and deepening. Verify in Freshsales that ~129 LP leads are arriving.
+- riya_page_viewed: **+133%** ✅✅ (6→14) — first meaningful break from invisibility (was stuck at 5-10 for 4 weeks). Still tiny absolute, but directionally positive.
+- doctor→book CTA: **+10.6%** ✅✅ (66%→73%) — new high. Doctor pages are the strongest conversion path.
+- illness_page_viewed: **-26.7%** ⚠ (161→118) — high-intent pages losing traffic. Check illness-cluster rankings.
+- lp_form_submitted: **-14.6%** (151→129) — marginal dip, watch for next week. May be production freeze effect (0 pages shipped 4 consecutive weeks).
+
+**Variance > 20% WoW (2026-07-01 reading — archived):**
 - lead_create_failed: **-78%** ✅✅✅ (79→17) — backend fail rate 35.7%→9.9%. Strongest signal in 3 weeks. Possible engineering fix. Verify in Freshsales: are ~136 LP leads actually arriving?
 - lp_form_submitted: **+11%** ✅ (136→151) — absolute lead volume growing
 - call_clicked: **+38%** ✅ (39→54) — recovery after last week's -32% drop
@@ -74,12 +82,13 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 - where_to_start discovery: **+367%** ✅ (3→14) — internal linking improvement working
 - riya_page_viewed: +100% (5→10) — still effectively invisible
 
-**Standing conversion concerns for Strategist (updated 2026-07-01):**
-- Real lead capture = landing-page forms (151/wk, +11%), not the on-site multi-step booking form (4/wk; sequential conversion ~0%).
-- Backend fail rate: 9.9% this week (was 35.7% persistently — POSSIBLE FIX). Verify with engineering: was anything deployed? Confirm with Freshsales that ~136+ leads are arriving.
-- Doctor-profile path is the strongest intent signal (66% profile→book CTA) — prioritize doctor page SEO/coverage.
-- Traffic growth (+8% page views) is still blog-weighted, not commercial. Book CTA rate: 11.8% of page views (was 13%). Add CTAs on high-traffic content pages.
-- where_to_start at 17 views/week (slow growth, 65% completion rate). Apply same internal-linking treatment to riya_page (6 views/week, effectively invisible).
+**Standing conversion concerns for Strategist (updated 2026-07-08):**
+- Real lead capture = landing-page forms (129/wk, -15% this week — watch), not the on-site multi-step booking form (5/wk; sequential conversion ~0%).
+- Backend fail rate: **1.5%** (was 9.9%, was 35.7% — recovery appears complete). Verify with Freshsales that ~129 LP leads are arriving cleanly. If confirmed, this is a resolved issue.
+- Doctor-profile path is the strongest intent signal (**73% profile→book CTA, new high**) — doctor page SEO is the highest-leverage conversion lever.
+- illness_page_viewed -27% this week (161→118) — high-intent traffic class dropping. Check illness-cluster rankings urgently; may be linked to production freeze (0 pages shipped 4 weeks).
+- riya_page_viewed: 14 this week (+133% WoW) — first real jump. Still tiny (~0.22% discovery rate) but directional signal. Continue internal linking to riya page.
+- lp_form -15% (151→129): marginal dip, likely noise or production freeze effect. If it persists next week, investigate LP landing page changes.
 
 **T19 W26 Addendum (2026-06-25) — Paid/Organic separation + revenue layer:**
 - Organic book_appointment_clicked: 1,026 (57.6% of 1,781 total). 42.4% was GMB/residual tags (ads paused — not active paid traffic).
@@ -88,6 +97,16 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 - UX friction (consult.cadabams.com): booking/53196 = 444 rage+dead clicks (CRITICAL). find-therapist wizard = 293 (HIGH). These are downstream conversion blockers post-mindtalk.in referral.
 - AI search: chatgpt.com = 57 book intent events (3.2% of total) — new organic channel, week 1 of tracking.
 - See PAGE-CONVERSION-MAP.md + UX-FRICTION-PAGES.md for full tier data.
+
+**T19 W28 Addendum (2026-07-08) — REVENUE BREAKOUT WEEK + Pattern 5 confirmed:**
+- **Organic revenue (W28):** Payment Successful 118 (+25.5% WoW), Appointment Booked 107 (+33.8% WoW). Best combined revenue week in 4 weeks of tracking.
+- **UTM attribution (week 4):** mindtalk_web-attributed payments = 22 (+83% WoW from 12). Doctor card = 13 payments (+44%); Homepage hero = 9 payments (+200% — accelerating fast). Cumulative 4-week confirmed: 57 mindtalk_web-attributed payments.
+- **Organic intent share milestone:** book_appointment_clicked organic = 60.5% of total (first week organic share exceeded paid residual signal — milestone).
+- **AI search channel CONFIRMED (3 weeks):** chatgpt.com = 155 book clicks (+40.9%). 7.5% of ALL organic clicks. T5 unlock: AI-citable content angles (India MH stats, structured expert profiles, FAQ schema).
+- **Tier classification unchanged (4 weeks):** Goldmines = /doctors/* + /experts/*; Rockets = /doctors/telugu-speaking + tamil-speaking; Engagement Engine = /blogs/*; Leaky Buckets = 0; Tracking Gap = homepage (hero confirmed converting but book_click instrumentation missing).
+- **UX friction W28:** NEW CRITICAL — checkout dead clicks = 68 (payment flow, direct revenue impact). booking/8796 (aparna-rani) = 183 total events (+444% dead clicks). find-therapist improving (481→371). **Dev team priority: fix checkout dead clicks before W29.**
+- **Geo concentration:** Bengaluru 60.2% of intent. Karnataka 61.6% share. New markets: Kerala +191% (week 1 — watch W29), Pune +213% (week 1). AP/Vijayawada crash confirmed W27 anomaly.
+- See PAGE-CONVERSION-MAP.md + GEO-CONVERSION-MAP.md + HIGH-CONVERTER-PATTERNS.md for full data.
 
 ---
 

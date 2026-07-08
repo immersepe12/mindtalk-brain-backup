@@ -7,63 +7,71 @@
 
 ---
 
-## W26 Friction Table (Jun 18-24, 2026)
+## W28 Friction Table (Jul 2–8, 2026)
 
-| Page / URL | Rage clicks | Dead clicks | Total | Severity | Suspected cause |
-|---|---:|---:|---:|---|---|
-| consult.cadabams.com/consult/booking/53196 | 273 | 171 | **444** | 🔴 CRITICAL | Doctor slot availability broken — users clicking unavailable slots repeatedly |
-| consult.cadabams.com/consult/find-therapist | 53 | 240 | **293** | 🔴 HIGH | Wizard UI elements not responding (filters? dropdowns?) |
-| consult.cadabams.com/consult/appointments | 0 | 157 | **157** | 🟡 MEDIUM | Appointments list UI unresponsive element |
-| consult.cadabams.com/home | 0 | 108 | **108** | 🟡 MEDIUM | App homepage — unclear which element |
-| consult.cadabams.com/baseline-assessment | 0 | 50 | **50** | 🟡 LOW-MEDIUM | Assessment flow dead click |
-
----
-
-## Priority actions
-
-### 🔴 CRITICAL: booking/53196 — 444 friction events
-**Likely cause:** Doctor #53196 has a broken or fully-blocked availability calendar. Users who reach this doctor's booking page find no available slots but the UI doesn't clearly communicate this — they keep clicking expecting something to happen.
-
-**Impact:** If this doctor appears in search results, doctor listings, or is recommended anywhere in the app, all traffic to them is converting to frustration. Zero bookings possible from this page while it's broken.
-
-**Action:** Dev team must check:
-1. Is doctor 53196 still active? (If deactivated, remove from all listings immediately)
-2. If active — is their availability calendar connected? Are slots loading?
-3. If slots are available — is the slot-click handler broken?
-
-**Priority:** Immediate — this is a live revenue leak.
+| Page / URL | Rage clicks | Dead clicks | Total | Severity | WoW | Suspected cause |
+|---|---:|---:|---:|---|---|---|
+| consult.cadabams.com/consult/booking/8796?mode=online | 96 | 87 | **183** | 🔴 CRITICAL ESCALATING | Dead: 16→87 (+444%) | Aparna-rani booking broken. Availability broken or UI unresponsive. Was W26/W27 rage-only; dead clicks now exploding. |
+| consult.cadabams.com/consult/find-therapist | 52 | 319 | **371** | 🟡 HIGH — IMPROVING | 481→371 (-22.9%) | Wizard dead clicks reducing — fix may be partially working. Still high. |
+| consult.cadabams.com/consult/appointments | ~0 | 237 | **237** | 🔴 HIGH | flat from 240 | Appointments list — non-responsive elements. Persisting. |
+| consult.cadabams.com/consult/checkout | ~4 | 68 | **72** | 🔴 NEW HIGH — PAYMENT FLOW | 🆕 new | **Dead clicks in the payment completion flow. Direct revenue impact. HIGHEST URGENCY.** |
+| consult.cadabams.com/home | 14 | 129 | **143** | 🟡 HIGH — IMPROVING | 192→143 (-25%) | Home screen dead clicks reducing. ✅ |
+| consult.cadabams.com/profile | 15 | 45 | **60** | 🟡 MEDIUM | 🆕 new | Profile page non-responsive elements. |
+| consult.cadabams.com/baseline-assessment | 8 | 43 | **51** | 🟡 MEDIUM | ~stable (46→51) | Assessment dead click persists. |
+| consult.cadabams.com/consult/booking/94441?mode=online | 21 | 1 | **22** | 🟡 NEW | 🆕 new | New rage hotspot. Check slot availability. |
+| consult.cadabams.com/consult/booking/20508?mode=online | 19 | 12 | **31** | 🟡 MEDIUM NEW | 🆕 new | Dr. Srishti Agrawal. 19 rage = possible slot availability issue. |
 
 ---
 
-### 🔴 HIGH: find-therapist wizard — 293 friction events (240 dead clicks)
-**Likely cause:** The find-therapist wizard has UI elements (filter dropdowns, radio buttons, "next step" buttons, or therapist card CTAs) that are not responding to clicks. Users are trying to filter or advance through the wizard and nothing is happening.
+## Priority actions W28
 
-**Impact:** This is the alternative path to direct doctor_card CTAs. UTM data already shows direct doctor_card links outperform (66.7% of payments). If the wizard is also broken, there's no fallback path for users who don't know which doctor they want.
+### 🔴 CRITICAL P1: /consult/checkout — 68 dead clicks (PAYMENT FLOW)
+**This is the highest urgency issue this week.** Dead clicks in the checkout flow = users trying to complete payment and failing to interact with elements. This is post-intent abandonment — the hardest type to recover.
 
-**Action:** QA the find-therapist flow end-to-end. Test every interactive element: specialty filter, price filter, language filter, therapist card "Book" button.
+**Possible causes:**
+1. Payment button not clickable in certain states (mobile, specific browsers)
+2. Form field validation errors that prevent submission but don't show clearly
+3. Promo code / coupon field that looks editable but isn't
+4. Terms checkbox that is non-functional
+
+**Action:** Dev team to reproduce checkout dead click flow on mobile + desktop. Record session replays for the 68 dead-click sessions if available in Mixpanel. Fix before next week.
 
 ---
 
-### 🟡 MEDIUM: /consult/appointments + /home — 265 combined dead clicks
-**Likely cause:** Post-booking app pages (appointments history, home screen) have non-responsive elements. May be cosmetic (links that look clickable but aren't) rather than critical conversion blockers.
+### 🔴 CRITICAL P2: booking/8796 (aparna-rani) — 183 friction events
+Dead clicks ESCALATED 16→87 (+444%). Rage persisting at 96. Combined 183 = **most broken page on the platform this week.**
 
-**Action:** Flag for next sprint. Lower priority than booking/53196 and find-therapist.
+**Action:** Check if Dr. Aparna Rani has available slots. If her schedule is full/inactive, remove from listings. If active — trace the dead click to specific UI element (likely the slot-picker or date-picker).
 
 ---
 
-## Trend
+### 🟡 P3: find-therapist — 371 total (IMPROVING)
+Dead clicks reduced 428→319. This is positive — fix may be partially deployed. Monitor W29. If drops below 200, consider it substantially resolved.
 
-| Week | Top friction page | Total events | CRITICAL pages |
-|---|---|---:|---:|
-| W25 | Not tracked (consult project was inaccessible) | — | — |
-| W26 | booking/53196 | 444 | 1 |
+---
 
-*W25 inaccessible — W26 is de facto baseline.*
+### 🟡 P4: /consult/appointments — 237 dead clicks (PERSISTING)
+Three weeks of ~240 dead clicks. This is likely a structural UI issue (not a transient bug). Appointment list likely has an element that looks interactive but isn't — pagination? Filter? A table row that looks clickable but doesn't navigate?
+
+---
+
+## Trend (weekly summary)
+
+| Week | Top friction page | Total friction events | CRITICAL pages | New this week |
+|---|---|---:|---:|---|
+| W25 | Not tracked | — | — | — |
+| W26 | booking/53196 | 1,200+ | 1 | booking/53196 (CRITICAL) |
+| W27 | find-therapist | 1,100+ | 2 | booking/8796 (NEW CRITICAL) |
+| W28 | booking/8796 | 1,400+ | 3 | checkout dead clicks (CRITICAL) · booking/94441 · booking/20508 |
+
+**Trend:** Total friction events increasing despite find-therapist improvement. booking/8796 escalating. New checkout issue is most dangerous — it's in the payment funnel.
+
+**RESOLVED W27:** booking/53196 — 444 events W26, 3 events W28. Confirmed fixed. ✅
 
 ---
 
 ## Structural note
 
-All friction events are on **consult.cadabams.com** (the booking/therapy app), NOT on mindtalk.in. The mindtalk.in pages have no rage/dead click instrumentation — this is a gap. If users are rage-clicking on mindtalk.in (e.g., broken CTAs on illness pages that show `book_appointment_clicked = 0`), we won't see it.
+All friction events are on **consult.cadabams.com** (the booking/therapy app), NOT on mindtalk.in. The mindtalk.in pages have no rage/dead click instrumentation — this is a gap.
 
-**Future action:** Add `$mp_rage_click` and `$mp_dead_click` tracking to mindtalk.in, particularly on /illnesses/* and /treatments/* pages where intent tracking shows 0 clicks (may be instrumentation gaps).
+**Open action:** Add `$mp_rage_click` and `$mp_dead_click` tracking to mindtalk.in /illnesses/* and /treatments/* pages (currently showing 0 book intent — may be due to broken CTAs we can't see).

@@ -357,6 +357,42 @@ All 4 pages authored since 06-30 (what-is-dbt-therapy, what-is-play-therapy, wha
 - **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship)
 - **W11:** homepage ⏸ deferred (Mixpanel — ongoing)
 
+## 2026-07-08 — Strategist daily stamp (Wednesday) 💥 Revenue breakout + illness cluster flag
+
+**🚨 STRATEGIST FLAG CONTINUES: Git push auth failure Day 8+ — 9 pages stuck at 404.**
+No change from Day 7. Prior 4 + T9 07-07 batch (5 pages: eft-therapy-explained, how-to-fix-trust-issues, signs-of-untreated-adhd-in-adults, what-is-family-counselling, why-do-people-talk-in-their-sleep) still LOCAL ONLY. Kushal Mac Mini action required: `cd ~/Documents/GitHub/mindtalk && rm .git/index.lock && git restore --staged . && git push origin main`.
+
+**Rank pull (07-08):** No DataForSEO run today. Carrying 07-07 picture: 0 CRITICAL / 0 MAJOR / 2 MODERATE (both GSC-validated NOISE). confirmed-drops.json = {} (empty). June Core Update still ACTIVE (through 07-17) — no ALGO_WATCH triggered.
+
+**💥 T19 W28 Revenue breakout:** Payment Successful 118 (+25.5% WoW), Appointment Booked 107 (+33.8% WoW) — best combined revenue week in 4 weeks of tracking. Homepage hero UTM payments 9 (+200% WoW, P7 EMERGING 3rd week). AI search (chatgpt.com) 155 book clicks = 7.5% of all organic clicks (P5 CONFIRMED 3 weeks). Kerala +191% WoW. Doctor→book CTA 73% (new high).
+
+**⚠️ New signal: illness_page_viewed −27% WoW (161→118).** Three signals converge on YMYL illness cluster: (1) T19 W28 high-intent illness page views falling while total page views STABLE (6,342 flat = site-wide not dropping); (2) psychosis −34 positions in Jun 27–Jul 3 weekly summary; (3) June Core Update ACTIVE. Possible Core Update fingerprint on YMYL illness pages. NOT yet confirmed — GSC check required before any action (AP5). Queued as ILLNESS-CLUSTER-01 in BACKLOG. ALGO_WATCH NOT triggered (single-source, not GSC-confirmed).
+
+**✅ T14-01 CWV FULLY RESOLVED.** Dev fixed all 3 criticals: homepage LCP 10.22s→2.55s, counselling-therapy LCP 9.26s→1.65s, assessments TBT 2923ms→310ms. Tech health 75→85/100. No new watch needed.
+
+**Watch changes this run:**
+- No new watches opened (illness_page_viewed = T19 signal only, not GSC-confirmed — AP5 gate; no new sprint shipped; no confirmed drops)
+- No watches closed (Learner closes on merits)
+- **W18 (/treatments/online-therapy):** Day 12 of 14-day obs window → final eval fires **TOMORROW 07-10** (2 days). Note: page still at 404 (push failure). Short 14d window = limited indexation data; human review recommended.
+- **W19 (emdr-for-anxiety):** Still 404. 14d clinical clock NOT running — push failure blocking. Effectively Day 8 of no-clock.
+- **W11 (homepage):** ⏸ deferred (Mixpanel funnel blocked). New indirect signal (homepage_hero UTM payments +200% WoW, T19 W28) is encouraging but is UTM-attributed payments data, not the W11-specific "Get the App = #1 hero CTA" Mixpanel funnel test. W11 formal verdict still unmeasurable.
+
+**Observation pipeline (07-08):** 15 URLs, 0 alerts. **May-28 cohort at day 42 → final eval fires TOMORROW 07-09** (5 URLs: detachment-disorder, clinical-psychologist, act-therapy, biofeedback-therapy-blog, rtms-treatment). W18 at day 12/14 → closes 07-10. AP3 cohort at day 12 → midpoint 07-17.
+
+**Upcoming check board:**
+- **07-09 (TOMORROW):** May-28 cohort final evaluation fires — 5 URLs (detachment-disorder, clinical-psychologist, act-therapy, biofeedback-therapy-blog, rtms-treatment). Verify `mindtalk-watch-may28-cohort-2026-07-09` task exists (VERIFY-TASKS-01 in BACKLOG).
+- **07-10 (2 days):** W18 /treatments/online-therapy 14d final eval (VERIFY-TASKS-01 in BACKLOG).
+- **07-13 (5 days):** W18/W19/W20/W21 14d clinical reviews (task `mindtalk-watch-w18-w21-clinical-review-2026-07-13` confirmed 07-04).
+- **07-12 (4 days):** Step 10 apply-pass — all 3 Meta-Learner proposals apply on 07-12.
+- **07-17 (9 days):** AP3 cohort midpoints + June Core Update ENDS.
+- **07-21 (13 days):** Jun-9 cohort final evaluations (6 URLs).
+- **07-29:** W12/W13/W14 final indexation reads.
+- **W11:** homepage ⏸ deferred.
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals have Apply on: 2026-07-12. Next eligible: Sunday 07-12 Strategist run.
+
+**Escalation check:** ⚠ STRATEGIST FLAG active (git push Day 8 — PUSH-FAIL-01). ⚠ NEW: illness_page_viewed −27% WoW = possible June Core Update YMYL signal (T19 W28 — queued ILLNESS-CLUSTER-01; NOT yet GSC-confirmed). 0 CRITICAL / 0 MAJOR rank drops. 0 watches breached. T14-01 CWV RESOLVED.
+
 **Step 10 apply-pass:** NO-OP. All 3 proposals apply 07-05 (Sunday). None vetoed. Next apply-pass: Sunday 07-05 Strategist run.
 
 **Escalation check:** ⚠ STRATEGIST FLAG raised (git push Day 3 — production frozen; see BACKLOG PUSH-FAIL-01). 0 CRITICAL / 0 MAJOR rank drops from 07-02 carry. 0 watches breached. No new alerts in `alerts/` directory.

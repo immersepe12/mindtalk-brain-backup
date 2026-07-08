@@ -83,3 +83,28 @@ One line per Task 15 run. Most recent at bottom.
   ⚠ lp:form ratio 22.7x→37.75x — on-site booking form increasingly irrelevant
 
 | 2026-07-01 (7d) | 6,397 | 764 | 4 | 151 | 17 | 66% | PAGE VIEWS +8%✅; BACKEND FAIL -78%✅✅✅ (35.7%→9.9% — possible engineering fix); LP form +11%✅; call_clicked +38%✅; book CTA stable; lp:form=38x⚠; riya still invisible |
+| 2026-07-08 (7d) | 6,342 | 784 | 5 | 129 | 2 | 73% | Page views stable (-1%); BACKEND FAIL -88%✅✅✅ (9.9%→1.5% — recovery continues, now effectively negligible); riya +133%✅✅ (6→14, first real break from invisibility); illness -27%⚠ (161→118); lp_form -15% (151→129, watch); doctor→book CTA +10.6% new high (73%); lp:form=25.8x |
+
+
+2026-07-08T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d unique users |
+  VOLUME:
+  - $mp_web_page_view: 6,342 (-0.9% WoW, stable)
+  - blog_viewed: 1,246 | doctor_profile_viewed: 592 (+6.1%) | treatment_page_viewed: 294 (+19%) | illness_page_viewed: 118 (-26.7%⚠) | riya_page_viewed: 14 (+133%✅✅ — first real break from invisibility) | where_to_start_page_viewed: 16 (-6%, stable)
+  - book_appointment_clicked: 784 (+2.6%, stable ✅)
+  - form_submitted: 5 (+25%) | lp_form_submitted: 129 (-14.6%⚠)
+  - form_started: 15 (stable) | form_error: 2 | lead_create_failed: 2 (-88%✅✅✅ — continued recovery)
+  - whatsapp_clicked: 104 (+13%) | call_clicked: 53 (-1.9%, stable) | cta_clicked: 112 (-11%)
+  FUNNELS:
+  - A (main): page view 6,342 → book CTA 779 (12.3%, was 11.8%✅) → form_submit 4 (0.5% of book CTA, ~0.06% of page views)
+  - B (doctor-driven): doctor_profile 592 → book CTA 431 (73.0%, was 66%✅✅ — new high) → form_submit 4 (0.9%)
+  - C (where-to-start): viewed 16 → started 9 (56%) → completed 9 (100% of started; 56% overall, was 65%)
+  KEY METRICS:
+  - lp:form ratio = 25.8x (129/5) — down from 37.75x (on-site form marginally less irrelevant)
+  - Backend fail rate: 2/(129+5+2) = 1.47% — DOWN from 9.9% ✅✅✅ (continued recovery; now effectively negligible)
+  - Doctor→book CTA: 73% (was 66%, new high ✅✅)
+  - Riya discovery rate: 14/6342 = 0.22% (was 0.094% — +134% ✅✅)
+  WoW FLAGS (>20%):
+  ✅✅✅ lead_create_failed -88% (17→2) — backend fail rate 9.9%→1.5%; holding and improving
+  ✅✅ riya_page_viewed +133% (6→14) — first meaningful jump; may be responding to content/internal linking
+  ✅✅ doctor→book CTA +10.6% (66%→73%) — new record high; doctor pages = strongest conversion path
+  ⚠ illness_page_viewed -26.7% (161→118) — high-intent pages losing traffic; check ranking
