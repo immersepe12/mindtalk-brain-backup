@@ -1,0 +1,312 @@
+{
+  "domain": "mindtalk.in",
+  "target_queried": "mindtalk.in",
+  "date": "2026-07-09",
+  "location": "India",
+  "source": "DataForSEO Labs ranked_keywords/live",
+  "total_ranked_keywords_domain": 2007,
+  "total_keywords_returned": 50,
+  "cost_usd": 0.015,
+  "keywords": [
+    {
+      "keyword": "adhd",
+      "position": 45,
+      "url": "/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+      "search_volume": 165000
+    },
+    {
+      "keyword": "adhd disease",
+      "position": 42,
+      "url": "/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+      "search_volume": 165000
+    },
+    {
+      "keyword": "attention deficit adhd",
+      "position": 38,
+      "url": "/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+      "search_volume": 165000
+    },
+    {
+      "keyword": "hyperactivity disorder",
+      "position": 37,
+      "url": "/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+      "search_volume": 165000
+    },
+    {
+      "keyword": "depression",
+      "position": 57,
+      "url": "/illnesses/depression",
+      "search_volume": 135000
+    },
+    {
+      "keyword": "full form of dbt",
+      "position": 28,
+      "url": "/treatments/dialectical-behaviour-therapy-dbt",
+      "search_volume": 110000
+    },
+    {
+      "keyword": "near me psychiatrist",
+      "position": 2,
+      "url": "/doctors/psychiatrists",
+      "search_volume": 110000
+    },
+    {
+      "keyword": "ocd",
+      "position": 46,
+      "url": "/illnesses/obsessive-compulsive-disorder-ocd",
+      "search_volume": 110000
+    },
+    {
+      "keyword": "psychiatrist closest to me",
+      "position": 2,
+      "url": "/doctors/psychiatrists",
+      "search_volume": 110000
+    },
+    {
+      "keyword": "adhd disease meaning",
+      "position": 41,
+      "url": "/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+      "search_volume": 90500
+    },
+    {
+      "keyword": "counselling",
+      "position": 12,
+      "url": "/treatments/counselling-therapy",
+      "search_volume": 90500
+    },
+    {
+      "keyword": "therapist",
+      "position": 52,
+      "url": "/doctors/therapists",
+      "search_volume": 90500
+    },
+    {
+      "keyword": "therapist therapist",
+      "position": 12,
+      "url": "/doctors/therapist",
+      "search_volume": 90500
+    },
+    {
+      "keyword": "therapy",
+      "position": 21,
+      "url": "/treatments/talk-therapy",
+      "search_volume": 90500
+    },
+    {
+      "keyword": "therapy therapist",
+      "position": 12,
+      "url": "/doctors/therapists",
+      "search_volume": 90500
+    },
+    {
+      "keyword": "dominantly meaning in hindi",
+      "position": 32,
+      "url": "/blogs/understanding-dominant-personality-and-dominating-nature",
+      "search_volume": 74000
+    },
+    {
+      "keyword": "f o m o meaning",
+      "position": 35,
+      "url": "/blogs/understanding-fomo-fear-of-missing-out",
+      "search_volume": 74000
+    },
+    {
+      "keyword": "fear of missing out meaning",
+      "position": 36,
+      "url": "/blogs/understanding-fomo-fear-of-missing-out",
+      "search_volume": 74000
+    },
+    {
+      "keyword": "counseling",
+      "position": 82,
+      "url": "/treatments/counselling-therapy",
+      "search_volume": 60500
+    },
+    {
+      "keyword": "counselor",
+      "position": 60,
+      "url": "/centers/indiranagar",
+      "search_volume": 60500
+    },
+    {
+      "keyword": "generalized anxiety disorder",
+      "position": 40,
+      "url": "/blogs/understanding-generalised-anxiety-disorder",
+      "search_volume": 60500
+    },
+    {
+      "keyword": "therapist near me",
+      "position": 11,
+      "url": "/doctors/therapists",
+      "search_volume": 60500
+    },
+    {
+      "keyword": "therapy near me",
+      "position": 8,
+      "url": "/doctors/therapists",
+      "search_volume": 60500
+    },
+    {
+      "keyword": "fatal familial insomnia",
+      "position": 35,
+      "url": "/blogs/understanding-fatal-familial-insomnia",
+      "search_volume": 49500
+    },
+    {
+      "keyword": "ffi disease",
+      "position": 18,
+      "url": "/blogs/understanding-fatal-familial-insomnia",
+      "search_volume": 49500
+    },
+    {
+      "keyword": "gaslighting",
+      "position": 44,
+      "url": "/blogs/gaslighting-and-its-effects",
+      "search_volume": 49500
+    },
+    {
+      "keyword": "stress management",
+      "position": 66,
+      "url": "/blogs/stress-management-techniques-for-mental-health",
+      "search_volume": 49500
+    },
+    {
+      "keyword": "dominance",
+      "position": 32,
+      "url": "/blogs/understanding-dominant-personality-and-dominating-nature",
+      "search_volume": 40500
+    },
+    {
+      "keyword": "what is adhd",
+      "position": 36,
+      "url": "/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+      "search_volume": 40500
+    },
+    {
+      "keyword": "what is hyperactivity in adhd",
+      "position": 37,
+      "url": "/blogs/types-of-adhd-explained",
+      "search_volume": 40500
+    },
+    {
+      "keyword": "burnout",
+      "position": 34,
+      "url": "/blogs/burnout-recovery-prevention-guide",
+      "search_volume": 33100
+    },
+    {
+      "keyword": "methods of managing stress",
+      "position": 84,
+      "url": "/blogs/stress-management-techniques-for-mental-health",
+      "search_volume": 33100
+    },
+    {
+      "keyword": "stress management and techniques",
+      "position": 71,
+      "url": "/blogs/stress-management-techniques-for-mental-health",
+      "search_volume": 33100
+    },
+    {
+      "keyword": "cognitive or behavioral therapy",
+      "position": 52,
+      "url": "/treatments/cognitive-behavioural-therapy-cbt",
+      "search_volume": 27100
+    },
+    {
+      "keyword": "psychosis meaning",
+      "position": 48,
+      "url": "/illnesses/psychosis",
+      "search_volume": 22200
+    },
+    {
+      "keyword": "quotation about relationship",
+      "position": 20,
+      "url": "/blogs/20-quotes-to-inspire-healthy-relationships",
+      "search_volume": 22200
+    },
+    {
+      "keyword": "quotation of relationship",
+      "position": 26,
+      "url": "/blogs/20-quotes-to-inspire-healthy-relationships",
+      "search_volume": 22200
+    },
+    {
+      "keyword": "quotes about relations",
+      "position": 17,
+      "url": "/blogs/20-quotes-to-inspire-healthy-relationships",
+      "search_volume": 22200
+    },
+    {
+      "keyword": "quotes about relationships",
+      "position": 26,
+      "url": "/blogs/20-quotes-to-inspire-healthy-relationships",
+      "search_volume": 22200
+    },
+    {
+      "keyword": "relationship quotes",
+      "position": 15,
+      "url": "/blogs/20-quotes-to-inspire-healthy-relationships",
+      "search_volume": 22200
+    },
+    {
+      "keyword": "anxiety disorders",
+      "position": 70,
+      "url": "/blogs/understanding-the-major-types-of-anxiety-disorders",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "exercise and mental health",
+      "position": 24,
+      "url": "/blogs/how-exercise-improves-emotional-wellbeing",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "exercise mental health",
+      "position": 24,
+      "url": "/blogs/how-exercise-improves-emotional-wellbeing",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "how to stop overthinking",
+      "position": 9,
+      "url": "/blogs/guide-to-stop-overthinking-and-anxiety-naturally",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "mental health and fitness",
+      "position": 22,
+      "url": "/blogs/how-exercise-improves-emotional-wellbeing",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "mental health and physical exercise",
+      "position": 33,
+      "url": "/blogs/how-exercise-improves-emotional-wellbeing",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "mental health physical exercise",
+      "position": 26,
+      "url": "/blogs/how-exercise-improves-emotional-wellbeing",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "mindfulness",
+      "position": 28,
+      "url": "/treatments/mindfulness-therapy",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "neurosis disease",
+      "position": 16,
+      "url": "/blogs/understanding-anxiety-neurosis",
+      "search_volume": 18100
+    },
+    {
+      "keyword": "physical exercise on mental health",
+      "position": 34,
+      "url": "/blogs/how-exercise-improves-emotional-wellbeing",
+      "search_volume": 18100
+    }
+  ]
+}

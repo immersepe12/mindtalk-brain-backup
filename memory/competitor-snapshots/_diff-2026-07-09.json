@@ -1,0 +1,1310 @@
+{
+  "amaha.com": {
+    "total_kw_curr": 1353,
+    "total_kw_prev": 1384,
+    "delta_kw": -31,
+    "new_in_top10": {
+      "therapist near me": {
+        "position": 4,
+        "search_volume": 60500,
+        "url": "/centre/delhi/"
+      },
+      "situationship": {
+        "position": 5,
+        "search_volume": 40500,
+        "url": "/blog/understanding-what-is-situationships-science-signs-how-to-get-out/"
+      },
+      "0ver thinking": {
+        "position": 5,
+        "search_volume": 33100,
+        "url": "/blog/science-behind-overthinking/"
+      },
+      "overthinking": {
+        "position": 3,
+        "search_volume": 33100,
+        "url": "/blog/science-behind-overthinking/"
+      },
+      "humour": {
+        "position": 4,
+        "search_volume": 22200,
+        "url": "/blog/the-science-of-humour/"
+      },
+      "movie motivational": {
+        "position": 10,
+        "search_volume": 22200,
+        "url": "/blog/motivational-movies-bollywood-hollywood-students-india/"
+      },
+      "how to stop overthinking": {
+        "position": 10,
+        "search_volume": 18100,
+        "url": "/blog/how-to-stop-overthinking-practical-strategies-from-a-therapist/"
+      },
+      "acrophobia fear of heights": {
+        "position": 8,
+        "search_volume": 14800,
+        "url": "/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/"
+      },
+      "fear from height": {
+        "position": 4,
+        "search_volume": 14800,
+        "url": "/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/"
+      },
+      "claustrophobia meaning": {
+        "position": 10,
+        "search_volume": 12100,
+        "url": "/blog/claustrophobia-meaning-signs-causes-treatment/"
+      },
+      "peniaphobia": {
+        "position": 2,
+        "search_volume": 12100,
+        "url": "/blog/peniaphobia-fear-of-poverty-meaning-causes-symptoms-treatment/"
+      }
+    },
+    "lost_from_top10": {
+      "adhd psychiatrist": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/treatment-for-adhd/"
+      },
+      "adhd psychologist": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/treatment-for-adhd/"
+      },
+      "adhd therapist": {
+        "position": 1,
+        "search_volume": 1000,
+        "url": "/treatment-for-adhd/"
+      },
+      "adhd therapist adults": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/treatment-for-adhd/"
+      },
+      "adhd therapy near me": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/treatment-for-adhd/"
+      },
+      "adult adhd therapist": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/treatment-for-adhd/"
+      },
+      "amaha bandra": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/centre/mumbai/"
+      },
+      "amaha bangalore": {
+        "position": 1,
+        "search_volume": 1000,
+        "url": "/centre/bengaluru/"
+      },
+      "amaha delhi": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/centre/delhi/"
+      },
+      "amaha health": {
+        "position": 1,
+        "search_volume": 5400,
+        "url": "/therapy-psychiatry/lpexpt/2b2/"
+      },
+      "amaha health mumbai": {
+        "position": 1,
+        "search_volume": 210,
+        "url": "/"
+      },
+      "amaha mental health": {
+        "position": 1,
+        "search_volume": 1000,
+        "url": "/therapy-psychiatry/lpexpt/2b2/"
+      },
+      "amaha mental health centre new delhi": {
+        "position": 1,
+        "search_volume": 2900,
+        "url": "/centre/delhi/"
+      },
+      "amaha mental health centre whitefield": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/centre/bengaluru/"
+      },
+      "amaha therapy": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/"
+      },
+      "best therapy in mumbai": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/centre/mumbai/"
+      },
+      "couples therapy mumbai": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/services/couples-therapy/"
+      },
+      "depression last stage": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/depression/blog/stages-of-depression-early-signs-and-progression/"
+      },
+      "innerhour": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "last stage depression": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/depression/blog/stages-of-depression-early-signs-and-progression/"
+      },
+      "last stage of depression": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/depression/blog/stages-of-depression-early-signs-and-progression/"
+      },
+      "mayank rajput": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/therapist/mayank-rajput/"
+      },
+      "mental health consulting": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/"
+      },
+      "mind over thinking": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/blog/science-behind-overthinking/"
+      },
+      "secret friendship": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/blog/secret-to-lasting-friendship/"
+      },
+      "stages of depression": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/depression/blog/stages-of-depression-early-signs-and-progression/"
+      },
+      "therapist for adhd": {
+        "position": 1,
+        "search_volume": 9900,
+        "url": "/treatment-for-adhd/"
+      },
+      "therapist mumbai": {
+        "position": 1,
+        "search_volume": 2900,
+        "url": "/centre/mumbai/"
+      },
+      "therapists for adhd": {
+        "position": 1,
+        "search_volume": 9900,
+        "url": "/treatment-for-adhd/"
+      },
+      "therapists mumbai": {
+        "position": 1,
+        "search_volume": 2900,
+        "url": "/centre/mumbai/"
+      },
+      "therapy india": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "therapy online india": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/"
+      },
+      "adhd psychiatrist near me": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/treatment-for-adhd/"
+      },
+      "adhd therapist near me": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/treatment-for-adhd/"
+      },
+      "amaha whitefield": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "apps for counselling": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/blog/best-mental-health-wellness-counselling-apps-india/"
+      },
+      "best therapist online": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/services/therapy/"
+      },
+      "best therapy in bangalore": {
+        "position": 2,
+        "search_volume": 880,
+        "url": "/centre/bengaluru/"
+      },
+      "causes of overthinking": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/blog/science-behind-overthinking/"
+      },
+      "counseling app": {
+        "position": 2,
+        "search_volume": 480,
+        "url": "/blog/best-mental-health-wellness-counselling-apps-india/"
+      },
+      "counsellors online free": {
+        "position": 2,
+        "search_volume": 2900,
+        "url": "/blog/free-online-therapy-chat-counselling-india/"
+      },
+      "couples therapy online": {
+        "position": 2,
+        "search_volume": 1000,
+        "url": "/services/couples-therapy/"
+      },
+      "depression counselling online": {
+        "position": 2,
+        "search_volume": 480,
+        "url": "/depression/"
+      },
+      "depression online counselling": {
+        "position": 2,
+        "search_volume": 480,
+        "url": "/depression/"
+      },
+      "depression stages": {
+        "position": 2,
+        "search_volume": 1900,
+        "url": "/depression/blog/stages-of-depression-early-signs-and-progression/"
+      },
+      "feeling life tired": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/depression/blog/why-do-i-feel-tired-all-the-time-and-have-no-energy/"
+      },
+      "good mental health book": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/blog/books-for-better-mental-health-10-life-changing-reads/"
+      },
+      "last stages of depression": {
+        "position": 2,
+        "search_volume": 590,
+        "url": "/depression/blog/stages-of-depression-early-signs-and-progression/"
+      }
+    },
+    "significant_position_changes": []
+  },
+  "yourdost.com": {
+    "total_kw_curr": 288,
+    "total_kw_prev": 301,
+    "delta_kw": -13,
+    "new_in_top10": {},
+    "lost_from_top10": {
+      "counselling websites": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "counsellors online": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/"
+      },
+      "dost.com": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/"
+      },
+      "tag your dost": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "website for counsellors": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "yourdost careers": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/jobs"
+      },
+      "counselling service online": {
+        "position": 2,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "service counseling": {
+        "position": 2,
+        "search_volume": 880,
+        "url": "/"
+      },
+      "student psychologist": {
+        "position": 2,
+        "search_volume": 880,
+        "url": "/"
+      },
+      "wellness coach near me": {
+        "position": 2,
+        "search_volume": 390,
+        "url": "/"
+      },
+      "counseling online services": {
+        "position": 3,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "counselling for students": {
+        "position": 3,
+        "search_volume": 3600,
+        "url": "/"
+      },
+      "counselling mental health": {
+        "position": 3,
+        "search_volume": 590,
+        "url": "/"
+      },
+      "dost helpline number": {
+        "position": 4,
+        "search_volume": 390,
+        "url": "/contactus"
+      },
+      "mental health consulting": {
+        "position": 4,
+        "search_volume": 320,
+        "url": "/"
+      },
+      "personal counsellor": {
+        "position": 4,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "app for counselling": {
+        "position": 6,
+        "search_volume": 320,
+        "url": "/"
+      },
+      "online chat therapy": {
+        "position": 6,
+        "search_volume": 390,
+        "url": "/"
+      },
+      "therapy sessions near me": {
+        "position": 6,
+        "search_volume": 880,
+        "url": "/"
+      },
+      "wellness coaches near me": {
+        "position": 6,
+        "search_volume": 390,
+        "url": "/"
+      },
+      "free online counselling chat 24 7 india": {
+        "position": 7,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "free online counselling chat 24/7 free": {
+        "position": 7,
+        "search_volume": 1000,
+        "url": "/"
+      },
+      "online therapy free sessions": {
+        "position": 7,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "y1 com online": {
+        "position": 7,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "free online counselling chat 24/7 india": {
+        "position": 8,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "mental therapist online": {
+        "position": 8,
+        "search_volume": 590,
+        "url": "/"
+      },
+      "therapist chat": {
+        "position": 8,
+        "search_volume": 390,
+        "url": "/"
+      },
+      "counselling need": {
+        "position": 9,
+        "search_volume": 320,
+        "url": "/"
+      },
+      "dost official website": {
+        "position": 9,
+        "search_volume": 720,
+        "url": "/"
+      },
+      "counseling app": {
+        "position": 10,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "counsellor india": {
+        "position": 10,
+        "search_volume": 390,
+        "url": "/"
+      },
+      "online counsellor for depression": {
+        "position": 10,
+        "search_volume": 480,
+        "url": "/"
+      },
+      "student career counselling": {
+        "position": 10,
+        "search_volume": 1300,
+        "url": "/"
+      },
+      "therapy website": {
+        "position": 10,
+        "search_volume": 260,
+        "url": "/"
+      }
+    },
+    "significant_position_changes": []
+  },
+  "betterhelp.com": {
+    "total_kw_curr": 16542,
+    "total_kw_prev": 17163,
+    "delta_kw": -621,
+    "new_in_top10": {
+      "splitting": {
+        "position": 8,
+        "search_volume": 90500,
+        "url": "/advice/psychologists/what-is-splitting-psychology/"
+      },
+      "therapy": {
+        "position": 1,
+        "search_volume": 90500,
+        "url": "/get-started/"
+      }
+    },
+    "lost_from_top10": {
+      "1st base relationship": {
+        "position": 1,
+        "search_volume": 1000,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "2nd base in relationship": {
+        "position": 1,
+        "search_volume": 2400,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "2nd base relationship": {
+        "position": 1,
+        "search_volume": 2400,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "3rd base in a relationship": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "3rd base relationship": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "a negative blood group personality": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "ab negative blood group personality": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "ab negative blood type personality": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "ab positive blood group personality": {
+        "position": 1,
+        "search_volume": 880,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "ab ve blood group personality": {
+        "position": 1,
+        "search_volume": 880,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "abstract thinker vs concrete thinker": {
+        "position": 1,
+        "search_volume": 20,
+        "url": "/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/"
+      },
+      "abstract thinking vs concrete thinking": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/"
+      },
+      "anger quotes in english": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/advice/anger/anger-quotes-to-help-you-heal-and-let-go/"
+      },
+      "anger thought": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/advice/anger/anger-quotes-to-help-you-heal-and-let-go/"
+      },
+      "angry quotes in english": {
+        "position": 1,
+        "search_volume": 880,
+        "url": "/advice/anger/anger-quotes-to-help-you-heal-and-let-go/"
+      },
+      "antecedent-behavior consequence definition": {
+        "position": 1,
+        "search_volume": 0,
+        "url": "/advice/behavior/understanding-the-antecedent-behavior-consequence-model/"
+      },
+      "b blood type personality": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "b negative blood group personality": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "b negative blood type personality": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "base 1 in relationship": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "base 2 in a relationship": {
+        "position": 1,
+        "search_volume": 720,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "base 2 in relationship": {
+        "position": 1,
+        "search_volume": 720,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "base in relationship": {
+        "position": 1,
+        "search_volume": 2900,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "bases in a relationship": {
+        "position": 1,
+        "search_volume": 2900,
+        "url": "/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/"
+      },
+      "beautiful my wife": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/love/the-best-romantic-love-quotes-for-a-wife/"
+      },
+      "behavioral theorists": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/advice/behavior/4-behavioral-theorists-that-made-their-mark-on-psychology/"
+      },
+      "behaviorism theorists": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/behavior/4-behavioral-theorists-that-made-their-mark-on-psychology/"
+      },
+      "behaviourist theorists": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/advice/behavior/4-behavioral-theorists-that-made-their-mark-on-psychology/"
+      },
+      "best friend broken quotes": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/advice/relations/broken-friendship-quotes-14-quotes-to-help-you-heal-from-the-worst-pain/"
+      },
+      "best jokes about love": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/love/80-corny-love-jokes-that-will-make-you-laugh/"
+      },
+      "blood b personality": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "blood type b personality": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "blood type b positive personality": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/"
+      },
+      "childhood happiness quotes": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/childhood/childhood-quotes-to-brighten-your-day/"
+      },
+      "childhood memories quotes": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/advice/family/childhood-quotes-to-brighten-your-day/"
+      },
+      "childhood quotations": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/advice/family/childhood-quotes-to-brighten-your-day/"
+      },
+      "childhood quotes": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/advice/family/childhood-quotes-to-brighten-your-day/"
+      },
+      "concrete and abstract thinking": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/"
+      },
+      "concrete thinking vs abstract thinking": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/"
+      },
+      "concrete vs abstract reasoning": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/"
+      },
+      "concrete vs abstract thinking": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/"
+      },
+      "control anger quotes": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/anger/anger-quotes-to-help-you-heal-and-let-go/"
+      },
+      "control angry quotes": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/anger/anger-quotes-to-help-you-heal-and-let-go/"
+      },
+      "cosmic love meaning": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/advice/love/what-is-cosmic-love/"
+      },
+      "cosmic lovers meaning": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/advice/love/what-is-cosmic-love/"
+      },
+      "councillor or counsellor": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/advice/counseling/councilor-vs-counselor-there-is-a-difference/"
+      },
+      "councilor or counselor": {
+        "position": 1,
+        "search_volume": 1000,
+        "url": "/advice/counseling/councilor-vs-counselor-there-is-a-difference/"
+      },
+      "counsel or counselor": {
+        "position": 1,
+        "search_volume": 70,
+        "url": "/advice/counseling/councilor-vs-counselor-there-is-a-difference/"
+      },
+      "counsellor vs counselor": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/advice/counseling/councilor-vs-counselor-there-is-a-difference/"
+      }
+    },
+    "significant_position_changes": []
+  },
+  "manastha.com": {
+    "total_kw_curr": 138,
+    "total_kw_prev": 142,
+    "delta_kw": -4,
+    "new_in_top10": {},
+    "lost_from_top10": {
+      "best therapist online": {
+        "position": 10,
+        "search_volume": 320,
+        "url": "/"
+      }
+    },
+    "significant_position_changes": []
+  },
+  "mfine.com": {
+    "total_kw_curr": 16246,
+    "total_kw_prev": 16846,
+    "delta_kw": -600,
+    "new_in_top10": {
+      "dermatologist near near me": {
+        "position": 7,
+        "search_volume": 450000,
+        "url": "/speciality/dermatologist-in-pimpri-chinchwad"
+      },
+      "aig hospitals": {
+        "position": 9,
+        "search_volume": 246000,
+        "url": "/hospitals/hyderabad/aig-hospitals/"
+      },
+      "thrombophob gel": {
+        "position": 6,
+        "search_volume": 110000,
+        "url": "/medicines/thrombophob-gel/"
+      },
+      "econorm sachet": {
+        "position": 5,
+        "search_volume": 90500,
+        "url": "/medicines/econorm-sachet/"
+      },
+      "sachet econorm": {
+        "position": 7,
+        "search_volume": 90500,
+        "url": "/medicines/econorm-sachet/"
+      }
+    },
+    "lost_from_top10": {
+      "70 early signs of pregnancy": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/guides/70-early-signs-of-pregnancy-india"
+      },
+      "a to z tablet uses in telugu": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/medicines/a-to-z-tablet/amp/"
+      },
+      "adgain plus side effects": {
+        "position": 1,
+        "search_volume": 210,
+        "url": "/medicines/adgain-plus-capsule/"
+      },
+      "attractive look": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "b12 in curd": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/article/vitamin-b12-foods-for-vegetarians"
+      },
+      "best food for pneumonia patient": {
+        "position": 1,
+        "search_volume": 210,
+        "url": "/article/pneumonia-diet-chart"
+      },
+      "bio combination 12 uses in hindi": {
+        "position": 1,
+        "search_volume": 210,
+        "url": "/medicines/sbl-bio-combination-12-tablet/"
+      },
+      "chat online to a doctor": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/online-doctor-consultation/"
+      },
+      "curd vitamin b12": {
+        "position": 1,
+        "search_volume": 880,
+        "url": "/article/vitamin-b12-foods-for-vegetarians"
+      },
+      "dermadew caloe lotion uses in hindi": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/medicines/dermadew-caloe-lotion/"
+      },
+      "dermadew caloe lotion uses in telugu": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/medicines/dermadew-caloe-lotion/"
+      },
+      "dermadew lotion uses in hindi": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/medicines/dermadew-caloe-lotion/"
+      },
+      "desi viagra": {
+        "position": 1,
+        "search_volume": 720,
+        "url": "/article/15-foods-that-work-as-natural-viagra-for-erectile-dysfunction"
+      },
+      "diet chart for infants": {
+        "position": 1,
+        "search_volume": 2400,
+        "url": "/indian-baby-food-chart/"
+      },
+      "dr online": {
+        "position": 1,
+        "search_volume": 720,
+        "url": "/online-doctor-consultation/"
+      },
+      "drink to reduce belly fat after c section": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/guides/how-to-reduce-belly-fat-after-c-section-india"
+      },
+      "drink to reduce belly fat after c-section": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/guides/how-to-reduce-belly-fat-after-c-section-india"
+      },
+      "econorm sachet how many times a day": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/medicines/econorm-sachet/"
+      },
+      "fibroadenosis": {
+        "position": 1,
+        "search_volume": 5400,
+        "url": "/guides/fibroadenosis-of-breast-indian-women"
+      },
+      "fruits rich vitamin d": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/article/vitamin-d-fruits-and-vegetables"
+      },
+      "hot xxl cream for men": {
+        "position": 1,
+        "search_volume": 720,
+        "url": "/medicines/hot-xxl-cream-for-men/"
+      },
+      "how become beautiful": {
+        "position": 1,
+        "search_volume": 880,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can be beautiful": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can i be beautiful naturally": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can i look": {
+        "position": 1,
+        "search_volume": 1300,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can i look attractive": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can i look beautiful without makeup": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can i look pretty": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can look beautiful": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can we be beautiful": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can we look beautiful": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can you look beautiful": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how can you look pretty": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how i look attractive": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how i look beautiful": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how long to take ovabless tablet": {
+        "position": 1,
+        "search_volume": 210,
+        "url": "/medicines/ovabless-tablet/"
+      },
+      "how look": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how look attractive": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how look beautiful": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how look beautiful without makeup": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how look good": {
+        "position": 1,
+        "search_volume": 720,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how look good without makeup": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how to apply manforce stay long gel": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/medicines/manforce-staylong-gel/"
+      },
+      "how to apply manforce staylong gel": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/medicines/manforce-staylong-gel/"
+      },
+      "how to be look beautiful": {
+        "position": 1,
+        "search_volume": 1600,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how to be look pretty": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how to be looking attractive": {
+        "position": 1,
+        "search_volume": 4400,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how to become beautiful naturally": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how to become beautiful without makeup": {
+        "position": 1,
+        "search_volume": 480,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      },
+      "how to become pretty without makeup": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/article/fifteen-best-tips-to-look-attractive-without-makeup"
+      }
+    },
+    "significant_position_changes": []
+  },
+  "mindtalk.in": {
+    "total_kw_curr": 2007,
+    "total_kw_prev": 2055,
+    "delta_kw": -48,
+    "new_in_top10": {
+      "therapy near me": {
+        "position": 8,
+        "search_volume": 60500,
+        "url": "/doctors/therapists"
+      },
+      "how to stop overthinking": {
+        "position": 9,
+        "search_volume": 18100,
+        "url": "/blogs/guide-to-stop-overthinking-and-anxiety-naturally"
+      }
+    },
+    "lost_from_top10": {
+      "adhd therapist near me": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/doctors/adhd"
+      },
+      "adhd treatment near me": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/doctors/adhd"
+      },
+      "cadabams mind talk": {
+        "position": 1,
+        "search_volume": 2400,
+        "url": "/"
+      },
+      "healthy relationship slogan": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/blogs/20-quotes-to-inspire-healthy-relationships"
+      },
+      "healthy relationship slogans": {
+        "position": 1,
+        "search_volume": 590,
+        "url": "/blogs/20-quotes-to-inspire-healthy-relationships"
+      },
+      "how to get mental peace": {
+        "position": 1,
+        "search_volume": 320,
+        "url": "/blogs/10-essential-steps-in-achieving-inner-peace-serenity-and-mind-control"
+      },
+      "mindtalk": {
+        "position": 1,
+        "search_volume": 720,
+        "url": "/"
+      },
+      "teenager therapy near me": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/doctors/teenager"
+      },
+      "therapist centers near me": {
+        "position": 1,
+        "search_volume": 2400,
+        "url": "/doctors/therapist"
+      },
+      "therapist near me relationship": {
+        "position": 1,
+        "search_volume": 390,
+        "url": "/doctors/therapists"
+      },
+      "therapy for teenager near me": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/doctors/teenager"
+      },
+      "therapy for teens near me": {
+        "position": 1,
+        "search_volume": 260,
+        "url": "/doctors/teenager"
+      },
+      "trust issue meaning": {
+        "position": 1,
+        "search_volume": 1900,
+        "url": "/blogs/trust-issues-signs-and-causes"
+      },
+      "add/adhd doctors near me": {
+        "position": 2,
+        "search_volume": 1000,
+        "url": "/doctors/adhd-specialists-in-bangalore"
+      },
+      "adderall doctors near me": {
+        "position": 2,
+        "search_volume": 1000,
+        "url": "/doctors/adhd"
+      },
+      "adhd doctor near me": {
+        "position": 2,
+        "search_volume": 1000,
+        "url": "/doctors/adhd-specialists-in-bangalore"
+      },
+      "adhd therapy near me": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/doctors/adhd"
+      },
+      "anxiety neurosis meaning": {
+        "position": 2,
+        "search_volume": 390,
+        "url": "/blogs/understanding-anxiety-neurosis"
+      },
+      "cadabams indiranagar": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/"
+      },
+      "depression anxiety doctors near me": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/doctors/anxiety"
+      },
+      "divorce reasons": {
+        "position": 2,
+        "search_volume": 720,
+        "url": "/blogs/exploring-reasons-and-effects-of-divorce-in-india"
+      },
+      "doctors near me for depression": {
+        "position": 2,
+        "search_volume": 1000,
+        "url": "/doctors/depression"
+      },
+      "dominating nature": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/blogs/understanding-dominant-personality-and-dominating-nature"
+      },
+      "eclecticism in counselling": {
+        "position": 2,
+        "search_volume": 720,
+        "url": "/treatments/eclectic-therapy"
+      },
+      "hyderabad counselling": {
+        "position": 2,
+        "search_volume": 390,
+        "url": "/doctors/counsellors-in-hyderabad"
+      },
+      "mental health professionals near me": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/doctors/therapist"
+      },
+      "near therapy": {
+        "position": 2,
+        "search_volume": 480,
+        "url": "/doctors/therapists"
+      },
+      "psychiatrist near me near me": {
+        "position": 2,
+        "search_volume": 1000,
+        "url": "/doctors/psychiatrists"
+      },
+      "psychologist in gujarati": {
+        "position": 2,
+        "search_volume": 480,
+        "url": "/doctors/gujarati-speaking-doctors"
+      },
+      "quote for healthy relationship": {
+        "position": 2,
+        "search_volume": 590,
+        "url": "/blogs/20-quotes-to-inspire-healthy-relationships"
+      },
+      "relationship problems therapist": {
+        "position": 2,
+        "search_volume": 1300,
+        "url": "/illnesses/relationship-issues"
+      },
+      "sleep disorder care plan": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/blogs/nursing-care-and-diagnosis-plan-for-insomnia"
+      },
+      "tamil counselling": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/doctors/tamil-speaking-doctors-in-bangalore"
+      },
+      "teenager therapist near me": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/doctors/teenager"
+      },
+      "therapist center near me": {
+        "position": 2,
+        "search_volume": 2400,
+        "url": "/doctors/therapists"
+      },
+      "therapist doctor near me": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/doctors/therapist"
+      },
+      "therapists for teens near me": {
+        "position": 2,
+        "search_volume": 260,
+        "url": "/doctors/teenager"
+      },
+      "trust issues definition": {
+        "position": 2,
+        "search_volume": 1900,
+        "url": "/blogs/trust-issues-signs-and-causes"
+      },
+      "yoga positions for anxiety": {
+        "position": 2,
+        "search_volume": 320,
+        "url": "/blogs/yoga-for-anxiety"
+      },
+      "adhd therapist adults": {
+        "position": 3,
+        "search_volume": 1600,
+        "url": "/doctors/adhd-specialists-in-bangalore"
+      },
+      "anxiety neurosis symptoms": {
+        "position": 3,
+        "search_volume": 390,
+        "url": "/blogs/understanding-anxiety-neurosis"
+      },
+      "clinical psychology near me": {
+        "position": 3,
+        "search_volume": 4400,
+        "url": "/doctors/clinical-psychologists"
+      },
+      "de addiction meaning": {
+        "position": 3,
+        "search_volume": 880,
+        "url": "/treatments/drug-deaddiction"
+      },
+      "divorce and reasons": {
+        "position": 3,
+        "search_volume": 720,
+        "url": "/blogs/exploring-reasons-and-effects-of-divorce-in-india"
+      },
+      "doctors for depression": {
+        "position": 3,
+        "search_volume": 1300,
+        "url": "/doctors/depression"
+      },
+      "dominant personality": {
+        "position": 3,
+        "search_volume": 320,
+        "url": "/blogs/understanding-dominant-personality-and-dominating-nature"
+      },
+      "dominant personality meaning": {
+        "position": 3,
+        "search_volume": 320,
+        "url": "/blogs/understanding-dominant-personality-and-dominating-nature"
+      },
+      "dominating nature meaning": {
+        "position": 3,
+        "search_volume": 260,
+        "url": "/blogs/understanding-dominant-personality-and-dominating-nature"
+      }
+    },
+    "significant_position_changes": []
+  }
+}

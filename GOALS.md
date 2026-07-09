@@ -2,7 +2,27 @@
 
 **Read by:** Strategist (T10) before every decision.
 **Updated by:** Kushal (manual edit) when strategic priorities shift. Meta-Learner can propose adjustments via 7-day preview.
-**Last updated:** 2026-06-15
+**Last updated:** 2026-07-09
+
+---
+
+## 🆕 2026-07-09 — Assessments Cluster Expansion (Kushal-approved)
+
+**Trigger:** Kushal uploaded `mindtalk_assessments_categories_tags.csv` — 202 assessments live on the Mindtalk app. Website has only 21 assessment MDXes. Directive: "make it comprehensive and write a lot more new assessment pages."
+
+**Scope:**
+- Grand total possible pages: **~250** (202 individual tests + 33 category hubs + 15 net-new SEO plays − 14 already live)
+- **Ship target:** ~20/week integrated with the existing 20-pages/week autonomous loop
+
+**Cluster KPIs added to tracking:**
+- Assessment pages live | Baseline 21 (+5 in flight) | Q3 2026 target **80** | Q4 target **160** | Q1 2027 **220**
+- Assessment cluster weekly clicks (GSC `/assessments/*` prefix) | Baseline TBD 2026-07-13 | Q3 target 4× baseline | Q1 2027 20× baseline
+- Assessment-cluster CTA conversion (Mixpanel `cta_clicked` with source containing `assessment_`) | Baseline 0 | Q3 target ≥5% of total assessment-page views
+
+**Sources of truth (2026-07-09):**
+- `data/assessments-inventory-2026-07-09.json` — canonical 202-item inventory with tier + priority + YMYL flag
+- `data/assessments-content-queue.json` — authoring queue (batch 2: 15 Tier 1 briefs)
+- Batch 1 shipped this session: `dass-21`, `asrs`, `autism-test`, `epds`, `npi` — all with `clinical_review_status: PENDING_CLINICAL` awaiting sign-off before promotion
 
 ---
 

@@ -460,3 +460,44 @@ Prior 4 (what-is-dbt-therapy, what-is-play-therapy, what-is-rebt-therapy, emdr-f
 **Step 10 apply-pass:** NO-OP. All 3 proposals (t1-api-failure-slack-alert, t11-watch-task-creation-verify, t9-rejection-notes-to-brief-file) Apply on: 2026-07-12. Next apply window: Sunday 07-12 Strategist run.
 
 **Escalation check:** ⚠ STRATEGIST FLAG active (git push Day 7+ — 9 pages stuck; BACKLOG PUSH-FAIL-01). 🆕 June 2026 Core Update active through 07-17 — YMYL monitoring elevated. 0 CRITICAL / 0 MAJOR rank drops today. 0 watches breached. **No additional `⚠ STRATEGIST FLAG`** beyond existing push-failure (Core Update = no confirmed drops yet).
+
+## 2026-07-09 — Strategist daily stamp (Thursday) 🆕 May-28 cohort complete + blog-vs-treatment cannibalization confirmed
+
+**🚨 STRATEGIST FLAG CONTINUES: Git push auth failure Day 9+ — 10 pages stuck at 404.**
+Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_PUSH: 10). No auto-ship log found for 07-09. Kushal must run from Mac Mini: `cd ~/Documents/GitHub/mindtalk && rm .git/index.lock && git restore --staged . && git push origin main`.
+
+**Rank pull (07-09):** 0 CRITICAL, 0 MAJOR. 2 MODERATE (ACT pos 4→9 Δ+5; rTMS pos 6→10 Δ+4). 16 pos-100 quarantined as AP8 noise.
+
+**GSC validation (07-09):** Both MODERATEs = CONFIRMED NOISE. ACT: clicks +100%, impr +18.4% → IMPROVING. rTMS: clicks +400%, impr +123.3% → IMPROVING. 0 confirmed drops. **ALGO_WATCH NOT triggered.** June Core Update still ACTIVE through 07-17.
+
+**May-28 cohort day-42 FINAL EVALUATIONS (T4 observation-2026-07-09.txt):**
+- detachment-disorder ✅ RESOLVED — pos 11 stable
+- what-does-a-clinical-psychologist-do 🔄 NEEDS_REFRESH — pos 100; cannibalized by /doctors/clinical-psychologists-in-bangalore (pos 14)
+- what-is-act-therapy 🔄 NEEDS_REFRESH — pos 100; cannibalized by /treatments/acceptance-and-commitment-therapy-act
+- what-is-biofeedback-therapy 🔄 NEEDS_REFRESH — pos 100; regressed from midpoint 10.5; cannibalized by /treatments/biofeedback-therapy
+- what-is-rtms-treatment 🔄 NEEDS_REFRESH — pos 100; cannibalized by /treatments/rtms-therapy (pos 7)
+- **GSC pull FAILED for all 5** (google.oauth2 unavailable in sandbox) — DataForSEO positions used as fallback
+
+**🆕 NEW MATERIAL LEARNING: Blog-vs-treatment cannibalization confirmed at 4 data points.** "what-is-X therapy" blogs are outranked by /treatments/X pages when both target the same topic explanation. Do NOT author "what-is-X therapy" blogs where /treatments/X page already exists. Pattern added to BRAIN.md. CANNIBAL-BLOG-01 added to BACKLOG. Standard refresh briefs BLOCKED — restructure strategy decision (A/B/C) required from Kushal first.
+
+**Watch changes this run:**
+- May-28 cohort CLOSED (day-42 complete): detachment-disorder RESOLVED; 4 NEEDS_REFRESH (blocked pending CANNIBAL-BLOG-01 restructure decision)
+- **W18 (/treatments/online-therapy):** Day 13 of 14 → FINAL EVAL TOMORROW 07-10. Still at 404 (push failure). AP10: verify `mindtalk-watch-w18-online-therapy-2026-07-10` task exists — create if missing.
+- W19 emdr-for-anxiety: Still 404. 14d clinical clock NOT running.
+- ACT treatment page: on professional input hold until 07-13 (Ms. Tejal Jaiswal) — WATCH not yet needed
+- rTMS therapy page: on professional input hold until 07-20 (Dr. Arun Kumar V) — WATCH not yet needed
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals Apply on: 2026-07-12. Next apply-pass: Sunday 07-12 Strategist run.
+
+**Upcoming check board:**
+- **07-10 TOMORROW:** W18 /treatments/online-therapy final eval (14d obs window END; verify task exists)
+- **07-12 (3 days):** Meta-Learner proposals apply-pass (all 3 proposals)
+- **07-13 (4 days):** W18/W19/W20/W21 14d clinical reviews + ACT treatment page professional input expires (Ms. Tejal Jaiswal)
+- **07-17 (8 days):** June Core Update END — AP3 cohort midpoints (biofeedback-for-anxiety, emdr-for-ptsd, talk-therapy-for-depression); professional input expires for 6 W27 pages (play-therapy, rtms-therapy, eclectic-therapy, schizophrenia, stress-disorder, sleep-disorders-insomnia-in-elderly)
+- **07-20 (11 days):** rTMS therapy professional input expires (Dr. Arun Kumar V)
+- **07-21 (12 days):** Jun-9 cohort final evaluations — 6 URLs
+- **07-27 (18 days):** Third professional input batch expires (6 pages)
+- **07-29 (20 days):** W12/W13/W14 final indexation reads (42d from 06-17 ship)
+- **08-10:** AP3 cohort final evaluations
+
+**Escalation check:** ⚠ STRATEGIST FLAG active (git push Day 9+ — 10 pages stuck at 404; BACKLOG PUSH-FAIL-01). June Core Update ACTIVE through 07-17 — YMYL monitoring elevated. 0 CRITICAL / 0 MAJOR rank drops today. 2 MODERATEs = NOISE (GSC-confirmed). 0 watches breached. **No additional `⚠ STRATEGIST FLAG`** beyond existing push-failure (Core Update = 0 confirmed drops today; ALGO_WATCH NOT triggered).

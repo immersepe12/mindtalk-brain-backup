@@ -1,0 +1,74 @@
+{
+  "amaha.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "total_domain_kw": 1353,
+    "top5": [
+      "safdarjung hospital",
+      "therapist",
+      "claustrophobia",
+      "therapist near me",
+      "hallucinations"
+    ]
+  },
+  "yourdost.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "total_domain_kw": 288,
+    "top5": [
+      "gitam",
+      "counselling",
+      "dost log",
+      "dr rakshita singh",
+      "portal kiet"
+    ]
+  },
+  "betterhelp.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "total_domain_kw": 16542,
+    "top5": [
+      "attraction",
+      "love",
+      "love quotes in love",
+      "lovely quotations",
+      "motivation quotation"
+    ]
+  },
+  "manastha.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "total_domain_kw": 138,
+    "top5": [
+      "intrusive thoughts",
+      "free therapist online",
+      "therapy online free",
+      "therapist online",
+      "therapy online"
+    ]
+  },
+  "mfine.com": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "total_domain_kw": 16246,
+    "top5": [
+      "dentist near me",
+      "dermatologist near me",
+      "dermatologist near near me",
+      "aig hospitals",
+      "b12 in which food"
+    ]
+  },
+  "mindtalk.in": {
+    "kw_count": 50,
+    "cost": 0.015,
+    "total_domain_kw": 2007,
+    "top5": [
+      "adhd",
+      "adhd disease",
+      "attention deficit adhd",
+      "hyperactivity disorder",
+      "depression"
+    ]
+  }
+}
