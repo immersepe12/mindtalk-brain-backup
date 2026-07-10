@@ -501,3 +501,42 @@ Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_
 - **08-10:** AP3 cohort final evaluations
 
 **Escalation check:** ⚠ STRATEGIST FLAG active (git push Day 9+ — 10 pages stuck at 404; BACKLOG PUSH-FAIL-01). June Core Update ACTIVE through 07-17 — YMYL monitoring elevated. 0 CRITICAL / 0 MAJOR rank drops today. 2 MODERATEs = NOISE (GSC-confirmed). 0 watches breached. **No additional `⚠ STRATEGIST FLAG`** beyond existing push-failure (Core Update = 0 confirmed drops today; ALGO_WATCH NOT triggered).
+
+## 2026-07-10 — Strategist daily stamp (Friday) ✅ Push resolved + Assessments live
+
+**✅ PUSH-FAIL-01 RESOLVED.** All 10 pages confirmed 200 live. Assessments cluster (77 pages) launched and verified. Stub-pilot Batch 1 blocked (structural — see below).
+
+**Rank pull (07-10):** 0 CRITICAL, 0 MAJOR. 2 MODERATE (schizophrenia "Schizophrenia Treatment Bangalore" pos 8→12; stress-disorder "Stress Disorder Treatment Bangalore" pos 7→11). **Both MODERATEs = NOISE** — GSC validation confirms both pages showing improving signals (April 2026 GSC data, stale but directionally positive). June Core Update ACTIVE through 07-17 — YMYL illness pages experiencing expected volatility; not actionable. 12 pos-100 quarantined as AP8 noise. confirmed-drops.json = {} (unchanged).
+
+**GSC validation (07-10):** GSC module FAILED (google.oauth2 not available in sandbox — recurring environment issue). Both MODERATEs validated as noise from available April 2026 GSC snapshots. ALGO_WATCH NOT triggered. June 2026 Core Update: ACTIVE, 0 confirmed drops, monitor daily through 07-17.
+
+**T9 auto-ship (07-10):** 1 candidate (de-addiction brief, pos 8.4, 544/mo). VETOED by Verifier §9 — /blogs/ cluster at cap (6/6 pages in past 7 days). Retry 2026-07-15. Weekly total 6/20.
+
+**🚨 Stub-pilot BATCH 1 BLOCKED (07-10):** Full 20-pick audit reveals systemic design failure: (1) ALL 5 assessment picks = redundant (BDI-II/HAM-A/ASRS/PCL-5/EPDS live from 07-09 cluster); (2) 4/5 journey picks not in app → `buildJourneyUrl(app_id)` throw = SSG build crash; (3) 2/5 worksheet picks crash; 2/5 slug collision. Only shippable: 5 mindful-minutes + Anger Management journey (real app_id exists). **STUB-PILOT-TRIAGE-01 added to BACKLOG.** Batch 2 would hit same blockers on 07-17 — disable or retriage before then. See stub-pilot-2026-07-10.txt Options A-D.
+
+**Watch changes this run:**
+
+- **W18 (/treatments/online-therapy):** Observation window CORRECTED by T4 observation monitor (07-10): 2026-07-10 → **2026-08-10** (42d from live date 2026-06-29). The 14d clinical review window was a separate check — this is the final indexation evaluation. **W18 14d clinical review: task `mindtalk-watch-w18-w21-clinical-review-2026-07-13` confirmed created 07-04 and in scheduled tasks. ✅**
+- **W18 obs window:** CORRECTED in W18 row by T4 (observation_window_end = 2026-08-10). No content action.
+- **Assessments cluster watches (created 07-10 am per BRAIN.md stamp):** day-7 (07-17), day-14 (07-24), day-21 (07-31), day-42 (08-21) — all CONFIRMED EXISTS.
+- No watches closed this run (Learner closes on merits).
+- No new watches opened (no sprint fired; 0 confirmed drops).
+- W11 homepage: ⏸ deferred (Mixpanel).
+- W17 (ocd-thoughts gate): Closed 2026-07-05 (🔴 STALLED — gate watch only).
+
+**Observation pipeline (07-10):** 10 URLs (per observation-2026-07-10.txt, 0 alerts). AP3-B cohort at day 14 (online-therapy, biofeedback-for-anxiety, emdr-for-ptsd, talk-therapy-for-depression). Jun-9 cohort at day 31/42. Assessments cluster at day 1/42 (obs window end 08-21).
+
+**Upcoming check board:**
+- **07-12 (Sunday):** Meta-Learner proposals apply-pass (t1, t9, t11 — all 3 eligible 07-12 at 20:00 IST). Strategist must read + apply those proposals.
+- **07-13 (Monday):** W18/W19/W20/W21 14d clinical reviews (`mindtalk-watch-w18-w21-clinical-review-2026-07-13` ✅ confirmed). Professional input skip-list expires for 6 W26 pages (nursing-care, DBT, family-therapy, ACT, personality-disorder, sleep-disorder → back to standard refresh queue).
+- **07-15 (Wednesday):** T9 de-addiction brief retry (cluster cap clears 07-15).
+- **07-17 (Friday — JUNE CORE UPDATE ENDS):** AP3-B cohort midpoint checks (day 21: biofeedback-for-anxiety, emdr-for-ptsd, talk-therapy-for-depression). Assessments cluster day-7 watch fires. Professional input expires for 6 W27 pages (play-therapy, rtms-therapy, eclectic-therapy, schizophrenia, stress-disorder, sleep-disorders-insomnia-in-elderly). **STUB-PILOT DECISION DEADLINE** (Batch 2 fires unless disabled/retriaged).
+- **07-17 (Friday):** goals-recalibrate proposal eligible (Apply on 07-17).
+- **07-21:** Jun-9 cohort final evaluations (6 URLs).
+- **07-27:** Third professional input batch expires (depression, anxiety, alzheimers, counselling-therapy, narrative-therapy, ocd-thoughts).
+- **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship).
+- **08-10:** W18/W19/W20/W21 AP3-B cohort final evaluations (42d indexation window).
+
+**Step 10 apply-pass (07-10):** NO-OP. t1/t9/t11 proposals Apply on 07-12 (not yet eligible). goals-recalibrate Apply on 07-17 (not yet eligible). No proposals applied.
+
+**Escalation check:** 🆕 ⚠ STUB-PILOT-TRIAGE-01 — urgent flag for Kushal, decision needed before 07-17. ✅ PUSH-FAIL-01 RESOLVED (was the standing flag since 07-03). June Core Update ACTIVE through 07-17 — YMYL monitoring elevated but 0 confirmed drops. 0 CRITICAL / 0 MAJOR rank drops. 0 watches breached. **Raising `⚠ STRATEGIST FLAG` for stub-pilot structural failure** (see BACKLOG STUB-PILOT-TRIAGE-01 + Slack alert below).

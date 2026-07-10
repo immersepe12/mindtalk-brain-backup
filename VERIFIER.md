@@ -135,11 +135,13 @@ For `ship_NEW_blog` or `ship_REFRESH_brief`:
   | `/treatments/*` | **7** (was 5) | Strategic growth cluster — Decision 2 confirms /treatments/ + doctor cards = 80% of UTM-attributed payments. Raised 07-03 to support 20/wk aggregate target. |
   | `/illnesses/*` | **5** (was 3) | YMYL cluster; raised 07-03 from 3 given Sprint A findings + AP3 Option B gating. Cannibalization guard remains at Verifier §5 quality bars. |
   | `/blogs/*` | **6** (was 3) | Discovery cluster; raised 07-03 to unblock T9 velocity for the pilot-20 mix + refresh queue. Note: still Verifier §5-gated so quality-bar failures block ship. |
-  | `/lps/*`, `/journeys/*`, `/assessments/*`, `/worksheets/*`, `/mindful-minutes/*` | **5** (was 3) | Raised 07-03 to allow Stub-Page Pilot 20 to ship 5/week × 4 weeks per pilot spec. |
+  | `/lps/*`, `/journeys/*`, `/worksheets/*`, `/mindful-minutes/*` | **5** (was 3) | Raised 07-03 to allow Stub-Page Pilot 20 to ship 5/week × 4 weeks per pilot spec. |
+  | `/assessments/*` | **3** (added 2026-07-09) | Steady-state ongoing authoring cap after the 2026-07-09 bulk cluster launch (77 pages via runbook). Bulk cluster launches use `runbooks/2026-07-09-assessments-cluster-launch.md`, NOT T9. |
   | **Aggregate** (across all content folders) | 20 | Hard cap 07-03 to align with Kushal's stated 20-pages/week target. Any single T9 run limited to 7 pages (per-run cap; see task9 spec). |
 
 - [ ] If the count exceeds the cluster's cap → VETO ("cluster blast radius exceeded — {N} ships in {cluster} in last 7d, cap is {cap}")
 - [ ] Note: emdr-for-anxiety was deferred 2026-06-26 by the old uniform cap of 3 in /treatments/; with the raised cap (5), the same scenario today would auto-ship without needing to wait for the 7-day window to clear.
+- [ ] **Bulk cluster launch carve-out (added 2026-07-09):** cluster-wide launches (10+ pages in a single planned event) do NOT go through T9 or this blast radius cap. They follow a runbook. Confirmed once: `runbooks/2026-07-09-assessments-cluster-launch.md`. The cap applies to T9 ongoing steady-state authoring only.
 
 ### 10. PII redaction check (NEW)
 
