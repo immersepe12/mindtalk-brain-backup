@@ -540,3 +540,27 @@ Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_
 **Step 10 apply-pass (07-10):** NO-OP. t1/t9/t11 proposals Apply on 07-12 (not yet eligible). goals-recalibrate Apply on 07-17 (not yet eligible). No proposals applied.
 
 **Escalation check:** 🆕 ⚠ STUB-PILOT-TRIAGE-01 — urgent flag for Kushal, decision needed before 07-17. ✅ PUSH-FAIL-01 RESOLVED (was the standing flag since 07-03). June Core Update ACTIVE through 07-17 — YMYL monitoring elevated but 0 confirmed drops. 0 CRITICAL / 0 MAJOR rank drops. 0 watches breached. **Raising `⚠ STRATEGIST FLAG` for stub-pilot structural failure** (see BACKLOG STUB-PILOT-TRIAGE-01 + Slack alert below).
+
+---
+
+**Strategist run 2026-07-12 (Sunday 8 PM):**
+
+**Watch changes this run:** None — no sprint fired, 0 confirmed drops. No new watches opened or closed.
+
+**🚨 IMMINENT — W18/W19/W20/W21 clinical review FIRES TOMORROW 07-13** (task `mindtalk-watch-w18-w21-clinical-review-2026-07-13` confirmed exists per 07-04 creation + 07-10 AP10 verification). These are the 14-day AP3 Option-B clinical reviews for: online-therapy (W18), emdr-for-ptsd (W19), biofeedback-therapy-for-anxiety (W20), talk-therapy-for-depression (W21).
+
+**🚨 W26 professional-input deadline FIRES TOMORROW 07-13** — 6 pages hit their 21-day deadline with no "recording received" flag: nursing-care-and-diagnosis-plan-for-insomnia, dialectical-behaviour-therapy-dbt, family-therapy, acceptance-and-commitment-therapy-act, personality-disorder, sleep-disorder. Per BACKLOG policy, these pages return to the standard refresh queue. **No automated cleanup runs until t18-backlog-release-step applies 07-19.** Manual BACKLOG edit required Monday 07-13 before T18 fires.
+
+**Step 10 apply-pass (07-12):** 3 proposals APPLIED (t1/t11/t9-rejection). 3 NEW proposals in preview (t10-apply-before-verify, t18-backlog-release-step, t9-s5-veto-to-backlog — preview starts 07-12, Apply-eligible 07-19).
+
+**Upcoming check board (updated 07-12):**
+- **07-13 (TOMORROW — Monday):** W18/W19/W20/W21 14d clinical reviews (`mindtalk-watch-w18-w21-clinical-review-2026-07-13`). W26 professional-input holds expire (6 pages — manual BACKLOG cleanup required).
+- **07-15 (Wednesday):** T9 de-addiction brief retry (/blogs/ cluster cap clears).
+- **07-17 (Friday — JUNE CORE UPDATE ENDS):** AP3-B cohort midpoint checks (day 21). Assessments cluster day-7 watch fires. W27 professional-input batch expires (6 pages). goals-recalibrate proposal Apply-eligible. **STUB-PILOT DECISION DEADLINE** (Batch 2 fires unless disabled/retriaged by Kushal).
+- **07-19 (Sunday):** 3 new Meta-Learner proposals Apply-eligible (t10-apply-before-verify, t18-backlog-release-step, t9-s5-veto-to-backlog). Strategist must apply.
+- **07-21:** Cohort B (Jun-9 blogs) final evaluations (6 URLs, Day 42).
+- **07-24:** W18/W19/W20/W21 28d AEO read.
+- **07-27:** W28 professional-input batch expires (6 pages: depression, anxiety, alzheimers, counselling-therapy, narrative-therapy, ocd-thoughts).
+- **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship).
+- **08-10:** W18/W19/W20/W21 AP3-B cohort final evaluations (42d indexation window).
+- **08-21:** Assessments cluster day-42 final evaluation (77 pages).

@@ -1,0 +1,98 @@
+# Cowork Scheduled Task 1: Rank Surveillance
+# Cadence: Monday, Tuesday, Thursday, Friday at 7:00 AM
+# Working folder: ~/Seo-workflow-mindtalk/mindtalk-setup/
+
+---
+
+You are running the SEO rank surveillance task for Mindtalk (mindtalk.in).
+
+## Your job
+
+Run the rank tracking script to check all tracked pages for keyword position drops, 
+and flag any significant drops for further analysis.
+
+## Steps
+
+0. **Prune stale artifacts** (run first, before anything else):
+
+   ```
+   bash ~/Seo-workflow-mindtalk/mindtalk-setup/scripts/prune-run-artifacts.sh
+   ```
+
+   This removes old GSC cache files, rank logs older than 7 days, and surplus dated backups.
+   It is safe to run every day — it will not remove any data less than 7 days old.
+
+1. Navigate to `~/Seo-workflow-mindtalk/mindtalk-setup/scripts/`
+
+2. Run the rank pull using the **wrapper script** — it loops `rank-pull-chunked.py` automatically
+   until it prints `DONE —`, with checkpoint/resume between iterations:
+
+   ```
+   bash ~/Seo-workflow-mindtalk/mindtalk-setup/scripts/run-rank-pull-until-complete.sh
+   ```
+
+   - The wrapper handles all looping and progress-guard logic automatically
+   - It exits 0 on success, non-zero on error or stall — check the exit code
+
+3. Read the output file `~/Seo-workflow-mindtalk/mindtalk-setup/flagged-drops.json`
+
+4. Count how many URLs are flagged and at what severity levels (CRITICAL, MAJOR, MODERATE)
+
+5. Read `~/Seo-workflow-mindtalk/mindtalk-setup/tracking-db.json` — note how many URLs are currently in 
+   OBSERVING status (locked, do not reprocess these)
+
+6. Write a brief summary to `~/Seo-workflow-mindtalk/mindtalk-setup/logs/rank-summary-[TODAY'S DATE].txt`:
+   - Total keywords checked
+   - Number flagged by severity
+   - List each flagged URL with: primary keyword, severity, position change
+   - Number of URLs currently locked in observation
+   - Any CRITICAL drops — highlight these prominently
+
+7. If there are any CRITICAL drops (20+ position drop), also write a separate 
+   alert file to `~/Seo-workflow-mindtalk/mindtalk-setup/alerts/CRITICAL-[TODAY'S DATE].txt` with full details.
+
+## Important rules
+
+- Do NOT modify any MDX files during this task
+- Do NOT run any git commands
+- Do NOT process more than what the script flags — do not add extra URLs
+- If the script fails with an API error, log the error and stop — do not guess at data
+- The script automatically skips URLs that are locked in observation windows
+
+## Step 8 — Post to Slack
+
+Post a summary to the **#seo-workflow-mindtalk** Slack channel (channel ID: `C0AUAPS4J83`) 
+using the `slack_send_message` tool.
+
+Format the message like this:
+
+```
+🔍 *Rank Surveillance — [TODAY'S DATE]*
+Site: mindtalk.in
+
+✅ *[N] keywords checked*
+🚨 *[N] flagged* — [breakdown by severity]
+
+[If any CRITICAL drops, list each:]
+> 🔴 *CRITICAL* | [Primary Keyword]
+> Position: [before] → [after] (Δ+[N])
+> URL: [url_path]
+
+[If no flags:]
+> All clear — no significant drops today.
+
+📊 Observation: [N] URLs locked in observation windows
+```
+
+If there were CRITICAL drops, add a final line:
+```
+⚠️ Full alert: alerts/CRITICAL-[DATE].txt
+```
+
+## Output
+
+When done, tell me:
+- How many URLs were checked
+- How many were flagged (by severity)  
+- The top 3 most severe drops with their keywords and position changes
+- Whether any CRITICAL alerts were raised
