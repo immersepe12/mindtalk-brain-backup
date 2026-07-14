@@ -22,4 +22,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W28 | /treatments/counselling-therapy | Dr. Swarupa Mohan Udgiri | 60 | brief_generated |
 | 2026-W28 | /treatments/narrative-therapy | Sufia Nusrat | 60 | brief_generated |
 | 2026-W28 | /blogs/how-to-manage-ocd-thoughts | Ms. Tejal Jaiswal | 40 | brief_generated |
+| 2026-W29 | /treatments/cognitive-behavioural-therapy-cbt | Dr. Krishna K R | 90 | brief_generated |
+| 2026-W29 | /illnesses/posttraumatic-stress-disorder-ptsd | Abhimanyu Chandak | 75 | brief_generated |
+| 2026-W29 | /illnesses/drug-addiction | Dr. Vishal Kasal | 75 | brief_generated |
+| 2026-W29 | /illnesses/bipolar-disorder | Dr. Thejus Kumar B R | 55 | brief_generated |
+| 2026-W29 | /treatments/rational-emotive-behavior-therapy-rebt | Ms. Vindhya Shree P K | 55 | brief_generated |
+| 2026-W29 | /blogs/understanding-the-signs-of-stress-in-relationships-and-finding-solutions | Ayushi Jain | 45 | brief_generated |
 
