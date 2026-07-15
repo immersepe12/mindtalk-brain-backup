@@ -51,3 +51,14 @@ Brain updates:
 • AP8 sentinel quarantine confirmed again (19 entries same-run mass pos-100 = textbook noise).
 
 Full decision log: brain/memory/decisions/2026-07-14.md
+
+---
+## T16 Ops Health Notification (2026-07-14 23:10 IST)
+**Slack status:** ERR_FAILED (recurring issue — same as earlier today)
+
+**Message that would have been sent:**
+✅ Ops Health — 2026-07-14 11 PM IST
+• All 8 Tuesday tasks ran on schedule
+• Brain snapshot: 12 files changed → ffccf95, pushed ✓ (force push; FUSE lock divergence)
+• Production push-state: in-sync
+• ⚠ Infra: ~40 stale .git lock files cleared via Python rename() workaround

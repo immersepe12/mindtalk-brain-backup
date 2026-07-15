@@ -126,3 +126,23 @@
 ## 2026-06-17 11:00 IST — Scheduled T19 fire (addendum to morning inaugural)
 - No re-classification: inaugural full run already completed this morning on the current 7-day window (same data, same week). Tiers/GEO/patterns unchanged — see PAGE-CONVERSION-MAP.md / GEO-CONVERSION-MAP.md.
 - Cross-domain attribution recheck: STILL BLOCKED. Project 3986277 (Cadabams consult) absent from accessible-project list again. Investigated whether consult booking events migrated to another accessible US project: 4026555 cadabams-org (no appointment/book events), 4015752 professionals (none), 4013942 cadabams hospitals (has `book_appointment_clicked` but that is the hospital-site funnel, NOT consult `Appointment Booked`/`Doctor Booking Page Viewed` — wrong project for Mindtalk→consult attribution), 3984638 cadabams group (EU-region-locked, needs mcp-eu.mixpanel.com). Revenue-validated layer remains deferred until 3986277 is restored or the consult funnel is located in an accessible US project.
+
+## 2026-07-15 11:00 IST — T19 W29 (MCP_DOWN — no new data)
+- **Mixpanel MCP down.** net::ERR_FAILED on all calls. T15 confirmed same outage at 10:00 IST. Slack also down.
+- **All W28 classifications held** (no new data — do not reweight actions):
+  - 🟢 Goldmines: /doctors/* (96%+, 13 payments/wk W28), /experts/* (56%+)
+  - 🟡 Rockets: /doctors/telugu-speaking-doctors, /doctors/tamil-speaking-doctors (70%+ intent, 4 weeks confirmed)
+  - 🔵 Engagement Engines: /blogs/* (Pattern 3 confirmed, top-of-funnel only)
+  - 🟠 Homepage: Goldmine candidate (9 payments W28 via UTM) — classification pending W29 confirm (unresolved)
+  - ⚫ Dead weight: /illnesses/*, /treatments/*, /lps/*
+- **Patterns pending W29 confirmation (cannot confirm this run):**
+  - P5 AI search (chatgpt.com): W29 would be week 4 → T5 unlock threshold. PENDING.
+  - Kerala surge: W28 week 1 (+191%) → W29 confirm/deny. PENDING.
+  - Pune surge: W28 week 1 (+213%) → W29 confirm/deny. PENDING.
+  - Homepage Goldmine: ≥8 payments W29 required → PENDING.
+- **UX critical items** (no update — carry W28 state):
+  - booking/8796: 183 rage+dead (CRITICAL — dev should have addressed)
+  - checkout dead clicks: 68 (NEW last week — payment funnel)
+  - find-therapist: IMPROVING (319 dead, -25% WoW)
+- **Next T19 run: 2026-07-22** — will compare vs W28 (Jul 2–8) as baseline (2-week gap). Flag explicitly in WoW output.
+- **Strategist action weights: UNCHANGED from W28.** Do not adjust until W30 data confirms/denies pending patterns.
