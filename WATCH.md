@@ -604,3 +604,83 @@ Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_
 - **08-21:** Assessments cluster day-42 final evaluation (77 pages).
 
 **Escalation check:** 0 CRITICAL / 0 MAJOR rank drops. June Core Update ACTIVE through 07-17 — 4 days remaining; YMYL monitoring elevated. 0 watches breached. 🆕 "stress management" pos #1→#7 = highest-priority investigation this week (STRESS-MGMT-DROP-01 in BACKLOG). **No `⚠ STRATEGIST FLAG`** (no confirmed YMYL drops; no production freeze; no task gaps found).
+
+---
+
+## 2026-07-16 — Strategist daily stamp (Thursday) 🏁 Core Update last day + GSC restored + T17 complete
+
+**Rank pull (07-16):** 0 CRITICAL, 10 HIGH, 16 MODERATE. NEW today: `/blogs/therapy-vs-medication-for-depression` pos 4→8 (MODERATE). All 10 HIGH drops dated 07-13 (carried from GSC blockage window). 16 AP8 quarantined. No CRITICAL alert written.
+
+**GSC credential:** RESTORED 07-16 (PYTHONPATH fix in T2/T4/T6 tasks; no re-OAuth). gsc-token.pickle intact. T2 tomorrow (07-17) should validate cleanly.
+
+**Core Update status:** June 2026 Core Update (Jun 30–Jul 17) LAST DAY = TODAY. ALGO_WATCH: NOT triggered. 0 confirmed YMYL drops across ≥21 days. All Sprint A reviewer-fix pages survived. JUNE-CORE-UPDATE-01 closes TOMORROW pending 07-17 T2.
+
+**T17 competitive + AI citation sweep (07-16):** Mindtalk +93 KW (ONLY Indian MH platform growing; Amaha −35 KW 4th consecutive week; YourDOST −11 KW 3rd week). 40-cell AI citation sweep: 11/40 cited. **Google AI Overview NOW cites Mindtalk for "cbt therapy online india"** — first commercial citation ever detected.
+
+**Watch changes this run:**
+
+- **W18/W19/W20/W21 (AP3-B treatments):** Day-21 midpoint checks FIRE TOMORROW 07-17. Task `mindtalk-watch-w18-w21-clinical-review-2026-07-13` handles this. Status: `⏳ pending_evaluation (2026-07-13)` unchanged; will update after midpoint task runs.
+- **Assessments cluster (Group C, 77 pages):** Day-7 watch fires TOMORROW 07-17. Automated task `mindtalk-watch-assessments-day7-2026-07-17` handles this. No change needed.
+- **Group A (Jun-9 cohort, 6 blogs):** Day-42 final evaluations due 07-21. anger-management, codependency, dbt-skills, people-pleasing, relationship-problems, somatic-therapy. Observation pipeline manages automatically.
+- **JUNE-CORE-UPDATE-01 (BACKLOG):** Close TOMORROW if T2 07-17 confirms 0 YMYL drops.
+- **NEW MONITOR — "emotionally unavailable meaning":** pos 4.5→10.6 (236 impr, HIGH, dated 07-13 in rank pull). NOT YET GSC-validated (GSC was blocked 07-14→07-16). AP5 applies — do NOT open brief or watch until T2 07-17 validates. If T2 confirms real drop: non-YMYL, non-AP3, eligible for refresh brief immediately. If T2 shows noise: discard.
+- **NEW MONITOR — "therapy-vs-medication-for-depression":** NEW MODERATE today (pos 4→8). Single-page, non-YMYL. AP5 + AP8 check: Core Update still active today (last day) — validate via T2 07-17 before any action. Do NOT create brief yet.
+- **DOCTORS-LISTING-DROP-02 (new BACKLOG entry):** No watch opened yet. Watch will open if `investigate_regression` confirms real drop (post 07-17 T2).
+
+**Observation pipeline (07-16):** 87 URLs, 0 alerts. Group B (4 treatments, Day-21 tomorrow). Group A (6 blogs, Day-37 of 42, final 07-21). Group C (77 assessments, Day-7 tomorrow).
+
+**Upcoming check board (updated 07-16):**
+- **07-17 (TOMORROW — JUNE CORE UPDATE ENDS):** T2 GSC validation (first clean run after 3-day blockage). W18/W19/W20/W21 Day-21 midpoints. Assessments Day-7 watch. goals-recalibrate proposal Apply-eligible (07-17 20:00 IST). W27 professional-input batch expires (play-therapy, rtms-therapy, eclectic-therapy, schizophrenia, stress-disorder, sleep-disorders-insomnia-in-elderly). JUNE-CORE-UPDATE-01 close pending T2 clean.
+- **07-19 (Sunday):** 3 Meta-Learner proposals Apply-eligible (t10-apply-before-verify, t18-backlog-release-step, t9-s5-veto-to-backlog). Strategist must apply.
+- **07-21:** Group A (Jun-9 cohort) Day-42 final evaluations. /blogs/ cluster cap resets. STRESS-MGMT-WATCH-01 GSC audit fires.
+- **07-22:** T14 CWV re-check (CWV-REGRESSION-02 dev fix deadline).
+- **07-24:** W18/W19/W20/W21 Day-28 AEO read.
+- **07-27:** W28 professional-input batch expires (depression, anxiety, alzheimers, counselling-therapy, narrative-therapy, ocd-thoughts).
+- **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship).
+- **08-10:** W18/W19/W20/W21 AP3-B cohort final evaluations (42d indexation window).
+- **08-21:** Assessments cluster day-42 final evaluation (77 pages).
+
+**Step 10 apply-pass (07-16): NO-OP.** All 4 proposals future-dated: goals-recalibrate Apply 07-17 20:00 IST (not yet), t10/t18/t9-s5 Apply 07-19. No proposals applied today.
+
+**Escalation check:** 0 CRITICAL / 0 MAJOR rank drops. Core Update LAST DAY (07-16). GSC RESTORED. 0 watches breached. Doctors-Listings −44.9% WoW flagged as formal investigate_regression (DOCTORS-LISTING-DROP-02 in BACKLOG) pending 07-17 T2. **No `⚠ STRATEGIST FLAG`** (no confirmed YMYL drops; no production freeze; no infrastructure failure).
+
+---
+
+## 2026-07-17 — Strategist daily stamp (Friday) 🏁 JUNE CORE UPDATE CLOSED + ALGO_WATCH LIFTED
+
+**Rank pull (07-17):** 286 KWs checked. 0 CRITICAL, 0 MAJOR. 2 new MODERATE (eating-disorder pos 2→6, sleep-talking pos 4→8) — both cleared as NOISE by GSC validation today (see below). 28 pos-100 quarantined as AP8 noise. 95 URLs locked in observation.
+
+**GSC validation (07-17):** T2 ran clean. 5 URL-based drops validated → 0 confirmed, 5 NOISE removed. `/illnesses/eating-disorder` NEW today = NOISE (impressions flat). `/blogs/guide-to-sleep-talking-disorder` NEW today = IMPROVING (+8% clicks, +10% impr). All 5 URL drops cleared. Confirmed drops this week: 0/10.
+
+**⭐ JUNE CORE UPDATE CLOSED — 2026-07-17:** T2 confirmed 0 YMYL drops. ALGO_WATCH NOT triggered across full 21-day Core Update window (Jun 30–Jul 17). **All Sprint A reviewer-fix pages survived.** YMYL architecture proven stable under enhanced scrutiny. JUNE-CORE-UPDATE-01 = **CLOSED** in BACKLOG. Implication: #18 YMYL recovery batch is now Core-Update-unblocked, but GSC recommends "7-10 days monitor before actioning content changes." HOLD #18 until 07-24 per AP7/P7.
+
+**Watch changes this run:**
+
+- **JUNE-CORE-UPDATE-01 (BACKLOG):** ✅ CLOSED — see above.
+- **W18 (/treatments/online-therapy) — Day-21 midpoint:** `observation-2026-07-17.txt` confirms GSC avg pos 7.3, +118% clicks, +74% impr = **🟢 IMPROVING**. Status → `IMPROVING`. 42d final eval: 08-10. No intervention required.
+- **W19 (/treatments/emdr-for-ptsd) — Day-21 midpoint:** `observation-2026-07-17.txt` confirms GSC avg pos 59.1→41.6, +33% impr = **🟡 STABLE_ESTABLISHING** (long-tail PTSD terms, position improving from deep). Status updated. 42d final: 08-10.
+- **W20 (/treatments/biofeedback-therapy-for-anxiety) — Day-21 midpoint:** `observation-2026-07-17.txt` confirms pos 10 = **🟢 RANKING_WELL**. Status updated. 42d final: 08-10.
+- **W21 (/treatments/talk-therapy-for-depression) — Day-21 midpoint:** `observation-2026-07-17.txt` confirms GSC avg pos 9.5 = **🟡 STABLE_ESTABLISHING**. Status updated. 42d final: 08-10.
+- **Group A (Jun-9 cohort, 3 URLs):** Day-38/42. Final evaluations 07-21. No alerts.
+- **Assessments cluster (77 pages):** Day-7 watch ran earlier today — 46.8% indexed (above 40% flag threshold, benign queue lag). No alerts. Day-14 watch fires 07-24.
+- **STRESS-MGMT-WATCH-01:** GSC audit fires 07-21. No change today.
+- **DOCTORS-LISTING-DROP-02 (BACKLOG):** No watch opened yet — investigation NOW ACTIVE. Watch will open only if GSC investigation confirms real structural regression (not Core Update noise).
+- **W27 professional-input batch (7 pages):** play-therapy, rtms-therapy, eclectic-therapy, schizophrenia, stress-disorder, sleep-disorders-insomnia-in-elderly, sleep-disorders-in-elderly = expires TODAY (07-17, 21 days from W27 assignment). Pages released back to standard refresh queue. Re-pick eligible after 08-07. Note: T18 release logic applies 07-19 (proposal).
+- **NEW MODERATEs (eating-disorder, sleep-talking):** Both NOISE confirmed. No watches opened. No action.
+- **"emotionally unavailable meaning" MONITOR (07-16):** T2 today = run clean but this URL was not in today's 5 URL-based drop set → query-level signal only. Keep on MONITOR via weekly WEEKLY-DROPS-01 triage. No watch opened yet; AP5 hold.
+
+**Observation pipeline (07-17):** 87 URLs, 0 alerts. Group B (4 treatments AP3-B, Day-21 — all STABLE/IMPROVING ✅). Group A (3 blogs Jun-9, Day-38/42, final 07-21). Group C (77 assessments, Day-7 — 46.8% indexed, benign).
+
+**Step 10 apply-pass (07-17):** goals-recalibrate-recovery-and-autoship-targets-2026-07-10-1300.md **APPLIED tonight** (Verifier APPROVE — all 11 checks pass). t10/t18/t9-s5 proposals: Apply 07-19, skipped today.
+
+**Upcoming check board (updated 07-17):**
+- **07-19 (Sunday):** 3 Meta-Learner proposals Apply-eligible (t10-apply-before-verify, t18-backlog-release-step, t9-s5-veto-to-backlog). Strategist must apply.
+- **07-21:** Group A (Jun-9 cohort) Day-42 final evaluations. /blogs/ cluster cap resets → fire DRY-BEGGING-CTR-01 + EMOTION-CONTROL-REFRESH-01. STRESS-MGMT-WATCH-01 GSC audit.
+- **07-22:** T14 CWV re-check (CWV-REGRESSION-02 dev fix deadline).
+- **07-24:** STUB-PILOT-DECISION-01 HARD DEADLINE (Batch 3 fires 15:30 IST). W18/W19/W20/W21 Day-28 AEO read. Assessments cluster Day-14. #18 YMYL recovery batch eligible (7d post-Core-Update settle).
+- **07-27:** W28 professional-input batch expires (depression, anxiety, alzheimers, counselling-therapy, narrative-therapy, ocd-thoughts).
+- **07-29:** W12/W13/W14 final indexation reads (42d from 06-17 ship).
+- **08-10:** W18/W19/W20/W21 AP3-B cohort final evaluations.
+- **08-21:** Assessments cluster day-42 final evaluation (77 pages).
+
+**Escalation check:** 0 CRITICAL / 0 MAJOR rank drops. Core Update CLOSED. ALGO_WATCH LIFTED. 0 watches breached. STUB-PILOT-DECISION-01 OVERDUE (Batch 3 fires 07-24 — re-flagged). DOCTORS-LISTING-DROP-02 investigation ACTIVATED. **`⚠ HUMAN DECISION REQUIRED: STUB-PILOT by 07-24.`**

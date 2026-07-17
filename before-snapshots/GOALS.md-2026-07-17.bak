@@ -66,7 +66,7 @@
 - Inventory coverage: **45%** (108/240)
 - AI Overview citation rate (mindtalk.in cited in AI snippets): **measure baseline first**
 - All YMYL pages: 100% reviewer coverage (already done)
-- 14-day recovery rate on refresh sprints: **>60% for deep pages (pos >25, signal-fix playbook) / >40% for top-20 YMYL pages (depth+reviewer playbook, 42-day window)** — split per AP9/P12 evidence 2026-06-28
+- 14-day recovery rate on refresh sprints: **>70%**
 
 ### Q4 2026 (Oct–Dec) — "Topical Authority + Bilingual"
 - Weekly clicks: **5,000**
@@ -197,7 +197,7 @@ If any cap is hit, Strategist freezes that action class for 7 days and escalates
 | Watch recovery rate (🟢 verdict) | ≥60% | Strategy playbooks are working |
 | Strategist decision confidence avg | rising over time | System reads accumulated memory effectively |
 | Meta-Learner proposals applied | 2-3/month | System auto-improves modestly |
-| Auto-ship success rate | ≥85% of briefs that pass §5 pre-check | Measures pipeline quality, not Verifier strictness. Verifier veto rate tracked separately; a veto of a §5-passing brief = pipeline defect, a veto of a §5-failing brief = T3/T5 defect. |
+| Auto-ship success rate | ≥85% | NEW briefs cleanly convert to live pages |
 | Refresh recovery rate (14-day) | ≥70% | Refresh playbook is reliable |
 
 If watch recovery rate drops <40% for 2 weeks → Learner flags playbook failure → Meta-Learner proposes strategy update.

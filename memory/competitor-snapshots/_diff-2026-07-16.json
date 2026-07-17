@@ -1,0 +1,66 @@
+{
+  "amaha.com": {
+    "gained_new": [],
+    "lost": [],
+    "improved": [],
+    "declined": []
+  },
+  "yourdost.com": {
+    "gained_new": [
+      [
+        "shilpa near me",
+        1600,
+        27
+      ]
+    ],
+    "lost": [
+      [
+        "couple counselling bangalore",
+        1900,
+        27
+      ]
+    ],
+    "improved": [],
+    "declined": []
+  },
+  "betterhelp.com": {
+    "gained_new": [],
+    "lost": [],
+    "improved": [],
+    "declined": []
+  },
+  "manastha.com": {
+    "gained_new": [
+      [
+        "counsellors online",
+        590,
+        22
+      ],
+      [
+        "how to treat ocd",
+        590,
+        73
+      ]
+    ],
+    "lost": [
+      [
+        "couple counselling online",
+        1600,
+        22
+      ],
+      [
+        "couple therapy online",
+        1000,
+        28
+      ]
+    ],
+    "improved": [],
+    "declined": []
+  },
+  "mfine.com": {
+    "gained_new": [],
+    "lost": [],
+    "improved": [],
+    "declined": []
+  }
+}
