@@ -238,3 +238,45 @@ Proposal lifecycle: Meta-Learner detects issue → writes proposal to `brain/pro
 - `memory/applied-history.md` — audit trail of every auto-applied change
 
 Discovery queue refreshed 2026-07-10 — 1,807 new opportunities, cache no longer stale.
+
+---
+
+## 2026-07-18 — Strategist daily stamp (Saturday) 📋 T9 queue exhausted — brief refill critical before 07-21
+
+**No rank pull today (Saturday — DataForSEO pull excluded weekends).**
+Last rank data: 2026-07-17 — 0 CRITICAL, 0 MAJOR, 2 MODERATE (both NOISE per GSC 07-17).
+GSC last run: 2026-07-17 — 5 URL drops validated, 0 confirmed, 5 NOISE removed.
+Confirmed drops today: 0. Observation monitor: 0 alerts, 0 checks due.
+
+**⭐ KEY STATE (post-07-17):** June Core Update CLOSED. ALGO_WATCH LIFTED. 0 YMYL drops in 21-day window. AP3-B cohort (W18-W21) all STABLE/IMPROVING at Day-22. No watch fires today.
+
+**🚨 CRITICAL NEW FINDING — T9 QUEUE EXHAUSTED:** T9 07-17 run confirmed "0 remaining eligible NEW briefs." 50/52 shipped; 1 permanent skip (malayalam-doctors, human-gated). /blogs/ cluster cap 6/6 resets 07-21. Without T5 fix + brief generation run on Monday (07-20), the 07-21 reset produces zero auto-ships. T5-QUEUE-EMERGENCY-01 added to BACKLOG with Steps A+B+C for Mon T11.
+
+**🆕 AP10 FLAG — 10 AUTHORED_PENDING_PUSH:** tracking-db shows 10 pages at AUTHORED_PENDING_PUSH. Cross-reference: these match exactly the PUSH-FAIL-01 batch (resolved 07-10 "all 10 confirmed 200 live"). Likely live but tracking-db stale. T11 Mon 07-20: curl verify all 10, update tracking-db to PUBLISHED if confirmed. AUTHORED-PENDING-PUSH-AP10-01 added to BACKLOG.
+
+**Step 10 apply-pass: NO-OP.** t10-apply-before-verify, t18-backlog-release-step, t9-s5-veto-to-backlog all Apply on 2026-07-19 20:00 IST — NOT eligible today. Proposals reviewed: all sound. Apply as scheduled tomorrow.
+
+**Top 5 actions (scored + ranked):**
+1. STUB-PILOT-DECISION-01 — 3rd escalation. Score 100. Batch 3 fires 07-24. ⏰ 6 days.
+2. AUTHORED-PENDING-PUSH-AP10-01 — AP10 verify 10 entries. Score 32. Mon T11.
+3. T5-QUEUE-EMERGENCY-01 — Fix T5 + brief refill. Score 20.8. Mon T11 (BEFORE 07-21).
+4. DOCTORS-LISTING-DROP-02 — GSC investigation. Score 16. Mon T11.
+5. WEEKLY-DROPS-01 — URL-map + validate 23 query-level drops from 07-13. Score 16. Mon T11.
+
+**Hold confirmations:**
+- DRY-BEGGING-CTR-01 → 07-21 (cap resets) ✓
+- EMOTION-CONTROL-REFRESH-01 → 07-21 ✓
+- STRESS-MGMT-WATCH-01 → 07-21 (already scheduled) ✓
+- #18 YMYL recovery batch → 07-24 (7d post-Core-Update settle) ✓
+- T17-8-REVIEW → NUDGE KUSHAL (24h+ since 07-17 routing request)
+
+**Upcoming critical dates:**
+- 07-19: 3 Meta-Learner proposals apply (t10-apply-before-verify, t18-backlog-release-step, t9-s5-veto-to-backlog)
+- 07-20: T5 fix + brief generation MUST complete (BEFORE 07-21)
+- 07-21: /blogs/ cap resets → DRY-BEGGING + EMOTION-CONTROL + Group A final evals + STRESS-MGMT-WATCH
+- 07-22: T14 CWV re-check (CWV-REGRESSION-02 dev deadline)
+- 07-24: STUB-PILOT Batch 3 fires (HARD DEADLINE); W18-W21 Day-28 AEO; #18 YMYL eligible
+- 07-27: W28 professional-input expires (depression, anxiety, alzheimers, counselling-therapy, narrative-therapy, ocd-thoughts)
+- 07-29: W12/W13/W14 final indexation reads
+- 08-10: W18/W19/W20/W21 AP3-B final evaluations
+- 08-21: Assessments cluster day-42 final evaluation
