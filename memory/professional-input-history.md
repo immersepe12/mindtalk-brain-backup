@@ -28,4 +28,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W29 | /illnesses/bipolar-disorder | Dr. Thejus Kumar B R | 55 | brief_generated |
 | 2026-W29 | /treatments/rational-emotive-behavior-therapy-rebt | Ms. Vindhya Shree P K | 55 | brief_generated |
 | 2026-W29 | /blogs/understanding-the-signs-of-stress-in-relationships-and-finding-solutions | Ayushi Jain | 45 | brief_generated |
+| 2026-W30 | /illnesses/obsessive-compulsive-disorder-ocd | Dr. Krishna K R | 85 | brief_generated |
+| 2026-W30 | /treatments/eye-movement-desensitization-and-reprocessing-therapy-emdr-therapy | Abhimanyu Chandak | 75 | brief_generated |
+| 2026-W30 | /illnesses/autism-spectrum-disorder | Dr. Akanksha Kashinath Bhor | 70 | brief_generated |
+| 2026-W30 | /illnesses/mood-disorder | Dr. Thejus Kumar B R | 65 | brief_generated |
+| 2026-W30 | /treatments/couples-therapy | Dr. Swarupa Mohan Udgiri | 65 | brief_generated |
+| 2026-W30 | /blogs/understanding-dominant-personality-and-dominating-nature | Disha S Prabhu | 55 | brief_generated |
 

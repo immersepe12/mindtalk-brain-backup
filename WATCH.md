@@ -684,3 +684,54 @@ Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_
 - **08-21:** Assessments cluster day-42 final evaluation (77 pages).
 
 **Escalation check:** 0 CRITICAL / 0 MAJOR rank drops. Core Update CLOSED. ALGO_WATCH LIFTED. 0 watches breached. STUB-PILOT-DECISION-01 OVERDUE (Batch 3 fires 07-24 — re-flagged). DOCTORS-LISTING-DROP-02 investigation ACTIVATED. **`⚠ HUMAN DECISION REQUIRED: STUB-PILOT by 07-24.`**
+
+---
+
+## 2026-07-19 — Learner weekly stamp (Sunday T12)
+
+**Watches evaluated this run:** W18/W19/W20/W21 Day-21 midpoints (Strategist data from 07-17) + Assessments cluster Day-7 (07-17).
+
+**W18-W21 AP3-B cohort — Learner formal midpoint verdict:**
+- **W18 /treatments/online-therapy:** ✅ Learner confirms 🟢 **IMPROVING** (pos 7.3, +118% clicks, +74% impr at Day-21). No intervention. Watch remains open → Day-42 final 08-10. Log: `memory/experiments/midpoint-W18-W19-W20-W21-2026-07-19.md`
+- **W19 /treatments/emdr-for-ptsd:** ✅ Learner confirms 🟡 **STABLE_ESTABLISHING** (pos 59.1→41.6, +33% impr at Day-21). On track for competitive YMYL query. Watch remains open → 08-10. Log: same as above.
+- **W20 /treatments/biofeedback-therapy-for-anxiety:** ✅ Learner confirms 🟢 **RANKING_WELL** (pos 10 at Day-21). Strong result — biofeedback is now a confirmed Mindtalk authority cluster (W6 + W20 = 2 data points). Watch remains open → 08-10.
+- **W21 /treatments/talk-therapy-for-depression:** ✅ Learner confirms 🟡 **STABLE_ESTABLISHING** (pos 9.5 at Day-21). On track. Watch remains open → 08-10.
+- **AP3-B cohort safety:** 0 post-publish content flags, 0 YMYL harm signals, 0 ALGO_WATCH triggers across all 4 pages in 21-day window (incl. June Core Update). AP3 Option B = CONFIRMING. Principle write will happen at Day-42 if 3 GREEN closes confirmed.
+
+**Assessments cluster Day-7 (07-17):** ✅ Learner confirms 🟡 **PARTIAL (on-track)**. 36/77 = 46.8% indexed — above 40% alert threshold, below 60% target. Benign crawl queue lag for 77-page batch. No intervention. Day-14 watch fires 07-24. Log: `memory/experiments/assessments-day7-2026-07-19.md`
+
+**Pattern extraction this run:**
+- No 3rd 🟢 close in any action class yet → PRINCIPLES.md unchanged.
+- No 3rd 🔴/⚫ close in any action class → ANTI-PATTERNS.md unchanged.
+- Seeded biofeedback cluster authority signal (2/3 needed for P12 confirmation — W6 + W20).
+- AP3 Option B safety record: 21 days clean across 4 YMYL ships. Accumulating toward future AP3-B principle.
+
+**Stale WATCH prune check:** Oldest open watch = W11 (homepage, opened 2026-06-12 = 37 days). No watch exceeds 60-day threshold. **No pruning required.**
+
+**Upcoming board (from Learner perspective):**
+- **07-21:** Group A (Jun-9 cohort) Day-42 final evaluations → Learner will evaluate anger-management, codependency, dbt-skills, people-pleasing, relationship-problems, somatic-therapy. These are the first NEW blog indexation finals in the system — important calibration of the "new blog targeting long-tail" action class.
+- **07-24:** Assessments cluster Day-14; W18/W19/W20/W21 Day-28 AEO check.
+- **07-29:** W12/W13/W14 (couple-therapy, find-a-therapist-ocd, find-a-therapist-india) final 42d reads.
+- **08-10:** W18/W19/W20/W21 final evaluations → AP3-B principle write if 3+ GREEN.
+
+**Full experiment log:** `brain/memory/experiments/midpoint-W18-W19-W20-W21-2026-07-19.md` + `brain/memory/experiments/assessments-day7-2026-07-19.md`
+
+## 2026-07-19 — Strategist daily stamp (Sunday T10 8PM IST)
+
+**Rank pull:** No DataForSEO pull (Sunday). Using 07-17 carry-forward (0 CRITICAL, 0 MAJOR).
+
+**New watch flags:**
+- ~~`/illnesses/learning-disability` — QDF_BLOCKED, obs_end 2026-07-20~~ — **✅ CLOSED 2026-07-20**: reviewed full history (midpoint dip to pos 27.4, final eval back to unchanged baseline pos 11) and closed as STALLED — the refresh lever didn't move this page, extending again would just re-run the same result. tracking-db.json updated. See BACKLOG LEARNING-DISABILITY-OBS-01.
+
+**Step 10 apply-pass:** ✅ 3 Meta-Learner proposals applied.
+- `t10-apply-before-verify` → task10-strategist.md Step 10 now has Before-block mismatch gate (Step 3a).
+- `t18-backlog-release-step` → task18 now has Step 0 releasing expired professional-input holds.
+- `t9-s5-veto-to-backlog` → task9 now routes content-quality brief failures to BACKLOG as fix_brief items.
+
+**Watch board (current open):** W11 (homepage ⏸ deferred), W12/W13/W14 (NEW blog indexation → final 07-29), W17 (ocd-thoughts STALLED recovery pending), W18/W19/W20/W21 (AP3-B cohort → Day-28 AEO check 07-24, Day-42 final 08-10).
+
+**Upcoming checks:**
+- **07-21 (2 days):** Jun-9 cohort Day-42 final evaluations (6 URLs: anger-management-therapy, codependency-signs-causes-treatment, dbt-skills-modules, people-pleasing-how-to-stop, relationship-problems-signs-causes-solutions, what-is-somatic-therapy) — Learner T12 handles.
+- **07-24:** Assessments cluster Day-14; W18/W19/W20/W21 Day-28 AEO check.
+- **07-29:** W12/W13/W14 final 42-day reads.
+- **08-10:** W18/W19/W20/W21 final evaluations → AP3-B principle write if 3+ GREEN.

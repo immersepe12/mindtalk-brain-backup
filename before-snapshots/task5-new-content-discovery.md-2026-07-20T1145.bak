@@ -1,0 +1,367 @@
+# Cowork Scheduled Task 5: New Content Discovery + Brief Generation
+# Cadence: Every Monday at 10:00 AM (weekly)
+# Working folder: ~/Seo-workflow-mindtalk/mindtalk-setup/
+# Requires: Claude in Chrome (for SERP outline research)
+
+---
+
+You are running the weekly new content discovery task for Mindtalk (mindtalk.in).
+
+This task finds KEYWORDS THAT NEED NEW PAGES — not refreshing existing ones.
+The output is content briefs for entirely new MDX files to be created.
+
+## Context
+
+The site currently has:
+- 31 illness pages → /illnesses/
+- 26 treatment pages → /treatments/
+- 221 blog articles → /blogs/ ← MAIN TARGET FOR NEW CONTENT
+- 200+ doctor listing pages → /doctors-listings/ (local SEO hubs)
+- 48 individual doctor profiles → /doctors/
+- 4 center pages → /centers/ (Bangalore locations)
+
+New content falls into two types:
+1. **BLOG article** → new file at src/content/blogs/[slug].mdx
+2. **SPOKE PAGE** → new specific illness/treatment page (e.g. src/content/treatments/emdr-for-ptsd.mdx)
+
+## Steps
+
+### Step 1 — Run discovery script
+
+```bash
+cd ~/Seo-workflow-mindtalk/mindtalk-setup
+PYTHONPATH=.pip-packages python3 scripts/new-content-discovery.py --all
+```
+
+**⚠ ALWAYS set `PYTHONPATH=.pip-packages` (fix 2026-07-10).** The google-api libraries live in the repo's `.pip-packages/` folder; without PYTHONPATH the script fails with `google.oauth2 unavailable` — this silently froze fresh discovery from ~06-15 to 07-10 while runs fell back to cached data. The GSC token (`gsc-token.pickle`) self-refreshes; no separate credentials file is needed.
+
+**Self-healing fallbacks, in order:**
+1. If the script errors on imports → retry once with `PYTHONPATH=.pip-packages:/tmp/gsclibs`.
+2. If GSC API times out → retry once after 60s.
+3. Only after both retries fail: use the cached `new-content-opportunities.json`, but you MUST (a) log `DISCOVERY STALE — ran on cache` prominently at the top of the run log, and (b) include the cache age in the Slack post. Cached-mode is a degraded state, never a silent default.
+4. If cache age exceeds 21 days → escalate in Slack: `🚨 DISCOVERY FROZEN {N} days — needs manual run`.
+
+This runs both approaches:
+- GSC query mining (90-day data, unmapped non-branded queries)
+- Secondary keyword analysis (cluster keywords that warrant standalone pages)
+
+Read the output: `~/Seo-workflow-mindtalk/mindtalk-setup/new-content-opportunities.json`
+
+### Step 1.5 — Google Ads search-term mining (added 2026-07-10 — Supermetrics MCP)
+
+Google Ads is connected via the Supermetrics MCP (source `AW`, account **2992649306 "Mind talk"**). Once per week, pull the paid search-term report for the last 30 days:
+
+1. `field_discovery(ds_id="AW", filter="search term,conversions,clicks,cost")` to get exact field IDs, then `data_query(ds_id="AW", ds_accounts=["2992649306"], fields=[search term + clicks + conversions + cost], date_range_type="last_30_days")`.
+2. Filter to search terms with **≥1 conversion OR ≥10 clicks**.
+3. For each, check organic coverage: does mindtalk.in have a page targeting this term (keyword-map.json / GSC)? Is it ranking top-10?
+4. Terms with paid conversions but NO organic top-10 coverage → add to `new-content-opportunities.json` with `source: "PAID_SEARCH_TERM_MINING"` and priority = **highest tier** (commercial intent proven with money — stronger signal than volume alone).
+5. Terms where organic already ranks top-3 AND paid is also bidding → note in the run log as potential paid-budget savings (informational; ads decisions are Kushal's).
+
+If Supermetrics is unavailable, skip with a `PAID MINING SKIPPED` log line — GSC mining remains the primary source.
+
+### Step 2 — Filter and prioritise (revised 2026-07-03 — bias toward commercial intent + high-vol)
+
+From the opportunities list, filter to only `status == "OPPORTUNITY"` (not already briefed or published).
+
+**New priority order (bias: commercial intent > vol > coverage — per T19 W26 evidence that /treatments/ + doctor cards = 80% of payments):**
+
+1. **TREATMENT_BLOG** with search_volume_mo ≥ 300 → **highest priority** (commercial intent, converting cluster)
+2. **TREATMENT_BLOG** with 150-300 vol AND commercial-modifier query (e.g., "…in India", "…online", "cost of…") → high-priority
+3. **ILLNESS_BLOG** with search_volume_mo ≥ 500 (raised from 300 — bias toward volume)
+4. **COMPARISON_BLOG** with search_volume_mo ≥ 200 (e.g., "CBT vs DBT", "SSRI vs SNRI") — high booking-intent
+5. **BLOG_ARTICLE** with search_volume_mo ≥ 500 (raised from 300)
+6. BLOG_ARTICLE with 200-500 vol AND explicit action verb ("how to…", "signs of…") — mid-priority
+7. Lower volume — hold for future
+
+**Rejection filter (do NOT brief these):**
+- BLOG_ARTICLE with pure informational intent AND zero historical booking-intent from the cluster (per T19 PAGE-CONVERSION-MAP.md ⚫ Dead Weight tier)
+- Topics fully covered by an existing high-ranking page (Step 3a redirects to refresh)
+
+**Volume threshold rationale:** older cutoffs (200/300) allowed thin-vol topics to enter the queue, which then produced short briefs that failed §5 word-count on ship. Raising thresholds concentrates authoring effort on topics that justify 1,200+ word coverage.
+
+Take the top **20 highest-priority opportunities this week** (unchanged cap).
+
+**FLOOR (added 2026-07-10, Kushal-directed): create a MINIMUM of 12 briefs per weekly run** unless the filtered queue is genuinely exhausted. Recent runs produced only 5/week while the 20-pages/week live target requires T9 to never starve (runway rule: keep ≥15 unshipped briefs in tracking-db at all times — T16 now monitors this). If you create fewer than 12, the run log MUST state exactly why (e.g., "queue exhausted after filters: only 9 passed"). Quality bars are unchanged — the floor is met by processing MORE opportunities, never by lowering §5 pre-check standards.
+
+> **Cap:** 20 new-content briefs per week (config.json `max_new_content_per_week=20`). Refreshes have a separate 20/week cap — see Task 3. Combined ship target: 20 pages/week live via T9 (Kushal 2026-07-03).
+
+Check `~/Seo-workflow-mindtalk/mindtalk-setup/tracking-db.json` for any entries with `type: "NEW_CONTENT"`
+created this week — don't exceed 20 new briefs per week.
+
+### Step 3 — Intent validation for each opportunity
+
+For each selected opportunity, open the browser and:
+
+#### 3a. Intent match check (GSC_QUERY_MINING source only)
+If the opportunity came from GSC query mining, it has a `triggering_page` field.
+Open that triggering page on mindtalk.in.
+
+Ask: Does the keyword intent match this page's content?
+- YES → The keyword is already served by this page but imperfectly. 
+         This means the page needs a content refresh, NOT a new page.
+         → Change status to "REDIRECT_TO_REFRESH" in new-content-opportunities.json
+         → Add to ~/Seo-workflow-mindtalk/mindtalk-setup/flagged-drops.json for Task 2 to pick up
+         → Skip to next opportunity
+
+- NO → Intent clearly differs from the triggering page → confirm as new content needed
+       → Proceed to Step 3b
+
+#### 3b. SERP outline research
+Search Google.co.in for the keyword.
+
+Record:
+- Top 5 ranking URLs
+- Classify each: DIRECT_COMPETITOR / HIGH_DA / FORUM / VIDEO
+- For the top 3 ranking pages (any type), visit each page and extract:
+  - All H2 and H3 headings
+  - Whether it has: FAQ section, data/statistics, expert quotes, video
+  - Word count (approximate)
+  - Schema type if visible
+
+Compile a MASTER OUTLINE of all headings seen across the top 3 pages.
+Mark which headings appear in 2+ of the top 3 pages (must-have sections).
+Mark which headings appear in only 1 page (optional/differentiator sections).
+
+Check the People Also Ask questions for this keyword — record all visible ones.
+
+### Step 4 — Classify final content type
+
+Based on research, confirm the content type:
+
+**→ BLOG_ARTICLE** if:
+- Keyword is informational ("what is", "signs of", "how to", "guide to",
+  "coping with", "managing", "dealing with", "support for")
+- OR keyword is a comparison query
+- OR keyword supports an existing illness/treatment page but isn't a service itself
+- File path: src/content/blogs/[slug].mdx
+- Schema: Article, FAQPage
+
+**→ SPOKE_PAGE under /treatments/** if:
+- Keyword is "[specific therapy] for [condition]" (e.g. "CBT for OCD")
+- AND the therapy-condition combination isn't already covered
+- File path: src/content/treatments/[therapy]-for-[condition].mdx
+- Schema: MedicalTherapy, FAQPage
+
+**→ SPOKE_PAGE under /illnesses/** if:
+- Keyword is a specific mental health condition variant or subtype not yet covered
+- (Rare — most conditions are already covered)
+- File path: src/content/illnesses/[slug].mdx
+- Schema: MedicalCondition, FAQPage, MedicalWebPage
+
+### Step 5 — Generate new content brief
+
+Write brief to `~/Seo-workflow-mindtalk/mindtalk-setup/briefs/NEW-[slug]-brief.md`
+
+Use this structure:
+
+```markdown
+# New Content Brief: [Proposed Title]
+**Date:** [TODAY]
+**Type:** NEW PAGE (not a refresh)
+**Keyword:** [primary keyword]
+**Search Volume:** [N]/month
+**Source:** [GSC_QUERY_MINING / SECONDARY_KEYWORD]
+**Suggested URL:** /[path_prefix]/[slug]
+**Suggested File:** src/content/[path_prefix]/[slug].mdx
+**Content Type:** [BLOG_ARTICLE / TREATMENT_BLOG / ILLNESS_BLOG / COMPARISON_BLOG]
+
+---
+
+## Proposed Frontmatter
+
+```yaml
+---
+title: "[Proposed title]"
+seo:
+  metaTitle: "[Max 65 chars, must include Mindtalk]"
+  metaDescription: "[130-160 char description]"
+  primaryKeywords: "[comma-separated primary keywords]"
+  relatedKeywords: "[comma-separated related keywords]"
+slug: "[slug]"
+category: "[blogs/treatments/illnesses]"
+lastReviewed: "[TODAY]"
+author: "Mindtalk Clinical Team"
+---
+```
+
+## Why This Page?
+
+[2-3 sentences explaining the content gap — what users are searching for,
+why our current site doesn't answer it, why this warrants a standalone page]
+
+**Triggering insight:** [What in GSC data / keyword research flagged this]
+**Parent relationship:** [Which existing page this supports — hub/spoke]
+
+## Internal Link From Existing Pages
+
+After publishing, add a link to this new page from:
+- [/existing/url] → anchor text: "[suggested anchor]"
+- [/existing/url] → anchor text: "[suggested anchor]"
+
+---
+
+## Page Structure (Content Outline)
+
+### H1
+[Suggested H1 — must be the primary keyword in natural form]
+
+### Opening paragraph
+[Direction: answer the primary question directly in 2-3 sentences. 
+Self-contained, quotable. No filler.]
+
+### [H2 — required section from competitor research, present in 2+ sites]
+[Direction: what to cover]
+[PAA match: which PAA question this answers]
+Keywords to include: [list]
+
+### [H2 — required section]
+[Direction]
+
+### [H2 — required section]
+
+### [H2 — optional differentiator section — if writer has capacity]
+[Direction: what makes us unique here — Mindtalk's approach]
+
+### Frequently Asked Questions
+**[PAA question 1]?**
+Direction: [answer direction]
+
+**[PAA question 2]?**
+Direction: [answer direction]
+
+**[PAA question 3]?**
+Direction: [answer direction]
+
+### Why Choose Mindtalk?
+[Standard closing section — brief, links to /contact and /centers]
+
+---
+
+## Content Rules (must follow)
+- Every paragraph: 2-5 sentences, self-contained
+- H2/H3 headings are actual user questions
+- First paragraph directly answers the primary question
+- Include specific data: percentages, age ranges, timeframes
+- Named Mindtalk professionals can be mentioned naturally
+- Target length: 900-1200 words total
+- CTAs: link to /contact at top (after opening para) and bottom
+- Title ≤ 65 chars, must include "Mindtalk"
+- Description ≤ 160 chars
+
+## Competitor Reference Pages
+[Top 3 URLs researched, with 1-line note on what they cover]
+1. [URL] — [note]
+2. [URL] — [note]
+3. [URL] — [note]
+
+## Clinical Input Requested
+Open-ended questions for the Mindtalk clinical team (e.g. Sandesh Cadabam and senior practitioners) to optionally weigh in on. The brief author should generate 3-5 questions specific to this page's topic — areas where lived clinical perspective would strengthen the page beyond what SERP research alone can provide.
+
+Examples of useful question shapes (the brief author should write topic-specific versions, not generic ones):
+1. What's the most common misconception people have about [topic] when they first present in your clinic?
+2. In your practice, what's a signal that distinguishes [topic] from [adjacent condition or treatment]?
+3. Is there a specific point in the [treatment / condition arc] where outcomes typically diverge — and what changes them?
+4. What's a question patients almost always ask about [topic] that isn't well-answered online?
+5. What would you tell a person searching this query for the first time, in two sentences?
+
+The clinical team's responses become content that no competitor can replicate — direct quotes preferred where the practitioner is comfortable being named. Otherwise, paraphrase as "in Mindtalk's clinical experience" framing. Even one or two answered questions per brief materially strengthens the page's E-E-A-T signal.
+
+## SEO Notes
+- Primary keyword must appear in: title, H1, first paragraph, at least 2 H2/H3s
+- Secondary keywords to weave in: [list from SERP research]
+- Schema to use: [schema string]
+- Internal links to add: [list]
+```
+
+### Step 5.5 — Quality pre-check (added 2026-07-03 to fix T9 shipping-velocity bottleneck)
+
+Before writing tracking-db entries, run the same §5 quality gate the T9 Verifier will apply. This catches metaDesc-too-long / word-count-too-low / FAQ-too-few briefs at generation time so they never enter the T9 queue as VETO-bound rows.
+
+**Checks that must all pass:**
+
+- [ ] **metaDescription ≤ 160 chars** (Verifier §5 hard cap). Grep the brief; if `metaDescription:` line body >160 chars → regenerate with instruction: "Rewrite metaDescription in ≤155 chars; front-load primary keyword."
+- [ ] **Estimated body word count ≥ 1,200** (Verifier §5 hard cap). If the brief's word-count target is <1,200, revise the brief structure: add H2 sections, expand FAQs, or upgrade the topic scope.
+- [ ] **FAQ count ≥ 5** (Verifier §5 hard cap). If the brief only specifies 3-4 FAQs, add 1-2 more based on PAA/AlsoAsked data.
+- [ ] **metaTitle ≤ 65 chars AND ends with `| Mindtalk`** (Verifier §5). Regenerate if not.
+- [ ] **At least 3 internal-link targets** flagged in the brief (paths like `/illnesses/*`, `/treatments/*`, `/blogs/*`, `/journeys/*`, `/assessments/*`, `/worksheets/*`). Regenerate if <3.
+- [ ] **Primary keyword in title, H1, first paragraph, ≥2 H2/H3** (per existing SEO Notes below). Regenerate if under-density.
+
+**If ANY check fails:** rewrite the failing part of the brief in-place BEFORE writing tracking-db. Log which check failed in `logs/new-content-{TODAY}.txt` for pattern-detection.
+
+**Retry cap:** 2 regeneration attempts per brief. If after 2 attempts the brief still fails, mark opportunity `status: MANUAL_REVIEW_NEEDED` in `new-content-opportunities.json` and Slack-flag it — do NOT quarantine the topic entirely (it's a topic worth targeting; the generation just needs human judgement).
+
+**Why:** T9 auto-ship history shows 100% VETO rate on the past 3 weeks of NEW briefs due to these exact §5 quality bars. This step catches them at source, removes the 7-day VETO cooldown loop, and unlocks T9 shipping velocity from ~0/wk to the design target 7-10/wk.
+
+### Step 6 — Update tracking and opportunities files
+
+In `~/Seo-workflow-mindtalk/mindtalk-setup/new-content-opportunities.json`:
+Update the opportunity status to `"BRIEF_CREATED"` and add `"brief_path"` field.
+
+In `~/Seo-workflow-mindtalk/mindtalk-setup/tracking-db.json`:
+Add a new entry:
+```json
+"NEW-/blogs/[slug]": {
+  "type": "NEW_CONTENT",
+  "url_path": "/blogs/[slug]",
+  "file_path": "src/content/blogs/[slug].mdx",
+  "primary_keyword": "[keyword]",
+  "status": "BRIEF_CREATED",
+  "brief_created_at": "[TODAY]",
+  "brief_path": "briefs/NEW-[slug]-brief.md"
+}
+```
+
+### Step 7 — Weekly new content summary
+
+Append to `~/Seo-workflow-mindtalk/mindtalk-setup/logs/new-content-[WEEK-START].txt`:
+- Keywords selected this week with their type and search volume
+- Running count of new content briefs created this month
+- Any keywords reclassified from new content → content refresh
+
+## Important rules
+
+- Maximum 20 new content briefs per week
+- New content briefs are prefixed with "NEW-" in the filename to distinguish 
+  from refresh briefs
+- Never edit existing MDX files in this task
+- Clinical accuracy matters: for illness/treatment pages, do not suggest 
+  medical claims without direction to cite a source
+- All new blog content must be relevant to people seeking mental health support — 
+  do not suggest off-topic blog ideas
+- If a keyword is better served by refreshing an existing page (intent match), 
+  reclassify it and route to the refresh workflow rather than creating a new page
+
+## Step 8 — Post to Slack
+
+Post a summary to **#seo-workflow-mindtalk** (channel ID: `C0AUAPS4J83`) using `slack_send_message`.
+
+Format:
+
+```
+🔎 *New Content Discovery — [TODAY'S DATE]*
+Site: mindtalk.in
+
+Opportunities found: [N]
+Briefs created this week: [N]/20
+
+[For each new brief:]
+> 🆕 *[Primary Keyword]* — [search volume]/mo
+> Type: [INSIGHTS_BLOG / SPOKE_PAGE]
+> Suggested URL: [/path/slug]
+> Brief: briefs/NEW-[slug]-brief.md
+
+[If any reclassified:]
+> 🔄 Reclassified to refresh: [keyword] → already served by [existing URL]
+
+[If no new opportunities this week:]
+> No new high-priority opportunities found this week.
+```
+
+## Output
+
+When done, tell me:
+- Number of opportunities found by the script
+- Number selected for briefs this week (max 5)
+- For each brief: keyword, type (BLOG/SPOKE), suggested URL, search volume
+- Any keywords reclassified from NEW CONTENT → CONTENT REFRESH
+- Any keywords deprioritised and why
