@@ -1,0 +1,72 @@
+{
+  "amaha.com": {
+    "total_domain_kw": 1310,
+    "kw_count": 50,
+    "top5": [
+      "therapist",
+      "claustrophobia",
+      "therapist near me",
+      "therapy near me",
+      "hallucinations"
+    ]
+  },
+  "yourdost.com": {
+    "total_domain_kw": 259,
+    "kw_count": 50,
+    "top5": [
+      "counselling",
+      "yourdost",
+      "belongingness meaning",
+      "bhu counselling",
+      "icall"
+    ]
+  },
+  "betterhelp.com": {
+    "total_domain_kw": 16903,
+    "kw_count": 50,
+    "top5": [
+      "attraction",
+      "love quotes in love",
+      "quotes about and love",
+      "quotes of love",
+      "quotation of friendship"
+    ]
+  },
+  "manastha.com": {
+    "total_domain_kw": 145,
+    "kw_count": 50,
+    "top5": [
+      "therapist",
+      "free therapist online",
+      "therapy online free",
+      "therapist online",
+      "therapy online"
+    ]
+  },
+  "mfine.com": {
+    "total_domain_kw": 16873,
+    "kw_count": 50,
+    "top5": [
+      "dermatologist near me",
+      "dermatologist near near me",
+      "near me dermatologist",
+      "bones do not have a role in",
+      "aig hospitals"
+    ]
+  },
+  "mindtalk.in": {
+    "total_domain_kw": 2250,
+    "kw_count": 50,
+    "top5": [
+      "adhd",
+      "adhd disease",
+      "attention deficit adhd",
+      "hyperactivity disorder",
+      "anxiety meaning in hindi"
+    ]
+  },
+  "_meta": {
+    "date": "2026-07-23",
+    "total_cost": 0.108
+  }
+}

@@ -28,6 +28,7 @@
 | W21 | /treatments/talk-therapy-for-depression | talk therapy for depression | NEW_indexation + AP3_optionB | 2026-06-29 | T9 auto-ship via AP3 Option B (commit `b3b4f46`); merged to main 06-29. **LIVE.** Reviewer dr-arun-kumar. | (a) indexed within 4-6wk; (b) impressing on "talk therapy for depression" within 21d (baseline 68 impr/90d, pos 11.7); (c) per-page clinical review by 2026-07-13 | 2026-07-13 + 2026-08-10 | 🟢 **LIVE** 2026-06-29. Option B clinical review window open. ⏳ **pending_evaluation (2026-07-13) — 14d clinical review fires today** (task `mindtalk-watch-w18-w21-clinical-review-2026-07-13`). |
 
 | W22 | /blogs/burnout-treatment | burnout treatment | investigate_regression (CRITICAL) | 2026-06-29 | Weekly summary Jun 20-26 flagged pos 6.8→85.9 (-79.1). Page published 2026-05-18; 4 sibling pages exist. AP5 check ran 2026-06-30 (Executor T11). | AP5 spike check + cannibalization diagnostic completed 2026-06-30. | ✅ **CLOSED 2026-06-30 (Executor T11 + GSC validator confirmed) — 🟡 QDF CONFIRMED + TRACKER ERROR.** Peak pos 6.8 at day 26-32 post-publish = textbook QDF window; collapse at day 33-39 = standard QDF decay. GSC validator 2026-06-30 additionally confirmed the CRITICAL was a DataForSEO tracker error: GSC impressions 4→5 (+25%, IMPROVING). Cannibalization (guide-to-burnout-syndrome 184KB, pos 7.1) is pre-existing, not the cause. **NO content action.** DO NOT add to #18 recovery batch. Monitor organic floor mid-July; low-priority differentiation sprint candidate for Q3 2026. Log: `memory/experiments/investigation-burnout-treatment-2026-06-30.md` |
+| W23 | /treatments/life-coach-therapy | what is a life coach | CTR_metarewrite (meta_ctr_update) | 2026-07-23 | T11 LIFE-COACH-CTR-01: P11 title ("What Is a Life Coach? 7 Types") + keyword-forward desc + FAQ H3 upgrade. **Corrected commit `6d2fe76`** (original commit 675dc26 was correct in git history but got dropped from the tree during a later FUSE-recovery commit — Vercel showed READY on the wrong tree; re-applied via GitHub Git Data API, verified live via curl). AP6 FUSE fallback — Vercel prod 200 as AP6 gate (precedent T9 2026-07-14), but tree-level verification now required in addition (see lesson below). | CTR 0.02%→≥0.3% (+65 clicks/wk). 21,757 impr/wk baseline. P11 number-add pattern (confirmed Sprint C winner). | 2026-08-06 | 🟢 open — confirmed live 2026-07-23 (title+desc verified via curl) |
 
 ## 2026-06-29 — Strategist daily stamp (Monday) ⚠ STRATEGIST FLAG
 
@@ -735,3 +736,56 @@ Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_
 - **07-24:** Assessments cluster Day-14; W18/W19/W20/W21 Day-28 AEO check.
 - **07-29:** W12/W13/W14 final 42-day reads.
 - **08-10:** W18/W19/W20/W21 final evaluations → AP3-B principle write if 3+ GREEN.
+
+## 2026-07-21 — Strategist daily stamp (Tuesday 8 PM IST)
+
+**Jun-9 cohort Day-42 finals evaluated today (T4 observation pipeline):**
+- /blogs/anger-management-therapy → ✅ RESOLVED (GSC pos 13.5 primary kw "anger management therapy")
+- /blogs/dbt-skills-modules → ✅ RESOLVED (GSC pos 9.6 "dbt skills")
+- /blogs/people-pleasing-how-to-stop → ✅ RESOLVED (GSC avg pos 10.8, long-tail cluster)
+- /blogs/relationship-problems-signs-causes-solutions → ✅ RESOLVED (DataForSEO pos 9 confirmed + GSC pos 10.3)
+- /blogs/what-is-somatic-therapy → ✅ RESOLVED (GSC pos 3.3 "somatic therapy" — TOP 3, exceptional)
+- /blogs/codependency-signs-causes-treatment → 🔄 NEEDS_REFRESH (not ranking English head term at Day 42; top query = Tamil variant; CODEPENDENCY-REPROCESS-01 added to BACKLOG)
+
+**83% establishment rate (5/6)** — validates T9 auto-ship content quality. All 6 URLs unlocked from observation pipeline.
+
+**emdr-for-anxiety observation window corrected:** obs_end was 07-21 (authored_at + 21d, data error). Corrected to 08-14 (published_at 07-03 + 42d). Day-21 midpoint due 07-24.
+
+**No formal WATCH.md entry changes today.** W12-W14 open (final verdict ~07-29). W18-W21 open (Day-42 final 08-10). W11 ⏸ deferred.
+
+**Updated upcoming checks:**
+- **07-24:** emdr-for-anxiety Day-21 midpoint (corrected); STUB-PILOT Batch 1 fires (Mac Mini).
+- **07-28:** Jul-7 cohort Day-21 midpoints (6 URLs).
+- **07-29:** W12/W13/W14 final 42-day reads.
+- **07-31:** Assessment cohort Day-21 midpoints (62 URLs).
+- **08-10:** W18/W19/W20/W21 final evaluations → AP3-B principle write if 3+ GREEN.
+
+## 2026-07-23 — Strategist daily stamp (Thursday 8 PM IST)
+
+**Rank signals today:**
+- Scan PARTIAL (93/290, 32%) — DataForSEO slow (38s/kw); checkpoint saved.
+- 6 AP8-noise quarantined (pos→100 batch; no real drops).
+- 1 MODERATE: /blogs/anxiety-medication-vs-therapy pos 2→6 — queued as ANXI-MED-VALIDATE-01, blocked on GSC.
+- 0 confirmed drops (confirmed-drops.json empty).
+
+**GSC:** FAILED (disk space, GSC-INFRA-01, 3rd day). No validation possible.
+
+**New watch flags:**
+- **ANXI-MED-VALIDATE-01 (informal)** — /blogs/anxiety-medication-vs-therapy pos 2→6. Not a formal 42d observation window; this is a validate-first item. T2 will classify on next successful GSC run. No WATCH row opened; tracked in BACKLOG as ANXI-MED-VALIDATE-01.
+
+**STRESS-MGMT-WATCH-01 reschedule:**
+- Was due 07-21 (2 days overdue). Blocked by GSC-INFRA-01 disk space (pip install fails in Cowork session sandbox).
+- New gate: **"First available T2 run after GSC-INFRA-01 resolves and disk space is freed."** No fixed re-date set — fires automatically on next successful GSC validation run.
+- BACKLOG item STRESS-MGMT-WATCH-01 remains open with GSC-INFRA-01 as the blocking dependency.
+
+**Step 10 apply-pass:** NO-OP. t11-flag-human-slack-fallback + t3-refresh-cap-separate-count — Apply on 07-26. Not eligible today.
+
+**Updated upcoming checks:**
+- **07-24 (+1d):** emdr-for-anxiety Day-21 midpoint (T4); STUB-PILOT Batch 1 fires (Mac Mini); W18/W19/W20/W21 Day-28 AEO check; Assessment cluster Day-14; #18 YMYL batch eligible (7d Core Update settle)
+- **07-26 (+3d):** t11+t3 Meta-Learner proposals apply (Strategist Step 10)
+- **07-27 (+4d):** W28 professional input expires — depression, anxiety, alzheimers, counselling-therapy, narrative-therapy, ocd-thoughts released to refresh queue
+- **07-28 (+5d):** Jul-7 blog cohort Day-21 midpoints (5 URLs)
+- **07-29 (+6d):** W12/W13/W14 final 42-day reads; /blogs/domineering-vs-dominating Day-21
+- **07-31 (+8d):** Assessment cluster Day-21 midpoints (77 URLs); STUB-PILOT Batch 2 (Mac Mini)
+- **08-10 (+18d):** W18/W19/W20/W21 Day-42 final evaluations → AP3-B principle write if 3+ GREEN
+- **08-14 (+22d):** /treatments/emdr-for-anxiety Day-42 final eval

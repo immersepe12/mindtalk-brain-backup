@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-23",
+  "prev_date": "2026-07-16",
+  "kw_universe_changes": {
+    "amaha.com": {
+      "prev": 1318,
+      "now": 1310,
+      "delta": -8
+    },
+    "yourdost.com": {
+      "prev": 277,
+      "now": 259,
+      "delta": -18
+    },
+    "betterhelp.com": {
+      "prev": 16538,
+      "now": 16903,
+      "delta": 365
+    },
+    "manastha.com": {
+      "prev": 144,
+      "now": 145,
+      "delta": 1
+    },
+    "mfine.com": {
+      "prev": 16498,
+      "now": 16873,
+      "delta": 375
+    },
+    "mindtalk.in": {
+      "prev": 2100,
+      "now": 2250,
+      "delta": 150
+    }
+  },
+  "notable_mindtalk_concern": "psychiatrist closest to me DROPPED from top-50 (was pos=2 on 110K vol last week)"
+}
