@@ -230,3 +230,22 @@ If the Verifier ever approves >95% of proposed actions, that's a smell — eithe
 - Beyond: trending toward 85-90% approve if Strategist + Executor have absorbed the verifier's feedback into their own filters
 
 A 100% approval rate means the Verifier isn't doing its job. A <50% approval rate means the upstream is producing too much garbage and needs fixing.
+
+---
+
+## Disambiguation Notes
+
+### §9 — 7-day window boundary formula (CONFIRMED 2026-07-24)
+
+**Correct formula:** `published_at > window_start` (i.e., `strictly greater than`)
+
+Where `window_start = today - 7 days` (same calendar date, 7 days prior).
+
+**What this means:**
+- A page published on day D **exits** the 7-day window ON day D+7 (it is NOT counted on D+7 itself)
+- Example: page published 2026-07-17 → exits window on 2026-07-24 → on 07-24, `published_at (07-17) > window_start (07-17)` is FALSE → page is NOT in window → does NOT count toward cap
+- Authoritative source: `logs/auto-ship-2026-07-23.txt` — explicitly states "07-17 page rolled off 07-24 → 5/6 (1 slot open)"
+
+**Common error:** Using `>=` instead of `>` causes pages to be counted on their rolloff day, giving 6/6 cap when the correct count is 5/6.
+
+This was the cause of a Verifier VETO override on 2026-07-23 and again on 2026-07-24. If in doubt, read the most recent T9 run log — it states the window count explicitly.

@@ -29,6 +29,11 @@
 
 | W22 | /blogs/burnout-treatment | burnout treatment | investigate_regression (CRITICAL) | 2026-06-29 | Weekly summary Jun 20-26 flagged pos 6.8→85.9 (-79.1). Page published 2026-05-18; 4 sibling pages exist. AP5 check ran 2026-06-30 (Executor T11). | AP5 spike check + cannibalization diagnostic completed 2026-06-30. | ✅ **CLOSED 2026-06-30 (Executor T11 + GSC validator confirmed) — 🟡 QDF CONFIRMED + TRACKER ERROR.** Peak pos 6.8 at day 26-32 post-publish = textbook QDF window; collapse at day 33-39 = standard QDF decay. GSC validator 2026-06-30 additionally confirmed the CRITICAL was a DataForSEO tracker error: GSC impressions 4→5 (+25%, IMPROVING). Cannibalization (guide-to-burnout-syndrome 184KB, pos 7.1) is pre-existing, not the cause. **NO content action.** DO NOT add to #18 recovery batch. Monitor organic floor mid-July; low-priority differentiation sprint candidate for Q3 2026. Log: `memory/experiments/investigation-burnout-treatment-2026-06-30.md` |
 | W23 | /treatments/life-coach-therapy | what is a life coach | CTR_metarewrite (meta_ctr_update) | 2026-07-23 | T11 LIFE-COACH-CTR-01: P11 title ("What Is a Life Coach? 7 Types") + keyword-forward desc + FAQ H3 upgrade. **Corrected commit `6d2fe76`** (original commit 675dc26 was correct in git history but got dropped from the tree during a later FUSE-recovery commit — Vercel showed READY on the wrong tree; re-applied via GitHub Git Data API, verified live via curl). AP6 FUSE fallback — Vercel prod 200 as AP6 gate (precedent T9 2026-07-14), but tree-level verification now required in addition (see lesson below). | CTR 0.02%→≥0.3% (+65 clicks/wk). 21,757 impr/wk baseline. P11 number-add pattern (confirmed Sprint C winner). | 2026-08-06 | 🟢 open — confirmed live 2026-07-23 (title+desc verified via curl) |
+| W24 | /mindful-minutes/panic-attack-grounding | 5-4-3-2-1 grounding technique | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship — new `type: item` mindful-minutes page (commit `f8a7429`, merged to main same day). Same push also added an `isItem`/AudioObject branch to `mindful-minutes/[slug]/page.tsx` (new code, mirrors the existing worksheets pattern). Reviewer abhimanyu-chandak. AP6 FUSE + disk-full (ENOSPC) fallback — local build/npm install blocked by known sandbox infra limits, so Vercel prod 200 is the AP6 gate; additionally verified `<title>`, `AudioObject` schema string, and the new "Listen in the Mindtalk app" CTA copy all present via curl (tree-level content check, not just status code). | Indexed within 4-6wk; impressing on "5-4-3-2-1 grounding technique" / "panic attack grounding" within 14d. | 2026-08-07 (14d) | 🟢 **LIVE** 2026-07-24 — HTTP 200 + content verified via curl same day. |
+| W25 | /mindful-minutes/pre-sleep-body-scan | body scan for sleep | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer dr-rayani-m-dessa. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "body scan for sleep" / "pre-sleep body scan" within 14d. | 2026-08-07 (14d) | 🟢 **LIVE** 2026-07-24 — HTTP 200 confirmed via curl same day. |
+| W26 | /mindful-minutes/4-7-8-breathing | 4-7-8 breathing | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "4-7-8 breathing" within 14d. | 2026-08-07 (14d) | 🟢 **LIVE** 2026-07-24 — HTTP 200 + title tag confirmed via curl same day. |
+| W27 | /mindful-minutes/loving-kindness-meditation | loving-kindness meditation | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Parent category mapped to "Emotional Processing & Resilience" (app-side inventory category — no matching mindtalk.in category page exists yet, so internal body links point to the live `/mindful-minutes/anxiety` page instead; CTA still resolves correctly to the real app category). Same AP6 FUSE/disk fallback as W24. | Indexed within 4-6wk; impressing on "loving-kindness meditation" / "metta meditation" within 14d. | 2026-08-07 (14d) | 🟢 **LIVE** 2026-07-24 — HTTP 200 confirmed via curl same day. |
+| W28 | /mindful-minutes/morning-energy-activation | morning energy activation | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "morning energy activation" within 14d. | 2026-08-07 (14d) | 🟢 **LIVE** 2026-07-24 — HTTP 200 + title tag confirmed via curl same day. |
 
 ## 2026-06-29 — Strategist daily stamp (Monday) ⚠ STRATEGIST FLAG
 
@@ -789,3 +794,57 @@ Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_
 - **07-31 (+8d):** Assessment cluster Day-21 midpoints (77 URLs); STUB-PILOT Batch 2 (Mac Mini)
 - **08-10 (+18d):** W18/W19/W20/W21 Day-42 final evaluations → AP3-B principle write if 3+ GREEN
 - **08-14 (+22d):** /treatments/emdr-for-anxiety Day-42 final eval
+
+## W29 — /blogs/yoga-for-anxiety (CONFIRMED CTR_DROP 2026-07-24)
+
+| Field | Value |
+|---|---|
+| URL | /blogs/yoga-for-anxiety |
+| Signal | GSC-confirmed CTR_DROP (re-drop post Sprint C 2026-06-09) |
+| Pattern | Impressions +4.6%, clicks −33% = title/meta mismatch |
+| Top drops | "anxiety and yoga" pos 19→52; "does yoga help" pos 20.2→34.6; "anxiety yoga poses" pos 7→20 |
+| MDX | 1,818 words, 12 H2, 22 H3, 11× primary keyword |
+| Action | Refresh brief (briefs/yoga-for-anxiety-brief.md) — fix title/meta CTR (P11: add number) + FAQ schema + PAA match for "does yoga help anxiety" |
+| Ship date | ~2026-07-25 (T11 fires when /blogs/ slot opens) |
+| Watch start | 2026-07-25 |
+| Check date | **2026-08-07** (14d from ship) |
+| Success criteria | CTR improves ≥+0.3pp AND clicks recover ≥+15/wk |
+| AP4 clear | ✅ (Sprint C 2026-06-09 = 45d ago) |
+| AP3 | N/A (non-YMYL) |
+| Status | 🟡 PENDING_SHIP |
+
+---
+
+## 2026-07-24 — Strategist daily stamp (Friday 8 PM IST)
+
+**Rank signals today:**
+- Full scan (290/290) — clean DataForSEO run (normal speed).
+- 4 new MODERATEs under AP5 spike-check: dual-diagnosis pos 5→10, anxiety-symptoms-in-women pos 1→7, sleep-talking pos 3→9, sleep-elderly pos 5→9.
+- 0 CRITICAL / 0 MAJOR confirmed drops.
+
+**GSC:** ✅ LIVE today (first successful run in 4 days). GSC-INFRA-01 resolved via /tmp/pylibs_gsc workaround. yoga-for-anxiety CTR_DROP confirmed. STRESS-MGMT-WATCH-01 NOW UNBLOCKED.
+
+**Observation check:**
+- **emdr-for-anxiety Day-21 STABLE_IMPROVING** — pos 64.4→4.2 WoW. AP3-B treatment page performing above expectation at Day-21 midpoint. Day-42 final eval: 2026-08-14. No action required.
+
+**New watch entries:**
+- **W29 opened** — /blogs/yoga-for-anxiety CONFIRMED CTR_DROP. Brief ships ~07-25. Check: 08-07.
+
+**Competitive + AI signals (T17 weekly update):**
+- Mindtalk.in +150 KW (strongest weekly gain yet; Amaha −28 KW 5th week).
+- **T17-10 ALERT**: "psychiatrist closest to me" (110K vol, MT was #2) ABSENT from DataForSEO top-50 this week. AP5 check via T2 next run — if real, CRITICAL escalation.
+- **T17-11 DUAL LOSS**: "cadabams mental health" citation lost from BOTH Perplexity AND Google AIO simultaneously. Non-random signal. Investigate source pages.
+- **T17-12 BREAKTHROUGH**: Perplexity now cites MT for Q1+Q2+Q3 commercial queries (first-ever). DO NOT modify cited pages until sources identified.
+
+**Step 10 apply-pass:** NO-OP. t5-floor-12, t11-slack-fallback, t3-refresh-cap — Apply on 07-26. Not eligible today.
+
+**Updated upcoming checks:**
+- **07-25:** T11 ships yoga-for-anxiety brief; T17-7-REVIEW human gate (24h, AEO sprint prompt for /Doctors)
+- **07-26 (+2d):** t5, t11, t3 Meta-Learner proposals apply (Strategist Step 10)
+- **07-27 (+3d):** W28 professional input expires — depression, anxiety, alzheimers, counselling-therapy, narrative-therapy, ocd-thoughts released
+- **07-28 (+4d):** T3 generates W28 YMYL refresh briefs; Jul-7 blog cohort Day-21 midpoints (5 URLs)
+- **07-29 (+5d):** W12/W13/W14 final 42-day reads
+- **07-31 (+7d):** Assessment cluster Day-21 midpoints (77 URLs); STUB-PILOT Batch 2 (Mac Mini); DRY-BEGGING-CTR-01 + EMOTION-CONTROL-REFRESH-01 retry (verifier veto expires)
+- **08-07 (+14d):** W29 yoga-for-anxiety check; W24-W28 mindful-minutes check
+- **08-10 (+17d):** W18/W19/W20/W21 Day-42 final evaluations → AP3-B principle write if 3+ GREEN
+- **08-14 (+21d):** /treatments/emdr-for-anxiety Day-42 final eval
