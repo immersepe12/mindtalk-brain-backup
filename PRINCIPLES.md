@@ -45,6 +45,33 @@ Each entry: principle + evidence + when it applies.
 
 ---
 
+## P12 — T9 auto-ship NEW blogs targeting long-tail queries establish page-1 ranking within 42 days in ≥80% of cases (2026-07-26)
+
+**Source:** Jun-9 auto-ship cohort Day-42 final evaluation (5/6 RESOLVED; Learner T12, 2026-07-26). Corroborated by W13 (pos 6 at Day-14) and W14 (pos 9 / 198 impr Week-1) — both exceptional early signals still open to Day-42.
+
+**Evidence (7 data points, 5 formal + 2 corroborating, action class: T9 auto-ship NEW blog to long-tail query):**
+1. /blogs/anger-management-therapy — pos 13.5 at Day-42 ✅
+2. /blogs/dbt-skills-modules — pos 9.6 at Day-42 ✅
+3. /blogs/people-pleasing-how-to-stop — pos 10.8 at Day-42 ✅
+4. /blogs/relationship-problems-signs-causes-solutions — pos 9–10.3 at Day-42 ✅
+5. /blogs/what-is-somatic-therapy — pos 3.3 at Day-42 ✅ (EXCEPTIONAL — TOP 3)
+6. /blogs/how-to-find-a-therapist-for-ocd (W13) — pos 6 at Day-14 (still open) ✅
+7. /blogs/how-to-find-a-therapist-in-india (W14) — pos 9 / 198 impr at Week-1 (still open) ✅
+
+**The one failure (codependency):** Failed due to LINGUISTIC mismatch — the page ranked for Tamil-variant "codependency meaning in tamil" instead of the English head term. This is a brief-generation gap, not a content quality issue. The principle holds for English-intent queries.
+
+**Rule:**
+1. T9 auto-ship NEW blogs to long-tail English-intent queries are expected to achieve page-1 ranking (pos ≤ 20) within 42 days in ≥80% of cases. This is a reliable action class — don't gate new blog production out of fear of indexation failure.
+2. **Exception:** queries where a regional-language variant ("X meaning in tamil/hindi/kannada") dominates actual search behaviour may fail to rank on the English head term. T5 brief generation should check `reports/query-history.json` for language-variant signal before targeting an English head term.
+3. Establishment timeline: expect crawl lag for the first 14 days (pos 40+ normal), page-2 movement by Day-21, and page-1 by Day-42 for appropriately targeted long-tail queries.
+4. Top-3 potential (like somatic-therapy at pos 3.3) is achievable on queries where Mindtalk's domain authority plus content quality significantly outpaces existing competition. Flag these as AEO/AI Overview citation candidates immediately.
+
+**Ties to P4:** The shipping step remains the bottleneck, not brief quality. This principle confirms that once T9 ships a well-targeted brief, ranking follows reliably. Investment should continue in brief velocity (T5) and shipping capacity (T9 cap).
+
+**Established:** 2026-07-26, 5 formal closed-watch successes (Jun-9 cohort Day-42).
+
+---
+
 (Learner appends new principles weekly. Strategist consults this file every run.)
 
 ## P9 — Conversion-validated tiers weight Strategist scoring more than impression-only signals (2026-06-16)

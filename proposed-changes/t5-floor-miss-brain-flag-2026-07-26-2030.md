@@ -1,0 +1,57 @@
+# Proposal: T5 Step 7 — Write BRAIN.md flag on floor miss (Slack-independent escalation)
+**Proposed:** 2026-07-26T20:30:00+05:30
+**Source:** task13-meta-learner-2026-07-26
+**Apply on:** 2026-08-02T20:00:00+05:30
+**Status:** preview
+
+## Issue detected
+
+**Log evidence:**
+1. `logs/new-content-2026-07-20.txt` — T5 ran with a **FLOOR MISS: 4 of 12 minimum**. The run log documented the miss. T5 spec requires a Slack post for floor misses (Step 8: "this line must also be included in the Slack post"). But:
+   - Recurring ERR_FAILED pattern on Slack delivery is confirmed across multiple tasks (T11: 07-14, 07-21, 07-23; the t11-flag-human-slack-fallback proposal applies tonight to address T11's case).
+   - T5 has no fallback for Slack failure. If T5's floor-miss Slack post fails (ERR_FAILED), the floor miss is invisible to the system.
+   - T5 does NOT write to BRAIN.md or BACKLOG.md when the floor is missed. Strategist reads BRAIN.md and BACKLOG.md on every daily run — NOT T5 run logs.
+2. **Pipeline starvation risk:** T5 missed the floor on 07-20 (4 briefs). T16 checks brief runway (count of `BRIEF_CREATED` in tracking-db — flags below 15). But a floor miss on Monday doesn't drop the runway count immediately (existing unshipped briefs absorb the gap). By the time runway drops below 15 (T16's threshold), T9 may already have been starved for 1-2 weeks. The root cause (T5 floor miss) is invisible to Strategist until the downstream symptom (low runway) appears.
+3. **No BRAIN.md write in T5 for floor miss:** confirmed by reading `cowork-tasks/task5-new-content-discovery.md` — Step 7 writes only to the run log and Step 8 posts Slack. Neither writes to BRAIN.md.
+
+**Risk of not fixing:** T5 misses floor → Slack fails (ERR_FAILED) → Strategist runs Mon–Sun without knowing T5 underperformed → T9 starves 1-2 weeks later → T16 fires "brief runway low" → Strategist investigates but root cause is buried in a T5 run log from 2 weeks ago.
+
+## Proposed change
+**File to edit:** `cowork-tasks/task5-new-content-discovery.md`
+**Edit type:** line-edit (add BRAIN.md write condition to Step 7 summary block)
+
+### Before
+```
+- NEVER write `5/5 quota` or any `N/5` denominator in any log or Slack message. The cap is 20. The floor is 12. Report as `N/20 cap (floor: 12)`.
+```
+
+### After
+```
+- NEVER write `5/5 quota` or any `N/5` denominator in any log or Slack message. The cap is 20. The floor is 12. Report as `N/20 cap (floor: 12)`.
+- **BRAIN.md floor-miss flag (Slack-independent):** If briefs created this run is < 12, append the following to `brain/BRAIN.md` under the next Strategist-readable section (add under the most recent `## [date] — Strategist daily stamp` block, or prepend to `brain/BRAIN.md` if that section doesn't exist yet):
+  ```
+  ⚠️ T5 FLOOR MISS {TODAY}: {N}/12 briefs created. Brief runway may deplete within {N_WEEKS} weeks if this recurs. Check brief-runway count in tracking-db.json and inspect new-content-opportunities.json age. T5 run log: logs/new-content-{TODAY}.txt.
+  ```
+  This write happens AFTER the Slack step (Step 8) regardless of whether Slack delivery succeeded. Strategist's next daily run (Mon–Sat 8 PM) will see this flag in BRAIN.md and can act on it (e.g., trigger a live T5 re-run on the Mac Mini, or lower the discovery threshold temporarily).
+```
+
+## Rationale
+
+T5 floor miss is a leading indicator of pipeline starvation, but it's currently only visible through Slack (unreliable) or T5's run log (Strategist doesn't read logs/). Adding a BRAIN.md write makes the floor miss visible to Strategist within 24 hours (next daily run), independent of Slack delivery. Strategist already reads BRAIN.md and acts on flags it finds there (confirmed by every Strategist daily stamp in WATCH.md). This follows the same pattern as the t11-flag-human-slack-fallback proposal (Slack failure → write to BRAIN.md) but for T5's floor miss instead of T11's Slack delivery failure.
+
+The N_WEEKS calculation is simple: current `BRIEF_CREATED` count in tracking-db ÷ T9's average weekly ship velocity (from auto-ship-week-*.txt logs — typically 5-7 pages/week).
+
+## Risk assessment
+
+**Very low.** The only new write is a conditional append to `brain/BRAIN.md`. This only fires when T5 misses the 12-brief floor — i.e., an abnormal state that already requires human attention. On a healthy T5 run (≥12 briefs), no BRAIN.md write occurs. The BRAIN.md append is an additive change — it doesn't delete or modify existing content. Strategist already handles BRAIN.md flags correctly.
+
+The only edge case: if T5 misses the floor *every* week, BRAIN.md accumulates weekly flags. Strategist should clear old floor-miss flags after acknowledging them (e.g., after running a manual T5 re-run). This is manageable — Strategist already edits BRAIN.md on every run.
+
+## Rollback
+
+Remove the `BRAIN.md floor-miss flag` bullet from the T5 Step 7 section. Rollback snapshot: `brain/proposed-changes/t5-floor-miss-brain-flag-2026-07-26-2030.md` (this file).
+
+## Veto instructions
+To veto: rename this file to `t5-floor-miss-brain-flag-2026-07-26-2030.vetoed.md` and add a `## Veto reason` section.
+To approve early: rename to `t5-floor-miss-brain-flag-2026-07-26-2030.approved.md`.
+If neither, auto-applies 2026-08-02.

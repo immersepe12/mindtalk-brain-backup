@@ -88,6 +88,18 @@ These are MONITORING ONLY; no action until AP5 check + ALGO_WATCH clear.
 
 **Step 10 apply-pass:** NO-OP. All 3 proposals (t13/t7/t9) have Apply on: 2026-07-05. Not yet eligible.
 
+## 2026-07-26 — Strategist daily stamp (Sunday — no rank pull)
+**Watches status tonight:**
+- **W12/W13/W14** (Jun-17 cohort, NEW blogs): Day-42 finals fire **07-29** (Tuesday). T12 Learner evaluates. These are the first full-merit cohort after P12 was established — key data point for P12 validation across a second cohort.
+- **W18** (/treatments/online-therapy AP3-B): **28d AEO check fires TOMORROW 07-27**. Status: `⏳ check fires 07-27`. Learner/T4 evaluates.
+- **W18-W21** (AP3-B cohort): Day-42 final evaluations on **08-10**. On track.
+- **W23** (life-coach-therapy CTR): Check fires **08-06**. LIFE-COACH-CTR-01 shipped 07-23 (commit 6d2fe76 verified). Watch running.
+- **W24-W28** (mindful-minutes stub pilot pages): Fires **08-07**. Batch shipped 07-24.
+- **W29** (yoga-for-anxiety CTR): Check fires **08-07**. Brief at briefs/yoga-for-anxiety-brief.md. T11 ships 07-28.
+- **No new watches added tonight** — no sprints shipped by T10 (Sunday run, maintenance only).
+**OBS-WINDOW ANOMALY FIXED TONIGHT:** /blogs/what-is-dbt-therapy, /blogs/what-is-rebt-therapy, play-therapy-for-children-benefits-and-techniques corrected from None → 2026-08-25 (published 07-14, 42-day window). Day-21 midpoint check = 2026-08-04; Day-42 final = 2026-08-25. These pages are now correctly tracked.
+
+
 ## 2026-07-01 — Strategist daily stamp (Wednesday)
 
 **Rank pull:** DataForSEO API timed out again — 2nd consecutive day no fresh position data. Using 06-29 carry-forward. If 07-03 (Thu) also times out → 3-consecutive-day infrastructure alert fires.
