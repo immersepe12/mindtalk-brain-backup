@@ -34,4 +34,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W30 | /illnesses/mood-disorder | Dr. Thejus Kumar B R | 65 | brief_generated |
 | 2026-W30 | /treatments/couples-therapy | Dr. Swarupa Mohan Udgiri | 65 | brief_generated |
 | 2026-W30 | /blogs/understanding-dominant-personality-and-dominating-nature | Disha S Prabhu | 55 | brief_generated |
+| 2026-W31 | /treatments/exposure-response-therapy-ert | Dr. Krishna K R | 75 | brief_generated |
+| 2026-W31 | /illnesses/perinatal-mental-health | Dr. Swarupa Mohan Udgiri | 55 | brief_generated |
+| 2026-W31 | /illnesses/attention-deficit-hyperactivity-disorder-adhd | Dr. Akanksha Kashinath Bhor | 45 | brief_generated |
+| 2026-W31 | /treatments/mindfulness-therapy | Keerthi Sagar | 45 | brief_generated |
+| 2026-W31 | /illnesses/eating-disorder | Rangapriya Raghavan | 45 | brief_generated |
+| 2026-W31 | /blogs/understanding-the-major-types-of-anxiety-disorders | Ms. Tejal Jaiswal | 30 | brief_generated |
 

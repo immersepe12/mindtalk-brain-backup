@@ -357,3 +357,44 @@ All 3 Verifier-approved, snapshots taken, applied-history updated.
 - 08-06: W23 LIFE-COACH-CTR-01 check
 - 08-07: W24-W29 checks
 - **08-10: W18/W19/W20/W21 AP3-B Day-42 final evaluations** → P13 candidate (need ≥3 🟢)
+
+## 2026-07-27 — Strategist daily stamp (Monday T10 8PM IST)
+
+**W31 weekly summary (Jul 18–24):** Clicks 2,558 (−7.4% WoW), Impr 299,275 (−7.0%), CTR 0.9% flat, Pos 10.7. **FIRST DOWN WEEK IN 5 WEEKS — but structural, not alarming.** Primary driver: Dry Begging viral fade (−7,540 impr WoW, positions HELD ~6.0). Treatments +17.8% WoW (strongest category). Assessments stable. Life Coach rising (27,302 impr, +25.5% — W23 watch open).
+
+**Q3 target variances after W31:**
+- Clicks: −8.6% gap (2,558 vs 2,800/wk) — widened from −1.4% last week
+- Impressions: −28.7% gap (299K vs 420K/wk) — largest metric gap, driven by Dry Begging exit
+- CTR: +5.9% above target (0.9% vs 0.85%) — 4th consecutive green week
+- Pages live: ~795 (−0.6% to Q3 target of 800 — essentially met)
+- Track B: 27% vs 45% target — unchanged structural gap
+
+**🚨 GSC-INFRA-01 — 3rd RECURRENCE TODAY (07-27):** /sessions disk at 9.4G/9.8G (0 bytes free). /tmp/pylibs_gsc workaround non-persistent between sessions. Stale cache now 6 weeks old (last real GSC pull: 2026-06-11). All GSC validations today = unreliable. This is now a systemic infrastructure problem, not a one-off. **Action required: Kushal must authorize permanent disk fix or disk expansion. flag_for_human in BACKLOG.**
+
+**⚠️ W18 "online therapy india" position drop:** Weekly summary shows pos 7.4→16.3 (−8.9 pos, 58 impr) for our flagship online therapy hub. W18 28d AEO check fires today but GSC is blocked. Queued as ONLINE-THERAPY-W18-DROP-01 for T2 validation once disk fixed. AP5 applies — do NOT act until GSC confirms.
+
+**W28 YMYL batch briefs created by T3 today:** depression (`briefs/depression-brief.md`), anxiety (`briefs/anxiety-brief.md`), alzheimers (`briefs/alzheimers-brief.md`), narrative-therapy (`briefs/narrative-therapy-brief.md`). All 4 are YMYL — T11 cannot ship until AP3 fresh clinical sign-off on the refresh content is confirmed. OCD-thoughts deferred to 07-28 (weekly cap 10/10 reached).
+
+**Weekly cap reached 10/10 (week of 07-21):** No new T3 briefs possible until 07-28 (new week).
+
+**Rank signals today:** 4 new MODERATEs (all AP5 pending GSC validation: learning-disability pos 3→8, anxiety pos 8→12, bipolar pos 8→12, emotional-distress pos 3→7). 25 CRITICALs quarantined as AP8 noise. 0 confirmed drops today.
+
+**Key watch status:**
+- W18: pending_evaluation — 28d AEO check fired today; GSC blocked; full evaluation deferred to T2 07-28
+- W12/W13/W14: pending_evaluation (fires 07-29) — 2nd P12 cohort; T12 Learner evaluates tomorrow
+- W23 (life-coach CTR): LIFE-COACH-CTR-01 shipped 07-23 (commit 6d2fe76), check 08-06
+- W29 (yoga-for-anxiety): YOGA-FOR-ANXIETY-SHIP-01 fires T11 07-28, check 08-07
+- W24-W28 (mindful-minutes stub pilot): check 08-07
+
+**Meta-Learner proposals — Step 10 NO-OP:** t6-dead-url-prefix-guard, t16-read-pending-human-actions, t5-floor-miss-brain-flag — all Apply 08-02. Not eligible tonight.
+
+**T17-7-REVIEW: STILL OVERDUE.** Kushal has not confirmed fire on AEO doctors sprint. 24h+ gate passed. Re-escalating via Slack tonight.
+
+**Top 5 actions queued for next 24-72h:**
+1. YOGA-FOR-ANXIETY-SHIP-01 — T11 07-28 (brief ready, CTR drop confirmed)
+2. GSC-INFRA-01-PERMANENT-FIX — flag_for_human IMMEDIATE (infra critical)
+3. W28-YMYL-BATCH-REVIEWER-CONFIRM — flag_for_human 07-28 (AP3 gate before T11 ships)
+4. T17-7-REVIEW — flag_for_human OVERDUE (Kushal decision required)
+5. ONLINE-THERAPY-W18-DROP-01 — T2 07-28 after GSC fix
+
+**Full decision log:** `brain/memory/decisions/2026-07-27.md`

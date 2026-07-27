@@ -860,3 +860,38 @@ Same pages as 07-07 + 1 new from T9 07-09 (source: tracking-db AUTHORED_PENDING_
 - **08-07 (+14d):** W29 yoga-for-anxiety check; W24-W28 mindful-minutes check
 - **08-10 (+17d):** W18/W19/W20/W21 Day-42 final evaluations → AP3-B principle write if 3+ GREEN
 - **08-14 (+21d):** /treatments/emdr-for-anxiety Day-42 final eval
+
+## 2026-07-27 — Strategist daily stamp (Monday T10 8PM IST)
+
+**Rank pull:** 290/290 complete — 25 CRITICAL (ALL AP8 noise, quarantined), 0 MAJOR, 4 new MODERATE (learning-disability pos 3→8, anxiety pos 8→12, bipolar pos 8→12, emotional-distress pos 3→7) — all pending AP5 GSC validation.
+
+**GSC:** ❌ BLOCKED — /sessions disk 9.4G/9.8G (0 bytes free). GSC-INFRA-01 recurring (3rd instance). Stale cache 2026-06-11 (6 weeks old). All 8 today's validations = NOISE based on stale data. GSC pipeline non-operational until disk fixed.
+
+**Weekly summary (Jul 18–24 / W31):** Clicks 2,558 (−7.4% WoW), Impr 299,275 (−7.0%), CTR 0.9% (flat). FIRST DOWN WEEK IN 5 WEEKS. Primary driver: Dry Begging viral fade (positions HELD ~6.0 → structural audience decline, NOT ranking regression). No content action warranted.
+
+**W18 28d AEO check — FIRES TODAY (07-27):**
+- `pending_evaluation (2026-07-27)` — check fired. CANNOT evaluate: GSC blocked (stale data).
+- ⚠️ **WARNING:** Weekly summary shows "online therapy india" pos 7.4→16.3 (−8.9 pos, 58 impr) — the W18 hub page (/treatments/online-therapy). This is alarming and must be validated.
+- ONLINE-THERAPY-W18-DROP-01 queued for T2 07-28 (once disk fixed). Until then: AP5 — do NOT act.
+- Full AEO citation evaluation (Perplexity/ChatGPT/Google AIO for "online therapy india") deferred to T17 next weekly run.
+
+**W12/W13/W14 (Jun-17 NEW blog cohort):**
+- `pending_evaluation (2026-07-29)` — Day-42 finals fire TOMORROW. T12 Learner evaluates.
+- W12 /blogs/couple-therapy-techniques — was pos 40 at Day-14 (competitive query, normal crawl lag)
+- W13 /blogs/how-to-find-a-therapist-for-ocd — was pos 6 at Day-14 (exceptional early signal)
+- W14 /blogs/how-to-find-a-therapist-in-india — was pos 9 / 198 impr Week-1 (exceptional early signal)
+- These are the 2nd P12 cohort. If W13/W14 resolve ✅, P12 gets its 2nd cohort confirmation.
+
+**No new watches opened tonight** — no content sprints shipped by T10 (Strategist scope).
+
+**Step 10 apply-pass:** NO-OP. All 3 proposals (t6-dead-url-prefix-guard, t16-read-pending-human-actions, t5-floor-miss-brain-flag) have Apply on: 2026-08-02. Not eligible tonight.
+
+**Updated upcoming checks:**
+- **07-28 (tomorrow):** T11 ships YOGA-FOR-ANXIETY-SHIP-01; T3 creates OCD-THOUGHTS-REFRESH-01 brief; T2 fires WEEKLY-DROPS-BATCH-GSC-01 + ONLINE-THERAPY-W18-DROP-01 (both contingent on GSC disk fix); T4 5× Day-21 midpoints (Jul-7 blogs: eft-therapy, trust-issues, untreated-adhd, family-counselling, talk-in-sleep).
+- **07-29:** W12/W13/W14 Day-42 finals — T12 Learner. 1× Day-21 midpoint (domineering-vs-dominating).
+- **07-31:** 77× assessment pages Day-21 midpoints (T4). DRY-BEGGING-CTR-01 + EMOTION-CONTROL-REFRESH-01 veto expires.
+- **08-02:** 3 Meta-Learner proposals apply (t6, t16, t5).
+- **08-06:** W23 LIFE-COACH-CTR-01 check (shipped 07-23 commit 6d2fe76).
+- **08-07:** W24-W28 mindful-minutes stub pilot check; W29 yoga-for-anxiety CTR check; /blogs/hyperactive-vs-inattentive-adhd Day-21 midpoint.
+- **08-10:** W18/W19/W20/W21 AP3-B Day-42 final evaluations → P13 candidate (≥3 🟢 needed).
+- **08-25:** /blogs/what-is-dbt-therapy, /blogs/what-is-rebt-therapy, /blogs/play-therapy-for-children Day-42 finals.
