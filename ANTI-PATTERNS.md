@@ -1,5 +1,14 @@
 # ANTI-PATTERNS — What NOT to do
 
+## AP11. Never build vocabulary/definition content to close an impressions gap 🔒 CORE
+Definition queries (`what is X`, `X meaning`, slang, `word vs word`) reliably produce high impressions
+and ~0 clicks, and they drag site-wide CTR. Proven dead families: life coach, fomo, dry begging,
+dominant/dominating, trust-issues-meaning-in-hindi.
+**Zero-click trap test:** if an existing page already serves the query family with ≥1,000 impressions
+and <0.2% CTR, do not build more of it — that family is proven dead.
+**Never** backfill a short brief run with Tier C to hit a quota. Run short instead.
+See `brain/INTENT-PRIORITY.md` §1–§2.
+
 **Read by:** Strategist before every decision. Action MUST NOT match any anti-pattern.
 **Written by:** Learner (Task 12) after closed watch windows that showed harm.
 

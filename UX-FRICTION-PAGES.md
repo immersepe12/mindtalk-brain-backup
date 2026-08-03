@@ -7,71 +7,71 @@
 
 ---
 
-## W28 Friction Table (Jul 2–8, 2026)
+## W31 Friction Table (Jul 22–28, 2026)
 
-| Page / URL | Rage clicks | Dead clicks | Total | Severity | WoW | Suspected cause |
-|---|---:|---:|---:|---|---|---|
-| consult.cadabams.com/consult/booking/8796?mode=online | 96 | 87 | **183** | 🔴 CRITICAL ESCALATING | Dead: 16→87 (+444%) | Aparna-rani booking broken. Availability broken or UI unresponsive. Was W26/W27 rage-only; dead clicks now exploding. |
-| consult.cadabams.com/consult/find-therapist | 52 | 319 | **371** | 🟡 HIGH — IMPROVING | 481→371 (-22.9%) | Wizard dead clicks reducing — fix may be partially working. Still high. |
-| consult.cadabams.com/consult/appointments | ~0 | 237 | **237** | 🔴 HIGH | flat from 240 | Appointments list — non-responsive elements. Persisting. |
-| consult.cadabams.com/consult/checkout | ~4 | 68 | **72** | 🔴 NEW HIGH — PAYMENT FLOW | 🆕 new | **Dead clicks in the payment completion flow. Direct revenue impact. HIGHEST URGENCY.** |
-| consult.cadabams.com/home | 14 | 129 | **143** | 🟡 HIGH — IMPROVING | 192→143 (-25%) | Home screen dead clicks reducing. ✅ |
-| consult.cadabams.com/profile | 15 | 45 | **60** | 🟡 MEDIUM | 🆕 new | Profile page non-responsive elements. |
-| consult.cadabams.com/baseline-assessment | 8 | 43 | **51** | 🟡 MEDIUM | ~stable (46→51) | Assessment dead click persists. |
-| consult.cadabams.com/consult/booking/94441?mode=online | 21 | 1 | **22** | 🟡 NEW | 🆕 new | New rage hotspot. Check slot availability. |
-| consult.cadabams.com/consult/booking/20508?mode=online | 19 | 12 | **31** | 🟡 MEDIUM NEW | 🆕 new | Dr. Srishti Agrawal. 19 rage = possible slot availability issue. |
+| URL | Rage clicks | Dead clicks | Total | Severity | Status / WoW |
+|---|---:|---:|---:|---|---|
+| consult.cadabams.com/prescriptions | 127 | 887 | **1,014** | 🔴🔴 CRITICAL #1 — NEW | Brand new this week. Page functionally broken. Escalate to dev IMMEDIATELY. |
+| consult.cadabams.com/home | 38 | 673 | **711** | 🔴🔴 ESCALATING | Dead clicks 129→673 (+421%). Something broke in the home page navigation — buttons not responding. |
+| consult.cadabams.com/consult/find-therapist | 47 | 372 | **419** | 🔴 HIGH PERSISTENT | Dead clicks 319→372 (+16.6%). 4 consecutive weeks. NOT FIXED. |
+| consult.cadabams.com/consult/appointments | ~0 | 160 | 160 | 🟡 IMPROVING | Total 237→160 (-32.5%) ✅ Improving — keep monitoring. |
+| consult.cadabams.com/consult/checkout | ~4 | 69 | 73 | 🔴 PERSISTENT | Dead clicks stuck at 68→69 — 3+ weeks unresolved. Checkout friction = direct revenue loss. |
+| consult.cadabams.com/consult/booking/8796 | 36 | ~50 | ~86 | 🟡 IMPROVING | Rage: 96→36 ✅ improving significantly. |
+| journeys/cmraiwmuz*/details | 0 | 75 | 75 | 🟡 MEDIUM | Journey page — UI element not responding |
+| consult.cadabams.com/assessments/* | ~0 | 52 | 52 | 🟡 MEDIUM | New this week |
+| consult.cadabams.com/ (root) | ~0 | ~30 est | ~30 | 🟢 LOW | Baseline |
 
----
-
-## Priority actions W28
-
-### 🔴 CRITICAL P1: /consult/checkout — 68 dead clicks (PAYMENT FLOW)
-**This is the highest urgency issue this week.** Dead clicks in the checkout flow = users trying to complete payment and failing to interact with elements. This is post-intent abandonment — the hardest type to recover.
-
-**Possible causes:**
-1. Payment button not clickable in certain states (mobile, specific browsers)
-2. Form field validation errors that prevent submission but don't show clearly
-3. Promo code / coupon field that looks editable but isn't
-4. Terms checkbox that is non-functional
-
-**Action:** Dev team to reproduce checkout dead click flow on mobile + desktop. Record session replays for the 68 dead-click sessions if available in Mixpanel. Fix before next week.
+**Total friction events W31: ~2,680** (up from ~1,124 W28 — driven almost entirely by /prescriptions new + /home explosion)
 
 ---
 
-### 🔴 CRITICAL P2: booking/8796 (aparna-rani) — 183 friction events
-Dead clicks ESCALATED 16→87 (+444%). Rage persisting at 96. Combined 183 = **most broken page on the platform this week.**
+## Priority action queue
 
-**Action:** Check if Dr. Aparna Rani has available slots. If her schedule is full/inactive, remove from listings. If active — trace the dead click to specific UI element (likely the slot-picker or date-picker).
+### 🔴🔴 P0 — /prescriptions (1,014 events) — ESCALATE NOW
+- **887 dead clicks + 127 rage clicks** = highest friction event count in T19 history.
+- Brand new this week — something broke on the /prescriptions page.
+- Likely: a button/link/form is rendering but not wired up, or page requires auth but doesn't redirect.
+- **Action:** Escalate to app dev team TODAY. Check if /prescriptions is feature-complete or was accidentally deployed in broken state.
 
----
+### 🔴🔴 P0 — /home dead click explosion (+421%)
+- Dead clicks 129 → 673 in one week.
+- New ad campaigns are sending traffic to /home after sign-up or post-session — users are trying to click navigation elements that aren't responding.
+- **Action:** Audit /home navigation elements. Check if any new feature deployment broke click handlers. Particularly suspect: any element added in the W29-W31 timeframe.
 
-### 🟡 P3: find-therapist — 371 total (IMPROVING)
-Dead clicks reduced 428→319. This is positive — fix may be partially deployed. Monitor W29. If drops below 200, consider it substantially resolved.
+### 🔴 P1 — /consult/find-therapist (4 weeks unresolved, 419 events)
+- 4th consecutive week with 300-400+ dead clicks.
+- Therapist search UI has a persistent broken element — users repeatedly click something that doesn't respond.
+- **Action:** Inspect filter UI, therapist cards, and pagination. This is suppressing therapist discovery → bookings.
 
----
+### 🔴 P1 — /consult/checkout (stuck at ~70 events, 3+ weeks)
+- Direct checkout friction = confirmed revenue loss. Every dead click here is a payment that bounces.
+- **Action:** Inspect payment form submission button, CTA, and any checkout redirect logic.
 
-### 🟡 P4: /consult/appointments — 237 dead clicks (PERSISTING)
-Three weeks of ~240 dead clicks. This is likely a structural UI issue (not a transient bug). Appointment list likely has an element that looks interactive but isn't — pagination? Filter? A table row that looks clickable but doesn't navigate?
+### 🟡 P2 — /consult/appointments (improving)
+- 237→160 (-32.5%). Positive trend. Continue monitoring — do not touch.
 
----
-
-## Trend (weekly summary)
-
-| Week | Top friction page | Total friction events | CRITICAL pages | New this week |
-|---|---|---:|---:|---|
-| W25 | Not tracked | — | — | — |
-| W26 | booking/53196 | 1,200+ | 1 | booking/53196 (CRITICAL) |
-| W27 | find-therapist | 1,100+ | 2 | booking/8796 (NEW CRITICAL) |
-| W28 | booking/8796 | 1,400+ | 3 | checkout dead clicks (CRITICAL) · booking/94441 · booking/20508 |
-
-**Trend:** Total friction events increasing despite find-therapist improvement. booking/8796 escalating. New checkout issue is most dangerous — it's in the payment funnel.
-
-**RESOLVED W27:** booking/53196 — 444 events W26, 3 events W28. Confirmed fixed. ✅
+### 🟡 P2 — /consult/booking/8796 (improving)
+- Rage 96→36. Continue monitoring.
 
 ---
 
-## Structural note
+## Historical trend (Total friction events per week)
 
-All friction events are on **consult.cadabams.com** (the booking/therapy app), NOT on mindtalk.in. The mindtalk.in pages have no rage/dead click instrumentation — this is a gap.
+| Week | Top page | Total events (est) | Notes |
+|---|---|---:|---|
+| W25 | find-therapist | ~800 est | INAUGURAL |
+| W26 | find-therapist | ~900 est | find-therapist escalating |
+| W27 | find-therapist | ~1,300 est | booking/8796 NEW CRITICAL rage clicks |
+| W28 | find-therapist + checkout | ~1,124 est | checkout dead clicks NEW; booking/8796 escalating |
+| W29 | — | — | MCP_DOWN |
+| W30 | — | — | MCP_BLOCKED |
+| W31 | **prescriptions** | **~2,680 est** | /prescriptions NEW CRITICAL #1 (1,014); /home explodes (+421%) |
 
-**Open action:** Add `$mp_rage_click` and `$mp_dead_click` tracking to mindtalk.in /illnesses/* and /treatments/* pages (currently showing 0 book intent — may be due to broken CTAs we can't see).
+---
+
+## Notes for T10 Strategist
+
+1. **Prescriptions page is the biggest new revenue leak.** Users who reach /prescriptions are post-engagement, high-intent. A broken prescriptions page means they exit without completing action.
+2. **Home page dead clicks will suppress repeat visits.** If users return to the app and hit dead UI on /home, they churn silently.
+3. **find-therapist and checkout are long-standing issues** suppressing conversion from organic traffic. 4+ weeks of evidence = dev team hasn't prioritized.
+4. **Checkout fix = highest direct revenue impact.** Every unresolved dead click at checkout = abandoned payment.

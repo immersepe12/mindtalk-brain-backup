@@ -1,5 +1,15 @@
 # PRINCIPLES — Hard-won lessons
 
+## P13 — Intent tier, not search volume, decides what gets built (2026-07-30) 🔒 CORE
+Raw impressions rewarded vocabulary content that converts nothing: `what is a life coach` earned
+**26,449 impressions and 0 clicks** (~9% of all site impressions) while `psychiatrists near me`
+(945 impr, pos 8.1) earned 0 clicks because it sits below the click threshold. Meanwhile doctor pages
+convert at 70–95% intent and deliver 13 payments/wk, sustained 5 weeks.
+**Rule:** classify every candidate by intent tier before building. Tier A (booking intent) ≥60% of
+every brief run; Tier C (vocabulary/definition) capped at 10% and rejected by default.
+**Canonical policy:** `brain/INTENT-PRIORITY.md` — protected, see §7.
+This operationalises P9 at the content-selection step, where it was previously not enforced.
+
 **Read by:** Strategist before every decision.
 **Written by:** Learner (Task 12) after every closed watch window.
 

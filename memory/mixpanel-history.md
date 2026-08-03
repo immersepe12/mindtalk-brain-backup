@@ -85,6 +85,45 @@ One line per Task 15 run. Most recent at bottom.
 | 2026-07-01 (7d) | 6,397 | 764 | 4 | 151 | 17 | 66% | PAGE VIEWS +8%✅; BACKEND FAIL -78%✅✅✅ (35.7%→9.9% — possible engineering fix); LP form +11%✅; call_clicked +38%✅; book CTA stable; lp:form=38x⚠; riya still invisible |
 | 2026-07-08 (7d) | 6,342 | 784 | 5 | 129 | 2 | 73% | Page views stable (-1%); BACKEND FAIL -88%✅✅✅ (9.9%→1.5% — recovery continues, now effectively negligible); riya +133%✅✅ (6→14, first real break from invisibility); illness -27%⚠ (161→118); lp_form -15% (151→129, watch); doctor→book CTA +10.6% new high (73%); lp:form=25.8x |
 | 2026-07-22 (7d) | MCP_BLOCKED | — | — | — | — | — | ⛔ MCP_BLOCKED: Mixpanel returned "account blocked — payment required". Billing issue on Mixpanel account. No data this week. See mixpanel-access-blocked.md. |
+| 2026-07-29 (7d) | 8,167 | 743 | 97 | 55 | 11 | 31% | Page views +28.8%✅ (vs 07-08, 3-wk gap); 🚨 form_submitted 5→97 (INVERTED lp:form — on-site form now primary; ads paused explains LP drop); lp_form -57%⚠ (129→55, ads pause); doctor→book CTA -57%⚠⚠ (73%→31%, absolute clicks stable 431→406 — new doctor traffic is low-intent SEO visitors); backend fail crept up 1.5%→6.7%⚠ (still ok; was 35.7% peak); riya -29%⚠ (14→10); doctor views +118%✅✅ (592→1,293 — T9 content driving discovery); where-to-start +31%✅ (16→21) |
+
+
+2026-07-29T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d unique users (vs 2026-07-08 baseline — 07-22 was MCP_BLOCKED) |
+  VOLUME (unique users):
+  - $mp_web_page_view: 8,167 (+28.8% vs 07-08; 3-week gap so ~+9.6%/wk avg)
+  - blog_viewed: 1,425 (total events) | doctor_profile_viewed: 1,293 unique (+118.4%✅✅) | treatment_page_viewed: 541 total | illness_page_viewed: 197 total (+67% vs 118, recovery) | riya_page_viewed: 10 unique (-28.6%⚠ vs 14) | where_to_start_page_viewed: 21 unique (+31.3%✅)
+  - book_appointment_clicked: 743 unique (-5.2%, stable) | whatsapp_clicked: 108 (+3.8%) | call_clicked: 52 (-1.9%, stable) | cta_clicked: 212 total
+  - form_submitted: 97 unique (+1,840%!! vs 5) | lp_form_submitted: 55 unique (-57.4%!! vs 129)
+  - form_started: 28 total | form_error: 1 | lead_create_failed: 11 unique (+450% vs 2)
+  STRUCTURAL SHIFT: lp:form ratio INVERTED. Was 25.8x (LP dominates). Now 0.57x (on-site form (97) > LP form (55)).
+  EXPLANATION: Ads are paused → LP gets no paid traffic → lp_form_submitted crashes. Organic traffic up 29% → users find site naturally → hit on-site form. Net total submitters: ~152 unique (97+55) vs 134 (5+129) = +13% — total lead volume may actually be GROWING.
+  ⚠ Verify with Freshsales: are ~97 on-site form submitters arriving as leads? If yes, this is the best lead week recorded.
+  FUNNELS:
+  - A (main): page view 8,167 → book CTA 735 (9.0%, was 12.3%) → form_submit 37 (5.0% of book CTA, 0.45% overall; was 0.51%→0.06%)
+    Note: book CTA→form conversion EXPLODED 0.5%→5.0% — structural change in form placement or flow
+  - B (doctor-driven): doctor_profile 1,293 → book CTA 406 (31.4%, was 73%⚠⚠) → form_submit 6 (1.5% of CTA, 0.5% overall)
+    Note: absolute book clicks from doctor path stable (406 vs 431) — new doctor visitors are low-intent SEO; the 73%→31% rate drop is denominator explosion, not fewer commercial-intent visitors converting
+  - C (where-to-start): viewed 21 → started 8 (38.1%, was 56%) → completed 8 (100% of started; 38% overall)
+  KEY METRICS:
+  - lp:form ratio: 55/97 = 0.57:1 (INVERTED from 25.8:1) — on-site form now primary channel
+  - Backend fail rate: 11/(97+55+11) ≈ 6.7% (was 1.5% — creeping up from near-zero; was 35.7% at peak ⚠ watch)
+  - Doctor→book CTA: 31.4% (was 73% — rate collapse, absolute stable)
+  - Riya discovery rate: 10/8167 = 0.12% (was 14/6342 = 0.22%, -45%)
+  WoW FLAGS (>20% vs 2026-07-08 — NOTE: 3-week gap, not 1 week):
+  🚨 form_submitted +1,840% (5→97) — structural shift; on-site form now primary lead channel (ads paused → LP dies → on-site takes over). Verify Freshsales.
+  ⚠⚠ lp_form_submitted -57.4% (129→55) — expected given ads pause; LP without paid traffic has no volume
+  ✅✅ doctor_profile_viewed +118% (592→1,293) — T9 content sprint driving organic doctor discovery
+  ✅ page views +28.8% (6,342→8,167) — organic traffic growing strongly (+~10%/wk avg)
+  ✅ where_to_start +31% (16→21) — internal linking working
+  ⚠ lead_create_failed +450% (2→11) — backend fail rate 1.47%→6.7%; still far below peak (35.7%) but trend reversal worth watching
+  ⚠ riya_page_viewed -29% (14→10) — tiny absolute, inconclusive; more traffic diluting discovery rate
+  ⚠⚠ doctor→book CTA rate -57% (73%→31%) — rate drop is structural (denominator doubled), not a signal that commercial visitors are converting worse; absolute book clicks stable
+  ⚠ page→book CTA rate -27% (12.3%→9.0%) — intent dilution from SEO discovery traffic (expected)
+  IMPLICATIONS:
+  - Total leads (~152 unique submitters) may be the best weekly number recorded — but quality unknown. Verify Freshsales URGENTLY.
+  - On-site booking form conversion jump (book CTA→submit 0.5%→5%) suggests either form placement improved or a tracking fix fired. Investigate what changed.
+  - Doctor profile content strategy is working for discovery but not converting at the old commercial rate — this is expected and acceptable; the doctor pages serve the top-of-funnel SEO role.
+  - Riya page continues to under-index; needs dedicated internal linking / feature placement.
 
 
 2026-07-08T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d unique users |

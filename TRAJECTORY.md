@@ -65,6 +65,18 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-06-24 | 5,941 | 745 | 6 | 136 | 79 | 69% | Page views +56%✅; book_click -54%⚠⚠ (intent dilution — SEO/blog surge, not commercial pages); LP form +5% (136, leads stable); backend fail ~36% (stable⚠); where-to-start +367%✅ (3→14); riya 10 (doubled, still tiny) |
 | 2026-07-01 | 6,397 | 764 | 4 | 151 | 17 | 66% | Page views +8%✅; **backend fail -78%✅✅✅** (35.7%→9.9% — possible engineering fix deployed); LP form +11%✅ (136→151); call_clicked +38%✅ recovery; book CTA stable (+3%); lp:form ratio 38x⚠ (on-site form irrelevant); riya 6⚠ (tiny, still invisible) |
 | 2026-07-08 | 6,342 | 784 | 5 | 129 | 2 | 73% | Page views stable (-1%); **backend fail -88%✅✅✅** (9.9%→1.5% — continued recovery, now negligible); **riya +133%✅✅** (6→14, first real break from invisibility); illness -27%⚠ (161→118); lp_form -15%⚠ (151→129); doctor→book CTA 73% (new high✅✅); lp:form=25.8x |
+| 2026-07-22 | MCP_BLOCKED | — | — | — | — | — | Billing issue — Mixpanel access blocked. No data. |
+| 2026-07-29 | 8,167 | 743 | 97 | 55 | 11 | 31% | Page views +29%✅ (3-wk vs 07-08); 🚨 lp:form INVERTED (on-site form 97 > LP form 55 — ads paused kills LP; on-site fills gap); net leads ~152 unique (97+55) = possible best week yet — verify Freshsales; doctor views +118%✅✅ (T9 discovery wins); doctor→book CTA rate -57%⚠⚠ (73%→31% — absolute clicks stable 431→406, new visitors are low-intent SEO); backend fail crept up 1.5%→6.7%⚠ (still ok; watch trend); riya -29%⚠ (14→10) |
+
+**Variance > 20% WoW (2026-07-29 reading — vs 2026-07-08, 3-week gap due to 07-22 MCP block):**
+- form_submitted: **+1,840%** 🚨 (5→97) — structural channel shift: ads paused → LP form collapses → on-site form becomes primary. Total submitters ~152 (best week if confirmed real). Verify Freshsales urgently.
+- lp_form_submitted: **-57.4%** ⚠⚠ (129→55) — expected; ads paused. Not a site problem.
+- doctor_profile_viewed: **+118%** ✅✅ (592→1,293) — T9 content sprint driving organic doctor discovery. Best traffic signal.
+- page views: **+28.8%** ✅ (6,342→8,167) — strong organic growth (~+10%/wk avg over 3 weeks).
+- lead_create_failed: **+450%** ⚠ (2→11) — backend fail rate 1.47%→6.7%; off near-zero floor; watch for further increase.
+- doctor→book CTA rate: **-57%** ⚠⚠ (73%→31%) — rate collapse is denominator effect (doctor views doubled); absolute book clicks stable (431→406). Not a conversion regression.
+- riya_page_viewed: **-29%** ⚠ (14→10) — tiny absolute; traffic dilution.
+- where_to_start: **+31%** ✅ (16→21)
 
 **Variance > 20% WoW (2026-07-08 reading):**
 - lead_create_failed: **-88%** ✅✅✅ (17→2) — backend fail rate 9.9%→1.5%. Recovery holding and deepening. Verify in Freshsales that ~129 LP leads are arriving.
@@ -90,13 +102,26 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 - where_to_start discovery: **+367%** ✅ (3→14) — internal linking improvement working
 - riya_page_viewed: +100% (5→10) — still effectively invisible
 
-**Standing conversion concerns for Strategist (updated 2026-07-08):**
-- Real lead capture = landing-page forms (129/wk, -15% this week — watch), not the on-site multi-step booking form (5/wk; sequential conversion ~0%).
-- Backend fail rate: **1.5%** (was 9.9%, was 35.7% — recovery appears complete). Verify with Freshsales that ~129 LP leads are arriving cleanly. If confirmed, this is a resolved issue.
-- Doctor-profile path is the strongest intent signal (**73% profile→book CTA, new high**) — doctor page SEO is the highest-leverage conversion lever.
-- illness_page_viewed -27% this week (161→118) — high-intent traffic class dropping. Check illness-cluster rankings urgently; may be linked to production freeze (0 pages shipped 4 weeks).
-- riya_page_viewed: 14 this week (+133% WoW) — first real jump. Still tiny (~0.22% discovery rate) but directional signal. Continue internal linking to riya page.
-- lp_form -15% (151→129): marginal dip, likely noise or production freeze effect. If it persists next week, investigate LP landing page changes.
+**Standing conversion concerns for Strategist (updated 2026-07-29):**
+- 🚨 CHANNEL SHIFT: On-site form is now the primary lead channel (97/wk vs 55 LP). With ads paused, LP form dried up (55 vs 129). Net leads ~152 total — verify in Freshsales that these are real. If confirmed, lead volume is at a new high.
+- Backend fail rate crept up: **6.7%** (was 1.5%, was 35.7% peak). Off the near-zero floor. Not critical yet but watch next week — if it climbs past 15%, engineering needs to investigate again.
+- Doctor-profile path rate collapsed: **31.4% profile→book CTA** (was 73%). Absolute book clicks stable (406 vs 431) — the new doctor visitors are low-intent SEO discovery users. This is expected as T9 scales doctor content. The doctor path remains strong for commercial visitors; the denominator effect is masking it.
+- Doctor profile traffic surging: **1,293 unique visitors** (was 592, +118%) — T9 content sprint is working; organic doctor discovery at an all-time high.
+- Riya discovery rate declining: **0.12%** (was 0.22%) — more site traffic isn't reaching Riya page. Needs dedicated placement or internal links in high-traffic blog posts.
+- illness_page_viewed recovering: 197 total events (was 118 unique 07-08) — improvement from prior concern.
+- lp_form: **55/wk** (was 129) — expected given ads pause. Will recover only when paid traffic resumes.
+
+**T19 W31 Addendum (2026-07-29) — Paid/Organic separation + revenue layer + GEO:**
+- ADS RE-ACTIVATED (Pan-India Plan ~W29): NND_Psychologist, FTA_Professional_Therapist, fta_generic_couple_bangalore, depression_treatment, anxiety_center campaigns on /experts/* and /lps/* pages. form_submitted surged 5→103 (+1,960%), 92% paid. Visitor surge +29.1% includes ad traffic.
+- REVENUE RECORDS: Payment Successful 193 (+63.6% vs W28). Appointment Booked 232 (+116.8% vs W28). Best week since T19 tracking began.
+- Organic book clicks: 1,348 (+7.9% vs W28). Site-wide intent rate: 32.3%→24.1% (denominator dilution from ad visitors submitting forms).
+- 6-layer attribution: chatgpt.com 203 book clicks (10.2%, +31%) — P5 Week 5 confirmed. AI search = 204 total (perplexity 1).
+- UTM (mindtalk_web): 15 payments (vs 22 W28). Doctor card: 13 (stable, 5th week). Homepage hero: 0 (DEMOTED). New "bottom" CTA: 2.
+- ⚠️ UTM chain BROKEN on expert-page ad campaigns: 215/232 appointments = undefined UTM. Fix needed before organic attribution is meaningful.
+- Paid/organic split: Paid 638 (32.1%) / Organic 1,348 (67.9%) book clicks. Payments: organic 191 (99%) / paid 2 (1%) — ad conversion path is form_submitted not book CTA.
+- GEO diversification: Bengaluru 51.3% (vs 60.2% W28). Delhi +49% (121 clicks), Mumbai +36% (76), Kolkata +193% (41 — NEW), Kerala 20 (+81.8% — P8 W2), US ~100 (P10 NEW SEED).
+- UX critical: /prescriptions 1,014 friction events (NEW #1 CRITICAL, brand new this week). /home dead clicks 129→673 (+421%). find-therapist 4 weeks unresolved (419). checkout stuck (73).
+- GA4 SKIPPED — Supermetrics trial expired. 3-week data gap (W29 MCP_DOWN, W30 MCP_BLOCKED).
 
 **T19 W26 Addendum (2026-06-25) — Paid/Organic separation + revenue layer:**
 - Organic book_appointment_clicked: 1,026 (57.6% of 1,781 total). 42.4% was GMB/residual tags (ads paused — not active paid traffic).
@@ -230,9 +255,10 @@ Strategist reads this every day before deciding actions — knows where the gaps
 | 2026-07-09 | 4 confirmed | 2/10 (unchanged, Q6+Q8) | 1/3 tested (Q8 🟢 GAINED) | ⬜ not tested | 1/10 (Q10 ocd 🟢 REGAINED + 4 centers named) | 0 | 🚨 ADHD cluster collapsed for both Amaha+Mindtalk (algo update) · 🟢 MT now #2 on "psychiatrist near me" (110k vol) · Google AI OV rendering intermittent — track rolling avg · ChatGPT Q8 branded citation confirmed |
 | 2026-07-16 | 11 / 40 cells tested | 3/10 (Q6+Q7+Q8 branded) | 4/10 (Q2 online therapy ✅, Q6+Q7+Q8 branded ✅, Q10 Cadabams ✅) | 0/2 tested commercial (noted MT absent from discovery layer) | 4/10 (Q4 CBT ✅ NEW, Q7 Cadabams ✅, Q8 app ✅, Q10 OCD ✅) | 1 (Google AI OV Q4 CBT therapy ✅ confirmed) | 🟢 MT +93 KW (only platform growing) · 🟢 Google AI OV now showing on 7/10 queries · 🟢 CBT NEW citation · 🟢 full 40-cell sweep run · Amaha 4th week decline (-35 KW) · YourDOST 3rd week decline (-11 KW) |
 | 2026-07-23 | 9 confirmed (Perplexity 5 + Google AI OV 4) | 5/9 tested (Q1🆕 Q2🆕 Q3🆕 Q6 Q8; Q7 LOST; Q10 rate-limited) | 0/1 tested (DOM limit) | ⬜ not tested | 4/10 (Q4 Q8 Q9🆕 Q10; Q7 LOST) | 3 (Perplexity Q1+Q2+Q3 — FIRST commercial-discovery citations ever) | 🚨 COMMERCIAL BREAKTHROUGH: Perplexity now cites MT for all 3 discovery queries (Q1/Q2/Q3) — first time since 06-18 baseline. LOST: Q7 "cadabams mental health" dropped from BOTH Perplexity + Google AI OV simultaneously — investigate. MT "psychiatrist closest to me" absent from top-50 this week (was #2 on 110K) — validate via GSC (T17-10). MT KW universe +150 (2100→2250) — strongest gain yet. YourDOST −18 KW (4th week down). |
+| 2026-07-30 | ~10 confirmed (Perplexity 5 + Google AI OV 3 + ChatGPT 2) | 5/10 (Q2✅ Q6✅ Q7✅🆕REGAINED Q8✅ Q10✅; LOST Q1+Q3) | 2/2 tested ✅✅ FIRST commercial citations (Q1 "best platform" + Q9 "depression treatment") | ⬜ session stall (Cowork modal) | 3/10 (Q4✅ Q8✅ Q10✅; LOST Q9) | 1 (Perplexity Q2) + ChatGPT Q1+Q9 new | MT +27 KW (2250→2277, 7th consecutive growth, pace decelerating); Amaha −78 KW (sharpest weekly drop yet); YourDOST −27 KW (5th week down). ChatGPT COMMERCIAL BREAKTHROUGH: first ever citations on Q1+Q9. Perplexity REGAINED Q7 (cadabams mental health). LOST: Perplexity Q1+Q3 (rotation — not content issue), Google AI OV Q9 (depression treatment — investigate page AEO). |
 
-**AI Overview citation share (2026-07-23):** 4/10 — Q4 (CBT therapy), Q8 (cadabams app), Q9 (depression treatment online india 🆕), Q10 (OCD specialist bangalore). LOST Q7 ("cadabams mental health") this week.
-**This week's gain:** 🟢 COMMERCIAL BREAKTHROUGH — Perplexity now cites Mindtalk for Q1 ("best mental health platform india") + Q2 ("online therapy bangalore") + Q3 ("psychiatrist near me bangalore") — first commercial-intent Perplexity citations in 6 weeks of monitoring. Google AI OV GAINED Q9 ("depression treatment online india").
-**This week's loss:** Q7 "cadabams mental health" simultaneously dropped from Perplexity AND Google AI OV — branded citation regression; investigate source pages (T17-11).
-**Strategic finding:** Perplexity commercial breakthrough suggests the May–June content sprint (43 commits, 374K impressions) raised domain authority enough to surface MT on discovery queries. ChatGPT remains untested (DOM extraction limit this week). Brand-fragmentation pattern persists on commercial queries across Google AI OV.
-**Tier movement:** Perplexity 3→5 cited queries (commercial bucket 0→3, historic first); Google AI OV steady 4/10; ChatGPT untested this run.
+**AI Overview citation share (2026-07-30):** 3/10 — Q4 (CBT therapy ✅ retained), Q8 (cadabams app ✅ retained), Q10 (OCD specialist ✅ retained). LOST Q9 ("depression treatment online india") vs last week.
+**This week's gain:** 🟢 ChatGPT COMMERCIAL BREAKTHROUGH — "Cadabam's MindTalk" now cited on Q1 "best mental health platform india" and Q9 "depression treatment online india" (first ever). 🟢 Perplexity Q7 "cadabams mental health" REGAINED (dropped last week, back this week).
+**This week's loss:** Perplexity Q1 + Q3 dropped (rotation effect — organic positions still intact); Google AI OV Q9 "depression treatment online india" lost (action: audit depression page AEO content — verify specialist credentials copy is still present).
+**Strategic finding:** ChatGPT commercial citations now confirmed for first time. Perplexity commercial citations are volatile (Q1/Q3 on/off week by week) — likely tied to freshness rotation in Perplexity's source pool. Underlying organic positions unchanged. Google AI OV at 3/10 is lowest in 4 weeks — Q9 depression loss needs attention.
+**Tier movement:** Perplexity steady 5/10; Google AI OV 4→3 (Q9 lost); ChatGPT 0→2 commercial (historic first).

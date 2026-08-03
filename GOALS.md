@@ -28,6 +28,28 @@
 
 ---
 
+
+## 🔒 2026-07-30 — TARGET REFRAME: intent-weighted, not volume-weighted (Kushal-directed)
+
+**Raw weekly impressions is DEPRECATED as a primary target.** It rewarded exactly the behaviour that
+produced `what is a life coach` — **26,449 impressions, 0 clicks** — while the queries that book patients
+(`psychiatrists near me`, 945 impr, pos 8.1) earned nothing. Chasing the volume number *caused* the drift.
+
+| Metric | Status from 2026-07-30 |
+|---|---|
+| Weekly impressions (raw) | 🟡 **diagnostic only** — report it, do not chase it |
+| **Weekly Tier A+B clicks** | 🟢 **PRIMARY volume target** |
+| **Tier A intent rate** (book_appointment_clicked ÷ visitors) | 🟢 PRIMARY quality target |
+| **Organic-attributed payments / bookings** | 🟢 PRIMARY revenue target |
+
+All weekly reporting (T6, T8, T10, T12) **must split impressions by intent tier**. An impressions rise
+driven by Tier C is reported as a **regression**, not growth.
+
+Canonical policy: `brain/INTENT-PRIORITY.md` (protected — §7).
+Prior Q3 impressions target (420K) is retained **as a diagnostic reference only**; do not generate
+Tier C content to close its gap (AP11).
+
+---
 ## North Star (12-month horizon — by 2027-06)
 
 **One sentence:** Become the #1 organic search destination for mental health in India, with Mindtalk's app as the default free-self-help-to-paid-consult funnel.
