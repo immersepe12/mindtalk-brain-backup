@@ -40,4 +40,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W31 | /treatments/mindfulness-therapy | Keerthi Sagar | 45 | brief_generated |
 | 2026-W31 | /illnesses/eating-disorder | Rangapriya Raghavan | 45 | brief_generated |
 | 2026-W31 | /blogs/understanding-the-major-types-of-anxiety-disorders | Ms. Tejal Jaiswal | 30 | brief_generated |
+| 2026-W32 | /treatments/psychotherapy | Dr. Krishna K R | 60 | brief_generated |
+| 2026-W32 | /treatments/biofeedback-therapy | Dr. Rayani M Dessa | 55 | brief_generated |
+| 2026-W32 | /illnesses/psychosis | Dr. Thejus Kumar B R | 50 | brief_generated |
+| 2026-W32 | /illnesses/postpartum-depression-ppd | Dr. Swarupa Mohan Udgiri | 40 | brief_generated |
+| 2026-W32 | /illnesses/trauma-disorder | Abhimanyu Chandak | 40 | brief_generated |
+| 2026-W32 | /blogs/understanding-everyday-habit-that-are-destroying-your-sleep | Sucheta Saha | 15 | brief_generated |
 

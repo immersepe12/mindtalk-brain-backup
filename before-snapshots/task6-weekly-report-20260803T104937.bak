@@ -1,0 +1,100 @@
+# Cowork Scheduled Task 6: Weekly SEO Report
+
+> **⚠ PYTHONPATH REQUIRED (fix 2026-07-16).** Every `python3 scripts/...` call in this task MUST be run as `cd ~/Seo-workflow-mindtalk/mindtalk-setup && PYTHONPATH=.pip-packages python3 scripts/...`. The google-api libraries live in `.pip-packages/`; without PYTHONPATH the run fails with "google-auth not installed" or misreports the OAuth token as expired (this caused the false "GSC credentials expired" outage 07-14→07-16 — the token was healthy the whole time; verified + refreshed 2026-07-16). If a refresh ever genuinely fails with invalid_grant, retry once 60s later before declaring the credential dead, and include the exact exception text in the log.
+
+# Cadence: Every Monday at 11:00 AM
+# Working folder: ~/Seo-workflow-mindtalk/mindtalk-setup/
+
+---
+
+You are generating the weekly SEO performance report for Mindtalk (mindtalk.in).
+
+## Your job
+
+Run the weekly report scripts and produce four files:
+1. Summary CSV — site-level WoW (matches historical format)
+2. Queries CSV — every query with WoW deltas
+3. Clusters CSV — category and topic cluster level tracking
+4. Markdown report — full readable summary
+
+## Steps
+
+### Step 1 — Run the weekly report script
+```
+python3 ~/Seo-workflow-mindtalk/mindtalk-setup/scripts/weekly-report.py
+```
+
+### Step 2 — Run the cluster report script
+```
+python3 ~/Seo-workflow-mindtalk/mindtalk-setup/scripts/cluster-report.py
+```
+
+### Step 3 — Read both reports
+Read:
+- ~/Seo-workflow-mindtalk/mindtalk-setup/reports/weekly-report-[TODAY].md
+- ~/Seo-workflow-mindtalk/mindtalk-setup/reports/clusters-[TODAY].csv
+
+### Step 4 — Write plain-English summary
+Write to ~/Seo-workflow-mindtalk/mindtalk-setup/reports/weekly-summary-[TODAY].txt covering:
+- Overall traffic direction (up/down/stable) with numbers
+- Best performing category this week by impressions
+- Category with biggest WoW improvement
+- Top rising topic cluster (e.g. "Depression queries improved X positions on average")
+- Top dropping topic cluster if any
+- Top 3 queries by impressions
+- Any rank drops flagged for content refresh
+- One key action item for the SEO team this week
+
+### Step 4.5 — GA4 channel mix (added 2026-07-10 — Supermetrics MCP)
+
+Pull the weekly channel table from GA4 via the Supermetrics MCP (source `GAWA`, property `395357273`): fields `sessionDefaultChannelGrouping, sessions, engagedSessions, conversions`, `date_range_type=last_7_days`, timezone Asia/Kolkata (data_query → get_async_query_results). Add to the summary:
+- Organic Search sessions + conversions WoW (GA4's independent read alongside GSC clicks — flag if they diverge >25%, that's a tracking or brand-SERP issue)
+- **AI Assistant channel** sessions WoW (native GA4 channel — the P5 AI-search KPI)
+- Paid Search sessions (context only — notes paid/organic interplay while ads are running)
+
+If Supermetrics is unavailable, log `GA4 SKIPPED` and continue — never block the report on it.
+
+### Step 5 — Flag drops for refresh
+Review dropping queries and clusters. If any keyword dropped 5+ positions:
+- Add to ~/Seo-workflow-mindtalk/mindtalk-setup/flagged-drops.json so Task 2 picks it up
+
+## Step 6 — Post to Slack
+
+Post a summary to **#seo-workflow-mindtalk** (channel ID: `C0AUAPS4J83`) using `slack_send_message`.
+
+Format:
+
+```
+📊 *Weekly SEO Report — [WEEK START] to [WEEK END]*
+Site: mindtalk.in
+
+*Traffic:*
+> Clicks: [N] ([+/-N%] WoW)
+> Impressions: [N] ([+/-N%] WoW)
+> CTR: [N%] | Avg Position: [N]
+
+*Top Category:* [category] — [impressions] impressions
+*Best Improving Cluster:* [cluster name] — [+N%] impressions WoW
+*Worst Dropping Cluster:* [cluster name] — [N%] impressions WoW
+
+*Top 3 Queries by Impressions:*
+> 1. [query] — [impressions] impr, pos [N]
+> 2. [query] — [impressions] impr, pos [N]
+> 3. [query] — [impressions] impr, pos [N]
+
+*Rising:* [N] queries | *Dropping:* [N] queries | *New:* [N] queries
+
+[If any queries flagged for refresh:]
+⚠️ [N] queries flagged for content refresh review
+
+📎 Full report: reports/weekly-report-[DATE].md
+```
+
+## Output
+
+Tell me:
+- Clicks and impressions this week with WoW change
+- Top performing category
+- Best improving cluster
+- Worst dropping cluster (if any)
+- Files created

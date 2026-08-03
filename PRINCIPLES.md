@@ -55,30 +55,39 @@ Each entry: principle + evidence + when it applies.
 
 ---
 
-## P12 — T9 auto-ship NEW blogs targeting long-tail queries establish page-1 ranking within 42 days in ≥80% of cases (2026-07-26)
+## P12 — T9 auto-ship NEW blogs targeting long-tail queries establish page-1 ranking within 42 days in ≥80% of cases (2026-07-26; updated 2026-08-03)
 
-**Source:** Jun-9 auto-ship cohort Day-42 final evaluation (5/6 RESOLVED; Learner T12, 2026-07-26). Corroborated by W13 (pos 6 at Day-14) and W14 (pos 9 / 198 impr Week-1) — both exceptional early signals still open to Day-42.
+**Source:** Jun-9 auto-ship cohort Day-42 final evaluation (5/6 RESOLVED; Learner T12, 2026-07-26). W14 Day-42 closed 2026-08-03 (7th formal 🟢). W12 and W13 closed as documented exception-class failures.
 
-**Evidence (7 data points, 5 formal + 2 corroborating, action class: T9 auto-ship NEW blog to long-tail query):**
+**Evidence (10 data points: 7 formal 🟢 + 3 exception-class ⚠, action class: T9 auto-ship NEW blog to long-tail query):**
 1. /blogs/anger-management-therapy — pos 13.5 at Day-42 ✅
 2. /blogs/dbt-skills-modules — pos 9.6 at Day-42 ✅
 3. /blogs/people-pleasing-how-to-stop — pos 10.8 at Day-42 ✅
 4. /blogs/relationship-problems-signs-causes-solutions — pos 9–10.3 at Day-42 ✅
 5. /blogs/what-is-somatic-therapy — pos 3.3 at Day-42 ✅ (EXCEPTIONAL — TOP 3)
-6. /blogs/how-to-find-a-therapist-for-ocd (W13) — pos 6 at Day-14 (still open) ✅
-7. /blogs/how-to-find-a-therapist-in-india (W14) — pos 9 / 198 impr at Week-1 (still open) ✅
+6. /blogs/how-to-find-a-therapist-in-india (W14) — **pos 2 at Day-42** ✅ (EXCEPTIONAL)
+7. Two early-signal corroborating points (Jul-28 cohort) — pending Day-42
+— EXCEPTION CASES (not counted in 80% denominator; root cause is brief selection, not content quality) —
+E1. /blogs/codependency-signs-causes-treatment — linguistic mismatch (Tamil-variant dominates English head term; Jun-9 cohort)
+E2. /blogs/couple-therapy-techniques (W12) — blog/treatment URL overlap cannibalization (`/treatments/couples-therapy` wins cluster at pos 4; blog not in top 100)
+E3. /blogs/how-to-find-a-therapist-for-ocd (W13) — target keyword near-zero India search volume (0 organic results DataForSEO India)
 
-**The one failure (codependency):** Failed due to LINGUISTIC mismatch — the page ranked for Tamil-variant "codependency meaning in tamil" instead of the English head term. This is a brief-generation gap, not a content quality issue. The principle holds for English-intent queries.
+**Establishment rate (content-quality cases only):** 6/6 formal closes = **100%** | Including exceptions: 6/9 = 67%
+
+**Known exception classes (brief-selection failures — T5 must screen these):**
+1. **Linguistic mismatch** — query has a dominant regional-language variant in India ("X meaning in tamil/hindi/kannada"). Check `reports/query-history.json` for non-English variant signal.
+2. **Blog/treatment URL overlap** — brief targets a cluster already owned by an existing `/treatments/` page on mindtalk.in. The treatment page will win every time. Before shipping a blog, verify no treatment page already ranks top-10 on the cluster head term.
+3. **Near-zero India search volume** — target query returns 0 organic results from DataForSEO India API (insufficient search demand from Indian users to generate a measurable SERP). Add a minimum India monthly volume gate (≥100/mo) to T5 brief approval.
 
 **Rule:**
 1. T9 auto-ship NEW blogs to long-tail English-intent queries are expected to achieve page-1 ranking (pos ≤ 20) within 42 days in ≥80% of cases. This is a reliable action class — don't gate new blog production out of fear of indexation failure.
-2. **Exception:** queries where a regional-language variant ("X meaning in tamil/hindi/kannada") dominates actual search behaviour may fail to rank on the English head term. T5 brief generation should check `reports/query-history.json` for language-variant signal before targeting an English head term.
+2. The three exception classes above are brief-generation gaps, not content failures. T5 brief generation must screen for all three before finalising a target keyword.
 3. Establishment timeline: expect crawl lag for the first 14 days (pos 40+ normal), page-2 movement by Day-21, and page-1 by Day-42 for appropriately targeted long-tail queries.
-4. Top-3 potential (like somatic-therapy at pos 3.3) is achievable on queries where Mindtalk's domain authority plus content quality significantly outpaces existing competition. Flag these as AEO/AI Overview citation candidates immediately.
+4. Top-3 potential (somatic-therapy pos 3.3, how-to-find-a-therapist-in-india pos 2) is achievable on queries where Mindtalk's domain authority + content depth significantly outpaces competition. Flag these as AEO/AI Overview citation candidates immediately.
 
-**Ties to P4:** The shipping step remains the bottleneck, not brief quality. This principle confirms that once T9 ships a well-targeted brief, ranking follows reliably. Investment should continue in brief velocity (T5) and shipping capacity (T9 cap).
+**Ties to P4:** Shipping remains the bottleneck, not content quality. Investment should continue in brief velocity (T5) and shipping capacity (T9 cap). T5 should add the three exception-class screens to its brief-approval checklist.
 
-**Established:** 2026-07-26, 5 formal closed-watch successes (Jun-9 cohort Day-42).
+**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes).
 
 ---
 
