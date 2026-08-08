@@ -75,3 +75,46 @@
 4. **Language pages are the single highest-ROI SEO action.** Malayalam + Kannada + Hindi pages = top 3 T5 proposals, all at +30 pts.
 5. **Expert pages + ads = UTM broken.** Organic + paid attribution is polluted. Fix before W32.
 6. **Supermetrics trial expired.** GA4 data unavailable. Mixpanel remains sole conversion source.
+
+---
+
+## W32 Update — 2026-08-05 11:00 IST
+
+### Revenue: NEW RECORDS (both metrics)
+- Payments: **205** (+6.2% WoW) — all-time high
+- Bookings: **264** (+13.8% WoW) — all-time high
+- Organic-attributable book clicks: **1,369 / 2,035** (67.3%)
+- Paid book clicks: **666** (32.7%) — UTM sources: google/facebook/meta/instagram
+
+### Tier Classifications (W32)
+| Tier | Pages |
+|---|---|
+| 🟢 Goldmine | /doctors/* (60 cumul payments 6wks), /experts/* (ads + organic) |
+| 🟡 Rocket | /doctors/telugu-speaking-doctors (Hyderabad 83 clicks), /doctors/tamil-speaking (WATCH — Tamil crash 83→27) |
+| 🔵 Engagement Engine | /blogs/* (P3 confirmed 6wks — top-of-funnel only, no direct booking) |
+| 🔴 Leaky Bucket | /appointments (762 dead clicks CRITICAL), /assessments (725 dead clicks CRITICAL) |
+| ⚫ Dead Weight | /illnesses/*, /treatments/*, /lps/* |
+
+### 🚨 Alerts requiring action
+1. **UX CRITICAL**: /appointments (814 rage+dead) + /assessments (803 rage+dead) — simultaneous crash = deploy regression. Check deploys Jul 28–Aug 4.
+2. **doctor_card UTM crash**: 13 → 5 payments. Hypothesis: paid /experts ads overwrite session UTM on /doctors navigation. Monitor W33.
+
+### Geo highlights
+- Bengaluru: 1,156 clicks (58.7% share — recovery from 51.3%)
+- Doha/Qatar: 47 clicks (P11 stable — content gap = highest ROI)
+- Australia: 60 clicks (NSW+VIC — P12 Week 2)
+- Tamil Nadu: 27 clicks (CRASH from 83 — P1 Tamil on HOLD)
+- Kolkata: 7 clicks (CRASH from 41 — hold /psychologists-in-kolkata proposal)
+
+### New patterns (W32)
+- **P11 (Doha)**: Week 2 stable (47 book clicks, 0 content)
+- **P12 (Australia NRI)**: Week 2 growth (60 clicks, 0 content)
+- **P13 (Riya revenue)**: Week 1 seed (1 payment, utm_medium=riya)
+
+### Content proposals queued → T5
+- URGENT: Gulf diaspora content (Qatar 47 + UAE 16 = 63 NRI clicks, 0 content)
+- WATCH: Australia NRI (confirm W33 before proposing)
+- HOLD: /psychologists-in-kolkata (Kolkata crashed 41→7)
+- HOLD: Tamil-speaking doctor pages (Tamil crashed 83→27)
+- ACTIVE: Kannada/Malayalam/Hindi doctor pages (+30 pts, unchanged)
+- ACTIVE: Delhi/Mumbai/Hyderabad psychologist pages (unchanged)

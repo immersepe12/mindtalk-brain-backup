@@ -66,3 +66,33 @@
 > **HARD RULE (unchanged):** Tier 2 patterns remain SEEDS — do NOT brief or build until ≥3 weeks of consistent evidence.
 >
 > **NEW SEED (Kolkata):** 41 clicks W31 (+193%) is strong but single-week. Confirm W32 before building `/doctors/psychologists-in-kolkata`. However, if Pattern 1 applies (Bengalis are a distinct linguistic group like Telugu/Tamil), the Malayalam-page playbook may apply — propose at risk if T5 sees fit.
+
+---
+## W32 UPDATE — 2026-08-05
+
+### NEW URGENT: Gulf/Doha diaspora content (P11 Week 1 — pre-pattern, high urgency)
+
+| Proposed angle | Cluster | Evidence | Urgency |
+|---|---|---|---|
+| "Online therapy for Indians in UAE / Qatar" landing page | /lps or /doctors | 67 Gulf book clicks, 0 content | 🔴 URGENT — unserved market |
+| "Psychologists who speak Hindi for expats in Dubai/Doha" | /doctors language filter | Qatar 47 + UAE 16 = 63 clicks | 🔴 URGENT |
+
+### NEW EMERGING: Australia NRI market (P12 Week 2)
+
+| Proposed angle | Cluster | Evidence | Urgency |
+|---|---|---|---|
+| "Online therapy for Indians in Melbourne / Sydney" | /blogs or /lps | Melbourne 29 + Sydney 31 = 60 clicks | 🟡 EMERGING — 2 weeks |
+
+### HOLDING patterns (updated)
+
+| Pattern | Old status | W32 update |
+|---|---|---|
+| /doctors/psychologists-in-kolkata | ✅ FIRE | 🚨 HOLD — Kolkata 41→7 W32, W31 likely ad-driven |
+| /doctors/psychologists-in-chennai | ✅ FIRE | 🟡 WATCH W33 — Chennai 65→15 crash; Tamil market uncertainty |
+
+### Status of previously proposed angles
+- Malayalam, Kannada, Hindi doctor pages: **STILL +30 PRIORITY, FIRE**
+- /doctors/psychologists-in-delhi: **FIRE (105 Delhi NCT clicks W32)**
+- /doctors/psychologists-in-mumbai: **FIRE (88 clicks W32, 5 growth weeks)**
+- /doctors/psychologists-in-hyderabad: **FIRE (83 clicks W32, 6 stable weeks)**
+

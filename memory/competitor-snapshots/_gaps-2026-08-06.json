@@ -1,0 +1,3104 @@
+{
+  "date": "2026-08-06",
+  "diff": {
+    "amahahealth.com": {
+      "brand": "Amaha",
+      "curr_kw": 1080,
+      "last_kw": 1232,
+      "delta": -152,
+      "new_top50": [
+        {
+          "keyword": "therapy near me",
+          "volume": 60500,
+          "position": 7,
+          "url": "https://www.amahahealth.com/centre/mumbai/",
+          "etv": 5886.64990234375
+        },
+        {
+          "keyword": "therapist near me",
+          "volume": 60500,
+          "position": 8,
+          "url": "https://www.amahahealth.com/centre/delhi/",
+          "etv": 3986.949951171875
+        },
+        {
+          "keyword": "overthinking",
+          "volume": 33100,
+          "position": 5,
+          "url": "https://www.amahahealth.com/blog/science-behind-overthinking/",
+          "etv": 3220.6298828125
+        },
+        {
+          "keyword": "therapist",
+          "volume": 90500,
+          "position": 11,
+          "url": "https://www.amahahealth.com/centre/mumbai/",
+          "etv": 3058.89990234375
+        },
+        {
+          "keyword": "peniaphobia",
+          "volume": 12100,
+          "position": 6,
+          "url": "https://www.amahahealth.com/blog/peniaphobia-fear-of-poverty-meaning-causes-symptoms-treatment/",
+          "etv": 1960.199951171875
+        },
+        {
+          "keyword": "situationship",
+          "volume": 40500,
+          "position": 8,
+          "url": "https://www.amahahealth.com/blog/understanding-what-is-situationships-science-signs-how-to-get-out/",
+          "etv": 1899.449951171875
+        },
+        {
+          "keyword": "claustrophobia",
+          "volume": 60500,
+          "position": 11,
+          "url": "https://www.amahahealth.com/blog/claustrophobia-meaning-signs-causes-treatment/",
+          "etv": 1191.8499755859375
+        },
+        {
+          "keyword": "fear from height",
+          "volume": 14800,
+          "position": 6,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 975.3200073242188
+        },
+        {
+          "keyword": "fear heights",
+          "volume": 14800,
+          "position": 8,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 975.3200073242188
+        },
+        {
+          "keyword": "0ver thinking",
+          "volume": 33100,
+          "position": 11,
+          "url": "https://www.amahahealth.com/blog/science-behind-overthinking/",
+          "etv": 652.0700073242188
+        },
+        {
+          "keyword": "mid mid life crisis",
+          "volume": 6600,
+          "position": 6,
+          "url": "https://www.amahahealth.com/blog/understanding-midlife-crisis-signs-causes-support-complete-guide-india/",
+          "etv": 642.1799926757812
+        },
+        {
+          "keyword": "middle life crisis",
+          "volume": 6600,
+          "position": 6,
+          "url": "https://www.amahahealth.com/blog/understanding-midlife-crisis-signs-causes-support-complete-guide-india/",
+          "etv": 642.1799926757812
+        },
+        {
+          "keyword": "types stress",
+          "volume": 8100,
+          "position": 7,
+          "url": "https://www.amahahealth.com/blog/different-types-of-stress/",
+          "etv": 533.7899780273438
+        },
+        {
+          "keyword": "phobia height",
+          "volume": 2900,
+          "position": 5,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 469.79998779296875
+        },
+        {
+          "keyword": "how to sleep fast",
+          "volume": 22200,
+          "position": 13,
+          "url": "https://www.amahahealth.com/blog/how-to-sleep-fast-in-5-minutes-proven-techniques-from-therapist/",
+          "etv": 437.3399963378906
+        },
+        {
+          "keyword": "fear of heights called",
+          "volume": 6600,
+          "position": 6,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 434.94000244140625
+        },
+        {
+          "keyword": "scared of heights is called",
+          "volume": 6600,
+          "position": 8,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 434.94000244140625
+        },
+        {
+          "keyword": "health counsellor",
+          "volume": 4400,
+          "position": 7,
+          "url": "https://www.amahahealth.com/centre/mumbai/",
+          "etv": 428.1199951171875
+        },
+        {
+          "keyword": "couples counseling mumbai",
+          "volume": 1300,
+          "position": 4,
+          "url": "https://www.amahahealth.com/services/couples-therapy/",
+          "etv": 395.20001220703125
+        },
+        {
+          "keyword": "therapeutic game",
+          "volume": 2400,
+          "position": 4,
+          "url": "https://www.amahahealth.com/blog/therapy-games-in-india/",
+          "etv": 388.79998779296875
+        },
+        {
+          "keyword": "therapist delhi",
+          "volume": 2400,
+          "position": 5,
+          "url": "https://www.amahahealth.com/centre/delhi/",
+          "etv": 388.79998779296875
+        },
+        {
+          "keyword": "therapist bangalore",
+          "volume": 5400,
+          "position": 8,
+          "url": "https://www.amahahealth.com/centre/bengaluru/",
+          "etv": 355.8599853515625
+        },
+        {
+          "keyword": "therapy online free",
+          "volume": 5400,
+          "position": 4,
+          "url": "https://www.amahahealth.com/blog/free-online-therapy-chat-counselling-india/",
+          "etv": 355.8599853515625
+        },
+        {
+          "keyword": "height phobia name",
+          "volume": 6600,
+          "position": 9,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 309.5400085449219
+        },
+        {
+          "keyword": "heights phobia name",
+          "volume": 6600,
+          "position": 10,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 309.5400085449219
+        },
+        {
+          "keyword": "neurotherapy",
+          "volume": 6600,
+          "position": 10,
+          "url": "https://www.amahahealth.com/blog/neurotherapy-treatment-neurofeedback-benefits-brain-training-india/",
+          "etv": 309.5400085449219
+        },
+        {
+          "keyword": "stages of depression",
+          "volume": 1900,
+          "position": 4,
+          "url": "https://www.amahahealth.com/depression/blog/stages-of-depression-early-signs-and-progression/",
+          "etv": 307.79998779296875
+        },
+        {
+          "keyword": "therapist online india",
+          "volume": 1900,
+          "position": 3,
+          "url": "https://www.amahahealth.com/",
+          "etv": 307.79998779296875
+        },
+        {
+          "keyword": "acrophobia fear of heights",
+          "volume": 14800,
+          "position": 10,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 291.55999755859375
+        },
+        {
+          "keyword": "heights phobia",
+          "volume": 4400,
+          "position": 6,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 289.9599914550781
+        },
+        {
+          "keyword": "therapist online",
+          "volume": 4400,
+          "position": 4,
+          "url": "https://www.amahahealth.com/services/therapy/",
+          "etv": 289.9599914550781
+        },
+        {
+          "keyword": "counsellor free online",
+          "volume": 2900,
+          "position": 4,
+          "url": "https://www.amahahealth.com/blog/free-online-therapy-chat-counselling-india/",
+          "etv": 282.1700134277344
+        },
+        {
+          "keyword": "fear of height",
+          "volume": 2900,
+          "position": 5,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 282.1700134277344
+        },
+        {
+          "keyword": "phobia to heights",
+          "volume": 2900,
+          "position": 5,
+          "url": "https://www.amahahealth.com/blog/acrophobia-phobia-of-heights-symptoms-causes-treatment/",
+          "etv": 282.1700134277344
+        },
+        {
+          "keyword": "type a and b personality",
+          "volume": 8100,
+          "position": 10,
+          "url": "https://www.amahahealth.com/blog/type-a-and-type-b-personality/",
+          "etv": 273.7799987792969
+        }
+      ],
+      "lost_top50": [
+        {
+          "keyword": "adhd therapist adults",
+          "volume": 1600,
+          "position": 1,
+          "url": "https://www.amahahealth.com/treatment-for-adhd/",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "adult adhd therapist",
+          "volume": 1600,
+          "position": 2,
+          "url": "https://www.amahahealth.com/treatment-for-adhd/",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "counsellors online free",
+          "volume": 2900,
+          "position": 3,
+          "url": "https://www.amahahealth.com/blog/free-online-therapy-chat-counselling-india/",
+          "etv": 469.79998779296875
+        },
+        {
+          "keyword": "depression stages",
+          "volume": 1900,
+          "position": 4,
+          "url": "https://www.amahahealth.com/depression/blog/stages-of-depression-early-signs-and-progression/",
+          "etv": 307.79998779296875
+        },
+        {
+          "keyword": "adhd psychiatrist",
+          "volume": 720,
+          "position": 2,
+          "url": "https://www.amahahealth.com/treatment-for-adhd/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "amaha delhi",
+          "volume": 720,
+          "position": 1,
+          "url": "https://www.amahahealth.com/centre/delhi/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "couples therapy online",
+          "volume": 1300,
+          "position": 2,
+          "url": "https://www.amahahealth.com/services/couples-therapy/",
+          "etv": 210.60000610351562
+        },
+        {
+          "keyword": "depression last stage",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.amahahealth.com/depression/blog/stages-of-depression-early-signs-and-progression/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "last stage depression",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.amahahealth.com/depression/blog/stages-of-depression-early-signs-and-progression/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "last stage of depression",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.amahahealth.com/depression/blog/stages-of-depression-early-signs-and-progression/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "secret friendship",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.amahahealth.com/blog/secret-to-lasting-friendship/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "best therapy in mumbai",
+          "volume": 480,
+          "position": 5,
+          "url": "https://www.amahahealth.com/centre/mumbai/",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "best therapy in bangalore",
+          "volume": 880,
+          "position": 3,
+          "url": "https://www.amahahealth.com/centre/bengaluru/",
+          "etv": 142.55999755859375
+        },
+        {
+          "keyword": "amaha therapy",
+          "volume": 390,
+          "position": 1,
+          "url": "https://www.amahahealth.com/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "mayank rajput",
+          "volume": 390,
+          "position": 1,
+          "url": "https://www.amahahealth.com/therapist/mayank-rajput/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "adhd psychologist",
+          "volume": 320,
+          "position": 4,
+          "url": "https://www.amahahealth.com/treatment-for-adhd/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "amaha bandra",
+          "volume": 320,
+          "position": 1,
+          "url": "https://www.amahahealth.com/centre/mumbai/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "best therapist online",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.amahahealth.com/services/therapy/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "mental health consulting",
+          "volume": 320,
+          "position": 4,
+          "url": "https://www.amahahealth.com/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "mind over thinking",
+          "volume": 320,
+          "position": 4,
+          "url": "https://www.amahahealth.com/blog/science-behind-overthinking/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "last stages of depression",
+          "volume": 590,
+          "position": 4,
+          "url": "https://www.amahahealth.com/depression/blog/stages-of-depression-early-signs-and-progression/",
+          "etv": 95.58000183105469
+        },
+        {
+          "keyword": "therapy india",
+          "volume": 260,
+          "position": 1,
+          "url": "https://www.amahahealth.com/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "counseling app",
+          "volume": 480,
+          "position": 4,
+          "url": "https://www.amahahealth.com/blog/best-mental-health-wellness-counselling-apps-india/",
+          "etv": 77.76000213623047
+        },
+        {
+          "keyword": "overthinking effects on body",
+          "volume": 480,
+          "position": 4,
+          "url": "https://www.amahahealth.com/blog/science-behind-overthinking/",
+          "etv": 77.76000213623047
+        },
+        {
+          "keyword": "couple therapist mumbai",
+          "volume": 390,
+          "position": 7,
+          "url": "https://www.amahahealth.com/services/couples-therapy/",
+          "etv": 63.18000030517578
+        },
+        {
+          "keyword": "couples therapy mumbai",
+          "volume": 390,
+          "position": 5,
+          "url": "https://www.amahahealth.com/services/couples-therapy/",
+          "etv": 63.18000030517578
+        },
+        {
+          "keyword": "depression counselling online",
+          "volume": 390,
+          "position": 3,
+          "url": "https://www.amahahealth.com/depression/",
+          "etv": 63.18000030517578
+        },
+        {
+          "keyword": "depression online counselling",
+          "volume": 390,
+          "position": 2,
+          "url": "https://www.amahahealth.com/depression/",
+          "etv": 63.18000030517578
+        },
+        {
+          "keyword": "online counselling for depression",
+          "volume": 390,
+          "position": 3,
+          "url": "https://www.amahahealth.com/depression/",
+          "etv": 63.18000030517578
+        },
+        {
+          "keyword": "anger thought",
+          "volume": 320,
+          "position": 5,
+          "url": "https://www.amahahealth.com/blog/identifying-thoughts-that-make-you-angry/",
+          "etv": 51.84000015258789
+        },
+        {
+          "keyword": "feeling life tired",
+          "volume": 320,
+          "position": 6,
+          "url": "https://www.amahahealth.com/depression/blog/why-do-i-feel-tired-all-the-time-and-have-no-energy/",
+          "etv": 51.84000015258789
+        },
+        {
+          "keyword": "innerhour",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.amahahealth.com/",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "is past life regression true",
+          "volume": 260,
+          "position": 5,
+          "url": "https://www.amahahealth.com/blog/past-life-regression-myths-science-risks/",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "online couples counseling",
+          "volume": 260,
+          "position": 3,
+          "url": "https://www.amahahealth.com/services/couples-therapy/",
+          "etv": 42.119998931884766
+        }
+      ],
+      "pos_changes": []
+    },
+    "yourdost.com": {
+      "brand": "YourDOST",
+      "curr_kw": 175,
+      "last_kw": 232,
+      "delta": -57,
+      "new_top50": [
+        {
+          "keyword": "therapy online free",
+          "volume": 5400,
+          "position": 17,
+          "url": "https://yourdost.com/",
+          "etv": 27.540000915527344
+        },
+        {
+          "keyword": "icall",
+          "volume": 6600,
+          "position": 51,
+          "url": "https://yourdost.com/",
+          "etv": 13.859999656677246
+        },
+        {
+          "keyword": "therapy online india",
+          "volume": 1900,
+          "position": 22,
+          "url": "https://yourdost.com/",
+          "etv": 10.537400245666504
+        },
+        {
+          "keyword": "free therapist",
+          "volume": 1600,
+          "position": 16,
+          "url": "https://yourdost.com/",
+          "etv": 9.4399995803833
+        },
+        {
+          "keyword": "therapist online india",
+          "volume": 1900,
+          "position": 20,
+          "url": "https://yourdost.com/",
+          "etv": 8.170000076293945
+        },
+        {
+          "keyword": "therapists online india",
+          "volume": 1900,
+          "position": 19,
+          "url": "https://yourdost.com/",
+          "etv": 8.170000076293945
+        },
+        {
+          "keyword": "counselling bangalore",
+          "volume": 1300,
+          "position": 19,
+          "url": "https://yourdost.com/",
+          "etv": 7.670000076293945
+        },
+        {
+          "keyword": "e counselling",
+          "volume": 3600,
+          "position": 30,
+          "url": "https://yourdost.com/",
+          "etv": 7.559999942779541
+        },
+        {
+          "keyword": "free online counselling chat 24/7",
+          "volume": 1000,
+          "position": 17,
+          "url": "https://yourdost.com/",
+          "etv": 5.599999904632568
+        },
+        {
+          "keyword": "aasra helpline",
+          "volume": 1300,
+          "position": 17,
+          "url": "https://yourdost.com/",
+          "etv": 5.590000152587891
+        },
+        {
+          "keyword": "betterlyf",
+          "volume": 2400,
+          "position": 28,
+          "url": "https://yourdost.com/",
+          "etv": 5.039999961853027
+        },
+        {
+          "keyword": "free counsellors",
+          "volume": 1000,
+          "position": 23,
+          "url": "https://yourdost.com/",
+          "etv": 4.300000190734863
+        },
+        {
+          "keyword": "online session",
+          "volume": 1900,
+          "position": 58,
+          "url": "https://yourdost.com/",
+          "etv": 3.990000009536743
+        },
+        {
+          "keyword": "therapy sessions online free",
+          "volume": 480,
+          "position": 15,
+          "url": "https://yourdost.com/",
+          "etv": 3.5999999046325684
+        },
+        {
+          "keyword": "lpu campus photos",
+          "volume": 1600,
+          "position": 46,
+          "url": "https://yourdost.com/",
+          "etv": 3.3600001335144043
+        },
+        {
+          "keyword": "lpu university photos",
+          "volume": 1600,
+          "position": 39,
+          "url": "https://yourdost.com/",
+          "etv": 3.3600001335144043
+        },
+        {
+          "keyword": "relationship counselling online",
+          "volume": 1600,
+          "position": 68,
+          "url": "https://yourdost.com/",
+          "etv": 3.3600001335144043
+        },
+        {
+          "keyword": "self care vit chennai",
+          "volume": 590,
+          "position": 16,
+          "url": "https://yourdost.com/",
+          "etv": 3.303999900817871
+        },
+        {
+          "keyword": "psychiatrist free online",
+          "volume": 720,
+          "position": 19,
+          "url": "https://yourdost.com/",
+          "etv": 3.0959999561309814
+        }
+      ],
+      "lost_top50": [
+        {
+          "keyword": "counsellors online free",
+          "volume": 2900,
+          "position": 5,
+          "url": "https://yourdost.com/",
+          "etv": 191.11000061035156
+        },
+        {
+          "keyword": "counsellor for students",
+          "volume": 3600,
+          "position": 9,
+          "url": "https://yourdost.com/",
+          "etv": 168.83999633789062
+        },
+        {
+          "keyword": "service counseling",
+          "volume": 880,
+          "position": 7,
+          "url": "https://yourdost.com/",
+          "etv": 142.55999755859375
+        },
+        {
+          "keyword": "dost.com",
+          "volume": 320,
+          "position": 1,
+          "url": "https://yourdost.com/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "therapy sessions near me",
+          "volume": 880,
+          "position": 11,
+          "url": "https://yourdost.com/",
+          "etv": 29.743999481201172
+        },
+        {
+          "keyword": "free online counselling chat 24/7 free",
+          "volume": 1000,
+          "position": 8,
+          "url": "https://yourdost.com/",
+          "etv": 25.600000381469727
+        },
+        {
+          "keyword": "mental health consulting",
+          "volume": 320,
+          "position": 8,
+          "url": "https://yourdost.com/",
+          "etv": 21.08799934387207
+        },
+        {
+          "keyword": "student career counselling",
+          "volume": 1300,
+          "position": 16,
+          "url": "https://yourdost.com/",
+          "etv": 14.6899995803833
+        },
+        {
+          "keyword": "online therapy free sessions",
+          "volume": 480,
+          "position": 9,
+          "url": "https://yourdost.com/",
+          "etv": 12.288000106811523
+        },
+        {
+          "keyword": "mental therapist online",
+          "volume": 480,
+          "position": 9,
+          "url": "https://yourdost.com/",
+          "etv": 9.456000328063965
+        },
+        {
+          "keyword": "therapist chat",
+          "volume": 390,
+          "position": 9,
+          "url": "https://yourdost.com/",
+          "etv": 7.683000087738037
+        },
+        {
+          "keyword": "iit bhu services",
+          "volume": 880,
+          "position": 13,
+          "url": "https://yourdost.com/",
+          "etv": 6.599999904632568
+        },
+        {
+          "keyword": "counseling app",
+          "volume": 480,
+          "position": 15,
+          "url": "https://yourdost.com/",
+          "etv": 5.423999786376953
+        },
+        {
+          "keyword": "counsellor india",
+          "volume": 480,
+          "position": 16,
+          "url": "https://yourdost.com/",
+          "etv": 5.423999786376953
+        },
+        {
+          "keyword": "counselor app",
+          "volume": 480,
+          "position": 12,
+          "url": "https://yourdost.com/",
+          "etv": 4.368000030517578
+        },
+        {
+          "keyword": "jobs online counsellor",
+          "volume": 390,
+          "position": 13,
+          "url": "https://yourdost.com/jobs/sales13",
+          "etv": 3.5490000247955322
+        },
+        {
+          "keyword": "counsellor jobs online",
+          "volume": 390,
+          "position": 15,
+          "url": "https://yourdost.com/jobs/sales13",
+          "etv": 2.924999952316284
+        },
+        {
+          "keyword": "online jobs for psychologists",
+          "volume": 390,
+          "position": 14,
+          "url": "https://yourdost.com/",
+          "etv": 2.924999952316284
+        },
+        {
+          "keyword": "counselor online for free",
+          "volume": 2900,
+          "position": 10,
+          "url": "https://yourdost.com/",
+          "etv": null
+        }
+      ],
+      "pos_changes": []
+    },
+    "betterhelp.com": {
+      "brand": "BetterHelp",
+      "curr_kw": 14856,
+      "last_kw": 16574,
+      "delta": -1718,
+      "new_top50": [
+        {
+          "keyword": "attraction",
+          "volume": 1500000,
+          "position": 19,
+          "url": "https://www.betterhelp.com/advice/attachment/how-does-the-science-of-attraction-work/",
+          "etv": 8850
+        },
+        {
+          "keyword": "quotes for loneliness",
+          "volume": 27100,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 8238.400390625
+        },
+        {
+          "keyword": "therapy",
+          "volume": 90500,
+          "position": 2,
+          "url": "https://www.betterhelp.com/get-started/",
+          "etv": 6434.5498046875
+        },
+        {
+          "keyword": "splitting",
+          "volume": 90500,
+          "position": 7,
+          "url": "https://www.betterhelp.com/advice/psychologists/what-is-splitting-psychology/",
+          "etv": 5963.9501953125
+        },
+        {
+          "keyword": "feeling of loneliness quotes",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 4499.2001953125
+        },
+        {
+          "keyword": "feelings of loneliness quotes",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 4499.2001953125
+        },
+        {
+          "keyword": "quotes lonely",
+          "volume": 27100,
+          "position": 5,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 4390.2001953125
+        },
+        {
+          "keyword": "quotes of loneliness",
+          "volume": 27100,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 4390.2001953125
+        },
+        {
+          "keyword": "friends are quotes",
+          "volume": 246000,
+          "position": 16,
+          "url": "https://www.betterhelp.com/advice/relations/37-true-friendship-quotes-explore-authors-like-ralph-waldo-emerson-and-helen-keller/",
+          "etv": 3690
+        },
+        {
+          "keyword": "family types",
+          "volume": 12100,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/family/there-are-6-different-family-types-and-each-one-has-a-unique-family-dynamic/",
+          "etv": 3678.39990234375
+        },
+        {
+          "keyword": "type of family",
+          "volume": 12100,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/family/there-are-6-different-family-types-and-each-one-has-a-unique-family-dynamic/",
+          "etv": 3678.39990234375
+        },
+        {
+          "keyword": "meaning dignity",
+          "volume": 49500,
+          "position": 7,
+          "url": "https://www.betterhelp.com/advice/psychology/what-is-the-true-meaning-of-dignity/",
+          "etv": 3262.050048828125
+        },
+        {
+          "keyword": "social pressure meaning",
+          "volume": 9900,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/psychology/how-does-social-pressure-impact-our-choices/",
+          "etv": 3009.60009765625
+        },
+        {
+          "keyword": "loneliness quotations",
+          "volume": 27100,
+          "position": 5,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 2636.830078125
+        },
+        {
+          "keyword": "quote loneliness",
+          "volume": 27100,
+          "position": 5,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 2636.830078125
+        },
+        {
+          "keyword": "quotes about loneliness",
+          "volume": 27100,
+          "position": 5,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 2636.830078125
+        },
+        {
+          "keyword": "husband quotes for wife",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/relations/the-best-romantic-love-quotes-for-a-wife/",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "quotes about feeling lonely",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "quotes feeling lonely",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "quotes on feeling alone",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "quotes on feeling lonely",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/psychology/loneliness-quotes-for-support/",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "quotes on wife and husband",
+          "volume": 14800,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/relations/the-best-romantic-love-quotes-for-a-wife/",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "definition of monogamy",
+          "volume": 90500,
+          "position": 10,
+          "url": "https://www.betterhelp.com/advice/relations/monogamy-how-is-it-defined/",
+          "etv": 2316.800048828125
+        },
+        {
+          "keyword": "quote for broken relationship",
+          "volume": 40500,
+          "position": 7,
+          "url": "https://www.betterhelp.com/advice/relations/25-ending-relationship-quotes-to-give-you-hope/",
+          "etv": 1899.449951171875
+        },
+        {
+          "keyword": "meaning for lust",
+          "volume": 74000,
+          "position": 12,
+          "url": "https://www.betterhelp.com/advice/relations/what-does-lust-mean/",
+          "etv": 1894.4000244140625
+        },
+        {
+          "keyword": "meaning lust",
+          "volume": 74000,
+          "position": 11,
+          "url": "https://www.betterhelp.com/advice/relations/what-does-lust-mean/",
+          "etv": 1894.4000244140625
+        },
+        {
+          "keyword": "sad lines about love",
+          "volume": 27100,
+          "position": 6,
+          "url": "https://www.betterhelp.com/advice/relations/25-ending-relationship-quotes-to-give-you-hope/",
+          "etv": 1785.8900146484375
+        },
+        {
+          "keyword": "love is true quotes",
+          "volume": 18100,
+          "position": 5,
+          "url": "https://www.betterhelp.com/advice/relations/30-love-quotes-that-depict-true-love/",
+          "etv": 1761.1300048828125
+        },
+        {
+          "keyword": "dignity meaning",
+          "volume": 49500,
+          "position": 10,
+          "url": "https://www.betterhelp.com/advice/psychology/what-is-the-true-meaning-of-dignity/",
+          "etv": 1673.0999755859375
+        },
+        {
+          "keyword": "meaning for dignity",
+          "volume": 49500,
+          "position": 8,
+          "url": "https://www.betterhelp.com/advice/psychology/what-is-the-true-meaning-of-dignity/",
+          "etv": 1673.0999755859375
+        },
+        {
+          "keyword": "monogamous",
+          "volume": 49500,
+          "position": 9,
+          "url": "https://www.betterhelp.com/advice/relations/what-does-it-mean-to-be-monogamous/",
+          "etv": 1673.0999755859375
+        },
+        {
+          "keyword": "hubby love quotes",
+          "volume": 33100,
+          "position": 7,
+          "url": "https://www.betterhelp.com/advice/relations/50-of-the-best-love-quotes-for-husbands/",
+          "etv": 1552.3900146484375
+        },
+        {
+          "keyword": "hubby quotes",
+          "volume": 33100,
+          "position": 7,
+          "url": "https://www.betterhelp.com/advice/relations/50-of-the-best-love-quotes-for-husbands/",
+          "etv": 1552.3900146484375
+        },
+        {
+          "keyword": "quotes about love husband",
+          "volume": 33100,
+          "position": 7,
+          "url": "https://www.betterhelp.com/advice/relations/50-of-the-best-love-quotes-for-husbands/",
+          "etv": 1552.3900146484375
+        },
+        {
+          "keyword": "failed love quotes",
+          "volume": 22200,
+          "position": 6,
+          "url": "https://www.betterhelp.com/advice/relations/25-ending-relationship-quotes-to-give-you-hope/",
+          "etv": 1462.97998046875
+        },
+        {
+          "keyword": "lust meaning",
+          "volume": 74000,
+          "position": 13,
+          "url": "https://www.betterhelp.com/advice/relations/what-does-lust-mean/",
+          "etv": 1457.800048828125
+        },
+        {
+          "keyword": "lustfulness meaning",
+          "volume": 74000,
+          "position": 11,
+          "url": "https://www.betterhelp.com/advice/relations/what-does-lust-mean/",
+          "etv": 1457.800048828125
+        },
+        {
+          "keyword": "lusting meaning",
+          "volume": 74000,
+          "position": 11,
+          "url": "https://www.betterhelp.com/advice/relations/what-does-lust-mean/",
+          "etv": 1457.800048828125
+        },
+        {
+          "keyword": "aspiration meaning",
+          "volume": 40500,
+          "position": 10,
+          "url": "https://www.betterhelp.com/advice/behavior/what-is-aspiration/",
+          "etv": 1368.9000244140625
+        },
+        {
+          "keyword": "bullies bully",
+          "volume": 40500,
+          "position": 12,
+          "url": "https://www.betterhelp.com/advice/bullying/the-psychology-of-bullying-understanding-whats-behind-the-bully/",
+          "etv": 1368.9000244140625
+        },
+        {
+          "keyword": "neutral family",
+          "volume": 40500,
+          "position": 9,
+          "url": "https://www.betterhelp.com/advice/family/understand-the-nuclear-family-and-its-place-in-modern-society/",
+          "etv": 1368.9000244140625
+        },
+        {
+          "keyword": "nuclear families",
+          "volume": 40500,
+          "position": 9,
+          "url": "https://www.betterhelp.com/advice/family/understand-the-nuclear-family-and-its-place-in-modern-society/",
+          "etv": 1368.9000244140625
+        },
+        {
+          "keyword": "memories childhood quotes",
+          "volume": 4400,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/family/childhood-quotes-to-brighten-your-day/",
+          "etv": 1337.5999755859375
+        },
+        {
+          "keyword": "memories of childhood quotes",
+          "volume": 4400,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/family/childhood-quotes-to-brighten-your-day/",
+          "etv": 1337.5999755859375
+        },
+        {
+          "keyword": "quotation for childhood memories",
+          "volume": 4400,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/family/childhood-quotes-to-brighten-your-day/",
+          "etv": 1337.5999755859375
+        },
+        {
+          "keyword": "quotes about childhood memories",
+          "volume": 4400,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/family/childhood-quotes-to-brighten-your-day/",
+          "etv": 1337.5999755859375
+        }
+      ],
+      "lost_top50": [
+        {
+          "keyword": "antecedent behavior consequence",
+          "volume": 246000,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/behavior/understanding-the-antecedent-behavior-consequence-model/",
+          "etv": 74784
+        },
+        {
+          "keyword": "bases in a relationship",
+          "volume": 2900,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/",
+          "etv": 881.5999755859375
+        },
+        {
+          "keyword": "2nd base in relationship",
+          "volume": 2400,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/",
+          "etv": 729.5999755859375
+        },
+        {
+          "keyword": "counsellor or counselor",
+          "volume": 2400,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/counseling/councilor-vs-counselor-there-is-a-difference/",
+          "etv": 729.5999755859375
+        },
+        {
+          "keyword": "behavioral theorists",
+          "volume": 1900,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/behavior/4-behavioral-theorists-that-made-their-mark-on-psychology/",
+          "etv": 577.5999755859375
+        },
+        {
+          "keyword": "best friend broken quotes",
+          "volume": 1900,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/relations/broken-friendship-quotes-14-quotes-to-help-you-heal-from-the-worst-pain/",
+          "etv": 577.5999755859375
+        },
+        {
+          "keyword": "blood type b positive personality",
+          "volume": 1300,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 395.20001220703125
+        },
+        {
+          "keyword": "deep loving",
+          "volume": 1300,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/love/what-is-deep-love/",
+          "etv": 395.20001220703125
+        },
+        {
+          "keyword": "1st base relationship",
+          "volume": 1000,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/",
+          "etv": 304
+        },
+        {
+          "keyword": "councilor or counselor",
+          "volume": 1000,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/counseling/councilor-vs-counselor-there-is-a-difference/",
+          "etv": 304
+        },
+        {
+          "keyword": "counselor vs councilor",
+          "volume": 1000,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/counseling/councilor-vs-counselor-there-is-a-difference/",
+          "etv": 304
+        },
+        {
+          "keyword": "angry quotes in english",
+          "volume": 880,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/anger/anger-quotes-to-help-you-heal-and-let-go/",
+          "etv": 267.5199890136719
+        },
+        {
+          "keyword": "ab positive blood group personality",
+          "volume": 720,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "ab ve blood group personality",
+          "volume": 720,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "deep understanding quotes in relationship",
+          "volume": 720,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/relations/helpful-relationship-quotes/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "b negative blood group personality",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "b negative blood type personality",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "base 2 in a relationship",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "base 2 in relationship",
+          "volume": 590,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/relations/what-are-bases-in-a-relationship-and-how-do-you-navigate-them/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "counsellor vs counselor",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/counseling/councilor-vs-counselor-there-is-a-difference/",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "anger quotes in english",
+          "volume": 480,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/anger/anger-quotes-to-help-you-heal-and-let-go/",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "definition of a true friend",
+          "volume": 480,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/psychology/what-is-the-real-definition-of-a-true-friend/",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "b blood type personality",
+          "volume": 390,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "beautiful my wife",
+          "volume": 390,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/love/the-best-romantic-love-quotes-for-a-wife/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "blood b personality",
+          "volume": 390,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "blood type b personality",
+          "volume": 390,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "childhood memories quotes short",
+          "volume": 390,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/family/childhood-quotes-to-brighten-your-day/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "control anger quotes",
+          "volume": 390,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/anger/anger-quotes-to-help-you-heal-and-let-go/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "control angry quotes",
+          "volume": 390,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/anger/anger-quotes-to-help-you-heal-and-let-go/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "control on anger quotes",
+          "volume": 390,
+          "position": 4,
+          "url": "https://www.betterhelp.com/advice/anger/anger-quotes-to-help-you-heal-and-let-go/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "councillor or counsellor",
+          "volume": 390,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/counseling/councilor-vs-counselor-there-is-a-difference/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "0 negative blood type personality",
+          "volume": 320,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "a negative blood group personality",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "ab negative blood group characteristics",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "ab negative blood group personality",
+          "volume": 320,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "ab negative blood type personality",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/personality/blood-type-personality-what-does-your-blood-say-about-you/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "childhood happiness quotes",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/family/childhood-quotes-to-brighten-your-day/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "abstract thinking vs concrete thinking",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "chat rooms safety",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/therapy/the-dangers-of-private-chat-rooms-online/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "concrete and abstract thinking",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "concrete thinking vs abstract thinking",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "concrete vs abstract reasoning",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "concrete vs abstract thinking",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "counsel or counselor",
+          "volume": 70,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/counseling/councilor-vs-counselor-there-is-a-difference/",
+          "etv": 21.280000686645508
+        },
+        {
+          "keyword": "abstract thinker vs concrete thinker",
+          "volume": 20,
+          "position": 3,
+          "url": "https://www.betterhelp.com/advice/self-esteem/the-difference-between-concrete-vs-abstract-thinking/",
+          "etv": 6.079999923706055
+        },
+        {
+          "keyword": "antecedent-behavior consequence definition",
+          "volume": 0,
+          "position": 2,
+          "url": "https://www.betterhelp.com/advice/behavior/understanding-the-antecedent-behavior-consequence-model/",
+          "etv": null
+        }
+      ],
+      "pos_changes": []
+    },
+    "manastha.com": {
+      "brand": "Manastha",
+      "curr_kw": 124,
+      "last_kw": 144,
+      "delta": -20,
+      "new_top50": [
+        {
+          "keyword": "therapist",
+          "volume": 90500,
+          "position": 53,
+          "url": "https://www.manastha.com/",
+          "etv": 190.0500030517578
+        },
+        {
+          "keyword": "therapist online",
+          "volume": 4400,
+          "position": 35,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 9.239999771118164
+        },
+        {
+          "keyword": "therapy online",
+          "volume": 4400,
+          "position": 44,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 9.239999771118164
+        },
+        {
+          "keyword": "counselling for stress",
+          "volume": 3600,
+          "position": 67,
+          "url": "https://manastha.com/services/stress-management",
+          "etv": 7.559999942779541
+        },
+        {
+          "keyword": "psychological consultation online",
+          "volume": 2900,
+          "position": 32,
+          "url": "https://www.manastha.com/",
+          "etv": 6.090000152587891
+        },
+        {
+          "keyword": "manochikitsa",
+          "volume": 2400,
+          "position": 33,
+          "url": "https://www.manastha.com/",
+          "etv": 5.039999961853027
+        },
+        {
+          "keyword": "online psych",
+          "volume": 1900,
+          "position": 59,
+          "url": "https://www.manastha.com/",
+          "etv": 3.990000009536743
+        },
+        {
+          "keyword": "samantha whatsapp phone number",
+          "volume": 1900,
+          "position": 33,
+          "url": "https://manastha.com/contact",
+          "etv": 3.990000009536743
+        },
+        {
+          "keyword": "therapist online india",
+          "volume": 1900,
+          "position": 40,
+          "url": "https://www.manastha.com/",
+          "etv": 3.990000009536743
+        },
+        {
+          "keyword": "free therapist",
+          "volume": 1600,
+          "position": 33,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 3.3600001335144043
+        },
+        {
+          "keyword": "relationship counselling online",
+          "volume": 1600,
+          "position": 50,
+          "url": "https://manastha.com/services/relationship-counselling",
+          "etv": 3.3600001335144043
+        },
+        {
+          "keyword": "relationship problems therapist",
+          "volume": 1600,
+          "position": 64,
+          "url": "https://manastha.com/services/relationship-counselling",
+          "etv": 3.3600001335144043
+        },
+        {
+          "keyword": "couple therapist online",
+          "volume": 1300,
+          "position": 52,
+          "url": "https://manastha.com/services/relationship-counselling",
+          "etv": 2.7300000190734863
+        },
+        {
+          "keyword": "couples therapy online",
+          "volume": 1300,
+          "position": 58,
+          "url": "https://manastha.com/services/relationship-counselling",
+          "etv": 2.7300000190734863
+        },
+        {
+          "keyword": "free online counselling chat 24/7",
+          "volume": 1000,
+          "position": 49,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 2.0999999046325684
+        },
+        {
+          "keyword": "irrational fear meaning",
+          "volume": 1000,
+          "position": 71,
+          "url": "https://manastha.com/blog/how-to-deal-with-irrational-fears",
+          "etv": 2.0999999046325684
+        },
+        {
+          "keyword": "mental counseling free",
+          "volume": 1000,
+          "position": 42,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 2.0999999046325684
+        },
+        {
+          "keyword": "fear irrational",
+          "volume": 880,
+          "position": 59,
+          "url": "https://manastha.com/blog/how-to-deal-with-irrational-fears",
+          "etv": 1.8480000495910645
+        },
+        {
+          "keyword": "irrational fear",
+          "volume": 880,
+          "position": 64,
+          "url": "https://manastha.com/blog/how-to-deal-with-irrational-fears",
+          "etv": 1.8480000495910645
+        },
+        {
+          "keyword": "therapist for anxiety depression",
+          "volume": 880,
+          "position": 49,
+          "url": "https://www.manastha.com/",
+          "etv": 1.8480000495910645
+        },
+        {
+          "keyword": "online free psychologist",
+          "volume": 720,
+          "position": 39,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.5120000839233398
+        },
+        {
+          "keyword": "psychiatrist free online",
+          "volume": 720,
+          "position": 33,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.5120000839233398
+        },
+        {
+          "keyword": "online free therapist chat",
+          "volume": 590,
+          "position": 35,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.2389999628067017
+        },
+        {
+          "keyword": "therapist in india",
+          "volume": 590,
+          "position": 41,
+          "url": "https://www.manastha.com/",
+          "etv": 1.2389999628067017
+        },
+        {
+          "keyword": "therapist online free chat",
+          "volume": 590,
+          "position": 39,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.2389999628067017
+        },
+        {
+          "keyword": "therapy online chat free",
+          "volume": 590,
+          "position": 46,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.2389999628067017
+        }
+      ],
+      "lost_top50": [
+        {
+          "keyword": "psychiatric job",
+          "volume": 720,
+          "position": 8,
+          "url": "https://manastha.com/careers/psychiatrist-job",
+          "etv": 24.336000442504883
+        },
+        {
+          "keyword": "online free psychiatrist",
+          "volume": 720,
+          "position": 30,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.5120000839233398
+        },
+        {
+          "keyword": "online therapy free sessions",
+          "volume": 480,
+          "position": 22,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.2960000038146973
+        },
+        {
+          "keyword": "india therapist",
+          "volume": 590,
+          "position": 31,
+          "url": "https://www.manastha.com/",
+          "etv": 1.2389999628067017
+        },
+        {
+          "keyword": "free counselling depression",
+          "volume": 390,
+          "position": 23,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.0529999732971191
+        },
+        {
+          "keyword": "psychiatrist for free online",
+          "volume": 480,
+          "position": 28,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.0080000162124634
+        },
+        {
+          "keyword": "therapy session online free",
+          "volume": 480,
+          "position": 27,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.0080000162124634
+        },
+        {
+          "keyword": "consult a psychiatrist online for free",
+          "volume": 480,
+          "position": 29,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.0080000162124634
+        },
+        {
+          "keyword": "counselling service online",
+          "volume": 480,
+          "position": 30,
+          "url": "https://www.manastha.com/",
+          "etv": 1.0080000162124634
+        },
+        {
+          "keyword": "free online counselling chat 24 7 india",
+          "volume": 480,
+          "position": 32,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 1.0080000162124634
+        },
+        {
+          "keyword": "counselling for depression free",
+          "volume": 390,
+          "position": 26,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.8970000147819519
+        },
+        {
+          "keyword": "free counselling for depression",
+          "volume": 390,
+          "position": 24,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.8579999804496765
+        },
+        {
+          "keyword": "depression counselling free",
+          "volume": 390,
+          "position": 26,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.8190000057220459
+        },
+        {
+          "keyword": "sunita kalra",
+          "volume": 390,
+          "position": 26,
+          "url": "https://manastha.com/professionals/tanya-kalra",
+          "etv": 0.8190000057220459
+        },
+        {
+          "keyword": "counseling for depression free",
+          "volume": 390,
+          "position": 33,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.8190000057220459
+        },
+        {
+          "keyword": "depression counseling free",
+          "volume": 390,
+          "position": 33,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.8190000057220459
+        },
+        {
+          "keyword": "free depression counseling",
+          "volume": 390,
+          "position": 33,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.8190000057220459
+        },
+        {
+          "keyword": "best therapist in india",
+          "volume": 320,
+          "position": 30,
+          "url": "https://www.manastha.com/",
+          "etv": 0.671999990940094
+        },
+        {
+          "keyword": "online relationship counselling free",
+          "volume": 260,
+          "position": 27,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.5460000038146973
+        },
+        {
+          "keyword": "therapykaro",
+          "volume": 260,
+          "position": 25,
+          "url": "https://www.manastha.com/",
+          "etv": 0.5460000038146973
+        },
+        {
+          "keyword": "online marriage counsellor",
+          "volume": 260,
+          "position": 29,
+          "url": "https://manastha.com/services/relationship-counselling",
+          "etv": 0.5460000038146973
+        },
+        {
+          "keyword": "website for counsellors",
+          "volume": 260,
+          "position": 30,
+          "url": "https://www.manastha.com/",
+          "etv": 0.5460000038146973
+        },
+        {
+          "keyword": "free psychologist",
+          "volume": 260,
+          "position": 32,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": 0.5460000038146973
+        },
+        {
+          "keyword": "therapist website",
+          "volume": 260,
+          "position": 32,
+          "url": "https://www.manastha.com/",
+          "etv": 0.5460000038146973
+        },
+        {
+          "keyword": "online counselling for relationship",
+          "volume": 210,
+          "position": 31,
+          "url": "https://manastha.com/services/relationship-counselling",
+          "etv": 0.4410000145435333
+        },
+        {
+          "keyword": "counselor online for free",
+          "volume": 2900,
+          "position": 27,
+          "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+          "etv": null
+        }
+      ],
+      "pos_changes": []
+    },
+    "mfine.co": {
+      "brand": "MFine",
+      "curr_kw": 14706,
+      "last_kw": 16521,
+      "delta": -1815,
+      "new_top50": [
+        {
+          "keyword": "a to z tablet",
+          "volume": 74000,
+          "position": 6,
+          "url": "https://www.mfine.co/medicines/a-to-z-tablet/",
+          "etv": 7200.2001953125
+        },
+        {
+          "keyword": "how to get rid of tan from face",
+          "volume": 40500,
+          "position": 5,
+          "url": "https://www.mfine.co/article/how-to-remove-face-tan-at-home",
+          "etv": 6561
+        },
+        {
+          "keyword": "how to get rid of tan on face",
+          "volume": 40500,
+          "position": 7,
+          "url": "https://www.mfine.co/article/how-to-remove-face-tan-at-home",
+          "etv": 6561
+        },
+        {
+          "keyword": "how to remove face tan",
+          "volume": 40500,
+          "position": 5,
+          "url": "https://www.mfine.co/article/how-to-remove-face-tan-at-home",
+          "etv": 6561
+        },
+        {
+          "keyword": "how to remove tan from face",
+          "volume": 40500,
+          "position": 7,
+          "url": "https://www.mfine.co/article/how-to-remove-face-tan-at-home",
+          "etv": 6561
+        },
+        {
+          "keyword": "how to remove sun tan from face",
+          "volume": 40500,
+          "position": 8,
+          "url": "https://www.mfine.co/article/how-to-remove-face-tan-at-home",
+          "etv": 3940.64990234375
+        },
+        {
+          "keyword": "thrombophob gel",
+          "volume": 110000,
+          "position": 8,
+          "url": "https://www.mfine.co/medicines/thrombophob-gel/",
+          "etv": 3718
+        },
+        {
+          "keyword": "aig hospitals",
+          "volume": 246000,
+          "position": 11,
+          "url": "https://www.mfine.co/hospitals/hyderabad/aig-hospitals/",
+          "etv": 3690
+        },
+        {
+          "keyword": "atoz tablet",
+          "volume": 22200,
+          "position": 4,
+          "url": "https://www.mfine.co/medicines/a-to-z-tablet/",
+          "etv": 3596.39990234375
+        },
+        {
+          "keyword": "tetrafol plus",
+          "volume": 22200,
+          "position": 4,
+          "url": "https://www.mfine.co/medicines/tetrafol-plus-tablet/",
+          "etv": 3596.39990234375
+        },
+        {
+          "keyword": "lumia 60k",
+          "volume": 33100,
+          "position": 5,
+          "url": "https://www.mfine.co/medicines/lumia-60k-capsule/",
+          "etv": 3220.6298828125
+        },
+        {
+          "keyword": "sorbiline syrup",
+          "volume": 33100,
+          "position": 4,
+          "url": "https://www.mfine.co/medicines/sorbiline-syrup-uses/",
+          "etv": 3220.6298828125
+        },
+        {
+          "keyword": "ovabless tablet",
+          "volume": 18100,
+          "position": 4,
+          "url": "https://www.mfine.co/medicines/ovabless-tablet/",
+          "etv": 2932.199951171875
+        },
+        {
+          "keyword": "felix hospital",
+          "volume": 40500,
+          "position": 5,
+          "url": "https://www.mfine.co/hospitals/noida/felix-hospital/",
+          "etv": 2668.949951171875
+        },
+        {
+          "keyword": "leucorrhoea",
+          "volume": 27100,
+          "position": 5,
+          "url": "https://www.mfine.co/guides/leucorrhea-treatment-india",
+          "etv": 2636.830078125
+        },
+        {
+          "keyword": "dermatologist near me",
+          "volume": 450000,
+          "position": 19,
+          "url": "https://www.mfine.co/speciality/dermatologist-in-pimpri-chinchwad?PageSpeed=noscript",
+          "etv": 2520
+        },
+        {
+          "keyword": "near me dermatologist",
+          "volume": 450000,
+          "position": 19,
+          "url": "https://www.mfine.co/speciality/dermatologist-in-pimpri-chinchwad?PageSpeed=noscript",
+          "etv": 2520
+        },
+        {
+          "keyword": "mfine",
+          "volume": 8100,
+          "position": 1,
+          "url": "https://www.mfine.co/",
+          "etv": 2462.39990234375
+        },
+        {
+          "keyword": "r e urine test",
+          "volume": 8100,
+          "position": 2,
+          "url": "https://www.mfine.co/lab-test/urine-r-e-test",
+          "etv": 2462.39990234375
+        },
+        {
+          "keyword": "re test of urine",
+          "volume": 8100,
+          "position": 3,
+          "url": "https://www.mfine.co/lab-test/urine-r-e-test",
+          "etv": 2462.39990234375
+        },
+        {
+          "keyword": "urine r/e test",
+          "volume": 8100,
+          "position": 2,
+          "url": "https://www.mfine.co/lab-test/urine-r-e-test",
+          "etv": 2462.39990234375
+        },
+        {
+          "keyword": "urine re test",
+          "volume": 8100,
+          "position": 2,
+          "url": "https://www.mfine.co/lab-test/urine-r-e-test",
+          "etv": 2462.39990234375
+        },
+        {
+          "keyword": "bio d3 strong",
+          "volume": 14800,
+          "position": 3,
+          "url": "https://www.mfine.co/medicines/bio-d3-strong-soft-gelatin-capsule/",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "vitamin d vegetables",
+          "volume": 14800,
+          "position": 7,
+          "url": "https://www.mfine.co/article/vitamin-d-fruits-and-vegetables",
+          "etv": 2397.60009765625
+        },
+        {
+          "keyword": "sachet econorm",
+          "volume": 90500,
+          "position": 11,
+          "url": "https://www.mfine.co/medicines/econorm-sachet/",
+          "etv": 2316.800048828125
+        },
+        {
+          "keyword": "faa 20",
+          "volume": 12100,
+          "position": 3,
+          "url": "https://www.mfine.co/medicines/faa-20-tablet/",
+          "etv": 1960.199951171875
+        },
+        {
+          "keyword": "sm fibro tablet",
+          "volume": 12100,
+          "position": 3,
+          "url": "https://www.mfine.co/medicines/sm-fibro-soft-gelatin-capsule/",
+          "etv": 1960.199951171875
+        },
+        {
+          "keyword": "mensta tablet",
+          "volume": 27100,
+          "position": 7,
+          "url": "https://www.mfine.co/medicines/dabur-mensta-tablet-pack-of-2/",
+          "etv": 1785.8900146484375
+        },
+        {
+          "keyword": "ostocalcium syrup",
+          "volume": 22200,
+          "position": 8,
+          "url": "https://www.mfine.co/medicines/ostocalcium-b12-syrup-banana/",
+          "etv": 1462.97998046875
+        },
+        {
+          "keyword": "atoz multivitamin",
+          "volume": 14800,
+          "position": 5,
+          "url": "https://www.mfine.co/medicines/a-to-z-tablet/",
+          "etv": 1440.0400390625
+        },
+        {
+          "keyword": "baltod english",
+          "volume": 14800,
+          "position": 5,
+          "url": "https://www.mfine.co/article/dermatologist-treatment-to-cure-boils-baltod",
+          "etv": 1440.0400390625
+        },
+        {
+          "keyword": "baltod in english",
+          "volume": 14800,
+          "position": 5,
+          "url": "https://www.mfine.co/article/dermatologist-treatment-to-cure-boils-baltod",
+          "etv": 1440.0400390625
+        },
+        {
+          "keyword": "manforce stay long gel",
+          "volume": 14800,
+          "position": 5,
+          "url": "https://www.mfine.co/medicines/manforce-staylong-gel/",
+          "etv": 1440.0400390625
+        },
+        {
+          "keyword": "manforce staylong gel",
+          "volume": 14800,
+          "position": 5,
+          "url": "https://www.mfine.co/medicines/manforce-staylong-gel/",
+          "etv": 1440.0400390625
+        },
+        {
+          "keyword": "how to remove skin tanning from face",
+          "volume": 40500,
+          "position": 11,
+          "url": "https://www.mfine.co/article/how-to-remove-face-tan-at-home",
+          "etv": 1368.9000244140625
+        },
+        {
+          "keyword": "continental hospital",
+          "volume": 90500,
+          "position": 11,
+          "url": "https://www.mfine.co/hospitals/hyderabad/continental-hospital/",
+          "etv": 1357.5
+        },
+        {
+          "keyword": "faa 20 tablet",
+          "volume": 8100,
+          "position": 4,
+          "url": "https://www.mfine.co/medicines/faa-20-tablet/",
+          "etv": 1312.199951171875
+        },
+        {
+          "keyword": "lubrijoint plus",
+          "volume": 8100,
+          "position": 3,
+          "url": "https://www.mfine.co/medicines/lubrijoint-plus-tablet/",
+          "etv": 1312.199951171875
+        },
+        {
+          "keyword": "shelcal hd tablet",
+          "volume": 18100,
+          "position": 6,
+          "url": "https://www.mfine.co/medicines/shelcal-hd-tablet/",
+          "etv": 1192.7900390625
+        },
+        {
+          "keyword": "baltod",
+          "volume": 12100,
+          "position": 5,
+          "url": "https://www.mfine.co/article/dermatologist-treatment-to-cure-boils-baltod",
+          "etv": 1177.3299560546875
+        },
+        {
+          "keyword": "natural viagra",
+          "volume": 3600,
+          "position": 3,
+          "url": "https://www.mfine.co/article/15-foods-that-work-as-natural-viagra-for-erectile-dysfunction",
+          "etv": 1094.4000244140625
+        },
+        {
+          "keyword": "b12 rich food",
+          "volume": 110000,
+          "position": 17,
+          "url": "https://www.mfine.co/guides/b12-foods-vegetarian-in-india",
+          "etv": 1001
+        },
+        {
+          "keyword": "manforce long lasting gel",
+          "volume": 14800,
+          "position": 5,
+          "url": "https://www.mfine.co/medicines/manforce-staylong-gel/",
+          "etv": 975.3200073242188
+        }
+      ],
+      "lost_top50": [
+        {
+          "keyword": "fruits rich vitamin d",
+          "volume": 3600,
+          "position": 2,
+          "url": "https://www.mfine.co/article/vitamin-d-fruits-and-vegetables",
+          "etv": 1094.4000244140625
+        },
+        {
+          "keyword": "how can look beautiful",
+          "volume": 1600,
+          "position": 2,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how can we look beautiful",
+          "volume": 1600,
+          "position": 5,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how can you look beautiful",
+          "volume": 1600,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how i look beautiful",
+          "volume": 1600,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how look beautiful",
+          "volume": 1600,
+          "position": 5,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how looking beautiful",
+          "volume": 1600,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how to be look beautiful",
+          "volume": 1600,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how to look beautiful",
+          "volume": 1600,
+          "position": 2,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 486.3999938964844
+        },
+        {
+          "keyword": "how can i look",
+          "volume": 1300,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 395.20001220703125
+        },
+        {
+          "keyword": "curd vitamin b12",
+          "volume": 880,
+          "position": 5,
+          "url": "https://www.mfine.co/article/vitamin-b12-foods-for-vegetarians",
+          "etv": 267.5199890136719
+        },
+        {
+          "keyword": "how to check blood pressure in mobile",
+          "volume": 880,
+          "position": 2,
+          "url": "https://www.mfine.co/health-tools/bp-monitoring-app/",
+          "etv": 267.5199890136719
+        },
+        {
+          "keyword": "how to check bp in mobile",
+          "volume": 880,
+          "position": 2,
+          "url": "https://www.mfine.co/health-tools/bp-monitoring-app/",
+          "etv": 267.5199890136719
+        },
+        {
+          "keyword": "how to check bp on mobile",
+          "volume": 880,
+          "position": 2,
+          "url": "https://www.mfine.co/health-tools/bp-monitoring-app/",
+          "etv": 267.5199890136719
+        },
+        {
+          "keyword": "desi viagra",
+          "volume": 720,
+          "position": 5,
+          "url": "https://www.mfine.co/article/15-foods-that-work-as-natural-viagra-for-erectile-dysfunction",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "dr online",
+          "volume": 720,
+          "position": 1,
+          "url": "https://www.mfine.co/online-doctor-consultation/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "hot xxl cream for men",
+          "volume": 720,
+          "position": 1,
+          "url": "https://www.mfine.co/medicines/hot-xxl-cream-for-men/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "how look good",
+          "volume": 720,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "how to look",
+          "volume": 720,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "how can i look pretty",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "how can you look pretty",
+          "volume": 590,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "how to be look pretty",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "b12 in curd",
+          "volume": 480,
+          "position": 5,
+          "url": "https://www.mfine.co/article/vitamin-b12-foods-for-vegetarians",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "econorm sachet how many times a day",
+          "volume": 480,
+          "position": 2,
+          "url": "https://www.mfine.co/medicines/econorm-sachet/",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "how can i look beautiful without makeup",
+          "volume": 480,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "how look beautiful without makeup",
+          "volume": 480,
+          "position": 2,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "how to become beautiful without makeup",
+          "volume": 480,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "how to look beautiful naturally everyday",
+          "volume": 480,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 145.9199981689453
+        },
+        {
+          "keyword": "70 early signs of pregnancy",
+          "volume": 390,
+          "position": 2,
+          "url": "https://www.mfine.co/guides/70-early-signs-of-pregnancy-india",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "dermadew lotion uses in hindi",
+          "volume": 390,
+          "position": 4,
+          "url": "https://www.mfine.co/medicines/dermadew-caloe-lotion/",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "dr reshma",
+          "volume": 390,
+          "position": 5,
+          "url": "https://www.mfine.co/doctor/dr-reshma-general-physician-bangalore",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "how lose belly fat after c section",
+          "volume": 390,
+          "position": 3,
+          "url": "https://www.mfine.co/guides/how-to-reduce-belly-fat-after-c-section-india",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "drink to reduce belly fat after c section",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.mfine.co/guides/how-to-reduce-belly-fat-after-c-section-india",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "drink to reduce belly fat after c-section",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.mfine.co/guides/how-to-reduce-belly-fat-after-c-section-india",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "how to apply manforce stay long gel",
+          "volume": 320,
+          "position": 3,
+          "url": "https://www.mfine.co/medicines/manforce-staylong-gel/",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "how to become beautiful naturally",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "best herbal viagra",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.mfine.co/article/15-foods-that-work-as-natural-viagra-for-erectile-dysfunction",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "dermadew caloe lotion uses in hindi",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.mfine.co/medicines/dermadew-caloe-lotion/",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "how be beautiful naturally",
+          "volume": 260,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "how can i be beautiful naturally",
+          "volume": 260,
+          "position": 3,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "how to be beautiful naturally",
+          "volume": 260,
+          "position": 2,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "how to become pretty without makeup",
+          "volume": 260,
+          "position": 4,
+          "url": "https://www.mfine.co/article/fifteen-best-tips-to-look-attractive-without-makeup",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "how long to take ovabless tablet",
+          "volume": 210,
+          "position": 2,
+          "url": "https://www.mfine.co/medicines/ovabless-tablet/",
+          "etv": 63.84000015258789
+        }
+      ],
+      "pos_changes": []
+    },
+    "mindtalk.in": {
+      "brand": "Mindtalk",
+      "curr_kw": 2069,
+      "last_kw": 2277,
+      "delta": -208,
+      "new_top50": [
+        {
+          "keyword": "counselling",
+          "volume": 90500,
+          "position": 9,
+          "url": "https://www.mindtalk.in/treatments/counselling-therapy",
+          "etv": 5963.9501953125
+        },
+        {
+          "keyword": "therapist in near me",
+          "volume": 60500,
+          "position": 9,
+          "url": "https://www.mindtalk.in/doctors/therapists",
+          "etv": 2837.449951171875
+        },
+        {
+          "keyword": "psychology near me",
+          "volume": 49500,
+          "position": 11,
+          "url": "https://www.mindtalk.in/doctors/clinical-psychologists-in-bangalore",
+          "etv": 1267.199951171875
+        },
+        {
+          "keyword": "lsas full form",
+          "volume": 9900,
+          "position": 5,
+          "url": "https://www.mindtalk.in/blogs/guide-to-liebowitz-social-anxiety-scale",
+          "etv": 963.27001953125
+        },
+        {
+          "keyword": "therapist for adhd",
+          "volume": 9900,
+          "position": 9,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-hyderabad",
+          "etv": 963.27001953125
+        },
+        {
+          "keyword": "divorce",
+          "volume": 90500,
+          "position": 16,
+          "url": "https://www.mindtalk.in/blogs/exploring-reasons-and-effects-of-divorce-in-india",
+          "etv": 823.5499877929688
+        },
+        {
+          "keyword": "therapy therapist",
+          "volume": 90500,
+          "position": 19,
+          "url": "https://www.mindtalk.in/doctors/therapists",
+          "etv": 678.75
+        },
+        {
+          "keyword": "couple therapist",
+          "volume": 9900,
+          "position": 8,
+          "url": "https://www.mindtalk.in/treatments/couples-therapy",
+          "etv": 652.4099731445312
+        },
+        {
+          "keyword": "therapist near me",
+          "volume": 60500,
+          "position": 16,
+          "url": "https://www.mindtalk.in/doctors/therapists",
+          "etv": 550.5499877929688
+        },
+        {
+          "keyword": "f o m o full form",
+          "volume": 27100,
+          "position": 13,
+          "url": "https://www.mindtalk.in/blogs/understanding-fomo-fear-of-missing-out",
+          "etv": 533.8699951171875
+        },
+        {
+          "keyword": "marriage and relationship counseling",
+          "volume": 14800,
+          "position": 11,
+          "url": "https://www.mindtalk.in/treatments/couples-therapy",
+          "etv": 500.239990234375
+        },
+        {
+          "keyword": "clinical psychology near me",
+          "volume": 4400,
+          "position": 7,
+          "url": "https://www.mindtalk.in/doctors/clinical-psychologists",
+          "etv": 428.1199951171875
+        },
+        {
+          "keyword": "adhd",
+          "volume": 165000,
+          "position": 41,
+          "url": "https://www.mindtalk.in/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+          "etv": 346.5
+        },
+        {
+          "keyword": "adhd disease",
+          "volume": 165000,
+          "position": 48,
+          "url": "https://www.mindtalk.in/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+          "etv": 346.5
+        },
+        {
+          "keyword": "attention deficit adhd",
+          "volume": 165000,
+          "position": 48,
+          "url": "https://www.mindtalk.in/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+          "etv": 346.5
+        },
+        {
+          "keyword": "hyperactivity disorder",
+          "volume": 165000,
+          "position": 45,
+          "url": "https://www.mindtalk.in/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+          "etv": 346.5
+        },
+        {
+          "keyword": "counseling",
+          "volume": 60500,
+          "position": 20,
+          "url": "https://www.mindtalk.in/treatments/counselling-therapy",
+          "etv": 338.79998779296875
+        },
+        {
+          "keyword": "fear of missing out meaning",
+          "volume": 74000,
+          "position": 21,
+          "url": "https://www.mindtalk.in/blogs/understanding-fomo-fear-of-missing-out",
+          "etv": 318.20001220703125
+        },
+        {
+          "keyword": "marriage counseling",
+          "volume": 14800,
+          "position": 14,
+          "url": "https://www.mindtalk.in/treatments/couples-therapy",
+          "etv": 291.55999755859375
+        },
+        {
+          "keyword": "relationship therapists",
+          "volume": 4400,
+          "position": 8,
+          "url": "https://www.mindtalk.in/treatments/couples-therapy",
+          "etv": 289.9599914550781
+        },
+        {
+          "keyword": "therapy centres near me",
+          "volume": 4400,
+          "position": 8,
+          "url": "https://www.mindtalk.in/doctors/therapists",
+          "etv": 289.9599914550781
+        },
+        {
+          "keyword": "anxiety meaning in hindi",
+          "volume": 135000,
+          "position": 53,
+          "url": "https://www.mindtalk.in/hi/illnesses/anxiety",
+          "etv": 283.5
+        },
+        {
+          "keyword": "depression",
+          "volume": 135000,
+          "position": 44,
+          "url": "https://www.mindtalk.in/illnesses/depression",
+          "etv": 283.5
+        },
+        {
+          "keyword": "insomnia",
+          "volume": 135000,
+          "position": 58,
+          "url": "https://www.mindtalk.in/blogs/understanding-insomnia",
+          "etv": 283.5
+        },
+        {
+          "keyword": "how to stop overthinking",
+          "volume": 18100,
+          "position": 12,
+          "url": "https://www.mindtalk.in/blogs/guide-to-stop-overthinking-and-anxiety-naturally",
+          "etv": 271.5
+        },
+        {
+          "keyword": "therapy near me",
+          "volume": 60500,
+          "position": 21,
+          "url": "https://www.mindtalk.in/doctors/therapists",
+          "etv": 260.1499938964844
+        },
+        {
+          "keyword": "adhd therapist adults",
+          "volume": 1600,
+          "position": 3,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-hyderabad",
+          "etv": 259.20001220703125
+        },
+        {
+          "keyword": "adult adhd therapist",
+          "volume": 1600,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-hyderabad",
+          "etv": 259.20001220703125
+        },
+        {
+          "keyword": "mental health professional for anxiety",
+          "volume": 3600,
+          "position": 9,
+          "url": "https://www.mindtalk.in/doctors/anxiety-specialists",
+          "etv": 237.24000549316406
+        },
+        {
+          "keyword": "adhd disease meaning",
+          "volume": 110000,
+          "position": 47,
+          "url": "https://www.mindtalk.in/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+          "etv": 231
+        },
+        {
+          "keyword": "adhd full form",
+          "volume": 110000,
+          "position": 38,
+          "url": "https://www.mindtalk.in/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+          "etv": 231
+        },
+        {
+          "keyword": "adhd meaning",
+          "volume": 110000,
+          "position": 58,
+          "url": "https://www.mindtalk.in/illnesses/attention-deficit-hyperactivity-disorder-adhd",
+          "etv": 231
+        },
+        {
+          "keyword": "ocd",
+          "volume": 110000,
+          "position": 53,
+          "url": "https://www.mindtalk.in/illnesses/obsessive-compulsive-disorder-ocd",
+          "etv": 231
+        }
+      ],
+      "lost_top50": [
+        {
+          "keyword": "mindtalk",
+          "volume": 720,
+          "position": 1,
+          "url": "https://www.mindtalk.in/",
+          "etv": 218.8800048828125
+        },
+        {
+          "keyword": "healthy relationship slogan",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.mindtalk.in/blogs/20-quotes-to-inspire-healthy-relationships",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "healthy relationship slogans",
+          "volume": 590,
+          "position": 2,
+          "url": "https://www.mindtalk.in/blogs/20-quotes-to-inspire-healthy-relationships",
+          "etv": 179.36000061035156
+        },
+        {
+          "keyword": "add/adhd doctors near me",
+          "volume": 1000,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-bangalore",
+          "etv": 162
+        },
+        {
+          "keyword": "adhd doctor near me",
+          "volume": 1000,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-bangalore",
+          "etv": 162
+        },
+        {
+          "keyword": "doctors near me for depression",
+          "volume": 1000,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/depression",
+          "etv": 162
+        },
+        {
+          "keyword": "anxiety neurosis meaning",
+          "volume": 390,
+          "position": 3,
+          "url": "https://www.mindtalk.in/blogs/understanding-anxiety-neurosis",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "therapist near me relationship",
+          "volume": 390,
+          "position": 1,
+          "url": "https://www.mindtalk.in/doctors/therapists",
+          "etv": 118.55999755859375
+        },
+        {
+          "keyword": "divorce reasons",
+          "volume": 720,
+          "position": 4,
+          "url": "https://www.mindtalk.in/blogs/exploring-reasons-and-effects-of-divorce-in-india",
+          "etv": 116.63999938964844
+        },
+        {
+          "keyword": "eclecticism in counselling",
+          "volume": 720,
+          "position": 4,
+          "url": "https://www.mindtalk.in/treatments/eclectic-therapy",
+          "etv": 116.63999938964844
+        },
+        {
+          "keyword": "adhd therapy near me",
+          "volume": 320,
+          "position": 5,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-hyderabad",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "how can i get mental peace",
+          "volume": 320,
+          "position": 2,
+          "url": "https://www.mindtalk.in/blogs/10-essential-steps-in-achieving-inner-peace-serenity-and-mind-control",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "how to get mental peace",
+          "volume": 320,
+          "position": 3,
+          "url": "https://www.mindtalk.in/blogs/10-essential-steps-in-achieving-inner-peace-serenity-and-mind-control",
+          "etv": 97.27999877929688
+        },
+        {
+          "keyword": "quote for healthy relationship",
+          "volume": 590,
+          "position": 4,
+          "url": "https://www.mindtalk.in/blogs/20-quotes-to-inspire-healthy-relationships",
+          "etv": 95.58000183105469
+        },
+        {
+          "keyword": "psychiatrist in tamil",
+          "volume": 260,
+          "position": 3,
+          "url": "https://www.mindtalk.in/doctors/tamil-speaking-doctors",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "relationship and marriage counseling",
+          "volume": 260,
+          "position": 5,
+          "url": "https://www.mindtalk.in/treatments/couples-therapy",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "relationship marriage counseling",
+          "volume": 260,
+          "position": 6,
+          "url": "https://www.mindtalk.in/treatments/couples-therapy",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "relationship marriage counselling",
+          "volume": 260,
+          "position": 5,
+          "url": "https://www.mindtalk.in/treatments/couples-therapy",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "teenage therapy near me",
+          "volume": 260,
+          "position": 5,
+          "url": "https://www.mindtalk.in/doctors/adolescent-specialists-in-bangalore",
+          "etv": 79.04000091552734
+        },
+        {
+          "keyword": "near therapy",
+          "volume": 480,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/therapists",
+          "etv": 77.76000213623047
+        },
+        {
+          "keyword": "psychologist in gujarati",
+          "volume": 480,
+          "position": 5,
+          "url": "https://www.mindtalk.in/doctors/gujarati-speaking-doctors",
+          "etv": 77.76000213623047
+        },
+        {
+          "keyword": "hyderabad counselling",
+          "volume": 390,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/counsellors-in-hyderabad",
+          "etv": 63.18000030517578
+        },
+        {
+          "keyword": "adhd psychiatrist near me",
+          "volume": 320,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-bangalore",
+          "etv": 51.84000015258789
+        },
+        {
+          "keyword": "adhd psychologist",
+          "volume": 320,
+          "position": 5,
+          "url": "https://www.mindtalk.in/doctors/adhd-specialists-in-bangalore",
+          "etv": 51.84000015258789
+        },
+        {
+          "keyword": "tamil counselling",
+          "volume": 320,
+          "position": 3,
+          "url": "https://www.mindtalk.in/doctors/tamil-speaking-doctors-in-bangalore",
+          "etv": 51.84000015258789
+        },
+        {
+          "keyword": "yoga positions for anxiety",
+          "volume": 320,
+          "position": 5,
+          "url": "https://www.mindtalk.in/blogs/yoga-for-anxiety",
+          "etv": 51.84000015258789
+        },
+        {
+          "keyword": "dominating nature",
+          "volume": 260,
+          "position": 4,
+          "url": "https://www.mindtalk.in/blogs/understanding-dominant-personality-and-dominating-nature",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "psyd near me",
+          "volume": 260,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/psychologists",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "sleep disorder care plan",
+          "volume": 260,
+          "position": 3,
+          "url": "https://www.mindtalk.in/blogs/nursing-care-and-diagnosis-plan-for-insomnia",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "teenager therapist near me",
+          "volume": 260,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/teenager-specialists",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "teenager therapy near me",
+          "volume": 260,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/teenager-specialists",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "therapists for teens near me",
+          "volume": 260,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/teenager-specialists",
+          "etv": 42.119998931884766
+        },
+        {
+          "keyword": "therapy for teenager near me",
+          "volume": 260,
+          "position": 6,
+          "url": "https://www.mindtalk.in/doctors/teenager-specialists",
+          "etv": 42.119998931884766
+        }
+      ],
+      "pos_changes": []
+    }
+  },
+  "gaps": [
+    {
+      "keyword": "thrombophob gel",
+      "volume": 110000,
+      "competitor": "MFine",
+      "comp_pos": 8,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "therapy",
+      "volume": 90500,
+      "competitor": "BetterHelp",
+      "comp_pos": 2,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "splitting",
+      "volume": 90500,
+      "competitor": "BetterHelp",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "definition of monogamy",
+      "volume": 90500,
+      "competitor": "BetterHelp",
+      "comp_pos": 10,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "a to z tablet",
+      "volume": 74000,
+      "competitor": "MFine",
+      "comp_pos": 6,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "meaning dignity",
+      "volume": 49500,
+      "competitor": "BetterHelp",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "dignity meaning",
+      "volume": 49500,
+      "competitor": "BetterHelp",
+      "comp_pos": 10,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "meaning for dignity",
+      "volume": 49500,
+      "competitor": "BetterHelp",
+      "comp_pos": 8,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "monogamous",
+      "volume": 49500,
+      "competitor": "BetterHelp",
+      "comp_pos": 9,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "situationship",
+      "volume": 40500,
+      "competitor": "Amaha",
+      "comp_pos": 8,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "quote for broken relationship",
+      "volume": 40500,
+      "competitor": "BetterHelp",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "aspiration meaning",
+      "volume": 40500,
+      "competitor": "BetterHelp",
+      "comp_pos": 10,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "neutral family",
+      "volume": 40500,
+      "competitor": "BetterHelp",
+      "comp_pos": 9,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "nuclear families",
+      "volume": 40500,
+      "competitor": "BetterHelp",
+      "comp_pos": 9,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "how to get rid of tan from face",
+      "volume": 40500,
+      "competitor": "MFine",
+      "comp_pos": 5,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "how to get rid of tan on face",
+      "volume": 40500,
+      "competitor": "MFine",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "how to remove face tan",
+      "volume": 40500,
+      "competitor": "MFine",
+      "comp_pos": 5,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "how to remove tan from face",
+      "volume": 40500,
+      "competitor": "MFine",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "how to remove sun tan from face",
+      "volume": 40500,
+      "competitor": "MFine",
+      "comp_pos": 8,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "felix hospital",
+      "volume": 40500,
+      "competitor": "MFine",
+      "comp_pos": 5,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "overthinking",
+      "volume": 33100,
+      "competitor": "Amaha",
+      "comp_pos": 5,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "hubby love quotes",
+      "volume": 33100,
+      "competitor": "BetterHelp",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "hubby quotes",
+      "volume": 33100,
+      "competitor": "BetterHelp",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "quotes about love husband",
+      "volume": 33100,
+      "competitor": "BetterHelp",
+      "comp_pos": 7,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "lumia 60k",
+      "volume": 33100,
+      "competitor": "MFine",
+      "comp_pos": 5,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "sorbiline syrup",
+      "volume": 33100,
+      "competitor": "MFine",
+      "comp_pos": 4,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "quotes for loneliness",
+      "volume": 27100,
+      "competitor": "BetterHelp",
+      "comp_pos": 2,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "quotes lonely",
+      "volume": 27100,
+      "competitor": "BetterHelp",
+      "comp_pos": 5,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "quotes of loneliness",
+      "volume": 27100,
+      "competitor": "BetterHelp",
+      "comp_pos": 4,
+      "mt_pos": 100
+    },
+    {
+      "keyword": "loneliness quotations",
+      "volume": 27100,
+      "competitor": "BetterHelp",
+      "comp_pos": 5,
+      "mt_pos": 100
+    }
+  ]
+}

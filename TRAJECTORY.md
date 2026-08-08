@@ -54,6 +54,8 @@
 | Top-3 ranking queries | **how-to-find-therapist-india pos 2** (W14 EXCEPTIONAL, DataForSEO 08-03), somatic-therapy pos 3.3 | — | 7,500 (Q3) | 🟡 Two top-3 confirmed. Aggregate count pending DataForSEO fresh pull. |
 | Pages live | 829 (GSC URLs Ranking wk Jul 25-31) | — | 800 (Q3) | 🟢 **Q3 target EXCEEDED (+3.6%)**. 829 vs 800 target. |
 | Inventory coverage (Track B) | 27% | 27% | 45% (Q3) | 🟡 Brief queue EMPTY (T5-REFILL-NOW CRITICAL) — velocity stalled until T5 refills. Stub-pilot 5 pages live (mindful-minutes). |
+| AI citation share (Perplexity) | 5/10 (50%) | ~4/10 | — | 🟡 Week 8: ±0 net vs last week. GAIN Q3 "psychiatrist near me bangalore" (110K vol, cited FIRST) + Q4 "cbt therapy online india". LOSS Q2 "online therapy bangalore" (rotation) + Q7 "cadabams mental health" (hospital/app brand split). Commercial rate: 2/5 (40%) — best ever. Branded rate: 2/3. |
+| AI citation share (Google AI OV) | 1/5 tested | ~2/5 | — | 🟡 Week 8: Q4 "cbt therapy online india" retained ✅ (3rd consecutive week). Q6–Q10 untested due to Chrome stall. Q1+Q5 ❌ (Amaha/hospital competitors). Running rate from last full test (wk7): 3/10. |
 
 ---
 
@@ -69,6 +71,13 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-07-08 | 6,342 | 784 | 5 | 129 | 2 | 73% | Page views stable (-1%); **backend fail -88%✅✅✅** (9.9%→1.5% — continued recovery, now negligible); **riya +133%✅✅** (6→14, first real break from invisibility); illness -27%⚠ (161→118); lp_form -15%⚠ (151→129); doctor→book CTA 73% (new high✅✅); lp:form=25.8x |
 | 2026-07-22 | MCP_BLOCKED | — | — | — | — | — | Billing issue — Mixpanel access blocked. No data. |
 | 2026-07-29 | 8,167 | 743 | 97 | 55 | 11 | 31% | Page views +29%✅ (3-wk vs 07-08); 🚨 lp:form INVERTED (on-site form 97 > LP form 55 — ads paused kills LP; on-site fills gap); net leads ~152 unique (97+55) = possible best week yet — verify Freshsales; doctor views +118%✅✅ (T9 discovery wins); doctor→book CTA rate -57%⚠⚠ (73%→31% — absolute clicks stable 431→406, new visitors are low-intent SEO); backend fail crept up 1.5%→6.7%⚠ (still ok; watch trend); riya -29%⚠ (14→10) |
+| 2026-08-05 | 9,884 | 780 | 115 | 55 | 14 | 29% | Page views +21%✅ (new weekly record); doctor views +26.5%✅ (1,293→1,636); net leads 170 (115+55, best week if Freshsales confirmed ✅); lp_form stable (55); doctor→book CTA 29% (-7.6%, stable); CTA→form 5%→8.75%✅✅ (on-site form improving structurally); backend fail 6.7%→7.5%⚠ (3rd consecutive increase); riya 10→7⚠ (persistent invisibility); lp:form=0.48:1 (on-site form primary, ads still paused) |
+
+**Variance > 20% WoW (2026-08-05 reading):**
+- page_views: **+21.0%** ✅ (8,167→9,884) — organic traffic growth compounding week-on-week
+- doctor_profile_viewed: **+26.5%** ✅ (1,293→1,636) — T9 content sprint delivering sustained doctor discovery lift
+- lead_create_failed: **+27.3%** ⚠ (11→14) — backend fail rate 6.7%→7.5%; 3rd consecutive weekly increase; still far below 35.7% peak but trend is wrong direction; engineering team should investigate
+- riya_page_viewed: **-30%** ⚠ (10→7) — 5 consecutive weeks of <15 views; effectively invisible; needs dedicated internal linking or feature placement
 
 **Variance > 20% WoW (2026-07-29 reading — vs 2026-07-08, 3-week gap due to 07-22 MCP block):**
 - form_submitted: **+1,840%** 🚨 (5→97) — structural channel shift: ads paused → LP form collapses → on-site form becomes primary. Total submitters ~152 (best week if confirmed real). Verify Freshsales urgently.
@@ -239,6 +248,13 @@ Strategist reads this every day before deciding actions — knows where the gaps
 | Week | Site intent rate | Median page intent | 🟢 Goldmines | 🟡 Rockets | 🔴 Leaky | ⚫ Dead | Top geo (share) | Revenue-validated bookings | Notes |
 |---|---:|---:|---:|---:|---:|---:|---|---:|---|
 | 2026-06-15 to 06-21 | 42% | 39.6% | 2 | 2 | 1 | 6 | Bengaluru (65%) | n/a (3986277 unavailable) | INAUGURAL · LIMITED_BASELINE · vol gates scaled · book_appointment-only intent |
+| 2026-W26 | 31.7% | 31.7% | 2 | 2 | 0 | 3 | Bengaluru (65.8%) | 104 (Payments) / 87 (Bookings) — organic | P5 AI search UNLOCKED (chatgpt.com 57 book clicks). UTM live. Paid separation active. |
+| 2026-W27 | 30.3% | 30.3% | 2 | 2 | 0 | 3 | Bengaluru (61.3%) | 94 (Payments) | P1/P2/P3 CONFIRMED 3wks. chatgpt.com 110 (+93%). |
+| 2026-W28 | 32.3% | 32.3% | 2 | 2 | 0 | 3 | Bengaluru (60.2%) | 118 (Payments) / 107 (Bookings) | PATTERNS CONFIRMED 4wks. chatgpt.com 155 (+40.9%). Kerala+Pune surge W1. |
+| 2026-W29 | — | — | — | — | — | — | — | — | MCP_DOWN |
+| 2026-W30 | — | — | — | — | — | — | — | — | MCP_BLOCKED |
+| 2026-W31 | 24.1% | 24.1% | 2 | 2 | 0 | 3 | Bengaluru (51.3%) | 193 Payments+232 Bookings RECORD. mindtalk_web 15 (doctor_card 13). | ADS RE-ACTIVATED. chatgpt.com 203 (+31%). DOHA 47 W1. Geographic diversification. |
+| 2026-W32 | 22.9% | 22.9% | 2 | 2 | 0 | 3 | Bengaluru (58.7% recovery) | 205 Payments+264 Bookings NEW RECORD. mindtalk_web 7 (doctor_card 5 CRASH). Riya 1. | DOHA BREAKOUT 47. Australia 60. Tamil CRASH. /appointments+/assessments UX CRITICAL. chatgpt.com new users +50%. |
 
 **Geographic concentration metric:** Bengaluru = 65% of all booking intent (high single-market dependence).
 **Tier movement:** n/a (no prior week).

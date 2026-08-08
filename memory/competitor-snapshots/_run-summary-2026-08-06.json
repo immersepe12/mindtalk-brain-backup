@@ -1,0 +1,19 @@
+{
+  "date": "2026-08-06",
+  "week": 8,
+  "baseline": "2026-07-30",
+  "domains": {
+    "amahahealth.com": 1080,
+    "yourdost.com": 175,
+    "betterhelp.com": 14856,
+    "manastha.com": 124,
+    "mfine.co": 14706,
+    "mindtalk.in": 2069
+  },
+  "gaps_count": 142,
+  "top3_gaps": [
+    "thrombophob gel",
+    "therapy",
+    "splitting"
+  ]
+}

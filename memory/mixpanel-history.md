@@ -86,7 +86,34 @@ One line per Task 15 run. Most recent at bottom.
 | 2026-07-08 (7d) | 6,342 | 784 | 5 | 129 | 2 | 73% | Page views stable (-1%); BACKEND FAIL -88%✅✅✅ (9.9%→1.5% — recovery continues, now effectively negligible); riya +133%✅✅ (6→14, first real break from invisibility); illness -27%⚠ (161→118); lp_form -15% (151→129, watch); doctor→book CTA +10.6% new high (73%); lp:form=25.8x |
 | 2026-07-22 (7d) | MCP_BLOCKED | — | — | — | — | — | ⛔ MCP_BLOCKED: Mixpanel returned "account blocked — payment required". Billing issue on Mixpanel account. No data this week. See mixpanel-access-blocked.md. |
 | 2026-07-29 (7d) | 8,167 | 743 | 97 | 55 | 11 | 31% | Page views +28.8%✅ (vs 07-08, 3-wk gap); 🚨 form_submitted 5→97 (INVERTED lp:form — on-site form now primary; ads paused explains LP drop); lp_form -57%⚠ (129→55, ads pause); doctor→book CTA -57%⚠⚠ (73%→31%, absolute clicks stable 431→406 — new doctor traffic is low-intent SEO visitors); backend fail crept up 1.5%→6.7%⚠ (still ok; was 35.7% peak); riya -29%⚠ (14→10); doctor views +118%✅✅ (592→1,293 — T9 content driving discovery); where-to-start +31%✅ (16→21) |
+| 2026-08-05 (7d) | 9,884 | 780 | 115 | 55 | 14 | 29% | Page views +21%✅ (8,167→9,884); doctor views +26.5%✅ (1,293→1,636 — T9 content compounding); form_submitted +18.6% (97→115); net leads 170 (115+55 = best week if Freshsales confirmed ✅); lp_form stable (55, 0%); doctor→book CTA -7.6% (31%→29%, stable); CTA→form 5%→8.75%✅ (on-site booking form conversion continuing to improve); lp:form=0.48:1 (on-site form dominant, ads still paused); backend fail crept 6.7%→7.5%⚠ (14 failures, watch trend — was 35.7% peak); riya -30%⚠ (10→7, still invisible); where-to-start 21→19 (-9.5%, stable) |
 
+
+2026-08-05T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d unique users (vs 2026-07-29 baseline) |
+  VOLUME (unique users):
+  - $mp_web_page_view: 9,884 (+21.0% WoW ✅)
+  - blog_viewed: 1,327 | doctor_profile_viewed: 1,636 (+26.5%✅) | treatment_page_viewed: 355 | illness_page_viewed: 188 | riya_page_viewed: 7 (-30%⚠) | where_to_start_page_viewed: 19 (-9.5%, stable)
+  - book_appointment_clicked: 780 (+5.0%) | whatsapp_clicked: 115 (+6.5%) | call_clicked: 54 (+3.8%) | cta_clicked: 170 (-19.8%, borderline)
+  - form_submitted: 115 unique (+18.6%) | lp_form_submitted: 55 unique (0%, stable)
+  - form_started: 26 | form_error: 3 (+200% vs 1, tiny absolute) | lead_create_failed: 14 (+27.3%⚠)
+  FUNNELS:
+  - A (main): page view 9,884 → book CTA 777 (7.86%, was 9.0%) → form_submit 68 (8.75% of CTA, 0.69% of PVs)
+    CTA→form conversion: 5%→8.75% +75%✅✅ (on-site booking form continuing to improve)
+  - B (doctor-driven): doctor_profile 1,636 → book CTA 475 (29.0%, was 31.4%) → form_submit 10 (2.1% of CTA, 0.61% of PVs)
+  - C (where-to-start): viewed 19 → started 6 (31.6%, was 38.1%) → completed 6 (100% of started)
+  KEY METRICS:
+  - Net total leads: 115+55 = 170 unique submitters (vs 152 last week = +11.8% ✅ — verify Freshsales)
+  - lp:form ratio: 55/115 = 0.48:1 (on-site form dominant; ads still paused; LP form flat)
+  - Backend fail rate: 14/(115+55+14) = 7.5% (was 6.7% — second consecutive week creeping up ⚠)
+  - Doctor→book CTA: 29.0% (was 31.4%, -7.6% — within normal range, stable)
+  - Riya discovery rate: 7/9,884 = 0.071% (was 0.12%, -40% — consistently invisible)
+  WoW FLAGS (>20% vs 2026-07-29):
+  ✅ page_views +21.0% (8,167→9,884) — organic traffic compounding
+  ✅ doctor_profile_viewed +26.5% (1,293→1,636) — T9 content driving sustained doctor discovery
+  ⚠ lead_create_failed +27.3% (11→14) — backend fail rate 6.7%→7.5%; 3rd consecutive increase; was 35.7% at peak; still far below but trend is wrong direction
+  ⚠ riya_page_viewed -30% (10→7) — persistent invisibility (5 consecutive weeks <15 views)
+  ⚠ form_error +200% (1→3) — tiny absolute (3 users), not actionable yet but watch
+  NOT FLAGGED: form_submitted +18.6% (just under), CTA→form +75%✅ (highly positive structural shift)
 
 2026-07-29T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d unique users (vs 2026-07-08 baseline — 07-22 was MCP_BLOCKED) |
   VOLUME (unique users):

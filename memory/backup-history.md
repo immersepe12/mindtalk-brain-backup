@@ -61,3 +61,6 @@
 2026-08-03 23:12 IST | 22 files changed | commit: 5cce9aa | push: success | prod: remote-ahead
   → Slack posted to C0AUAPS4J83 ✅
 2026-08-04 23:11 IST | 9 files changed | commit: f9fe9e6 | push: success
+2026-08-05 23:11 IST | 21 files changed | commit: 218bc15 | push: success (/tmp clone — FUSE index.lock cleared via Python rename; index.lock on mindtalk repo also cleared, 7h stale)
+2026-08-06-2311 | 39 files changed | commit: 937d339 | push: success (force — remote had diverged)
+2026-08-07T23:12:01+05:30 | BLOCKED | brain/.git/index.lock stale (23h) — cannot remove from sandbox | push: skipped | action: manual rm required on Mac Mini

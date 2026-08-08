@@ -1,8 +1,3 @@
-# ⚠ CLEANUP ARTIFACT — DO NOT APPLY AGAIN
-# This file is a duplicate of the .md.applied sibling. Already applied 2026-07-19.
-# Moved to brain/applied-changes/ on 2026-08-06. FUSE prevented deletion of this copy.
-# Strategist: ignore this file — it is safe to delete manually if desired.
-
 # Proposal: T5 Step 2 + Step 7 — Enforce 12-brief floor as mandatory gate and fix output header
 **Proposed:** 2026-07-19T20:30:00+05:30
 **Source:** task13-meta-learner-2026-07-19

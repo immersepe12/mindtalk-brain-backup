@@ -146,3 +146,55 @@
   - find-therapist: IMPROVING (319 dead, -25% WoW)
 - **Next T19 run: 2026-07-22** — will compare vs W28 (Jul 2–8) as baseline (2-week gap). Flag explicitly in WoW output.
 - **Strategist action weights: UNCHANGED from W28.** Do not adjust until W30 data confirms/denies pending patterns.
+
+## 2026-08-05 11:00 IST — T19 W32 (Jul 29–Aug 4, 2026)
+
+### 🚨 UX CRITICAL — Double regression: /appointments + /assessments
+- /appointments: 52 → 762 dead clicks (+1,365% WoW) — was a top Goldmine
+- /assessments: ~52 → 725 dead clicks (+1,294% WoW) — was top Engagement Engine
+- Both crashed simultaneously → single deploy regression suspected (check deploys Jul 28–Aug 4)
+- **Action for dev team: immediate investigation required. Both pages are primary conversion paths.**
+
+### ✅ New revenue records (both up despite UX crisis)
+- Payments: 193 → 205 (+6.2% WoW) — new all-time high
+- Bookings: 232 → 264 (+13.8% WoW) — new all-time high
+- Driven by: BOF ads (relationship creative), Bengaluru recovery (+13.4%), Doha breakout
+
+### 🚨 doctor_card UTM crash (13→5)
+- mindtalk_web attribution from /doctors/* dropped 13 → 5 despite total payments rising
+- Hypothesis: paid ads on /experts overwrite session UTM when users navigate to /doctors
+- Monitor W33. If < 8 again: flag UTM architecture fix to eng. Pattern 2 data continuity at risk.
+
+### 🟢 Riya first revenue (Week 1)
+- utm_medium=riya: 1 payment confirmed (utm_campaign=ai-session)
+- P13 seed. Pattern requires 3+ weeks to propose.
+
+### 🟢 Doha/Qatar breakout (P11 Week 2 — was W31 Week 1)
+- 47 book clicks (47 in W31 as well — stable new market)
+- Qatar + UAE = 63 NRI clicks total. Zero Gulf diaspora content exists.
+- **Highest-ROI content gap: "online therapy for Indians in Qatar/UAE" — add to T5 proposals ASAP.**
+
+### 🟢 Australia NRI (P12 Week 2)
+- NSW 31 + Victoria 29 = 60 clicks. Up from ~40 W31.
+- Zero Australia-specific content. P12 Week 2 requires one more week to confirm.
+
+### ⚠️ Tamil Nadu crash (83 → 27)
+- Was P1 Tamil (week 4 of 4 needed to confirm). Crash resets clock to WATCH.
+- Could be W31 paid traffic reverting. Need W33 to distinguish signal from noise.
+- /doctors/tamil-speaking-doctors classification: downgrade to 🟡 Rocket (was tracking toward 🟢 Goldmine).
+
+### 🟢 Bengaluru recovery (51.3% → 58.7%)
+- Strong bounce-back. Top city = Bengaluru 1,156 (+13.4%), then Hyderabad 83, Mumbai 88.
+- chatgpt.com new users +50% (session-level -19% = healthy — new users arriving, returning direct).
+
+---
+
+### Standing action weights (updated W32)
+1. **Fix /appointments + /assessments UX immediately** (P0 for dev team)
+2. **Monitor doctor_card UTM** — if W33 < 8, escalate UTM architecture fix
+3. **Gulf diaspora content (Qatar+UAE)** = highest-ROI T5 proposal this week
+4. **Riya content** = monitor 2 more weeks before proposing
+5. **Australia content** = 1 more week to confirm P12 before proposing
+6. **Tamil content** = WATCH (do not propose new pages until W33 confirms recovery)
+7. Doctor content > all other types (P2 cumulative 60 payments over 6 weeks)
+8. Every content piece must mandate internal links to /doctors or /experts (P3)

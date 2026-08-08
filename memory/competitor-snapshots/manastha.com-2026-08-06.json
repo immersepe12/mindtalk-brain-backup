@@ -1,0 +1,358 @@
+{
+  "domain": "manastha.com",
+  "brand": "Manastha",
+  "date": "2026-08-06",
+  "total_domain_kw": 124,
+  "top50": [
+    {
+      "keyword": "manastha",
+      "volume": 1600,
+      "position": 2,
+      "url": "https://www.manastha.com/",
+      "etv": 369.66400146484375
+    },
+    {
+      "keyword": "therapist",
+      "volume": 90500,
+      "position": 53,
+      "url": "https://www.manastha.com/",
+      "etv": 190.0500030517578
+    },
+    {
+      "keyword": "manastha",
+      "volume": 1600,
+      "position": 1,
+      "url": "https://www.manastha.com/",
+      "etv": 113.76000213623047
+    },
+    {
+      "keyword": "counsellor free online",
+      "volume": 2900,
+      "position": 14,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 21.75
+    },
+    {
+      "keyword": "therapy online free",
+      "volume": 5400,
+      "position": 21,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 14.579999923706055
+    },
+    {
+      "keyword": "psychiatrist job",
+      "volume": 720,
+      "position": 11,
+      "url": "https://manastha.com/careers/psychiatrist-job",
+      "etv": 14.184000015258789
+    },
+    {
+      "keyword": "free therapist online",
+      "volume": 5400,
+      "position": 26,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 11.34000015258789
+    },
+    {
+      "keyword": "therapist online",
+      "volume": 4400,
+      "position": 35,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 9.239999771118164
+    },
+    {
+      "keyword": "therapy online",
+      "volume": 4400,
+      "position": 44,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 9.239999771118164
+    },
+    {
+      "keyword": "counselling for stress",
+      "volume": 3600,
+      "position": 67,
+      "url": "https://manastha.com/services/stress-management",
+      "etv": 7.559999942779541
+    },
+    {
+      "keyword": "online counsellor",
+      "volume": 3600,
+      "position": 27,
+      "url": "https://www.manastha.com/",
+      "etv": 7.559999942779541
+    },
+    {
+      "keyword": "free counselling online",
+      "volume": 2900,
+      "position": 33,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 6.090000152587891
+    },
+    {
+      "keyword": "psychological consultation online",
+      "volume": 2900,
+      "position": 32,
+      "url": "https://www.manastha.com/",
+      "etv": 6.090000152587891
+    },
+    {
+      "keyword": "manochikitsa",
+      "volume": 2400,
+      "position": 33,
+      "url": "https://www.manastha.com/",
+      "etv": 5.039999961853027
+    },
+    {
+      "keyword": "free counsellors",
+      "volume": 1000,
+      "position": 22,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 4.300000190734863
+    },
+    {
+      "keyword": "mind and manas",
+      "volume": 720,
+      "position": 16,
+      "url": "https://www.manastha.com/",
+      "etv": 4.248000144958496
+    },
+    {
+      "keyword": "online psych",
+      "volume": 1900,
+      "position": 59,
+      "url": "https://www.manastha.com/",
+      "etv": 3.990000009536743
+    },
+    {
+      "keyword": "samantha whatsapp phone number",
+      "volume": 1900,
+      "position": 33,
+      "url": "https://manastha.com/contact",
+      "etv": 3.990000009536743
+    },
+    {
+      "keyword": "therapist online india",
+      "volume": 1900,
+      "position": 40,
+      "url": "https://www.manastha.com/",
+      "etv": 3.990000009536743
+    },
+    {
+      "keyword": "therapists online india",
+      "volume": 1900,
+      "position": 30,
+      "url": "https://www.manastha.com/",
+      "etv": 3.990000009536743
+    },
+    {
+      "keyword": "therapy online india",
+      "volume": 1900,
+      "position": 35,
+      "url": "https://www.manastha.com/",
+      "etv": 3.7505998611450195
+    },
+    {
+      "keyword": "free therapist",
+      "volume": 1600,
+      "position": 33,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 3.3600001335144043
+    },
+    {
+      "keyword": "marriage counselling online",
+      "volume": 1600,
+      "position": 29,
+      "url": "https://manastha.com/services/relationship-counselling",
+      "etv": 3.3600001335144043
+    },
+    {
+      "keyword": "relationship counselling online",
+      "volume": 1600,
+      "position": 50,
+      "url": "https://manastha.com/services/relationship-counselling",
+      "etv": 3.3600001335144043
+    },
+    {
+      "keyword": "relationship problems therapist",
+      "volume": 1600,
+      "position": 64,
+      "url": "https://manastha.com/services/relationship-counselling",
+      "etv": 3.3600001335144043
+    },
+    {
+      "keyword": "couple therapist online",
+      "volume": 1300,
+      "position": 52,
+      "url": "https://manastha.com/services/relationship-counselling",
+      "etv": 2.7300000190734863
+    },
+    {
+      "keyword": "couples therapy online",
+      "volume": 1300,
+      "position": 58,
+      "url": "https://manastha.com/services/relationship-counselling",
+      "etv": 2.7300000190734863
+    },
+    {
+      "keyword": "psychologist free",
+      "volume": 260,
+      "position": 16,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 2.365999937057495
+    },
+    {
+      "keyword": "free mental counseling",
+      "volume": 1000,
+      "position": 36,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 2.0999999046325684
+    },
+    {
+      "keyword": "free online counselling chat 24/7",
+      "volume": 1000,
+      "position": 49,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 2.0999999046325684
+    },
+    {
+      "keyword": "irrational fear meaning",
+      "volume": 1000,
+      "position": 71,
+      "url": "https://manastha.com/blog/how-to-deal-with-irrational-fears",
+      "etv": 2.0999999046325684
+    },
+    {
+      "keyword": "mental counseling free",
+      "volume": 1000,
+      "position": 42,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 2.0999999046325684
+    },
+    {
+      "keyword": "mental health counselor free",
+      "volume": 1000,
+      "position": 30,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 2.0999999046325684
+    },
+    {
+      "keyword": "fear irrational",
+      "volume": 880,
+      "position": 59,
+      "url": "https://manastha.com/blog/how-to-deal-with-irrational-fears",
+      "etv": 1.8480000495910645
+    },
+    {
+      "keyword": "irrational fear",
+      "volume": 880,
+      "position": 64,
+      "url": "https://manastha.com/blog/how-to-deal-with-irrational-fears",
+      "etv": 1.8480000495910645
+    },
+    {
+      "keyword": "talk with therapist",
+      "volume": 880,
+      "position": 36,
+      "url": "https://www.manastha.com/",
+      "etv": 1.8480000495910645
+    },
+    {
+      "keyword": "therapist for anxiety depression",
+      "volume": 880,
+      "position": 49,
+      "url": "https://www.manastha.com/",
+      "etv": 1.8480000495910645
+    },
+    {
+      "keyword": "free counsellor for depression",
+      "volume": 390,
+      "position": 22,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.6770000457763672
+    },
+    {
+      "keyword": "online free psychologist",
+      "volume": 720,
+      "position": 39,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.5120000839233398
+    },
+    {
+      "keyword": "online psychiatrist for free",
+      "volume": 720,
+      "position": 27,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.5120000839233398
+    },
+    {
+      "keyword": "psychiatrist free online",
+      "volume": 720,
+      "position": 33,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.5120000839233398
+    },
+    {
+      "keyword": "counsellors online",
+      "volume": 590,
+      "position": 24,
+      "url": "https://www.manastha.com/",
+      "etv": 1.2979999780654907
+    },
+    {
+      "keyword": "online free therapist chat",
+      "volume": 590,
+      "position": 35,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.2389999628067017
+    },
+    {
+      "keyword": "therapist in india",
+      "volume": 590,
+      "position": 41,
+      "url": "https://www.manastha.com/",
+      "etv": 1.2389999628067017
+    },
+    {
+      "keyword": "therapist online free chat",
+      "volume": 590,
+      "position": 39,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.2389999628067017
+    },
+    {
+      "keyword": "therapy online chat free",
+      "volume": 590,
+      "position": 46,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.2389999628067017
+    },
+    {
+      "keyword": "best therapist online",
+      "volume": 320,
+      "position": 22,
+      "url": "https://www.manastha.com/",
+      "etv": 1.055999994277954
+    },
+    {
+      "keyword": "therapy sessions online free",
+      "volume": 480,
+      "position": 26,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.055999994277954
+    },
+    {
+      "keyword": "counseling for depression for free",
+      "volume": 390,
+      "position": 24,
+      "url": "https://manastha.com/blog/free-online-counselling-and-therapy",
+      "etv": 1.0529999732971191
+    },
+    {
+      "keyword": "therapists for stress management",
+      "volume": 390,
+      "position": 25,
+      "url": "https://manastha.com/services/stress-management",
+      "etv": 1.0529999732971191
+    }
+  ]
+}
