@@ -46,4 +46,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W32 | /illnesses/postpartum-depression-ppd | Dr. Swarupa Mohan Udgiri | 40 | brief_generated |
 | 2026-W32 | /illnesses/trauma-disorder | Abhimanyu Chandak | 40 | brief_generated |
 | 2026-W32 | /blogs/understanding-everyday-habit-that-are-destroying-your-sleep | Sucheta Saha | 15 | brief_generated |
+| 2026-W33 | /illnesses/relationship-issues | Dr. Swarupa Mohan Udgiri | 75 | brief_generated |
+| 2026-W33 | /treatments/drug-deaddiction | Dr. Vishal Kasal | 50 | brief_generated |
+| 2026-W33 | /illnesses/dementia | Dr. Arun Kumar V | 40 | brief_generated |
+| 2026-W33 | /illnesses/conduct-disorder | Ms. Tirzah Johnson | 40 | brief_generated |
+| 2026-W33 | /treatments/talk-therapy | Ms. Suhita Saha | 40 | brief_generated |
+| 2026-W33 | /blogs/how-to-manage-death-from-stress | Juhi Gupta | 40 | brief_generated |
 

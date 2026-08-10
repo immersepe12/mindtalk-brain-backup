@@ -1,0 +1,77 @@
+{
+  "site": {
+    "domain": "mindtalk.in",
+    "brand_name": "Mindtalk",
+    "brand_check_term": "mindtalk",
+    "repo": "immersepe12/mindtalk",
+    "repo_local_path": "/Users/agent/Documents/GitHub/mindtalk",
+    "content_dir": "src/content",
+    "vercel_deploy_time_seconds": 90
+  },
+  "sheets_webhook": {
+    "url": "https://script.google.com/macros/s/AKfycbwze3CqMG-HBe8ZiaCUaAjgOlC1sA9vMBFhAQByGfQoFaI3pOogU-Rz4UxVxyFqvAut/exec",
+    "secret": "jMfE4d_xVhtC7DJ6ePvJSGRT02T1RGAalCvikaAN71M"
+  },
+  "apis": {
+    "dataforseo": {
+      "login": "kushal@cadabams.com",
+      "password": "e4b46002962bbd39",
+      "note": "Shared account with cadabamscdc.com workflow. Pay-per-call, no conflict."
+    },
+    "gsc": {
+      "credentials_path": "/Users/agent/seo-workflow/gsc-credentials.json",
+      "site_url": "sc-domain:mindtalk.in",
+      "page_url_base": "https://www.mindtalk.in"
+    },
+    "pagespeed": {
+      "api_key": "AIzaSyADPtDpYwwYlRMLW6hQWe25GXe16p0JvU0",
+      "note": "Free Google PageSpeed Insights API key. Without it, site-audit.py hits aggressive 429 rate limits and skips CWV measurement."
+    }
+  },
+  "thresholds": {
+    "minor_drop_positions": 3,
+    "moderate_drop_positions": 4,
+    "major_drop_positions": 11,
+    "critical_drop_positions": 20,
+    "gsc_clicks_drop_pct": 10,
+    "gsc_impressions_drop_pct": 10,
+    "observation_window_days": 42,
+    "midpoint_check_day": 21,
+    "max_urls_per_week": 20,
+    "max_new_content_per_week": 20,
+    "target_new_words_min": 300,
+    "target_new_words_max": 500
+  },
+  "seo_rules": {
+    "title_max_chars": 65,
+    "description_max_chars": 160,
+    "title_must_contain": "Mindtalk",
+    "keyword_density_target_per_words": 250,
+    "min_section_words": 50
+  },
+  "tracked_categories": [
+    "illnesses",
+    "treatments",
+    "blogs"
+  ],
+  "tracked_specialty_listings": [
+    "doctors-listings/psychiatrists-in-bangalore",
+    "doctors-listings/psychologists-in-bangalore",
+    "doctors-listings/therapists-in-bangalore",
+    "doctors-listings/counsellors-in-bangalore",
+    "doctors-listings/psychiatrists-in-hyderabad",
+    "doctors-listings/psychologists-in-hyderabad",
+    "doctors-listings/therapists-in-hyderabad",
+    "doctors-listings/counsellors-in-hyderabad",
+    "doctors-listings/psychiatrists-in-mysore",
+    "doctors-listings/psychologists-in-mysore",
+    "doctors-listings/therapists-in-mysore",
+    "doctors-listings/child-psychiatrists"
+  ],
+  "excluded_from_tracking": [
+    "managements",
+    "testimonials",
+    "lps",
+    "pages"
+  ]
+}
