@@ -990,3 +990,19 @@ Key learning: AP3 Option B is the correct clinical governance path (no harm risk
 W30 professional-input holds: NOT released today (deadline 2026-08-10 = today; T18 spec requires today > deadline → releases 2026-08-11). W29 holds confirmed released (deadline 2026-08-03 passed).
 
 **Active watches summary (2026-08-10):** W11 (deferred), W17 (closed), W18 (⚠️ HIGH_PRIORITY_DROP, obs extended to 09-21, investigation BACKLOGGED), W19 (QDF_BLOCKED, extended to 09-21), W20 (NEEDS_REFRESH, extended to 09-21, refresh brief BACKLOGGED), W21 (QDF_BLOCKED, extended to 09-21), W22 (closed), W23 (closed), W24-W28 (stub-pilot, check 2026-08-14), W29 (closed — yoga-for-anxiety CTR baseline set), W30-W33 (T9 blogs 07-28, check 08-18), W34-W35 (stub-pilot batch 2, check 08-14), W36-W37 (depression+anxiety YMYL, check 08-14), W38 (narrative-therapy, 42d final 09-15), W39 (yoga-for-anxiety CTR refresh, check 08-19).
+
+**2026-08-11 T10 Strategist 8 PM IST stamp:**
+W30 professional-input holds: **RELEASED 2026-08-11** ✅ (today 08-11 > deadline 08-10 confirmed). 6 pages unlocked: ocd, emdr-therapy, autism, mood-disorder, couples-therapy, dominant-personality. EMDR exception: W19 QDF_BLOCKED holds url_locked to 09-21 — do NOT refresh before then despite W30 release. OCD, autism, mood-disorder, couples-therapy, dominant-personality: eligible for T3 refresh brief creation.
+
+Online-therapy investigation (W18): COMPLETED by T11 08-11. QDF_BLOCKED confirmed. Root cause: "online therapist" keyword drop-out at Day-42 (pos 4.5 at Day-21 → absent at Day-42 as aggregators re-dominated SERP). url_locked violation flagged (CANNIBAL-BLOG-01 commit `59c3c5a`, 07-20). W18 obs extended to 09-21 (url_locked remains TRUE until then). New BACKLOG: ONLINE-THERAPY-DEPTH-REFRESH-09-21.
+
+NEW today: Personality-disorder HIGH_PRIORITY_DROP confirmed (pos 5→9, GSC -100% clicks, -38% impr). PERSONALITY-DISORDER-DROP-01 queued in BACKLOG. T2 GSC pull next run.
+
+**Upcoming watch density — ALERT:**
+- 2026-08-12 (TOMORROW): /blogs/ cap resets 6 slots, 0 briefs (T5-REFILL-CRITICAL-08)
+- 2026-08-14 (3 days): W34/W35 14d check + W36/W37 14d check + emdr-for-anxiety Day-42 final + 6 Day-21 midpoints (hyperactive-vs-inattentive-adhd + 5 mindful-minutes batch 2)
+- 2026-08-18 (7 days): W30-W33 Day-21 checks (4 blogs: relationship-stress, sleep-schedule, mental-exhaustion, eft-tapping) + W39 yoga-for-anxiety check
+- 2026-08-21 (10 days): 77-URL assessment cluster Day-42 MAJOR BATCH — largest evaluation event in system history
+- 2026-08-26 (15 days): August Core Update expected — LCP 11.0s still unresolved (CWV-REGRESSION-04 flagged to dev)
+
+**Active watches summary (2026-08-11):** W11 (deferred), W17 (closed), W18 (QDF_BLOCKED, obs to 09-21, depth-refresh BACKLOGGED for post-09-21), W19 (QDF_BLOCKED, extended to 09-21), W20 (NEEDS_REFRESH, extended to 09-21, refresh brief BACKLOGGED), W21 (QDF_BLOCKED, extended to 09-21), W22 (closed), W23 (closed), W24-W28 (stub-pilot, check 08-14), W29 (closed), W30-W33 (T9 blogs 07-28, Day-21 check 08-18), W34-W35 (stub-pilot batch 2, check 08-14), W36-W37 (depression+anxiety YMYL, check 08-14), W38 (narrative-therapy, 42d final 09-15), W39 (yoga-for-anxiety CTR refresh, check 08-19).
