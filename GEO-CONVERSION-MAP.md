@@ -1,138 +1,134 @@
-# GEO Conversion Map — Updated 2026-08-05 (W32)
+# GEO Conversion Map — Updated 2026-08-12 (W33)
 
 **Written by:** T19 Conversion Intelligence (Wed 11:00 IST) — overwritten weekly.
-**Source:** Mixpanel 4011856, trailing 7d Jul 29–Aug 4. Intent = book_appointment_clicked (total) ÷ 8,890 site unique visitors.
-**Site total book_appointment_clicked:** 2,035.
+**Source:** Mixpanel 4011856, trailing 7d Aug 5–11. Intent = book_appointment_clicked (total) ÷ 9,173 site unique visitors.
+**Site total book_appointment_clicked:** 1,938.
 **⚠️ Intent rates use total book events not unique users — read as relative intensity.**
 
 ---
 
-## Headlines W32
+## Headlines W33
 
-- **Bengaluru STRONG RECOVERY: +13.4%** — 1,019→1,156 clicks. Share 51.3%→56.8%. Bengaluru-dominant again after W31 diversification.
-- **DOHA/QATAR BREAKOUT:** 47 book clicks (vs ~15 W31, +213%). Gulf market emerging strongly.
-- **Australia NEW MARKET: Melbourne 29 + Sydney 31 = 60 clicks** (+94% vs W31 ~31). Victoria + NSW together = significant diaspora demand.
-- **Tamil Nadu CRASH: 83→27 (-67.5%).** Chennai 65→15 (-76.9%). Single-week crash — possible ad-traffic reversion from W31.
-- **West Bengal/Kolkata CRASH: 41→7 (-83%).** Kolkata's W31 surge appears partially ad-driven.
-- **Andhra Pradesh REVERSAL: 18→38 (+111%).** Kākināda (11), Vijayawada (10), Bhimavaram (3), Peddāpuram (5). Could be organic AP growth — watch W33.
-- **Maharashtra DECLINE: 157→112 (-28.7%).** Mumbai 76→88 (+15.8%) but Pune 31→17 (-45.2%).
-- **Sweden (Gothenburg) signal: 19 clicks.** Consistent European NRI location.
+- **BENGALURU DECLINE: -21.1%** (1,156→912 clicks, share 56.8%→47.1%). First drop since W28. May reflect reduced paid targeting, not organic weakness.
+- **TELANGANA / HYDERABAD SURGE: +51.1%** (94→142, Hyderabad 83→133, +60.2%). Strongest Telugu week in 7 weeks. P1 CONFIRMED.
+- **TAMIL NADU MASSIVE RECOVERY: +356%** (27→123). Chennai 15→92 (+513%). P1 Tamil RECONFIRMED after W32 crash scare.
+- **MAHARASHTRA GAINS: +16.1%** (112→130, Mumbai 88→106 +20.5%). Steady 6-week growth trend intact.
+- **DOHA CRASH: 47→3 (-93.6%).** W32 Qatar breakout confirmed as one-week anomaly.
+- **🆕 ATLANTA, GA (USA) BREAKOUT: 51 book clicks.** Largest US city reading. Investigate source before investing.
+- **MIZORAM NEW SIGNAL: 13 clicks, Aizawl 13.** NE India market emerging. Note alongside Guwahati/Assam (11).
+- **KERALA RECOVERING: 12→17 (+41.7%).** P8 potential resurgence — watch W34.
+- **ANDHRA PARADOX: 38→20 (-47.4%)** despite Visakhapatnam 14 new signal. Kākināda absent.
 
 ---
 
-## State-level W32 (book_appointment_clicked)
+## State-level W33 (book_appointment_clicked)
 
-| State | W32 | W31 | WoW | Share W32 | Notes |
+| State | W33 | W32 | WoW | Share W33 | Notes |
 |---|---:|---:|---|---:|---|
-| Karnataka | 1,194 | 1,019 | +17.2% ✅ | 58.7% | Bengaluru dominant recovery |
-| Maharashtra | 112 | 157 | -28.7% 📉 | 5.5% | Mumbai +16% but Pune -45% |
-| National Capital Territory of Delhi | 105 | 121 | -13.2% | 5.2% | Delhi +20% but Gurugram crashed |
-| Telangana | 94 | 99 | -5.1% | 4.6% | Telugu market (Hyderabad 83) |
-| Baladiyat ad Dawhah (Qatar) | 47 | ~15 | +213% 🔥🔥 | 2.3% | 🆕 BREAKOUT |
-| Uttar Pradesh | 39 | 41 | -4.9% | 1.9% | Noida 20 + Lucknow 8 stable |
-| Andhra Pradesh | 38 | 18 | +111% 🔥 | 1.9% | Kākināda 11 + Vijayawada 10 |
-| New South Wales (AU) | 31 | ~16 | +94% 🔥 | 1.5% | Sydney 31 |
-| Victoria (AU) | 29 | ~15 | +93% 🔥 | 1.4% | Melbourne 29 |
-| Tamil Nadu | 27 | 83 | -67.5% 🔴 | 1.3% | CRASH — Chennai 15 from 65 |
-| Ontario (CA) | 20 | ~20 | flat | 1.0% | Consistent Canada NRI |
-| Västra Götaland (SE) | 19 | ~19 | flat | 0.9% | Gothenburg — Swedish NRI |
-| West Bengal | 11 | 41 | -73.2% 🔴 | 0.5% | Kolkata surge was likely ad-driven |
-| Kerala | 12 | 20 | -40% | 0.6% | P8 pause — Kochi 5 only |
-| Gujarat | 11 | 13 | -15% | 0.5% | Ahmedabad 5 |
-| Assam | 9 | ~9 | flat | 0.4% | Guwahati 9 — NE India signal |
-| Odisha | 9 | ~9 | flat | 0.4% | Sambalpur 4 + others |
-| Abu Dhabi (UAE) | 9 | ~9 | flat | 0.4% | Gulf diaspora stable |
-| Riyadh/Jeddah/Medina (SA) | 4 | ~4 | flat | 0.2% | Saudi Arabia NRI |
-| Dubai (UAE) | 7 | ~7 | flat | 0.3% | Gulf diaspora stable |
+| Karnataka | 937 | 1,194 | -21.5% 📉 | 48.4% | Bengaluru 906. Ads pull-back effect likely |
+| Telangana | 142 | 94 | +51.1% 🔥🔥 | 7.3% | P1 Telugu CONFIRMED W7. Hyderabad 133 |
+| Maharashtra | 130 | 112 | +16.1% ✅ | 6.7% | Mumbai 106. 6th consecutive growth week |
+| Tamil Nadu | 123 | 27 | +355.6% 🔥🔥 | 6.3% | P1 Tamil RECONFIRMED. Chennai 92 |
+| National Capital Territory of Delhi | 95 | 105 | -9.5% | 4.9% | Delhi 86 stable |
+| Georgia (US State) | 51 | ~0 | 🆕 spike | 2.6% | Atlanta 51. INVESTIGATE — diaspora or VPN? |
+| Uttar Pradesh | 51 | 39 | +30.8% ⬆️ | 2.6% | Lucknow 19 + Meerut 20 |
+| undefined | 78 | ~79 | flat | 4.0% | Consistent unresolvable traffic |
+| Andhra Pradesh | 20 | 38 | -47.4% 📉 | 1.0% | Visakhapatnam 14 new; Kākināda absent |
+| Kerala | 17 | 12 | +41.7% ✅ | 0.9% | P8 watch — Kochi 4, Thrissur 8, Kannur 5 |
+| Texas (US) | 18 | ~0 | 🆕 | 0.9% | New US signal — possibly VPN or diaspora |
+| North Rhine-Westphalia (DE) | 8 | ~8 | flat | 0.4% | Germany NRI stable |
+| Mizoram | 13 | ~0 | 🆕 | 0.7% | Aizawl 13. NE India emerging |
+| West Bengal | 13 | 11 | +18.2% | 0.7% | Kolkata 13. Recovering from W32 crash |
+| Odisha | 8 | 9 | -11% | 0.4% | Rourkela 6 + Bhubaneswar |
+| Assam | 11 | 11 | flat | 0.6% | Guwahati 11. NE India stable |
+| Punjab | 10 | 10 | flat | 0.5% | Ludhiana 9 stable |
+| Haryana | 12 | ~12 | flat | 0.6% | Gurugram 5 |
+| Chandigarh | 8 | ~8 | flat | 0.4% | UT — stable |
+| England (UK) | 10 | 10 | flat | 0.5% | London 10 |
+| California (US) | 9 | ~9 | flat | 0.5% | Stable diaspora |
+| Al Asimah (Kuwait) | 5 | ~5 | flat | 0.3% | Gulf stable |
+| Baladiyat ad Dawhah (Qatar) | 3 | 47 | -93.6% 🔴 | 0.2% | W32 was anomaly |
+| Dubai (UAE) | 8 | 7 | +14% | 0.4% | Gulf diaspora stable |
+| Bihar | 7 | ~7 | flat | 0.4% | Patna 4 |
+| Rajasthan | 9 | ~9 | flat | 0.5% | Jaipur 5 |
+| Madhya Pradesh | 6 | ~6 | flat | 0.3% | Bhopal 1 + Indore 5 |
+| Nagaland | 7 | ~7 | flat | 0.4% | NE India signal |
 
 ---
 
-## City-level W32 (book_appointment_clicked, top 30)
+## City-level W33 (book_appointment_clicked, top 25)
 
-| City | W32 | W31 | WoW | Pattern signal |
+| City | W33 | W32 | WoW | Pattern signal |
 |---|---:|---:|---|---|
-| Bengaluru | 1,156 | 1,019 | +13.4% ✅ | P2 Goldmine. Recovery after W31 diversification. |
-| Doha | 47 | ~15 | +213% 🔥🔥 | 🆕 NEW BREAKOUT — Gulf market P11 |
-| Hyderabad | 83 | 99 | -16.2% | P1 Telugu. 6th week. Slight decline, within variance. |
-| Mumbai | 88 | 76 | +15.8% ✅ | P2 recovery. 5 consecutive growth weeks. |
-| Delhi | 84 | 70 | +20% ✅ | P2 growing. |
-| Sydney | 31 | ~16 | +94% 🔥 | Australia P12 breakout |
-| Melbourne | 29 | ~15 | +93% 🔥 | Australia P12 breakout |
-| Noida | 20 | ~6 | huge | Delhi NCR expansion |
-| Gothenburg | 19 | ~19 | flat | Swedish NRI — consistent |
-| Oshawa | 16 | 16 | flat | Canada NRI — consistent |
-| Chennai | 15 | 65 | -76.9% 🔴 | P1 Tamil CRASH — watch W33 |
-| Bhopal | 12 | ~12 | flat | MP signal |
-| Kākināda | 11 | ~3 | +267% 🔥 | AP reversal — Andhra surge |
-| Vijayawada | 10 | 10 | flat | AP signal |
-| Singapore | 10 | 10 | flat | SEA NRI — consistent |
-| Abu Dhabi | 9 | 9 | flat | Gulf NRI |
-| Guwahati | 9 | 9 | flat | NE India — consistent |
-| Mangaluru | 9 | ~5 | +80% | Karnataka coastal |
-| Kolkata | 7 | 41 | -83% 🔴 | W31 spike was likely ad-driven |
-| Dubai | 7 | 7 | flat | Gulf NRI |
-| Peddāpuram | 5 | 5 | flat | AP signal |
-| Kochi | 5 | 9 | -44% | P8 Kerala — pausing |
-| Visakhapatnam | 5 | 5 | flat | AP signal |
-| Prayagraj | 2 | ~2 | flat | UP signal |
-| Pune | 17 | 31 | -45.2% 📉 | Maharashtra mix — Pune-specific drop |
-| Ahmedabad | 5 | 9 | -44% | Gujarat signal |
-| Jaipur | 1 | 11 | -91% 🔴 | Likely ad-driven W31 |
+| Bengaluru | 906+6=912 | 1,156 | -21.1% 📉 | P2 core still dominant. Ads pull-back likely. |
+| Hyderabad | 133 | 83 | +60.2% 🔥🔥 | P1 Telugu W7. Strongest reading yet. |
+| Chennai | 92 | 15 | +513% 🔥🔥🔥 | P1 Tamil RECONFIRMED. Crash was 1-week anomaly. |
+| Mumbai | 106 | 88 | +20.5% ✅ | P2 Mumbai. 6th consecutive growth week. |
+| Delhi | 86 | 84 | +2.4% ✅ | P2 Delhi stable. |
+| Atlanta | 51 | ~0 | 🆕 spike | INVESTIGATE. No prior signal. US diaspora or VPN? |
+| Lucknow | 19 | 19 | flat | North India stable. |
+| Meerut | 20 | ~5 | +300% ⬆️ | New UP city signal. |
+| Visakhapatnam | 14 | ~14 | flat | Andhra Pradesh hub. |
+| Pune | 14 | 17 | -17.6% | Declining vs W31 surge. |
+| Mysuru | 11 | ~11 | flat | Karnataka secondary. |
+| Guwahati | 11 | 11 | flat | NE India hub stable. |
+| Aizawl | 13 | ~0 | 🆕 | Mizoram capital — new NE signal. |
+| Kolkata | 13 | 7 | +85.7% ✅ | Recovering from W32 crash. |
+| Coimbatore | 10 | 10 | flat | Tamil Nadu secondary. |
+| London | 10 | 10 | flat | UK diaspora stable. |
+| Chandigarh | 8 | 8 | flat | North India stable. |
+| Dubai | 8 | 8 | flat | Gulf stable. |
+| Thrissur | 8 | ~5 | +60% ⬆️ | Kerala city growing. P8 signal. |
+| Kannur | 5 | ~5 | flat | Kerala stable. |
+| Kochi | 4 | 5 | -20% | Kerala. |
+| Kukatpally | 4 | ~4 | flat | Hyderabad suburb. |
+| Indore | 5 | ~5 | flat | MP stable. |
+| Lucknow | 19 | 19 | flat | UP hub. |
 
 ---
 
-## NRI Markets W32
+## NRI & International Markets W33
 
-| Country/Region | Book clicks | WoW vs W31 | Key cities | Trend |
-|---|---:|---|---|---|
-| Australia | 62 | +94% 🔥 | Melbourne 29, Sydney 31 | P12 EMERGING (Week 2) |
-| Qatar | 47 | +213% 🔥🔥 | Doha 47 | P11 BREAKOUT (Week 1) |
-| Canada | ~21 | flat | Ontario 20, Oshawa 16, Toronto 3 | Consistent NRI |
-| Sweden | ~21 | flat | Gothenburg 19 | Consistent NRI |
-| UAE | 16 | flat | Abu Dhabi 9, Dubai 7 | Gulf NRI stable |
-| Germany | ~13 | flat | Munich 5, Berlin 4, Cologne 2 | European NRI |
-| Singapore | 10 | flat | Singapore 10 | SEA NRI stable |
-| US | ~50 | -50% 🔴 | CA, TX, WA, GA, NJ | Down from ~100 W31 — ad traffic reversion |
-| Saudi Arabia | ~4 | flat | Riyadh, Jeddah, Medina | Gulf NRI stable |
-
-**International total W32:** ~284 book clicks (~14.0% of total, vs W31 ~200 ~10.1%). Growing share.
-**Gulf total (Qatar+UAE+Saudi):** ~67 book clicks (vs ~29 W31) — +131%. Gulf is the fastest growing NRI market.
-
----
-
-## Geographic Patterns
-
-### What converted well W32 (intent concentration)
-- **Doha** — 47 clicks, 0 content targeting this market = pure organic demand waiting to be unlocked
-- **Melbourne+Sydney** — 60 clicks, 0 content targeting Australian diaspora
-- **Bengaluru** — 1,156 clicks, dominant as always, but relative share dropping as market diversifies
-
-### What crashed unexpectedly W32
-- **Tamil Nadu/Chennai** (83→27) — held as P1 WATCH not demoted yet
-- **West Bengal/Kolkata** (41→7) — likely W31 was anomalous ad spend
-- **Jaipur** (11→1) — W31 likely ad-driven
-- **US market** (~100→~50) — partial reversion from W31 ad peak
-
-### What's growing organically W32
-- **Andhra Pradesh cities** (Kākināda 11, Vijayawada 10, Bhimavaram 3, Peddāpuram 5) — possible organic Telugu content resonance
-- **Gulf diaspora** (Qatar, UAE, Saudi) — pure organic, no content strategy yet
-- **Australia** (Melbourne, Sydney) — pure organic, no content strategy yet
+| Market | W33 | W32 | WoW | Verdict |
+|---|---:|---:|---|---|
+| **Gulf total (Qatar+UAE+Kuwait+Saudi)** | 21 | 67 | -68.7% 🔴 | Doha crash dominates. UAE/Kuwait stable |
+| Qatar (Doha) | 3 | 47 | -93.6% | W32 anomaly confirmed |
+| UAE (Dubai + Abu Dhabi) | 15-17 | ~16 | flat | Stable Gulf diaspora |
+| Kuwait | 5 | ~5 | flat | Stable |
+| Saudi Arabia | ~5 | ~4 | flat | Stable |
+| **USA total** | ~110 | ~40 | +175% 🔥 | Atlanta spike + Texas. Investigate |
+| Atlanta (US) | 51 | ~0 | 🆕 | Unknown source — needs investigation |
+| Texas | 18 | ~0 | 🆕 | New US state signal |
+| California | 9 | ~9 | flat | Stable diaspora |
+| New York | ~8 | ~8 | flat | Stable |
+| **UK total** | 25 | ~25 | flat | London 10 + Sutton 7 + Edinburgh 2 + Bournemouth 5 |
+| **Canada total** | 18 | 20 | -10% | Ontario 15 (Toronto 7 + Markham 3 + Brampton 3 + Mississauga 2) |
+| **Australia total** | 3 | 60 | -95% 🔴 | Sydney 2 + Melbourne 1. W32 was anomaly |
+| **Germany total** | 13 | 8 | +62% ⬆️ | NRW 8 + Hesse 2 + Bavaria 3 |
+| **Sweden** | 1 | 19 | -94.7% | Gothenburg gone. W32 anomaly |
+| **Other Europe** | ~12 | ~12 | flat | Paris 2 + Vienna 3 + Netherlands 3 |
 
 ---
 
-## GEO Action Items for T5
+## Geographic concentration metrics W33
 
-**P11 Gulf diaspora content (URGENT — Week 1 data, not confirmed pattern):**
-- Gulf-specific mental health landing page for Indian expats
-- "Online therapy for Indians in UAE/Qatar/Saudi" angle
-- Link to /doctors (online therapy available nationwide + internationally)
+| Metric | W33 | W32 | Trend |
+|---|---|---|---|
+| Bengaluru share of total intent | 47.1% | 56.8% | Diversifying ✅ |
+| Top 3 states share | 62.4% (KA+TG+MH) | 70.4% | More distributed ✅ |
+| International share | ~11% | ~12% | Stable |
+| South India dominance (KA+TG+TN+AP+KL+PY) | ~75% | ~72% | South strengthening |
 
-**P12 Australia content (Week 2 data — EMERGING):**
-- "Online therapy for Indians in Australia" angle
-- /doctors/psychologists-in-australia or similar
-- Link building: Indian expat communities in Melbourne/Sydney
+## City-tier conversion ranking (relative, not absolute)
 
-**City doctor pages (T5 5-week priority, +30 pts):**
-- /doctors/psychologists-in-delhi (Delhi+Noida+Gurugram ~125 clicks)
-- /doctors/psychologists-in-mumbai (88 clicks, 5 growth weeks)
-- /doctors/psychologists-in-hyderabad (83 clicks, 6 stable weeks — Telugu)
+**Tier 1 (>100 clicks/wk):** Bengaluru 912, Hyderabad 133, Mumbai 106, Chennai 92, Delhi 86
+**Tier 2 (20-100):** Atlanta 51, Meerut 20, Lucknow 19, Texas 18, Kerala cities 17, Visakhapatnam 14, Pune 14, Aizawl 13, Kolkata 13
+**Tier 3 (5-20):** Chandigarh 8, Dubai 8, Thrissur 8, Kanpur 8, Mysuru 11, Guwahati 11, London 10, New Delhi 9
+
+## W33 key geo flags for Strategist + T5
+
+- **🆕 ACTION — Chennai/Tamil Nadu recovery confirms:** Create Tamil-language doctor pages (P1). No further waiting.
+- **🆕 INVESTIGATE — Atlanta 51 clicks:** Before creating US-targeted content, understand source. Could be organic ranking for "therapist for Indian diaspora in Atlanta" or VPN artifact.
+- **🟡 ACTION — Mizoram/Aizawl 13 clicks:** NE India cluster emerging (Mizoram + Nagaland + Assam). Consider NE India-specific mental health content.
+- **🟡 MONITOR — Kerala recovering:** Thrissur 8 + Kannur 5 + Kochi 4. P8 possibly re-emerging — check W34.
+- **✅ HOLD — Doha:** Single-week anomaly confirmed. No Gulf-specific investment needed yet.

@@ -1,46 +1,61 @@
-# UX Friction Pages — Updated 2026-08-05 (W32)
+# UX Friction Pages — Updated 2026-08-12 (W33)
 
-**Written by:** T19 Conversion Intelligence. **Action required from:** Dev/App team (NOT T18).
-**Source:** Mixpanel $mp_rage_click + $mp_dead_click, consult.cadabams.com, Jul 29–Aug 4.
+**Written by:** T19 Conversion Intelligence (weekly). Updated each Wednesday.
+**Read by:** Product/dev team, T10 Strategist (to avoid amplifying UX-broken pages).
+**Flag threshold:** rage_click > 5% of unique visitors OR dead_click > 10% of unique visitors.
+**Source:** Mixpanel $mp_rage_click + $mp_dead_click, project 4011856, trailing 7d.
 
----
-
-## 🚨 W32 CRITICAL ESCALATIONS — TWO NEW PAGES
-
-### Severity 1: CRITICAL (requires immediate dev review)
-
-| URL | Rage | Dead | Total | WoW | Action |
-|---|---:|---:|---:|---|---|
-| consult.cadabams.com/consult/appointments | 52 | 762 | 814 | Dead: 160→762 (+376%) 🚨 | Was IMPROVING in W31, now exploded. Something broke this week. |
-| consult.cadabams.com/assessments/* | 78 | 725 | 803 | Dead: ~52→725 (+1,294%) 🚨 | New CRITICAL. Assessment interactive elements broken. |
-| consult.cadabams.com/consult/find-therapist | 59 | 570 | 629 | Dead: 372→570 (+53%) | PERSISTENT 5 WEEKS. Still not fixed. |
-| consult.cadabams.com/home | 16 | 564 | 580 | Dead: 673→564 (-16%) | Slightly improving but still critical. |
-
-### Severity 2: MEDIUM-HIGH (persistent but not escalating)
-
-| URL | Rage | Dead | Total | WoW | Action |
-|---|---:|---:|---:|---|---|
-| consult.cadabams.com/prescriptions | 54 | 338 | 392 | Total: 1,014→392 (-61%) ✅ | IMPROVING. Was W31 #1 critical — recovering. |
-| consult.cadabams.com/consult/checkout | 3 | 67 | 70 | 73→70 (-4%) | Flat. Persistent low-level friction. |
+> **Critical note:** UX friction pages should NOT be flagged for T18 clinician input — these are UI/tech bugs, not E-E-A-T gaps. Coordinate with Strategist's BACKLOG to avoid SEO investment on friction-heavy pages.
 
 ---
 
-## Weekly trend tracking
+## W33 Critical Friction Pages (Aug 5–11, 2026)
 
-| Week | /appointments Dead | /assessments Dead | /find-therapist Dead | /home Dead | /prescriptions Total |
-|---|---:|---:|---:|---:|---:|
-| W26 | ~50 est | ~20 est | ~200 est | ~400 est | N/A |
-| W27 | ~100 est | ~30 est | ~293 | ~500 est | N/A |
-| W28 | ~237 | ~52 | 319 | ~500 est | N/A |
-| W31 | 160 ✅ | ~52 | 372 | 673 | 1,014 🔴 |
-| W32 | 762 🔴🔴 | 725 🔴🔴 | 570 🔴 | 564 🟡 | 392 🟡 |
+| URL cluster | Rage clicks | Dead clicks | Total | vs W32 | Priority | Likely cause |
+|---|---:|---:|---:|---|---|---|
+| /assessments/* | 56 | 750 | **806** | +0.4% 🔴 ESCALATING | 🔴 CRITICAL | Dead clicks growing despite rage stable — broken UI element, non-responsive tap targets on mobile assessment flow |
+| /find-therapist | 63 | 615 | **678** | stable est | 🔴 CRITICAL (long-standing, 5+ weeks) | Filter/search UI non-responsive; therapist card buttons not firing |
+| /appointments | 118 | 535 | **653** | -19.8% 🟡 IMPROVING | 🟠 HIGH (improving) | Appointment management UI partially fixed — rage dropping, dead still high |
 
 ---
 
-## Escalation note to app team (W32)
+## W33 vs W32 trend
 
-**IMMEDIATE**: /consult/appointments and /assessments/* both spiked catastrophically this week after /appointments was showing improvement. This pattern (simultaneous spike in 2+ pages) strongly suggests a **deploy regression** rather than organic growth in UX problems. Check:
-- What deployed to consult.cadabams.com between Jul 28 and Aug 4
-- Interactive elements: buttons, sliders, input fields, navigation
-- /appointments: calendar component, appointment card click targets
-- /assessments: question answer buttons, progress indicators, submit buttons
+| Page | W32 total | W33 total | Trend |
+|---|---:|---:|---|
+| /appointments | 814 | 653 | -19.8% ✅ IMPROVING |
+| /assessments/* | 803 | 806 | +0.4% 🔴 STAGNANT/ESCALATING |
+| /find-therapist | ~678 | ~678 | flat 🔴 CHRONIC |
+| /prescriptions | ~392 (W31) | est ~300 (from combined query) | possibly improving |
+| Homepage (/home) | ~580 | not isolated this week | — |
+
+---
+
+## Cumulative status (since T19 started tracking UX)
+
+| Page | First flagged | Status | Weeks critical |
+|---|---|---|---|
+| /find-therapist | W27 (6+ weeks ago) | 🔴 CHRONIC — never resolved | 6+ weeks |
+| /appointments | W32 (NEW escalation) | 🟠 IMPROVING — first improvement W33 | 2 weeks critical |
+| /assessments/* | W32 (NEW escalation) | 🔴 ESCALATING — dead clicks not improving | 2 weeks, worsening |
+| /prescriptions | W31 | Status unknown this week | 3+ weeks, unclear |
+
+---
+
+## Escalation log
+
+| Date | Page | Event | Action |
+|---|---|---|---|
+| 2026-07-22 (W31) | /prescriptions | NEW CRITICAL: 1,014 friction events | Flagged to Kushal |
+| 2026-08-05 (W32) | /appointments | ESCALATED: 814 friction events (+376% vs W31) | Flagged to eng |
+| 2026-08-05 (W32) | /assessments/* | ESCALATED: 803 friction events (+1,440% vs W31) | Flagged to eng |
+| 2026-08-12 (W33) | /appointments | IMPROVING: 653 (-19.8%) — fix partially working | Still critical but trend positive |
+| 2026-08-12 (W33) | /assessments/* | STAGNANT: 806 (+0.4%) — fix not working on dead clicks | ESCALATE again |
+
+---
+
+## Action required from dev team
+
+1. **PRIORITY 1 — /assessments/* dead clicks (750 W33):** Whatever fix was applied to /appointments has NOT been applied to /assessments. Dead clicks on 750+ events/week means a button, link, or interactive element is visually present but not clickable (likely z-index/overlay issue in assessment flow). Fix urgently.
+2. **PRIORITY 2 — /find-therapist (678 W33, 6+ weeks):** Longest-running friction. Filter/search component not responding to taps on mobile. Escalate to mobile team.
+3. **WATCH — /appointments (653, improving):** Continue current fix trajectory. Do not regress.

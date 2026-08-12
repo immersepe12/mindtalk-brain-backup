@@ -1006,3 +1006,21 @@ NEW today: Personality-disorder HIGH_PRIORITY_DROP confirmed (pos 5→9, GSC -10
 - 2026-08-26 (15 days): August Core Update expected — LCP 11.0s still unresolved (CWV-REGRESSION-04 flagged to dev)
 
 **Active watches summary (2026-08-11):** W11 (deferred), W17 (closed), W18 (QDF_BLOCKED, obs to 09-21, depth-refresh BACKLOGGED for post-09-21), W19 (QDF_BLOCKED, extended to 09-21), W20 (NEEDS_REFRESH, extended to 09-21, refresh brief BACKLOGGED), W21 (QDF_BLOCKED, extended to 09-21), W22 (closed), W23 (closed), W24-W28 (stub-pilot, check 08-14), W29 (closed), W30-W33 (T9 blogs 07-28, Day-21 check 08-18), W34-W35 (stub-pilot batch 2, check 08-14), W36-W37 (depression+anxiety YMYL, check 08-14), W38 (narrative-therapy, 42d final 09-15), W39 (yoga-for-anxiety CTR refresh, check 08-19).
+
+**2026-08-12 T10 Strategist 8 PM IST stamp:**
+W40 OPENED: 5 T9 blogs shipped 2026-08-11 (commit `44610e94`) — /blogs/anxiety-shortness-of-breath-relief, /blogs/handling-partners-anger-in-relationship, /blogs/how-to-fix-ptsd-recovery-steps, /blogs/how-to-stop-ocd-thoughts-immediately, /blogs/therapy-for-relationship-issues. All HTTP 200 ✓. Day-21 midpoint: 2026-09-01. Day-42 final: 2026-09-22. Reviewers: suhita-saha, vindhya-shree, tejal-jaiswal (AT/OVER CAP per T9 — exclude from next run).
+
+W30-HOLDS-EXPIRY-08-11: CLOSED ✅ — holds released 08-11. T11 to confirm 5 pages (ocd, autism, mood-disorder, couples-therapy, dominant-personality) in refresh queue. EMDR still QDF_BLOCKED to 09-21.
+
+**Upcoming watch density:**
+- **2026-08-14 (2 days) — HIGH-DENSITY**: W34/W35 14d check (anger-management + values-clarification) + W36/W37 14d check (depression + anxiety YMYL) + emdr-for-anxiety Day-42 FINAL + 6 mindful-minutes Day-21 midpoints. T4/T12 auto-evaluate — no Strategist pre-action. Watch for NEGATIVE results that would trigger ANTI-PATTERN updates.
+- **2026-08-18 (6 days)**: W30-W33 Day-21 checks (relationship-stress, sleep-schedule, mental-exhaustion, eft-tapping) + W39 yoga-for-anxiety 14d check.
+- **2026-08-19 (7 days)**: W39 yoga-for-anxiety CTR 14d check.
+- **2026-08-21 (9 days)**: 77-URL assessment cluster Day-42 MAJOR BATCH — largest single Q3 evaluation event.
+- **2026-08-26 (14 days)**: August Core Update expected. /doctors/psychiatrists-in-bangalore LCP 8.95s flagged to dev (CWV-DOCTORS-PAGE-01, T11 08-12).
+- **2026-09-01**: W40 Day-21 midpoints (5 T9 blogs 08-11).
+- **2026-09-15**: W38 narrative-therapy 42d final.
+- **2026-09-21**: W18/W19/W20/W21 extended obs windows close.
+- **2026-09-22**: W40 Day-42 finals (5 T9 blogs 08-11).
+
+**Active watches summary (2026-08-12):** W11 (deferred), W17 (closed), W18 (QDF_BLOCKED, obs to 09-21, depth-refresh BACKLOGGED), W19 (QDF_BLOCKED, extended to 09-21), W20 (NEEDS_REFRESH, extended to 09-21, refresh brief BACKLOGGED — T11 to create brief), W21 (QDF_BLOCKED, extended to 09-21), W22 (closed), W23 (closed), W24-W28 (stub-pilot, check 08-14 ⚡ 2 days), W29 (closed), W30-W33 (T9 blogs 07-28, Day-21 check 08-18), W34-W35 (stub-pilot batch 2, check 08-14 ⚡ 2 days), W36-W37 (depression+anxiety YMYL, check 08-14 ⚡ 2 days), W38 (narrative-therapy, 42d final 09-15), W39 (yoga-for-anxiety CTR refresh, check 08-19), **W40 (5 T9 blogs 08-11, Day-21 check 09-01, Day-42 final 09-22)**.

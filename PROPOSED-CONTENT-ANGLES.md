@@ -96,3 +96,37 @@
 - /doctors/psychologists-in-mumbai: **FIRE (88 clicks W32, 5 growth weeks)**
 - /doctors/psychologists-in-hyderabad: **FIRE (83 clicks W32, 6 stable weeks)**
 
+
+---
+
+## W33 UPDATE (2026-08-12)
+
+**Last updated:** 2026-08-12 (W33)
+
+### Tier 1 STATUS UPDATES (P1 Tamil fully reconfirmed, Gulf demoted):
+
+| Angle | Previous status | W33 update |
+|---|---|---|
+| `/doctors/psychologists-in-chennai` | 🟡 WATCH W33 | ✅ FIRE — Chennai 92 clicks (+513%), P1 Tamil 7 WEEKS. Promote to Goldmine watch. |
+| `/doctors/psychologists-in-kolkata` | 🚨 HOLD | 🟡 WATCH W34 — Kolkata 13 clicks (7→13, partial recovery). Not yet firing. |
+| Australia NRI pages | 🟡 EMERGING | ❌ DEMOTE — Sydney 2 + Melbourne 1 = 3 W33. W32 was anomaly. |
+| Gulf NRI pages (Doha/Qatar-specific) | 🔥 BREAKOUT | ❌ DEMOTE — Doha 47→3. Anomaly confirmed. |
+
+### NEW TIER 2 proposals (W33):
+
+| Proposed angle | Evidence | Cluster | Urgency |
+|---|---|---|---|
+| NE India mental health content (Mizoram, Nagaland, Assam) | Aizawl 13 + Guwahati 11 + Nagaland 7 (3 weeks stable for Assam) | /blogs or /illnesses | 🟡 EMERGING — confirm W34 |
+| Online therapy for Indians in Atlanta, GA | Atlanta 51 (Week 1 spike) | /lps or /doctors | ⚠️ INVESTIGATE before firing — confirm organic vs VPN |
+| Tamil-speaking doctor pages (dedicated) | P1 7-week CONFIRMED, Tamil recovered | /doctors | ✅ FIRE (+30 pts active) |
+
+### Active Tier 1 that should be in T5 queue now:
+1. ✅ `/doctors/malayalam-speaking-doctors` (+30 pts — Kerala P8 watch)
+2. ✅ `/doctors/kannada-speaking-doctors` (+30 pts)
+3. ✅ `/doctors/hindi-speaking-doctors` (+30 pts)
+4. ✅ `/doctors/psychologists-in-delhi` (+30 pts — 95 Delhi clicks W33)
+5. ✅ `/doctors/psychologists-in-mumbai` (+30 pts — 106 clicks W33)
+6. ✅ `/doctors/psychologists-in-hyderabad` (+30 pts — 133 clicks W33)
+7. ✅ `/doctors/psychologists-in-chennai` (+30 pts — 92 clicks W33, NEWLY ACTIVATED)
+8. ✅ AI-citable authority content (structured FAQ, India MH stats)
+9. ✅ `/doctors/tamil-speaking-doctors` (+30 pts — P1 Tamil fully confirmed)

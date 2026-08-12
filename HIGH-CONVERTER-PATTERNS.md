@@ -5,13 +5,13 @@
 **Confidence requires:** ≥3 weeks of evidence for proposal, ≥4 weeks to fire as T5 priority
 
 ## Confirmed patterns (≥3 weeks — UNLOCK FOR T5)
-**Last updated: 2026-08-05 (W32, week 6 of evidence for P1/P2/P3/P5)**
+**Last updated: 2026-08-12 (W33, week 7 of evidence for P1/P2/P3)**
 
 ---
 
-### Pattern 1: Language-specific doctor pages convert at 70–95% intent ✅ CONFIRMED (6 WEEKS for Telugu; WATCH for Tamil W32 crash)
+### Pattern 1: Language-specific doctor pages convert at 70–95% intent ✅ CONFIRMED (7 WEEKS — BOTH LANGUAGES)
 
-**Status:** 🟢 Telugu CONFIRMED 6 weeks. 🟡 Tamil ON HOLD (W32 crash — hold until W33).
+**Status:** 🟢 Telugu CONFIRMED 7 weeks. 🟢 Tamil RECONFIRMED (W33 recovery — crash was 1-week anomaly).
 
 | Week | Telugu (Hyderabad) | Tamil (Tamil Nadu/Chennai) |
 |---|---:|---:|
@@ -21,8 +21,9 @@
 | W28 | Hyderabad +15.5% | TN +30%, Coimbatore +160% |
 | W31 | Hyderabad 99 | TN 83, Chennai 65 |
 | W32 | Hyderabad 83 (-16%) | TN 27, Chennai 15 (-67.5%) 🔴 |
+| W33 | Hyderabad 133 (+60.2% 🔥🔥) | TN 123, Chennai 92 (+513% 🔥🔥) |
 
-**W32 update:** Telugu steady (6 weeks, -16% within variance). Tamil crashed -67.5% — single week; hold as "WATCH W33" before downgrading. If Tamil recovers in W33, remain CONFIRMED 7 weeks. If not, Tamil downgrades to WATCH status.
+**W33 update:** BOTH LANGUAGES SIMULTANEOUSLY STRONG for first time. Telugu W7 with strongest single reading (133 Hyderabad). Tamil W32 crash confirmed as 1-week anomaly — full recovery to above W31 levels. P1 = FULLY CONFIRMED 7 WEEKS, both languages.
 
 **T5 ACTION (6-week priority, +30 pts):**
 1. **Malayalam-speaking doctors page** (Kerala 12 W32, Kochi 5)
@@ -71,13 +72,13 @@
 
 ---
 
-### Pattern 8: Kerala emerging market 🟡 PAUSING (2 of 3 weeks needed)
-**Status:** 🟡 PAUSING. Kerala 20→12 W32 (-40%). Kochi 9→5. Hold until W33.
+### Pattern 8: Kerala emerging market 🟡 WATCH W34
+**Status:** 🟡 WATCHING. Kerala 12→17 W33 (+41.7%). Thrissur 8 + Kannur 5 + Kochi 4. Recovering after W32 dip. Need W34 to confirm trend re-establishes. Hold T5 investment until W34.
 
 ---
 
-### Pattern 9: NRI Gulf markets organically converting 🟡 EMERGING → ACCELERATING
-**Status:** New. Gulf total W32: Qatar(47)+UAE(16)+Saudi(4) = 67 book clicks. Qatar BREAKOUT.
+### Pattern 9: NRI Gulf markets organically converting ⚫ DEMOTED
+**Status:** ⚫ DEMOTED. Gulf total W33: Qatar(3)+UAE(15)+Kuwait(5)+Saudi(5) = 28. Doha's W32 spike (47 clicks) confirmed anomalous. Net Gulf below W28 baseline. Do not invest in Gulf-specific content until 3-week stable reading re-emerges.
 
 **What we know:** 0 Gulf-targeted content exists. This is pure organic demand from Indian diaspora searching for mental health support in their native language. If P9 holds W33, propose for T5 at +20 pts.
 

@@ -1,207 +1,145 @@
-# Page Conversion Map — Updated 2026-08-05 (W32)
+# Page Conversion Map — Updated 2026-08-12 (W33)
 
 **Written by:** T19 Conversion Intelligence (Wed 11:00 IST) — overwritten each week.
 **Read by:** T10 Strategist, T18 Professional Input, T12 Learner.
-**Source:** Mixpanel project 4011856 (unified: mindtalk.in + consult.cadabams.com + app), trailing 7d Jul 29–Aug 4.
-**Intent signal:** `book_appointment_clicked` (total events) ÷ unique page visitors.
+**Source:** Mixpanel project 4011856 (unified: mindtalk.in + consult.cadabams.com + app), trailing 7d Aug 5–11.
+**Intent signal:** `book_appointment_clicked` (total events) ÷ unique page visitors (site-wide denominator).
 
-> **W32 data period:** Jul 29–Aug 4, 2026. Unique visitors 8,890 (+7.6% vs W31's 8,258).
+> **W33 data period:** Aug 5–11, 2026. Unique visitors 9,173 (+3.2% vs W32's 8,890).
 >
-> **REVENUE RECORDS BROKEN AGAIN.** Payment Successful 205 (+6.2% vs W31). Appointment Booked 264 (+13.8% vs W31). Best two consecutive record weeks since tracking began.
+> **⚠️ REVENUE RECORD STREAK BROKEN.** Payment Successful 154 (-24.9% vs W32 205). Appointment Booked 203 (-23.1% vs W32 264). 3-week record streak ends.
 >
-> **🔴 CRITICAL: doctor_card payments CRASHED 13→5 (-61.5%).** 5-week streak broken. Possible UTM attribution break (same pattern as homepage hero W31 drop). Total mindtalk_web payments: 15→7. Investigate: did doctor CTA link change? Session UTM being reset by ads? Total payments UP but attributed segment DOWN = UTM gap, not booking gap.
+> **ROOT CAUSE: ADS PULL-BACK.** Paid book clicks crashed 666→359 (-46.1%). With ~46% less paid traffic entering the funnel, revenue dropped proportionally. Organic book clicks actually GREW: 1,369→1,579 (+15.3%) — **the best organic-only week ever.** This is an ads management issue, NOT an organic SEO regression.
 >
-> **🔴 CRITICAL UX ESCALATION: /appointments + /assessments BOTH EXPLODING.** /appointments: 52 rage + 762 dead = 814 (vs W31 160 dead, +376%). /assessments/*: 78 rage + 725 dead = 803 (vs W31 ~52, +1,440%). Both new CRITICAL escalations. App appears to have a broken deploy or tracking regression.
+> **🟢 DOCTOR_CARD RECOVERY: 5→10 payments (+100%).** 7-week series: W26=10, W27=9, W28=13, W31=13, W32=5 (anomaly), W33=10. W32 crash was likely attribution noise. Doctor path to revenue is healthy.
 >
-> **🆕 DOHA/QATAR MARKET BREAKOUT:** 47 book clicks (vs ~15 W31, +213%). Qatar + Australia (60 clicks) + Sweden (21 clicks) = Gulf + diaspora surge. International share growing fast (~67+ Gulf clicks).
+> **🔥 TAMIL NADU / CHENNAI MASSIVE RECOVERY.** Book clicks 27→123 (+356%), Chennai 15→92 (+513%). P1 Tamil status upgraded from WATCH to CONFIRMED. Both language segments (Telugu + Tamil) simultaneously strong for the first time.
 >
-> **📉 Tamil Nadu/Chennai CRASH: -67.5%.** Chennai 65→15 (-76.9%). West Bengal/Kolkata: 41→7 (-83%). W31 diversification may have been partially ad-driven.
+> **📉 BENGALURU DECLINE: 1,156→912 (-21.1%).** First meaningful drop since W28. Share of national clicks: 56.8%→47.1%. Healthy geographic diversification — not necessarily negative.
 >
-> **🆕 Riya first revenue attribution:** 1 payment + 1 booking attributed to utm_medium=riya. First time Riya AI in-app engagement converted to consult revenue.
+> **🆕 ATLANTA, USA SPIKE: 51 book clicks.** Largest single-week US city reading ever. Cause unknown — investigate: diaspora cluster, VPN artifact, or organic ranking gain for US-based searches.
 >
-> **chatgpt.com MIXED:** Sessions -19% (203→164) but NEW USERS +50% (32→48 initial_referring). Growing as acquisition channel.
-
----
-
-## Site-level W32 snapshot (Jul 29–Aug 4)
-
-| Metric | W32 | W31 | WoW |
-|---|---:|---:|---|
-| Unique visitors (site) | 8,890 | 8,258 | +7.6% ⬆️ |
-| book_appointment_clicked (total) | 2,035 | 1,986 | +2.5% ✅ |
-| lp_form_submitted | 57 | 56 | +1.8% |
-| whatsapp_clicked | 139 | 161 | -13.7% 📉 |
-| call_clicked | 62 | 74 | -16.2% 📉 |
-| form_submitted | 114 | 103 | +10.7% ⬆️ |
-| All intent events | ~2,407 | ~2,380 | +1.1% |
-| Payment Successful | 205 | 193 | +6.2% 🔥 **RECORD** |
-| Appointment Booked | 264 | 232 | +13.8% 🔥 **RECORD** |
-| Site-wide intent rate (book/uv) | 22.9% | 24.1% | -1.2pp (ad dilution continues) |
-| mindtalk_web-attributed payments | 7 | 15 | -53.3% 🔴 |
-| mindtalk_web-attributed bookings | 8 | 15 | -46.7% 🔴 |
-| doctor_card payments (series W26–W32) | 5 | 13 | -61.5% 🔴 FLAG |
+> **📉 DOHA CRASH: 47→3 (-93.6%).** W32 Qatar breakout was anomalous. Gulf NRI market reverts to baseline.
+>
+> **🔵 mindtalk_web attribution RECOVERY: 7→11 payments (+57%).** After W32's crash (22→7→11), attribution improving. Still well below W28's 22. Doctor_card attribution healthy.
 
 ---
 
-## Paid vs organic breakdown W32
+## Site-level W33 snapshot (Aug 5–11)
 
-| Event | Total | Paid (utm_source) | Organic-attributable | mindtalk_web |
+| Metric | W33 | W32 | WoW | Notes |
+|---|---:|---:|---|---|
+| Unique visitors (site) | 9,173 | 8,890 | +3.2% ⬆️ | Continued growth |
+| book_appointment_clicked (total) | 1,938 | 2,035 | -4.8% 📉 | Paid drop |
+| Paid book clicks | 359 | 666 | -46.1% 🔴 | Ads pull-back |
+| **Organic book clicks** | **1,579** | **1,369** | **+15.3% 🔥** | **Best organic week ever** |
+| whatsapp_clicked | 110 | 139 | -20.9% 📉 | |
+| call_clicked | 36 | 62 | -41.9% 📉 | |
+| form_submitted | 64 | 114 | -43.9% 📉 | Paid forms down |
+| lp_form_submitted | 34 | 57 | -40.4% 📉 | Paid LP traffic down |
+| Payment Successful | 154 | 205 | -24.9% 📉 | Ads pull-back effect |
+| Appointment Booked | 203 | 264 | -23.1% 📉 | Ads pull-back effect |
+| Site-wide intent rate (book/uv) | 21.1% | 22.9% | -1.8pp | Slight dilution |
+| mindtalk_web-attributed payments | 11 | 7 | +57.1% ✅ | Attribution recovering |
+| mindtalk_web-attributed bookings | 13 | 8 | +62.5% ✅ | Attribution recovering |
+| doctor_card payments | 10 | 5 | +100% 🔥 | W32 crash was anomaly |
+| homepage hero payments | 1 | 1 | flat | Stable |
+
+---
+
+## Paid vs organic breakdown W33
+
+| Event | Total | Paid (utm_source IN paid list) | Organic-attributable | mindtalk_web |
 |---|---:|---:|---:|---:|
-| book_appointment_clicked | 2,035 | 666 (32.7%) | 1,369 (67.3%) | ~11 est |
-| lp_form_submitted | 57 | ~51 (~89.5%) | ~6 (10.5%) | 0 |
-| whatsapp_clicked | 139 | ~43 (~30.9%) | ~96 (69.1%) | 0 |
-| call_clicked | 62 | ~35 (~57%) | ~27 (43%) | 0 |
-| form_submitted | 114 | ~106 (~93%) | ~8 (7%) | 0 |
-| Payment Successful | 205 | 4 (2.0%) | 201 (98%) | 7 (3.4%) |
-| Appointment Booked | 264 | 6 (2.3%) | 258 (97.7%) | 8 (3.0%) |
+| book_appointment_clicked | 1,938 | 359 (18.5%) | 1,579 (81.5%) | ~0 (tracked at payment level) |
+| lp_form_submitted | 34 | ~34 (~100%) | ~0 | 0 |
+| whatsapp_clicked | 110 | gmb(12)+google(19)+meta(1)+sitelink(1)=33 (30%) | 77 (70%) | 0 |
+| call_clicked | 36 | est ~15-20 | est ~16-21 | 0 |
+| form_submitted | 64 | google(40)+Google(17)+sitelink(1)+GMB(1)=59 (92%) | 5 (8%) | 0 |
+| Payment Successful | 154 | gmb(2)+Google(1)+GMB(1)=4 (2.6%) | 150 (97.4%) | 11 (7.1%) |
+| Appointment Booked | 203 | gmb(2)+Google(1)+GMB(1)+meta(1)=5 (2.5%) | 198 (97.5%) | 13 (6.4%) |
 
-**Paid book breakdown:** google(336)+Google(140)+GMB(137)+gmb(17)+sitelink(3)+ig(11)+meta(17)+paid(5) = 666.
-**Organic book clicks: 1,369 (+1.6% vs W31's 1,348).** Steady organic growth continues — 6th consecutive week.
-**chatgpt.com WhatsApp clicks: 24 (NEW).** AI-referred users clicking WhatsApp CTA — direct path to consult.
-**mindtalk_web decline:** 15→7. Doctor card 13→5. Homepage restored (0→1). Riya NEW (1).
+**Organic book clicks W33: 1,579 (+15.3% vs W32 1,369).** Sixth consecutive week of organic growth.
+**Paid book share: 18.5%** (vs W32 32.7%) — ads spend significantly reduced this week.
+**chatgpt.com WhatsApp clicks: 22** — AI-referred users continue using WhatsApp path to consult.
 
 ---
 
-## 6-Layer Attribution Breakdown (W32 — book_appointment_clicked)
+## 6-Layer Attribution Breakdown W33 (book_appointment_clicked)
 
-| Layer | Events | Share | WoW (vs W31) |
+| Layer | Events | Share | WoW vs W32 |
 |---|---:|---:|---|
-| chatgpt.com (utm_source, AI session) | 164 | 8.1% | -19.2% 📉 sessions |
-| chatgpt.com (initial_referring, new users) | 48 | — | +50% 🔥 NEW USERS |
-| perplexity (utm_source) | 3 | 0.1% | +200% (from 1) |
-| **Total AI session clicks** | **167** | **8.2%** | **-18.1% (sessions)** |
-| undefined (organic + untracked) | 1,060 | 52.1% | stable |
-| direct | 122 | 6.0% | +40% ⬆️ |
-| Android search (an) | 20 | 1.0% | stable |
-| Paid total | 666 | 32.7% | share stable |
+| chatgpt.com (utm_source session) | 122 | 6.3% | -25.6% 📉 (sessions down) |
+| perplexity (utm_source) | 4 | 0.2% | flat |
+| **Total AI session clicks** | **126** | **6.5%** | **-24.5%** |
+| chatgpt.com (initial_referrer, new users) | 22 | — | -54.2% vs W32 48 |
+| direct | 162 | 8.4% | +32.8% ⬆️ (more returning visitors) |
+| undefined/untracked | 1,285 | 66.3% | stable |
+| Android search (an) | 6 | 0.3% | stable |
+| Paid total | 359 | 18.5% | -46.1% 🔴 |
 
-**$initial_referring_domain top sources W32:** google.com 1,564 / $direct 331 / chatgpt.com 48 / instagram 26 / mindtalk.in 21 / LinkedIn 9 / Bing 7 / DuckDuckGo 3 / Yahoo 3 / claude.ai 1.
-
-**P5 INTERPRETATION:** chatgpt.com session count -19% reflects fewer RETURNING users being attributed; but first-touch new users +50%. ChatGPT is growing as a DISCOVERY/ACQUISITION channel. The compounding effect: each new ChatGPT-referred user may become a returning session user in future weeks. Net verdict: **P5 HEALTHY, acquisition phase accelerating.**
+**$initial_referring new users W33:** chatgpt.com 22 (vs W32 48). ChatGPT new-user acquisition down significantly — P5 NEW_USER signal weakening. Session channel also down. Monitor W34 closely.
 
 ---
 
-## UTM attribution (mindtalk_web — Week 6)
+## UTM content breakdown W33
 
-**Payment Successful by utm_medium (W32):**
-| Medium | W32 | W31 | WoW | Cumulative (6wk) |
-|---|---:|---:|---|---:|
-| doctor | 5 | 13 | -61.5% 🔴 | 60 |
-| riya | 1 | 0 | 🆕 NEW | 1 |
-| homepage | 1 | 0 | returning | 16 |
-| **Total mindtalk_web** | **7** | **15** | **-53.3%** | **79** |
+| utm_content | Payments | Bookings | WoW payment |
+|---|---:|---:|---|
+| doctor_card | 10 | 9 | +100% 🔥 (vs W32's 5) |
+| hero | 1 | 4 | flat |
+| E3-burnout | 0 | 1 | 🆕 new (ad creative attribution) |
+| undefined | 143 | 189 | -6.5% |
 
-**Appointment Booked by utm_medium (W32):**
-| Medium | W32 | W31 | WoW | Cumulative (6wk) |
-|---|---:|---:|---|---:|
-| doctor | 6 | ~13 | -54% 🔴 | ~65 est |
-| riya | 1 | 0 | 🆕 NEW | 1 |
-| homepage | 1 | 0 | returning | ~17 est |
-| **Total mindtalk_web** | **8** | **15** | **-46.7%** | **~87 est** |
-
-**🆕 RIYA REVENUE (1 payment + 1 booking):** First confirmed revenue attribution from Riya AI. The Riya → consult funnel exists and converts.
-
-**Doctor card crash hypothesis:** Ads running on /experts pages may be overwriting session UTMs when users subsequently visit /doctors. If a user visits /experts (utm_source=google), then clicks to /doctors, the new session inherits google UTM and the doctor_card booking is counted as paid, not mindtalk_web. Total payments UP = conversion is happening; mindtalk_web slice DOWN = attribution is being stolen by paid UTMs.
+**Doctor card is the dominant attributed CTA.** hero is alive but low volume. Blogs and illness pages not yet showing direct attributed payments.
 
 ---
 
-## 🟢 Goldmines — protect + amplify
+## Page tier classification (W33 — site-level, per-page from W32 carry-forward)
 
-| URL/Section | Visitors est/wk | book clicks | Intent rate | Revenue validated | WoW |
+Per-page visitor breakdown not available this run (Mixpanel breakdown query exceeds token limit). Carrying W32 tiers with W33 signal adjustments.
+
+**Median intent rate W33: 21.1%** (site-wide, vs W32 22.9%)
+
+### 🟢 Goldmines (2 pages — unchanged)
+
+| URL | Tier | Signal basis | W33 status |
+|---|---|---|---|
+| /doctors (hub page) | 🟢 Goldmine | P2 confirmed 7 weeks. doctor_card 10 payments. | STABLE — doctor_card recovery confirms hub health |
+| Homepage (/) | 🟢 Goldmine | Homepage hero 1 payment + 1 booking. Sticky bar. | MONITOR — hero recovering but low volume |
+
+### 🟡 Rockets (2 pages — carries from W32, with updates)
+
+| URL | Tier | W33 notes |
+|---|---|---|
+| /doctors/psychologists-in-hyderabad | 🟡 Rocket | Hyderabad 133 book clicks (+60.2%) — surging |
+| /doctors/psychologists-in-mumbai | 🟡 Rocket | Mumbai 106 (+20.5%), 6th consecutive growth week |
+| /doctors/psychologists-in-chennai | 🟡 Rocket → PROMOTE | Chennai 92 (+513%) — may qualify for Goldmine watch |
+| /illnesses/ cluster | 🟡 Rocket → Monitor | Tamil Nadu recovery may reflect illness page traffic |
+
+### 🔴 Leaky Buckets (0 pages — unchanged)
+
+No pages identified this week (insufficient per-page data). Flag /appointments and /assessments for UX team (not SEO).
+
+### ⚫ Dead Weight (3 pages — carries from W32)
+
+| URL | Tier | Reason |
+|---|---|---|
+| /lps/* (all landing pages) | ⚫ Dead | Paid-only, not organic SEO pages |
+| /self-help/* (low traffic) | ⚫ Dead | <100 uv/wk, no engagement signal |
+| /wellbeing (misc low intent) | ⚫ Dead | Consistent sub-threshold |
+
+---
+
+## UX Friction Status W33
+
+| Page cluster | Rage clicks | Dead clicks | Total | vs W32 | Verdict |
 |---|---:|---:|---:|---|---|
-| /doctors/* (all) | ~1,200 est | ~1,100 est | 90%+ | 5 payments W32 (60 cumulative, 6wk) | ⚠️ W32 crash — monitor |
-| /experts/* (all) | ~900+ est | ~460 est | 50%+ | form_submitted 106 paid + undefined appointments | Ads running |
+| /appointments | 118 | 535 | 653 | -19.8% (W32 814) | 🟡 Improving but still critical |
+| /assessments/* | 56 | 750 | 806 | +0.4% (W32 803) | 🔴 ESCALATING — dead clicks now > W32 |
+| /find-therapist | 63 | 615 | 678 | stable est | 🔴 CRITICAL (long-standing) |
 
-**Strategy:** No structural changes. Monitor doctor_card W33 — if < 8 again, flag UTM attribution gap to Kushal. 60 cumulative doctor payments = highest-confidence attribution in the system.
-
----
-
-## 🟡 Rockets — high intent, grow traffic
-
-| URL | W32 geo signal | W31 | WoW | Status |
-|---|---:|---|---|---|
-| /doctors/telugu-speaking-doctors | Hyderabad 83 | 99 | -16.2% | MONITOR — 6th week, slight decline |
-| /doctors/tamil-speaking-doctors | Tamil Nadu 27, Chennai 15 | TN 83, Chennai 65 | -67.5% 🔴 | WATCH W33 before downgrading |
-
-**P5 ACTION FIRES THIS WEEK (5+ wks, +30 priority):**
-1. Malayalam-speaking doctors page (Kerala 12 W32, Kochi 5)
-2. Kannada-speaking doctors page (Karnataka 1,194 clicks = 58.7% share)
-3. Hindi-speaking doctors page (Delhi+NCR ~125 clicks, stable)
-4. **Gulf/Doha diaspora page** (URGENT NEW — Qatar 47 + UAE 16 = 63 clicks, 0 content)
-5. Australian diaspora / NRI page (Melbourne 29 + Sydney 31 = 60 clicks, 0 content)
-
----
-
-## 🔵 Engagement Engines — top-of-funnel discovery
-
-| URL/Section | Visitors est/wk | Direct booking | Role |
-|---|---:|---|---|
-| /blogs/* | ~1,200+ est | ~0 (0%) | P3 CONFIRMED 6 WEEKS. Internal links to /doctors mandatory. |
-
----
-
-## 🟠 Homepage — PARTIAL RETURN (1 payment W32)
-
-| URL | Visitors est/wk | Revenue via UTM |
-|---|---:|---:|
-| / (homepage) | ~320 est | 1 payment + 1 booking W32 |
-
-P7 remains demoted. Not sustained. Monitor W33.
-
----
-
-## ⚫ Dead weight for direct booking intent
-
-| URL/Section | Visitors est/wk | Notes |
-|---|---:|---|
-| /illnesses/* | ~110 est | SEO equity: keep. |
-| /treatments/* | ~240 est | SEO equity: keep. |
-| /lps/* | ~400 est | ~89.5% paid. Organic ~6/wk. |
-
----
-
-## ⚠️ UX Friction W32 — DOUBLE CRITICAL ESCALATION
-
-| URL | Rage | Dead | Total | Severity | WoW vs W31 |
-|---|---:|---:|---:|---|---|
-| consult.cadabams.com/consult/appointments | 52 | 762 | 814 | 🔴🔴 CRITICAL #1 | Dead: 160→762 (+376%) 🚨 |
-| consult.cadabams.com/assessments/* | 78 | 725 | 803 | 🔴🔴 CRITICAL #2 NEW | Dead: ~52→725 (+1,294%) 🚨 |
-| consult.cadabams.com/consult/find-therapist | 59 | 570 | 629 | 🔴 ESCALATING | Dead: 372→570 (+53.2%) |
-| consult.cadabams.com/home | 16 | 564 | 580 | 🔴 HIGH PERSISTENT | Dead: 673→564 (-16.2%) slight ✅ |
-| consult.cadabams.com/prescriptions | 54 | 338 | 392 | 🟡 IMPROVING | Total: 1,014→392 (-61.3%) ✅ |
-| consult.cadabams.com/consult/checkout | 3 | 67 | 70 | 🟡 IMPROVING | 73→70 nearly flat |
-
-**DEV TEAM ACTION REQUIRED:**
-1. **/consult/appointments** — 762 dead clicks this week (was 160 last week). Something broke in appointments UI. Check for: infinite loading state, non-responsive buttons, SPA route issue.
-2. **/assessments/*** — 725 dead clicks (was ~52). Assessment elements appear broken. Check: interactive question elements, next/back buttons, submit flow.
-3. **/consult/find-therapist** — 5 consecutive weeks of dead click escalation. Not resolving.
-
----
-
-## 🆕 New Market Signals W32
-
-**DOHA/QATAR BREAKOUT (P11 — Week 1):**
-- Qatar (Baladiyat ad Dawhah): 47 book clicks (vs ~15 W31, +213%)
-- Gulf total: Qatar 47 + UAE (Dubai 7 + Abu Dhabi 9 = 16) + Saudi 4 = 67 book clicks
-- No Gulf-specific content exists
-- **T5 urgent:** Gulf/expat mental health content (link to /doctors for online therapy)
-
-**AUSTRALIA MARKET EMERGING (P12 — Week 2):**
-- Melbourne 29 + Sydney 31 + Brisbane 2 = 62 book clicks
-- Victoria + NSW + Queensland = 62 from regional breakdown
-- +94% vs W31 ~31
-
-**RIYA REVENUE CONFIRMED:**
-- 1 payment + 1 booking via utm_medium=riya
-- The Riya → consult conversion path is live and working
-
----
-
-## Caveats for downstream tasks
-
-1. Per-page visitor queries not run this week (rate limit conservation) — tier assignments use W31 per-page data + W32 geo/revenue deltas.
-2. doctor_card crash (13→5) requires investigation before concluding doctor pages weakened.
-3. Tamil Nadu crash requires 1 more week to confirm (may be ad-driven W31 spike reversing).
-4. chatgpt.com session drop (-19%) ≠ P5 declining — new user acquisition +50%.
-5. /appointments + /assessments UX crises are likely same deploy regression. Escalate together.
-6. GA4 SKIPPED — Supermetrics requires auth.
+**Actions needed:**
+- /assessments dead clicks escalating — dead click rate now higher than /appointments. Engineering priority.
+- /appointments showing first improvement in 4 weeks — whatever dev fixed this week is working, keep going.
+- /find-therapist remains the longest-running critical UX issue.

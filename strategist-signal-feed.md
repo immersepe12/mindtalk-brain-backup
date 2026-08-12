@@ -118,3 +118,52 @@
 - HOLD: Tamil-speaking doctor pages (Tamil crashed 83→27)
 - ACTIVE: Kannada/Malayalam/Hindi doctor pages (+30 pts, unchanged)
 - ACTIVE: Delhi/Mumbai/Hyderabad psychologist pages (unchanged)
+
+---
+
+## W33 signals (2026-08-12) — FOR T10 STRATEGIST
+
+**Conversion data refreshed: Aug 5–11, 2026**
+
+### KEY SIGNAL: Revenue Drop = Ads Pull-Back, NOT SEO Regression
+- Paid book clicks crashed 666→359 (-46.1%)
+- Organic book clicks GREW 1,369→1,579 (+15.3%) — best organic week ever
+- Revenue dropped Payments 205→154, Bookings 264→203 as a direct consequence
+- **Strategist action: Do NOT treat W33 as an organic conversion problem. The organic funnel is stronger than ever. Revenue will recover when/if ad spend normalizes.**
+
+### Goldmines (2 — unchanged):
+- /doctors (hub) — doctor_card 5→10 payments RECOVERY. P2 healthy.
+- Homepage (/) — stable
+
+### Rockets (2+ — with upgrade flags):
+- /doctors/psychologists-in-hyderabad (Hyderabad 133, +60%)
+- /doctors/psychologists-in-mumbai (Mumbai 106, 6th week growth)
+- 🆕 PROMOTE: /doctors/psychologists-in-chennai (Chennai 92 from 15, +513%)
+
+### Leaky buckets: 0
+
+### New patterns confirmed this week:
+- P1 Tamil RECONFIRMED (7 weeks now, both Telugu + Tamil simultaneously strong)
+- P9 NRI Gulf DEMOTED (Doha was anomaly, Gulf now weak)
+- P10 US Atlanta SPIKE — INVESTIGATE before acting
+
+### Geo concentration:
+- Bengaluru 47.1% (down from 56.8% — healthy diversification)
+- Hyderabad 6.9% (+60%, P1 Telugu)
+- Mumbai 5.5% (+20%, growing)
+- Chennai 4.7% (RECOVERY, P1 Tamil)
+
+### Priority actions for Strategist:
+1. **APPROVE: Tamil-speaking doctor pages** (P1 Tamil reconfirmed — was ON HOLD). +30 T5 pts.
+2. **INVESTIGATE: Atlanta, GA spike** (51 book clicks) before content investment
+3. **PROMOTE: /doctors/psychologists-in-chennai** from Rocket to Goldmine watch
+4. **FLAG to eng: /assessments dead clicks escalating** (806 friction events)
+5. **MONITOR: P5 ChatGPT weakening** (sessions -25%, new users -54%)
+
+### Proposed content angles for T5 (this week):
+3 proposals to PROPOSED-CONTENT-ANGLES.md (see that file)
+
+### Cross-domain validation:
+- Real bookings attributable to mindtalk_web in last 7d: 13 (bookings) + 11 (payments)
+- Organic-attributable: 198 bookings + 150 payments
+- Organic book click share: 81.5% (highest ever)
