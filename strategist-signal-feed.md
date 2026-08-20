@@ -167,3 +167,60 @@
 - Real bookings attributable to mindtalk_web in last 7d: 13 (bookings) + 11 (payments)
 - Organic-attributable: 198 bookings + 150 payments
 - Organic book click share: 81.5% (highest ever)
+
+---
+
+## 2026-08-19 (W34): Conversion data refreshed
+
+### Summary
+- **🔥 P5 MAJOR EVENT: ChatGPT = first-ever revenue channel.** 300 book clicks (+145.9%), 2 payments + 3 bookings. AI citation investment now has direct revenue ROI.
+- **📈 Revenue recovery: 168 payments (+9.1%), 228 bookings (+12.3%).** Ads back up (paid +67.5%) + organic growth (+13.2%) = both engines firing.
+- **🔴 URGENT: Dead clicks 4,441 (+111%).** Site UX is critically broken. Ads are sending 67.5% more users into broken flows. Fix before scaling ad spend.
+- **🔴 Attribution bleed (recurring): doctor_card 10→3 (-70%), mindtalk_web 11→4 (-63.6%).** Paid ad UTMs overwriting organic UTMs in Mixpanel. Not a conversion problem. Engineering fix needed.
+
+### Page tier classification W34:
+- 🟢 Goldmines: 2 (/doctors, Homepage)
+- 🟡 Rockets: 4 (Hyderabad, Mumbai, Chennai, Delhi — Delhi RECORD 177 clicks)
+- 🔴 Leaky buckets: 0 (none identified per-page)
+- ⚫ Dead weight: 3 (lps/*, self-help/*, wellbeing)
+
+### Goldmines:
+- /doctors (P2 confirmed 8 weeks — PROTECT, do not change)
+- Homepage (/ — PROTECT, don't disrupt sticky bar flow)
+
+### Rockets:
+- /doctors/psychologists-in-delhi (177 clicks, RECORD — PROMOTE to Goldmine consideration)
+- /doctors/psychologists-in-hyderabad (110 clicks, P1 Telugu W8 — steady)
+- /doctors/psychologists-in-mumbai (100 clicks — 7 weeks steady)
+- /doctors/psychologists-in-chennai (43 clicks — partial reversal, still Rocket)
+
+### Leaky buckets queued for T18 this week: 0 (no new pages identified)
+
+### New patterns confirmed this week:
+- **P5 MAJOR:** ChatGPT = REVENUE channel (first AI-referred payments ever)
+- **P8 CONFIRMED:** Kerala 4-week trend — fire T5 immediately (/doctors/psychologists-in-kochi)
+- **P15 SEEDED:** Delhi NCT record 177 clicks — treat as immediate T5 priority (skip 3-week gate; P1 playbook already confirmed at 8 weeks)
+
+### Geo concentration W34:
+- Bengaluru: 52.9% (recovery from W33's 47.1%)
+- Delhi NCT: 7.4% (+86.3% WoW — record)
+- Telangana: 4.6% (P1 Telugu W8, slight step-back)
+- Maharashtra: 5.3% (stable)
+- Tamil Nadu: 3.6% (partial reversal)
+- Manipur: 1.5% (🆕 NEW — no dedicated content)
+- Kerala: 1.1% (P8 confirmed — T5 opportunity)
+
+### Proposed content angles for T5 (this week):
+6 new proposals added to PROPOSED-CONTENT-ANGLES.md (see W34 section):
+1. /doctors/psychologists-in-delhi — URGENT (P15, skip gate)
+2. /doctors/psychologists-in-kochi — IMMEDIATE (P8 4wks confirmed)
+3. /doctors/malayalam-speaking-doctors — IMMEDIATE (P8 + P1)
+4. AI-citable FAQ/schema content — URGENT (P5 now revenue-generating)
+5. Gulf multi-city content — seed W37 (P13 W1)
+6. West Bengal/Kolkata doctor page — check W35 (P14 W2)
+
+### Cross-domain validation W34:
+- Real bookings attributable to mindtalk_web: 10 bookings + 4 payments
+- chatgpt.com-attributed: 3 bookings + 2 payments (FIRST EVER AI REVENUE)
+- Organic-attributable: 225 bookings + 166 payments (97%+ organic)
+- Organic book click share: 74.8% (paid up due to ads, organic still dominant)

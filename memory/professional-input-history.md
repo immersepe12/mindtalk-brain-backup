@@ -53,3 +53,9 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W33 | /treatments/talk-therapy | Ms. Suhita Saha | 40 | brief_generated |
 | 2026-W33 | /blogs/how-to-manage-death-from-stress | Juhi Gupta | 40 | brief_generated |
 
+| 2026-W34 | /illnesses/addiction | Dr. Vishal Kasal | 100 | brief_generated |
+| 2026-W34 | /illnesses/alcohol-addiction | Dr. Vishal Kasal | 100 | brief_generated |
+| 2026-W34 | /treatments/group-therapy | Ms. Puja Jaiswara | 75 | brief_generated |
+| 2026-W34 | /treatments/positive-psychology | Ms. Tejal Jaiswal | 70 | brief_generated |
+| 2026-W34 | /treatments/music-therapy | Ms. Navyashri S | 65 | brief_generated |
+| 2026-W34 | /blogs/relationship-problems-signs-causes-solutions | Dr. Swarupa Mohan Udgiri | 45 | brief_generated |

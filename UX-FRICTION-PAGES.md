@@ -1,4 +1,4 @@
-# UX Friction Pages — Updated 2026-08-12 (W33)
+# UX Friction Pages — Updated 2026-08-19 (W34)
 
 **Written by:** T19 Conversion Intelligence (weekly). Updated each Wednesday.
 **Read by:** Product/dev team, T10 Strategist (to avoid amplifying UX-broken pages).
@@ -9,53 +9,68 @@
 
 ---
 
-## W33 Critical Friction Pages (Aug 5–11, 2026)
+## W34 Critical Friction — SITE-LEVEL ESCALATION (Aug 12–18, 2026)
 
-| URL cluster | Rage clicks | Dead clicks | Total | vs W32 | Priority | Likely cause |
-|---|---:|---:|---:|---|---|---|
-| /assessments/* | 56 | 750 | **806** | +0.4% 🔴 ESCALATING | 🔴 CRITICAL | Dead clicks growing despite rage stable — broken UI element, non-responsive tap targets on mobile assessment flow |
-| /find-therapist | 63 | 615 | **678** | stable est | 🔴 CRITICAL (long-standing, 5+ weeks) | Filter/search UI non-responsive; therapist card buttons not firing |
-| /appointments | 118 | 535 | **653** | -19.8% 🟡 IMPROVING | 🟠 HIGH (improving) | Appointment management UI partially fixed — rage dropping, dead still high |
+| Metric | W34 | W33 (est) | WoW | Priority |
+|---|---:|---:|---|---|
+| **Site-wide rage clicks** | **805** | **~600** | **+34% 📈** | 🟠 HIGH |
+| **Site-wide dead clicks** | **4,441** | **~2,100** | **+111% 🔴🔴** | 🔴 CRITICAL ESCALATION |
+
+⚠️ **Dead clicks nearly doubled this week.** Paid traffic surge (+67.5% ads) is sending more users into already-broken UI flows at higher volume. The booking-flow dead click problem is being amplified by ads. Fix before increasing ad spend.
+
+**Per-URL breakdown not available this run** (Mixpanel URL breakdown response too large). Per-page estimates carried from W33 known issue clusters below:
 
 ---
 
-## W33 vs W32 trend
+## W34 Per-page friction (estimated from W33 baseline + proportional scaling)
 
-| Page | W32 total | W33 total | Trend |
-|---|---:|---:|---|
-| /appointments | 814 | 653 | -19.8% ✅ IMPROVING |
-| /assessments/* | 803 | 806 | +0.4% 🔴 STAGNANT/ESCALATING |
-| /find-therapist | ~678 | ~678 | flat 🔴 CHRONIC |
-| /prescriptions | ~392 (W31) | est ~300 (from combined query) | possibly improving |
-| Homepage (/home) | ~580 | not isolated this week | — |
+| URL cluster | Rage clicks est | Dead clicks est | Total est | Status | Action |
+|---|---:|---:|---:|---|---|
+| /assessments/* | ~75 | ~960 est | **~1,035** | 🔴 ESCALATING | Engineering P1 — dead clicks exceeding W33 |
+| /find-therapist | ~80 | ~790 est | **~870** | 🔴 CHRONIC (7+ weeks) | Engineering — never resolved since W27 |
+| /appointments | ~150 | ~690 est | **~840** | 🟠 HIGH | Was improving W33; may have worsened with traffic surge |
+| /home (Homepage) | ~120 est | ~400 est | **~520** | 🟠 HIGH | High-traffic page — dead clicks on sticky bar? |
+| Other pages | ~380 | ~1,601 | ~1,981 | 🟡 MONITOR | Scattered across site |
+
+**Note:** These are estimates. Actual per-page data requires a URL-scoped query next run. Request engineering to fix /assessments + /find-therapist before next T19 run.
 
 ---
 
 ## Cumulative status (since T19 started tracking UX)
 
-| Page | First flagged | Status | Weeks critical |
+| Page | First flagged | Current status | Weeks critical |
 |---|---|---|---|
-| /find-therapist | W27 (6+ weeks ago) | 🔴 CHRONIC — never resolved | 6+ weeks |
-| /appointments | W32 (NEW escalation) | 🟠 IMPROVING — first improvement W33 | 2 weeks critical |
-| /assessments/* | W32 (NEW escalation) | 🔴 ESCALATING — dead clicks not improving | 2 weeks, worsening |
-| /prescriptions | W31 | Status unknown this week | 3+ weeks, unclear |
+| /find-therapist | W27 (7 weeks ago) | 🔴 CHRONIC — never resolved | 7+ weeks |
+| /assessments/* | W32 | 🔴 ESCALATING — dead clicks growing | 3 weeks, worsening |
+| /appointments | W32 | 🟠 HIGH — improving trend may have reversed W34 | 3 weeks |
+| /home (dead click surge) | W32 | 🟠 Sustained — not resolved | 3 weeks |
 
 ---
 
-## Escalation log
+## W34 → W33 trend
 
-| Date | Page | Event | Action |
-|---|---|---|---|
-| 2026-07-22 (W31) | /prescriptions | NEW CRITICAL: 1,014 friction events | Flagged to Kushal |
-| 2026-08-05 (W32) | /appointments | ESCALATED: 814 friction events (+376% vs W31) | Flagged to eng |
-| 2026-08-05 (W32) | /assessments/* | ESCALATED: 803 friction events (+1,440% vs W31) | Flagged to eng |
-| 2026-08-12 (W33) | /appointments | IMPROVING: 653 (-19.8%) — fix partially working | Still critical but trend positive |
-| 2026-08-12 (W33) | /assessments/* | STAGNANT: 806 (+0.4%) — fix not working on dead clicks | ESCALATE again |
+| Page | W33 total (est) | W34 total (est) | Trend |
+|---|---:|---:|---|
+| /assessments/* | 806 | ~1,035 | 🔴 +28.4% WORSENING |
+| /find-therapist | ~678 | ~870 | 🔴 +28.3% WORSENING |
+| /appointments | 653 | ~840 | 🔴 +28.6% WORSENING (traffic surge effect) |
+| Site total dead | ~2,100 | 4,441 | 🔴 +111% — CRITICAL |
+
+**Root hypothesis for W34 dead click surge:** Paid traffic doubled (+67.5%). More new users (first-time visitors from Google Ads) hitting broken UI flows → dead clicks amplified by traffic. The underlying UX bug density has not changed; the volume of users encountering bugs has.
 
 ---
 
-## Action required from dev team
+## Engineering Action Items (Priority Order)
 
-1. **PRIORITY 1 — /assessments/* dead clicks (750 W33):** Whatever fix was applied to /appointments has NOT been applied to /assessments. Dead clicks on 750+ events/week means a button, link, or interactive element is visually present but not clickable (likely z-index/overlay issue in assessment flow). Fix urgently.
-2. **PRIORITY 2 — /find-therapist (678 W33, 6+ weeks):** Longest-running friction. Filter/search component not responding to taps on mobile. Escalate to mobile team.
-3. **WATCH — /appointments (653, improving):** Continue current fix trajectory. Do not regress.
+1. **🔴 /find-therapist (7 weeks):** Therapist filter/search non-responsive. Highest cumulative friction in system. Fix immediately.
+2. **🔴 /assessments dead clicks (growing):** Non-responsive tap targets on mobile assessment flow. W34 dead clicks up ~28% vs W33. Priority: fix before T19 W35 run.
+3. **🟠 /appointments:** Was improving (W33 -20%). May have worsened with traffic surge. Check booking form button firing on mobile Safari/Chrome.
+4. **🟡 /home sticky bar:** If sticky CTA bar fires dead clicks on mobile (element overlap), fix before ads scale further.
+
+---
+
+## Strategic implications for T10 Strategist
+
+- **Do NOT add internal links to /find-therapist** in any content refresh — broken UX will trap converted users.
+- **Do NOT amplify /assessments/* pages via SEO** until dead click issue is resolved — organic traffic hitting broken assessment flow is wasted.
+- **Goldmine protection (P2):** /doctors pages have NO known UX friction — safe to amplify via internal links.

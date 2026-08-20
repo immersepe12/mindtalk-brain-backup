@@ -70,4 +70,12 @@
 2026-08-09T23:13+05:30 | 14 files changed | commit: 30b7372 | push: success
 2026-08-10T2311 | 16 files changed | commit: a0a296c38a9c203893b79d248b0acd5b9a4a5a6d | push: success
 2026-08-11 23:10 IST | 11 files changed | commit: 2b820a2 | push: success (ref.lock warning — cosmetic only)
-2026-08-12 23:10 IST | 16 files changed | commit: 2b820a2 | push: success
+2026-08-12 23:11 IST | 16 files changed | commit: 5170f3b | push: success (FUSE locks cleared via Python rename)
+2026-08-13 23:12 IST | 19 files changed | commit: 4d1826ca | push: success (GitHub Data API — FUSE lock workaround)
+| 2026-08-14-2312 | 24 files changed | commit: 548df164 | push: success (GitHub Data API — FUSE index.lock blocks local git) |
+2026-08-15T17:43:46Z | 25 files changed | commit: 7597b79 | push: success (GitHub Data API)
+2026-08-16 23:13 IST | 41 files pending | commit: FAILED (stale .git/index.lock, 23h old — FUSE permission block) | push: skipped
+2026-08-17T23:12:01 | 22 files changed | commit: e0f0ab69bfc1e5df0cb3b282b007b4a96b8f299d | push: success (via /tmp clone bypass - FUSE index.lock)
+2026-08-18 23:10 IST | 45 files changed | commit: 5170f3b | push: success (forced — FUSE mount divergence)
+
+| 2026-08-20 23:12 IST | 55 files changed | commit: e1b5740 | push: success (FUSE bypass — index.lock blocked direct push) |

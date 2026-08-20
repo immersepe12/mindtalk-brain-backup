@@ -1,0 +1,19 @@
+{
+  "date": "2026-08-13",
+  "week": 9,
+  "baseline": "2026-08-06",
+  "domains": {
+    "amahahealth.com": 1151,
+    "yourdost.com": 170,
+    "betterhelp.com": 16197,
+    "manastha.com": 133,
+    "mfine.co": 15683,
+    "mindtalk.in": 2276
+  },
+  "gaps_count": 77,
+  "top3_gaps": [
+    "counselling",
+    "peniaphobia",
+    "therapist for adhd"
+  ]
+}

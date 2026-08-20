@@ -121,12 +121,53 @@
 | Tamil-speaking doctor pages (dedicated) | P1 7-week CONFIRMED, Tamil recovered | /doctors | ✅ FIRE (+30 pts active) |
 
 ### Active Tier 1 that should be in T5 queue now:
-1. ✅ `/doctors/malayalam-speaking-doctors` (+30 pts — Kerala P8 watch)
+1. ✅ `/doctors/malayalam-speaking-doctors` (+30 pts — Kerala P8 CONFIRMED 4 wks, Kochi 18 W34)
 2. ✅ `/doctors/kannada-speaking-doctors` (+30 pts)
 3. ✅ `/doctors/hindi-speaking-doctors` (+30 pts)
-4. ✅ `/doctors/psychologists-in-delhi` (+30 pts — 95 Delhi clicks W33)
-5. ✅ `/doctors/psychologists-in-mumbai` (+30 pts — 106 clicks W33)
-6. ✅ `/doctors/psychologists-in-hyderabad` (+30 pts — 133 clicks W33)
-7. ✅ `/doctors/psychologists-in-chennai` (+30 pts — 92 clicks W33, NEWLY ACTIVATED)
-8. ✅ AI-citable authority content (structured FAQ, India MH stats)
-9. ✅ `/doctors/tamil-speaking-doctors` (+30 pts — P1 Tamil fully confirmed)
+4. ✅ `/doctors/psychologists-in-delhi` (+30 pts — **177 clicks W34, RECORD. URGENT.**)
+5. ✅ `/doctors/psychologists-in-mumbai` (+30 pts — 100 clicks W34)
+6. ✅ `/doctors/psychologists-in-hyderabad` (+30 pts — 110 clicks W34, P1 W8)
+7. ✅ `/doctors/psychologists-in-chennai` (+30 pts — 43 clicks W34, monitoring)
+8. ✅ AI-citable authority content (structured FAQ, India MH stats) — **P5 NOW REVENUE-GENERATING, highest priority**
+9. ✅ `/doctors/tamil-speaking-doctors` (+30 pts — P1 Tamil confirmed)
+10. ✅ `/doctors/psychologists-in-kochi` (Kerala P8 CONFIRMED 4 wks — IMMEDIATE)
+11. 🌱 `/doctors/psychologists-in-kolkata` (W34: 21, W33: 13 — W2 growth, confirm W35)
+12. 🌱 `/doctors/psychologists-in-delhi` OR `/doctors/psychologists-in-gurugram` (Delhi NCT 177 W34 — already in #4)
+13. 🌱 Manipur/Imphal mental health content — 35 clicks, no dedicated page exists (NE India P16)
+
+---
+
+## W34 UPDATE — 2026-08-19
+
+### URGENT: chatgpt.com = REVENUE CHANNEL (P5 Major — +30 pts)
+**chatgpt.com generated 2 payments + 3 bookings W34 (first ever AI-referred revenue).**
+
+| Proposed angle | Cluster | Evidence | Urgency |
+|---|---|---|---|
+| FAQ-rich illness pages with structured schema (FAQPage + MedicalWebPage) | /illnesses/* | P5 8 weeks, now revenue | 🔴 URGENT — schema supports AI citation |
+| Doctor profile pages with quoted expertise (structured Q&A format) | /doctors/* | AI cites structured expert voice | 🔴 URGENT |
+| India mental health statistics hub page (citable by AI on "best platform" queries) | /resources or /about | ChatGPT cites stats pages | 🔴 HIGH |
+| Authoritative "what is CBT" / "does online therapy work" explainers | /treatments/* + /blogs/* | W17: Google AI OV cites /treatments/cbt | 🟠 HIGH |
+
+### HIGH PRIORITY: Delhi NCT page (P15 — Week 1, skip normal 3-week gate)
+**177 clicks W34 (7.4% of national intent). Treat as Week 3 given P1 (language doctor pages) is 8-week confirmed.**
+
+| Proposed angle | Cluster | Evidence | Urgency |
+|---|---|---|---|
+| `/doctors/psychologists-in-delhi` | /doctors / local | 177 NCT clicks W34, record | 🔴 URGENT — create before W37 |
+| `/doctors/hindi-speaking-psychologists` | /doctors / language | Delhi + UP + Bihar + HP all Hindi-belt | 🔴 URGENT |
+
+### Kerala P8 CONFIRMED (4 weeks — FIRE NOW):
+| Proposed angle | Cluster | Urgency |
+|---|---|---|
+| `/doctors/psychologists-in-kochi` | /doctors / local | 🔴 IMMEDIATE (Kochi 18 W34, P8 4wks) |
+| `/doctors/malayalam-speaking-doctors` | /doctors / language | 🔴 IMMEDIATE (already in Tier 1) |
+
+### NEW SEEDS (W34 — do not fire yet, 3-week gate):
+| Pattern | Week | Proposed angle | Hold until |
+|---|---|---|---|
+| Gulf multi-city organic (P13) | W1 | "Online therapy for Indians in UAE / Dubai" | W37 (3 more weeks) |
+| West Bengal / Kolkata (P14) | W2 | `/doctors/psychologists-in-kolkata` | W36 (1 more week) |
+| Manipur NE India (P16) | W1 | Mental health content for NE India | W37 (3 more weeks) |
+| Madhya Pradesh / Jabalpur (new signal) | W1 | Monitor — may be ad-driven spike | W37 |
+| Australia diaspora (P12) | W3 | "Online therapy for Indians in Australia" | W37 (stable not growing) |
