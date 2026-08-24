@@ -59,3 +59,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W34 | /treatments/positive-psychology | Ms. Tejal Jaiswal | 70 | brief_generated |
 | 2026-W34 | /treatments/music-therapy | Ms. Navyashri S | 65 | brief_generated |
 | 2026-W34 | /blogs/relationship-problems-signs-causes-solutions | Dr. Swarupa Mohan Udgiri | 45 | brief_generated |
+
+| 2026-W35 | /treatments/dialectical-behaviour-therapy-dbt | Ms. Vindhya Shree P K | 45 | brief_generated |
+| 2026-W35 | /treatments/acceptance-and-commitment-therapy-act | Ms. Tejal Jaiswal | 45 | brief_generated |
+| 2026-W35 | /treatments/family-therapy | Dr. Swarupa Mohan Udgiri | 45 | brief_generated |
+| 2026-W35 | /illnesses/sleep-disorder | Dr. Rayani M Dessa | 65 | brief_generated |
+| 2026-W35 | /illnesses/personality-disorder | Dr. Sneha | 35 | brief_generated |
+| 2026-W35 | /blogs/anger-management-therapy | Abhimanyu Chandak | 40 | brief_generated |

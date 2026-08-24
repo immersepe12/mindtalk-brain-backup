@@ -236,3 +236,671 @@ ambiguity is itself a reason not to close.
 **Net:** 29 items stopped reaching Kushal. 6 fixed without him. The two items I initially got wrong
 were caught in-run by the Verifier and corrected before delivery — which is the mechanism working
 as designed, and the reason the digest reports 4 escalations rather than 2.
+
+---
+
+## 2026-08-21 (Friday) — RUN 2
+
+**Inputs read:** `brain/BACKLOG.md`, `brain/BRAIN.md`, `brain/INTENT-PRIORITY.md`, `brain/VERIFIER.md`,
+`logs/{auto-ship,stub-pilot,data-quality-suspect,rank-summary,rank,gsc-validation}-2026-08-21.*`,
+`flagged-drops.json`, `confirmed-drops.json`, `config.json`, and the live website repo.
+
+**Verifier sub-agent:** spawned adversarially against this run's own claims. Returned **6 VETOs and
+11 corrections. All honoured.** Two of my conclusions were reversed outright (T17-7 closure; acrophobia
+rejection) and two briefs were structurally broken until it caught them. The corrections are recorded
+below as first-class output.
+
+---
+
+### A. FALSE POSITIVES CLOSED (Rule 1) — 2
+
+#### A1. `CWV-ASSESSMENTS-CRITICAL-01` — CLOSED
+Flagged 2026-08-19 (T14) as *"/assessments LCP 2.33s→10.93s, perf 86→59, NEW CRITICAL, P0, must be fixed
+before the Day-42 assessment-cluster evaluation on 08-21."*
+
+Re-measured today via PageSpeed Insights API (mobile, key from `config.json`, fetched 2026-08-21T15:29:44Z,
+`finalUrl https://www.mindtalk.in/assessments`):
+
+| Metric | 08-19 flag | 08-21 re-measure |
+|---|---:|---:|
+| Performance | 59 | **89** |
+| LCP | 10.93s | **2,401ms** |
+| FCP | — | 906ms |
+| CLS | — | 0 |
+
+The lab regression did not reproduce two days later. Closed on lab evidence.
+
+*Verifier correction C1 (honoured):* I had also cited "assessments CrUX field LCP p75 1,542ms FAST" as
+supporting evidence. That figure is **origin-level, not page-level** — `loadingExperience.id` is the bare
+origin and carries `origin_fallback: True`, meaning CrUX has insufficient page-level samples for
+`/assessments` and PSI substituted the sitewide aggregate. Evidence struck. The closure stands on the lab
+re-measurement alone.
+
+#### A2. `T17-24-CHROME-STALL-4TH-ESCALATION` — CLOSED as an infrastructure failure
+Escalated four consecutive Thursdays (07-30, 08-06, 08-13, 08-20) as *"CRITICAL INFRASTRUCTURE: the
+extension itself is disconnected; AI citations untested for 4 weeks; root cause likely the extension
+losing its session during long Mac Mini runs."*
+
+Verified today: `list_connected_browsers` returns a live macOS instance. Two AI-citation queries executed
+**end to end** through the extension. The extension is not broken.
+
+**Real root cause: a render-wait bug in the T17 procedure.** On a JS-rendered AI answer page, the first
+`get_page_text` returns *"No text content found"* — the page has not hydrated. After a ~25s wait the full
+answer is present. T17 has been reading the pre-hydration DOM and recording it as a stall.
+
+This is a procedure fix (add a wait/retry loop before reading), i.e. a **T13 Meta-Learner proposal**, not
+a Kushal escalation. Supersedes T17-18 and T17-19. Four weeks of escalation for a missing sleep().
+
+**Bonus — 2 of 4 blind weeks partially recovered while proving the point:**
+- Q1 `best mental health platform india` → **Mindtalk ABSENT.** Perplexity cites Amaha (first), Tele-MANAS,
+  Wysa, TalktoAngel, Psyra, BetterLYF. T17-15's "monitor 2 more weeks before acting" window (set 07-30)
+  has now elapsed at 3 weeks.
+- Q3 `psychiatrist near me bangalore` → **Mindtalk CITED**, described as offering psychiatrist
+  consultations at five Bengaluru centres with same-week availability.
+
+---
+
+### B. AUTO-FIXED — 4
+
+| # | Item | Before → After |
+|---|---|---|
+| B1 | Brief-queue refill (standing job) | 8 raw / **5 effective** `/blogs/` briefs → **11 raw / 8 effective**. 3 new blog briefs written and Verifier-passed. |
+| B2 | Tier A `/doctors/` gap on the account's best-CVR cluster | No couples/marriage listing page existed (only `relationship-issues-*`). Wrote `briefs/NEW-couples-therapists-in-bangalore-brief.md`. |
+| B3 | Paid-conversion mining | `scripts/google-ads-search-terms.py` ran clean (account 2992649306, 30d). Surfaced the couples cluster: ~34 conversions on ₹4,910, incl. `couple therapy bangalore` **31% CVR** and `couple therapy near me` **38% CVR**. Both new cost briefs are grounded on it. |
+| B4 | BACKLOG hygiene | 3 stale `draft_sprint_prompt` rows resolved without escalation — T17-22 re-scoped, T17-23 and T17-25 rejected with evidence. |
+
+**Briefs written (all Verifier-passed):**
+
+| Brief | Tier | Grounding |
+|---|---|---|
+| `NEW-couple-therapy-cost-in-bangalore` | A | Paid ~34 conv/30d @ up to 38% CVR; GSC `coupl*` family 5,257 impr / 32 clicks / 0.61% CTR / pos ~10. `/treatments/couples-therapy` mentions cost 3× with no fee section. |
+| `NEW-rtms-treatment-cost-in-india` | A | GSC 122 impr/28d across 4 procedure-cost queries, pos 2.3–29.5; head term at 29.5. Neither live rTMS page contains a price. |
+| `NEW-acrophobia-treatment-fear-of-heights` | B | 14,800/mo, Amaha pos=10, Mindtalk has zero acrophobia content. Scoped to treatment intent. |
+| `NEW-couples-therapists-in-bangalore` | A | doctors-listing, not `/blogs/` — handed to T9/T11, not shipped by T20. |
+
+Run composition: **3 `/blogs/` briefs = 2 Tier A + 1 Tier B (67% Tier A)**, satisfying INTENT-PRIORITY §3
+(≥60% Tier A, ≤30% Tier B, 0 Tier C). No pages shipped; weekly cap untouched (T9 at 7/20).
+
+---
+
+### C. ESCALATED — 3
+
+#### C1. `T17-7-AEO-DOCTORS-SPRINT-01` — **stays open. My closure was wrong; the Verifier reversed it.**
+I closed this as a false positive on the evidence that `/doctors/<slug>` renders MDX bodies and emits
+FAQPage schema. **That evidence is real but it is about a different page class.** There are three:
+
+| Page class | Source | MDX body? | FAQPage live | Status |
+|---|---|---|---|---|
+| `/doctors` (index) | `src/app/doctors/page.tsx` — hardcoded JSX | **NO** | **0** | **T17-7 target — genuinely dev-blocked** |
+| `/doctors/<listing-slug>` | `doctors-listings/*.mdx` | YES | 5 | unblocked |
+| `/doctors/<doctor-slug>` | `doctors/*.mdx` | frontmatter only | 0 | partially blocked |
+
+All three claims in the original 08-05 flag check out against the live tree: `page.tsx` calls
+`getFile("pages/doctors")` once, inside `generateMetadata` only; `content/pages/doctors.mdx` has
+`seo.structuredData: null` and no `faqs:`; live `/doctors` emits FAQPage count 0. My own task spec also
+names *"programmatic doctor-page executor"* in its escalate table — closing it contradicted the registry.
+
+**Ask unchanged: Option A, dev adds a `faqs:` reader to `src/app/doctors/page.tsx` (~2h).**
+
+#### C2. `CWV-REGRESSION-05` — **downgraded P0 → P2, not closed.** Homepage only.
+Homepage lab LCP **reproduces** (11.04s today vs 11.65s on 08-19) — so "oscillation artifact" was the wrong
+framing and I have dropped it. But it is **unattributable**: `largest-contentful-paint-element` returns zero
+items, the last network request completes at **5.79s**, FCP is 0.96s and CLS is 0. Nothing is loading at 11s.
+
+Decisive evidence: **page-level** CrUX (`loadingExperience.id = https://www.mindtalk.in/`, no origin
+fallback) gives **LCP p75 = 1,437ms, FAST**. Google's CWV ranking input is field p75, so the "must fix
+before the 08-26 core update" framing is unsupported.
+
+Caveats stated rather than buried: CrUX is a 28-day rolling window and would dilute a recent regression —
+rebutted by field LCP never crossing 2.5s across five flagged regressions since June. And the homepage
+CrUX `overall_category` is **AVERAGE**, not FAST, dragged by **INP 232ms**. The page is not green; it is
+not an LCP emergency. Dev spec stands; the weekly P0 re-escalation should stop.
+
+#### C3. Brief-queue shortfall — **declared, not hidden.**
+Spec target is ≥12 shippable. Post-run: 11 raw / **8 effective**. **Shortfall 4.**
+
+*Verifier VETO 6 (honoured):* I triggered the refill on the **effective** count (5 < 6) and then reported
+completion against the **raw** count. Triggering on effective is defensible and the spec supports it
+("real shippable queue, not raw file count"), but measuring completion on raw is metric-switching. Held to
+one metric throughout, the refill is **+3 `/blogs/`** (the couples-therapists brief is `/doctors/` and does
+not count) against a target of 12 effective. Root cause of the residual gap is unchanged: the genuinely
+un-served, non-cannibalizing `/blogs/` territory is close to exhausted, which is itself the argument for
+consuming the 42 Tier A `/doctors/` briefs.
+
+---
+
+### D. ROUTED TO LEARNER / META-LEARNER — not Kushal's
+
+| # | Item |
+|---|---|
+| D1 | **T17 render-wait fix** — add a hydration wait + retry before `get_page_text` on AI answer pages. Closes 4 weeks of phantom Chrome stalls. |
+| D2 | **`BRAIN-ACROPHOBIA-CLAIM-01`** — the 08-13 Strategist stamp claims "acrophobia, claustrophobia already covered". Neither page exists. |
+| D3 | **`YMYL-PATH-GATE-DRIFT-01`** — proposed PRINCIPLE: a medical-procedure page placed under `/blogs/` still requires a named clinical reviewer, regardless of path. The AP3-B gate is path-triggered, so commercial scoping can route around it; that is drift even when the resulting page is compliant. |
+| D4 | **Reviewer-load state is stale/transposed.** T9 logs carry tirzah-johnson=9 and tejal-jaiswal=7; actual counts from `src/content/blogs/*.mdx` are **tirzah-johnson 6, tejal-jaiswal 9**. Load-based reviewer assignment is running on wrong numbers. |
+| D5 | **`new-content-discovery.py` still cannot complete.** `--all` times out (D2 of the 08-17 run); `--gsc` exits 0 without rewriting `new-content-opportunities.json` (mtime still 08-17 10:26). Needs a chunked/resumable mode — `scripts/*.py` belongs to the Strategist Verifier, not T20. |
+| D6 | **Stray build artifacts in the repo:** `src/content/blogs/what-is-biofeedback-therapy.mdx.tmp_merge` and `what-is-rtms-treatment.mdx.tmp_merge`. `src/**`, so not T20's to remove. Low priority. |
+| D7 | **`filterCondition` values are hyphenated** (`Relationship-Issues`), matched against `d.illnesses` in `src/lib/doctors.ts`. A space-separated value silently renders an empty specialist list. Worth a lint at brief-generation time — it would have shipped a blank Tier A page today. |
+
+---
+
+### E. TODAY'S SENSOR FLAGS — verified, no action needed
+
+- **T1 rank sweep:** 289 keywords, **0 new flags**, 0 CRITICAL.
+- **AP8 quarantine (9 URLs → position 100 in one sweep):** correctly auto-quarantined as API noise. I
+  confirmed all 9 return **HTTP 200** live, so no real deindexation sits underneath the sentinel. No escalation.
+- **T2 GSC validation:** 3 carry-over MODERATE flags → 2 closed as NOISE/IMPROVING, 1 CONFIRMED
+  (`/blogs/psychology-of-love`, CTR_DROP, rank 2→9, impressions +353% while clicks halved). T3 has already
+  written `briefs/psychology-of-love-brief.md`. Working as designed; not a T20 item.
+- **T9 auto-ship:** SKIPPED on the `/blogs/` cluster cap (7/6, next slot 08-25). Correct behaviour, not a flag.
+- **Stub-pilot:** 2nd consecutive workless run. The 08-14 Slack escalation is the standing flag; the task
+  correctly declined to re-ping. **Not re-escalated today** — Kushal's (a)/(b)/(c) decision is 7 days old
+  and weekly re-pings are noise.
+
+---
+
+### RUN SUMMARY
+
+| | |
+|---|---|
+| Flags collected | 14 (BACKLOG open items + today's sensor logs) |
+| **False positives closed with evidence** | **2** (CWV-ASSESSMENTS-CRITICAL-01 · T17-24 Chrome stall, 4 weeks running) |
+| **Auto-fixed** | **4** (queue refill +3 blog briefs · Tier A couples listing brief · paid mining · 3 BACKLOG rows resolved) |
+| **Escalated** | **3** (T17-7 `/doctors` index — *reinstated after my wrong closure* · CWV-REGRESSION-05 downgraded P0→P2 · queue shortfall 4) |
+| Routed to Learner / Meta-Learner | 7 |
+| Brief queue | 11 raw / **8 effective** `/blogs/` (was 8 / 5) · target 12 · **shortfall 4** |
+| Pages shipped | 0 |
+| Verifier sub-agent | **6 VETOs + 11 corrections — all honoured.** 2 conclusions reversed, 2 briefs structurally fixed. |
+
+**Net:** the highest-value output is **not** a fix — it is `DOCTORS-LISTINGS-UNBLOCKED-01`: **42 Tier A
+`/doctors/` briefs are shippable today** and have been sitting idle behind a blocker that applies to a
+different page class. Tier A is the 70–95%-intent class and the most reliable attribution signal in the
+system. Two multi-week escalations (Chrome ×4, assessments CWV) stopped reaching Kushal.
+
+**And the run's own discipline note:** I got two things materially wrong — closing T17-7 by conflating
+page classes, and rejecting acrophobia by inverting the zero-click-trap test. Both were caught in-run and
+corrected before delivery. That is the mechanism working, and it is why this digest reports 3 escalations
+rather than 1.
+
+---
+
+## 2026-08-22 (Saturday) — RUN 3
+
+**Inputs read:** `brain/BACKLOG.md` (T10 stamp 08-22), `brain/WATCH.md`, `brain/INTENT-PRIORITY.md`,
+`brain/VERIFIER.md`, `logs/{observation-2026-08-22, ops-health-2026-08-21, stub-pilot-2026-08-21,
+gsc-validation-2026-08-21, rank-summary-2026-08-21, data-quality-suspect-2026-08-*, auto-ship-2026-08-21,
+conversion-intelligence-2026-08-19}`, `flagged-drops.json`, `confirmed-drops.json`, `config.json`,
+`briefs/*.md` (57), the live site (58 curl checks), Mixpanel 4011856, and GSC.
+
+**Verifier sub-agent:** spawned adversarially against this run's own claims. Returned **2 VETOs, 3
+CORRECTIONS, 1 UPHELD — approval rate 1 of 5. All honoured.** Two of my conclusions were withdrawn
+outright and the brief I amended had to be substantially reverted. The corrections are the most
+important output of this run and are recorded as first-class content below, not as footnotes.
+
+---
+
+### A. FALSE POSITIVES CLOSED — **0**
+
+I intended to close two. Neither survived the Verifier. Both became downgrades instead. Recording zero
+closures rather than inflating the number is the point of the mechanism.
+
+---
+
+### B. DOWNGRADED — verified-real, but materially mis-stated — 2
+
+#### B1. `DEAD-CLICKS-W34-CRITICAL-01` — **CRITICAL → P2 chronic. Ad-spend block WITHDRAWN.**
+
+Flag (2026-08-20, T19 W34): *"Dead clicks 4,441 (+111% WoW). Paid traffic amplifying broken UX…
+revenue leak… escalate immediately; block further BOF ad spend increase until UX fixed."*
+
+Ground truth, Mixpanel project 4011856 — **the same project T19 queried** (confirmed in
+`logs/conversion-intelligence-2026-08-19.md`: *"Mixpanel project: 4011856 (unified)"* and
+`brain/UX-FRICTION-PAGES.md`: *"project 4011856, trailing 7d"*). Project 3986277 does not exist in this
+account, so the "T20 measured a different source" objection fails and verification was legitimate.
+
+| Window | Dead clicks |
+|---|---:|
+| Aug 5–11 | 3,856 |
+| **Aug 12–18 (W34)** | **4,304** |
+| **WoW** | **+11.6%** |
+
+**The "+111%" is a scope artifact, not a decimal slip** *(Verifier CORRECTION — my first framing was
+wrong)*. `UX-FRICTION-PAGES.md` line 17 shows the comparison: site-wide W34 `4,441` against a W33 column
+of `~2,100` explicitly marked **"(est)"**. That W33 estimate came from `conversion-intelligence-2026-08-12.md`
+Q10–Q12, which measured only three URL clusters (`/appointments` 535 + `/assessments` 750 +
+`/find-therapist` 615 = 1,900). A site-wide total was divided by a three-cluster subtotal.
+
+**My "trend is DOWN 4 consecutive weeks" claim was FALSE and is withdrawn** *(Verifier CORRECTION — the
+most important catch of the run)*. I read the `2026-08-17` weekly bucket (3,657) as a completed week. It
+is a **partial week** — 08-17 is a Monday and today is Saturday. Daily run-rates tell the opposite story:
+
+| Window | Dead clicks/day |
+|---|---:|
+| Aug 5–11 | 551 |
+| Aug 12–18 | 615 |
+| **Aug 17–21 (current)** | **660 — highest in the 9-week series** |
+
+Projecting ~4,620/wk, **above** the 07-20 peak of 4,393. Volume is rising.
+
+**What does survive:** the dead-click-per-pageview *rate* has oscillated 7.8–10.9% for nine straight
+weeks with no trend (latest 9.37%). Dead clicks scale with traffic; bug density is unchanged.
+
+**Verdict:** real problem, wrong number, wrong urgency. The "+111% doubling" that justified blocking ad
+spend is not real, so **that recommendation is withdrawn**. But this is a chronic UX defect at an
+all-time-high absolute volume on the highest-intent traffic — it stays open at P2. Two further notes:
+I verified one sub-claim and would have closed the whole row, which would have silently deleted the
+**`doctor_card` attribution-bleed (3rd recurrence)** item — that remains **unverified and open**. And I
+never reconciled my 4,304 against T19's 4,441 (3.2% gap, same project, same window, same event).
+
+#### B2. `T5-REFILL-CRITICAL-16` — **CRITICAL → P3. 16 consecutive days of a false premise.**
+
+Flag: *"16th consecutive carry. **0 shippable NEW blog briefs in queue.** T9 cannot ship new blogs
+without fresh briefs. Mac Mini must run T5 NOW."*
+
+I parsed all 57 `briefs/*.md`, extracted `**intent_tier:**` and `**Suggested URL:**`, and curl-verified
+every slug against the live site:
+
+| Class | Briefs | Live check | Shippable |
+|---|---:|---|---:|
+| `/blogs/` with `intent_tier` | 11 | **11/11 → HTTP 404** | 11 raw / **8 effective** |
+| `/doctors/` Tier A | 43 | **43/43 → HTTP 404** | 43 |
+| `/treatments/` | 0 | — | **0** |
+
+(3 `/blogs/` are NEEDS_HUMAN per `auto-ship-2026-08-04.txt`: conduct-disorder-in-children,
+relationship-problems-and-solutions, gender-identity-disorder → effective 8.)
+
+**"0 shippable" has been false for 16 consecutive days.** But *(Verifier CORRECTION)* I over-reached by
+citing 54: the flag's own body says *"Doctor listings briefs stuck separately — T5 needs `/blogs/` and
+`/treatments/` new briefs"*, so it had already excluded the 43. On its own scope the honest number is
+**8 `/blogs/` + 0 `/treatments/`**.
+
+**And it is not wholly false** — 2 of its 3 named Tier A priorities are genuinely unwritten:
+`psychologists-in-kochi` (absent) and a Kerala/Kochi `malayalam-speaking-doctors` variant (only
+`-in-delhi` / `-in-mumbai` exist), with P8 Kerala confirmed 4 weeks. So: **downgrade and re-scope to
+those specific gaps, do not close.**
+
+**The finding underneath the finding — the bottleneck is consumption, not generation.**
+`logs/auto-ship-2026-08-21.txt`: `Status: SKIPPED — cluster cap exceeded · /blogs/ cluster: 7/6 (next
+slot 2026-08-25) · **Candidates in queue: 49**`. T9 is sitting on 49 candidates and shipping zero
+because of the VERIFIER §9 cluster cap. Generating briefs today could not have produced one page.
+
+*(Verifier CORRECTION, accepted:* the 08-21 run reported the identical queue — 11 raw / 8 effective —
+and **escalated** it as a shortfall. Same numbers, opposite verdict 24 hours later. The reconciliation
+is that yesterday's run had *triggered* the refill at 5 < 6 and was then obliged to reach 12; today the
+trigger never fires. Stated plainly rather than left as a silent inconsistency.*)
+
+---
+
+### C. MY OWN CLAIMS VETOED AND WITHDRAWN — 2
+
+#### C1. `ASSESSMENT-AIO-SCHEMA-AUDIT-01` — **my closure WITHDRAWN. Flag stays OPEN, re-scoped.**
+
+I claimed all three proposed fixes were disposed of. **VETOED on the evidence.**
+
+- My "interpretation section is already present" finding used the regex
+  `interpret(ing|ation)? your (score|results)|what your score means|how to interpret`. The Verifier
+  re-ran it: it returns **exactly 2 hits on every page, both the same string in the same template
+  block** — the sitewide CTA *"Mindtalk's psychiatrists and clinical psychologists **can interpret your
+  results**"*. That is a booking CTA saying a *clinician* will interpret — the opposite of on-page
+  interpretation. **My evidence was boilerplate.**
+- The conclusion nonetheless survives on evidence I failed to gather. The Verifier extracted the H2/H3
+  trees: `ace-test` → *"What ACE scores predict"*, *"What to do with a high ACE"*; `dass-21` →
+  *"DASS-21 severity band table"*; `obq-44` → *"OBQ-44 profile interpretation"*; `c-ssrs` →
+  *"Safety planning after C-SSRS"*. Fixes (2) and (3) **are** substantively live (FAQPage ×1 with 7
+  Question entities, MedicalWebPage ×2, speakable = 0 on all four).
+- **Speakable: overstated.** Google's Speakable feature is limited to English-language news publishers,
+  so it will not yield a Google rich result here. But the flag's stated purpose was *"so AI engines
+  attribute the answer to Mindtalk"* — ChatGPT/Perplexity crawlers, not Google News eligibility. Correct
+  wording: **ineligible for Google's feature; unknown for LLM citation; low-value, deprioritise** — not
+  "not viable."
+- **The core error:** I disposed of the *remedies* and declared the *problem* gone. The flag's actual
+  subject is **16 pages at pos 7–19 losing 20–85% of Day-21 impressions** (c-ssrs 1,802→244, obq-44
+  1,154→292, ace-test 1,773→103). I verified **none** of it. RULE 1 says an impressions claim verifies
+  in GSC; I ran no GSC pull. I also applied the wrong registry row — *"Schema missing → curl → present =
+  FALSE POSITIVE"* does not govern an AIO-displacement flag that merely *proposes* schema as one remedy.
+- Sample not census: 4 of 16 pages. And `c-ssrs` is a **suicide-risk instrument** — reducing Kushal's
+  visibility into it must never happen silently.
+
+**Re-scoped ask:** stop asking Kushal to approve work that is already done; **run a GSC pull across the
+16 pages to confirm the impression loss is real before proposing any remedy.**
+
+#### C2. `psychology-of-love-brief.md` re-diagnosis — **WITHDRAWN. Strategist's diagnosis reinstated.**
+
+I tiered the brief `C` and rewrote its root cause, claiming the exact `psychology of love` family had
+**0 queries / 0 impressions / 0 clicks** and that the Strategist's remedy therefore chased a keyword
+with zero demand. **VETOED — and the file says the opposite.**
+
+`scripts/gsc-pull.py` line 96 sets `"rowLimit": 50` and lines 103–104 compute window totals as **sums
+over the returned rows only**. Both windows sit at exactly 50 rows, ordered clicks-desc then
+alphabetical. The current window's alphabetical tail terminates at **`love and bonding`** — so
+`psychology of love`, sorting at "p", **could not appear regardless of its true volume.** My flagship
+finding was a row-cap artifact, not a measurement.
+
+Worse, the counter-evidence was in the same file. `previous_window` (which did reach "p"):
+
+> `psychology of love` — **40 impressions · 2 clicks · position 29.6 · CTR 5.0%**
+
+That was **100% of the page's clicks that week**, at a healthy 5% CTR from page 3. The primary keyword
+is the page's only proven click source. It dropped out of a 50-row report that `love` flooded — which is
+closer to *supporting* the Strategist than refuting them.
+
+**Also out of scope** *(Verifier CORRECTION, accepted)*: the registry authorises exactly two moves on a
+brief — classify it, or archive it — plus the `Broken link / 404` class. Re-diagnosing root cause and
+superseding remedies is **judgement**, which RULE 2 assigns to escalation. I overstepped.
+
+**What survives and stands:**
+
+| Item | Status |
+|---|---|
+| `intent_tier: C` set (was the queue's only untiered brief) | ✅ registry-authorised auto-fix |
+| Brief's CTA target `/treatments/relationship-counselling` **404s** → retargeted `/illnesses/relationship-issues` (200) | ✅ registry `Broken link / 404` |
+| Mandatory Tier A link `/doctors/psychologists-in-bangalore` (200) — page's only booking path | ✅ retained |
+| `love` = 303 impr at pos **1.4**, 0.33% CTR + entity junk (Jamie Ford novel, *Love Story 2050*, `=love`, `l.o.v.e.`) | ✅ real rows, real dilution |
+| Clicks 2 → 1 = noise-level, not a 50% collapse worth a sprint | ✅ clicks are cap-immune |
+| Success metric replaced: **clicks on primary KW + onward Tier A clicks**, NOT impressions/CTR/position | ✅ impression base is unmeasurable |
+| Keyword-density 8–12× and H2 renames | ⤴️ **restored** — my "do not do this" was withdrawn |
+
+**§1 stated honestly, not dressed up** *(Verifier CORRECTION)*: I made the ship conditional on *adding*
+a Tier A link and called that §1 compliance. §1 requires a **measured** click path; adding a link
+creates an unmeasured one, so limb (b) still fails the day after ship. Read literally, §1 says
+*"Otherwise: reject and log"* → archive. **Shipping is a recorded deviation from §1 and is Kushal's
+call.** The brief is **ON HOLD**.
+
+---
+
+### D. AUTO-FIXED — 4
+
+| # | Item | Before → After |
+|---|---|---|
+| D1 | Untiered brief in queue (registry auto-fix) | `psychology-of-love-brief.md` had no `intent_tier` → classified **C**. Queue now 57/57 tiered. |
+| D2 | Broken link target in a brief | `/treatments/relationship-counselling` **404** → `/illnesses/relationship-issues` **200**. All 5 link targets in the brief re-verified live. |
+| D3 | **WATCH ID collision** | **W40 was assigned twice** — `/blogs/psychology-of-love` (opened 08-21, Day-21 09-11) *and* the 5-blog T9 cohort (opened 08-11, Day-21 09-01 / Day-42 09-22). Two cohorts, one ID, different eval dates would have corrupted both verdicts. Renumbered psychology-of-love → **W42** (W41 already taken by the 08-18 cohort). |
+| D4 | Stale success metric on that watch | W42's row still targeted *"pos 9 → pos≤5, +30 clicks/wk"* and a CTA to the 404 URL. Replaced with the clicks-based metric and corrected target. |
+
+**Brief-queue standing job:** **11 raw / 8 effective `/blogs/` shippable.** Floor is 6. **Trigger did not
+fire; no refill run — deliberately.** Spec Step 4: *"count shippable `/blogs/` briefs. **If < 6**, run
+the brief-starvation auto-fix"*; the registry's *"Refill to ≥12"* is the target *inside* that auto-fix,
+not a standing floor. At 8 ≥ 6 it never activates. Verifier **UPHELD** this, and independently confirmed
+the substantive argument: T9 is cap-blocked with 49 candidates until 08-25, so briefs written today
+could not ship a page. Adding inventory to a consumption-blocked pipeline would have been motion, not
+progress. **Weekly cap untouched. 0 pages shipped. `src/**` untouched. Nothing deleted.**
+
+---
+
+### E. ROUTED TO META-LEARNER / STRATEGIST-VERIFIER — not Kushal's — 5
+
+| # | Item |
+|---|---|
+| E1 | **`gsc-pull.py` `rowLimit: 50` is a systemic measurement defect.** Window totals are sums over returned rows only. **252 of 746 window objects (33.8%) across `gsc-data/` are at the cap** — so `impressions`, `avg_position` and every derived CTR/impressions-delta signal are truncated samples of variable size. This is what produced both the withdrawn "0 impressions" finding *and* the original `PSYCHOLOGY-OF-LOVE-CTR-DROP-01` signal. `scripts/*.py` is outside T20's write scope. **Highest-value item in this run.** |
+| E2 | **`new-content-discovery.py --all` times out** — 3rd confirmed recurrence (D5 of the 08-21 run). Ran to a 300s timeout today without completing; `new-content-opportunities.json` mtime still 2026-08-17 (5 days stale). Needs a chunked/resumable mode. Low urgency while the queue is consumption-blocked. |
+| E3 | **The `+353%` impressions figure** in `WATCH.md` / `BACKLOG.md` / the 08-21 log traces to the 08-21 GSC pull (94→426); today's pull gives 96→371 = +286%. Both are 50-row-capped sums, so **neither is a real impressions delta.** Not an arithmetic error — a provenance/reliability one. |
+| E4 | **`brain/.git` lock files cannot be cleared from the sandbox.** 9 `.lock` files (incl. accumulated `*.gone.2.lock` cruft from prior failed clearing attempts); both `os.rename()` and `os.unlink()` return EPERM on the FUSE mount. Note the previously-recorded `os.rename()` workaround **no longer works**. `git status` still functions, so impact is limited. Already in `pending-human-actions`; **not re-escalated** — Kushal has it. |
+| E5 | **AP8 verified working, no action.** I checked whether the 9 daily quarantines are the *same* URLs recurring (which would mean AP8 is masking a real problem). Across 8 days of `data-quality-suspect-*` logs the sets are near-disjoint and rotate randomly. Genuine API noise. AP8 is correctly designed. |
+
+---
+
+### F. TODAY'S SENSOR FLAGS — verified, no action
+
+- **T1 rank sweep (08-21):** 289 keywords, **0 new flags**, 0 CRITICAL, 0 MAJOR. 9 AP8 quarantines (see E5).
+- **T2 GSC validation:** 3 flags → 2 removed as NOISE/IMPROVING, 1 CONFIRMED (`psychology-of-love`). `confirmed-drops.json` is `{}`. Working as designed.
+- **T4 observation monitor:** 13 URLs in pipeline, 0 checks due today, 0 alerts. Next: 4 Day-21 midpoints on 08-25.
+- **T9 auto-ship:** correctly SKIPPED on the `/blogs/` cluster cap (7/6). Not a flag.
+- **Stub-pilot:** 3rd consecutive workless run. The 08-14 verdict is the standing flag; **not re-pinged** — weekly re-pings on an 8-day-old decision are noise.
+- **Schema (`SCHEMA-MEDICAL-TYPES-01`, PR #23):** independently re-confirmed live. `/illnesses/depression` and `/illnesses/anxiety` both emit `FAQPage` + `MedicalCondition` + `Article`; `/treatments/narrative-therapy` emits `FAQPage` + `MedicalTherapy`. The W36/W37 root-cause hypothesis is genuinely addressed ahead of the 09-11 finals.
+- **`T17-7-AEO-DOCTORS-SPRINT-01`:** re-confirmed real — live `/doctors` emits only `Organization`, `SearchAction`, `WebSite`; **FAQPage count 0**. Escalated 4× already; **not re-pinged today.**
+
+---
+
+### RUN SUMMARY
+
+| | |
+|---|---|
+| Flags collected | 18 (BACKLOG open rows + today's sensor logs + ops-health carry-overs) |
+| **False positives closed** | **0** — both intended closures were downgraded instead after Verifier review |
+| **Downgraded (real, but mis-stated)** | **2** — `DEAD-CLICKS-W34` CRITICAL→P2 (ad-spend block withdrawn) · `T5-REFILL-16` CRITICAL→P3 (16-day false premise) |
+| **My own claims vetoed and withdrawn** | **2** — `ASSESSMENT-AIO` closure · `psychology-of-love` re-diagnosis |
+| **Auto-fixed** | **4** — brief tiered · 404 link target · W40→W42 ID collision · stale watch metric |
+| Routed to Meta-Learner | 5 (incl. the `gsc-pull.py` 50-row cap — the run's most valuable finding) |
+| Escalated to Kushal | **3** — §1 Tier C deviation call · `ASSESSMENT-AIO` re-scoped (needs GSC pull) · `DEAD-CLICKS` P2 with ad-spend block withdrawn |
+| Brief queue | 11 raw / **8 effective** `/blogs/` + **43 Tier A `/doctors/`**, all 404-verified · floor 6 · **refill trigger did not fire** |
+| Pages shipped | 0 · `src/**` untouched · nothing deleted |
+| Verifier sub-agent | **2 VETOs + 3 CORRECTIONS + 1 UPHELD — approval rate 1/5. All honoured.** |
+
+**Net.** Two multi-week escalations were defused rather than deleted: a CRITICAL that would have blocked
+ad spend on a scope artifact, and a 16-day-old "the queue is empty" that was wrong every single day.
+Both were downgraded, not closed, because parts of each are genuinely real — and saying so is the
+difference between filtering noise and manufacturing it.
+
+**The structural finding is that the engine is not brief-starved, it is brief-constipated:** 54
+verified-shippable briefs, 43 of them Tier A, against a T9 run that skipped with 49 candidates queued
+behind a cluster cap. Sixteen days of "run T5 NOW" escalations pointed at the wrong end of the pipe.
+
+**And the discipline note.** I got two things materially wrong — closing the AIO flag on evidence that
+turned out to be a boilerplate CTA, and declaring a keyword dead when it was merely past a row cap that
+I had not noticed. Both were caught in-run and reversed before delivery. The row cap is the more serious
+of the two: it means a third of this system's GSC-derived signals, including the very flag I was
+investigating, are computed on truncated samples. I would not have found it without being forced to
+defend a wrong claim.
+
+---
+
+## 2026-08-23 (Sunday) — RUN 4
+
+**Inputs read:** `brain/BACKLOG.md` (T10 stamp 08-23 20:17), `brain/BRAIN.md` (T12 stamp 08-23 18:00),
+`brain/WATCH.md`, `brain/INTENT-PRIORITY.md`, `brain/VERIFIER.md`, `config.json`, `tracking-db.json`,
+`logs/{observation-2026-08-23, ops-health-2026-08-22, auto-ship-2026-08-21, rank-summary-2026-08-21,
+gsc-validation-2026-08-21}`, `brain/memory/decisions/2026-08-23.md`, all 57 `briefs/*.md`,
+`gsc-data/` (179 files), the live site (16 curl checks), **GSC (63 page-filtered queries)**,
+**PageSpeed Insights (9 runs)**, and the `mindtalk` product repo (read-only).
+
+**Verifier sub-agent:** spawned adversarially against this run's own claims. Returned
+**3 UPHELD / 5 CORRECTION / 2 VETO — approval rate 3 of 10. All honoured.**
+**Both VETOs were mine and both conclusions are withdrawn below.** The corrections are recorded as
+first-class content, not footnotes.
+
+---
+
+### A. THE RUN'S PRINCIPAL FINDING — a false zero that produced five failing verdicts
+
+T12 ran at 6 PM today and wrote into BRAIN.md: *"5 watches evaluated … **All 5 verdict 🔴 STALLED** …
+GSC Aug 13-20 window: **all 5 show 0 impressions** … PRIMARY CONFOUND: August Core Update causing
+documented broad SERP volatility."*
+
+**The zeros are an input-format artifact.** `scripts/gsc-pull.py:80` builds the page filter as
+`full_url = f"{PAGE_URL_BASE}{url_path}"` with `PAGE_URL_BASE = "https://www.mindtalk.in"`. T12 passed
+a **full URL** on `--url` instead of a path, so the filter became
+`https://www.mindtalk.inhttps://mindtalk.in/blogs/...` and matched **zero rows**. Three independent
+confirmations: (1) the five output files are named `gsc-data/https:__mindtalk.in_blogs_*.json` — the
+`url_path.replace("/","_")` fingerprint of a full URL; (2) they are ~550 bytes with `keywords: []`
+while normal pulls are 13–18 KB; (3) **40 other pages pulled path-form in the same session at 18:10
+returned normal data**, which isolates the cause to the input, not to GSC or to the pages.
+
+**Ground truth — page-dimension, filter `https://www.mindtalk.in` + path, window 2026-08-13→08-20:**
+
+| Watch | Page | T12 read | Truth (impr / clicks / pos) | Primary query |
+|---|---|---:|---|---|
+| W30 | `/blogs/how-to-deal-with-relationship-stress` | 0 | **78 / 0 / 8.6** | `relationship stress` pos 7.2 |
+| W31 | `/blogs/how-to-fix-your-sleep-schedule-quickly` | 0 | **1,608 / 2 / 9.6** | primary KW **pos 1.8** (183 impr) |
+| W32 | `/blogs/mental-exhaustion-symptoms-causes` | 0 | **376 / 0 / 17.3** | `mental exhaustion` pos 6.3 |
+| W33 | `/blogs/what-is-eft-tapping-guide` | 0 | **467 / 2 / 8.1** | `eft tapping` pos 5.4 |
+| W39 | `/blogs/yoga-for-anxiety` | 0 | **2,055 / 16 / 8.8** | `yoga for anxiety` |
+| | **TOTAL** | **0** | **4,584 impressions / 20 clicks** | **4 of 5 on page 1** |
+
+*(Verifier CORRECTION ×3, all accepted:* my first ground-truth figures were **1,836 impr / 5 clicks** —
+2.5× low, because I summed `dimensions:["query"]` rows, which GSC privacy-filters. **That is the same
+error family I was indicting.** All figures above are now page-dimension. My "3 of 5 on page 1" was
+also understated — it is 4 of 5. And T12 issued **Day-21/Day-14 INTERIM** verdicts with the watch left
+OPEN, not closures; my proposed remedy of "close and hand back" was backwards — the correct action is
+to **correct them in place**, which is what was done.*)
+
+**Action:** the 5 interim verdicts are marked measurement-invalid in `WATCH.md` (a correction block at
+the head of the file plus an annotation appended to each of the 5 rows) and in `BRAIN.md`. **No watch
+was closed and no replacement 🟢/🟡 verdict was issued — that is T12's rubric, not mine.** T12 must
+re-issue on corrected data. The 5 corrupt data files are annotated in place with
+`_AUTHORITATIVE_page_dimension_2026_08_23` (page-dim) and `_query_dim_floor_2026_08_23`.
+
+---
+
+### B. THE SAME DEFECT CLASS, ONE ORDER OF MAGNITUDE WIDER
+
+Chasing the mechanism turned up its larger sibling. `scripts/day42-batch-gsc.py:59` sets
+**`rowLimit: 25`**, and window totals are sums over the returned rows only.
+
+**Reproduced end-to-end, not inferred** *(Verifier CORRECTION — upgraded my "plausibly manufactured" to
+demonstrated):*
+
+| Page | Window | At `rowLimit: 25` | Uncapped | Recorded in BACKLOG |
+|---|---|---:|---:|---:|
+| `/assessments/ace-test` | Aug 11–18 | **101 impr / pos 20.2** | 1,260 / pos 16.1 | **103 / pos 20.3** |
+| `/assessments/c-ssrs` | Aug 11–18 | **244 impr** | 530 | **244** |
+
+The mechanism *(Verifier addition):* **GSC returns rows sorted by clicks descending, ties broken
+alphabetically** — not by impressions. On a 1-click page the cap returns that one row plus 24
+alphabetically-first zero-click rows (`6 ace score`, `a c e test`, …). Truncation is therefore a
+**near-random sample, not a top-N sample**, and severity scales with (rows − limit) — which is why a
+152-row page collapses ~12×.
+
+**Consequence:** the entire **2026-08-21 assessment Day-42 batch (77 pages: 45 RESOLVED / 16
+SCHEMA_OPTIMIZATION_NEEDED / 16 NEEDS_REFRESH)** ran on this script. All 77 verdicts are suspect, and
+the derived **"58.4% assessment establishment rate vs 80% for blogs"** in BRAIN.md is computed on
+truncated data. Both are now **quarantined pending an uncapped re-pull**, not deleted.
+
+---
+
+### C. FALSE POSITIVES CLOSED (Rule 1) — 3
+
+| # | Flag | Evidence |
+|---|---|---|
+| C1 | **`ACES-TEST-INVESTIGATE-01`** | Claimed "D21 1,773 impr/wk → D42 103 = −94.2%". Truth: D21 window **393 / 1 click**, current **1,740 / 10 clicks** = **+343%**. Invalid for two independent reasons: the D42 figure is the `rowLimit:25` artifact above, **and** *(Verifier addition)* the "1,773 impr/**wk**" baseline is a **19-day cumulative** — `tracking-db.json` `week_3_check_notes`: *"GSC 07-10->07-28: impr=1773"* ≈ 653/wk. No window yields −94%. |
+| C2 | **`ASSESSMENT-AIO-SCHEMA-AUDIT-01`** | The 08-22 run withdrew its own closure and re-scoped the ask to *"run a GSC pull across the 16 pages before proposing any remedy."* **Done — and the premise fails.** Cohort **1,367 → 1,835 vs the Day-21 window (+34%)** and **1,819 → 1,835 week-over-week (+0.9%)**; the claimed "20–85% loss" appears under neither. `c-ssrs` **+82% / +0.6%**, pos **14.7 → 9.3**, **11 clicks**; `obq-44` **+32–51%**, **13 clicks**. Position improved **11/16**; **13/16** flat-or-up. |
+| C3 | **`T9-SLEEP-STAGES-AP9`** | `briefs/archive/NEW-the-4-stages-of-sleep-explained-brief.md`, mtime **2026-07-24 17:11** — 30 days. Still listed "STILL OPEN" in `ops-health-2026-08-22.log` Part A.5. |
+
+*(Verifier CORRECTIONS on C2/C3, accepted:* my C2 "+34%" compared against the **Day-21** window while
+the like-for-like prior week gives **+0.9%** — both are stated above rather than picking the flattering
+one. The cohort has **17** members; I silently dropped `/treatments/play-therapy`. And "the 5 decliners
+are all tiny volumes" was **wrong**: `/assessments/epds` fell **687→413 = −274 impressions**, the
+cohort's largest absolute mover — I cited 8→6 and 27→20. Its series (282→330→687→413) reads as a spike
+normalising, but I had not checked. On C3, "FALSE POSITIVE" overstates: T9 archived the file **in the
+same minute it rejected it** — housekeeping, not Kushal choosing Option A. Correct framing: close as
+**Option A executed by default**, strike the row's false *"consuming a brief-runway slot"* rationale
+(it is not among the 57 active briefs), and re-file the Option-B reframe as an ordinary T5 idea rather
+than a human gate.*)
+
+**Safety note on C2:** `c-ssrs` is a suicide-risk instrument. Closing is the conservative direction —
+*executing* the flag would have meant AIO/schema-optimising that page while it ranks pos 9.3 with 11
+clicks and improving. Reducing Kushal's visibility into it was checked for explicitly and does not occur.
+
+---
+
+### D. MY OWN CLAIMS VETOED AND WITHDRAWN — 2 (both CWV)
+
+#### D1. `CWV-ASSESSMENTS-CRITICAL-01` — **my proposed reopen is WITHDRAWN. The 08-21 closure stands.**
+
+I measured `/assessments` at perf 66 / LCP 10.6s and moved to reopen the 08-21 false-positive closure
+(which had rested on a single reading of perf 89 / LCP 2,401ms). **VETOED.** Five further PSI runs
+today returned **perf 81–98, LCP 2.18–2.33s**. My reading was the outlier.
+
+**My own evidence refuted me and I did not notice:** an LCP of 10.6s with **all network activity
+complete at 3.1s** is not a slow page, it is an **invalid measurement**. The correct inference is
+*discard the reading* — not *reopen a flag in order to explain it*. That is precisely the error I spent
+this run indicting T12 for, committed in the same run.
+
+Also **dropping the `largest-contentful-paint-element = 0 items` fingerprint entirely**: it returns 0
+items on the homepage at LCP 2.78s as well, so it carries no diagnostic signal and should never have
+been cited as one — including in the 08-21 entry above.
+
+#### D2. `CWV-DOCTORS-PAGE-01` — **escalation WITHDRAWN. Probable-FIXED.**
+
+I was about to escalate *"verified NOT fixed, LCP 10.7s, dev deadline 08-25"* to the dev team **three
+days before the August Core Update**. Five PSI runs today: **LCP 2.40s, perf 81–92**, against the
+2026-08-12 flag state of **8.95s / perf 56**. The evidence points to the dev fix having **landed**.
+
+Correct action: report **probable-fixed**, ask dev to confirm what shipped and when, keep **08-25 as a
+confirmation checkpoint rather than an escalation**. A false CWV alarm three days before a core update
+spends credibility the genuinely open items need.
+
+**What survives from D1/D2 as new items:** `T14-PSI-SINGLE-SAMPLE-01` (every CWV CRITICAL in this
+system is raised from one lab sample; one URL read 10.6s and 2.3s ten minutes apart today;
+`reports/technical-health-2026-07-15.md` shows 7 of 8 pages simultaneously at 9–11s and all
+simultaneously "recovered" by 07-29 — seven regressions and seven fixes in a fortnight is not a
+physical story) and `CRUX-PAGE-FIELD-DATA-GAP-01` (P3 — `/assessments` and
+`/doctors/psychiatrists-in-bangalore` both return `origin_fallback: True`, so the "field data is FAST"
+argument used on 08-21 is valid for the homepage only).
+
+---
+
+### E. AUTO-FIXED — 5
+
+| # | Item | Before → After |
+|---|---|---|
+| E1 | **20-run MISMATCH-SKIP churn** — T10 has asked Kushal to delete 2 proposal files on **20 consecutive runs** | Verified genuinely superseded: `t16-read-pending-human-actions` asks for `### Part A.5`, already live at `task16…md:90`; `t5-floor-miss-brain-flag` asks for the BRAIN.md floor-miss write, already live at `task5…md:141`. Both applied 2026-08-10 via the anchor-fix versions. **FUSE denies `unlink()` on this mount**, so both are **tombstoned in place** with a `⛔ SUPERSEDED — SKIP ON SIGHT` header + `**Status:** superseded`, and copied to `brain/applied-changes/superseded/`. **Nothing deleted; the churn ends.** |
+| E2 | 5 corrupt GSC data files carrying false zeros | Annotated in place with `_INVALID`, the exact mechanism, `_AUTHORITATIVE_page_dimension_2026_08_23` and `_query_dim_floor_2026_08_23`. Copies in `gsc-data/archive-invalid-2026-08-23/`. |
+| E3 | **W39 Day-42 date contradiction** *(Verifier finding — I had missed it)* | `WATCH.md` says **2026-09-16**; the 08-20 / 08-22 / 08-23 Strategist stamps call **2026-08-26** the "Day-42 final". Arithmetic: ship 2026-08-05 + 42d = **2026-09-16**; 08-26 is the **Day-21 midpoint**. WATCH.md is correct; noted in WATCH.md and BRAIN.md. |
+| E4 | Stale interim verdicts in `WATCH.md` | Correction block at head of file + per-row annotation on all 5 rows, with page-dim ground truth. |
+| E5 | `BRAIN.md` carrying an unsupported "concerning pattern" | Corrected; 58.4% establishment rate quarantined inline. |
+
+**Brief-queue standing job:** 57 briefs, **0 untiered**. **11 `/blogs/` briefs with an `intent_tier`,
+all 11 curl-verified HTTP 404**; 3 are NEEDS_HUMAN → **8 effective**. Floor is 6 → **8 ≥ 6, the refill
+trigger did not fire.** Plus **43 Tier A `/doctors/` briefs**, all 404. Weekly cap 7/20 untouched.
+**0 pages shipped. `src/**` untouched. `scripts/*.py` untouched. Nothing deleted.**
+
+---
+
+### F. ESCALATED TO KUSHAL — 3 (each with the fix pre-written)
+
+| # | Item | The ask |
+|---|---|---|
+| F1 | **`GSC-MEASUREMENT-INTEGRITY-01`** | Three defects, one class, all in `scripts/*.py` which T20 may not edit: (1) `gsc-pull.py` accepts a full URL on `--url` and silently emits a garbage filter — **no guard**; (2) `gsc-pull.py:96` `rowLimit: 50`; (3) `day42-batch-gsc.py:59` `rowLimit: 25`. Plus: window totals sum **query-dimension** rows, which GSC privacy-filters (1,836 vs a page-dim truth of 4,584 on the same 5 pages). **Fix ≈3 lines + pagination:** `if url_path.startswith("http"): raise ValueError(...)`; `rowLimit: 1000` with `startRow` pagination; use `dimensions:["page"]` for page totals. This one change prevents today's five false verdicts, the fake ace-test −94%, the fake c-ssrs collapse, and the suspect 77-page batch. |
+| F2 | **`T9-DOCTORS-QUEUE-MISLABEL-01`** | `auto-ship-2026-08-21.txt` says *"Candidates in queue: 49 /blogs/ pages … All candidates: /blogs/ → blocked by cluster cap"* and lists `/blogs/online-psychiatry` at #2. That brief reads `Suggested URL: /doctors/online-psychiatry`, `Content Type: DOCTOR_LISTING`, `Suggested File: src/content/doctors-listings/online-psychiatry.mdx`. **Only 11 of 49 are `/blogs/`; 43 are `/doctors/` Tier A and are not subject to the `/blogs/` cap.** T9 cap-blocked pages it was free to ship. Concrete root cause of `DOCTOR-EXECUTOR-VELOCITY-01`. *(Verifier addendum — this also falsifies my own closing line yesterday and today that "briefs written now could not ship a page": true for `/blogs/`, false for `/doctors/`.)* |
+| F3 | **`MINDTALK-REPO-RESET-CMD-01`** | `ops-health-2026-08-22.log` instructs `git reset --hard origin/main`. Real state: HEAD on `feat/exec-refresh-doctors-bangalore-20260821`, **134 behind / 1 ahead**, **10 modified tracked files**, **80 untracked entries (128 files) colliding with origin/main**. That command *on the feature branch* does not fix an orphaned commit — it **creates** one; and `git checkout main` would abort on the collisions. *(Verifier CORRECTION: I checked 3 of the 10 files and generalised. All 10 checked: 8 are byte-identical to origin/main, but `what-is-rtms-treatment.mdx` differs by 13 lines and `life-coach-therapy.mdx` **deletes a 5-Q&A `faqs:` block** origin/main has — both local versions are older/worse, so nothing of value is lost, **but by luck, not by the check I ran**.)* Safe sequence supplied in the digest. T20 did not touch the repo. |
+
+**Not re-escalated (verified real, already with Kushal, no new information):** `T17-7-AEO-DOCTORS-SPRINT-01`
+(4×), `psychology-of-love` §1 Tier C call, `DEAD-CLICKS-W34` (P2), `PERSONALITY-DISORDER-YMYL-SIGNOFF-01`,
+`STUB-PILOT-CONVERSION-VERDICT-01`, `W28-alzheimers` option A/B, and `brain/.git` lock files
+(**re-tested today: 10 `.lock` files, all `unlink()` → EPERM** — genuinely blocked, 3rd day, brain
+backups still not committing).
+
+---
+
+### G. TODAY'S SENSOR FLAGS — verified, no action
+
+- **T4 observation monitor (08-23):** 13 URLs, 0 checks due, **0 alerts**. Next: 4 Day-21 midpoints 08-25.
+- **T1 rank (08-21 carry):** 0 CRITICAL, 0 MAJOR, 9 AP8 quarantines. ALGO_WATCH inactive.
+- **T2 GSC:** 1 confirmed drop (`psychology-of-love`), already ON HOLD pending Kushal's §1 call.
+- **T9 auto-ship:** SKIPPED on the `/blogs/` cluster cap (7/6) — correct for `/blogs/`, **wrong for the 43 `/doctors/` briefs** (F2).
+- **T10 (8 PM):** 3 Meta-Learner proposals applied and Verifier-approved; 3 future proposals correctly deferred to 08-30.
+- **August Core Update 2026-08-26 (3 days):** conservative posture respected — 0 content shipped, 0 briefs written, 0 sprints created.
+
+---
+
+### RUN SUMMARY
+
+| | |
+|---|---|
+| Flags collected | 21 (BACKLOG open rows + today's T10/T12 output + ops-health carry-overs) |
+| **False positives closed** | **3** — `ACES-TEST-INVESTIGATE-01` · `ASSESSMENT-AIO-SCHEMA-AUDIT-01` · `T9-SLEEP-STAGES-AP9` |
+| **Verdicts invalidated** | **5** — today's T12 interim 🔴s (W30/W31/W32/W33/W39); **4,584 impressions / 20 clicks recorded as zero** |
+| **Quarantined** | **77** — the whole 08-21 assessment Day-42 batch + the derived 58.4% establishment rate |
+| **Re-scoped** | **1** — `ASSESSMENT-NEEDS-REFRESH-BATCH-01`: 2 of its top-3 targets are growing; 6/16 have 0 impressions and 15/16 have 0 clicks → reconstitute, don't re-rank |
+| **My own claims vetoed and withdrawn** | **2** — the `CWV-ASSESSMENTS` reopen and the `CWV-DOCTORS` dev escalation. Both CWV items resolve in the *good* direction. |
+| **Auto-fixed** | **5** — 20-run proposal churn ended (tombstoned, not deleted) · 5 corrupt GSC files annotated · W39 date · WATCH.md corrections · BRAIN.md quarantine |
+| **Escalated to Kushal** | **3** — `GSC-MEASUREMENT-INTEGRITY-01` · `T9-DOCTORS-QUEUE-MISLABEL-01` · `MINDTALK-REPO-RESET-CMD-01` |
+| **New items filed (not Kushal's)** | **2** — `T14-PSI-SINGLE-SAMPLE-01` · `CRUX-PAGE-FIELD-DATA-GAP-01` |
+| Brief queue | 11 raw / **8 effective** `/blogs/` (floor 6, **no refill**) + 43 Tier A `/doctors/` · all 404-verified |
+| Pages shipped | **0** · `src/**` untouched · `scripts/*.py` untouched · nothing deleted |
+| Verifier sub-agent | **3 UPHELD / 5 CORRECTION / 2 VETO — approval rate 3/10. All honoured.** |
+
+**Net.** The engine spent today recording a broad pre-Core-Update stall that did not happen. Five pages
+carrying **4,584 impressions and 20 clicks** — one of them ranking at **position 1.8** on its primary
+keyword — were written down as zero and failed, and a Core Update was named as the cause. The same
+defect class, at `rowLimit: 25`, had already manufactured a −94% "collapse" on a page that has since
+grown **+343%**, and it underwrites all 77 verdicts in the 08-21 assessment batch. Three flags closed,
+five verdicts invalidated, seventy-seven quarantined — from one three-line guard that nobody has written.
+
+**And the discipline note.** I got the two CWV items wrong in the same run in which I made measurement
+integrity the headline: I read a single outlier PSI sample and moved to reopen one flag and escalate
+another to dev, three days before a core update. My own evidence — all network complete at 3.1s under a
+claimed 10.6s LCP — said the reading was invalid, and I used it to argue the page needed explaining
+instead of the measurement needing discarding. The Verifier caught both. I also computed my headline
+ground truth by summing query-dimension rows, understating it 2.5× by exactly the privacy-filter
+mechanism I was writing up. Getting the diagnosis right and the method wrong in the same document is
+the failure mode worth naming, and it is why the adversarial pass is not optional.

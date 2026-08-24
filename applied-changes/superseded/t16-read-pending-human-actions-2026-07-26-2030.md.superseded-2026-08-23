@@ -1,12 +1,3 @@
-# ⛔ SUPERSEDED — DO NOT APPLY. DO NOT RE-EVALUATE. Meta-Learner Step 10: SKIP ON SIGHT.
-# Closed by T20 Auto-Remediation 2026-08-23 after the 20th consecutive MISMATCH-SKIP.
-# VERIFIED SUPERSEDED — the change this proposal asks for is ALREADY LIVE:
-#   `### Part A.5 — Pending human-action escalations` is present at cowork-tasks/task16-operational-health-backup.md line 90.
-# Superseded by: t20-t16-pending-actions-anchor-fix-2026-08-03-2030 (applied 2026-08-10, see brain/applied-changes/).
-# Archive copy: brain/applied-changes/superseded/t16-read-pending-human-actions-2026-07-26-2030.md.superseded-2026-08-23
-# FUSE mount denies unlink() on this path, so the file is tombstoned in place rather than deleted.
-# **Status:** superseded
-#
 # Proposal: T16 Part A — Scan and surface pending-human-actions fallback files
 **Proposed:** 2026-07-26T20:30:00+05:30
 **Source:** task13-meta-learner-2026-07-26

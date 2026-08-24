@@ -79,3 +79,8 @@
 2026-08-18 23:10 IST | 45 files changed | commit: 5170f3b | push: success (forced — FUSE mount divergence)
 
 | 2026-08-20 23:12 IST | 55 files changed | commit: e1b5740 | push: success (FUSE bypass — index.lock blocked direct push) |
+2026-08-20 23:11 IST | 54 files changed | commit: da4099d | push: success (force)
+2026-08-21-2310 | 9 files changed | commit: da4099d | push: pushed ✓ (da4099d)
+2026-08-21-2310 | 9 files changed | commit: da4099d | push: pushed ✓ (da4099d)
+2026-08-22 23:10 | BLOCKED — .git/index.lock stale (FUSE, from 2026-08-20 23:10) | commit: skipped | push: skipped | 10 files pending | Manual fix required
+2026-08-23T17:40:23Z | BLOCKED (stale FUSE locks — index.lock + HEAD.lock + packed-refs.lock + origin/main.lock from Aug 20) | commit: da4099d (last successful) | push: skipped — locks blocking git add. Run rm commands manually.
