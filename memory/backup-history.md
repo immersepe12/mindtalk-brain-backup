@@ -84,3 +84,15 @@
 2026-08-21-2310 | 9 files changed | commit: da4099d | push: pushed ✓ (da4099d)
 2026-08-22 23:10 | BLOCKED — .git/index.lock stale (FUSE, from 2026-08-20 23:10) | commit: skipped | push: skipped | 10 files pending | Manual fix required
 2026-08-23T17:40:23Z | BLOCKED (stale FUSE locks — index.lock + HEAD.lock + packed-refs.lock + origin/main.lock from Aug 20) | commit: da4099d (last successful) | push: skipped — locks blocking git add. Run rm commands manually.
+2026-08-24 21:05 IST | 33 files changed | commit: 8b3f5aa | push: success (da4099d..8b3f5aa) | recovered the 4-night stall (2026-08-21→08-24) — written by T20 auto-remediation, not T16
+  → ROOT CAUSE FOUND (supersedes "stale lock, ask Kushal to rm"): on this FUSE mount git's own
+    unlink() returns EPERM, so EVERY git command that touches the index leaves its lock behind and
+    breaks the NEXT command. `rm -f` fixes exactly one operation, which is why this has recurred
+    since 2026-08-07 and why prior rows show four different one-off bypasses (Python rename,
+    GitHub Data API, /tmp clone, force-push). os.rename() IS permitted — archiving each lock
+    immediately before AND after every git invocation is the durable workaround.
+  → 15 lock files archived (never deleted) to logs/brain-git-stale-locks-archive-2026-08-24/
+  → Working reference implementation: outputs/t20_brain_backup.py (clear_locks() + git() wrapper).
+    T16 should adopt this pattern rather than re-deriving a bypass each week — filed as a
+    Meta-Learner proposal candidate, T20 does not edit task specs.
+2026-08-24-2310 | 10 files changed | commit: 8b3f5aa | push: success

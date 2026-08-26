@@ -904,3 +904,272 @@ instead of the measurement needing discarding. The Verifier caught both. I also 
 ground truth by summing query-dimension rows, understating it 2.5× by exactly the privacy-filter
 mechanism I was writing up. Getting the diagnosis right and the method wrong in the same document is
 the failure mode worth naming, and it is why the adversarial pass is not optional.
+
+---
+---
+
+# 🔧 T20 AUTO-REMEDIATION — 2026-08-24 (Monday, 8:45 PM IST)
+
+**Run type:** scheduled · **Verifier sub-agent:** run, adversarial, 1 VETO + 3 CORRECTION + 2 UPHELD — all honoured
+**Shipped:** 0 pages · `src/**` untouched · `scripts/*.py` untouched · nothing deleted (archive-only)
+
+---
+
+## A. FALSE POSITIVE CLOSED — 1 (today's #1 Strategist action)
+
+### A1. `PTSD-TREATMENT-INVESTIGATE-01` — **CLOSED, NO ACTION**
+
+T10 accepted this today as the week's top action, sourced from `reports/weekly-summary-2026-08-24.txt`:
+*"PTSD Treatment −61.3% impressions WoW (307 vs 793), avg position worsening by +53 positions …
+the most urgent drop this week … Audit and refresh the PTSD Treatment page immediately."*
+
+**Ground truth (GSC, page dimension, rowLimit 1000 paginated):**
+
+| Page | Aug 08–14 | Aug 15–21 | Position |
+|---|---|---|---|
+| `/illnesses/posttraumatic-stress-disorder-ptsd` | 179 impr | 137 impr | 13.2 → **11.0 improved** |
+| `/blogs/ptsd-treatment-and-recovery` | 266 impr | 165 impr | 14.8 → **8.9 improved** |
+| `/blogs/understanding-complex-ptsd` | 230 impr | 139 impr | 9.9 → **7.3 improved** |
+
+**The baseline is one anomalous day.** Query `complex ptsd` carried 443 of the cluster's 794 baseline
+impressions. Daily trace: **442 of those 443 landed on 2026-08-08 alone, at position 1.0**; the other
+17 are spread across Aug 1–17 (max 9 on any other day). The spike lands on `/assessments/trauma-ptsd`
+(483 that day against a ~55/day baseline).
+
+**Clean-baseline test (Aug 01–07 vs Aug 15–21, excluding the anomaly day) — the cluster is UP:**
+trauma-ptsd **+61.3%**, illnesses/ptsd **+93.0%**, ptsd-treatment-and-recovery **+16.2%**,
+itq **+47.6%**, doctors/ptsd-specialists **+59.3%**, understanding-complex-ptsd −4.8%,
+pcl-5 −12.5% (position improved 23.2 → 14.7). **No PTSD page lost position on any baseline.**
+
+Refreshing these three pages — during a Spam Update rollout — would have spent a refresh slot on
+pages that are all rising, to chase a single day's spike.
+
+> **Verifier CORRECTION honoured (method).** My first pass hand-picked four PTSD URLs. Two of them
+> (`/blogs/how-to-fix-ptsd-recovery-steps`, `/treatments/emdr-for-ptsd`) carry ~0 impressions and are
+> not cluster constituents at all; the volume actually sits on `/assessments/trauma-ptsd` and
+> `/assessments/itq`, **neither of which I checked**. The Verifier enumerated all 60 pages by
+> query-filter and *did* find a materially-losing page I missed (trauma-ptsd, −28.5%, pos 5.1 → 9.0)
+> — which then dissolved on the clean baseline, because the Aug-08 spike is on that same page.
+> **The conclusion survived; my method did not. Enumerate cluster constituents by query-filter,
+> never hand-pick URLs and generalise.** Same error class as 2026-08-23 D1/D2.
+
+---
+
+## B. VERIFIED REAL → DOWNGRADED, NOT ESCALATED — 1
+
+### B1. `BANGALORE-COMMERCIAL-INVESTIGATE-01` — **watch, not `flag_for_human`**
+
+Query drops verified exactly: `best psychiatrist in bangalore` 10.2 → 21.9; `psychologist in bangalore`
+9.6 → 18.4; and the family is wider than T10 reported (`best psychologist in bangalore` 17.5 → 24.8,
+`psychiatrists in bangalore` 7.0 → 54.6, `top psychiatrist in bangalore` 8.4 → 13.9).
+
+**Not escalation-grade:** these are 5–36 impr/day tail queries whose weekly average is set by 2–3
+outlier days (Aug 17–19) and which have **already recovered post-window** — `top psychiatrist in
+bangalore` Aug 20/21/22 = 6.2 / 6.2 / 9.0; `best psychiatrist in bangalore` peaked at 50.6 on Aug 17,
+*before* the update window, then 10.8 / 11.9 on Aug 20 / 22. Confound is the **August 2026 Spam
+Update** (rolling from 08-18), **not** a Core Update — `logs/gsc-validation-2026-08-24.txt` records it
+as not targeting health content, ALGO_WATCH not set.
+
+> **Verifier CORRECTION honoured — two of my three evidentiary legs were falsified.**
+> ⚠ **Do not cite page-level average position as evidence here.** I wrote that
+> `/doctors/psychologists-in-bangalore` "improved 36.7 → 31.6". That improvement is entirely
+> `therapist near me` (293 impr @ **pos 155.9** → 61 impr) leaving the weighted mean. Ex-that-query
+> the page went **26.0 → 27.8, i.e. worsened**. This is a fresh instance of the exact defect
+> `GSC-MEASUREMENT-INTEGRITY-01` was escalated for yesterday — committed by me, one day later.
+> I also called 27 → 20 clicks "stable"; that is **−26%** on a Tier A booking page and is the one
+> genuinely open signal. And the 08-21 refresh (`7163c679`) covers 1 of the 7 measured days, so it
+> cannot explain the week and is not yet evidence of a fix.
+
+**Watch recheck 2026-08-31, post-Spam-Update, on clicks + like-for-like query positions only.**
+
+---
+
+## C. AUTO-FIXED — 4
+
+### C1. Brain backup — **4-night stall ended, and the standing escalation was wrong all along**
+
+`brain/.git` had 15 lock files; `unlink()` → **EPERM on all 15**. T16 has been asking Kushal to
+`rm -f` four of them since 2026-08-22, and `backup-history.md` shows the same failure recurring since
+**2026-08-07** with four different one-off bypasses invented and then lost (Python rename, GitHub Data
+API, /tmp clone, force-push).
+
+**Root cause (observed, not assumed):** on this FUSE mount **git's own `unlink()` returns EPERM**, so
+every git command that touches the index leaves its lock behind and breaks the *next* command.
+`rm -f` therefore fixes exactly one operation before it re-breaks — **the escalation Kushal has been
+receiving could never have worked.** The Verifier reproduced it independently: a read-only
+`git status` emitted `unable to unlink '.git/index.lock': Operation not permitted`, created a fresh
+lock, and `rm -f` on that new lock returned `Operation not permitted`.
+
+`os.rename()` **is** permitted. Archiving each lock immediately before and after every git invocation
+is durable. Result: **commit `8b3f5aa`, 33 files, pushed `da4099d..8b3f5aa`, tree clean, 0 unpushed.**
+15 locks archived (not deleted) to `logs/brain-git-stale-locks-archive-2026-08-24/`.
+Reference implementation: `outputs/t20_brain_backup.py`. Row appended to `backup-history.md`.
+
+> **Verifier security scan of the full 2,981-line commit diff: CLEAN** — 0 hits for PATs, `ghp_`,
+> `AIza`, `sk-`, `AKIA`, private keys, `client_secret`, `.pickle`. The three `x-access-token` hits are
+> placeholder shell syntax in runbook prose. No credential was committed or pushed.
+> **Verifier CORRECTION honoured:** 15 locks, not the 10 I first counted (5 more were generated by my
+> own git invocations mid-run — which is itself the mechanism).
+
+### C2. 14 Tier A doctor briefs had a wrong URL prefix
+
+T5 wrote today's 14 doctor-listing briefs with `**Suggested URL:** /doctors-listings/<slug>`.
+**`/doctors-listings/` is not a URL prefix on this site.** Verified: `/doctors/<slug>` → **200** on 4/4
+live listing pages, `/doctors-listings/<slug>` → **404** on 2/2; `sitemap.xml` has **836 URLs, 0**
+containing `doctors-listings` and **287** under `/doctors/` (168 of them `<specialty>-in-<city>`);
+`config.json → tracked_specialty_listings` uses `doctors/<slug>` exclusively. `doctors-listings` is the
+**content directory** (`src/content/doctors-listings/`), which is why the briefs' own `Suggested File`
+was already correct — T5 conflated directory with route.
+
+All 14 corrected (URL line only; `Suggested File` untouched and byte-identical, Verifier-diffed).
+Originals archived to `briefs/archive/pre-t20-url-fix-2026-08-24/`. All 14 slugs also 404 at the
+correct `/doctors/` path → genuinely new, no redundancy. Queue now: 0 malformed prefixes.
+*(Verifier minor correction honoured: audit comment said `tracked_urls`; real key is
+`tracked_specialty_listings` — corrected in all 14.)*
+
+### C3. Two held briefs had no in-file hold — T9 would have shipped them
+
+`conduct-disorder-in-children` and `gender-identity-disorder` have been carried as NEEDS_HUMAN since
+the 2026-08-04 auto-ship run, **but neither brief file contained any marker** — the hold lived only in
+session notes, so every T9 run since has been free to pick them up. Conflicts re-verified live today
+(`/illnesses/conduct-disorder` 200, `/blogs/conduct-disorder-signs-causes-and-treatment` in sitemap,
+`/illnesses/gender-identity-disorder` 200). Durable `⛔ NEEDS_HUMAN — DO NOT SHIP` blocks written into
+both, each with Kushal's three options. *Found by the Verifier, not by me — I was carrying the count
+of 3 from session notes without reading the files.*
+
+### C4. `is-online-therapy-confidential` — prior Verifier VETO surfaced
+
+Sat unflagged inside the shippable pool while carrying a 2026-08-18 VETO (FAQ schema duplication with
+`/treatments/online-therapy`, plus a suicide-safety confidentiality-limits boundary). Named gate
+written into the brief — not a blanket hold, but T9 must honour both constraints at ship time.
+
+---
+
+## D. CLAIM VETOED — 1 (mine)
+
+### D1. `T5-REFILL-CRITICAL-17` — **my FALSE-POSITIVE closure is WITHDRAWN. The flag stays open.**
+
+I moved to close this as false because T5 ran today and produced 20 real briefs (797–897 words each)
+against a floor of 12. All of that is true. **But I tested a premise that I myself replaced two days
+ago.** `BACKLOG.md` line 44 records my own 2026-08-22 re-scoping: the flag was downgraded but
+explicitly **NOT closed**, because three named gaps were unwritten. Today's run closed **zero** of them:
+
+- **Kochi briefs: 0** (`ls briefs/ | grep -i kochi` → empty)
+- **Malayalam-Kerala variant: still absent** (only `-in-delhi`, `-in-mumbai`)
+- **`/treatments/` briefs: 0**
+
+Today's 14 Tier A picks came from `[STANDING_TIER_A_BACKLOG]`, a **static list that cannot surface
+Kerala**, and discovery ran in **CACHED MODE** (live script timed out, cache 14 days old) — a caveat I
+omitted. **P8 Kerala is a confirmed 4-week conversion signal**; closing this would have dropped it.
+
+**Action for Strategist (not Kushal):** stop re-emitting the generic "pipeline starvation" headline —
+it has now been false three times. Rename the row to **`T5-KERALA-TREATMENTS-GAP-01` (P3)** with those
+three items as its literal acceptance criteria, and add Kochi + Malayalam-Kerala to the standing Tier A
+backlog so the next T5 run can reach them.
+
+---
+
+## E. VERIFIED, NO ACTION
+
+- **AP8 pos-100 quarantine (15 pages) — correct, no deindexation.** Spot-checked 4 on the page
+  dimension: `/treatments/life-coach-therapy` 3,169 impr @ pos 12.0, `/blogs/alexithymia` 543 @ 11.8,
+  `/blogs/managing-teen-depression` 48 @ 5.9, `/blogs/how-to-manage-bipolar-disorder-daily` 18 @ 21.8.
+  DataForSEO said 100. AP8 is doing its job.
+- **T2 GSC validation (08-24):** 0 confirmed drops, both MODERATEs correctly cleared.
+- **T4 observation:** 0 alerts; 4 Day-21 midpoints fire tomorrow (08-25).
+- **Weekly cap:** `max_new_content_per_week = 20`, T5 used 20/20. Respected. 0 shipped by T20.
+
+---
+
+## F. BRIEF-QUEUE STANDING JOB
+
+**77 briefs, 0 untiered. 17 `/blogs/` briefs, all 17 curl-verified 404**; 3 blocked
+(relationship-problems-and-solutions, conduct-disorder-in-children, gender-identity-disorder) →
+**14 effective shippable vs a floor of 6 → refill did NOT fire.** Plus **57** Tier A `/doctors/` briefs.
+
+The three files without a `Suggested URL:` field (`guide-to-reset-your-sleep-cycle`,
+`psychologists-in-bangalore`, `psychology-of-love`) are older-format **REFRESH** briefs targeting live
+pages — the "200 = shipped, archive it" rule correctly did **not** fire on them. A naive reading of that
+registry row would have archived three valid refresh briefs.
+
+> **Verifier CORRECTION honoured:** 17 `/blogs/` and 57 `/doctors/`, not the 19/58 I first reported —
+> I had folded 2 of the 3 no-URL refresh briefs into the `/blogs/` denominator. `14 effective` was
+> right by coincidence, not by arithmetic.
+
+---
+
+## G. ESCALATED TO KUSHAL — 3 (each with the fix pre-written)
+
+| # | Item | The ask |
+|---|---|---|
+| G1 | **`T6-POSITION-UNITS-BUG-01`** | `reports/clusters-2026-08-24.csv` column `Position WoW` is a **percentage** — the PTSD row reads `9.8, 6.4, +53.1%`. The T6 narrative step renders it as *"avg position worsening by **+53 positions**"*. The real move is 6.4 → 9.8 = **3.4 positions**. This single mis-rendering is what turned a one-day artifact into "the most urgent drop this week / highest-priority content action". It will misfire on **every** future run. Fix: in the T6 narrative generator, format `Position WoW` as `Δ{prev:.1f}→{curr:.1f} ({pct:+.1f}%)`, never as a bare position count. Lives in `scripts/` — **T20 may not edit it.** |
+| G2 | **`MINDTALK-REPO-STALE-CHECKOUT-02`** | `~/Documents/GitHub/mindtalk` local HEAD `7097922`; `git merge-base --is-ancestor 7163c67 HEAD` → **NO**. Flagged by T16 on 08-23, still open. Worse, the tree is dirty with **staged *and* unstaged** edits to the two files `7163c67` already shipped (`psychologists-in-bangalore.mdx`, `counsellors-in-bangalore.mdx`) plus `page.tsx`, `what-is-rtms-treatment.mdx`, `yoga-for-anxiety.mdx`. **This is the exact divergence that silently dropped commit `675dc26` on 2026-07-23.** T20 did not touch the repo. Safe sequence: stash the 5 modified files → `git fetch origin && git checkout main && git pull` → diff the stash against origin/main before restoring anything. |
+| G3 | **`PENDING-HUMAN-ACTIONS-9-DAYS-STALE-01`** | `logs/pending-human-actions-2026-08-15.txt` — T16's Slack delivery **failed on 08-15** and was never retried. Five items have been invisible for **9 days**: `PERSONALITY-DISORDER-YMYL-SIGNOFF-01`, `STUB-PILOT-CONVERSION-VERDICT-01`, `T9-SLEEP-STAGES-AP9`, `W28-alzheimers` (A/B), `TRUST-ISSUES-HUMAN-01` (a/b/c). Re-delivered in today's digest. |
+
+**Not re-escalated** (verified real, already with Kushal, no new information): `GSC-MEASUREMENT-INTEGRITY-01`,
+`T9-DOCTORS-QUEUE-MISLABEL-01`, `T17-7-AEO-DOCTORS-SPRINT-01`, `psychology-of-love` §1 Tier C call,
+`DEAD-CLICKS-W34` (P2), `ASSESSMENT-AIO-SCHEMA-AUDIT-01`.
+
+---
+
+## H. FILED, NOT KUSHAL'S — 3
+
+- **`T6-CLUSTER-RANKING-BY-PERCENT-01`** — clusters are ranked by % change, which buried the week's
+  actual largest loss: `what is a life coach` fell **10,183 → 1,866 impressions (−8,317)** at 0 clicks
+  both windows. Site-wide impressions fell 35,734, so **this one zero-click Tier C query is 23% of the
+  entire WoW decline**, against the PTSD cluster's −487. Disposition stays no-action (AP11 Tier C), but
+  the "−8.9% impressions" headline should read as *one Tier C query normalising*, not a broad decline.
+- **`T6-DAILY-OUTLIER-GUARD-01`** — `/assessments/trauma-ptsd` spiked **again** inside the current
+  window (252 impr on 2026-08-21 vs ~55/day). Next week's PRE window contains it, so **the identical
+  false drop will be manufactured on 2026-08-31**. Guard: drop any day >3× the trailing median before
+  computing WoW.
+- **`T16-FUSE-GIT-PATTERN-01`** — T16 should adopt the `clear_locks()`-around-every-git-call pattern
+  (`outputs/t20_brain_backup.py`) instead of re-deriving a bypass each week. Task specs are the
+  Meta-Learner's to edit, not T20's.
+
+---
+
+## I. OPEN, TRACKED, NOT ESCALATED
+
+- `/blogs/psychology-of-love` fell **rank 2 → 9 (Δ+7, CTR_DROP)** and was removed from flagged-drops by
+  T2's AP7 `BRIEF_CREATED` hygiene rule — on the strength of a brief written 08-21 that nothing
+  confirms is queued to ship. **A page-1 → page-2 fall on a live page is now tracked only by the
+  existence of a file.** Already ON HOLD pending Kushal's §1 Tier C call; noted so the hygiene rule
+  is not mistaken for a resolution.
+
+---
+
+## RUN SUMMARY — 2026-08-24
+
+| | |
+|---|---|
+| Flags collected | 14 (T10 top-5 + today's sensor logs + ops-health carry-overs) |
+| **False positives closed** | **1** — `PTSD-TREATMENT-INVESTIGATE-01` (today's #1 action) |
+| **Downgraded, not escalated** | **1** — `BANGALORE-COMMERCIAL-INVESTIGATE-01` → watch 08-31 |
+| **Auto-fixed** | **4** — brain backup unblocked + pushed · 14 doctor-brief URLs · 2 missing NEEDS_HUMAN holds · 1 latent VETO surfaced |
+| **My own claim vetoed** | **1** — the `T5-REFILL-CRITICAL-17` closure. Flag stays open, re-scoped. |
+| **Escalated to Kushal** | **3** — `T6-POSITION-UNITS-BUG-01` · `MINDTALK-REPO-STALE-CHECKOUT-02` · `PENDING-HUMAN-ACTIONS-9-DAYS-STALE-01` |
+| **Filed, not Kushal's** | **3** — cluster-ranking-by-percent · daily-outlier guard · T16 FUSE git pattern |
+| Brief queue | **17 `/blogs/` (14 effective, floor 6 — no refill)** + 57 Tier A `/doctors/` · all 404-verified |
+| Pages shipped | **0** · `src/**` untouched · `scripts/*.py` untouched · nothing deleted |
+| Verifier sub-agent | **2 UPHELD / 3 CORRECTION / 1 VETO — all honoured** |
+
+**Net.** The engine's #1 action for the week was a single day's impression spike read backwards. A
+442-impression Monday on `/assessments/trauma-ptsd` inflated the PTSD baseline by 56%; when it fell out
+of the comparison window the cluster showed −61%, and a **percentage** in the `Position WoW` column was
+rendered as **positions**, turning a 3.4-position move into "+53 positions". Two artifacts stacked into
+"the most urgent drop this week — refresh immediately", on three pages that are all *rising*. The units
+bug (G1) will do this again next Monday, and the same page has already spiked again (H).
+
+Separately, a four-day backup escalation resolved to an instruction that could not have worked: `rm -f`
+on a mount where git's own `unlink()` is EPERM fixes exactly one git command. That flag had been going
+to Kushal since 2026-08-07 in four different forms.
+
+**And the discipline note, second day running.** I argued yesterday's measurement-integrity case and
+then, one day later, cited a page-level average position that moved only because a position-156 query
+left the weighted mean — the same defect, in the same direction, in my own evidence. I also hand-picked
+four PTSD URLs and generalised from them without enumerating the cluster, carried a NEEDS_HUMAN count
+of 3 from session notes without opening the files, and moved to close a flag against a premise I had
+myself replaced two days earlier. The Verifier caught all four. Right conclusion, wrong method, three
+runs in a row — the adversarial pass is not optional, and the recurring failure is **reasoning from
+notes and samples instead of from the artefact**.
