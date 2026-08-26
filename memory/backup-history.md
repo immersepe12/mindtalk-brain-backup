@@ -96,3 +96,4 @@
     T16 should adopt this pattern rather than re-deriving a bypass each week — filed as a
     Meta-Learner proposal candidate, T20 does not edit task specs.
 2026-08-24-2310 | 10 files changed | commit: 8b3f5aa | push: success
+2026-08-26-0946 | 7 files changed | commit: f170a3d | push: success
