@@ -43,6 +43,16 @@
 | 2026-08-03 to 08-09 | **3 LIVE** (T11 08-04: intellectual-disability-symptoms, drug-addiction-symptoms, signs-of-adhd; GitHub Data API) | **1** (T11 08-05: yoga-for-anxiety `6c6d89e5`; W39 opens 08-19) | **1** (T11 08-04: narrative-therapy `097ff9c9`; W28 batch 2/2 complete; alzheimers NEEDS_HUMAN still pending) | 0 | 0 (W24-W28 stub-pilot already live from prior weeks; no new stubs shipped) | 5 (T11 08-07: T5-REFILL-CRITICAL-06 Slack ✅ + UX-CRISIS-DEPLOY-01 Slack ✅; T12 08-09: W24-W28 indexation closes 2🟢/2🟡/1⚫; T11 08-05: T17-7-AEO 3rd flag_for_human dev-touch) | **5 LIVE** (3 new + 1 refresh + 1 YMYL). /blogs/ 4/6 (resets 08-12). 2 meta-desc VETOs fixed inline (drug-addiction 172→146ch, signs-of-adhd 168→144ch). alzheimers NEEDS_HUMAN (Donanemab/Lecanemab section, Options A/B pending Kushal). |
 | 2026-08-10 to 08-16 | 5 | 0 | 0 | 0 | 0 | 4 (T12 08-16: W36🔴+W37⚫+W11 stale; T11 08-14: personality-disorder investigate + T17-7 flag + T5-REFILL-NOW-12 Slack) | **5 LIVE** (all T9 new blogs). /blogs/ 5/6. T5-REFILL 12th carry. ⚠ LEARNER FLAG: 3/4 watches 🔴/⚫. Schema fix PR #23 DEPLOYED 08-17. |
 | 2026-08-17 to 08-23 | 7 | 0 | 0 | 0 | 0 | 1 (T12 08-23: 5 interim watch evals W30-W33+W39 — all 🔴 STALLED intermediate; Core Update confound) | **7 LIVE** (T9 08-18: overthinking/situationship/peniaphobia/panic-attack/financial-anxiety/high-functioning-anxiety/adhd-task-paralysis — commit `d390fcd`). W41 opened. Core Update 08-26 in 3 days. |
+---
+
+## Conversion KPIs — weekly (T19)
+
+| Week | Unique visitors | Book clicks | Organic book | Payments | Bookings | chatgpt.com clicks | Intent rate | Top geo | Goldmines | Notes |
+|---|---:|---:|---:|---:|---:|---:|---:|---|---:|---|
+| 2026-W35 | 10,401 | 2,065 | 1,539 | 181 | 228 | 334 | 19.9% | Bengaluru (48.6%) | 2 | Organic streak broken (−13.9%) but payments +7.7% — better conversion quality. Journey Task CRASHED −43.4%. P8 Kerala W5 confirmed. P15 Delhi demoted. Dead clicks improving 4,441→3,761. chatgpt.com = 16.2% of all book clicks (P5 W6). |
+
+---
+
 | KPI | Last week | 4-week avg | Q3 target | Status |
 |---|---:|---:|---:|---|
 | Avg CTR | 0.8% (GSC wk Jul 25-31) | ~0.87% | 0.85% | 🟡 **Below target by 0.05pp but Life Coach AP11 structural dilution (32,285 impr/0.0% CTR)** — strip it: core CTR ~0.9% at target. Not a regression. |
@@ -55,8 +65,8 @@
 | Top-3 ranking queries | **how-to-find-therapist-india pos 2** (W14 EXCEPTIONAL, DataForSEO 08-03), somatic-therapy pos 3.3 | — | 7,500 (Q3) | 🟡 Two top-3 confirmed. Aggregate count pending DataForSEO fresh pull. |
 | Pages live | 829 (GSC URLs Ranking wk Jul 25-31) | — | 800 (Q3) | 🟢 **Q3 target EXCEEDED (+3.6%)**. 829 vs 800 target. |
 | Inventory coverage (Track B) | 27% | 27% | 45% (Q3) | 🟡 Brief queue EMPTY (T5-REFILL-NOW CRITICAL) — velocity stalled until T5 refills. Stub-pilot 5 pages live (mindful-minutes). |
-| AI citation share (Perplexity) | 5/10 (50%) | ~4/10 | — | 🟡 Week 10 (2026-08-20): ⬜ Chrome stall 4th consecutive week — untested. Carrying forward Week 8 score (5/10). Last confirmed: Q3 ✅ Q4 ✅ Q6 ✅ Q8 ✅ Q10 ✅. Commercial rate last known: 2/5 (40%). CRITICAL: Chrome restart required on Mac Mini before 2026-08-27 — 160+ citation data points missed across 4 weeks. |
-| AI citation share (Google AI OV) | 1/5 tested | ~2/5 | — | 🟡 Week 10 (2026-08-20): ⬜ Chrome stall 4th consecutive week — untested. Carrying forward Week 8 score (1/5 tested, Q4 ✅). Full 10-query sweep not possible until Chrome stall resolved (T17-24). |
+| AI citation share (Perplexity) | 5/10 (50%) | ~4/10 | — | 🔴 Week 11 (2026-08-28): ⬜ Chrome stall 5th consecutive Thursday — untested. Carrying forward Week 8 score (5/10). Last confirmed: Q3 ✅ Q4 ✅ Q6 ✅ Q8 ✅ Q10 ✅. URGENT: Chrome restart on Mac Mini + extension reload required — 200+ citation data points missed across 5 weeks. |
+| AI citation share (Google AI OV) | 1/5 tested | ~2/5 | — | 🔴 Week 11 (2026-08-28): ⬜ Chrome stall 5th consecutive Thursday — untested. Carrying forward Week 8 score (1/5 tested, Q4 ✅). Full sweep blocked until Chrome stall resolved. |
 
 ---
 
@@ -73,11 +83,15 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-07-22 | MCP_BLOCKED | — | — | — | — | — | Billing issue — Mixpanel access blocked. No data. |
 | 2026-07-29 | 8,167 | 743 | 97 | 55 | 11 | 31% | Page views +29%✅ (3-wk vs 07-08); 🚨 lp:form INVERTED (on-site form 97 > LP form 55 — ads paused kills LP; on-site fills gap); net leads ~152 unique (97+55) = possible best week yet — verify Freshsales; doctor views +118%✅✅ (T9 discovery wins); doctor→book CTA rate -57%⚠⚠ (73%→31% — absolute clicks stable 431→406, new visitors are low-intent SEO); backend fail crept up 1.5%→6.7%⚠ (still ok; watch trend); riya -29%⚠ (14→10) |
 | 2026-08-05 | 9,884 | 780 | 115 | 55 | 14 | 29% | Page views +21%✅ (new weekly record); doctor views +26.5%✅ (1,293→1,636); net leads 170 (115+55, best week if Freshsales confirmed ✅); lp_form stable (55); doctor→book CTA 29% (-7.6%, stable); CTA→form 5%→8.75%✅✅ (on-site form improving structurally); backend fail 6.7%→7.5%⚠ (3rd consecutive increase); riya 10→7⚠ (persistent invisibility); lp:form=0.48:1 (on-site form primary, ads still paused) |
+| 2026-08-26 | 10,344 | 740 | 55 | 58 | 18 | 33% | 🚨 form_submitted -52%⚠⚠ CRITICAL (115→55); net leads 113 (-34% vs 170); backend fail 13.7%⚠⚠ (4th consecutive rise, 7.5%→13.7%); riya +86%✅ (7→13, best in 6 wks); doctor→book CTA +14%✅ (29%→33%); lp_form stable +5.5% (55→58); where-to-start completion 53% overall ✅; August Core Update 08-26 — monitor next week for SERP quality impact |
 
-**Variance > 20% WoW (2026-08-05 reading):**
-- page_views: **+21.0%** ✅ (8,167→9,884) — organic traffic growth compounding week-on-week
-- doctor_profile_viewed: **+26.5%** ✅ (1,293→1,636) — T9 content sprint delivering sustained doctor discovery lift
-- lead_create_failed: **+27.3%** ⚠ (11→14) — backend fail rate 6.7%→7.5%; 3rd consecutive weekly increase; still far below 35.7% peak but trend is wrong direction; engineering team should investigate
+**Variance > 20% WoW (2026-08-26 reading):**
+- form_submitted: **-52.2%** 🚨 (115→55) — largest single-week drop; August Core Update 08-26 (pre-update SERP volatility likely culprit); verify next T15 run 09-03
+- net leads: **-33.5%** ⚠⚠ (170→113) — driven by form_submitted crash; lp_form held
+- backend fail rate: **+82.7%** ⚠⚠ (7.5%→13.7%) — 4th consecutive rise; 18 raw failures; engineering must investigate before ads restart
+- overall conversion rate: **-23.2%** ⚠⚠ (0.69%→0.53% of unique page view funnel entry)
+- riya_page_viewed: **+85.7%** ✅ (7→13) — best reading in 6 weeks; 08-18 high-volume blogs possibly driving discovery
+- doctor→book CTA: **+13.4%** ✅ (29%→33%) — rate improving; commercial intent on doctor pages strengthening
 - riya_page_viewed: **-30%** ⚠ (10→7) — 5 consecutive weeks of <15 views; effectively invisible; needs dedicated internal linking or feature placement
 
 **Variance > 20% WoW (2026-07-29 reading — vs 2026-07-08, 3-week gap due to 07-22 MCP block):**
@@ -280,6 +294,10 @@ Strategist reads this every day before deciding actions — knows where the gaps
 | 2026-07-16 | 11 / 40 cells tested | 3/10 (Q6+Q7+Q8 branded) | 4/10 (Q2 online therapy ✅, Q6+Q7+Q8 branded ✅, Q10 Cadabams ✅) | 0/2 tested commercial (noted MT absent from discovery layer) | 4/10 (Q4 CBT ✅ NEW, Q7 Cadabams ✅, Q8 app ✅, Q10 OCD ✅) | 1 (Google AI OV Q4 CBT therapy ✅ confirmed) | 🟢 MT +93 KW (only platform growing) · 🟢 Google AI OV now showing on 7/10 queries · 🟢 CBT NEW citation · 🟢 full 40-cell sweep run · Amaha 4th week decline (-35 KW) · YourDOST 3rd week decline (-11 KW) |
 | 2026-07-23 | 9 confirmed (Perplexity 5 + Google AI OV 4) | 5/9 tested (Q1🆕 Q2🆕 Q3🆕 Q6 Q8; Q7 LOST; Q10 rate-limited) | 0/1 tested (DOM limit) | ⬜ not tested | 4/10 (Q4 Q8 Q9🆕 Q10; Q7 LOST) | 3 (Perplexity Q1+Q2+Q3 — FIRST commercial-discovery citations ever) | 🚨 COMMERCIAL BREAKTHROUGH: Perplexity now cites MT for all 3 discovery queries (Q1/Q2/Q3) — first time since 06-18 baseline. LOST: Q7 "cadabams mental health" dropped from BOTH Perplexity + Google AI OV simultaneously — investigate. MT "psychiatrist closest to me" absent from top-50 this week (was #2 on 110K) — validate via GSC (T17-10). MT KW universe +150 (2100→2250) — strongest gain yet. YourDOST −18 KW (4th week down). |
 | 2026-07-30 | ~10 confirmed (Perplexity 5 + Google AI OV 3 + ChatGPT 2) | 5/10 (Q2✅ Q6✅ Q7✅🆕REGAINED Q8✅ Q10✅; LOST Q1+Q3) | 2/2 tested ✅✅ FIRST commercial citations (Q1 "best platform" + Q9 "depression treatment") | ⬜ session stall (Cowork modal) | 3/10 (Q4✅ Q8✅ Q10✅; LOST Q9) | 1 (Perplexity Q2) + ChatGPT Q1+Q9 new | MT +27 KW (2250→2277, 7th consecutive growth, pace decelerating); Amaha −78 KW (sharpest weekly drop yet); YourDOST −27 KW (5th week down). ChatGPT COMMERCIAL BREAKTHROUGH: first ever citations on Q1+Q9. Perplexity REGAINED Q7 (cadabams mental health). LOST: Perplexity Q1+Q3 (rotation — not content issue), Google AI OV Q9 (depression treatment — investigate page AEO). |
+| 2026-08-06 | Perplexity 5/10 + Google AI OV 1/5 tested | 5/10 (Q3🆕FIRST citation 110K vol; Q4 retained; LOST Q2+Q7) | ⬜ skipped (Chrome stall) | ⬜ skipped | 1/5 tested (Q4✅ retained; Q6-Q10 Chrome stall) | 2 (Perplexity Q3 "psychiatrist near me bangalore" — FIRST EVER + Q4 CBT) | MT −208 KW (FIRST decline). Amaha "therapy near me" 60.5K enters pos=7. HEADLINE: Q3 psychiatrist-bangalore cited FIRST on Perplexity (110K vol) — biggest commercial citation ever. |
+| 2026-08-13 | ⬜ Chrome stall 3rd wk | ⬜ untested | ⬜ untested | ⬜ untested | ⬜ untested | 0 testable | MT +207 KW recovery. Amaha +71 reversing decline. Chrome stall 3rd consecutive week. |
+| 2026-08-20 | ⬜ Chrome stall 4th wk | ⬜ untested | ⬜ untested | ⬜ untested | ⬜ untested | 0 testable | MT −93 KW. All competitors declining. Chrome stall 4th consecutive Thursday. |
+| 2026-08-28 | ⬜ Chrome stall 5th wk | ⬜ untested (carried: 5/10) | ⬜ untested (carried: 2+ commercial) | ⬜ untested | ⬜ untested (carried: 1/5) | 0 testable | MT +103 🟢 RECOVERY. Mindtalk "near me psychiatrist" 6→2 (110K) + "counselling" 9→4 (90.5K) — strongest WoW positions in site history. Amaha "therapy near me" 7→3 (60.5K) = CRITICAL threat. YourDOST 9th consecutive decline. Chrome stall 5th week — URGENT manual fix needed. |
 
 **AI Overview citation share (2026-07-30):** 3/10 — Q4 (CBT therapy ✅ retained), Q8 (cadabams app ✅ retained), Q10 (OCD specialist ✅ retained). LOST Q9 ("depression treatment online india") vs last week.
 **This week's gain:** 🟢 ChatGPT COMMERCIAL BREAKTHROUGH — "Cadabam's MindTalk" now cited on Q1 "best mental health platform india" and Q9 "depression treatment online india" (first ever). 🟢 Perplexity Q7 "cadabams mental health" REGAINED (dropped last week, back this week).

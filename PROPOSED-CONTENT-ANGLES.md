@@ -4,7 +4,7 @@
 **Read by:** T5 New Content Discovery (Monday 10:07 IST)
 **Activation:** Patterns with ≥4 weeks of evidence get +30 priority points in T5's scoring
 **Unlock at 3 weeks:** Patterns can be proposed for T5 creation (no +30 yet, but active proposals)
-**Last updated:** 2026-07-29 (W31)
+**Last updated:** 2026-08-26 (W35)
 
 ---
 
@@ -58,6 +58,7 @@
 | W29 | 2026-07-15 | MCP_DOWN. No data. All patterns held. |
 | W30 | 2026-07-22 | MCP_BLOCKED. No data. All patterns held. |
 | W31 | 2026-07-29 | Patterns 1+2+3+5 at **5 WEEKS** → +30 pts sustained. P9 NRI CONFIRMED 3 wks → unlock. P8 Kerala W2. P10 US ~100 clicks NEW SEED. Pattern 7 (homepage hero) DEMOTED (9→0 payments). Kolkata +193% NEW SEED. Delhi NCT 3 weeks → unlock. ADS RE-ACTIVATED (Pan-India Plan). |
+| W35 | 2026-08-26 | **P8 Kerala CONFIRMED W5** — Kozhikode now dominant (18 clicks, overtook Kochi). Add Kozhikode city page to T5 queue. P1 Telugu W9 (Telangana 177). P1 Tamil W8+ (TN 128). P5 AI W6 MAJOR (chatgpt.com 334 clicks = 16.2% of total). **P15 Delhi DEMOTED** (97 clicks, W34 anomaly confirmed). NEW SEEDS: West Bengal tier-2 W3 (Medinīpur 18 + Murshidābād 18 consistent), Assam/Guwahati W2, Bihar/Patna W2, Toronto NRI W1, Birmingham UK W2. |
 
 ---
 

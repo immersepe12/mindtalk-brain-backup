@@ -1,0 +1,269 @@
+{
+  "date": "2026-08-28",
+  "gaps": [
+    {
+      "name": "Amaha",
+      "kw": "therapy near me",
+      "comp_pos": 3,
+      "vol": 60500,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "overthinking",
+      "comp_pos": 3,
+      "vol": 33100,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "peniaphobia",
+      "comp_pos": 2,
+      "vol": 12100,
+      "mt_pos": 999
+    },
+    {
+      "name": "YourDOST",
+      "kw": "free therapist online",
+      "comp_pos": 9,
+      "vol": 5400,
+      "mt_pos": 999
+    },
+    {
+      "name": "YourDOST",
+      "kw": "therapist online",
+      "comp_pos": 6,
+      "vol": 4400,
+      "mt_pos": 999
+    },
+    {
+      "name": "YourDOST",
+      "kw": "therapy online",
+      "comp_pos": 8,
+      "vol": 4400,
+      "mt_pos": 999
+    },
+    {
+      "name": "YourDOST",
+      "kw": "online counsellor",
+      "comp_pos": 1,
+      "vol": 3600,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "amaha mental health centre new delhi",
+      "comp_pos": 1,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "peniaphobia meaning",
+      "comp_pos": 1,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "therapist mumbai",
+      "comp_pos": 1,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "phobia height",
+      "comp_pos": 2,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "counsellor free online",
+      "comp_pos": 3,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "phobia to heights",
+      "comp_pos": 3,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "YourDOST",
+      "kw": "free counselling online",
+      "comp_pos": 4,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "YourDOST",
+      "kw": "counsellor free online",
+      "comp_pos": 5,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "YourDOST",
+      "kw": "psychological consultation online",
+      "comp_pos": 9,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "BetterHelp",
+      "kw": "bases in a relationship",
+      "comp_pos": 1,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "BetterHelp",
+      "kw": "in a relationship what are the bases",
+      "comp_pos": 1,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "MFine",
+      "kw": "online and doctor",
+      "comp_pos": 1,
+      "vol": 2900,
+      "mt_pos": 999
+    },
+    {
+      "name": "Amaha",
+      "kw": "therapy delhi",
+      "comp_pos": 1,
+      "vol": 2400,
+      "mt_pos": 999
+    }
+  ],
+  "comp_gains": [
+    {
+      "name": "Manastha",
+      "kw": "therapist",
+      "old": 53,
+      "new": 44,
+      "vol": 90500
+    },
+    {
+      "name": "Amaha",
+      "kw": "therapy near me",
+      "old": 7,
+      "new": 3,
+      "vol": 60500
+    },
+    {
+      "name": "Amaha",
+      "kw": "peniaphobia",
+      "old": 6,
+      "new": 2,
+      "vol": 12100
+    },
+    {
+      "name": "Amaha",
+      "kw": "therapists for adhd",
+      "old": 5,
+      "new": 1,
+      "vol": 9900
+    },
+    {
+      "name": "Amaha",
+      "kw": "health counsellor",
+      "old": 7,
+      "new": 3,
+      "vol": 4400
+    },
+    {
+      "name": "YourDOST",
+      "kw": "health counsellor",
+      "old": 5,
+      "new": 1,
+      "vol": 4400
+    },
+    {
+      "name": "Manastha",
+      "kw": "therapist online",
+      "old": 35,
+      "new": 31,
+      "vol": 4400
+    },
+    {
+      "name": "Manastha",
+      "kw": "therapy online",
+      "old": 44,
+      "new": 40,
+      "vol": 4400
+    },
+    {
+      "name": "YourDOST",
+      "kw": "e counselling",
+      "old": 30,
+      "new": 26,
+      "vol": 3600
+    },
+    {
+      "name": "Manastha",
+      "kw": "online counsellor",
+      "old": 27,
+      "new": 23,
+      "vol": 3600
+    }
+  ],
+  "mt_new": [
+    {
+      "kw": "adhd therapy near me",
+      "pos": 1,
+      "vol": 320
+    },
+    {
+      "kw": "anxiety neurosis meaning",
+      "pos": 1,
+      "vol": 390
+    },
+    {
+      "kw": "cadabams mind talk",
+      "pos": 1,
+      "vol": 2400
+    },
+    {
+      "kw": "how can i get mental peace",
+      "pos": 1,
+      "vol": 320
+    },
+    {
+      "kw": "how to get mental peace",
+      "pos": 1,
+      "vol": 320
+    },
+    {
+      "kw": "mental doctor near me",
+      "pos": 1,
+      "vol": 720
+    },
+    {
+      "kw": "mindtalk",
+      "pos": 1,
+      "vol": 720
+    },
+    {
+      "kw": "nearby therapist",
+      "pos": 1,
+      "vol": 480
+    },
+    {
+      "kw": "peace and serenity",
+      "pos": 1,
+      "vol": 390
+    },
+    {
+      "kw": "psychiatrist for adhd diagnosis",
+      "pos": 1,
+      "vol": 590
+    }
+  ]
+}

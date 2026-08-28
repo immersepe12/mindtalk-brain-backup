@@ -97,3 +97,5 @@
     Meta-Learner proposal candidate, T20 does not edit task specs.
 2026-08-24-2310 | 10 files changed | commit: 8b3f5aa | push: success
 2026-08-26-0946 | 7 files changed | commit: f170a3d | push: success
+2026-08-26T17:41:02Z | 24 files changed (UNCOMMITTED — index.lock stale 119m, FUSE rm blocked; remote is in-sync with prior HEAD 6606bcf) | push: up-to-date (prior commit already pushed)
+2026-08-28T10:27:12Z | LOCK BLOCKED (index.lock 42h stale, FUSE EPERM) — 26 files uncommitted | last clean commit: 6606bcf (2026-08-26) | push: skipped (nothing new committed)

@@ -1173,3 +1173,708 @@ of 3 from session notes without opening the files, and moved to close a flag aga
 myself replaced two days earlier. The Verifier caught all four. Right conclusion, wrong method, three
 runs in a row — the adversarial pass is not optional, and the recurring failure is **reasoning from
 notes and samples instead of from the artefact**.
+
+---
+
+# 🔧 T20 AUTO-REMEDIATION — 2026-08-26 (Wednesday)
+
+**Flags collected:** 9 (08-25 sensor logs + T16 ops-health carry-overs + standing job)
+**Verifier sub-agent:** 1 UPHELD · 3 CORRECTION · 3 VETO · 5 unprompted findings — **all honoured**
+**Net:** the engine's two loudest alarms today were both unreal, the queue that looked full was
+structurally unshippable, and the six pages that went live yesterday carry ten dead booking links
+that my own fix produced.
+
+---
+
+## A. THE HEADLINE — I broke six live pages two days ago and nobody caught it until now
+
+**`DOCTORS-LISTINGS-DEAD-LINKS-01` — 10 dead Tier A booking CTAs in production.**
+
+Every one of the 6 pages T9 shipped on 2026-08-25 carries `/doctors-listings/*` anchors.
+**`/doctors-listings/` is not a URL prefix on this site.** All 10 return 404, live, right now
+(re-verified by curl 2026-08-26). These are the booking CTAs — the conversion path
+INTENT-PRIORITY.md exists to protect.
+
+| Live page | dead anchors |
+|---|---:|
+| `/blogs/affordable-therapy-bangalore` | **4** — *all four body links* |
+| `/blogs/family-counselling-bangalore` | 2 |
+| `/blogs/best-psychiatrist-for-depression-bangalore` | 1 |
+| `/blogs/cbt-therapy-online-india` | 1 |
+| `/blogs/online-couples-therapy-india` | 1 — *the only body link* |
+| `/blogs/online-marriage-counselling-india` | 1 |
+
+**Scope is contained and measured:** I fetched all **297 live `/blogs/` pages**. Exactly these 6
+are affected. No other live page carries the bad prefix.
+
+**Root cause is mine.** The 2026-08-24 T20 run (§C2) found the same `/doctors-listings/` → `/doctors/`
+confusion and fixed it — but only in the `**Suggested URL:**` field of 14 *doctor* briefs. It never
+touched the **internal-link anchor lists inside the `/blogs/` briefs**, and T9 authored those anchors
+verbatim into MDX one day later. I fixed the symptom I was looking at and left the one I wasn't.
+
+**T20 cannot fix this** — it lives in `src/content/blogs/*.mdx` in the website repo. Escalated as E1
+with the mapping pre-resolved (below). Three of the ten need a *different* target, not a prefix
+rewrite, because no `/doctors/` equivalent exists at all — I checked each.
+
+**Also still queued with the bad prefix:** `conduct-disorder-in-adults` (9 anchors),
+`conduct-disorder-in-children` (10). Both are now held for other reasons, so nothing ships from them,
+but they must be corrected before release.
+
+---
+
+## B. VERIFICATION — 2 of my 3 false-positive closures were WITHDRAWN
+
+### B1. `/doctors/psychologists-in-bangalore` CRITICAL 13→100 — **my closure WITHDRAWN. Stays open.**
+
+I moved to close this as a DataForSEO pos-100 artifact on the strength of the page improving:
+impressions 721→776 (+7.6%), avg position 18.3→**16.9**.
+
+**The Verifier reproduced the window and I was wrong — for the third consecutive run, by the same mechanism.**
+On the **23 queries present in both windows**, the page went **14.59 → 16.26, i.e. worsened by 1.67**.
+The apparent improvement is pure composition: 27 queries averaging position 36.4 and carrying 121
+impressions simply **left** the window. Both windows are complete (listed impressions sum exactly to
+the window totals — 721/721 and 776/776), so this is not a row-limit artifact.
+
+Worse:
+- The tracked keyword is **absent from both windows' full 50-query lists** in all three spellings.
+  Absence is what a rank collapse looks like — it is not evidence against one.
+- The GSC file's own `"signal"` field reads **`CTR_DROP`**, `clicks_delta_pct: -17.6`. I quoted the
+  impressions and position out of that file and omitted its verdict.
+- `flagged-drops.json` independently records `psychologists in bangalore` **17.7 → 25.3** and
+  `psychologist in bangalore` **9.6 → 18.4** (flagged 08-24, source: weekly-report).
+- T2 on 08-25 did **not** clear this as noise. It removed it under **AP7 hygiene** ("brief already
+  exists"). On the same run T2 *did* close the separation-anxiety flag as `NOISE — GSC shows recovery`.
+  It deliberately did not do that here.
+- `BANGALORE-COMMERCIAL-INVESTIGATE-01` is an **open watch with recheck 2026-08-31 — which I opened
+  myself two days ago.**
+
+> `BACKLOG.md` line 484, written by me on 08-24: *"⚠ Do NOT cite page-level avg position here."*
+> I then cited page-level average position here.
+
+**Disposition: UNCONFIRMED — held on the existing 2026-08-31 watch.** Not escalated (already tracked),
+not closed. The page is technically healthy (200, FAQPage + 10 Physician nodes, no noindex) — that was
+true and is irrelevant.
+
+### B2. `/treatments/narrative-therapy` URGENT midpoint +13.4 — **DOWNGRADED, not closed**
+
+T4 raised `URGENT 🚨 … manual review required immediately` on a page with **6 impressions in the
+window**. Four queries total. The +13.4 average is driven by one 2-impression query
+(`narrative therapy india`, 7→59.5); excluding it the page **improved 9.43 → 4.25**.
+GSC's own `signal` field says `NOISE`.
+
+**Verifier correction honoured — twice:**
+1. I cited the head query improving 4.4→**1.5** as affirmative evidence. That datapoint has
+   **2 impressions**. Using a 2-impression reading as proof while dismissing a 2-impression reading as
+   noise is the same error in both directions. The defensible statement is that **the entire page is
+   below measurement threshold**, not that the head query improved.
+2. "Closed as noise" is the wrong disposition. This is a T4 Day-21 midpoint (day 22 of 42) on the
+   08-04 refresh; the Day-42 final is due **2026-09-15** and BACKLOG already schedules a
+   post-Core-Update investigate on 09-05.
+
+**Disposition: INSUFFICIENT DATA — defer to the Day-42 final (2026-09-15).** De-escalated from URGENT.
+Not sent to Kushal.
+
+### B3. T9's own note "`online-couples-therapy-india` has 2 internal links (min 3)" — **my rebuttal WITHDRAWN**
+
+I claimed 24 internal links "inside `<main>`". **There is no `<main>` element on that page** — it uses
+`<article>` + `div.prose`. Of the 24 T9-eligible hrefs in the document, **21 are footer chrome**,
+byte-identical across five pages including two unrelated controls; the other 3 are auto-generated
+"Related Insights" cards. **Inside the article prose: 0 T9-eligible internal links.** The single body
+link is `/doctors-listings/couple-therapists-in-bangalore` → **404**.
+
+T9 was not wrong. T9 was generous. And this is the same defect as §A.
+
+---
+
+## C. AUTO-FIXED — 9
+
+### C1. The brief queue looked full and could ship nothing — `intent_tier` was in the wrong place
+
+T9's ship gate is explicit: *"Every brief must carry `intent_tier: A|B|C` in **frontmatter**."*
+**54 of 74 `NEW-*` briefs carried it only as a bold markdown header line** (`**intent_tier:** A`),
+outside the YAML block. T9 therefore reported them as `INTENT_TIER MISSING` and skipped them — 52 on
+the 08-25 run alone.
+
+The partition is exact and proves the mechanism without reading a line of T9's code:
+
+| `intent_tier` location | count | what T9 did |
+|---|---:|---|
+| inside the ```yaml block | **20** | = exactly {6 shipped} ∪ {14 skipped as DOCTOR_LISTING} |
+| bold header line only | **54** | **all skipped** |
+| absent | 0 | — |
+
+**Fixed:** `intent_tier: X` inserted into the first YAML block of all 54, value unchanged (each was
+already classified and justified in its own Intent Gate Record — this moved the value to where the gate
+looks, it did not reclassify anything). 3 older-format REFRESH briefs have no YAML block and were
+correctly skipped; T9 never opens them anyway (its Step 1 globs `NEW-*-brief.md`).
+Originals archived to `briefs/archive/pre-t20-intent-tier-frontmatter-2026-08-26/`.
+**All 54 diff-verified byte-identical apart from the 4-line insertion. 0 YAML parse failures across all 76 briefs.**
+
+> **Verifier CORRECTIONS honoured — three of them.**
+> **(i) The count is 54, not the 57 I first reported.** 57 only reaches that number by including three
+> non-`NEW-` REFRESH briefs that T9 never globs.
+> **(ii) T9's own run log is wrong, not mine.** `logs/auto-ship-2026-08-25.txt` reports 6 + 15 + 52 = **73**;
+> ground truth is 6 + 14 + 54 = **74**. Both skip buckets are off and one candidate is unaccounted for.
+> I spent effort reconciling against 52. Reconcile against the files, not that log. → filed as F1.
+> **(iii) "The real count was 0, not 14" is overstated.** Of the 14 the 08-24 run claimed, **6 were
+> genuinely shippable and T9 shipped all 6 the next day.** The true count on 08-24 was **6 — exactly at
+> the floor**, not 14 and not 0. The 0 describes only today's post-ship residue.
+
+### C2. Two prose-only holds that T9 cannot read — made literal
+
+Promoting the tier made every held brief *visible* to T9 for the first time. Two carried holds written
+only in prose:
+- `relationship-problems-and-solutions` — NEEDS_HUMAN since 08-18 (AP9 overlap), recorded in a "T9 Skip
+  Log" section at the foot of the file
+- `is-online-therapy-confidential` — a binding 08-18 Verifier VETO in a blockquote
+
+T9's Step-2 filter matches **five literal phrases** and neither file contained one. Without this fix my
+own tier promotion would have caused T9 to ship two pages Kushal has explicitly not approved.
+Machine-readable `⛔ DO NOT SHIP` blocks written into both, each carrying its release condition.
+*(This is the second run in a row that the prose-only-hold class has bitten — see 08-24 §C3.)*
+
+### C3. `conduct-disorder-in-adults` — held, not fixed
+
+Looked like a mechanical near-miss (0 FAQs). It is not. Two blockers:
+- **Path contradiction:** `Suggested URL`, `Suggested File` and `Content Type` all say `/blogs/`, while a
+  pasted `SHIP PATTERN` block says ship to `/doctors-listings/`. T9 skipped it on 08-18 for exactly this.
+- **Four unanswered `## Clinical Input Requested` questions**, on an outline that is DSM-5 diagnostic
+  material (adult-onset specifier, CD-vs-ASPD differential, remission rates, treatment options).
+
+**T20 does not clear clinical gates.** Held with the three options pre-written → E2.
+
+### C4. `online-therapy-for-indians-in-usa` — repaired, and it was never shippable
+
+Same `/doctors-listings/` SHIP PATTERN paste error — on a page about the **US diaspora**, where the
+pasted text talks about `filterCity:"Mumbai"` and "never imply an in-person centre". Self-evidently a
+template paste, contradicting three fields in the same file. Block marked **SUPERSEDED** (retained for
+audit, not deleted). Also fixed: metaTitle **68→56 chars** (over T9's 65 limit — would have failed
+forever), `reviewer: "Mindtalk Clinical Team"` → `sufia-nusrat` (T9 requires a pool slug),
+placeholder FAQs/takeaways → real content, and a **dead anchor** `/treatments/online-counselling`
+(**404**, curl-verified) → `/treatments/online-therapy` (200). T9-eligible links 2 → 4.
+
+### C5. Dead-anchor sweep across the whole `/blogs/` brief queue
+
+30 distinct internal-link anchors referenced by `/blogs/` briefs, all curl-checked. **5 dead.**
+One was genuinely broken (C4). Four were forward references to briefs still queued — a real hazard,
+because T9 would author a link to a 404. Fixed by giving 6 briefs an explicit **link-order note** with a
+named, live fallback anchor rather than a fragile ship-ordering dependency.
+
+> **Verifier CORRECTION honoured:** my first fallback for the Tamil and Telugu briefs was
+> `/treatments/online-therapy` — **already in both link lists**. Executing the fallback would have left
+> 2 unique live links, below T9's floor of 3. Changed to `/treatments/psychotherapy` (200) and a 4th
+> link added to each.
+
+### C6. `couple-therapy-cost-in-bangalore` — reviewer did not exist
+
+`reviewer: ayushi-jain` is **not in `logs/reviewer-load-state.json`**. T9's Step-2 reviewer check would
+have rejected this brief on every run, silently, forever. Reassigned to `vijayalaxmi-umate` (load 2).
+*Found by my own T9 gate simulation, not by reading the brief.*
+
+### C7. 7 stale briefs archived
+6 blog briefs whose slugs now return 200 after T9 shipped them 08-25, plus
+`psychologists-in-bangalore-brief.md`.
+
+> **Verifier CORRECTION honoured.** The action is right but I justified it partly on "the page returns
+> 200" — which is exactly the reasoning the 08-24 run warned against, because a REFRESH brief's target
+> *always* returns 200. **The only valid ground is the `[COMPLETE 2026-08-21 commit:7163c6793b3c]`
+> marker in BACKLOG.md.** "200" is struck from the rationale.
+> AP7 does not break: T2 keys it off `tracking-db.json` status, not off the file existing.
+
+### C8. `tracking-db.json` brief_path repointed
+`/doctors/psychologists-in-bangalore` still pointed at the brief I archived this morning.
+`task3-serp-analysis-briefs.md` branches on that string and `sheets_logger.py` logs it.
+Repointed to the archive path; `tracking-db.backup-2026-08-26-pre-t20-briefpath.json` written first.
+*(Verifier unprompted finding — I broke this myself an hour earlier and did not notice.)*
+
+### C9. Discovery + paid mining
+`scripts/new-content-discovery.py --all` **timed out** (same as T5's 08-24 run) → fell back to
+`new-content-opportunities.json`, **2 days old** (vs the 14-day cache T5 used on 08-24). Per the T5
+fallback ladder — not escalated. `scripts/google-ads-search-terms.py` ran clean (exit 0, 198 qualified
+terms, 193 converting). Per the registry, a paid-mining result is never escalated.
+
+---
+
+## D. BRIEF-QUEUE STANDING JOB — refill fired
+
+**Trigger:** effective T9-shippable `/blogs/` briefs = **5**, against a floor of 6.
+(Not the 14 the queue appeared to hold — see C1.)
+
+**Written: 6 briefs. Retired by the Verifier: 1. Net +5.**
+
+| Brief | Tier | Evidence (all re-verified against source files) |
+|---|---|---|
+| `psychiatrist-online-consultation-india` | A | 690 impr/90d @ pos 9.0–9.1, 14 clicks — hub, no page exists |
+| `online-psychiatrist-consultation-in-tamil` | A | 544 impr, **40 clicks, 7.4% CTR**, pos 5.1 |
+| `online-counselling-in-malayalam` | A | 240 impr @ 6.4 + **1.0 measured paid conv** + Kerala P8 4-week signal |
+| `online-therapy-in-telugu` | A | **1.0 measured paid conv** @ ₹30.16 |
+| `online-counselling-in-hindi` | A | Delhi NCT **177 book-clicks W34, +86.3% record** — serves open `DELHI-NCT-T5-BRIEF-URGENT-01` |
+| ~~`what-happens-in-a-counselling-session`~~ | ~~B~~ | **RETIRED — Verifier VETO** |
+
+Composition: **5 Tier A / 0 Tier B / 0 Tier C** — satisfies INTENT-PRIORITY §3 (≥60% Tier A).
+
+### D1. VETO — `what-happens-in-a-counselling-session` re-created a decision taken 8 days earlier
+
+My brief asserted *"Nothing live covers it."* **False.** `/blogs/what-is-talk-therapy` is live (200) with
+the H2 **"What to Expect in Your First Talk Therapy Session"** — whose body already covers
+confidentiality, what the therapist asks, and how later sessions build. And a near-identical brief was
+already vetoed and retargeted on 2026-08-18; the archived filename says so verbatim:
+`NEW-what-to-expect-in-first-therapy-session-brief-vetoed-AP9-retarget-to-refresh-what-is-talk-therapy-2026-08-18.md`.
+Its H2s were *"The First 10 Minutes"* / *"What Your Therapist Will Ask You"* / *"How the Session Ends"*.
+Mine were *"The first ten minutes"* / *"What you will be asked"* / *"How a session ends"*.
+
+**Root cause, and it applies to all 6 briefs I wrote today:** my AP9 test was *"sitemap token overlap
+< 0.60"* — a **filename-similarity test, not a content-redundancy test**.
+`what-happens-in-a-counselling-session` vs `what-is-talk-therapy` scores low on shared tokens and high
+on shared intent, so the check waved through a page it should have blocked. **Replace token overlap with
+a live-content check before the next refill run.** → filed as F3.
+
+Retired to archive with the rationale. The demand (647 impr @ pos 5.7, 0 clicks) is real and routed to
+T3 as a **refresh of `/blogs/what-is-talk-therapy`**, per the 08-18 decision.
+
+### D2. VETO — the Telugu brief rested on a false premise and produced a wrong CTA
+
+I wrote: *"there is no Telugu-language page anywhere on the site… the sitemap shows no
+`/doctors/telugu-speaking-*` page."* **Six are live**, all 200, and all were in the very
+`live_paths.txt` the brief cites. The consequence was not cosmetic: the brief routed a Telugu-language
+query to **`/doctors/english-speaking-doctors-in-hyderabad`**. Corrected to
+`/doctors/telugu-speaking-doctors-in-hyderabad` + `/doctors/telugu-speaking-doctors`.
+Also corrected: ₹30.16 is the **8th cheapest of 193** converting terms, not "the cheapest".
+
+### D3. CORRECTION — cannibalisation warning added to the Tamil brief
+`psychiatrist online consultation free tamil`'s `triggering_page` is **`/doctors/tamil`**, which is
+**live and already ranking pos 5.1 at 10.83% CTR**. That page is working. A hard warning is now in the
+brief: target the *how-it-works/what-it-costs* intent, keep `/doctors/tamil-speaking-*` as the CTA, and
+escalate rather than outrank a converting page. Also noted: **no Tamil or Hindi paid term exists** in the
+converting set — those two briefs rest on GSC alone, unlike Malayalam and Telugu.
+
+### D4. CORRECTION — ship-order note was in the wrong file
+*"At most one language spoke per T9 run"* existed **only in the Hindi brief**. T9 opens briefs
+independently and would never have seen it — the identical failure mode as C2. Replicated into the hub,
+Tamil, Malayalam and Telugu briefs.
+
+### Queue state at end of run
+
+| | |
+|---|---:|
+| **T9 gate-passing `/blogs/` briefs** | **11** (floor 6) |
+| of which authoring-complete | **6** |
+| of which still carrying placeholder FAQ/takeaway fields | 5 |
+| held (correctly, with machine-readable holds) | 5 |
+| Tier mix of gate-passing | **9 A / 2 B / 0 C** |
+| Tier A `/doctors/` briefs (out of T9 scope) | 57 |
+
+> **Verifier CORRECTION honoured:** "12 shippable" would have been a misleading headline. 5 of the
+> gate-passing briefs still contain literal `[PAA question 1]` placeholders, and **every** brief in the
+> queue — including all 5 I wrote today — has a bracketed writer-instruction `quickAnswer`.
+> Reported as **11 gate-passing / 6 authoring-complete**.
+
+---
+
+## E. ESCALATED TO KUSHAL — 3 (+ 4 re-delivered)
+
+| # | Item | The ask |
+|---|---|---|
+| **E1** | 🚨 **`DOCTORS-LISTINGS-DEAD-LINKS-01`** | 10 dead Tier A booking CTAs live on the 6 pages shipped 08-25. Dev spec below — 7 are a prefix rewrite, 3 need a new target. Caused by T20's own incomplete 08-24 fix. |
+| **E2** | **`CONDUCT-DISORDER-ADULTS-DECISION-01`** | Brief has a path contradiction **and** 4 unanswered clinical questions on DSM-5 diagnostic content. **(a)** route to `/doctors/conduct-disorder-in-adults` — but `/doctors/conduct-disorder-specialists` + `-in-bangalore` are already live, check redundancy; **(b)** keep as `/blogs/`, clinician answers the 4 questions and signs off; **(c)** retire — `/illnesses/conduct-disorder` and `/blogs/conduct-disorder-signs-causes-and-treatment` are both live. |
+| **E3** | **`MINDTALK-REPO-STALE-CHECKOUT-03`** | Escalated 08-23 (T16) and 08-24 (T20). **My 08-24 recovery instruction was unsafe — corrected sequence below.** |
+
+**E1 — dev spec, paste-ready.** In `~/Documents/GitHub/mindtalk/src/content/blogs/`:
+
+```
+# 7 links — pure prefix rewrite, all targets verified 200:
+affordable-therapy-bangalore.mdx                 /doctors-listings/{counsellors,psychiatrists,psychologists,therapists}-in-bangalore  ->  /doctors/…
+best-psychiatrist-for-depression-bangalore.mdx   /doctors-listings/depression-specialists-in-bangalore  ->  /doctors/depression-specialists-in-bangalore
+family-counselling-bangalore.mdx                 /doctors-listings/{family-therapists,therapists}-in-bangalore  ->  /doctors/…
+
+# 3 links — NO /doctors/ equivalent exists; needs a substitute (all verified 200):
+cbt-therapy-online-india.mdx          /doctors-listings/online-therapists-india          ->  /treatments/online-therapy
+online-couples-therapy-india.mdx      /doctors-listings/couple-therapists-in-bangalore   ->  /doctors/relationship-issues-psychologists-in-bangalore
+online-marriage-counselling-india.mdx /doctors-listings/marriage-counsellors-in-bangalore ->  /doctors/relationship-issues-specialists
+```
+A blanket `s#/doctors-listings/#/doctors/#g` fixes 7 of 10 and leaves the other 3 still 404 — do the
+three substitutions explicitly.
+
+**E3 — corrected recovery sequence. Do NOT re-clone.**
+
+Facts (all independently verified twice): local `main` = **`feb506b`, 2026-07-21 — 36 days stale**;
+local `origin/main` ref = **`7163c67`, Aug 21 — 5 days stale**; HEAD sits on branch
+`feat/exec-refresh-doctors-bangalore-20260821`; `feat/auto-ship-blogs-2026-08-25` exists but points at
+`7097922` — an **empty shell** (and so do the `-08-05` and `-08-18` branches, so the pattern predates
+this week); **none of the 6 MDX files T9 shipped on 08-25 exist locally** though all 6 URLs are 200;
+commits `5a413a57`/`b52b6fc8` are not valid local objects; `.git/shallow` absent, so this is not a
+shallow clone. **Conclusion: T9 ships via the GitHub Git Data API and bypasses the local checkout
+entirely. The local tree is a write-only graveyard.**
+
+> **Verifier VETO on my 08-24 recommendation — honoured.** I proposed stash-and-pull, then today
+> proposed re-cloning. **Re-cloning would destroy 80 untracked paths** — `git stash` does not touch
+> untracked files by default. Those include whole untracked directories under `src/`
+> (`src/app/find-your-match/`, `src/components/analytics/`, `src/lib/seo/`, `src/hooks/`, `src/types/`)
+> plus 16 `src/content/mindful-minutes/*.mdx` and 6 `src/content/doctors*/*.mdx`. Every untracked route
+> sampled is live in production, and all 10 modified tracked files were confirmed already-live
+> (e.g. `discover-schema.ts`'s `audioObjectNode` — prod `/mindful-minutes/4-7-8-breathing` emits
+> AudioObject JSON-LD). But that was inferred **from production, not confirmed against origin**
+> (`git ls-remote` has no credentials here), and it says nothing about the non-content artifacts
+> (`.agents/`, `.claude/skills/`, `docs/ads/`, `docs/changelogs/`, `scripts/audit-content.mjs`).
+
+```bash
+cd ~/Documents/GitHub/mindtalk
+git fetch origin
+git branch backup-local-$(date +%F)                                  # preserve committed work
+tar czf ~/mindtalk-untracked-$(date +%F).tgz $(git ls-files --others --exclude-standard)
+git checkout main && git reset --hard origin/main                    # only after the tarball exists
+```
+Re-clone only once that tarball exists **and** `git ls-remote origin main` runs with working credentials.
+
+**Re-delivered — 4 pending human actions, now 11 days stale.** T16's Slack delivery failed on 08-15 and
+was never retried; re-delivered 08-24, still open today: `PERSONALITY-DISORDER-YMYL-SIGNOFF-01`,
+`STUB-PILOT-CONVERSION-VERDICT-01`, `T9-SLEEP-STAGES-AP9`, `W28-alzheimers` (A/B).
+*(`TRUST-ISSUES-HUMAN-01` is now struck through in BACKLOG — closed. Corrected from the 08-24 count of 5.)*
+
+**Not re-escalated** (verified real, already with Kushal, no new information):
+`BANGALORE-COMMERCIAL-INVESTIGATE-01` (watch 08-31), `GSC-MEASUREMENT-INTEGRITY-01`,
+`T6-POSITION-UNITS-BUG-01`, `T17-7-AEO-DOCTORS-SPRINT-01`, `DEAD-CLICKS-W34` (P2),
+`ASSESSMENT-AIO-SCHEMA-AUDIT-01`, `psychology-of-love` §1 Tier C call.
+
+---
+
+## F. FILED — not Kushal's
+
+- **F1 `T9-RUN-LOG-ARITHMETIC-01`** — `logs/auto-ship-2026-08-25.txt` reports 6 + 15 + 52 = **73**
+  candidates; ground truth is 6 + 14 + 54 = **74**. Both skip buckets are wrong and one candidate
+  vanishes (probably `gender-identity-disorder`, excluded at Step 1). Any downstream reasoning from that
+  log is unsound. → Meta-Learner (T13).
+- **F2 `GSC-PULL-WINDOW-OVERLAP-01`** — in every file `scripts/gsc-pull.py` writes,
+  `previous_window` = 08-08→08-15 and `current_window` = 08-15→08-22. **2026-08-15 is in both.** The
+  windows are not disjoint; a day is double-counted depending on endpoint inclusivity. This sits
+  underneath *every* drop and midpoint verdict the engine produces. One-line fix, but it lives in
+  `scripts/` — **T20 may not edit it.** → Strategist Verifier.
+- **F3 `AP9-TOKEN-OVERLAP-IS-NOT-A-REDUNDANCY-TEST-01`** — the AP9 check used by T20's refill (and
+  copied into 6 briefs today) compares slug tokens against sitemap paths. That is a filename-similarity
+  test. It passed a page that duplicates a live page and re-created an 8-day-old veto (D1). Any brief
+  generator must fetch and read the candidate's nearest live page, not diff its filename. → T5 + T20 spec.
+- **F4 `T4-MIDPOINT-NEEDS-IMPRESSION-FLOOR-01`** — T4 raised `URGENT 🚨 manual review required
+  immediately` on a page with **6 impressions**. Position deltas need a minimum-impressions floor before
+  they can fire an alert. → Meta-Learner (T13).
+- **F5 `GSC-INFRA-01` recurrence #5** — the host disk is at **227G/229G, 100% full, 1.7G free**. It
+  blocked T20's own scratch writes this run. Already open with Kushal; noted, not re-escalated.
+
+---
+
+## G. VERIFIED, NO ACTION
+
+- **Weekly cap respected.** `max_new_content_per_week = 20`; T9 used 6/20 this week. **T20 shipped 0
+  pages.** `src/**` untouched, `scripts/*.py` untouched, nothing deleted — everything archived.
+- **Schema fix confirmed still live.** `/treatments/narrative-therapy` emits `FAQPage` + `MedicalTherapy`;
+  `/doctors/psychologists-in-bangalore` emits `FAQPage` + `MedicalOrganization` + 10 `Physician` nodes.
+  `SCHEMA-MEDICAL-TYPES-01` (PR #23) is holding.
+- **Google Core Update began rolling today (2026-08-26)**, on top of the Spam Update running since 08-18.
+  Both false-positive candidates today were single-page position artifacts. **Do not queue refreshes off
+  this week's position data** — wait for the update to settle.
+
+---
+
+## RUN SUMMARY — 2026-08-26
+
+| | |
+|---|---|
+| Flags collected | 9 |
+| **False positives closed** | **0** — 2 of my 3 closures were vetoed and withdrawn |
+| **De-escalated** | **1** — narrative-therapy URGENT → insufficient data, defer to Day-42 (09-15) |
+| **Re-opened by the Verifier** | **1** — psychologists-in-bangalore stays on its 08-31 watch |
+| **Auto-fixed** | **9** — 54 briefs unblocked · 2 prose-only holds made literal · 7 archived · 1 brief repaired · 1 held · 6 link-order guards · 1 phantom reviewer · 1 tracking-db path · discovery fallback |
+| **Briefs written / retired** | **6 written, 1 retired by Verifier → net +5** |
+| **Escalated to Kushal** | **3** + 4 re-delivered |
+| **Filed, not Kushal's** | **5** |
+| Brief queue | **11 T9 gate-passing (6 authoring-complete), 5 held** · 9A/2B/0C · floor 6 ✅ |
+| Pages shipped by T20 | **0** |
+| Verifier sub-agent | **1 UPHELD / 3 CORRECTION / 3 VETO / 5 unprompted — all honoured** |
+
+**Net.** The queue was never starved of briefs — it was starved of briefs T9 could *read*. 54 files
+carried their intent tier three lines above the place the gate looks, and the engine reported a full
+pipeline while shipping from a pool of six. That is now fixed and the queue stands at 11 gate-passing.
+
+But the run's real finding is the one nobody asked for: **the six pages that went live yesterday carry
+ten dead booking links, and I put them there.** The 08-24 fix corrected `/doctors-listings/` → `/doctors/`
+in the field I happened to be looking at and left the same string in the anchor lists one section below.
+T9 authored them into MDX the next day. On `/blogs/affordable-therapy-bangalore`, all four body links are
+dead; on `/blogs/online-couples-therapy-india`, the only one is. Those are the booking CTAs.
+
+**And the discipline note, third run running.** I argued the measurement-integrity case on 08-23,
+committed the same error on 08-24, was corrected, and then did it again today — closing a CRITICAL on a
+page-level average that moved only because 27 low-position queries left the window, against an open watch
+**I opened myself two days ago**, in a file whose own `signal` field said `CTR_DROP`. I also claimed 24
+internal links inside an element that does not exist on the page, asserted that no Telugu page existed
+while six were live in the file I was citing, and re-wrote a brief that was vetoed eight days ago. The
+Verifier caught all four. The pattern is unchanged and now unmistakable: **I reason from the artefact I
+am holding instead of the artefact I am claiming about.** Every wrong claim today would have been
+falsified by opening one more file.
+
+---
+
+# 🔧 T20 AUTO-REMEDIATION — 2026-08-26 (Wednesday, 8:45 PM IST — scheduled run)
+
+> Second T20 run today. The 12:52 IST run was a catch-up after Mac Mini downtime; this is the regular
+> 8:45 PM slot, reading T10's 8:09 PM Strategist output. Scope tonight = flags raised **since** that
+> run: T10's 20:18 BACKLOG/WATCH stamp, T14 technical-health (09:55), T16 ops-health (09:46),
+> T19 conversion-intelligence (11:16).
+
+**Flags collected: 12 · False positives closed: 9 · Downgraded: 1 · Auto-fixed: 5 · Escalated: 4 ·
+Filed to T13: 5 · Pages shipped by T20: 0**
+
+---
+
+## A. FALSE POSITIVES CLOSED (Rule 1) — 9
+
+### A1–A6. `logs/ops-health-2026-08-26.log` — all 6 "❌ MISSED" verdicts are false
+
+Ground truth = `list_scheduled_tasks`, pulled 20:58 IST and independently re-pulled by the Verifier
+(all `lastRunAt` matched to the second):
+
+| task | claimed | actual `lastRunAt` | IST | verdict |
+|---|---|---|---|---|
+| T15 mixpanel-conversion-monitor | MISSED / "chronic" | `2026-08-26T04:35:37Z` | 10:05 | ✅ RAN |
+| T19 conversion-intelligence | MISSED / "chronic" | `2026-08-26T05:36:47Z` | 11:06 | ✅ RAN |
+| T9 auto-ship-new-blogs | MISSED | `2026-08-26T09:37:11Z` | 15:07 | ✅ FIRED (see E2) |
+| T11 executor | MISSED | `2026-08-26T11:06:09Z` | 16:36 | ✅ RAN |
+| T10 strategist | MISSED | `2026-08-26T14:39:59Z` | 20:09 | ✅ RAN |
+| T20 auto-remediation | MISSED | `2026-08-26T15:25:06Z` | 20:55 | ✅ RAN (this run) |
+
+Corroborated by artifacts independent of the scheduler: `logs/conversion-intelligence-2026-08-26.md`
+(T19, 14 Mixpanel queries), `brain/memory/experiments/2026-08-26-flag_for_human-*.md` ×2 (T11), and a
+`2026-08-26 T10` stamp in BACKLOG.md + WATCH.md + BRAIN.md (T10).
+
+**Root cause D1 — future runs mislabelled as missed.** The log was written at **09:46 IST** as a
+catch-up for T16's 08-25 23:08 slot, but evaluated **2026-08-26's** schedule. Every task whose
+`nextRunAt` fell later that same day was still in the future at check time and was marked MISSED. Its
+conclusion — *"Likely cause: Mac Mini sleep/offline from ~10 AM to ~11 PM IST"* — is unsupported. The
+Mac Mini was up; the tasks ran.
+
+### A7. "T15+T19 chronic: 7-day consecutive miss" — category error
+
+Both are **Wednesday-only** tasks (`0 10 * * 3`, `0 11 * * 3`). A 7-day gap is not a miss, it is the
+cadence; their prior run 2026-08-19 was the previous Wednesday. **Root cause D2 — weekly-cadence tasks
+judged against a flat 24h staleness test.**
+
+### A8. `GSC OAuth EXPIRED — 9 consecutive weeks` (T14 recommended action **#1**, "URGENT")
+
+Closed. T20 ran a live pull tonight:
+`PYTHONPATH=.pip-packages python3 scripts/gsc-pull.py --url /illnesses/anxiety`
+→ **exit 0**, real data (`impressions +16%`, 50 keywords), `gsc-data/illnesses_anxiety.json` written
+15,736 B. Independently re-run and confirmed by the Verifier. Corroborated: T2's 08-25 validator wrote
+two 17 KB `gsc-data/*.json` payloads with live rows. **GSC is authenticating and returning data.**
+Whatever narrower API surface T14 probes (indexation / URL-Inspection scope) is not "OAuth expired" —
+and that framing has put a false credential request in front of Kushal for **nine weeks**.
+*(Verifier correction honoured: T20's supporting detail "token refreshed today 09:52" was wrong — the
+`gsc-token.pickle` mtime is 21:00:43, i.e. rewritten by T20's own test pull. Immaterial to the verdict,
+but it was an unchecked claim and is withdrawn.)*
+
+### A9. `/blogs/understanding-dominant-personality-and-dominating-nature` "missing FAQPage **despite
+having `faqs:` frontmatter** — possible MDX-level regression"
+
+Closed. The page has **no `faqs:` key** — the string `faqs` appears nowhere in the file. Its 3
+`blocks.faq-list` components are empty placeholders (`id:` + `title: null`, nothing else).
+
+T20 parsed all 283 blog MDX; the Verifier re-parsed indentation-aware and matched exactly:
+
+- **71** carry top-level `faqs:` → these emit FAQPage correctly ✅
+- **185** carry legacy `blocks.faq-list` without `faqs:`
+- **0 of those 185** contain any question/answer data. Across all 283 files, **698/698** faq-list blocks
+  are `title: null`; the key histogram over all 662 blocks in the 185 files is `{id: 662, title: 662}`.
+
+Verifier went further and read the emitter: `src/app/blogs/[slug]/page.tsx:224` reads `data.faqs` and
+gates on `validFaqs.length > 0`; nothing in the blog route reads `faq-list` (only
+`src/app/[slug]/page.tsx:189`, the CMS-pages route). **The live output is exactly what the code
+predicts. No regression, no lost FAQ content, no emitter bug.**
+
+> Note on provenance: T14 phrased this correctly as an *investigation* ("investigate if `faqs:`
+> frontmatter is missing from that specific MDX file"). The false assertion — "**despite having** faqs:
+> frontmatter" — was introduced when T10 hardened it into the BACKLOG row. The failure is in the
+> hand-off, not in T14.
+
+*(Non-bug observation for T3/T5: 212 of 283 blog pages have no FAQ content at all. That is a content
+opportunity, relevant to P5 AI-citation — not a defect, and not escalated.)*
+
+---
+
+## B. DOWNGRADED — 1
+
+**`SCHEMA-MEDICALWEBPAGE-RESIDUAL-01` — H → P2.** Verified via `curl -L` + `@type` extraction on four
+pages (bodies 132–224 KB; the Verifier flagged that a truncated `curl` exit-23 body would fake an
+"absent schema" result, so body size was asserted, not just exit code):
+
+| page | emits |
+|---|---|
+| `/illnesses/anxiety`, `/illnesses/depression` | `MedicalCondition` ✅ `FAQPage` ✅ (10 Q/A) `BreadcrumbList` ✅ `WebPage` `Article` |
+| `/treatments/counselling-therapy`, `/treatments/narrative-therapy` | `MedicalTherapy` ✅ `FAQPage` ✅ (4 Q/A) `BreadcrumbList` ✅ |
+
+`MedicalWebPage` is genuinely absent on all four — **the flag is real.** But the severity is not:
+neither `MedicalWebPage` nor the types already present produce a Google rich result, so adding it
+changes no SERP eligibility. Calling it "the most relevant open schema gap" during the Core Update
+overstates it.
+
+> **Verifier CORRECTION honoured.** T20 justified the downgrade by calling `MedicalCondition` /
+> `MedicalTherapy` "the *more specific* types". That is a category error — `MedicalWebPage` subclasses
+> `WebPage` (page container), `MedicalCondition` subclasses `MedicalEntity`. Orthogonal branches, not
+> substitutes. The phrasing is withdrawn; the conclusion stands on the rich-result argument alone.
+
+> **Verifier unprompted finding, carried into the dev spec:** `/treatments/*` emit **no page-level
+> container at all** — no `WebPage`, no `Article`. That is a larger gap than the flagged one and was
+> sitting in a parenthetical.
+
+---
+
+## C. AUTO-FIXED (Rule 2) — 5
+
+**C1. Archived 3 superseded Meta-Learner proposals.** `t16-read-pending-human-actions-2026-07-26-2030.md`,
+`t5-floor-miss-brain-flag-2026-07-26-2030.md`, `t5-floor-12-output-enforcement-2026-07-19-2030.md` →
+`brain/applied-changes/superseded/*.archived-2026-08-26-T20` (moved via `os.rename()`, **nothing
+deleted**; FUSE `unlink()` EPERM still active, re-confirmed).
+
+All three were verified dead before moving: the first two carry `⛔ SUPERSEDED — DO NOT APPLY`
+tombstones naming their live replacements, and the Verifier confirmed the superseding changes are
+actually in place — `### Part A.5 — Pending human-action escalations` at
+`cowork-tasks/task16-operational-health-backup.md:90`, and `**BRAIN.md floor-miss flag
+(Slack-independent):**` at `cowork-tasks/task5-new-content-discovery.md:141`. The third has a
+byte-identical `.applied` twin.
+
+**This ends the churn that fired today's `🚨 STALE ALERT` and 20+ consecutive MISMATCH-SKIPs** (39
+mismatch entries in `applied-history.md`). `brain/proposed-changes/` now holds only the 3 genuinely
+active previews, all Apply-on **2026-08-30** (future) — confirmed by the Verifier.
+
+**C2. Wrote the dev handoff that BACKLOG cited but which did not exist.** T10's 20:18 stamp pointed dev
+at `reports/dev-handoff-2026-08-26-dead-links.md`; the file was never created — the spec lived only
+inside this log. Now written, covering all four dev items with tonight's re-verified status codes.
+
+**C3. Corrected the false claim in `SCHEMA-MEDICAL-TYPES-01`.** The line "FAQPage **+ MedicalWebPage**
+JSON-LD now emit from illness/treatment templates" is false — PR #23 shipped FAQPage only. **That single
+wrong line is what generated T14's alarm tonight.** Corrected in place with the live evidence.
+
+**C4. Annotated `SCHEMA-MEDICALWEBPAGE-RESIDUAL-01`** with the verification result, the downgrade, and
+the closure of the `faqs:` sub-claim, so the next reader does not re-litigate it.
+
+**C5. Appended a correction block + addendum to `logs/ops-health-2026-08-26.log`** so the 6 false MISSED
+verdicts cannot be re-read as truth by tomorrow's T10.
+
+---
+
+## D. ESCALATED TO KUSHAL / DEV — 4
+
+**E1 🚨 `DOCTORS-LISTINGS-DEAD-LINKS-01` — day 2, still broken, re-escalated.**
+Re-verified 21:00 IST: all 9 `/doctors-listings/*` targets 404; exactly 10 dead anchors across exactly
+6 live pages (4 / 2 / 1 / 1 / 1 / 1 — Verifier confirmed each count from live HTML). On
+`/blogs/affordable-therapy-bangalore` **every** body booking link is dead; on
+`/blogs/online-couples-therapy-india` the only one is. All 6 prefix-rewrite targets and all 3
+substitute targets verified 200 with real content.
+
+> **Verifier VETO honoured — the spec's fix location was wrong.** It said "in
+> `~/Documents/GitHub/mindtalk/src/content/blogs/`". Local `HEAD` = `feb506b`, **2026-07-21, five weeks
+> stale**; **none of the 6 `.mdx` files exist locally**, and a repo-wide grep for `doctors-listings`
+> across all `.mdx` returns **zero**. A dev following the original spec would have found nothing and
+> closed the ticket as already-fixed. The handoff now leads with this and directs the fix to the remote
+> tree via the GitHub Data API (T9's actual ship path), or a `fetch`/`reset` **after** the
+> untracked-file tarball from `MINDTALK-REPO-STALE-CHECKOUT-03` exists.
+
+**E2 🚨 `T9-SILENT-DEATH-01` — NEW tonight.**
+T9 fired on schedule at 15:07 IST and **produced nothing**: no `logs/auto-ship-2026-08-26.txt` (every
+prior run wrote one), no tracking-db write, no Slack archive, and **0 pages live** — the Verifier curled
+all 16 `/blogs/` brief slugs, every one 404. Session transcript
+`local_3d91a081-244e-43af-8721-e63e76a1a7ea` shows **4 tool calls — bash, ToolSearch ×2, Vercel
+`list_teams` — then termination with no result line.** Silent early death at startup, not a
+"0 candidates" skip and not a cap block (11 shippable briefs, weekly cap 6/20, cluster slot open).
+
+**This was the first T9 run after the brief queue was unblocked this morning.** The pipeline was finally
+loaded and the ship step did nothing. Last call before death was a Vercel MCP call → suspect tool/MCP
+init, not content logic. **T20 deliberately did not ship in T9's place:** Core Update Day 1 is live and
+T9 runs again Friday 08-28, so duplicating it buys nothing and risks unattributable movement. T20 will
+re-verify on 08-28 and escalate as systemic if the artifact is missing again.
+
+**E3 `GSC-MEASUREMENT-INTEGRITY-01` — re-escalated with new information (reproduced on demand).**
+Previously "reported"; now deterministic. Same page, seconds apart:
+
+```
+gsc-pull.py --url /illnesses/anxiety                      -> 100 impr / 50 keywords / +16%
+gsc-pull.py --url https://www.mindtalk.in/illnesses/...   ->   0 impr /  0 keywords /  +0%  exit 0
+```
+
+The failure is **silent** — `+0%/+0%` reads exactly like a legitimate "no change" verdict.
+
+> **Verifier finding — the blast radius is worse than reported.** A full-URL call still **writes a
+> junk-keyed zero-row `gsc-data/*.json`** that later reads as legitimate history. **5 such records exist
+> from 2026-08-23**, and for **4** (`relationship-stress`, `sleep-schedule`, `mental-exhaustion`,
+> `eft-tapping`) **no valid path-form record exists at all** — the only GSC data on disk for those pages
+> is a false zero. Those 4 are the W30-W33 cohort already flagged `MEASUREMENT-INVALID`. **This is the
+> root cause of that flag.** Spec now asks for three things: path normalisation, raise-on-zero-rows, and
+> purge + re-pull of the 5 junk records before T12 re-issues the W30-W33 Day-42 finals (due 09-08).
+
+**E4 `SCHEMA-MEDICALWEBPAGE-RESIDUAL-01` (P2) + non-www `307` → `301` (P3).** Both in the handoff,
+both batched — explicitly *not* Core-Update urgent. The 307 is now in its 10th consecutive week.
+
+**Not re-escalated** (verified real, already with Kushal, no new information): `CORE-UPDATE-YMYL-HOLD-01`,
+`W38-NARRATIVE-THERAPY-URGENT-01` (a/b/c pending), `CHATGPT-AEO-SPRINT-REVIEW-01` (hold to 09-05),
+`DELHI-NCT-T5-BRIEF-URGENT-01` (P15 demoted to one-week anomaly by T19 W35 today: 97 clicks, −45.2%),
+`THERAPIST-NEAR-ME-SERP-CHECK-01`, `MINDTALK-REPO-STALE-CHECKOUT-02/03`, `GSC-INFRA-01` (disk 226G/229G,
+**2.7G free** — recurrence #6, worked around via `HOME`/`XDG_CACHE_HOME` redirect), and the 4 pending
+human actions now **12 days** stale.
+
+---
+
+## E. FILED — not Kushal's — 5
+
+- **F1 `T16-FUTURE-RUN-MISLABELLED-AS-MISSED-01`** — a catch-up run must evaluate the schedule for the
+  day it is catching up on, and must never mark a task missed when `nextRunAt > now`. → T13.
+- **F2 `T16-WEEKLY-CADENCE-DAILY-STALENESS-TEST-01`** — staleness must be measured against each task's
+  own cron interval, not a flat 24h. → T13.
+- **F3 `T16-LOG-MISSTATES-OWN-RUN-TIME-01`** *(Verifier, unprompted)* — the log header claims "Run time:
+  2026-08-26 ~23:00 IST" when T16 had not run that day at all. A log that misstates its own run time
+  makes every staleness inference in it unauditable. → T13.
+- **F4 `T14-GSC-PROBE-OVERCLAIMS-AUTH-FAILURE-01`** — T14 must name the exact API call that fails rather
+  than inferring a blanket "OAuth expired"; 9 weeks of false credential escalation. → T13.
+- **F5 `T9-SHIP-GATE-IGNORES-DO-NOT-SHIP-MARKER-01`** *(Verifier, unprompted)* — T20 writes
+  machine-readable `⛔ DO NOT SHIP` / NEEDS_HUMAN holds into briefs, and **no downstream gate consumes
+  them**. 5 briefs would otherwise be eligible. → T13.
+
+---
+
+## F. VERIFIED, NO ACTION
+
+- **Brief queue HEALTHY — no refill fired.** 16 `/blogs/` briefs pass the raw gate (`intent_tier` in the
+  proposed-frontmatter yaml fence **and** slug returns 404); **5 carry an explicit `⛔ DO NOT SHIP` /
+  NEEDS_HUMAN hold**, so **true shippable = 11 (9 Tier A / 2 Tier B)** against a floor of 6.
+- **Discovery FRESH** — `new-content-opportunities.json` written 2026-08-24 (Monday, its cadence). No
+  `DISCOVERY STALE` in today's logs. No re-run needed.
+- **Weekly cap respected** — `max_new_content_per_week = 20`; 6/20 used. **T20 shipped 0 pages.**
+  `src/**` untouched, `scripts/*.py` untouched, **nothing deleted** — everything archived.
+- **Core Update Day 1 (2026-08-26).** No refreshes queued off today's position data.
+
+---
+
+## RUN SUMMARY — 2026-08-26 (evening)
+
+| | |
+|---|---|
+| Flags collected | 12 |
+| **False positives closed** | **9** — 6 ops-health MISSED (one root cause) · weekly-cadence mislabel · GSC OAuth (9 wks) · FAQPage sub-claim |
+| **Downgraded** | **1** — SCHEMA-MEDICALWEBPAGE-RESIDUAL-01 H→P2 |
+| **Auto-fixed** | **5** — 3 proposals archived (ends 20+ day churn) · dev handoff written · 2 false BACKLOG claims corrected · ops-health log corrected |
+| **Escalated** | **4** — dead links (day 2, spec re-pointed) · T9 silent death (NEW) · gsc-pull (reproduced + junk records) · schema/307 (batched) |
+| **Filed to T13** | **5** |
+| Brief queue | **11 shippable (9A/2B)** · 16 raw-gate, 5 held · floor 6 ✅ · no refill needed |
+| Pages shipped by T20 | **0** |
+| Verifier sub-agent | **9 claims audited — 5 UPHELD · 3 CORRECTION · 1 VETO · 7 unprompted findings — all honoured** |
+
+**Net.** Nine of twelve flags were not real. The six "missed task" alarms came from a catch-up monitor
+reading the wrong day's schedule; the nine-week GSC credential request dissolved on one live API call;
+the FAQPage "regression" was a page that simply has no FAQs. What survived is worth more than what did
+not: **T9 fired this afternoon and silently died after four tool calls**, on the first run after the
+brief queue was finally unblocked — the ship pipeline is down and nothing else noticed, because
+ops-health tests `lastRunAt` rather than "did the task write its artifact".
+
+**And the discipline note.** The Verifier caught three errors of mine tonight. Two were the same failure
+the last four runs recorded: I counted 16 shippable briefs while **5 of them carry DO-NOT-SHIP holds I
+wrote myself — two of them this morning** — and I reported "7 of 7" false MISSED verdicts because I
+grepped the marker count *after* appending my own correction and counted myself. The third, the dead-link
+spec pointing at a local checkout where the files do not exist, would have wasted a dev's evening and
+likely closed a P0 as already-fixed. Same root cause each time: **I measured the artefact in my hand
+instead of the artefact I was making a claim about.** The counter-move is not more care, it is
+structural — every count I publish needs a second, independently-derived count before it leaves the run.

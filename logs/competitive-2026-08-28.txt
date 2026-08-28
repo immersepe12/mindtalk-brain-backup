@@ -1,0 +1,2 @@
+CHROME: CONNECTED — 2026-08-28 T17 run
+CHROME: STALL-SKIPPED — extension listed but disconnects on tab create (5th consecutive Thursday stall)

@@ -22,6 +22,11 @@
 > call 2026-08-26 the "Day-42 final" — 2026-08-26 is the **Day-21 midpoint**. `WATCH.md` (this file) is correct.
 
 
+---
+**T10 Strategist stamp — 2026-08-28 8 PM IST:** Core Update Day 3 LIVE. No new watches opened today (psychologists-in-mysore MODERATE read at Core Update Day 3 — confound, defer AP5 check to 09-05). W38 narrative-therapy still OPEN (URGENT Day-21 regression, Day-42 final 09-15 — investigate_regression on 09-05). Step 10 NO-OP. **Upcoming**: 09-01 W40 Day-21; 09-04 stub-pilot Day-42 (6 URLs) + W-PSYCH-BLR-20260821; 09-05 Core Update settle → unblock YMYL + narrative-therapy investigate_regression; 09-08 W30-W33 Day-42 finals + W41 Day-21; 09-11 W36/W37 Day-42; 09-15 W38 Day-42; 09-16 W39 Day-42.
+
+---
+
 | Watch ID | URL | Query | Type | Opened | Action that triggered watch | Expected outcome | Check on | Status |
 |---|---|---|---|---|---|---|---|---|
 | W1 | /illnesses/dementia | dementia treatment | YMYL_recovery | 2026-06-09 | Sprint A (commit `270cf0c`) | impressions +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🟡 PARTIAL (position-only).** GSC impr 84→75 (−10.7%), pos 7.5→**4.9** (+2.6). Position improved but query base collapsed (33 vs 280-420). Target MISSED. AP9 instance. Next: content-depth recovery in #18 batch (07-02). Log: `memory/experiments/closed-W1-2026-06-28.md` |
@@ -1144,3 +1149,13 @@ tirzah-johnson load=9 (over cap; brief-specified override). tejal-jaiswal load=7
 | W-COUN-BLR-20260821 | /doctors/counsellors-in-bangalore | ship_REFRESH_brief | 2026-08-21 | 2026-09-04 | open | COUNSELLORS-BANGALORE-THIN-01: +900w, 4 new H2s, typos fixed, KW in para1. Watch: 'counselling bangalore' pos 51 recovery, 'best counsellors bangalore'. Commit 7163c6793b3c. |
 
 **2026-08-22 T10 Strategist stamp:** Clean signal day — 0 new watches opened (no content shipped today). ✅ psychology-of-love CTR_DROP CONFIRMED by GSC (from 08-21 validation run) — already in BACKLOG as PSYCHOLOGY-OF-LOVE-CTR-DROP-01 (score 24). ✅ W30-W33 Day-21 confirmed evaluated 2026-08-18 — no observation pipeline gap. W30-W33 Day-42 finals due 2026-09-08. **⚡ IMMINENT — W39 yoga-for-anxiety Day-42 final fires 2026-08-26 (4 DAYS). Same day as August Core Update. Strategist must review W39 verdict FIRST on 08-26 run before assessing Core Update signals. Schema CLEAR (PR #23 live 08-17). CWV-DOCTORS-PAGE-01 dev fix deadline was 08-26 — confirm with dev team.** ⚡ 2026-08-23 TOMORROW: Meta-Learner t11+t17+t9 proposals apply (FIRST ACTION of T10 run). ⚡ 2026-08-25: drug-addiction/intellectual-disability/signs-of-adhd/narrative-therapy Day-21 midpoints (T4 auto-evaluates). No WATCH status changes today. Existing watch summary from 2026-08-20 stamp remains current.
+
+**2026-08-25 T10 Strategist stamp:** 0 new watches opened (no content shipped today). ⚠️ **W38 STATUS UPDATE — URGENT_MIDPOINT_REGRESSION**: /treatments/narrative-therapy pos 9.3→22.7 (+13.4), "narrative therapy india" pos 7→59.5, impr -64.7%, qdf_flag=true (T4 observation-2026-08-25.txt alert). QDF boost from 08-04 ship likely expiring. Core Update starts 08-26 — confound makes investigate_regression unreliable. YMYL page — flagged_for_human. W38 Day-42 final remains 2026-09-15. ✅ **W39 Day-21 midpoint fires TOMORROW 2026-08-26** (T4 auto-evaluates; ALSO = Core Update Day 1 — T12 must note Core Update confound on any W39 verdict). Day-42 final = **2026-09-16** (NOT 08-26). ✅ **Drug-addiction-symptoms / intellectual-disability-symptoms / signs-of-adhd Day-21: PASS** (T4 confirmed, all on track per P12). ✅ **W-PSYCH-BLR-20260821 + W-COUN-BLR-20260821**: No status change. Check date remains 2026-09-04. ⚡ **UPCOMING (2026-08-28)**: /blogs/what-is-de-addiction Day-42 final (T4 auto). ⚡ **2026-09-01**: W40 Day-21 midpoints (5 blogs from 08-11). ⚡ **2026-09-08**: W30-W33 Day-42 finals — NOTE: all 5 T12 08-23 interim verdicts MEASUREMENT-INVALID (T20 gsc-pull.py bug). T12 must re-issue on corrected data. ⚡ **2026-09-11**: W36/W37 Day-42 finals (schema fix PR #23 recovery path). ⚡ **2026-09-15**: W38 Day-42 final. Core Update confound applies to all verdicts through ~09-05.
+
+---
+**2026-08-26 T10 update**
+- ⚠️ CORE UPDATE ACTIVE (2026-08-26→~09-05): All watch verdicts fired during this window should carry Core Update confound caveat. Do not close watches as FAILED purely on position drops observed 08-26→09-05.
+- W39 yoga-for-anxiety: Day-42 FINAL date = **2026-09-16** (canonical correction; prior BRAIN.md/WATCH.md entries stating 08-26 were wrong). Day-21 midpoint fired today (T4 auto-evaluated).
+- W-PSYCH-BLR-20260821 (/doctors/psychologists-in-bangalore): no change. Rank drop 08-25 (pos 13→100) preceded by brief ship 08-21 — Core Update now active as confound. Check date 09-04 stands.
+- W38 narrative-therapy: OPEN, YMYL. Kushal decision pending (a/b/c from T11 flag). Earliest next action 09-05.
+

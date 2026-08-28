@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-28",
+  "week": 11,
+  "baseline": "2026-08-20",
+  "domains": {
+    "amahahealth.com": 1146,
+    "yourdost.com": 133,
+    "betterhelp.com": 16266,
+    "manastha.com": 118,
+    "mfine.co": 15830,
+    "mindtalk.in": 2286
+  },
+  "gaps_count": 129,
+  "top3_gaps": [
+    "therapy near me",
+    "overthinking",
+    "peniaphobia"
+  ],
+  "new_gaps": [
+    "therapy near me",
+    "overthinking",
+    "peniaphobia",
+    "free therapist online",
+    "therapist online"
+  ]
+}
