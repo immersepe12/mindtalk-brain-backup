@@ -3,6 +3,27 @@
 **Owner:** Strategist (Task 10) writes; Executor (Task 11) reads + marks complete.
 **Format:** One action per row. Highest priority at top.
 
+> ### ⚠️ FACTUAL CORRECTION — 2026-08-28 evening (T20 Auto-Remediation, Rule 1)
+> **There is no confirmed "August 2026 Google Core Update."** The T10 stamps below say *"Core Update
+> STILL LIVE (Day 3, 08-26→~09-05)"* and *"Core Update LIVE TODAY."* Verified two independent ways
+> tonight: today's own `logs/gsc-validation-2026-08-28.txt` Step 7 states Google has confirmed no
+> August 2026 update, the Search Status Dashboard shows no ranking incident, and it explicitly marks
+> the 08-27 "confirmed" claim **INCORRECT**; an independent web search agrees — **the last confirmed
+> ranking change is the June 2026 spam update, which ended 26 June.**
+>
+> **The ALGO_WATCH / YMYL hold STAYS ON. Only the label is wrong, not the caution.** The hold's real
+> basis — restated here so no future run reads "the reason was false" and lifts it — is
+> **(a)** documented third-party SERP volatility in the healthcare / mental-health vertical, and
+> **(b)** the 5 entries in `confirmed-drops.json`, all `algo_watch=True`. Lifting the hold would
+> unpark the YMYL refresh queue, W38 narrative-therapy, CHATGPT-AEO-FAQ-EXPANSION-01 and
+> PTSD-CLUSTER-DROP-01 in one move — that reallocation is **T10's / Kushal's call, not T20's**, so
+> T20 has deliberately not touched it.
+>
+> **⚡ Consequence T10 must resolve: the ~09-05 date now has no anchor.** Every parked item is
+> scheduled off "Core Update 08-26→~09-05," but 08-26 was the start date of an update that was never
+> confirmed; the volatility third parties actually documented ran **Aug 1–3 and mid-August**. Once the
+> label goes, 09-05 is arbitrary. **T10 to re-set the settle date on real evidence.**
+
 
 **Updated 2026-08-28 T10 (Strategist 8 PM IST — FRIDAY. 🔴 Core Update STILL LIVE (Day 3, 08-26→~09-05) — YMYL refresh queue ON HOLD. ✅ de-addiction Day-42 RESOLVED (P12 confirmation #8: pos 9.3→8.1, +87% impr, +100% clicks). ✅ rank-summary 08-28: 0 CRITICAL/MAJOR; 1 MODERATE (psychologists-in-mysore pos 7→11 — Core Update confound, no action). 9 AP8 noise quarantines. ✅ Step 10: NO-OP — t10-stale + t12-confound-guard + t9-india-vol Apply-on 2026-08-30 (still FUTURE, 2 days). 🚨 backend fail rate 13.7% (4th consecutive rise, T15 08-26) — engineering escalation required before ads restart. 🚨 form_submitted −52% (115→55) — Core Update pre-volatility likely confound; investigate after 09-05. 🚨 PTSD Treatment −61.3% impr / −53 positions (weekly 08-24, Aug 15-21 data) — queue investigate_regression for 09-05 as PTSD-CLUSTER-DROP-01. ⚡ 09-01: W40 Day-21. ⚡ 09-04: stub-pilot mindful-minutes Day-42 finals (6 URLs) + W-PSYCH-BLR-20260821 check. ⚡ 09-05: Core Update settle — unblock YMYL + fire PTSD-CLUSTER-DROP-01 + narrative-therapy investigate_regression. ⚡ 09-08: W30-W33 Day-42 finals + W41 Day-21. ⚡ 09-11: W36/W37 Day-42. ⚡ 09-15: W38 Day-42. ⚡ 09-16: W39 Day-42. TOP 5 NEXT 72h: (1) DOCTORS-LISTINGS-DEAD-LINKS-01 [dev escalation — 10 broken Tier A anchors]; (2) T9-DOCTORS-QUEUE-MISLABEL-01 [dev fix — 43 Tier A briefs blocked, 73 NEW briefs queued]; (3) BACKEND-FAIL-ENGINEERING-01 [flag Kushal — 13.7% fail rate, ads restart blocked]; (4) T9-NON-YMYL-PIPELINE-CONTINUE-01 [continue Tier A city page auto-ship]; (5) PTSD-CLUSTER-DROP-01 [queue now, investigate 09-05]. Full decision log: brain/memory/decisions/2026-08-28.md)**
 **Updated 2026-08-26 T10 (Strategist 8 PM IST — WEDNESDAY. 🔴 Core Update LIVE TODAY (08-26→~09-05) — YMYL refresh queue ON HOLD (T11 applied 4:30 PM IST). 🆕 T20 HEADLINE ESCALATION: DOCTORS-LISTINGS-DEAD-LINKS-01 — 10 broken /doctors-listings/* Tier A booking anchors on 6 T9-shipped live pages (08-25); dev spec ready at reports/dev-handoff-2026-08-26-dead-links.md; T20 cannot fix (src off-limits); escalate to dev IMMEDIATELY. ✅ psychologists-in-bangalore CRITICAL pos 13→100 — BRIEF PUBLISHED 08-21 (commit:7163c6793b3c); AP7 hygiene applied; W-PSYCH-BLR-20260821 active, check 09-04; Core Update = confound, no new action. ✅ separation-anxiety MODERATE = GSC NOISE (IMPROVING). ✅ T5-REFILL NO LONGER CRITICAL — T20 fixed intent_tier YAML placement bug in 54/74 briefs → 11 gate-passing blog briefs available, floor 6 OK. ✅ W38 narrative-therapy URGENT (pos 9.3→22.7 Day-21, qdf_flag=true, YMYL) — T11 flagged Kushal (a/b/c); YMYL HOLD applies; do NOT queue investigate_regression until 09-05 + Kushal decision. ✅ W39 yoga-for-anxiety Day-21 fired today (T4 auto); Day-42 CORRECT date = 2026-09-16 (NOT 08-26 as misstated in prior entries). ✅ Step 10: t10-stale + t12-confound-guard + t9-india-vol = Apply-on 2026-08-30 FUTURE SKIP. t16+t5-floor-miss = MISMATCH-SKIP #18+ (permanently superseded by t20/t21; documented in applied-history.md). 🚨 STALE ALERT: t16 + t5-floor-miss are 24 days past Apply-on 2026-08-02 with no resolution — flagged to Slack. ⚡ 08-28: de-addiction Day-42 final (T4 auto). ⚡ 09-01: W40 Day-21. ⚡ 09-04: W-PSYCH-BLR + W-COUN-BLR 14d checks. ⚡ 09-05: Core Update likely settled — unblock YMYL queue + fire narrative-therapy investigate_regression. ⚡ 09-08: W30-W33 Day-42 finals (MEASUREMENT-INVALID — T12 re-issue on corrected data) + W41 Day-21. ⚡ 09-11: W36/W37 Day-42 finals (schema recovery). ⚡ 09-15: W38 Day-42. ⚡ 09-16: W39 Day-42 (NOT 08-26). TOP 5 NEXT 72h: (1) DOCTORS-LISTINGS-DEAD-LINKS-01 [flag_for_human IMMEDIATE — 10 Tier A broken anchors, score 112]; (2) CORE-UPDATE-YMYL-HOLD-01 [ACTIVE — all YMYL HOLD through ~09-05]; (3) T9-NON-YMYL-PIPELINE-CONTINUE-01 [11 gate-passing briefs, P12 continues, floor 6 OK]; (4) CHATGPT-AEO-FAQ-EXPANSION-01 [HOLD to 09-05, P5 MAJOR confirmed]; (5) NARRATIVE-THERAPY-INVESTIGATE-01 [HOLD 09-05 + Kushal a/b/c]. Full decision log: brain/memory/decisions/2026-08-26.md)**
@@ -43,11 +64,11 @@
 
 | ID | Action type | Target | Why | Impact estimate | Confidence | Risk | When ready |
 |---|---|---|---|---|---|---|---|
-| 🚨 T9-SILENT-DEATH-01 | flag_for_human | mindtalk-auto-ship-new-blogs (T9 scheduled task runtime) | **🆕 2026-08-26 T20 — NEW, VERIFIED.** T9 fired on schedule at **15:07 IST today** (scheduler `lastRunAt 2026-08-26T09:37:11Z`) and **produced nothing**: no `logs/auto-ship-2026-08-26.txt` (every prior run wrote one), no tracking-db write, no Slack archive, and **0 of the 11 shippable briefs went live** (Verifier curled all 16 `/blogs/` brief slugs — every one 404). Session transcript `local_3d91a081-244e-43af-8721-e63e76a1a7ea` shows **4 tool calls — bash, ToolSearch ×2, vercel `list_teams` — then termination with no result line.** This is a silent early death at startup, NOT a "0 candidates" skip and NOT a cap block: queue = **11 shippable briefs (9 Tier A / 2 Tier B)**, weekly cap 6/20 used, `/blogs/` cluster slot open. *(16 `/blogs/` briefs pass the raw intent_tier+404 gate; 5 carry an explicit `⛔ DO NOT SHIP` / NEEDS_HUMAN hold — 4 of them written by T20 itself, 2 today — so true shippable is 11. This confirms BACKLOG's existing "11 gate-passing" figure; T20's first count of 16 was wrong and was corrected by the Verifier.)* **This is the first T9 run after T20 unblocked the brief queue this morning — the pipeline was finally loaded and the ship step did nothing.** T20 deliberately did NOT ship in T9's place: Core Update Day 1 (08-26) is live and T9's next scheduled run is Friday 08-28, so duplicating it risks unattributable movement for no time saved. **Ask: check the T9 task's tool-permission / MCP init path — the last call before death was a Vercel MCP call, which suggests the run died during tool setup rather than during content work.** If 08-28 also produces no artifact, this is systemic and the ship pipeline is down. | 16 Tier A/B briefs (9A/7B) blocked from shipping. At P12 (≥80% page-1 in 42d) this is the entire Q3 non-YMYL content pipeline stalled. | H | L (diagnostic only — no content change requested) | **Check before Friday 2026-08-28 15:00 IST T9 run. T20 will re-verify 08-28 and re-escalate if the artifact is missing again.** |
+| ~~T9-SILENT-DEATH-01~~ ✅ COMPLETED 2026-08-28 T11 — Slack delivered (ts: 1787915469.970299, #seo-workflow-mindtalk). Kushal notified: index.lock 42h stale (FUSE EPERM), git locked, T9 silently died 2 consecutive runs (08-26+08-28), 11 shippable briefs unshipped. Action required: rm .git/index.lock + check FUSE mount health. | flag_for_human | mindtalk-auto-ship-new-blogs (T9 scheduled task runtime) | **🆕 2026-08-26 T20 — NEW, VERIFIED.** T9 fired on schedule at **15:07 IST today** (scheduler `lastRunAt 2026-08-26T09:37:11Z`) and **produced nothing**: no `logs/auto-ship-2026-08-26.txt` (every prior run wrote one), no tracking-db write, no Slack archive, and **0 of the 11 shippable briefs went live** (Verifier curled all 16 `/blogs/` brief slugs — every one 404). Session transcript `local_3d91a081-244e-43af-8721-e63e76a1a7ea` shows **4 tool calls — bash, ToolSearch ×2, vercel `list_teams` — then termination with no result line.** This is a silent early death at startup, NOT a "0 candidates" skip and NOT a cap block: queue = **11 shippable briefs (9 Tier A / 2 Tier B)**, weekly cap 6/20 used, `/blogs/` cluster slot open. *(16 `/blogs/` briefs pass the raw intent_tier+404 gate; 5 carry an explicit `⛔ DO NOT SHIP` / NEEDS_HUMAN hold — 4 of them written by T20 itself, 2 today — so true shippable is 11. This confirms BACKLOG's existing "11 gate-passing" figure; T20's first count of 16 was wrong and was corrected by the Verifier.)* **This is the first T9 run after T20 unblocked the brief queue this morning — the pipeline was finally loaded and the ship step did nothing.** T20 deliberately did NOT ship in T9's place: Core Update Day 1 (08-26) is live and T9's next scheduled run is Friday 08-28, so duplicating it risks unattributable movement for no time saved. **Ask: check the T9 task's tool-permission / MCP init path — the last call before death was a Vercel MCP call, which suggests the run died during tool setup rather than during content work.** If 08-28 also produces no artifact, this is systemic and the ship pipeline is down. | 16 Tier A/B briefs (9A/7B) blocked from shipping. At P12 (≥80% page-1 in 42d) this is the entire Q3 non-YMYL content pipeline stalled. | H | L (diagnostic only — no content change requested) | **Check before Friday 2026-08-28 15:00 IST T9 run. T20 will re-verify 08-28 and re-escalate if the artifact is missing again.** |
 | ~~GSC-OAUTH-EXPIRED-9WK~~ ❌ **CLOSED AS FALSE POSITIVE by T20 2026-08-26** | ~~flag_for_human~~ | GSC credentials | **T14 listed this as recommended action #1 tonight ("URGENT — Week 9 of monitoring blind spot, renew GSC credentials immediately"). It is not real.** T20 ran a live GSC pull at 20:5x IST tonight: `PYTHONPATH=.pip-packages python3 scripts/gsc-pull.py --url /illnesses/anxiety` → **exit 0, real data returned (clicks +0%, impressions +16%), `gsc-data/` written.** Corroborating: `gsc-token.pickle` was refreshed **today at 09:52**; T2's 08-25 validator run pulled live GSC rows for 2 URLs and wrote two 17KB `gsc-data/*.json` payloads. **The GSC API is authenticating and returning data.** Whatever T14 is probing (likely an indexation/URL-Inspection scope, which is a different API surface and permission) is not "OAuth expired", and framing it that way has sent Kushal a false credential request for 9 consecutive weeks. **Action for T14, not Kushal: name the exact API call that fails and report THAT, instead of inferring a blanket auth failure.** → filed to Meta-Learner (T13). | Removes a 9-week-old false credential escalation from Kushal's queue | H | L | **CLOSED — no human action. T13 to fix T14's probe.** |
 | ~~T9-DOCTORS-QUEUE-MISLABEL-FIX-01~~ ✅ COMPLETED 2026-08-26 T11 — Slack delivered (ts: 1787742524.651529). | ~~flag_for_human~~ | T9 cap logic / dev fix | **🆕 2026-08-25 #1 — Score 37.5 (Tier A ×1.5).** 43 Tier A /doctors/ briefs confirmed cap-blocked under /blogs/ cluster cap (T20 verified, all 43 curl-confirmed HTTP 404 = genuinely unshipped). `logs/auto-ship-2026-08-21.txt` shows T9 classifies all candidates as `/blogs/` and blocks them at 7/6. Dev must fix T9 cap-routing regex so /doctors/ candidates count against /doctors/ cap (currently uncapped — they just need to flow through). This is the **largest single unexploited Q3 booking play** — 43 Tier A doctor pages = est. +100-200 Tier A clicks/wk at P12 ≥80% page-1 rate. Flagged to Kushal via Slack. | +100-200 Tier A clicks/wk once doctors pipeline unblocked (P12 analog, 42d horizon) | H | L | **NOW — dev fix to T9 cap routing; then T9 next run will auto-ship** |
 | ~~W38-NARRATIVE-THERAPY-URGENT-01~~ ✅ COMPLETED 2026-08-26 T11 — Slack delivered (ts: 1787742538.920549). Awaiting Kushal a/b/c decision. | ~~flag_for_human~~ | /treatments/narrative-therapy | **🆕 2026-08-25 #2 — Score 14.4 (Tier B ×1.0).** YMYL treatment page: pos 9.3→22.7 (+13.4) at Day-21 midpoint. "narrative therapy india" dropped 7→59.5. Impr -64.7%. qdf_flag=true (QDF boost from 08-04 ship likely expiring). Alert: `alerts/URGENT-midpoint-treatments-narrative-therapy-2026-08-25.txt`. Core Update starts 08-26 — confound means investigate_regression result will be unreliable until 09-05. AP3: YMYL page, no auto-ship. MDX confirmed exists (commit 097ff9c9). AP4: 21 days since ship (clear). **Action: Kushal to decide — (a) Wait to 09-05 for investigate_regression with clean signal; (b) Immediate investigate_regression accepting Core Update confound; (c) Review T11 for emergency refresh (AP3 sign-off required).** W38 Day-42 final 2026-09-15 still actionable if investigation starts 09-05. | Protect +15-30 Tier B clicks/wk on treatment page (currently at risk of permanent ranking loss) | H | M | **Immediate human triage — before Core Update confounds signal. investigate_regression recommended ≥09-05.** |
-| CORE-UPDATE-YMYL-HOLD-01 | flag_for_human | YMYL refresh pipeline | **🆕 2026-08-25 #3 — Score 9.0.** Core Update starts 2026-08-26. Recommendation: hold all new YMYL refresh shipments (T11) and sprint creation until update settles (~09-05). Rationale: any refresh shipped during Core Update window produces unattributable rank movement (cannot distinguish content effect from update effect). Existing in-flight watches (W36, W37, W38) continue to observe. Non-YMYL blogs (T9) may continue on normal cadence. This is a risk-cap action per GOALS.md risk table. | Prevents ~3-5 misattributed refresh decisions during Core Update volatility | H | L | **08-26 (tomorrow) — T11 should check this flag before shipping any YMYL refreshes** |
+| ~~CORE-UPDATE-YMYL-HOLD-01~~ ✅ COMPLETED 2026-08-28 T11 — Slack delivered (ts: 1787915486.379879, #seo-workflow-mindtalk). Kushal notified: Core Update Day 3 active, YMYL hold through ~09-05, unblock plan posted. | flag_for_human | YMYL refresh pipeline | **🆕 2026-08-25 #3 — Score 9.0.** Core Update starts 2026-08-26. Recommendation: hold all new YMYL refresh shipments (T11) and sprint creation until update settles (~09-05). Rationale: any refresh shipped during Core Update window produces unattributable rank movement (cannot distinguish content effect from update effect). Existing in-flight watches (W36, W37, W38) continue to observe. Non-YMYL blogs (T9) may continue on normal cadence. This is a risk-cap action per GOALS.md risk table. | Prevents ~3-5 misattributed refresh decisions during Core Update volatility | H | L | **08-26 (tomorrow) — T11 should check this flag before shipping any YMYL refreshes** |
 | GSC-MEASUREMENT-INTEGRITY-01 | flag_for_human | scripts/gsc-pull.py (dev fix, outside T10 write scope) | **Carry 2026-08-25 — Score 9.0.** First escalated 08-23. Bug: `--url` flag passed full URL instead of path → double-prefix (`https://www.mindtalk.inhttps://mindtalk.in/...`) → 0 GSC rows. Also: rowLimit 25/50 cap produces non-representative samples. All T12 08-23 interim verdicts (W30/W31/W32/W33/W39) are MEASUREMENT-INVALID. W30-W33 Day-42 finals due 09-08 — T12 needs corrected data by then. T20 cannot edit scripts/*.py (hard constraint). Options posted to Kushal: (A) Add `if url.startswith('http'): url = urlparse(url).path` guard in gsc-pull.py; (B) Add --path flag as separate parameter; (C) T10/T12 always strip prefix before calling script. | Restores T12 measurement validity for W30-W33 Day-42 finals (due 09-08). 5 watches currently unresolvable. | H | L | **Kushal decision + dev fix required before 2026-09-01** |
 | CHATGPT-AEO-SPRINT-REVIEW-01 | review_sprint_prompt | prompts/auto-drafted-sprint-chatgpt-aeo-2026-08-25.md | **🆕 2026-08-25 T11 AUTO-DRAFT** — Sprint prompt for AI-citable FAQ expansion on top 10 commercial pages (CBT/anxiety/depression/OCD/ADHD/psychiatrists-in-bangalore). P5 MAJOR: chatgpt.com = confirmed AI booking channel. Draft ready for Kushal review. **⚠️ DO NOT FIRE during Core Update (08-26+). Review after 09-05.** AP3 clinical sign-offs required for all YMYL pages before fire. Full spec at prompts/auto-drafted-sprint-chatgpt-aeo-2026-08-25.md | +50-120 AI book clicks/wk if citations expand 1→5 commercial queries. P12 analog via T17 AI citation sweep. | H | M (YMYL sign-offs required) | **24h preview — Kushal review + sign-off after 09-05 Core Update settles** |
 | ~~PSYCHOLOGISTS-BANGALORE-REFRESH-01~~ [COMPLETE 2026-08-21 commit:7163c6793b3c] | ship_REFRESH_brief | /doctors/psychologists-in-bangalore | **2026-08-18 NEW confirmed drop**: clicks -19%, impressions -15%; queries 'counselling psychologist near me' (Δ+5.1) + 'psychologists in bangalore' (Δ+6.3); thin 346-word page; also dropping 'adhd therapist near me' (44→71.7), 'anxiety therapist near me' (62→83.9). Brief created by T3 today (08-18). MDX confirmed ✅. P6 ok (last_mod Apr 14). Tier A ×1.5 doctor booking page. No AP violations. Score: 300. | +25-50 clicks/wk on Tier A doctor page (est. ~3% CTR on confirmed query cluster) | H | L | **NOW — T11 to pick up brief: briefs/psychologists-in-bangalore-brief.md** |
@@ -511,3 +532,216 @@ Full evidence: `brain/memory/remediation-log.md` § 2026-08-24. Verifier sub-age
 | T17-OVERTHINKING-WATCH | watch | Monitor "overthinking" (33.1K) indexation — page shipped 08-18 | Mindtalk shipped `/blogs/how-to-stop-overthinking` on 2026-08-18. Amaha is at pos=3. Check GSC for indexation + first position signal at Day-14 (2026-09-01). Day-42 check: 2026-09-29. | 🟡 MEDIUM |
 | T17-PENIAPHOBIA-WATCH | watch | Monitor "peniaphobia" (12.1K) indexation — page shipped 08-18 | Mindtalk shipped `/blogs/fear-of-poverty-peniaphobia` on 2026-08-18. Amaha is at pos=2. Check GSC at Day-14 (2026-09-01). | 🟡 MEDIUM |
 | T17-FREE-THERAPIST-HUB | draft_sprint_prompt | "free therapist online" cluster (5.4K) — YourDOST pos=9 | YourDOST owns the free/online counsellor cluster: "online counsellor" pos=1 (3.6K), "therapist online" pos=6 (4.4K), "therapy online" pos=8 (4.4K), "free therapist online" pos=9 (5.4K). Combined ~18K/mo. Mindtalk absent from all. Consider a "free mental health resources" or "free online counselling" page + internal links from app free tools. | 🟡 MEDIUM |
+
+---
+
+## 🔧 T20 AUTO-REMEDIATION — 2026-08-28 (root cause: T9 is producing and losing it)
+
+### 🔴 NEW P0 — `T9-UNDEPLOYED-BATCH-2026-08-26` (supersedes the "silent death" framing)
+T9 fired Wed 08-26, **authored 7 complete blog pages**, and died before `git commit`. All 7 sit
+untracked in the local checkout; all 7 are **404 in production**. All 7 pass the full Verifier gate
+with **zero vetoes** (body 1,085–1,455w, 4–8 internal links, 5 FAQs, title ≤64, desc ≤159).
+Pages: `therapy-cost-in-india` · `psychiatrist-online-consultation-india` ·
+`online-psychiatrist-consultation-in-tamil` · `online-therapy-for-indians-in-usa` ·
+`couple-therapy-cost-in-bangalore` · `therapy-after-a-breakup` · `acrophobia-treatment-fear-of-heights`.
+**Action: dev commit+push (~15 min). Ship all 7 ATOMICALLY** — 3 intra-batch forward links.
+**One reviewer must be swapped first**: `psychiatrist-online-consultation-india` carries
+`santanu-tripathy`, which resolves to nothing — no `src/content/doctors/santanu-tripathy.mdx` among
+the 59 doctor records, and `https://www.mindtalk.in/doctors/santanu-tripathy` **301s to the generic
+`/doctors` index** (controls `tirzah-johnson` / `dr-sneha` / `krishna-k-r` all return 200 real
+profiles). The live `/blogs/drug-addiction-symptoms` using it emits **zero** `reviewedBy` and **zero**
+`Person` nodes → swap to `dr-sneha`.
+Spec: `reports/dev-handoff-2026-08-28-t9-undeployed-batch.md`.
+
+> ⚠️ **CORRECTED 2026-08-28 evening (Verifier U3) — "Brief already corrected by T20" was misleading.**
+> Only the **brief** was corrected. **`src/content/blogs/psychiatrist-online-consultation-india.mdx`
+> — the file that will actually ship — still carries `reviewer: "santanu-tripathy"`.** T20 cannot
+> touch `src/**`, so this is the dev's one-line edit, specified in handoff §2. Combined with the
+> "ship all 7 ATOMICALLY" instruction, committing the batch as-is would reproduce the exact E-E-A-T
+> defect on a Tier A commercial page. **MDX still needs the one-line swap — see handoff §2.**
+
+### 🔴 P1 — `DOCTORS-LISTINGS-DEAD-LINKS-01` — DAY 3, re-verified, unchanged
+All 9 `/doctors-listings/*` anchors still 404. Verifier re-derived the census independently:
+**10 dead anchors on 6 live pages**, matching the 08-26 handoff exactly. Blanket
+`/doctors-listings/` → `/doctors/` rewrite fixes 7 of 10; 3 need the named substitutions
+(`/doctors/couple-therapists-in-bangalore`, `/doctors/marriage-counsellors-in-bangalore`,
+`/doctors/online-therapists-india` are themselves 404).
+Spec unchanged: `reports/dev-handoff-2026-08-26-dead-links.md`.
+
+### ✅ CLOSED AS FALSE POSITIVE — remove from queue
+- **`form_submitted −52% CRITICAL crash`** — Mixpanel 4011856, unique users, last 7d: **156**
+  (vs the 55 that triggered the alert, vs a 115 baseline). Recovered and at series high.
+- **`BACKEND-FAIL-ENGINEERING-01` (13.7%)** — recomputed on T15's own formula, last 7d:
+  16/(156+92+16) = **6.06%**. Halved. Net leads 113 → **248 (+119%)**. **Does not block an ads restart.**
+- **`PTSD-CLUSTER-DROP-01` ("−61.3% impr / −53 positions, SEVERE")** — GSC Aug 1–7 vs Aug 15–21:
+  PTSD cluster **229 → 550 impr (+140.2%)**; head term `cptsd test` pos **10.3 → 8.7 (improved)**;
+  the exact `ptsd treatment` query has a **2–6 impression** base at pos **2.2 → 2.5**.
+  **→ CANCEL the 09-05 `investigate_regression`.**
+- **`misses: executor(Fri)`** — `nextRunAt` 16:35 IST, evaluated at 15:55 IST. Third recurrence of
+  `F1 T16-FUTURE-RUN-MISLABELLED-AS-MISSED-01` (filed 08-26, unfixed).
+- **`misses: auto-remediation(Fri)`** — T16 evaluated 15:55 IST; T20 ran 16:01 IST.
+
+### ✅ AUTO-FIXED
+- **Brain backup stall cleared** — `index.lock` (42h stale) archived; commit **`6a746b4`** (36 files,
+  5,506 insertions) **pushed**, remote confirmed. Durable pattern found: renaming alone does NOT hold
+  (git recreates the lock on the next *read* and cannot unlink it) — the lock must be cleared **in the
+  same invocation as the git write**.
+- **Broken reviewer reference** corrected in `NEW-psychiatrist-online-consultation-india-brief.md`.
+- **7 briefs annotated** `📦 MDX ALREADY AUTHORED — AWAITING COMMIT/PUSH` (T9 must not re-author).
+
+### 📋 FILED TO T13 (meta-learner)
+`F6 T15-MULTI-WEEK-GAP-LABELLED-WOW-01` (T15 skipped 08-12 + 08-19, then called a 21-day delta "WoW"
+— source of both false P0s) · `F7 WEEKLY-REPORT-NO-IMPRESSION-FLOOR-01` (suppress % deltas below
+~50 impr/wk) · `F8 VERIFIER-BYTE-VS-CHAR-AND-FRONTMATTER-WORDCOUNT-01` (`wc -c` = bytes → false
+VETOs on `—`/`₹`; `wc -w` on whole MDX counts frontmatter → false PASSes) ·
+`F9 REVIEWER-ASSIGNER-ACCEPTS-NONEXISTENT-SLUG-01`.
+
+### 🟢 QUEUE HEALTH
+**11 shippable `/blogs/` briefs (9 Tier A / 2 Tier B)** vs floor 6 — HEALTHY, no refill fired.
+Two independent counts agreed. 7 of the 11 already have authored MDX (above); 4 unauthored:
+`online-counselling-in-hindi`, `online-counselling-in-malayalam`, `online-therapy-in-telugu`,
+`rtms-treatment-cost-in-india`. **Velocity is not supply-constrained — the ship stage is the bottleneck.**
+
+### ⚠️ CORRECTION FOR T10/T12 (not escalated)
+Today's `gsc-validation-2026-08-28` concludes the "August 2026 Core Update" is **NOT officially
+confirmed by Google** and explicitly marks the 08-27 "confirmed" claim as incorrect; the T10 header
+asserts "Core Update STILL LIVE (Day 3)". Both are currently held as true in the brain. The
+disagreement drives a conservative YMYL hold, so leaving it is low-risk — but it should be reconciled.
+**→ RESOLVED by the 2026-08-28 evening run — see the correction banner at the top of this file.**
+
+---
+
+## 🔧 T20 AUTO-REMEDIATION — 2026-08-28 (evening, 20:45 IST — second run of the day)
+
+Scope note: a T20 run already fired at 16:01 IST today. This run **re-verified its two escalations
+against live production** rather than carrying them forward, and audited the morning run's own
+auto-fixes. Verifier sub-agent: **5 UPHELD · 3 CORRECTION · 1 VETO · 5 unprompted findings — all
+honoured**, including two that overturned conclusions of mine. Full evidence:
+`brain/memory/remediation-log.md` § 2026-08-28 (evening).
+
+### 🔴 P0 — `T9-UNDEPLOYED-BATCH-2026-08-26` — RE-VERIFIED, STILL DOWN (day 3)
+All 7 pages re-curled tonight on `www.mindtalk.in`, **with and without `-L`: 404 on both, all seven.**
+All 7 still `??` untracked in the local checkout; repo HEAD unchanged at `feb506b`. Body word counts
+re-measured with frontmatter stripped: **1,124–1,454**. Nothing has moved in the ~5 hours since the
+morning escalation. Spec: `reports/dev-handoff-2026-08-28-t9-undeployed-batch.md`.
+**⚠️ See the U3 correction above — the shipping MDX still carries the bad reviewer slug.**
+
+### 🔴 P1 — `DOCTORS-LISTINGS-DEAD-LINKS-01` — RE-VERIFIED, UNCHANGED (day 3)
+The Verifier did not sample: it pulled the sitemap (**842 URLs, 297 under `/blogs/`**) and curled
+**every one**. Result — exactly **6 affected pages, 10 anchor instances, 9 unique targets**
+(`therapists-in-bangalore` appears on 2 pages), per-page counts identical to the 08-26 census. All 9
+targets 404 with and without `-L`. **6 of 9 have a `/doctors/` 200 equivalent**; `online-therapists-india`,
+`couple-therapists-in-bangalore`, `marriage-counsellors-in-bangalore` do not — so a blanket prefix
+rewrite fixes **7 of 10** and leaves 3 needing named substitutes. Spec corrected tonight (see U2).
+
+### 🆕 P1 — `REVIEWER-NEVER-ASSIGNED-01` — 52 live blog pages carry no reviewer at all
+Found while chasing a single bad slug; **an order of magnitude larger than the thing that surfaced it.**
+Full-corpus census (all 297 live `/blogs/` pages, not a sample): **57 emit zero `reviewedBy`**, of
+which **12 emit zero `reviewedBy` AND zero `Person`**. Of the 57, **5** are the broken-slug case below;
+the other **52 have no `reviewer:` field at all** — a different defect, and an E-E-A-T authorship gap
+across ~18% of the blog corpus while the vertical is visibly volatile. Needs a content/dev decision on
+assignment + a template guard; T20 cannot fix (`src/**`).
+
+### 🆕 P2 — `REVIEWER-SLUG-UNRESOLVED-01` — 5 live pages, mechanism fully established
+`santanu-tripathy` resolves to nothing: **no `src/content/doctors/santanu-tripathy.mdx`** among the 59
+doctor records, and `https://www.mindtalk.in/doctors/santanu-tripathy` **301s to the generic `/doctors`
+index** (controls `tirzah-johnson` / `dr-sneha` / `krishna-k-r` return 200 real profiles). There are
+exactly 6 local MDX with that reviewer; **5 are live and all 5 emit `reviewedBy` = 0 — 100% correlation,
+no counterexample.** Affected: `conduct-disorder-signs-causes-and-treatment`, `detachment-disorder`,
+`drug-addiction-symptoms`, `how-adhd-manifests-differently-in-boys-and-girls`,
+`overcoming-adhd-paralysis-an-outline`. Upstream root cause: `logs/reviewer-load-state.json` lists
+`santanu-tripathy` with `assigned_count: 2` while `brain/memory/reviewer-mapping.md` has no such
+reviewer — **the auto-assigner draws from a registry containing a reviewer with no doctor page.**
+
+### ✅ CLOSED AS FALSE POSITIVE
+- **`T17-CHROME-STALL-08-28`** (logged 🔴 CRITICAL / `flag_for_human`, "5th consecutive Thursday
+  stall") — **closed for the second time.** Two grounds. (1) **Registry:** Chrome stall sits in the
+  task-20 **AUTO-FIX** table ("attempt restart… only escalate if restart fails twice"), and hard
+  constraint *"never escalate one the registry can auto-fix"* — so filing it as `flag_for_human` is a
+  registry violation regardless of Chrome's state, and the prescribed restart-twice was not attempted
+  before either escalation. (2) **Live:** browser connected, `tabs_create` fine, two Perplexity queries
+  ran end-to-end, and the real defect reproduced directly — first `get_page_text` at ~30s returned only
+  *"Searching the web"*, a second read at ~65s returned the full answer. Identical to the 08-21 closure
+  (`T17-24`), which the 08-28 entry re-raises without reference. **Honest limit:** T17 runs Thursday and
+  this test ran Friday, so this proves *the escalation is unjustified and the render-wait bug is real
+  and reproducible* — **not** that Thursday's specific stall was that bug.
+- **`Best Psychologists in Bangalore` pos 13→100** — DataForSEO noise, AP8 correctly applied. One of
+  **9** pages hitting exactly position 100 in a single run. All 10 pages involved re-curled: **every one
+  returns 200** in 0.28–0.66s, so no page is actually gone. GSC (`pulled 2026-08-27`): `signal=NOISE`,
+  clicks **13→15 (+15.4%)**, page **avg position improved 19.3→15.3**, head query `psychologist near me`
+  at **pos 7.4** on 531 impressions. A page that truly fell to 100 does not post rising clicks and a
+  4-point average-position gain.
+  ⚠️ **Two corrections to how this was derived** (Verifier): the earlier "head queries at 10.6–12.5" band
+  understated the case and was not the head query; and the GSC file's `keywords` array is **capped at 50
+  rows**, terminating alphabetically at `"avinash ubaradka"` — **the tracked query `best psychologists in
+  bangalore` is not in the file at all.** The conclusion survives on page-level evidence; the original
+  derivation did not. Same `rowLimit` class as `GSC-MEASUREMENT-INTEGRITY-01`.
+- **1 MODERATE `/doctors/psychologists-in-mysore` 7→11** — page 200 and fast; **no GSC file exists** for
+  it under `/doctors/` (only stale `doctors-listings_*` pulls from June). Per AP5/AP8 no action without
+  GSC cross-reference → **not escalated, queued for T2 validation**, not treated as real.
+
+### ⛔ VETOED — a conclusion of mine, withdrawn
+**"The 08-21 `/doctors/psychologists-in-bangalore` refresh has NOT failed."** Overreach on three counts:
+the GSC windows are `08-10→08-17` (100% pre-ship) vs `08-17→08-24`, so the "post" window contains only
+**3 days** and is not a pre/post test; two of the three named watch queries are truncated out of the
+file, and the one present — `adhd therapist near me` — **moved the wrong way, 71.9→76.6**, and sits in
+the file's own `dropping_keywords`; and `WATCH.md` says not to close watches on drops in this window,
+which cuts symmetrically. **Correct wording: no evidence of failure; W-PSYCH-BLR-20260821 stays open,
+verdict at its scheduled 09-04 check.**
+
+### ✅ AUTO-FIXED
+- **🔴 `briefs/archive/t9-shipped-2026-08-28/` renamed** → `MISLABELLED-DO-NOT-TREAT-AS-SHIPPED-2026-08-28/`
+  with a `READ-ME-FIRST.md`. The directory was created 16:25 today and its name asserts 7 briefs were
+  shipped — **none are; all 7 curl 404.** Membership is also wrong: it includes `rtms-treatment-cost-in-india`
+  (no authored MDX) and omits `online-psychiatrist-consultation-in-tamil` (which has one). Under the
+  registry's *"200 = shipped → archive"* rule, a future run trusting the folder **name** would have
+  dropped 7 of the 11 shippable briefs and silently buried the P0. Nothing deleted; top-level originals
+  remain authoritative.
+- **Second brief carrying the non-resolving reviewer fixed.** The morning run corrected
+  `NEW-psychiatrist-online-consultation-india-brief.md` but did not sweep the queue —
+  **`NEW-online-counselling-in-hindi-brief.md` still had ACTIVE `reviewer: "santanu-tripathy"`** and is
+  Tier A, unauthored and T9-shippable, i.e. it would have replicated the defect on another commercial
+  page. Now `krishna-k-r` (record present, `/doctors/krishna-k-r` 200 real profile, cluster fit
+  Anxiety/OCD/CBT/Psychotherapy, active-brief load 0). **All 12 active reviewer slugs in the queue were
+  then re-checked against both the 59 records and live HTTP — zero non-resolving slugs remain.**
+- **Dev handoff corrected (U2).** `reports/dev-handoff-2026-08-26-dead-links.md` asserted *"None of the
+  6 `.mdx` files exist locally"* and that a repo-wide grep *"returns zero files."* **Both false** —
+  re-tested tonight: all 6 exist (untracked) and the grep returns **6 files / 10 anchors**. The
+  instruction was right, the stated reason was not; a dev who checked it would have had grounds to
+  discount the ticket.
+- **Core Update label corrected** — see the banner at the top of this file. Hold deliberately left on.
+
+### 📋 FILED TO T13 (meta-learner) — not Kushal's
+- `F10 REGISTRY-200-EQUALS-SHIPPED-UNSAFE-FOR-REFRESH-BRIEFS-01` — the stale-brief rule says
+  *"200 = shipped → archive"*, but **REFRESH briefs legitimately target live pages.** Two in the queue
+  (`guide-to-reset-your-sleep-cycle`, `psychology-of-love`) return 200 and are valid; applying the rule
+  literally would destroy them. Amend to **"200 = shipped, for NEW briefs only."**
+- `F11 BRIEF-LASTREVIEWED-FABRICATES-CLINICAL-DATE-01` — **all 72 NEW briefs carry a `lastReviewed`
+  equal to their generation date.** That field is not inert: `src/app/blogs/[slug]/page.tsx` feeds it to
+  `dateModified`, and `src/components/medical/ReviewerByline.tsx` renders it as the visible string
+  *"Last reviewed {date}"*. Shipping a brief therefore publishes a **clinical-review claim, in UI and
+  structured data, for a review that never happened** — on YMYL health content. Caught tonight when a
+  mechanical slug swap bumped one to 2026-08-28; **that bump was reverted** rather than left as residue.
+- `F12 T20-DAY-COUNT-EPOCH-01` — the dead-links flag was called "day 3" this morning and "day 4" by me
+  tonight for the same calendar day. Trivial, but it is an age counter on an escalation. Fix the epoch.
+- `F13 VERIFIER-WORDCOUNT-STILL-UNRESOLVED-01` — **three incompatible ranges now exist for the same 7
+  files** (BACKLOG 1,085–1,455; this run 1,123–1,453; Verifier 1,124–1,454). `F8` is filed but unfixed;
+  until one method is written into `VERIFIER.md` §5, the §5 word-count gate is not reproducible.
+
+### 🟢 QUEUE HEALTH — no refill fired
+**75 briefs · 0 untiered.** 18 `/blogs/` briefs carry `intent_tier`; **16 curl 404, 2 curl 200**. The two
+200s are REFRESH briefs (both headed "Content Brief" with a `Current Word Count` field) — **correctly
+live, and deliberately NOT archived** (see F10). Of the 16, **5 carry durable `⛔ … DO NOT SHIP` blocks**
+→ **11 shippable (9 Tier A / 2 Tier B) vs floor 6 → HEALTHY.** Counted twice by different methods; both
+agreed, and the Verifier re-derived all of it independently.
+**⚠️ Leading indicator:** 7 of those 11 are the already-authored-awaiting-commit batch, so only **4 briefs
+are actually authorable by T9's next run** (`online-counselling-in-hindi`, `online-counselling-in-malayalam`,
+`online-therapy-in-telugu`, `rtms-treatment-cost-in-india`). Refill was still not fired — with **57 Tier A
+`/doctors/` briefs** also queued, the system holds ~68 briefs and is **not supply-constrained. The ship
+stage is the bottleneck, exactly as the morning run concluded.** Adding briefs would be busywork.
+
+### 🛰️ AI CITATION DATA RECOVERED (T17's Thursday sweep was skipped)
+| Query | Engine | Result |
+|---|---|---|
+| Q1 `best mental health platform india` | Perplexity | ❌ **Mindtalk ABSENT — 4th consecutive week.** Cited: **Amaha (first)**, Tele-MANAS, iCALL/TISS, Wysa, then YourDOST / BetterLYF / TalktoAngel. ⚠️ Amaha is now cited **with its Bengaluru centres named** (Indiranagar, Koramangala, Whitefield, Sarjapur, JP Nagar) — direct encroachment on Mindtalk's home city on the highest-intent platform query. |
+| Q3 `psychiatrist near me bangalore` | Perplexity | ✅ **Mindtalk CITED — retained** (3rd of 6). Named centres Indiranagar, Sarjapur, Kanakapura Road, Kalyan Nagar + phone. Alongside Narayana Health, SPARSH, Mind & Brain, Apollo 24\|7, Practo/Lybrate. |

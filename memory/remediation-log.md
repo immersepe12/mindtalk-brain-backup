@@ -1878,3 +1878,411 @@ spec pointing at a local checkout where the files do not exist, would have waste
 likely closed a P0 as already-fixed. Same root cause each time: **I measured the artefact in my hand
 instead of the artefact I was making a claim about.** The counter-move is not more care, it is
 structural — every count I publish needs a second, independently-derived count before it leaves the run.
+
+---
+
+# 🔧 T20 AUTO-REMEDIATION — 2026-08-28 (Friday)
+
+Run start 16:01 IST. Catch-up burst: the whole scheduler replayed today between 15:08 and 16:01 IST
+(every task's `lastRunAt` falls in that window), so "today's logs" are a compressed day, not a normal one.
+
+## A. THE HEADLINE — `T9-SILENT-DEATH-01` root cause found. It is not a silent death.
+
+T9 fired Wed 08-26 and Fri 08-28 (scheduler `lastRunAt` confirms both) and wrote no artifact either
+time. Ops-health called it a silent death and stopped there. It is worse and more fixable than that:
+
+**The 08-26 run authored SEVEN complete blog pages and died between authoring and `git commit`.**
+
+All 7 are untracked files in the local checkout; all 7 are **404 in production**. Two days of
+finished content never shipped. Separation from the 14 already-live MDX files sharing the same
+`2026-08-28 15:36:29` mtime (a bulk working-tree restore, not authoring) is exact and unambiguous:
+
+| | the 7 undeployed | the 14 already-live |
+|---|---|---|
+| `publishedOn` | `2026-08-26` | `08-04` / `08-11` / `08-25` |
+| `intent_tier` in frontmatter | present (5×A, 2×B) | absent |
+| production HTTP | **404** | **200** |
+
+All 7 pass the full Verifier gate with **zero vetoes** — body 1,085–1,455 words, 4–8 unique internal
+links, 5 FAQs each, titles ≤64, descriptions ≤159. No broken-JSX risk.
+
+`therapy-cost-in-india` · `psychiatrist-online-consultation-india` ·
+`online-psychiatrist-consultation-in-tamil` · `online-therapy-for-indians-in-usa` ·
+`couple-therapy-cost-in-bangalore` · `therapy-after-a-breakup` · `acrophobia-treatment-fear-of-heights`
+
+**T20 cannot ship them** — hard constraint, never push to the website repo. Escalated with a
+paste-ready spec: `reports/dev-handoff-2026-08-28-t9-undeployed-batch.md`. ~15 min of work; no
+authoring, no review. Two blockers named in the spec: ship all 7 **atomically** (3 intra-batch
+forward links), and swap one non-resolving reviewer.
+
+**The systemic point:** the brief queue is healthy at 11 against a floor of 6. Content velocity is
+not supply-constrained. The ship stage is dropping its own output on the floor, and ops-health
+cannot see it because T16 tests `lastRunAt` instead of "did the artifact appear".
+
+## B. FALSE POSITIVES CLOSED — 5
+
+- **`form_submitted −52% CRITICAL crash` — CLOSED, recovered and then some.** T15's 08-26 reading was
+  55 unique submitters/7d. Re-measured on the same metric and window today (Mixpanel 4011856,
+  unique users, last 7d): **156** — +184% vs the "crash" figure and +36% above the 115 baseline it
+  was compared against. Highest reading in the series.
+- **`BACKEND-FAIL-ENGINEERING-01` (13.7%, "4th consecutive rise, engineering escalation required
+  before ads restart") — CLOSED.** Recomputed on T15's own formula, last 7d:
+  `lead_create_failed 16 / (form_submitted 156 + lp_form_submitted 92 + 16)` = **6.06%**. Halved from
+  13.7%, below the prior 7.5% reading. Net leads 113 → **248 (+119%)**.
+- **Why both fired:** T15 ran 07-29, 08-05, then **08-26** — it skipped 08-12 and 08-19, then labelled
+  a **21-day** change "WoW". Its 7-day window (Aug 20–26) also landed on a trough. Nothing re-read the
+  metric before T10 escalated it today. → filed to T13.
+- **`PTSD-CLUSTER-DROP-01` ("PTSD Treatment −61.3% impr / −53 positions, SEVERE") — CLOSED, direction
+  is inverted.** GSC live (`sc-domain:mindtalk.in`), Aug 1–7 vs Aug 15–21: PTSD cluster **229 → 550
+  impressions (+140.2%)**, clicks 12 → 18; head term `cptsd test` 145 → 344 impr, position **10.3 →
+  8.7 (improved)**. The exact `"ptsd treatment"` family: 12 → 18 impr (+50%), and the exact query's
+  own absolute base is **2–6 impressions** at position **2.2 → 2.5**. A "−61.3%" on a 6-impression
+  base is four impressions of noise, and "−53 positions" cannot be reconciled with pos 2.2 → 2.5.
+  **The 09-05 `investigate_regression` should be cancelled.** Root cause: the weekly report computes
+  percentage deltas with no minimum-impression floor. → filed to T13.
+- **`misses: executor(Fri)` — CLOSED, third recurrence of a known T16 bug.** `mindtalk-executor`
+  `nextRunAt = 2026-08-28T11:05:25Z` (16:35 IST) — **in the future**. T16 marked it missed at 15:55 IST.
+  This is exactly `F1 T16-FUTURE-RUN-MISLABELLED-AS-MISSED-01`, filed to T13 on 08-26, still unfixed.
+- **`misses: auto-remediation(Fri)` — CLOSED, same class.** T16 evaluated at 15:55 IST; T20 started
+  16:01 IST. (`auto-remediation(Thu)` is real — no `logs/remediation-2026-08-27.txt` — but it is the
+  same Mac Mini downtime as the whole catch-up burst, not a separate actionable failure.)
+- **9 AP8 pos-100 quarantines — correctly quarantined, no action.** Spot-checked 4 of the 9 live:
+  `/illnesses/sleep-disorder`, `/treatments/cognitive-behavioural-therapy-cbt`,
+  `/blogs/understanding-technology-addiction-and-mobile-addiction`,
+  `/doctors/psychologists-in-bangalore` — all **200**. Pipeline handled it; nothing to escalate.
+
+## C. AUTO-FIXED — 4
+
+1. **Brain backup stall CLEARED — and the durable pattern found.** `brain/.git/index.lock` was a
+   stale 0-byte lock from 08-26 21:10 (42h). `rm` fails EPERM on the FUSE mount. Renaming it works —
+   but the **Verifier caught that renaming alone does not hold**: git recreates the lock on the very
+   next *read* and cannot unlink it, so every `git status` re-poisons the repo for writes. The
+   working fix is to **clear the lock in the same invocation as the git write**. Applied:
+   `git add -A` → 36 files staged → commit **`6a746b4`** (5,506 insertions) → **pushed**, remote
+   `mindtalk-brain-backup` now at `6a746b4` (confirmed via `git ls-remote`). Two days of brain state
+   — BACKLOG, BRAIN, TRAJECTORY, WATCH, 8 `memory/*` files — was uncommitted and unbackupable. It is
+   now safe. Nothing deleted; the lock was archived, not removed.
+2. **Broken reviewer reference corrected in a brief.** `NEW-psychiatrist-online-consultation-india-brief.md`
+   specified `reviewer: "santanu-tripathy"`. Verified non-resolving: no
+   `src/content/doctors/santanu-tripathy.mdx`; `/doctors/santanu-tripathy` 301s to the generic
+   `/doctors` index; and the already-live page using it (`/blogs/drug-addiction-symptoms`, 08-04)
+   emits **no `reviewedBy` Person node at all**, while the control `/blogs/signs-of-adhd` emits a full
+   Person node. Corrected to `dr-sneha` (MD Psychiatry, page 200, load 3). Same mechanical class as
+   the 08-22 `psychology-of-love` broken-link fix.
+3. **7 briefs annotated `📦 MDX ALREADY AUTHORED — AWAITING COMMIT/PUSH`** so the next T9 run does
+   not re-author work that already exists, and so the state is legible to a human. Deliberately
+   phrased to avoid T9's five hold-filter phrases — these pages *should* ship.
+4. **Stale remote-tracking ref lock cleared** (`refs/remotes/origin/main.lock`) so brain
+   `git status` stops reporting a false "ahead 1".
+
+## D. ESCALATED — 2 (both with the fix pre-written)
+
+- **P0 `T9-SILENT-DEATH-01` → 7 undeployed pages.** Spec:
+  `reports/dev-handoff-2026-08-28-t9-undeployed-batch.md`. Includes the exact `git add` path list
+  (NOT `git add -A` — the checkout has ~13,000 untracked files), the reviewer diff, the atomic-ship
+  warning, the post-deploy curl verification, and the two engineering fixes that stop the recurrence
+  (T9 must write its log on the failure path; T16 must test for the artifact, not `lastRunAt`).
+- **P1 `DOCTORS-LISTINGS-DEAD-LINKS-01` — day 3, re-verified real, unchanged.** All 9
+  `/doctors-listings/*` anchors still **404** today. Verifier independently re-derived the census by
+  curling all 23 candidate live pages: **exactly 10 dead anchors on exactly 6 pages**, matching the
+  08-26 handoff line-for-line. A blanket `/doctors-listings/` → `/doctors/` rewrite fixes 7 of 10;
+  `/doctors/couple-therapists-in-bangalore`, `/doctors/marriage-counsellors-in-bangalore` and
+  `/doctors/online-therapists-india` are themselves 404, so the handoff's three named substitutions
+  are required. Spec unchanged: `reports/dev-handoff-2026-08-26-dead-links.md`.
+
+**Not re-escalated** (verified real, already with Kushal, no new information): `CORE-UPDATE-YMYL-HOLD-01`,
+`W38-NARRATIVE-THERAPY-URGENT-01`, `T9-DOCTORS-QUEUE-MISLABEL-01`, `STUB-PILOT-CONVERSION-VERDICT-01`
+(a/b/c, 14 days old), `MINDTALK-REPO-STALE-CHECKOUT-02/03`, `GSC-INFRA-01`, `THERAPIST-NEAR-ME-SERP-CHECK-01`.
+
+## E. FILED — not Kushal's — 4
+
+- **F6 `T15-MULTI-WEEK-GAP-LABELLED-WOW-01`** — T15 must compare against its own *previous run*, and
+  label the interval it actually measured. An 08-26-vs-08-05 delta reported as "WoW" produced two
+  P0-shaped escalations from a metric that had already recovered. → T13.
+- **F7 `WEEKLY-REPORT-NO-IMPRESSION-FLOOR-01`** — percentage deltas must be suppressed below a minimum
+  impression base (suggest 50/wk). "−61.3%" on a 6-impression query nearly bought a wasted 09-05
+  investigation. → T13.
+- **F8 `VERIFIER-BYTE-VS-CHAR-AND-FRONTMATTER-WORDCOUNT-01`** *(Verifier, unprompted — and it caught
+  me making both errors in this run)* — `wc -c` counts **bytes**, so any `metaDescription` containing
+  `—`, `–` or `₹` reads 1–3 chars over and manufactures false VETOs (I raised a false VETO on
+  `online-therapy-for-indians-in-usa` this way: 159 chars, 161 bytes). And `wc -w` on a whole MDX file
+  counts the frontmatter — `quickAnswer`, `keyTakeaways` and all 5 FAQ answers — inflating body word
+  counts by 370–560 and producing false PASSes on genuinely thin pages. Use `len()`/`wc -m` for
+  chars and strip frontmatter before counting words. → T13.
+- **F9 `REVIEWER-ASSIGNER-ACCEPTS-NONEXISTENT-SLUG-01`** — `logs/reviewer-load-state.json` carries
+  `santanu-tripathy` (`assigned_count: 2`) while `brain/memory/reviewer-mapping.md` has zero
+  references to it. A reviewer slug must only be assignable if `src/content/doctors/<slug>.mdx`
+  exists. One live page already ships with no author schema because of this. → T13.
+
+## F. VERIFIED, NO ACTION
+
+- **Brief queue HEALTHY — no refill fired.** Two independently-derived counts agreed exactly:
+  **11 shippable `/blogs/` briefs (9 Tier A / 2 Tier B)** against a floor of 6. 18 briefs target
+  `/blogs/`; 16 have 404 slugs; 6 carry active DO-NOT-SHIP/NEEDS_HUMAN holds (**corrected from my
+  first count of 5 — the Verifier caught that `psychology-of-love-brief.md` carries an active hold I
+  had filed only under "already-live"**); 2 target live pages and are refresh briefs. Two briefs
+  containing `⛔` were correctly judged NOT held — in both the marker heads a *superseded* /
+  *corrected* audit block, not a live hold.
+- **7 of those 11 already have authored MDX on disk** (§A). The remaining 4 unauthored:
+  `online-counselling-in-hindi`, `online-counselling-in-malayalam`, `online-therapy-in-telugu`,
+  `rtms-treatment-cost-in-india`.
+- **Discovery FRESH** — `new-content-opportunities.json` written 2026-08-24 (Monday, its cadence).
+  No `DISCOVERY STALE` in today's logs. No re-run needed. No paid-mining skip.
+- **Weekly cap respected** — `max_new_content_per_week = 20`; 6/20 used. **T20 shipped 0 pages.**
+  `src/**` untouched, `scripts/*.py` untouched, **nothing deleted** — everything archived.
+- **Core Update status is internally contradictory and worth a correction, not an escalation.**
+  Today's `gsc-validation-2026-08-28` searched and concluded the "August 2026 Core Update" is
+  **NOT officially confirmed by Google** and explicitly says the 08-27 log's "confirmed" claim is
+  incorrect; T10's BACKLOG header asserts "Core Update STILL LIVE (Day 3)". The disagreement drives a
+  *conservative* YMYL hold, so the risk of leaving it is low — but the brain currently holds both
+  claims as true. Noted for T10/T12; not escalated.
+
+---
+
+## RUN SUMMARY — 2026-08-28
+
+| | |
+|---|---|
+| Flags collected | 11 |
+| **False positives closed** | **5** — form_submitted crash · backend fail rate · PTSD cluster · executor "missed" · auto-remediation(Fri) "missed" |
+| **Auto-fixed** | **4** — brain backup stall cleared + pushed (`6a746b4`) · broken reviewer reference · 7 briefs annotated · stale ref lock |
+| **Escalated** | **2** — 7 undeployed pages (P0, new spec) · dead links (P1, day 3, unchanged) |
+| **Filed to T13** | **4** |
+| Brief queue | **11 shippable (9A/2B)** · floor 6 ✅ · no refill needed · 7 already authored |
+| Pages shipped by T20 | **0** (hard constraint) |
+| Verifier sub-agent | **8 claims audited — 5 UPHELD · 3 CORRECTION · 0 VETO · 6 unprompted findings — all honoured** |
+
+**Net.** Five of eleven flags were not real, and the two loudest — a "CRITICAL on-site booking form
+crash" and a backend failure rate said to block the ads restart — had both already reversed before
+they were escalated. Form submissions are at 156/7d, the highest in the series; the fail rate is
+6.1%, less than half the number in the alert. A third, the "SEVERE" PTSD collapse, moved in the
+opposite direction: that cluster grew 140%, and the specific query behind the alarm has a six-
+impression base and never left position 2.
+
+What survived is worth the run. **T9 has not been failing to produce — it has been producing and
+losing it.** Seven finished, gate-passing pages have been sitting in an uncommitted working tree
+since Wednesday while ops-health reported the task as having run. The brief queue was never the
+constraint; the last fifteen minutes of the pipeline is.
+
+**Discipline note.** The Verifier corrected three of my own claims: my word counts included YAML
+frontmatter (inflating by ~400 words/page), my metaDescription VETO was a byte count masquerading as
+a character count, and my hold tally was 5 when it was 6. All three are the same failure as the last
+four runs — *measuring something adjacent to the thing I was making a claim about*. The counter-move
+held this time only because the second count was derived by a different process, not by me being
+more careful. Two independent counts before any number leaves the run: keep it.
+
+
+---
+
+# 🔧 T20 AUTO-REMEDIATION — 2026-08-28 (EVENING, 20:45 IST — scheduled run)
+
+**Context.** A T20 run already fired at 16:01 IST today. This run did **not** carry its conclusions
+forward: it re-verified both open escalations against live production and audited the morning run's
+own auto-fixes. That audit is where most of tonight's value came from.
+
+Verifier sub-agent: **5 UPHELD · 3 CORRECTION · 1 VETO · 5 unprompted findings — all honoured.**
+Two of my own conclusions were overturned and are recorded as such below.
+
+## A. FALSE POSITIVES CLOSED (Rule 1) — 3
+
+**A1. `T17-CHROME-STALL-08-28`** (logged 🔴 CRITICAL / `flag_for_human`) — **CLOSED, 2nd time.**
+Two independent grounds:
+- **Registry.** `cowork-tasks/task20-auto-remediation.md:51` puts "Chrome stall on Mac Mini" in the
+  🟢 **AUTO-FIX** table — *"attempt Chrome restart… only escalate if restart fails twice"* — and hard
+  constraint line 108 forbids escalating anything the registry can auto-fix. Filing it as
+  `flag_for_human` is a registry violation independent of Chrome's actual state, and the prescribed
+  restart-twice was never attempted before either escalation.
+- **Live.** Browser connected (`list_connected_browsers` → 1 local macOS instance), `tabs_context_mcp`
+  created a tab, two Perplexity queries ran end-to-end. The real defect reproduced directly: first
+  `get_page_text` at ~30s returned only *"Searching the web · 1 completed"*; a second read at ~65s
+  returned the complete answer. This is exactly the render-wait bug closed on 2026-08-21 as `T17-24`,
+  which the 08-28 entry re-raises without referencing.
+- **Stated limit (Verifier caveat, honoured):** T17 runs Thursday evening; this ran Friday evening. A
+  successful Friday `tab_create` does not disprove a Thursday-specific disconnect, and the recorded
+  symptom differs ("No text content found" on 08-21 vs "Searching the web" tonight). The defensible
+  claim is *the escalation is unjustified and the render-wait bug is real and reproducible* — **not**
+  that Thursday's stall was that bug.
+
+**A2. `Best Psychologists in Bangalore` pos 13→100** — DataForSEO noise, AP8 correctly applied.
+All 10 pages in today's rank-100 cohort curled: **every one returns 200**, 0.28–0.66s — nothing is
+gone. GSC `doctors_psychologists-in-bangalore.json` (pulled 08-27): `signal=NOISE`, clicks
+**13→15 (+15.4%)**, impressions 795→769 (−3.3%), **page avg position improved 19.3→15.3**, head query
+`psychologist near me` **pos 7.4** on 531 impressions.
+⚠️ **Correction to my derivation (Verifier).** I quoted a "10.6–12.5 head-query band"; that was not the
+head query and understated the case. More seriously, the file's `keywords` array is **capped at 50 rows**
+(clicks-desc then alphabetical, terminating at `"avinash ubaradka"`) and **the tracked query `best
+psychologists in bangalore` is not in it at all.** I cited a file as ground truth for a query the file
+does not contain. The conclusion holds on page-level evidence; the derivation did not. Same `rowLimit`
+class as `GSC-MEASUREMENT-INTEGRITY-01`.
+
+**A3. MODERATE `/doctors/psychologists-in-mysore` 7→11** — not escalated. Page 200, fast. **No GSC
+file exists** for it under the `/doctors/` path (only stale `doctors-listings_*` pulls from June), so
+per AP5/AP8 there is no cross-reference and no action is permitted. Queued for T2, not treated as real.
+
+## B. VETOED — my own conclusion, withdrawn — 1
+
+**"The 08-21 `/doctors/psychologists-in-bangalore` refresh has NOT failed."** Withdrawn. The GSC
+windows are `08-10→08-17` (entirely pre-ship) vs `08-17→08-24`; the refresh shipped **08-21**, so the
+"post" window holds **3 days** — this is not a pre/post test. Two of the three watch queries named in
+`WATCH.md:1148` are truncated out of the file; the one present, `adhd therapist near me`, **moved the
+wrong way (71.9→76.6)** and appears in the file's own `dropping_keywords`. And `WATCH.md:1157` says not
+to close watches on drops observed in this window — which cuts both ways.
+**Correct wording: no evidence of failure. W-PSYCH-BLR-20260821 stays open; verdict at 09-04.**
+This is the same error class I indicted the morning run for: pre-empting an open watch's check date.
+
+## C. AUTO-FIXED (Rule 2) — 4
+
+**C1. 🔴 `briefs/archive/t9-shipped-2026-08-28/` renamed** →
+`MISLABELLED-DO-NOT-TREAT-AS-SHIPPED-2026-08-28/`, plus a `READ-ME-FIRST.md` inside.
+Created 16:25 today; the name asserts 7 briefs shipped. **None are — all 7 curl 404.** Membership is
+also wrong: includes `rtms-treatment-cost-in-india` (no authored MDX), omits
+`online-psychiatrist-consultation-in-tamil` (has one). Under the registry's *"200 = shipped → archive"*
+rule a future run trusting the folder **name** would have dropped 7 of the 11 shippable briefs and
+silently buried the current P0. Renamed via `os.rename()` (unlink is EPERM on this FUSE mount).
+**Nothing deleted; top-level originals remain authoritative.**
+
+**C2. Second brief with the non-resolving reviewer fixed.** The morning run corrected one brief and did
+not sweep the queue. **`NEW-online-counselling-in-hindi-brief.md` still carried ACTIVE
+`reviewer: "santanu-tripathy"`** — Tier A, unauthored, T9-shippable, i.e. live to replicate the defect
+on another commercial page. Changed to `krishna-k-r` (record present; `/doctors/krishna-k-r` 200 real
+profile, no redirect; cluster fit Anxiety/OCD/CBT/Psychotherapy; active-brief load 0). All **12** active
+reviewer slugs in the queue were then checked against both the 59 doctor records and live HTTP —
+**zero non-resolving slugs remain.**
+
+**C3. `lastReviewed` bump REVERTED** (Verifier hard-flag, honoured). My slug swap had also set
+`lastReviewed: 2026-08-28`. That field is not inert: `src/app/blogs/[slug]/page.tsx` feeds it to
+`dateModified`, and `src/components/medical/ReviewerByline.tsx` renders it as the visible
+*"Last reviewed {date}"*. On ship it would have published a claim that a named psychiatrist clinically
+reviewed a mental-health page on 2026-08-28 — in UI **and** structured data — on a page whose body is
+still an unwritten placeholder. Reverted to 2026-08-26 and filed as F11 (systemic: all 72 NEW briefs).
+
+**C4. Dev handoff corrected.** `reports/dev-handoff-2026-08-26-dead-links.md` asserted *"None of the 6
+`.mdx` files exist locally"* and that a repo-wide grep *"returns zero files."* **Both false**, re-tested
+tonight: all 6 exist as untracked paths and the grep returns **6 files / 10 anchors**. The instruction
+(work the remote tree) was right; the stated reason was not, and a dev who verified it would have had
+grounds to discount the whole ticket. Corrected in place with the real reason (5-week-stale HEAD +
+~80 untracked paths at risk).
+
+## D. ESCALATED — 2 re-verified + 2 new — 4
+
+**D1. 🔴 P0 `T9-UNDEPLOYED-BATCH-2026-08-26` — day 3, unchanged.** All 7 re-curled **with and without
+`-L`: 404 on both**. All 7 still untracked; HEAD `feb506b`. Body words (frontmatter stripped)
+**1,124–1,454**. Nothing moved in the ~5h since the morning escalation.
+⚠️ Added tonight per Verifier U3: **`src/content/blogs/psychiatrist-online-consultation-india.mdx` — the
+file that will actually ship — still carries `reviewer: "santanu-tripathy"`.** Only the *brief* was
+corrected. BACKLOG previously read "Brief already corrected by T20", which reads as *handled*; combined
+with "ship all 7 ATOMICALLY" a dev could commit the batch and reproduce the defect. BACKLOG line fixed.
+
+**D2. 🔴 P1 `DOCTORS-LISTINGS-DEAD-LINKS-01` — day 3, unchanged.** Verifier did a full census, not a
+sample: sitemap 842 URLs, **297 under `/blogs/`**, every one curled. **6 pages / 10 anchors / 9 unique
+targets** — per-page counts identical to the 08-26 spec. All 9 targets 404. **6 of 9 have a `/doctors/`
+200 equivalent** → blanket rewrite fixes 7 of 10; 3 need named substitutes.
+
+**D3. 🆕 P1 `REVIEWER-NEVER-ASSIGNED-01` — 52 live blog pages carry no reviewer at all.** Full corpus,
+all 297 live `/blogs/` pages: **57 emit zero `reviewedBy`**, **12 emit zero `reviewedBy` AND zero
+`Person`**. Of the 57, five are the broken-slug case; the other **52 have no `reviewer:` field at all**.
+An E-E-A-T authorship gap across ~18% of the blog corpus, during documented vertical volatility.
+Needs a content/dev decision + a template guard. T20 cannot fix (`src/**`).
+
+**D4. 🆕 P2 `REVIEWER-SLUG-UNRESOLVED-01` — 5 live pages; mechanism fully established.**
+`santanu-tripathy` resolves to nothing: no `src/content/doctors/santanu-tripathy.mdx` among 59 records;
+`https://www.mindtalk.in/doctors/santanu-tripathy` **301 → `/doctors`** (generic index). Exactly 6 local
+MDX use it; **5 are live and all 5 emit `reviewedBy` = 0 — 100% correlation, no counterexample.**
+Upstream cause: `logs/reviewer-load-state.json` lists `santanu-tripathy` with `assigned_count: 2` while
+`reviewer-mapping.md` has no such reviewer — **the auto-assigner draws from a registry containing a
+reviewer with no doctor page.**
+
+⚠️ **CORRECTION — my original framing of D3/D4 was wrong and the Verifier caught it.** I reported
+"5 of 16 sampled pages emit no reviewer" and named `relationship-stress`, `eft-tapping`,
+`mental-exhaustion`, `sleep-schedule` alongside `drug-addiction-symptoms`. **Four of those five slugs do
+not exist as live URLs** (the real pages are `how-to-deal-with-relationship-stress`,
+`what-is-eft-tapping-guide`, `mental-exhaustion-symptoms-causes`,
+`how-to-fix-your-sleep-schedule-quickly`) — I curled 404s and read the resulting zeros as evidence.
+Only `drug-addiction-symptoms` was real. I also asserted one mechanism for all five when there are two,
+and the larger one (52 pages, never assigned) I had not found at all. **Root error: I did not check
+status codes in the sweep** — the identical mistake as the `-L` trap below, one hour apart.
+
+## E. FILED — not Kushal's — 4
+
+- **`F10 REGISTRY-200-EQUALS-SHIPPED-UNSAFE-FOR-REFRESH-BRIEFS-01`** — the stale-brief rule
+  ("200 = shipped → archive") is unsafe for REFRESH briefs, which legitimately target live pages. Two
+  in the queue (`guide-to-reset-your-sleep-cycle`, `psychology-of-love`) return 200 and are valid; the
+  literal rule would have destroyed them. Amend to **"200 = shipped, for NEW briefs only."** My
+  deviation was correct on the merits but is a deviation from the registry text, so it is documented
+  rather than left as an undocumented judgement call.
+- **`F11 BRIEF-LASTREVIEWED-FABRICATES-CLINICAL-DATE-01`** — all 72 NEW briefs carry `lastReviewed` =
+  their generation date, which ships as a visible + schema clinical-review claim. See C3.
+- **`F12 T20-DAY-COUNT-EPOCH-01`** — the dead-links flag was "day 3" this morning and "day 4" from me
+  tonight, same calendar day. It is an age counter on a live escalation. Fix the epoch. (Standardised
+  to **day 3** tonight.)
+- **`F13 VERIFIER-WORDCOUNT-STILL-UNRESOLVED-01`** — **three incompatible ranges now exist for the same
+  7 files**: BACKLOG 1,085–1,455; me 1,123–1,453; Verifier 1,124–1,454. `F8` is filed but unfixed;
+  until one method lands in `VERIFIER.md` §5 the word-count gate is not reproducible.
+
+## F. VERIFIED, NO ACTION
+
+- **Core Update label** — corrected in BACKLOG with the **hold deliberately left on**. Verified two
+  ways (today's own `gsc-validation-2026-08-28` Step 7 + independent web search): no confirmed August
+  2026 update; last confirmed ranking change is the **June 2026 spam update, ended 26 June**. Per the
+  Verifier's two conditions, the correction (a) restates the hold's *real* basis — third-party
+  healthcare-vertical volatility + 5 `algo_watch=True` confirmed drops — so no future run reads "the
+  reason was false" and lifts it, and (b) surfaces that **~09-05 now has no anchor** and T10 must
+  re-set the settle date. Lifting the hold would unpark the YMYL queue, W38, CHATGPT-AEO and
+  PTSD-CLUSTER in one move — **T10's/Kushal's call, not T20's.**
+- **Brief queue** — 75 briefs, 0 untiered, 18 `/blogs/` tiered, 16×404 + 2×200 (both REFRESH, correctly
+  live), 5 durable `⛔ DO NOT SHIP` blocks → **11 shippable (9A/2B) vs floor 6 → no refill fired.**
+  Counted twice by different methods; Verifier re-derived all of it independently and confirmed every
+  figure. **Leading indicator noted:** only **4** are actually authorable next run — but with 57 Tier A
+  `/doctors/` briefs also queued (~68 total), the system is **not supply-constrained; the ship stage is.**
+- **AI citation data** — 2 of 40 cells recovered while proving Chrome works. Q1 `best mental health
+  platform india` ❌ **absent, 4th consecutive week**, with **Amaha now cited with its Bengaluru centres
+  enumerated** — direct encroachment on Mindtalk's home city. Q3 `psychiatrist near me bangalore` ✅
+  **cited, retained.** Logged to `ai-citation-history.md`, superseding the "all engines SKIPPED" line.
+
+## HARD CONSTRAINTS — ALL CLEAN (Verifier-audited)
+
+| Constraint | Verdict | Evidence |
+|---|---|---|
+| No edits to `src/**` | ✅ | Zero src files modified after 16:00. The 30 files at mtime 15:36:29 are a sub-second `checkout: moving from main to main` artifact in the reflog. |
+| No edits to `scripts/*.py` | ✅ | `find scripts -name '*.py' -newermt 2026-08-28` → 0. |
+| No push to website repo | ✅ | HEAD `feb506b`, unchanged; no commits or pushes in reflog today. |
+| Nothing deleted | ✅ | Archive dir **renamed**, not removed; 293 archived briefs intact; today's copies coexist with their originals. |
+| No page shipped | ✅ | All 7 batch URLs 404; no new commits. |
+| Weekly cap (`max_new_content_per_week: 20`) | ✅ | 0 pages shipped this week. |
+
+## RUN SUMMARY — 2026-08-28 (evening)
+
+| | |
+|---|---|
+| Flags collected | 9 |
+| **False positives closed** | **3** — Chrome stall CRITICAL (2nd closure) · psychologists-in-bangalore rank-100 · mysore MODERATE (no GSC ref) |
+| **Auto-fixed** | **4** — mislabelled archive dir renamed · 2nd bad reviewer slug swept · fabricated `lastReviewed` reverted · dev handoff false statement corrected |
+| **Escalated** | **4** — P0 undeployed batch (day 3, re-verified) · P1 dead links (day 3, re-verified) · 🆕 52 pages with no reviewer · 🆕 5 pages with unresolved reviewer slug |
+| **Filed to T13** | **4** (F10–F13) |
+| Brief queue | **11 shippable (9A/2B)** · floor 6 ✅ · no refill · 4 authorable next run |
+| Pages shipped by T20 | **0** (hard constraint) |
+| AI citation cells recovered | **2 of 40** (Q1 ❌ absent 4th wk · Q3 ✅ retained) |
+| Verifier sub-agent | **5 UPHELD · 3 CORRECTION · 1 VETO · 5 unprompted findings — all honoured** |
+
+**Net.** The morning run's two escalations are both real and both unmoved, so the day's headline
+stands: seven finished pages have been sitting uncommitted since Wednesday and the bottleneck is the
+last fifteen minutes of the pipeline, not supply. What this run added came from auditing that run
+rather than trusting it — a mislabelled archive directory that would have silently deleted 7 of the 11
+shippable briefs and buried the P0; a second brief still carrying the reviewer slug the morning fixed
+in only one place; and a false statement in the dev handoff that would have let a dev close the
+dead-links ticket as already-fixed. None of those were on any flag list.
+
+The reviewer thread turned out to be the largest finding and the one I got most wrong. Chasing one bad
+slug surfaced that **52 live blog pages carry no reviewer at all** — an E-E-A-T gap an order of
+magnitude bigger than the defect that led me to it — but my own census was wrong on 4 of the 5 pages I
+named, because I curled slugs that do not exist and read the resulting zeros as findings.
+
+**Discipline note.** Twice tonight I measured the wrong thing and reached a confident wrong conclusion:
+`curl -L` followed a 301 to the generic `/doctors` index and I read the resulting 200 as "the page
+exists", nearly filing a correction against a morning finding that was right; and I counted
+`reviewedBy` on four URLs that were 404s. Both are the same failure the last five runs recorded —
+*measuring something adjacent to the thing I was claiming.* The first was caught by re-reading the
+primary source before writing, the second only by the Verifier. **Concrete rule for next run: any curl
+used as evidence must record its status code without `-L`, and any page-level census must assert 200
+before it counts anything on the page.** Two independent counts is necessary and was not sufficient —
+both of my counts were downstream of the same bad URL list.
