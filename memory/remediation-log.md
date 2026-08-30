@@ -2286,3 +2286,200 @@ primary source before writing, the second only by the Verifier. **Concrete rule 
 used as evidence must record its status code without `-L`, and any page-level census must assert 200
 before it counts anything on the page.** Two independent counts is necessary and was not sufficient —
 both of my counts were downstream of the same bad URL list.
+
+================================================================================
+T20 AUTO-REMEDIATION — RUN 2026-08-29 (Saturday) — start 20:54 IST
+RESULT: 10 flags collected | 1 FALSE POSITIVE closed | 1 premise disproven/downgraded
+        | 5 auto-fixed (brain-file scope) | 5 escalated (3 with new root cause)
+        | 1 T13 filing | 0 pages shipped | brief queue: 16 by the metric, 3 authorable
+VERIFIER: 2 sub-agent runs. Run 1 — 8 claims: 4 UPHELD / 3 CORRECTION / 1 VETO, 6 unprompted
+          findings. Run 2 (brief gate) — overall VETO on 3 independent grounds.
+          Every correction honoured. Two of my own headline claims were wrong.
+================================================================================
+
+HEADLINE — the brief starvation has a measurable root cause, and it is not supply.
+  Filtering the 4,599 open `/blogs/` opportunities in new-content-opportunities.json for genuine
+  gaps: of the top 20 "how-to" candidates at >=200 impressions with no close live-slug match,
+  **20 of 20 have a `triggering_page` that is an existing live Mindtalk page already ranking for
+  that query.** `/blogs/10-essential-steps-in-achieving-inner-peace...` alone accounts for 9 of the
+  20 — synonym variants of "peace of mind" it already holds pos 5-11 for. The same result holds at
+  the >=250 and >=150 impression cuts, and in the Tier-A decision-stage cut (2 candidates total,
+  site-wide).
+  So `new-content-discovery.py` is emitting **keyword variants of already-covered topics as
+  NEW-content opportunities.** Briefs written from them subsequently hit AP9 cannibalization holds
+  — which is the present state of 5 of the held briefs in the queue. That is the starvation loop.
+  New BACKLOG row: DISCOVERY-EMITS-COVERED-VARIANTS-01. T20 may not edit scripts/*.py.
+  Fix: drop (or demote to REFRESH) any candidate whose triggering_page is already a live
+  /blogs/, /treatments/, /illnesses/ or /assessments/ page.
+
+I PROVED THIS ON MYSELF. The standing job fired, I wrote one brief, and my own Verifier vetoed it
+  for exactly this defect — `/blogs/therapy-cost-in-india` (authored 08-28, in the undeployed batch)
+  already carries an H2 `## Does Insurance Cover Therapy in India?`, **verbatim my proposed H1**;
+  and `/blogs/affordable-therapy-bangalore` (live 08-25) already carries "Does insurance cover
+  therapy in Bangalore?". My Intent Gate tested *slug 404* and *filename token overlap*. Neither is
+  a redundancy test. This is F3 AP9-TOKEN-OVERLAP-IS-NOT-A-REDUNDANCY-TEST-01, filed 2026-08-26
+  after it spoiled six briefs — reproduced by me three days later.
+  Compounding: the colliding page is 404 in production, so a sitemap-based check cannot see it.
+  Any redundancy check must read logs/auto-ship-week-*.txt alongside the sitemap.
+  Brief kept, not archived, with a DO-NOT-SHIP header, verifier_vetoed_until 2026-09-05, and a
+  retarget recommendation. The regulatory research in it was verified sound and is reusable.
+
+FALSE POSITIVE CLOSED (1)
+  1. SCHEMA-MEDICALWEBPAGE-RESIDUAL-01 -> the premise is disproven. FAQPage IS in production HTML
+     on 5/5 sampled YMYL pages (/illnesses/depression 10 Question nodes, /illnesses/anxiety 10,
+     /illnesses/posttraumatic-stress-disorder-ptsd 6, /treatments/narrative-therapy 4,
+     /treatments/acceptance-and-commitment-therapy-act 4). Medical typing is live as
+     MedicalCondition (illnesses) and MedicalTherapy (treatments). Literal `MedicalWebPage` is
+     absent on all 5, but Verifier assessment: do not escalate — neither it nor the types present
+     generate a Google rich result, so adding it changes zero SERP eligibility. PR #23 worked.
+     ==> CONSEQUENCE FOR T12: SCHEMA-MEDICAL-TYPES-01 was the leading root-cause hypothesis for
+     W36/W37 stalling. That hypothesis is now EXCLUDED. The 09-11 Day-42 verdicts must not
+     attribute failure to schema.
+
+PREMISE DISPROVEN, DOWNGRADED — not closed (1)
+  2. PTSD-CLUSTER-DROP-01. BACKLOG states "-61.3% impressions, -53 positions" on
+     /treatments/acceptance-and-commitment-therapy-act. Not supported by any measurement.
+     True page-dimension read (08-19->08-26 vs 08-12->08-19): impressions 447 -> 480 = **+7.4%**,
+     clicks 5 -> 1, avg position 42.80 -> 55.51 = **-12.7**.
+     ⚠ MY FIRST NUMBERS WERE ALSO WRONG and the Verifier caught it. I ran gsc-pull.py and reported
+     122 vs 97 impressions (+25.8%), pos 59.0 vs 48.8, clicks 2->0. Those are faithful reproductions
+     of what the script returns — and they are truncation artifacts: the script sees ~25% of the
+     page's real impressions. **I used a tool the system has already documented as broken
+     (GSC-MEASUREMENT-INTEGRITY-01, BACKLOG line ~496) to close a BACKLOG row.** Do not repeat.
+     Verdict stands but with the correct shape: the CRITICAL framing is false (impressions are UP),
+     yet -12.7 positions with clicks 5->1 is a real, moderate negative signal. Re-scoped from an
+     investigate_regression sprint to a watch item on T12's 09-08 run. Source of the bad number is
+     F7 WEEKLY-REPORT-NO-IMPRESSION-FLOOR-01, already filed 08-28.
+     ⚠ SECOND CLOSURE OF THIS ID. T20 closed it 08-28 against the PTSD *cluster* (229->550,
+     +140.2%); it was re-raised 08-29 against the ACT *page*. Two objects, one ID. See F10.
+
+VERIFIED REAL, RE-ESCALATED (5) — all with the fix pre-written
+  P0  T9-DEPLOY-UNBLOCK-DEV-01 — **DAY 5.** 7/7 slugs re-confirmed HTTP 404 today. Verifier
+      independently corroborated the batch boundary two ways: all 7 MDX untracked in git, and a
+      full diff of the live sitemap against the working tree returns zero live-but-missing-locally
+      and exactly these 7 local-but-not-live. Spec unchanged:
+      reports/dev-handoff-2026-08-28-t9-undeployed-batch.md
+      ⚠ NEW BLOCKER ON THE PUSH: src/content/blogs/psychiatrist-online-consultation-india.mdx
+      STILL carries reviewer: "santanu-tripathy". The 08-28 run corrected the *brief*, not the MDX,
+      and the log recorded it as "corrected" — which reads as done. Pushing as-is creates a 6th
+      live page with a broken reviewedBy chain. Swap to dr-sneha (/doctors/dr-sneha = TRUE 200)
+      BEFORE the push.
+  P1  DOCTORS-LISTINGS-DEAD-LINKS-DEV-01 — **DAY 4, and the root cause is now identified.**
+      `/doctors-listings/` is not a route at all: 9/9 flagged URLs 404, 6/6 further MDX-backed
+      slugs also 404, 0 of its URLs in the 842-URL sitemap, and no rule in redirects.mjs /
+      next.config.ts / middleware.ts. `src/app/doctors/[slug]/page.tsx` merges
+      getCollection("doctors") + getCollection("doctors-listings") and sets
+      canonical: /doctors/${slug} — so the 229 MDX in src/content/doctors-listings/ publish at
+      **/doctors/<slug>**. The anchors were written with the internal content-directory name.
+      6 of 9 are a pure string rewrite (all 6 verified TRUE 200 without -L). The other 3 have no
+      MDX at all — a second, independent cause needing substitutes. Verifier flagged that framing
+      gap; the addendum now states both causes.
+      New spec: reports/dev-handoff-2026-08-29-doctors-listings-root-cause.md
+  P1  REVIEWER-SLUG-ORPHAN-02 — **re-scoped 1 slug / 1 page -> 2 slugs / 9 pages.** All 48 distinct
+      reviewer slugs re-tested by live HTTP **without -L** (file-existence was the wrong test).
+      Not live: santanu-tripathy -> 301 (6 blog pages), dr-akanksha-bhor -> 301 (3 blog pages).
+      The 5 live santanu pages emit ZERO reviewedBy nodes (control /blogs/signs-of-adhd emits a
+      full Person node; emitter confirmed at src/lib/reviewer.ts:63). The akanksha 3 are latent —
+      production still emits the pre-reassignment reviewer and will break on next deploy.
+  P1  GSC-MEASUREMENT-INTEGRITY-01 — **DUE 2026-09-01, 3 days, still unfixed.** gsc-pull.py:80 has
+      no startswith("http") guard; rowLimit 50 / 25 unchanged. TWO NEW DEFECTS found today:
+      (3) the prescribed fix is INSUFFICIENT AS WRITTEN — the row says "raise rowLimit to 1000 and
+      paginate", but measured on the ACT page rowLimit 50 returns 25% of true page impressions and
+      rowLimit 5000 (un-truncated, 115 rows) still returns only 44%. The residue is GSC's
+      query-level privacy filter, which no rowLimit can defeat. Only dimensions:["page"] is correct.
+      Whoever implements this must be told, or the rowLimit clause will leave the bug in place
+      while appearing to fix it.
+      (4) OVERLAPPING WINDOWS — get_comparison_windows() (line 45) returns current [today-10,
+      today-3] and previous [today-17, today-10]. GSC ranges are inclusive, so today-10 falls in
+      BOTH windows and each window is 8 days, not the 7 the docstring claims. Every delta the
+      script has ever produced spans two overlapping 8-day windows.
+  P2  REVIEWER-NEVER-ASSIGNED-01 — verified exact (304 blog MDX / 252 with reviewer / 52 without)
+      but **severity lowered**: the 52 still emit "author":{"@type":"Person"}. They lack the
+      *medical reviewer* signal specifically, not authorship. Decision still needed.
+
+AUTO-FIXED (5) — all within brain-file scope; src/** and scripts/*.py untouched
+  1. BACKLOG SCHEMA-MEDICALWEBPAGE-RESIDUAL-01 row struck through and closed with evidence.
+  2. BACKLOG PTSD-CLUSTER-DROP-01 row rewritten with true figures + downgraded action type.
+  3. BACKLOG DOCTORS-LISTINGS row rewritten with the route root cause + the 6-vs-3 split.
+  4. BACKLOG REVIEWER row re-scoped; REVIEWER-SLUG-ORPHAN-02, DISCOVERY-EMITS-COVERED-VARIANTS-01
+     and SCHEMA-TREATMENTS-NO-PAGE-NODE-01 added; GSC row rewritten with all 4 defects.
+  5. Vetoed brief annotated in place with a DO-NOT-SHIP header, verifier_vetoed_until 2026-09-05,
+     the three veto grounds and a retarget recommendation. Kept, not archived — the 320-impression
+     demand is real and the regulatory research is sound.
+
+FILED TO T13 (1)
+  F10 FALSE-POSITIVE-CLOSURES-DO-NOT-STICK-01. T20 writes closures to
+      brain/memory/remediation-log.md. T10 reads brain/BACKLOG.md and does not read the remediation
+      log. So a flag T20 closes with evidence is re-raised by T10 the next day — demonstrated
+      twice now (PTSD-CLUSTER-DROP-01 closed 08-28, re-raised 08-29; the "Core Update" label
+      corrected 08-28, still asserted in the 08-29 stamps). Fix: T20 must write every closure back
+      into BACKLOG.md as a struck-through row with evidence (done manually this run), and T10 must
+      read the last T20 block before scoring candidates.
+
+STANDING JOB — BRIEF QUEUE
+  By the spec's literal metric: **16 shippable** (16 briefs target /blogs/, 16/16 carry intent_tier,
+  16/16 slugs return 404) vs floor 6 => HEALTHY, no refill mandated.
+  By what T9 can actually author next run: **3.** Decomposition — 7 authored-awaiting-deploy,
+  5 hard NEEDS_HUMAN holds (conduct-disorder-in-adults, conduct-disorder-in-children,
+  gender-identity-disorder, is-online-therapy-confidential, relationship-problems-and-solutions),
+  1 shipped-pending-deploy (rtms-treatment-cost-in-india — Verifier caught this; I had it as
+  authorable), leaving online-counselling-in-hindi, online-counselling-in-malayalam,
+  online-therapy-in-telugu.
+  Verifier judgement, accepted: counting blocked inventory as shippable is the same accounting
+  error that produced last run's "11 shippable — HEALTHY". Against the question the floor exists
+  to answer — *can T9 do work next run* — the queue is STARVED at 3.
+  ==> Refill fired. Produced 1 brief. That brief was VETOED by the gate (see HEADLINE).
+  ==> ⚠️ TIER A EXHAUSTED — reported short per INTENT-PRIORITY §3 ("do not backfill with Tier C...
+      report and run short") rather than manufacturing cannibalising briefs to hit a count.
+      The honest position: brief supply is not the lever. DISCOVERY-EMITS-COVERED-VARIANTS-01 is,
+      and behind it the 57 Tier A /doctors/ briefs blocked by T9-DOCTORS-QUEUE-MISLABEL-01.
+      Confirmed today: 0 of those 57 target slugs already have MDX, so they are genuinely
+      unshipped work, not duplicates.
+
+NOT ESCALATED — verified and closed silently
+  - ops-health 08-28 records "T20 auto-remediation: MISSED Thu+Fri". T20 ran Fri 08-28 at 16:01
+    (log present). 4th recurrence of F1 T16-FUTURE-RUN-MISLABELLED-AS-MISSED-01, already filed.
+  - Discovery freshness: new-content-opportunities.json dated 08-24, its Monday cadence. FRESH.
+    No "DISCOVERY STALE" in today's logs. No re-run fired.
+  - Chrome: no T17/T5 SERP stall in today's logs. No restart needed.
+  - Untiered briefs: 0. All 16 /blogs/ briefs carry intent_tier.
+
+CONSTRAINTS HONOURED
+  src/** untouched (read-only inspection). scripts/*.py untouched. No pushes to the website repo.
+  Nothing deleted — the vetoed brief was annotated, BACKLOG rows struck through in place.
+  No YMYL page shipped; 0 pages shipped at all. Weekly cap not approached (0 used by T20; the
+  /blogs/ cluster is at 13/6 for the window, which is itself one of the three veto grounds).
+  Billing, ad accounts and credentials untouched.
+
+VERIFIER SUB-AGENT — 2 runs, and it changed the output materially both times
+  Run 1 (8 claims on the flag set): 4 UPHELD / 3 CORRECTION / 1 VETO / 6 unprompted findings.
+    - CORRECTION: my PTSD figures were truncation artifacts (see above) — the closure survived but
+      its shape changed from "clean false positive, no action" to "premise false, real -12.7
+      signal, downgrade".
+    - CORRECTION: rtms brief is held (SHIPPED/PENDING_DEPLOY), so authorable is 3 not 4; and my
+      brief scan missed 2 refresh briefs that use `**URL:**` rather than `**Suggested URL:**`.
+    - VETO: I proposed re-typing THERAPIST-NEAR-ME-SERP-CHECK-01 from investigate_regression to
+      new_content. **Withdrawn.** I had audited the wrong row — the ID appears TWICE in BACKLOG
+      with different targets, and the second targets /doctors/therapists-in-bangalore, which is
+      live (200), high-volume (3,011 impr / pos 28.4) and genuinely regressible. The row is
+      correct; the duplicate ID is the actual defect. Logged for T10, not renamed by me.
+  Run 2 (gate on the brief I generated): overall VETO on three independent grounds — AP9 content
+    redundancy, /blogs/ cluster cap 13/6, and a reviewer whose page is not live. All accepted.
+
+LESSON — this run's version of the recurring failure
+  Both of my substantive errors today were the same shape as the last two runs': **I measured
+  something adjacent to the thing I was claiming.** I certified `/doctors/dr-akanksha-bhor` as
+  "200" using `curl -L`, which follows the 301 — the exact defect I was simultaneously escalating
+  in santanu-tripathy. And I tested content redundancy by curling a slug, which tests filenames,
+  not content.
+  The rule from 08-28 ("any curl used as evidence must record its status code without -L") was
+  written down and I still used -L today. Writing the rule in the log is not enough; it has to be
+  in the step the next run executes.
+  **Two concrete rules for the next run:**
+  (a) Every status code cited as evidence must be captured WITHOUT `-L`. A 301 is not a 200.
+      I re-ran the entire dead-links escalation without -L before shipping it — it held — but I
+      would not have known to without the Verifier.
+  (b) A redundancy check must FETCH AND READ the nearest live page, and must also read
+      logs/auto-ship-week-*.txt, because pages authored-but-not-deployed are 404 and therefore
+      invisible to any sitemap- or URL-based check.
+================================================================================

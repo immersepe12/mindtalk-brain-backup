@@ -193,3 +193,6 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-08-26T20:00:00Z | FUTURE-SKIP | proposal: t10-stale-proposal-alert-20260823T2030 | Apply-on: 2026-08-30 (4 days in future). No action taken.
 2026-08-26T20:00:00Z | FUTURE-SKIP | proposal: t12-core-update-confound-guard-20260823T2030 | Apply-on: 2026-08-30 (4 days in future). No action taken.
 2026-08-26T20:00:00Z | FUTURE-SKIP | proposal: t9-india-volume-verifier-gate-20260823T2030 | Apply-on: 2026-08-30 (4 days in future). No action taken.
+2026-08-30T14:42:00Z | APPLIED | proposal: t12-core-update-confound-guard-20260823T2030 | file: cowork-tasks/task12-learner.md | snapshot: brain/before-snapshots/task12-learner-20260830T144200.bak
+2026-08-30T14:42:00Z | APPLIED | proposal: t9-india-volume-verifier-gate-20260823T2030 | file: cowork-tasks/task9-auto-ship-new-blogs.md | snapshot: brain/before-snapshots/task9-auto-ship-new-blogs-20260830T144200.bak
+2026-08-30T14:42:00Z | APPLIED | proposal: t10-stale-proposal-alert-20260823T2030 | file: cowork-tasks/task10-strategist.md | snapshot: brain/before-snapshots/task10-strategist-20260830T144200.bak

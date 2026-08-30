@@ -99,3 +99,6 @@
 2026-08-26-0946 | 7 files changed | commit: f170a3d | push: success
 2026-08-26T17:41:02Z | 24 files changed (UNCOMMITTED — index.lock stale 119m, FUSE rm blocked; remote is in-sync with prior HEAD 6606bcf) | push: up-to-date (prior commit already pushed)
 2026-08-28T10:27:12Z | LOCK BLOCKED (index.lock 42h stale, FUSE EPERM) — 26 files uncommitted | last clean commit: 6606bcf (2026-08-26) | push: skipped (nothing new committed)
+
+2026-08-28T17:42Z | 5 files changed | commit: 712ff1dc7849 | push: success (6a746b4→712ff1d)
+2026-08-29T17:39:35Z | 6 files changed | commit: 712ff1dc7849940a8d1c5cc4ca03d1267a891e0d | push: success

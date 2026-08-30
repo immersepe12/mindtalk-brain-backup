@@ -242,6 +242,41 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 
 ---
 
+
+---
+**T12 Learner stamp — 2026-08-30 18:00 IST (Sunday weekly run):**
+
+**Watches evaluated this week:** 5 corrected interim re-evaluations (W30/W31/W32/W33/W39) — all INTERMEDIATE, no Day-42 finals due. Used T20 authoritative Aug 13-20 GSC data (PRE-Core-Update, clean).
+
+**Corrected verdicts:**
+- W30 🟡 PARTIAL: /blogs/relationship-stress — "relationship stress" pos 7.2 (page 1) at Day-33, 78 impr / 0 clicks
+- W31 🟢 RECOVERED: /blogs/sleep-schedule — pos 1.8 on primary KW, 1,608 impr at Day-33 (EXCEPTIONAL)
+- W32 🟡 PARTIAL: /blogs/mental-exhaustion — "mental exhaustion" pos 6.3 (page 1), diluted by head-term competition
+- W33 🟢 TRACKING WELL: /blogs/eft-tapping — "eft tapping" pos 5.4 (page 1), 467 impr, clicks begun
+- W39 🟢 RECOVERED: /blogs/yoga-for-anxiety CTR refresh — pos 8.8 vs 14.9 baseline, +1,193% impr (P11 confirmed)
+
+**Pattern summary:** 3/4 Jul-28 T9 blogs are on page-1 at Day-33 → P12 trajectory confirmed. No LEARNER FLAG (0 final closures). 0 new PRINCIPLES. 0 new ANTI-PATTERNS.
+
+**Step 5 proposals DUE TODAY (Apply-on 2026-08-30T20:00 IST):**
+- `t12-core-update-confound-guard-20260823T2030.md` → amends task12-learner.md (CANNOT self-apply; flagged for Kushal manual review or next Cowork session)
+- `t10-stale-proposal-alert-20260823T2030.md` → amends task10-strategist.md (T10 Strategist to apply at 2026-08-31 8 PM IST run)
+- `t9-india-volume-verifier-gate-20260823T2030.md` → amends task9-auto-ship-new-blogs.md (T10 Strategist to apply at 2026-08-31 8 PM IST run)
+
+**BACKLOG:** 37 completed/~~strikethrough~~ rows archived from Active table. Archive entry added to Completed section.
+
+**TRAJECTORY:** Aug 17-23 row backfilled (clicks 3,394 / impr 366,184 / CTR 0.9% / pos 12.9 / ~870 pages). Aug 24-30 placeholder row added (0 NEW shipped; T9 dead 08-26+08-28; Core Update live).
+
+**Upcoming critical dates:**
+- 2026-09-01 — W40 Day-21 (5 Aug-11 T9 blogs)
+- 2026-09-04 — W-PSYCH-BLR check
+- 2026-09-05 — Core Update expected to settle; PTSD investigate_regression fires; YMYL hold lifts
+- 2026-09-08 — W30/W31/W32/W33 Day-42 FINALS (4 Jul-28 T9 blogs) + W41 Day-21
+- 2026-09-11 — W36/W37 Day-42 (YMYL depression+anxiety refreshes)
+- 2026-09-15 — W38 Day-42 (narrative-therapy refresh)
+- 2026-09-16 — W39 Day-42 (yoga CTR refresh)
+
+**Next T12 run: 2026-09-07 (Sunday 6 PM IST)**
+
 ## Current strategic state
 
 ### Site posture
@@ -751,3 +786,43 @@ BACKLOG unchanged (8 items from noon decision log remain correct). Step 10 Meta-
 - Step 10 Meta-Learner: t10/t12/t9 proposals = Apply-on 2026-08-30 FUTURE SKIP. t16 + t5-floor-miss = MISMATCH-SKIP #18+ (permanently superseded by t20/t21 applied 08-10). Stale alert posted to Slack (both 24 days past Apply-on 2026-08-02).
 - Top 5 next 72h: (1) DOCTORS-LISTINGS-DEAD-LINKS-01 flag_for_human IMMEDIATE; (2) CORE-UPDATE-YMYL-HOLD-01 ACTIVE; (3) T9-NON-YMYL-PIPELINE-CONTINUE-01; (4) CHATGPT-AEO-FAQ-EXPANSION-01 HOLD 09-05; (5) NARRATIVE-THERAPY-INVESTIGATE-01 HOLD 09-05.
 
+
+---
+**2026-08-29 T10 Strategist:**
+Site posture: CONSERVATIVE. ALGO_WATCH ACTIVE (unconfirmed SERP volatility, not a confirmed Google Core Update). 0 CRITICAL, 0 MAJOR today. 1 MODERATE (psychologists-in-mysore pos 7→11 — volatility confound, no action). T9 pipeline blocked: 7 authored blogs 404 since 08-26 (day 4; T9-SILENT-DEATH-01 was the alert; T9-DEPLOY-UNBLOCK-DEV-01 now in BACKLOG as IMMEDIATE dev action).
+
+**MATERIAL DECISION: YMYL hold settle date re-anchored 09-05 → 09-10.** Reason: the 09-05 date was anchored to "confirmed August 2026 Core Update starting 08-26" — but gsc-validation-2026-08-28 Step 7 + independent search confirmed NO Google-confirmed update exists. The ALGO_WATCH hold STAYS (real basis: documented SERP volatility Aug 1–3 + mid-August in healthcare/MH vertical; 5 confirmed-drops.json entries algo_watch=True). New settle check = 2026-09-10 (after T12's 09-08 weekly run; lift requires clean gsc-validation + no new 🔴/⚫ watch closures). All items held to "09-05" (CHATGPT-AEO-SPRINT-REVIEW-01, PTSD-CLUSTER-DROP-01) now held to "09-10".
+
+**Step 10 Meta-Learner proposals:** t10-stale-alert + t12-core-update-confound-guard + t9-india-volume-verifier-gate all Apply-on 2026-08-30T20:00+05:30 — STILL FUTURE (1 day). NO-OP today. **MUST be FIRST ACTION of T10 08-30 run.**
+
+**NEW in BACKLOG:** T9-DEPLOY-UNBLOCK-DEV-01 (IMMEDIATE — 7 authored blogs 404, dev handoff at reports/dev-handoff-2026-08-28-t9-undeployed-batch.md) + DOCTORS-LISTINGS-DEAD-LINKS-DEV-01 (IMMEDIATE — 10 dead Tier A anchors, dev handoff at reports/dev-handoff-2026-08-26-dead-links.md) + REVIEWER-NEVER-ASSIGNED-01 (this week — 52 live blogs with no reviewer field, E-E-A-T gap during volatility).
+
+**Upcoming high-density window:** 09-01 (W40 Day-21), 09-04 (6 Day-42 finals + W-PSYCH-BLR + W-COUN-BLR), 09-08 (W30-W33 Day-42 finals requiring corrected GSC data — GSC-MEASUREMENT-INTEGRITY-01 dev fix must be live by 09-01).
+
+**Backend fail rate:** 13.7% (4th consecutive rise). Engineering escalation pending. Ads restart blocked until resolved.
+
+---
+**2026-08-30 T10 Strategist stamp:**
+
+ALGO_WATCH: ACTIVE (settle check 2026-09-10). Site posture: CONSERVATIVE.
+
+**Meta-Learner proposals applied (3):**
+- T12 Step 4b confound guard: Core Update only valid confound if ALGO_WATCH confirmed active; future updates not valid; QDF only if within 6-week post-publish window; ≥50% Day-21 zero impressions → LEARNER FLAG.
+- T9 Step 3b P12-E3 gate: india_monthly_volume < 100 → VETO (field absent = skip/assume T5 validated).
+- T10 stale proposal scan: proposals >14 days past Apply-on date → alert to Slack + document in applied-history.md.
+
+**New signal:** Psychiatrist/psychiatrists near me cluster = 4.2K impr/wk, pos 7–9, ~0.1% CTR. Tier A CTR crisis. Route via T2 URL identification before queueing investigate_regression. Not a ranking problem — title/snippet mismatch hypothesis. Post-09-10 action.
+
+**T9 pipeline:** Day 5 frozen (7 authored blogs 404). Dev handoff at reports/dev-handoff-2026-08-28-t9-undeployed-batch.md. REVIEWER-SLUG-ORPHAN-02 must be fixed before push (santanu-tripathy + dr-akanksha-bhor both 301).
+
+**PTSD-CLUSTER-DROP-01:** CONFIRMED downgraded by T20 08-29. ACT page impressions +7.4% (not −61.3%). Low-priority watch only — do not re-raise as CRITICAL. Fold into T12 09-08.
+
+**Q3 targets:** Clicks 3,394 vs target 2,800 ✅. CTR 0.9% vs target 0.85% ✅. Both exceeded.
+
+**Key upcoming dates:**
+- 09-01: W40 Day-21 (T12 auto)
+- 09-01: GSC-MEASUREMENT-INTEGRITY-01 dev fix deadline (W30-W33 Day-42 finals need corrected data)
+- 09-04: 6 Day-42 finals batch (T4 auto — hyperactive-adhd + 5 mindful-minutes cohort)
+- 09-06: 3 Meta-Learner proposals apply (ap12-url-locked-violation, t12-gsc-zero-data-guard, t14-cwv-multisample-gate)
+- 09-08: T12 weekly run (W30-W33 Day-42 finals)
+- 09-10: ALGO_WATCH settle check

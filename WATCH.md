@@ -21,6 +21,22 @@
 > Note also: **W39's Day-42 final is 2026-09-16** (shipped 2026-08-05 + 42d). The 2026-08-20/08-22/08-23 Strategist stamps
 > call 2026-08-26 the "Day-42 final" — 2026-08-26 is the **Day-21 midpoint**. `WATCH.md` (this file) is correct.
 
+> ### ✅ T12 LEARNER CORRECTED INTERIM VERDICTS — 2026-08-30 18:00 IST
+> 
+> Using T20's authoritative GSC data (Aug 13–20, PRE-Core-Update). No final closures — all watches remain open to Day-42.
+> 
+> | Watch | Corrected Data (Aug 13-20) | Primary KW | T12 Verdict |
+> |---|---|---|---|
+> | W30 | 78 impr / 0 clicks / pos 8.6 | "relationship stress" pos 7.2 = page 1 | 🟡 PARTIAL (Day-33) |
+> | W31 | 1,608 impr / 2 clicks / pos 9.6 | primary KW pos 1.8 = EXCEPTIONAL | 🟢 RECOVERED (Day-33) |
+> | W32 | 376 impr / 0 clicks / pos 17.3 | "mental exhaustion" pos 6.3 = page 1 | 🟡 PARTIAL (Day-33) |
+> | W33 | 467 impr / 2 clicks / pos 8.1 | "eft tapping" pos 5.4 = page 1 | 🟢 TRACKING WELL (Day-33) |
+> | W39 | 2,055 impr / 16 clicks / pos 8.8 | pos 8.8 vs 14.9 baseline (+1,193% impr) | 🟢 RECOVERED (Day-25) |
+> 
+> All 4 Jul-28 T9 blogs on page-1 at Day-21/33 — P12 trajectory confirmed. W31 EXCEPTIONAL. W39 refresh P11 confirmed. Day-42 finals (09-08 for W30-W33, 09-16 for W39) will carry CORE-UPDATE-CONFOUND (August CU Day 4). Experiment files: `brain/memory/experiments/corrected-interim-W{30-33,39}-2026-08-30.md`.
+
+
+
 
 ---
 **T10 Strategist stamp — 2026-08-28 8 PM IST:** Core Update Day 3 LIVE. No new watches opened today (psychologists-in-mysore MODERATE read at Core Update Day 3 — confound, defer AP5 check to 09-05). W38 narrative-therapy still OPEN (URGENT Day-21 regression, Day-42 final 09-15 — investigate_regression on 09-05). Step 10 NO-OP. **Upcoming**: 09-01 W40 Day-21; 09-04 stub-pilot Day-42 (6 URLs) + W-PSYCH-BLR-20260821; 09-05 Core Update settle → unblock YMYL + narrative-therapy investigate_regression; 09-08 W30-W33 Day-42 finals + W41 Day-21; 09-11 W36/W37 Day-42; 09-15 W38 Day-42; 09-16 W39 Day-42.
@@ -1159,3 +1175,25 @@ tirzah-johnson load=9 (over cap; brief-specified override). tejal-jaiswal load=7
 - W-PSYCH-BLR-20260821 (/doctors/psychologists-in-bangalore): no change. Rank drop 08-25 (pos 13→100) preceded by brief ship 08-21 — Core Update now active as confound. Check date 09-04 stands.
 - W38 narrative-therapy: OPEN, YMYL. Kushal decision pending (a/b/c from T11 flag). Earliest next action 09-05.
 
+
+---
+**2026-08-29 T10 Strategist stamp:**
+0 new watches opened (no content shipped). Clean signal day — 0 CRITICAL, 0 MAJOR. ALGO_WATCH ACTIVE (SERP volatility; 5 confirmed-drops held).
+
+**YMYL settle date RE-ANCHORED: 09-05 → 09-10.** The 09-05 date was anchored to "August 2026 Core Update confirmed 08-26" — but that update was never officially confirmed by Google (verified by gsc-validation-2026-08-28 Step 7 + independent web search). Real basis for ALGO_WATCH: documented SERP volatility Aug 1–3 + mid-August (healthcare vertical). New anchor: 2026-09-10 = earliest credible unblock check (after T12 09-08 weekly run + clean gsc-validation). All items held to "09-05" now held to "09-10" unless new evidence arrives earlier.
+
+**Step 10 note:** t10-stale-alert + t12-core-update-confound-guard + t9-india-volume-verifier-gate all Apply-on 2026-08-30T20:00+05:30 — **apply TOMORROW** as FIRST ACTION of T10 08-30 run.
+
+**Upcoming watch density:**
+- **2026-09-01 (3 days):** ⚡ W40 Day-21 midpoints (5 T9 blogs from 08-11: anxiety-shortness-of-breath-relief, handling-partners-anger, ptsd-recovery-steps, ocd-thoughts-immediately, therapy-for-relationship-issues). T12 auto-evaluates.
+- **2026-09-04 (6 days):** ⚡ 6 Day-42 finals: /blogs/hyperactive-vs-inattentive-adhd + 5 mindful-minutes stub-pilot pages (4-7-8-breathing, loving-kindness-meditation, morning-energy-activation, panic-attack-grounding, pre-sleep-body-scan). T4/T12 auto-evaluate. Also W-PSYCH-BLR-20260821 + W-COUN-BLR-20260821 check date (psychologists + counsellors in bangalore refreshes). Core Update confound still potentially active — note caveat on verdicts.
+- **2026-09-08 (10 days):** ⚡ W30-W33 Day-42 finals (relationship-stress, sleep-schedule, mental-exhaustion, eft-tapping) + W41 Day-21 midpoints (7 T9 blogs 08-18). NOTE: W30-W33 verdicts depend on corrected GSC data (GSC-MEASUREMENT-INTEGRITY-01 dev fix must be in place by 09-01).
+- **2026-09-10 (12 days):** ⚡ YMYL hold settle check — gsc-validation + T12 signal review. Unblock YMYL refresh queue if clean. Fire PTSD-CLUSTER-DROP-01 + CHATGPT-AEO-SPRINT-REVIEW-01 if unblocked.
+- **2026-09-11 (13 days):** W36/W37 Day-42 finals (depression + anxiety YMYL — schema fix PR #23 recovery path).
+- **2026-09-15 (17 days):** W38 narrative-therapy Day-42 final (YMYL, Kushal a/b/c pending).
+- **2026-09-16 (18 days):** W39 yoga-for-anxiety Day-42 final.
+- **2026-09-21:** W18/W19/W20/W21 extended obs windows close (QDF_BLOCKED watches from 08-10).
+- **2026-09-22:** W40 Day-42 finals.
+- **2026-09-29:** W41 Day-42 finals.
+
+**Active watches summary (2026-08-29):** W17/W22/W23/W29/W34/W35 (closed), W11 (stale-pruned), W18 (QDF_BLOCKED, obs to 09-21), W19 (QDF_BLOCKED, extended to 09-21), W20 (NEEDS_REFRESH, extended to 09-21, refresh BACKLOGGED), W21 (QDF_BLOCKED, extended to 09-21), W24-W28 (stub-pilot, VERDICT 08-14 delivered — awaiting Kushal a/b/c decision), W30-W33 (Day-42 final 09-08 — MEASUREMENT-INVALID, corrected data required), W36 (🔴 STALLED OPEN, Day-42 final 09-11 — schema fix live, recovery possible), W37 (⚫ WORSE OPEN, Day-42 final 09-11 — schema fix live), W38 (narrative-therapy, Day-42 final 09-15, YMYL, Kushal decision pending), W39 (yoga-for-anxiety, Day-42 final 09-16), W40 (5 T9 blogs 08-11, Day-21 09-01 ⚡, Day-42 09-22), W41 (7 T9 blogs 08-18, Day-21 09-08, Day-42 09-29), W-PSYCH-BLR-20260821 (check 09-04), W-COUN-BLR-20260821 (check 09-04).
