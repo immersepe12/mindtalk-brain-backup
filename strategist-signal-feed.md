@@ -54,3 +54,17 @@
 - /consult/booking/8796 (19 rage clicks — do NOT send more traffic)
 
 **Dead clicks improving:** 4,441→3,761 (-15.3%) — W34 CRITICAL partially resolved.
+
+2026-09-02 (W36): Conversion data refreshed.
+- Goldmines: /treatments/cbt-therapy, /doctors (hub) [maintained]
+- Rockets: 4 pages [maintained]
+- Leaky Buckets queued for T18: none new
+- CRITICAL PRODUCT FLAG: Started Journey Task 3-week crash 645→365→124. Assessment Completed 877→546. Product team must investigate feature/bug.
+- chatgpt.com WATCH: 334→211 (-36.8%). Share 16.2%→9.6%. P5 status downgraded to WATCH. Need W37 confirmation.
+- Kerry/Kerala P8 W6 FULLY CONFIRMED: 67 clicks, 8+ cities. Create /doctors/malayalam-speaking page IMMEDIATELY.
+- Coimbatore BREAKOUT: 47 clicks (was 9). TN multi-city. P1 Tamil W10.
+- UP multi-city surge: Aligarh 14, Noida 14, Lucknow 6, Varanasi 7. Create /doctors/therapists-in-lucknow priority.
+- Geo concentration: Bengaluru 52.2%, TN 6.9%, Delhi 5.4%, Telangana 5.0%
+- Proposed content angles for T5: 4 (Kerala page, Coimbatore page, UP pages, MP dual-city page)
+- Rage clicks escalating: 479→571 (+19.2%). Watch auth/checkout path.
+- Revenue quality up: 200 payments + 237 bookings with -12.8% fewer visitors = conversion rate improvement.

@@ -24,3 +24,12 @@ Meta desc (fixed): "The most common relationship problems — communication brea
 
 ## Action Required
 Kushal decision: A / B / C
+
+---
+## ✅ RESOLVED 2026-08-31 — Kushal delegated decision authority
+
+**DECISION: RETIRE — absorbed by existing pages**
+
+Two live pages already cover this intent (/treatments/relationship-counselling and the couples cluster), and we just shipped /blogs/therapy-for-relationship-issues. A third generic page is pure cannibalisation with no differentiated angle. DECISION: archive the brief; fold any unique subtopics into the live relationship-counselling page as an enrichment refresh.
+
+Closed by Claude under standing authority ('choose the best solution and close it', 2026-08-31). No further human input required. Do not re-escalate.

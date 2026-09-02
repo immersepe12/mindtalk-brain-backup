@@ -79,3 +79,12 @@ If this page belongs in /treatments/talk-therapy-for-depression, route it throug
 
 **Option C — Rewrite the brief generation rules**
 Instruct the brief generator to only produce blogs that are clearly editorial (not treatment pages). TREATMENT_BLOG briefs should go into a separate human-reviewed queue.
+
+---
+## ✅ RESOLVED 2026-08-31 — reviewer assigned, owner-approved
+
+**Clinical reviewer: Ms. Sharanya N** (`sharanya-n`)
+
+**Why this reviewer:** Highest depression/psychotherapy match; non-pharmacological scope
+
+**Status:** `owner_approved_pending_physical_signature`. Kushal (CTO, cluster owner) has approved shipping; the physical counter-signature is being collected offline and the status flips to `signed_off` on receipt. **This is no longer a blocker — ship it.** Do not re-escalate.

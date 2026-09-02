@@ -172,3 +172,14 @@
 | Manipur NE India (P16) | W1 | Mental health content for NE India | W37 (3 more weeks) |
 | Madhya Pradesh / Jabalpur (new signal) | W1 | Monitor — may be ad-driven spike | W37 |
 | Australia diaspora (P12) | W3 | "Online therapy for Indians in Australia" | W37 (stable not growing) |
+
+## W36 additions — 2026-09-02
+
+| Pattern | Evidence (weeks) | Proposed new angle | Target topic | Priority |
+|---|---|---|---|---|
+| P8 Kerala fully confirmed, 8+ cities | 6 | /doctors/malayalam-speaking-psychologists (or /doctors/psychologists-in-kerala hub) | Kerala full-state lead capture | IMMEDIATE |
+| P1 Tamil Coimbatore breakout (+422%) | 1 (city) | /doctors/psychologists-in-coimbatore | Coimbatore tier-1 city page | HIGH |
+| UP multi-city W3 (Aligarh 14, Noida 14, Lucknow 6, Varanasi 7) | 3 | /doctors/psychologists-in-lucknow + /doctors/psychologists-in-noida | UP emerging market | HIGH (confirm W37) |
+| MP dual-city W2 (Indore 11, Bhopal 10) | 2 | /doctors/psychologists-in-indore | MP market seed | MEDIUM (confirm W37) |
+| Gujarat multi-city W2 (Rajkot 8, Surat 9) | 2 | /doctors/psychologists-in-surat + /doctors/psychologists-in-rajkot | Gujarat market seed | MEDIUM |
+

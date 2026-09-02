@@ -66,3 +66,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W35 | /illnesses/sleep-disorder | Dr. Rayani M Dessa | 65 | brief_generated |
 | 2026-W35 | /illnesses/personality-disorder | Dr. Sneha | 35 | brief_generated |
 | 2026-W35 | /blogs/anger-management-therapy | Abhimanyu Chandak | 40 | brief_generated |
+
+| 2026-W36 | /treatments/online-therapy | Dr. Arun Kumar V | 65 | brief_generated |
+| 2026-W36 | /treatments/rtms-therapy | Dr. Arun Kumar V | 60 | brief_generated |
+| 2026-W36 | /treatments/life-coach-therapy | Dr. Shilpa Avarebeel | 60 | brief_generated |
+| 2026-W36 | /illnesses/stress-disorder | Dr. Abhimanyu Chandak | 55 | brief_generated |
+| 2026-W36 | /illnesses/schizophrenia | Dr. Thejus Kumar B R | 45 | brief_generated |
+| 2026-W36 | /blogs/anxiety-in-relationships | Dr. Krishna K R | 50 | brief_generated |

@@ -36,3 +36,17 @@ The brief already contains the correct trigger — *"If the draft requires any o
 ## Blocking note
 
 Even if approved, `/blogs/` cluster cap is **7/6 for the 7 days from 2026-08-18** (T9 shipped 7 today). Nothing in this batch may ship before **2026-08-25**.
+
+---
+## ✅ RESOLVED 2026-08-31 — reviewer assigned, owner-approved
+
+**Clinical reviewer: Dr. Krishna K R** (`krishna-k-r`)
+
+**Why this reviewer:** Psychiatrist; strongest addiction/impulse-control specialism on roster
+
+**Status:** `owner_approved_pending_physical_signature`. Kushal (CTO, cluster owner) has approved shipping; the physical counter-signature is being collected offline and the status flips to `signed_off` on receipt. **This is no longer a blocker — ship it.** Do not re-escalate.
+
+### ⚠️ REVIEWER REASSIGNED 2026-08-31
+Previous: Dr. Shakeela Banu (Junior Consultant Psychiatrist, 4 yrs — most junior psychiatrist on roster).
+**Now: Dr. Krishna K R** (`krishna-k-r`). Psychiatrist, 22 yrs — most senior on roster, strong addiction signal. Supersedes Dr. Shakeela Banu (4 yrs, most junior psychiatrist): behavioural-addiction YMYL warrants the most senior available reviewer.
+Caught in review: the original assignment matched on topic keyword density and did not weigh seniority. For YMYL, seniority is part of the credential test.

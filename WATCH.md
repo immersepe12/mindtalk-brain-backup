@@ -1197,3 +1197,44 @@ tirzah-johnson load=9 (over cap; brief-specified override). tejal-jaiswal load=7
 - **2026-09-29:** W41 Day-42 finals.
 
 **Active watches summary (2026-08-29):** W17/W22/W23/W29/W34/W35 (closed), W11 (stale-pruned), W18 (QDF_BLOCKED, obs to 09-21), W19 (QDF_BLOCKED, extended to 09-21), W20 (NEEDS_REFRESH, extended to 09-21, refresh BACKLOGGED), W21 (QDF_BLOCKED, extended to 09-21), W24-W28 (stub-pilot, VERDICT 08-14 delivered — awaiting Kushal a/b/c decision), W30-W33 (Day-42 final 09-08 — MEASUREMENT-INVALID, corrected data required), W36 (🔴 STALLED OPEN, Day-42 final 09-11 — schema fix live, recovery possible), W37 (⚫ WORSE OPEN, Day-42 final 09-11 — schema fix live), W38 (narrative-therapy, Day-42 final 09-15, YMYL, Kushal decision pending), W39 (yoga-for-anxiety, Day-42 final 09-16), W40 (5 T9 blogs 08-11, Day-21 09-01 ⚡, Day-42 09-22), W41 (7 T9 blogs 08-18, Day-21 09-08, Day-42 09-29), W-PSYCH-BLR-20260821 (check 09-04), W-COUN-BLR-20260821 (check 09-04).
+
+---
+## T10 Strategist Stamp — 2026-08-31
+
+**Run time:** 2026-08-31 20:00 IST
+**Site posture:** CONSERVATIVE — ALGO_WATCH ACTIVE (settle check 2026-09-10)
+**T9 pipeline:** BLOCKED — 7 authored blogs 404 since 08-26 (Day 5). B1 queued.
+
+**Active watches (no change):**
+- W30-W33 (Day-42 finals 2026-09-08 — 8 days)
+- W36 🔴 STALLED + W37 ⚫ WORSE (Day-42 finals 2026-09-11 — SCHEMA-MEDICAL-TYPES gap W28 batch)
+- W38 narrative-therapy (Day-42 2026-09-15 — URGENT: regression at Day 14)
+- W39 yoga-for-anxiety (Day-42 2026-09-16 — exceptional pos 8.8 at Day 12)
+- W42 psychology-of-love (ON HOLD — url_locked, ALGO_WATCH)
+
+**⚠ W40 Day-21 fires TOMORROW 2026-09-01** — T12 Learner will process.
+
+**No new watches opened** (no sprints shipped — T9 blocked).
+
+
+---
+## W43 — 2026-09-01 OPENED (T10 Strategist)
+
+**Cohort:** 8 new blogs shipped 2026-08-31 (T20 remediation + T9 recovery)
+**URLs:**
+| Watch ID | Path | Keyword | Open date | Day-21 check | Day-42 final |
+|---|---|---|---|---|---|
+| W43-1 | /blogs/psychiatrist-online-consultation-india | psychiatrist online consultation | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+| W43-2 | /blogs/therapy-cost-in-india | therapy cost in india | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+| W43-3 | /blogs/online-therapy-for-indians-in-usa | online therapy for indians in usa | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+| W43-4 | /blogs/couple-therapy-cost-in-bangalore | couple therapy cost in bangalore | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+| W43-5 | /blogs/therapy-after-a-breakup | therapy after a breakup | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+| W43-6 | /blogs/acrophobia-treatment-fear-of-heights | acrophobia treatment | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+| W43-7 | /blogs/rtms-treatment-cost-in-india | rtms treatment cost in india | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+| W43-8 | /blogs/online-psychiatrist-consultation-in-tamil | psychiatrist online consultation tamil | 2026-08-31 | 2026-09-21 | 2026-10-12 |
+
+**Note:** All 8 confirmed LIVE 200 and in sitemap.xml (902 locs) by T20 2026-08-31 sweep. Core Update Aug 22–Sep 7 active — any Day-21 classification should note confound caveat if ALGO_WATCH still active on 09-21 (it won't be — settle check is 09-10).
+
+**Watch status:** open
+
+| W-B7-REVIEWER-BATCH1-2026-09-09 | B7 staged batch 1 | 5 blogs (abandonment, burnout, emotional-distress, gaslighting, seasonal-affective) | reviewer=sucheta-saha added | check GSC impressions stability | 2026-09-02 | 2026-09-09 | scheduled |

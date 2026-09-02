@@ -5,7 +5,7 @@
 **Confidence requires:** ≥3 weeks of evidence for proposal, ≥4 weeks to fire as T5 priority
 
 ## Confirmed patterns (≥3 weeks — UNLOCK FOR T5)
-**Last updated: 2026-08-19 (W34, week 8+ of evidence for P1/P2/P3/P5)**
+**Last updated: 2026-09-02 (W36)**
 
 ---
 

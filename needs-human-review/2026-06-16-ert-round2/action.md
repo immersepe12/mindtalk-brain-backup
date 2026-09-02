@@ -55,3 +55,17 @@ After 06-23 Strategist re-reads ERT context with Sprint readout evidence + decid
 - structural URL migration (if all 3 sprints stayed flat)
 
 **Status:** ESCALATED → HELD until 2026-06-23
+
+---
+## ✅ RESOLVED 2026-08-31 — reviewer assigned, owner-approved
+
+**Clinical reviewer: Dr. Vishal Kasal** (`vishal-kasal`)
+
+**Why this reviewer:** Strongest exposure/OCD/behaviour-therapy match
+
+**Status:** `owner_approved_pending_physical_signature`. Kushal (CTO, cluster owner) has approved shipping; the physical counter-signature is being collected offline and the status flips to `signed_off` on receipt. **This is no longer a blocker — ship it.** Do not re-escalate.
+
+### ⚠️ REVIEWER REASSIGNED 2026-08-31
+Previous: Dr. Shakeela Banu (Junior Consultant Psychiatrist, 4 yrs — most junior psychiatrist on roster).
+**Now: Dr. Vishal Kasal** (`vishal-kasal`). Psychiatrist, 17 yrs — senior, and highest exposure/OCD signal among senior consultants. Supersedes Dr. Shakeela Banu (4 yrs): ERT is an active clinical protocol and needs experienced oversight.
+Caught in review: the original assignment matched on topic keyword density and did not weigh seniority. For YMYL, seniority is part of the credential test.

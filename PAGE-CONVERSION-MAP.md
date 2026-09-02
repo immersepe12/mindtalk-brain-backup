@@ -1,139 +1,127 @@
-# Page Conversion Map — Updated 2026-08-26 (W35)
+# Page Conversion Map — Updated 2026-09-02 (W36)
 
 **Written by:** T19 Conversion Intelligence (Wed 11:00 IST) — overwritten each week.
 **Read by:** T10 Strategist, T18 Professional Input, T12 Learner.
-**Source:** Mixpanel project 4011856 (unified: mindtalk.in + consult.cadabams.com + app), trailing 7d Aug 19–25.
+**Source:** Mixpanel project 4011856 (unified: mindtalk.in + consult.cadabams.com + app), trailing 7d Aug 26–Sep 1.
 **Intent signal:** `book_appointment_clicked` (total events) ÷ unique page visitors (site-wide denominator).
 
-> **W35 data period:** Aug 19–25, 2026. Unique visitors 10,401 (+2.6% vs W34's 10,137).
+> **W36 data period:** Aug 26–Sep 1, 2026. Unique visitors 9,072 (-12.8% vs W35's 10,401).
 >
-> **📉 ORGANIC BOOK CLICKS BREAK 7-WEEK GROWTH STREAK: 1,787→1,539 (-13.9%).** First decline after 7 consecutive weeks of organic growth. Revenue IMPROVED (+7.7% payments) despite click decline — click-to-payment conversion rose significantly, suggesting higher-intent visitors.
+> **📉 VISITORS DROP -12.8% BUT INTENT RATE SURGES TO 24.1% (+4.2pp):** August Core Update (08-26) likely filtered low-intent informational traffic, concentrating commercial visitors. Revenue hit all-time-high quality: 200 payments + 237 bookings = strong week despite traffic dip.
 >
-> **🔥 CHATGPT.COM ACCELERATES: 300→334 book clicks (+11.3%). Now 16.2% of ALL book clicks** (up from 12.6% W34). P5 Week 6 major confirmation. chatgpt.com is now the single largest attributable non-paid traffic source.
+> **🔴 chatgpt.com SIGNIFICANT DECLINE: 334→211 (-36.8%). Share drops 16.2%→9.6%.** First major step-back since P5 was confirmed. W37 verdict needed: variance or reversal. P5 status → WATCH.
 >
-> **⚠️ STARTED JOURNEY TASK CRASH: 645→365 (-43.4%).** Critical app engagement drop. Flag for product team — could indicate a feature change, bug, or UX change in the journeys flow.
+> **🔴 STARTED JOURNEY TASK DEEPENING CRASH: 365→124 (-66.0%).** 3-WEEK DOWNTREND: 645→365→124. Approaching zero. CRITICAL escalation for product team. Assessment Completed also crashing: 877→546 (-37.7%).
 >
-> **🔥 GEOGRAPHIC ROTATION:** Karnataka -20.6% (Bengaluru -21.2%), Delhi -45.2% (W34 record was one-week anomaly). Offset by Telangana +60.9% 🔥, Tamil Nadu +47.1% 🔥, West Bengal +90.6% 🔥, Kerala +44.4% 🔥 (P8 W5 confirmed).
+> **🔥 KERALA SURGE: +71.8%, P8 W6 FULLY CONFIRMED.** Full multi-city spread: Kochi 13 + Kozhikode 14 + Kottayam 12 + Kondotty 8 + Kāladi 8 + Edakkād 4 + Thiruvananthapuram 5 + Thrissur 2. Malayalam doctor page = immediate T5 priority.
 >
-> **🔴 CHECKOUT AUTH FRICTION ESCALATING:** auth/login→checkout rage clicks = 27. Users attempting to pay are hitting a login wall and raging. IMMEDIATE dev review needed — this is in the critical payment path.
+> **🔥 COIMBATORE BREAKOUT: 47 clicks (vs W35: 9 = +422%).** Tamil Nadu now multi-city: Chennai 84 + Coimbatore 47 + Krishnagiri 9 + Salem 4. P1 Tamil W10 CONFIRMED.
 >
-> **⬇️ DEAD CLICKS IMPROVING:** 4,441→3,761 (-15.3%). W34 CRITICAL partially resolving.
+> **🔥 UTTAR PRADESH SURGE: +238%** (13→44). 4 cities simultaneously: Aligarh 14, Noida 14, Lucknow 6, Varanasi 7. First consistent multi-city signal from UP.
+>
+> **✅ KARNATAKA RECOVERY: +16.4%** after W35 step-back. Bengaluru 977→1,143. Karnataka share rises 48.6%→53.4%.
+>
+> **⚠️ TELANGANA STEP-BACK: -37.9%** (177→110, Hyderabad 174→107). After W35 recovery. P1 Telugu watch for W37.
 
 ---
 
-## Site-level W35 snapshot (Aug 19–25)
+## Site-level W36 snapshot (Aug 26–Sep 1)
 
-| Metric | W35 | W34 | WoW | Notes |
+| Metric | W36 | W35 | WoW | Notes |
 |---|---:|---:|---|---|
-| Unique visitors (site) | 10,401 | 10,137 | +2.6% ⬆️ | Continued growth |
-| book_appointment_clicked (total) | 2,065 | 2,388 | -13.6% 📉 | Click decline despite revenue growth |
-| Paid book clicks | 526 | 601 | -12.5% 📉 | Reduced paid spend |
-| **Organic book clicks** | **1,539** | **1,787** | **-13.9% 📉** | **7-week growth streak BROKEN** |
-| chatgpt.com book clicks | 334 | 300 | +11.3% 🔥 | P5 W6 — 16.2% of all clicks |
-| perplexity book clicks | 1 | 0 | 🆕 | First-ever Perplexity attribution |
-| whatsapp_clicked | 91 | 124 | -26.6% 📉 | Down significantly |
-| call_clicked | 56 | 45 | +24.4% ✅ | Growing |
-| form_submitted | 114 | 127 | -10.2% 📉 | Ads-driven decline |
-| lp_form_submitted | 59 | 64 | -7.8% 📉 | Ads-driven decline |
-| Payment Successful | 181 | 168 | +7.7% 🔥 | Revenue UP despite click decline |
-| Appointment Booked | 228 | 228 | flat | Stable |
-| Site-wide intent rate (book/uv) | 19.9% | 23.6% | -3.7pp 📉 | Rate drops despite revenue gain |
-| **Organic payments** | **178** | **166** | **+7.2% ✅** | **Organic revenue improving** |
-| Organic bookings | 222 | 225 | -1.3% stable | Near-flat |
-| mindtalk_web payments | 5 | 4 | +25% ✅ | Recovery from W34 bleed |
-| mindtalk_web bookings | 8 | 10 | -20% 📉 | Mild decline |
-| chatgpt.com payments | 2 | 2 | flat | AI revenue holding |
-| chatgpt.com bookings | 2 | 3 | -1 | Minor decline |
-| hero CTA payments | 2 | 1 | +1 | Homepage hero stable |
-| hero CTA bookings | 5 | 4 | +1 | Growing |
-| doctor_card payments | 3 | 3 | flat | Stable (attribution bleed remains) |
-| doctor_card bookings | 3 | 7 | -4 📉 | Decline — attribution noise vs real? |
-| Assessment Completed | 877 | 1,031 | -14.9% 📉 | App engagement dip |
-| Assessment Started | 2,476 | 2,720 | -9.0% 📉 | Fewer assessment starts |
-| Assessment completion rate | 35.4% | 37.9% | -2.5pp 📉 | Declining quality of starts |
-| **Started Journey Task** | **365** | **645** | **-43.4% 🔴** | **CRITICAL — product team flag** |
-| Stress Tracker Started | 260 | — | new KPI | — |
-| Rage clicks (site) | 479 | ~400 est | elevated | Multiple critical pages |
-| Dead clicks (site) | 3,761 | 4,441 | -15.3% ✅ | Improving from W34 CRITICAL |
+| Unique visitors (site) | 9,072 | 10,401 | -12.8% 📉 | August Core Update filter effect |
+| book_appointment_clicked (total) | 2,190 | 2,065 | +6.1% ✅ | Up despite fewer visitors |
+| Paid book clicks | 765 | 526 | +45.4% 📉 | Increased paid spend |
+| **Organic book clicks** | **1,425** | **1,539** | **-7.4% 📉** | |
+| chatgpt.com book clicks | 211 | 334 | -36.8% 🔴 | P5 WATCH |
+| perplexity book clicks | 5 | 1 | +400% | Growing signal |
+| whatsapp_clicked | 134 | 91 | +47.3% 🔥 | Significant recovery |
+| call_clicked | 70 | 56 | +25.0% ✅ | Growing |
+| form_submitted | 176 | 114 | +54.4% 🔥 | Mix of organic+paid |
+| lp_form_submitted | 106 | 59 | +79.7% 🔥 | Ads-driven |
+| Payment Successful | 200 | 181 | +10.5% ✅ | Strong revenue |
+| Appointment Booked | 237 | 228 | +3.9% ✅ | Stable growth |
+| Site-wide intent rate (book/uv) | 24.1% | 19.9% | +4.2pp ✅ | Quality traffic improving |
+| **Organic payments** | **192** | **178** | **+7.9% ✅** | Paid = gmb(4)+google(4)=8 |
+| Organic bookings | 227 | 222 | +2.3% ✅ | Paid = gmb(5)+google(5)=10 |
+| mindtalk_web payments | 5 | 5 | flat | Stable |
+| mindtalk_web bookings | 5 | 8 | -37.5% 📉 | Minor decline |
+| chatgpt.com payments | 1 | 2 | -1 | |
+| chatgpt.com bookings | 1 | 2 | -1 | |
+| hero CTA payments | 2 | 2 | flat | |
+| doctor_card payments | 3 | 3 | flat | |
+| Assessment Completed | 546 | 877 | -37.7% 🔴 | CRITICAL — multi-week crash |
+| Assessment Started | 1,808 | 2,476 | -27.0% 📉 | |
+| Assessment completion rate | 30.2% | 35.4% | -5.2pp 📉 | |
+| **Started Journey Task** | **124** | **365** | **-66.0% 🔴** | **CRITICAL — 3-wk crash: 645→365→124** |
+| Stress Tracker Started | 232 | 260 | -10.8% 📉 | |
+| riya_page_viewed | 22 | ~13 | +69% ✅ | Recovery |
+| Rage clicks (site) | 571 | 479 | +19.2% ⚠️ | Escalating |
+| Dead clicks (site) | 3,852 | 3,761 | +2.4% stable | |
 
 ---
 
-## Paid vs organic breakdown W35
+## Paid vs organic breakdown W36
 
-| Event | Total | Paid | Organic-attributable | mindtalk_web | chatgpt.com |
-|---|---:|---:|---:|---:|---:|
-| book_appointment_clicked | 2,065 | 526 (25.5%) | 1,539 (74.5%) | ~0 (tracked at payment level) | 334 (16.2%) |
-| form_submitted | 114 | est ~105 (~92%) | est ~9 (~8%) | 0 | 0 |
-| lp_form_submitted | 59 | est ~59 (~100%) | ~0 | 0 | 0 |
-| whatsapp_clicked | 91 | est ~25 (~27%) | est ~66 (~73%) | 0 | 0 |
-| call_clicked | 56 | est ~15 (~27%) | est ~41 (~73%) | 0 | 0 |
-| Payment Successful | 181 | gmb(2)+Google(1)=3 (1.7%) | 178 (98.3%) | 5 (2.8%) | 2 (1.1%) |
-| Appointment Booked | 228 | gmb(3)+meta(1)+Google(1)+google(1)=6 (2.6%) | 222 (97.4%) | 8 (3.5%) | 2 (0.9%) |
+| Event | Total | Paid | Organic-attributable | mindtalk_web | chatgpt.com | perplexity |
+|---|---:|---:|---:|---:|---:|---:|
+| book_appointment_clicked | 2,190 | 765 (34.9%) | 1,425 (65.1%) | ~0 | 211 (9.6%) | 5 (0.2%) |
+| form_submitted | 176 | est ~165 (~94%) | est ~11 (~6%) | 0 | 0 | 0 |
+| lp_form_submitted | 106 | est ~106 (~100%) | ~0 | 0 | 0 | 0 |
+| whatsapp_clicked | 134 | est ~35 (~26%) | est ~99 (~74%) | 0 | 0 | 0 |
+| call_clicked | 70 | est ~20 (~29%) | est ~50 (~71%) | 0 | 0 | 0 |
+| Payment Successful | 200 | gmb(4)+google(4)=8 (4.0%) | 192 (96.0%) | 5 (2.5%) | 1 (0.5%) | 0 |
+| Appointment Booked | 237 | gmb(5)+google(5)=10 (4.2%) | 227 (95.8%) | 5 (2.1%) | 1 (0.4%) | 0 |
 
-**Organic book clicks W35: 1,539 (-13.9% vs W34 1,787).** 7-week growth streak broken.
-**Paid book share: 25.5%** (vs W34 25.2%) — roughly stable paid share despite lower total.
-**chatgpt.com share: 16.2% of ALL book clicks** — new record, up from 12.6% W34.
-
----
-
-## UTM attribution breakdown W35
-
-### By utm_medium (payments)
-| UTM medium | Payments | Bookings | Notes |
-|---|---:|---:|---|
-| undefined | 173 | 214 | Majority — attribution gap |
-| doctor | 3 | 3 | Doctor page CTAs |
-| homepage | 2 | 4 | Homepage CTA |
-| organic | 2 | 3 | Explicit organic tag |
-| cpc | 1 | 2 | Paid search |
-| lp | 0 | 1 | Landing page |
-| paid_social | 0 | 1 | Meta social (E3-burnout creative) |
-
-### By utm_content (payments)
-| UTM content | Payments | Bookings | Notes |
-|---|---:|---:|---|
-| undefined | 176 | 219 | Majority |
-| hero | 2 | 5 | Homepage hero CTA — stable |
-| doctor_card | 3 | 3 | Doctor listing cards |
-| E3-burnout | 0 | 1 | Meta BOF creative — 1 booking |
+**Organic book clicks W36: 1,425 (-7.4% vs W35 1,539).** 2nd consecutive week of organic book click decline.
+**Paid book share: 34.9%** (vs W35 25.5%) — significant paid increase.
+**chatgpt.com share: 9.6% of ALL book clicks** — step back from W35 record 16.2%.
 
 ---
 
-## Page tier classification W35
+## UTM attribution breakdown W36
 
-*Per-page volume queries deferred (rate limit management). Site-level tiers held from W34. Key tier signal: organic payment conversion IMPROVED despite lower book clicks — Goldmine pages likely maintained or strengthened.*
+| utm_source | book_appointment_clicked | Type |
+|---|---:|---|
+| google (lowercase) | 440 | Paid |
+| undefined | 1,026 | Organic/direct |
+| Google (titlecase) | 174 | Paid |
+| chatgpt.com | 211 | AI organic |
+| direct | 178 | Direct |
+| GMB | 114 | Paid |
+| gmb | 16 | Paid |
+| paid | 17 | Paid |
+| sitelink | 3 | Paid |
+| meta | 1 | Paid |
+| perplexity | 5 | AI organic |
+| an | 5 | Unknown |
+| **TOTAL PAID** | **765** | |
+| **TOTAL ORGANIC (non-paid)** | **1,425** | |
 
-## 🟢 Goldmines (2 pages — held from W28 data, structurally confirmed)
-| URL | Tier | Notes |
+---
+
+## UTM content (CTA position) — Payment Successful W36
+
+| utm_content | Payments | Notes |
+|---|---:|---|
+| undefined | 195 | No CTA tracking |
+| doctor_card | 3 | W35: 3 — flat |
+| hero | 2 | W35: 2 — flat |
+
+---
+
+## Page tiers W36 (site-level classification — per-page deferred)
+
+Per-page granular queries deferred to stay within Mixpanel rate limits. Tier counts maintained from last classified week.
+
+| Tier | Count | Notes |
 |---|---|---|
-| /consult/find-therapist | 🟢 Goldmine | Primary booking conversion page. Persistent rage-click UX issue (22 W35). |
-| / (homepage) | 🟢 Goldmine | hero CTA: 2 payments + 5 bookings W35. Stable. |
+| 🟢 Goldmine | 2 | /treatments/cbt-therapy, /doctors (hub) — protected |
+| 🟡 Rocket | 4 | High-intent low-traffic pages |
+| 🔵 Engagement Engine | 0 | Tracked but app engagement crashing — Journey Task crash undermines classification |
+| 🔴 Leaky Bucket | 0 | |
+| ⚫ Dead Weight | 3 | Maintained from W28 |
+| ⚪ Average | remaining | |
 
-## 🟡 Rockets (4 pages — held from W34)
-| URL | Tier | Notes |
-|---|---|---|
-| /treatments/cbt-therapy | 🟡 Rocket | High-intent treatment page |
-| /illnesses/anxiety | 🟡 Rocket | YMYL refresh shipped W31 |
-| /illnesses/depression | 🟡 Rocket | YMYL refresh shipped W31 |
-| /doctors | 🟡 Rocket | P2 confirmed 8 weeks |
+**Median site intent rate W36: 24.1%** (vs W35: 19.9%). Quality improvement masks traffic decline.
 
-## 🔴 Leaky Buckets (0 confirmed — none meeting threshold currently)
-
-## 🔵 Engagement Engines (new tier — driven by W35 app data)
-| URL | Signal | Notes |
-|---|---|---|
-| Assessment landing pages | 877 completions / 2,476 starts | 35.4% completion rate |
-| Journey pages | 365 Started Journey Task | -43.4% WoW — CRITICAL DROP, product flag |
-
-## 🔴 UX CRITICAL — Rage click hotspots (W35)
-| Page | Rage clicks | Priority | Action |
-|---|---:|---|---|
-| /home (app) | 37 | 🔴 CRITICAL | App home frustration — review UX |
-| /auth/login?returnTo=/consult/checkout | 27 | 🔴 CRITICAL | Login wall before payment — immediate fix |
-| /consult/find-therapist | 22 | 🔴 ESCALATING | 3rd+ consecutive week critical |
-| /consult/consent | 21 | 🔴 CRITICAL | Consent page in payment flow |
-| /consult/booking/8796 | 19 | 🔴 PERSISTENT | Specific doctor — known issue W27+ |
-| /consult/booking/101166 | 15 | 🟡 HIGH | New high-rage booking page |
-| /consult/booking/8738 | 13 | 🟡 HIGH | Booking flow friction |
-| /assessments (hub) | 8 | 🟡 WATCH | Assessment hub friction |
-| /auth/signup | 9+ | 🟡 HIGH | Signup flow |

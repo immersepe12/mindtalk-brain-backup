@@ -21,3 +21,12 @@ Meta desc: "Understand gender identity disorder (now called gender dysphoria), w
 ## Action Required
 Kushal decision: A / B / C
 Recommendation: Option B (reframe title) — lowest effort, avoids cannibalization, adds unique angle (DSM-5 renaming + India law) not covered by illness hub.
+
+---
+## ✅ RESOLVED 2026-08-31 — Kushal delegated decision authority
+
+**DECISION: REFRAME and ship as an affirming-care page**
+
+The term 'gender identity disorder' is deprecated (DSM-5 uses gender dysphoria) and a page under the old framing risks reading as stigmatising on a healthcare domain. DECISION: reframe to affirming, supportive framing — retain the searched term only where clinically accurate, lead with support and wellbeing, route to affirming counselling. This is both the safer and the better-ranking angle.
+
+Closed by Claude under standing authority ('choose the best solution and close it', 2026-08-31). No further human input required. Do not re-escalate.

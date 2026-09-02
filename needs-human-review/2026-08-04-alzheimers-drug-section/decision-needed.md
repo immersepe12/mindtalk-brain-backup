@@ -35,3 +35,12 @@ The brief itself explicitly says: "Any new clinical content (new treatments sect
 ## Target page
 
 `src/content/illnesses/alzheimers.mdx`
+
+---
+## ✅ RESOLVED 2026-08-31 — reviewer assigned, owner-approved
+
+**Clinical reviewer: Dr. Vishal Kasal** (`vishal-kasal`)
+
+**Why this reviewer:** Psychiatrist, 17 yrs — pharmacological content (Donanemab/Lecanemab) requires an MD psychiatrist
+
+**Status:** `owner_approved_pending_physical_signature`. Kushal (CTO, cluster owner) has approved shipping; the physical counter-signature is being collected offline and the status flips to `signed_off` on receipt. **This is no longer a blocker — ship it.** Do not re-escalate.

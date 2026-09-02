@@ -51,6 +51,7 @@
 | Week | Unique visitors | Book clicks | Organic book | Payments | Bookings | chatgpt.com clicks | Intent rate | Top geo | Goldmines | Notes |
 |---|---:|---:|---:|---:|---:|---:|---:|---|---:|---|
 | 2026-W35 | 10,401 | 2,065 | 1,539 | 181 | 228 | 334 | 19.9% | Bengaluru (48.6%) | 2 | Organic streak broken (−13.9%) but payments +7.7% — better conversion quality. Journey Task CRASHED −43.4%. P8 Kerala W5 confirmed. P15 Delhi demoted. Dead clicks improving 4,441→3,761. chatgpt.com = 16.2% of all book clicks (P5 W6). |
+| 2026-W36 | 9,072 | 2,190 | 1,425 | 200 | 237 | 211 | 24.1% | Bengaluru (53.4%) | 2 | Visitors -12.8% but intent rate surges 19.9%→24.1% (Aug Core Update quality filter). Payments 200 (+10.5%) + Bookings 237 (+3.9%). chatgpt.com STEP-BACK 334→211 (-36.8%) — P5 WATCH. Journey Task CRITICAL CRASH 365→124 (-66%, 3rd consecutive week). Kerala P8 W6 FULLY CONFIRMED (+71.8%, 8+ cities). Coimbatore TN BREAKOUT +422%. UP surge +238% (4 cities). Telangana step-back -37.9%. Europe diaspora W1. GA4 SKIPPED. |
 
 ---
 

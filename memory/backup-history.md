@@ -102,3 +102,12 @@
 
 2026-08-28T17:42Z | 5 files changed | commit: 712ff1dc7849 | push: success (6a746b4→712ff1d)
 2026-08-29T17:39:35Z | 6 files changed | commit: 712ff1dc7849940a8d1c5cc4ca03d1267a891e0d | push: success
+2026-08-30T20:5x IST | 26 files changed | commit: ccd30f8 | push: success (712ff1d..ccd30f8) — written by T20 auto-remediation, cleared the 08-29/08-30 stall via the os.rename() lock pattern
+  ⚠️ CORRECTION to the row above: the 2026-08-29 row records "push: success | commit 712ff1dc..." — that is the SAME commit as 2026-08-28, i.e. a success that committed nothing. Treat it as a false positive; the real next commit is ccd30f8 (2026-08-30).
+  → 8 broken refs/remotes/origin/main.lock.* archived to logs/brain-git-stale-locks-archive-2026-08-30/broken-refs/ (lock debris from the workaround itself).
+  → Reference implementation re-created at outputs/t20_brain_backup.py (the 2026-08-24 copy was lost with the ephemeral outputs folder). It should live somewhere durable.
+2026-08-30T17:40:38Z | 3 files changed (uncommitted — index.lock blocked) | commit: FAILED | push: attempted (up-to-date) | lock-files: index.lock(2h), maintenance.lock(54h), origin-main.lock(fresh) | action-needed: rm locks on Mac Mini
+2026-08-31-2309 | 7 files changed | commit: ccd30f8b8826f50e0427f99bd0f8587a70c6c61a | push: FAILED
+2026-08-31-2310 | 7 files changed | commit: e1902091c260a58492942d90cc860a7413296d92 | push: api-success (FUSE lock bypass)
+2026-08-31-2311 | +3 large files (BRAIN+WATCH+remediation) | commit: 75a29edb33e4526336f9ff55bf8a1dcb7878939b | push: api-success
+2026-09-01T17:39:30Z | 17 files changed | commit: ccd30f8 | push: ❌ FAILED

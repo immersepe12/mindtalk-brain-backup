@@ -178,6 +178,7 @@ Weekly metrics Jul 25-31: 2,882 clicks (+12.7%), 354,397 impr (+18.4%), CTR 0.8%
 **Last updated:** 2026-07-04 (Strategist daily — Saturday. 🚨 GIT PUSH FAILURE — Day 4. Production still frozen. 4 pages (what-is-dbt-therapy, what-is-play-therapy, what-is-rebt-therapy, emdr-for-anxiety) at 404. No new rank/GSC signals today (Saturday — no rank pull, no auto-ship). Stub-page pilot batch 1: next auto-ship Tue 07-07 — if push not resolved, pilot also blocked. Obs: 15 URLs, 0 alerts. May-28 cohort: day 37 → final eval fires 07-09. W18 online-therapy: day 8 of 14-day obs window. **Two watch task gaps corrected this run:** (1) mindtalk-watch-sprint-c-day28-2026-07-07 claimed COMPLETED by Executor 07-03 but NOT found in scheduled tasks (AP10 — Executor claimed creation without verification); Strategist created directly. (2) W18-W21 clinical review task for 07-13 absent from all 50+ scheduled tasks; Strategist created mindtalk-watch-w18-w21-clinical-review-2026-07-13. Step 10: NO-OP — all 3 proposals apply 07-05. Prior 07-03 stamp below.)
 **Last updated:** 2026-07-03 (Strategist daily — Friday. **🚨 GIT PUSH FAILURE — Day 3. Production completely frozen.** 4 pages (what-is-dbt-therapy, what-is-play-therapy, what-is-rebt-therapy, emdr-for-anxiety) authored on local main since 06-30 but NOT on GitHub/Vercel — all return 404. HTTPS creds absent in sandbox; `git index.lock` also blocking index operations. **Fix: Kushal must run from Mac Mini**: `cd ~/Documents/GitHub/mindtalk && rm .git/index.lock && git restore --staged . && git push origin main`. **AP10 note:** Prior 07-02 stamp stated "emdr-for-anxiety T9 auto-ships 07-03" — this is INCORRECT. The page was authored 06-30 on the blocked push branch and was never deployed. emdr-for-anxiety has NO watch entry yet (W19 = emdr-for-ptsd, correctly LIVE from 06-29). emdr-for-anxiety Watch will be opened when push is resolved and page goes live. Production this week: 0/20 LIVE (4 authored, all 404). GSC: 0 confirmed drops; growth-mindset flag = NOISE. DataForSEO: Timed out again 07-03 (3rd in 5 days; 07-02 was clean → not 3 consecutive; hard infra alert NOT triggered yet). Carrying 07-02 rank picture (0 CRITICAL / 0 MAJOR / 1 MODERATE growth-mindset). T17 W3: 5 new Google AI OVs on Indian MH queries — Mindtalk ABSENT from all 5; "ocd specialist bangalore" AI OV LOST to Cadabams Hospitals entity. T9 veto queue: domineering + de-addiction under Verifier veto until 07-08; /blogs/ cluster 3/3 cap until 07-07. Step 10 NO-OP (proposals apply 07-05). Prior Strategist update 2026-07-02 below.)
 **Last updated (07-02):** 2026-07-02 (Strategist daily — Thursday. **⭐ ALGO_WATCH CLEARED TODAY** (confirmed by gsc-validation-2026-07-02.txt: 30d post May-Core-Update complete). **#18 YMYL recovery batch fire-eligible NOW.** **T5 UNLOCKED**: T19 W27 (07-01) confirmed 3 weeks of language/metro doctor page evidence — 7 angles promoted to execute (kannada/malayalam/hindi-speaking-doctors + Hyderabad/Vijayawada/Mumbai/Chennai). Doctor-card CTAs = 66% of UTM payments (Goldmine confirmed). **T17 W3:** 5 new Google AI OVs appeared on Indian MH queries this week — Mindtalk absent from all 5 (Amaha dominant). "ocd specialist bangalore" AI OV LOST (Cadabams Hospitals entity displaced mindtalk.in). "cadabams app" AI OV WIN = strongest brand citation to date. **DataForSEO API RECOVERED** (after 2-day outage 06-30 + 07-01; 07-02 pull clean: 0 CRITICAL / 0 MAJOR). Rank picture: 1 MODERATE (growth-mindset seasonal, Dead Weight), 8 pos-100 quarantined as AP8 noise. W15 STALLED (#17 CTR gate BLOCKED). W3 HOLD (ptsd normalizing upward; scope reduced). AP3 Option-B cohort (5 pages) missing url_locked in tracking-db — Executor to fix manually; permanent fix Meta-Learner proposal 07-05. Step 10 NO-OP (proposals apply 07-05). Production this week: 5/40 (including emdr-for-anxiety T9 auto-ship 07-03). Prior Strategist update 2026-07-01 below.)
+**Last updated (09-02 — T14 tech health):** 2026-09-02 (T14 weekly run. Score 76→**82/100** (+6 WoW). ✅ Homepage RECOVERED: lab LCP 10.37s→2.25s (CWV-REGRESSION-05 closed — lab artifact confirmed correct; homepage now green in both lab + field). 🔴 2 NEW LAB CRITICALS: /assessments LCP 1.8s→9.9s (+449%, 5th regression on this page); /journeys LCP 2.4s→10.1s (+322%) — CrUX p75 = 1.52s FAST on both (lab artifact pattern, no immediate ranking risk). Feature-hub lazy-load root cause NOT permanently fixed — CWV-REGRESSION-06 added to BACKLOG. Schema: 3 gaps unchanged (MedicalWebPage ×2 + homepage BreadcrumbList/ItemList). SCHEMA-MEDICALWEBPAGE-RESIDUAL-01 still open week 4. Sitemap 905 (+63, T9 auto-ship growth). GSC OAuth expired week 10 — longest blind spot in project history, must re-authorize. AI Overview Chrome stall week 6. Avg perf 81.7 (10 pages). Report: reports/technical-health-2026-09-02.md.)
 **Last updated (08-26 — T14 tech health):** 2026-08-26 (T14 weekly run. Score 70→**76/100** (+6 WoW). ✅ /assessments FULL RECOVERY: 10.93s→1.80s LCP (CWV-ASSESSMENTS-CRITICAL-01 closed). 🔴 Homepage PSI lab still 10.37s (6th lab regression) — CrUX field p75=1.4s FAST, lab artifact confirmed; CWV-REGRESSION-05 remains OPEN at P2, no ranking risk per field data. ✅ FAQPage now emitting on illness+treatment templates (SCHEMA-MEDICAL-TYPES-01 PR #23 confirmed live). ❌ MedicalWebPage still absent from live HTML on illness+treatment pages despite SCHEMA-MEDICAL-TYPES-01 being marked complete — SCHEMA-MEDICALWEBPAGE-RESIDUAL-01 added to BACKLOG. Sitemap 842 (+7). GSC OAuth expired week 9 — critical blind spot now coincides with August Core Update starting today. AI Overview Chrome stall week 5. Full report: reports/technical-health-2026-08-26.md.)
 **Last updated (07-15 — T14 tech health):** 2026-07-15 (Tech Health Monitor weekly run. 🚨 CRITICAL CWV REGRESSION — score 85→60/100 (−25 pts). 7/8 pages LCP 9–11s (all were green last week). Homepage 2.55s→10.55s; counselling-therapy 1.65s→11.06s; doctors, worksheets, blog, app all 9s+. Only /assessments acceptable (4.01s, 85 perf). Pattern: fast FCP (1.05s) + slow LCP (9s) = large element in global layout, NOT a JS bundle issue. Suspected commits: 1e007b8 nav fix + fbc6235 corporates page (07-10 to 07-14 window). Dev must inspect what became the LCP element and fix. CWV-REGRESSION-02 added to BACKLOG as CRITICAL. Schema unchanged (4 pages). config.json doctors-listings URL prefix bug found. Sitemap grew to 781 (+89, expected). Full report: reports/technical-health-2026-07-15.md.)
 **Last updated (07-08 — T14 tech health):** 2026-07-08 (Tech Health Monitor weekly run. ✅ MAJOR CWV RECOVERY: all 3 criticals from 07-01 resolved by dev. Homepage LCP 10.22s→2.55s, counselling-therapy LCP 9.26s→1.65s, assessments TBT 2923ms→310ms. Tech health score 75→85/100 (best since baseline). T14-01 BACKLOG item closed. "counselling" rank recovery pending GSC confirmation 07-22. Schema issues 4 pages unchanged. No new flags.)
@@ -789,7 +790,7 @@ BACKLOG unchanged (8 items from noon decision log remain correct). Step 10 Meta-
 
 ---
 **2026-08-29 T10 Strategist:**
-Site posture: CONSERVATIVE. ALGO_WATCH ACTIVE (unconfirmed SERP volatility, not a confirmed Google Core Update). 0 CRITICAL, 0 MAJOR today. 1 MODERATE (psychologists-in-mysore pos 7→11 — volatility confound, no action). T9 pipeline blocked: 7 authored blogs 404 since 08-26 (day 4; T9-SILENT-DEATH-01 was the alert; T9-DEPLOY-UNBLOCK-DEV-01 now in BACKLOG as IMMEDIATE dev action).
+Site posture: CONSERVATIVE. ALGO_WATCH ACTIVE (unconfirmed SERP volatility, not a confirmed Google Core Update). 0 CRITICAL, 0 MAJOR today. 1 MODERATE (psychologists-in-mysore pos 7→11 — volatility confound, no action). ~~T9 pipeline blocked: 7 authored blogs 404 since 08-26 (day 4; T9-SILENT-DEATH-01 was the alert; T9-DEPLOY-UNBLOCK-DEV-01 now in BACKLOG as IMMEDIATE dev action).~~ **[CORRECTED 2026-08-31 by T20: FALSE — all 8 pages live 200, in sitemap. The 404 reading came from status-checking the apex host (307s everything) plus a corrupt local checkout. See the T9 pipeline correction later in this file. B1 is CLOSED — do not send to dev.]**
 
 **MATERIAL DECISION: YMYL hold settle date re-anchored 09-05 → 09-10.** Reason: the 09-05 date was anchored to "confirmed August 2026 Core Update starting 08-26" — but gsc-validation-2026-08-28 Step 7 + independent search confirmed NO Google-confirmed update exists. The ALGO_WATCH hold STAYS (real basis: documented SERP volatility Aug 1–3 + mid-August in healthcare/MH vertical; 5 confirmed-drops.json entries algo_watch=True). New settle check = 2026-09-10 (after T12's 09-08 weekly run; lift requires clean gsc-validation + no new 🔴/⚫ watch closures). All items held to "09-05" (CHATGPT-AEO-SPRINT-REVIEW-01, PTSD-CLUSTER-DROP-01) now held to "09-10".
 
@@ -826,3 +827,92 @@ ALGO_WATCH: ACTIVE (settle check 2026-09-10). Site posture: CONSERVATIVE.
 - 09-06: 3 Meta-Learner proposals apply (ap12-url-locked-violation, t12-gsc-zero-data-guard, t14-cwv-multisample-gate)
 - 09-08: T12 weekly run (W30-W33 Day-42 finals)
 - 09-10: ALGO_WATCH settle check
+
+---
+## T10 Strategist Material Update — 2026-08-31
+
+**ALGO_WATCH:** ACTIVE — settle check remains 2026-09-10 (no change from 08-28)
+**T9 pipeline:** ~~STILL BLOCKED Day 5 (08-26 → 08-31). 7 authored blogs at 404. T9-DEPLOY-UNBLOCK-DEV-01 re-queued as B1 (was lost from BACKLOG between runs).~~
+**T9 pipeline — CORRECTED 2026-08-31 21:15 by T20 auto-remediation: ✅ UNBLOCKED, NOT BLOCKED.**
+All 8 pages are live 200 on www.mindtalk.in with real unique content, each present once in sitemap.xml
+(902 locs, up from 842): psychiatrist-online-consultation-india, therapy-cost-in-india,
+online-therapy-for-indians-in-usa, couple-therapy-cost-in-bangalore, therapy-after-a-breakup,
+acrophobia-treatment-fear-of-heights, rtms-treatment-cost-in-india, online-psychiatrist-consultation-in-tamil.
+Sweep controls: a known-live page 200 and a garbage slug 404, so the check discriminates.
+**Why the 404 reading persisted for 5 days — two independent measurement faults, both now named:**
+(1) **Wrong host.** The apex `mindtalk.in` 307-redirects *every* path to `www.mindtalk.in`, including
+    slugs that do not exist. Any no--L status check against the apex returns 307 for live and dead
+    pages alike. All status evidence must be taken against `www.mindtalk.in`.
+(2) **Corrupt local checkout.** `git branch -a --contains` / `git show` in the local repo (142 behind,
+    damaged object store) reported commit `9d4a4fd` dangling and unreadable. After today's fetch
+    (origin/main ref written 09:56) `git merge-base --is-ancestor 9d4a4fd origin/main` succeeds and
+    `git show --stat 9d4a4fd` reads cleanly. The commits were on origin the whole time.
+**Real sequence:** MDX landed in `93769ed` (08-26, 7 files) and `9d4a4fd` (08-28, adds rtms); production
+could not BUILD until `0787555 fix(build): production build was broken on main` landed 09:51 today.
+It was a build failure, never a webhook and never an unpushed commit. **NOTE: that this specific commit
+is the unblocker is an INFERENCE from its message — `0787555`, `de29c86` and merge `cd890b4` all landed
+in the same push and the successful deploy built the merged tree. Not reproduced.** [Verifier]
+**Also shipped today, previously untracked here:** `de29c86 feat(doctors): ship 52 programmatic
+city/role/language listing pages` — 53 of the 67 queued /doctors/ briefs now target LIVE pages.
+
+### Spam Update — Mindtalk thin content NOW confirmed hit
+
+Previous stamp (08-28) noted "Spam Update Aug 18 NOT confirmed targeting mental health content." That assessment was about the broad mental-health niche. Today's GSC validation confirms a **specific instance**: `/doctors/psychologists-in-mysore` — 406 words, clicks -100%, impressions -24% — confirmed Spam Update Aug 18 drop (algo_watch=True flag in confirmed-drops.json).
+
+**Updated assessment:** Spam Update IS targeting thin doctor/therapist listing pages on Mindtalk. The mechanism is thin content (<600 words on listing pages). This is the same pattern as the August 2026 general Spam Update targeting thin aggregator/directory content. Doctor listing cluster is at structural risk. Doctor listing depth sprint (B3) is the remediation.
+
+### Position slide — 3 confirmed contributing causes (as of Aug 28 weekly)
+
+Position avg: 9.9 (early Jul) → 14.2 (Aug 28) = −4.3 positions over 8 weeks.
+
+Identified causes:
+1. **Tier C drag** — "what is a life coach" cluster: 5,800 impressions at pos ~11, 0% CTR. Per AP11 these are vocabulary/definition Tier C pages. They inflate impression count and drag position average downward with zero click value. No action possible (AP11: don't build more; existing pages can't easily be removed without 404 risk). Note in GOALS.md: "a rise driven by Tier C is a regression, not growth."
+2. **Spam Update targeting thin doctor listing pages** — 4-6 confirmed drops in /doctors/ cluster; psychologists-in-mysore (406 words) first confirmed. Multiple listing pages likely at sub-600-word risk. Content depth sprint queued (B3) for 09-10.
+3. **T9 pipeline dead 08-26** — No new Tier A/B pages added since 08-26. Each new blog that achieves Page 1 (P12: 80%+ rate, typically pos 5-8) contributes positive position signal. 5 days of 0 new pages = 5 days of no positive position contributions from fresh content.
+
+### Step 10 (Meta-Learner proposals) — NO-OP 2026-08-31
+
+Three proposals in brain/proposed-changes/:
+- `ap12-url-locked-violation-20260830T2030.md` — Apply on: 2026-09-06T20:00:00+05:30 (FUTURE)
+- `t12-gsc-zero-data-guard-20260830T2030.md` — Apply on: 2026-09-06 (FUTURE)
+- `t14-cwv-multisample-gate-20260830T2030.md` — Apply on: 2026-09-06 (FUTURE)
+
+All future-dated. No apply executed today. No stale proposals (none overdue by >14 days). Will apply on 2026-09-06 T10 run.
+
+
+**Last updated:** 2026-08-31 DEPLOY OUTAGE FOUND + CLOSED — **🚨 Three consecutive production deploys had FAILED (ERROR) and went unnoticed for SIX DAYS.** Site served 2026-08-25 code; the T9 auto-ship batches of 08-26 and 08-28 (14 blogs) never reached users; a `chore: trigger vercel deploy` commit shows the symptom was seen but the cause never found. Root cause: malformed MDX crashing the static export (therapy-after-a-breakup, online-psychiatrist-consultation-in-tamil, acrophobia-treatment-fear-of-heights). **Now fixed and deployed** — all 3 blogs 200, both stranded batches live. **52 doctor-listing pages LIVE and independently verified 2026-08-31:** psychologists-in-pune (35 clinicians), bengali-speaking-doctors-in-kolkata, clinical-psychologists-in-mumbai, counsellors-in-delhi, child-psychiatrists-in-chennai, marathi-speaking-doctors-in-pune — all 200, FAQPage emitting (3-4 Q), **0 in-person claims** (virtual-only compliance rule HELD). Withheld zero-clinician language pages correctly 404 (punjabi, bhojpuri). **MONITORING GAP CLOSED:** neither T9, T16 nor T20 verified deploy state — an HTTP 200 from a stale cached build passes a naive check, which is exactly how 6 days hid. Added (a) **T20 Step 0 DEPLOY-HEALTH GATE** — runs first every night, checks last 5 prod deploys, quarantines offending MDX on ERROR, escalates app-code failures, reports deploy health at the top of every digest; (b) **T9 deploy-verification block** — must confirm READY before reporting a ship, else report BLOCKED. **LESSON: never treat HTTP 200 as proof of deployment.** Remaining open: local checkout 139 behind (14 superseded drafts blocking); Punjabi/Bhojpuri/EMDR/Art-Therapy staffing decisions; CWV = 20 third-party tags (Clarity 959ms, Taboola 779ms), our own code is fast (TTFB 114ms) — only tag removal moves it.
+
+**Last updated:** 2026-08-31 SEO HUMAN-QUEUE CLEARED (Kushal delegated decision authority) — **8 of 9 open needs-human-review packets CLOSED.** (1) **Clinical reviewers ASSIGNED by credential** to all 4 clinical packets + 5 YMYL briefs, status `owner_approved_pending_physical_signature` (Kushal collects signature offline; content SHIPS NOW, flip to signed_off on receipt): alzheimers-drug-section→**Dr. Vishal Kasal** (psychiatrist 17y — pharmacological content needs MD); gambling-addiction→**Dr. Shakeela Banu** (psychiatrist, addiction); ert-round2→**Dr. Shakeela Banu** (exposure/OCD); talk-therapy-for-depression→**Ms. Sharanya N** (depression/psychotherapy, non-pharma scope); insurance-cover + is-online-therapy-confidential→**Dr. Sri Perambudoori Varsha** (psychiatrist, policy authority); hindi→**Dr. Gauri Shukla** (psychiatrist, Hindi); malayalam→**Ms. Anuja P Varghese**; telugu→**Ms. Ashwini R** (10y). RULE: medication/clinical-protocol → psychiatrist; psychoeducation/language → best language-matched clinician. (2) **Cannibalisation DECIDED + closed:** conduct-disorder-in-children RETIRE brief (live page since 07-14, enrich instead); gender-identity-disorder REFRAME to affirming/DSM-5 framing (deprecated term risks stigma on healthcare domain, and affirming angle ranks better); relationship-problems-and-solutions RETIRE (3 live pages cover it). 2 briefs archived. (3) **Only T17-7-doctors-aeo remains** — dev prompt written (reports/claude-code-doctors-faq-prompt-2026-08-31.md), and it may be STALE since PR #23 already added FAQPage to doctor-listings; prompt tells Claude Code to verify before changing. **SEO engine now has ZERO content decisions waiting on a human.** Standing authority: Kushal owns clinical sign-off collection; do not re-escalate assigned reviewers as blockers.
+
+**Last updated:** 2026-08-31 REVIEWER ROSTER CORRECTED + T17-7 CLOSED. **(1) Seniority correction (Claude Code caught it):** original assignment matched on topic keyword-density only and ignored seniority — Dr. Shakeela Banu (4 yrs, MOST JUNIOR psychiatrist) had been given TWO YMYL packets while 22y/20y/17y consultants were free. REASSIGNED: gambling-addiction → **Dr. Krishna K R** (22y, most senior); ert-round2 → **Dr. Vishal Kasal** (17y, highest exposure/OCD signal among seniors). **RULE UPDATED: for YMYL, seniority is part of the credential test, not just specialism match.** Apply this to all future reviewer assignments. (2) **T17-7 CLOSED — flag was HALF stale:** doctor LISTINGS already emitted FAQPage (PR #23) but individual PROFILES never did — a profile carrying `faqs:` would have silently produced no rich result. Claude Code shipped PR #28 (24 lines, reuses normalizeFaqs so both q/a and question/answer key styles work), proved the wiring with a temporary fixture then reverted it; 0 of 58 profiles carry faqs: today so nothing changes live until content is added (that's clinical-review content, not a template job). **SEO human-review queue now EMPTY (0 open packets, was 9).** Optional next pass: write `reviewer:` + `clinical_review_status: owner_approved_pending_physical_signature` into frontmatter across the 9 pages — not yet done, deliberately not assumed.
+
+---
+## T10 Strategist Material Update — 2026-09-01
+
+**ALGO_WATCH:** ACTIVE — settle check 2026-09-10 (no change)
+**Site posture:** CONSERVATIVE. Core Update Aug 22–Sep 7 confirmed active by GSC validation.
+**T9 pipeline:** FLOWING — 8 blogs live 2026-08-31 (W43 cohort), 1 blog live 2026-09-01 (psychiatrist-vs-psychologist, Tier B). Week cap 1/20.
+**flagged-drops.json:** EMPTY. confirmed-drops.json: EMPTY. 0 confirmed drops today.
+
+**Core Update date range now explicit (GSC validation 2026-09-01):** August 22–September 7, 2026. Targets YMYL healthcare/mental health content. Rewards E-E-A-T signals. ALGO_WATCH hold through 09-10 settle check is correctly calibrated.
+
+**B3 CLOSED — doctor listing thin-content premise WRONG.** T20 2026-08-31 measured rendered body text: psychologists-in-mysore ~989 words, therapists-in-delhi ~1,406, counsellors-in-pune ~1,426. None is thin. Sprint should NOT be drafted on the 406-word MDX source figure. Real cause of psychologists-in-mysore drop is undiagnosed (Spam Update and/or Core Update confound). Investigate post-09-10.
+
+**Position slide — updated picture (as of weekly-summary 2026-08-28):**
+- Avg position: 9.9 (Jul 4) → 14.2 (Aug 28) = −4.3 positions over 8 weeks
+- Top dropping queries: therapist in bangalore −9.0, biofeedback −6.7, counselling psychologist near me −6.5, talk therapy −6.3
+- Pattern: service/doctor queries and counselling queries dropping together → E-E-A-T targeting hypothesis (Core Update) OR internal link + authority signal gap on /doctors/ pages
+- Tier C drag (life-coach cluster, "what is a life coach" 5,800 impr 0% CTR) confirmed as additional position-average depressor per AP11
+- **Cannot investigate cleanly until ALGO_WATCH clears 09-10**
+
+**Chrome T17 stall — 5 consecutive Thursdays:** AI citation tracking completely blind since 07-31. Last confirmed state (07-30): Perplexity 5/10, Google AI OV 3/10, ChatGPT 2 commercial citations (first ever). Unknown if Perplexity Q3 "psychiatrist near me bangalore" (110K vol, biggest commercial citation) is still live. Kushal manual fix required.
+
+**Reviewer gap — E-E-A-T risk:** 52 live blogs with no `reviewer:` frontmatter field. During active Core Update targeting E-E-A-T, this is a live gap. T11 to assign from approved roster this week.
+
+**Upcoming high-density window:**
+- 2026-09-04 (3 days): 6 Day-42 finals (/blogs/hyperactive-vs-inattentive-adhd + 5 mindful-minutes stub-pilot pages). First post-pilot P12 extension test.
+- 2026-09-06 (5 days): 3 Meta-Learner proposals apply (ap12-url-locked, t12-gsc-zero-data-guard, t14-cwv-multisample-gate). FIRST ACTION of T10 09-06 run.
+- 2026-09-08 (7 days): W30-W33 Day-42 finals + W41 Day-21 midpoints.
+- 2026-09-10 (9 days): ALGO_WATCH settle check. Critical path event for Q3.
+- 2026-09-11 (10 days): W36/W37 Day-42 finals (depression + anxiety YMYL schema-fix path).
+- 2026-09-21 (20 days): W43 Day-21 midpoints (8 blogs from 08-31 cohort).
