@@ -1,5 +1,60 @@
 # BRAIN — Mindtalk SEO Growth Engine
 
+### 2026-09-06 T12 Learner — Weekly Run (Dual Data Failure Week)
+
+**Strategic posture: MEASUREMENT-RECOVERY + ALGO_WATCH HOLD**
+
+This week's Learner run operated under dual data failure: DataForSEO 402 (day 3, billing, B17 IMMEDIATE) + gsc-pull.py library missing in sandbox. All rank-dependent evaluations deferred to 2026-09-10 (ALGO_WATCH settle check). Despite data constraints, the stub-pilot Day-42 batch was evaluated by T4 (09-05, GSC-only) and formally closed.
+
+**Key findings this week:**
+
+1. **Stub-pilot batch 1 Day-42: catastrophic result (0🟢 / 0🟡 / 1🔴 / 5⚫)** — worst single-batch outcome in system history. Three root cause patterns emerging:
+   - QDF false positives: 4-7-8-breathing was exceptional at Day-14 (pos 2.5) but crashed to pos 36.2 by Day-42. Day-14 interim verdicts for stub-pilot content are NOT reliable — Day-42 is the true signal.
+   - AI Overview trap: panic-attack-grounding ranked pos 13 with 136 impr but 0 clicks. Step-by-step technique content is absorbed by AI Overviews. url_locked, B16 queued.
+   - Dark page pattern (confirmed 2nd data point): loving-kindness-meditation = 0 impr at both Day-14 and Day-42. Globally-competitive meditation terms with DA 80-95+ incumbents cannot be competed with at Mindtalk's current DA.
+
+2. **W30-W33 Day-42 deferred to 09-10**: Last known state (Day-33 corrected) was strong — W31 at pos 1.8 (EXCEPTIONAL), W33 at pos 5.4, W30 at pos 7.2, W32 at pos 6.3. If these hold through Core Update settle, P12 rate should remain ≥80%.
+
+3. **Weekly metrics (Aug 22-28)**: 3,239 clicks (−4.6% WoW), 346,320 impr (−5.4%), CTR 0.9% (Q3 target met), avg pos 14.2. Production: 0 NEW blogs (T9 silently died 08-26/08-28 due to FUSE git lock — T9-SILENT-DEATH-01 fixed 08-28). Down week attributable to Core Update turbulence.
+
+4. **Meta-Learner proposals apply today (09-06)**: ap12-url-locked, t12-gsc-zero-data-guard, t14-cwv-multisample-gate — T10 applies on its next run.
+
+**Strategic posture for next week (09-07 to 09-13):**
+- **09-10 is the critical unlock date**: ALGO_WATCH settle check + DataForSEO restoration + W30-W33 Day-42 finals + W-PSYCH/W-COUN checks + W40 Day-21 eval.
+- Once ALGO_WATCH clears: fire therapy-near-me hub sprint (60.5K/mo, Amaha pos 3, Mindtalk absent — prompt drafted).
+- W36/W37 Day-42 finals fire 09-11 (schema fix PR #23 deployed 08-17 — 25 days recovery window by then).
+- YMYL queue unblocked post-09-10.
+- B17 (DataForSEO billing) MUST be resolved by Kushal before 09-10 or ALL evaluations fail again.
+
+**⚠ LEARNER FLAG: Stub-pilot Day-42 = 100% stalled/worse.** Stub-pilot batch 2 (10-item) must NOT fire until pre-flight gates are updated: (1) minimum India search volume check, (2) DA-check on top-3 SERP incumbents (if all DA>70 → dark_risk flag), (3) AI Overview pre-check for how-to content, (4) Day-42 (not Day-14) as the evaluation gate for stub-pilot content class.
+
+**Last updated: 2026-09-06 T12 Learner — Weekly run. Dual data failure (DataForSEO 402 day 3 + gsc-pull.py library missing). Stub-pilot Day-42 batch formally closed: 0🟢/0🟡/1🔴/5⚫. W30-W33 + W-PSYCH-BLR + W-COUN-BLR + W40 DEFERRED to 09-10. No new PRINCIPLES/ANTI-PATTERNS (threshold not met). Weekly metrics Aug 22-28: 3,239 clicks / 346,320 impr / CTR 0.9% / pos 14.2. BACKLOG: B11 (T9-SILENT-DEATH-01 fix) archived. B17 IMMEDIATE (DataForSEO billing). ALGO_WATCH active to 09-10. Decision log: brain/memory/experiments/closed-stubpilot-day42-batch-2026-09-06.md.**
+
+---
+
+### 2026-09-05 T10 Strategist — ⚠ STRATEGIST FLAG: DataForSEO 402 Day 3 + Mindful-Minutes Day-42 Batch + Core Update Settle Watch
+- 🚨 **DataForSEO 402 Payment Required — DAY 3 (STRATEGIST FLAG threshold crossed):** 3 consecutive days (09-03, 09-04, 09-05) with 0 of 299 keywords processed. Hard rule: "DataForSEO or GSC pulls failed >3 consecutive days → infrastructure alert." T12 W30-W33 Day-42 finals fire 09-08 — rank data MUST be restored before then. B17 escalated to IMMEDIATE. `app.dataforseo.com` billing action required.
+- 📋 **Mindful-minutes Day-42 batch (T4 observation-2026-09-05.txt):** 5 pages evaluated (GSC-only; rank pull skipped):
+  - `/mindful-minutes/panic-attack-grounding` → **SCHEMA_OPTIMIZATION_NEEDED** (136 impr / 0 clicks / pos 13.0). P2 pattern confirmed: AI Overview absorption by SAMHSA/NHS/TherapistAid. Page has search visibility but zero CTR = featured snippet / AIO stealing all clicks. Action: add HowTo + FAQ schema post-09-10. url_locked=true (B16 queued).
+  - `/mindful-minutes/4-7-8-breathing` → NEEDS_REFRESH. Was pos 2.5 at Day-14 (T12 08-09 🟢 interim), now 36.2 at Day-42. Core Update impact + competitive pressure. Refresh brief candidate post-09-10.
+  - `/mindful-minutes/loving-kindness-meditation` → NEEDS_REFRESH (0 impr at Day-42). Global brand lockout (Headspace/Calm/Tara Brach DA 80-95+). Confirms stub-pilot "dark page" classification.
+  - `/mindful-minutes/morning-energy-activation` → NEEDS_REFRESH (0 impr). Near-zero India search volume confirmed.
+  - `/mindful-minutes/pre-sleep-body-scan` → NEEDS_REFRESH (3 impr, tangential queries). High-DA sleep meditation sites dominate.
+  - **Pattern:** named-protocol content (panic-attack-grounding) achieves indexation + AIO absorption; globally-competitive meditation terms = competition lockout. Stub-pilot conversion verdict validated.
+- 🔄 **Core Update settle watch:** Projected settle ~09-05 (today). ALGO_WATCH settle check still 09-10 — confirm cluster volatility decreasing for 7 days before unlocking pipeline.
+- ⚡ **Meta-Learner proposals Step 10 → NO-OP:** All 3 proposals (ap12-url-locked, t12-gsc-zero-data-guard, t14-cwv-multisample-gate) have `Apply on: 2026-09-06T20:00:00+05:30` (1 day FUTURE). Apply at tomorrow's T10 run.
+- **Upcoming:** W30-W33 Day-42 finals 09-08 (T12), REVIEWER batch 2 eligible 09-09, ALGO_WATCH settle check 09-10, Meta-Learner proposals apply 09-06.
+
+### 2026-09-04 T10 Strategist — ALGO_WATCH Hold + DataForSEO Credit Depletion
+- ⛔ **DataForSEO 402 Payment Required (2nd consecutive day):** 0 of 299 keywords processed. Rank data completely blind. 6 Day-42 evaluations deferred (hyperactive-vs-inattentive-adhd + 5 mindful-minutes stub-pilot pages). Kushal must top up at app.dataforseo.com BEFORE 09-10 ALGO_WATCH settle check — if credits not restored by 09-10, the settle check cannot run and ALGO_WATCH auto-extends.
+- 🚨 **Dual sensor failure: DataForSEO 402 + Chrome T17 stall (6 consecutive Thursdays since 07-31)**: The engine is now flying blind on both rank data AND AI citation data simultaneously. This is the worst measurement outage of Q3. GSC is still running but OAuth-expired (B10). Only Mixpanel and direct-curl verification remain reliable.
+- 📉 **Position slide confirmed through Aug 28:** avg pos 9.9 (Jul 4) → 14.2 (Aug 28) = −4.3 positions over 8 weeks. Pattern: service/doctor/commercial Tier A queries dropping (therapist in bangalore −9.0, counselling psychologist near me −6.5, talk therapy −6.3, therapy −5.4). Blog/informational content holding. Root cause investigation (B8) held until ALGO_WATCH clears 09-10.
+- ✅ **therapy-near-me hub sprint prompt DRAFTED:** `prompts/auto-drafted-sprint-therapy-near-me-hub-2026-09-04.md` — Tier A, 60.5K/mo, Amaha pos 3, Mindtalk absent. Ready to fire 09-10.
+- ⚡ **Meta-Learner proposals Step 10 → NO-OP:** All 3 proposals (ap12-url-locked, t12-gsc-zero-data-guard, t14-cwv-multisample-gate) have `Apply on: 2026-09-06T20:00:00+05:30` (2 days FUTURE). Stale scan: 0 overdue. Proposals apply Saturday 09-06.
+- ⚡ **Key upcoming:** 09-06 Meta-Learner proposals apply; 09-08 W30-W33 Day-42 finals + W41 Day-21; 09-09 REVIEWER batch 2 eligible; 09-10 ALGO_WATCH settle check (DataForSEO must be restored); 09-11 W36/W37 Day-42 finals.
+
+**Last updated: 2026-09-04 T10 Strategist 8 PM IST — DataForSEO 402 (2nd day, rank data blind), ALGO_WATCH ACTIVE (settle 09-10). Chrome T17 stall 6 consecutive Thursdays. therapy-near-me sprint prompt DRAFTED (fire 09-10). Position slide −4.3 pos over 8 weeks on Tier A service queries. 3 Meta-Learner proposals FUTURE (apply 09-06). 0 content actions today (ALGO_WATCH hold). Decision log: brain/memory/decisions/2026-09-04.md.**
+
 ### 2026-08-28 T10 Strategist — Core Update Day 3 + de-addiction P12 Confirmation
 - ✅ **P12 CONFIRMATION #8 — /blogs/what-is-de-addiction Day-42 RESOLVED**: pos 9.3→8.1, impressions +87%, clicks +100%. Strongest Day-42 resolution this quarter. Running P12 evidence base: 10+ data points (8 🟢 formal resolutions, all within 42d). P12 now well-established — T9 NEW blog auto-ship is the most reliable content lever in the engine.
 - 🔴 **Core Update 2026-08-26 LIVE (Day 3)**: YMYL refresh queue remains ON HOLD until ~09-05. All signals during this window carry CORE-UPDATE-CONFOUND flag. No YMYL content actions taken this run.
@@ -916,3 +971,118 @@ All future-dated. No apply executed today. No stale proposals (none overdue by >
 - 2026-09-10 (9 days): ALGO_WATCH settle check. Critical path event for Q3.
 - 2026-09-11 (10 days): W36/W37 Day-42 finals (depression + anxiety YMYL schema-fix path).
 - 2026-09-21 (20 days): W43 Day-21 midpoints (8 blogs from 08-31 cohort).
+
+**Last updated:** 2026-09-03 MIXPANEL FUNNEL DEEP DIVE (ad-hoc, Kushal). **THE HEADLINE: page-type yield measured for the first time — `/doctors/*` = 7,056 booking clicks/30d (75.4%) vs `/blogs/*` = 14 (0.1%) and `/illnesses/*` = 10 (0.1%). Normalised for traffic, doctor pages convert at 48.0% vs blogs 0.22% = 218× better.** Full detail appended to `brain/PAGE-CONVERSION-MAP.md` (§PAGE-TYPE YIELD) with a STANDING DIRECTIVE for T5/T9/T10/T20: **shift ship-mix from /blogs/ toward the ~44 written /doctors/ city+language+specialty briefs** — single pages like psychiatrists-in-bangalore (138 clicks), tamil-speaking-doctors (117), adhd-specialists-in-bangalore (86) each out-produce the entire ~800-page blog corpus. **Do NOT judge blogs on bookings** (6,222 views/mo, they are TOF + AI-citation fuel; KPI = assisted traffic + AI visibility). **Every page must embed the doctor-card component — 93% of booking intent fires from professional_card (5,848) or doctor_page (2,853); it is the mechanism, not a garnish.** FUNNEL (30d): 186,031 page views → 9,354 book_appointment_clicked (5.0%) → 973 Appointment Booked (**10.4% — 8,381 lost intents/month, the single biggest loss in the business, ~₹5.2L/mo per 5pp recovered**) → 769 Payment Successful; Payment Failed 521 = **40.4% of attempts** (improving from 53% in early July but still the biggest revenue leak). **TREND: signups tripled 110→403/wk while Payment Successful stayed FLAT 139→165 — top of funnel works, revenue does not follow.** SOURCES of booking clicks: Google 6,661 (71.2%), direct 1,901 (20.3%), internal 476, **ChatGPT 166 (1.8%) = 6.6× Bing and 6.6× all Instagram**, Gemini 27, Perplexity 4 → AI ≈200/mo, free and growing, justifies AEO/schema. Meta = 25 clicks (rounding error). **2 TRACKING DEFECTS → dev:** `lead_create_failed` 73 vs `form_submitted` 519 (~12% of form submissions never become a CRM lead, ~73 lost enquiries/mo, invisible); `form_started` 75 vs `form_submitted` 519 (form_started not firing — abandonment analysis impossible). Report: `reports/mixpanel-funnel-deep-dive-2026-09-03.md`.
+
+**Last updated:** 2026-09-03 (CORRECTION to same-day entry) SOURCE MIX RESTATED — **the earlier referrer-based source table was WRONG and must not be reused.** `$referring_domain` cannot see paid (a Google Ads click still shows `google.com` as referrer, so ~1,800 paid clicks were hidden inside the "Google 6,661" bucket) and it undercounts ChatGPT 6× (ChatGPT strips the referrer but its links carry `utm_source=chatgpt.com`). **ALWAYS use utm_source/utm_medium/gclid for source analysis on this project, never $referring_domain.** CORRECTED booking clicks by true source (30d, n=9,138): untagged/organic 4,985 (54.6%) · **Google Ads PAID ~1,839 (20.1%)** [google/cpc 1,347 + Google/CPC 333 + Google/cpc 121 + paid/google_ads 36 + sitelink/cpc 2; gclid-is-set cross-check = 1,392, so true paid band 1,400–1,850] · **ChatGPT 1,028 (11.3% — largest non-Google source, ~15× all Meta paid, zero media cost → strengthens AEO/schema case)** · direct 718 (7.9%) · **GMB 482 (5.3%, ~7× Meta, barely managed)** · Meta paid 70 (0.8%: an/paid_social 50 + meta/paid_social 13 + ig/social 7; fbclid-is-set 14) · Perplexity 10. **🔴 PAYMENT ATTRIBUTION 93.6% DARK: of 748 payments, 700 have utm_source=undefined; 0 payments carry a gclid.** UTMs + click IDs are lost at the mindtalk.in → consult.cadabams.com hop, so **paid ROAS CANNOT be computed from Mixpanel** — 1,839 paid booking clicks resolve to 7 attributed payments, which is an artefact not performance. **Until cross-domain UTM/gclid persistence is fixed, the CRM is the only valid arbiter of paid performance.** DATA DEFECT: utm casing inconsistent (google/Google, gmb/GMB, cpc/CPC, organic/Organic all distinct values) — any utm_source grouping silently splits one channel across rows; needs lower-casing at collection.
+
+**Last updated:** 2026-09-03 (2nd correction, Kushal challenged the ChatGPT number) **RULE: report source mix in UNIQUE USERS, never total events.** ChatGPT 1,028 booking-click events = only **317 unique people** (3.2 clicks/person; doctors hub has many cards). Unique ChatGPT visitors 1,218/mo (referrer view sees 227 → 5× undercount confirmed). ChatGPT = **9.9% of 3,200 unique bookers** — still the largest non-Google source, still zero-cost, AEO case stands. **Google Ads paid = 1,016 unique bookers = 31.8%** (vs 20% by events) — paid visitors click once (1.3/person), organic browsers 3+, so event counts UNDER-weight paid. "15× Meta" claim WITHDRAWN pending unique-user recompute. Sanity-check corroboration: T19 weekly chatgpt.com book-clicks 211–334/wk ≈ 900–1,400/30d, consistent with 1,028 events.
+
+**Last updated:** 2026-09-03 LEAD_CREATE_FAILED ROOT-CAUSED (Kushal asked to dig). **~61 people/mo submit a phone, the /api/lead POST never reaches the server, 97% never retry, 0 find another route (0 app signups, 2 WhatsApp).** 81% are `lead_status=0` (fetch threw), not server errors (only 1×405, 1×429). **Android-specific: Samsung Internet fails 67%, Android WebView 75%, Chrome 15%, iOS ~4%.** Surfaces: phone gate on doctor_page (27) + floating_button (22) = 49/59. True rate 73/592 = 12.3%, steady since tracking began 2026-07-27. **ROOT CAUSE (high confidence): analytics refactor `54fd954` (2026-07-27, "unblock gated redirects") made PhoneGateModal's /api/lead call `void fetch(...{keepalive:true})` then immediately redirects cross-origin to consult.cadabams.com — `fetch keepalive` is exactly the feature that's unreliable on Android; the abort surfaces as TypeError "Failed to fetch" → lead_status:0.** Same refactor DROPPED the `error` field from the payload (old code sent it) and renamed status→lead_status — so failures were visible but blind. Fix = dev (src/**): (1) await /api/lead w/ 2.5s AbortController timeout BEFORE redirect, (2) carry lead_phone+event_id on the app hand-off URL for app-side upsert, (3) localStorage retry queue drained on next page load, (4) restore `error` in payload, (5) emit FORM_STARTED from PhoneGateModal/BookingForm/BookingModal (today only contact/corporate/education emit it → 75 starts vs 519 submits is a GAP not a bug). Full diagnosis + Claude Code prompt: `reports/lead-create-failed-diagnosis-2026-09-03.md`. **LESSON for T20: `status` was renamed `lead_status` — always List-Properties before declaring a field null.**
+
+**Last updated:** 2026-09-03 MIXPANEL USER-LEVEL DEEP DIVE (unique users, not events — Kushal requested). **THIS IS A RETURNING-PATIENT BUSINESS: 90d → 992 unique payers, of whom ~845 (85%) signed up BEFORE the window. New signups contribute ~15% of payers. 34% of payers paid 2+ times in 90d (1.75 payments/user).** New-signup funnel 30d (n=1,467): **83% never click a single doctor** (255 do), 65% of those who reach a doctor booking page leave without pressing Continue (254→88), 37 book strict-order (66 loose), 10 pay strict (53 loose) → ~4.5% signup→booked, ~3.6% signup→paid. Converters move FAST: avg 2.4d signup→booked, 2.3d signup→paid → **Fyno nurture window is days 0–3, drive to a specific doctor.** SOURCE QUALITY (90d cohort, 90d window, initial_utm_source user prop): **Meta 427 signups → 2 booked → 1 paid = 0.2%** (100% fire Assessment Completed 2s after signup = assessment-gated quiz flow; 9% ever view a doctor; the cohort does NOT convert even at 90d — **stop measuring Meta on signups; KPI must be Appointment Booked by cohort**). **mindtalk_web (website phone-gate → app) 36 signups → 25 booked → 21 paid = 58% — ~290× Meta; the single most valuable user population and barely captured.** untagged 1,998 → 122 paid = 6.1%. Ex-Meta blended = 7.1%. GMB 3/3/3, chatgpt 7 signups but 6 payers/mo (arrive with intent formed). **3 IDENTITY DEFECTS hide most of this:** (5a) website identifies by phone + stamps capture_method/first_utm_* but `capture_method` is undefined on 100% of app signups → website profile and app profile are TWO DIFFERENT PEOPLE in Mixpanel; the real website-originated patient count is far higher than 36. (5b) initial_utm_source undefined on 81% of signups. (5c) crmLeadId/mt_lead_id exist on profiles but aren't populated consistently → cannot reconcile Mixpanel↔CRM. **Fix 5a together with the Android lead-loss bug — same hop.** Retention/rebooking is where marginal revenue is. Doctor booking page (65% new-user exit) needs session-replay review. Report: `reports/mixpanel-users-deep-dive-2026-09-03.md`.
+
+**Last updated:** 2026-09-03 (correction — Kushal challenged "gmb 3 / google 1") **initial_utm_source on app profiles CANNOT see Google Ads users — do not report source quality from it without this caveat.** The app mints a NEW Mixpanel profile on consult.cadabams.com; the website session's gclid/utm is discarded at the hop. PROOF via Mixpanel-native `$initial_referring_domain` on app profiles (90d): **1,517 of 2,473 signups (61%) arrived from www.mindtalk.in** — their true channel (Google organic/Ads/ChatGPT/GMB) is gone. Only 13 signups show google.com directly = the small BOF spend that landed on the app domain. **ESTIMATE (not measurement): Google Ads-originated signups ≈ 400–500/90d** (32% website unique-booker paid share × 1,517). **NEW CHANNEL FOUND: www.cadabamshospitals.com is the #2 source of PAYING patients — 227 of 992 payers (23%)**, only 36 in-window signups → established institutional referral from the hospital site into Mindtalk tele-consults; large, high-converting, in no marketing plan. $direct = 836 signups / 559 payers (56% of payers — app re-opens + bookmarks). mindtalk_web=36 is just the handful of hand-off links that happen to append utm_source. **Fixing the identity hand-off (pass distinct_id or alias phone→app user) is the prerequisite for ANY source-quality claim about signups.**
+
+**Last updated:** 2026-09-03 MIXPANEL × CRM JOIN ON slot_id (Kushal: "compare with the CRM"). Join is clean: 930 Mixpanel Appointment Booked slot_ids → 927 in CRM (99.7%); `slot_id` on the app event == `slot_booking.id`. **🚨 15% OF MIXPANEL "Appointment Booked" EVENTS ARE PHANTOM: 139/927 map to slots with NO lead, status open (80) or inactive (58) — the app fires the event before confirmation. REAL app bookings this month = 788, not 973. ALL prior Mixpanel booking figures are ~15% high; filter CRM status ∉ {open,inactive} or re-fire the event on confirmation. CRM is the arbiter for bookings, not just attendance.** CRM-CONFIRMED: **Old Patient 609 (77.3%) vs New-family 179 (22.7%)** — 3 in 4 app bookings are follow-ups. STAGE (788 real): completed 610 (77.4%), confirm 109 (13.8% future), booked-unconfirmed 54 (6.9%, 49 old pts → cheapest revenue: same-day WhatsApp confirm nudge), checked_in 12, no_show 2. **Attendance: new pts 81.6% > old pts 76.2%** — the "attendance tax" is on the returning side. NEW-PATIENT CRM SOURCE (n=179): **Direct Traffic 70 (39%) — hiding paid; Organic Search 59 (33%, 84.7% attended = highest-quality new-pt source = the SEO engine's revenue line)**; Mcube/phone 24 (13%); web/Mobile App 10; Freshsales 6; Google 4 + PPC 3 = only 4% tagged paid vs ~30% real → gclid stripped at website→app hop, same attribution break as Mixpanel, now visible CRM-side. OLD-pt sources: Mcube 31%, web/Mobile App 24.5%, Organic 10.7% — returning = phone+app people, new = search+direct people. DATA-QUALITY: 17/18 "Cancelled New Patient" carry status=completed (indication set at booking, never updated; trust `status`). **STILL MISSING for the full signup→CRM join: a lead-id lookup** — Mixpanel has crmLeadId on 99.6% of signups + 100% of bookers, but CRM MCP only has the slot-id lookup. Prompt for `lead_journey_by_lead_ids` written in `reports/mixpanel-crm-join-2026-09-03.md` §7. Once added: resolve Meta / mindtalk_web / never-viewed-doctor cohorts → "did CRM ever see a booking via ANY channel, and what stage".
+
+**Last updated:** 2026-09-03 APP LEAKS ROOT-CAUSED (Kushal: "deep down and understand what exactly is happening" before prescribing — two of my four earlier prescriptions were WRONG). **(1) "40% payment failure" is FIVE problems, only ~4% are genuine payment declines.** Per person: 261 fail, 61 recover (avg 24h later), **200/mo lost for good.** (1a) **Android technical bug: every "Payment Error" (73) and every null-reason failure (150) is Android, ZERO on iOS; ~115 people, 87% never recover ≈100/mo** — signature = UPI intent return failure (browser→UPI app→back, callback lost); may include debited users. (1b) iOS cancels 25.7% vs Android 13.8%, avg 86s IN the gateway before cancelling = trying not bouncing; price NOT the driver (12–23% at every tier ₹1,000–₹2,500). Likely iOS lacks UPI intent → slow collect flow. `method` on Payment Initiated is UNSET so can't confirm. (1c) **Dr. Arun Kumar V (doctor_id 7217) is UNBOOKABLE: 151 card clicks → 57 attempts → 57 "Booking failed — no appointment ID" → 0 payments in 30d, all platforms → his slot/consult-type/CRM mapping is broken.** amount=null on all 78 → fails BEFORE price set = booking-API bug misfiled as payment. Ms Priyanka Kema (8996) 10 failures. (1d) "add retry + UPI intent" would fix ~4% — withdrawn. **(2) "Booking page loses 65%" is COMPARISON-SHOPPING: 2,569 people × 5.0 views each = 12,752; per-person 29% eventually Continue on SOME doctor, 71% never commit.** Everyone lands on ONLINE (98% of views) but 41% of Continue clicks are IN-PERSON (5× its view share) → in-person strongly preferred when available; online is where churn happens. Can't see WHY (no slot-availability property; doctor_name missing on 95% of page views) → INSTRUMENT FIRST: add doctor_id + slots_available_7d + next_slot_hours to Doctor Booking Page Viewed, then replay the ≥4-views-no-Continue cohort. **(3) Phantom Appointment Booked CONFIRMED twice:** CRM join (139/927 → open/inactive, no lead) + Dr Arun (57 booked → 57 failed → 0 paid). Fires on slot SELECT before API returns. Fix: fire on 2xx with appointment_id; add `Slot Selected`. **(4) Assessment → doctor: 1,364 completed, 106 (8%) click a doctor within 1h; only 991/4,662 assessment users ever reach a `result` URL; Meta cohort completes 2s after signup (gate at END).** End-screen content UNKNOWABLE from events (no Assessment Results Viewed, no recommended_doctor_id) → needs eyes on screen / app repo. **6 TRACKING GAPS:** Payment Failed.reason null on Android; Payment Initiated.method unset; booking page-view lacks doctor_id + slots; Appointment Booked pre-confirmation; no Assessment Results Viewed; booking_conflict never set. **App repo is NOT mounted in Cowork — code-level confirmation of 1a/4 needs Claude Code in the consult repo.** Report: `reports/app-leaks-root-cause-2026-09-03.md`.
+
+---
+## T10 Strategist Material Update — 2026-09-07
+
+**ALGO_WATCH:** ACTIVE — settle check 2026-09-10 (3 days). Core Update Aug 22–Sep 7 may be concluding today.
+**Site posture:** CONSERVATIVE/HOLD.
+**DataForSEO:** RESTORED 09-07. rank-summary-2026-09-07.txt ran 290 KWs; 0 CRITICAL/MAJOR/MODERATE. 6 pos-100 quarantined AP8. B17 CLOSED.
+
+**Position slide reversing (first positive week in 8 weeks):** Avg position 14.2 (Aug 28) → 12.8 (Sep 4, weekly-summary-09-07). Not yet at the Jul 4 baseline of 9.9, but recovery signal is real. Consistent with Core Update confound clearing. Watch 09-10 settle check for confirmation.
+
+**therapist-near-me CRITICAL crash:** pos 32.5 → 52.0 (−19.5 positions, 2,237 impr/wk) per weekly-summary-09-07. Largest single-week position drop in the report. Tier A commercial query. B12 therapy-near-me hub sprint draft ready at `prompts/auto-drafted-sprint-therapy-near-me-hub-2026-09-04.md` — fire immediately on 09-10 ALGO_WATCH clear.
+
+**online psychiatrist pos 9.6 — NEW Tier A opportunity:** Query moved from pos 20.7 → 9.6 (+11.1 positions) this week organically. No dedicated hub page exists. Approaching page 1 without targeted content — internal linking + meta push post-09-10 could lock top-5. New B18 queued.
+
+**Q3 targets exceeded as of W35 (Sep 4):** Clicks 3,735 vs 2,800 target ✅ (+33%); CTR 1.0% vs 0.85% target ✅. Impressions 384K vs 420K diagnostic (**diagnostic only** — not chasing per 2026-07-30 GOALS reframe). Both primary targets in green for the first time simultaneously.
+
+**Meta-Learner proposals:** 3 proposals in queue (t12-stub-pilot-qdf-guard, t17-tabs-create-fallback, t9-doctors-cluster-cap-separation). All Apply-on 2026-09-13. NO-OP today. Apply on next T10 run (09-08 if run, else 09-13 scheduled).
+
+**Upcoming high-density window:**
+- 2026-09-08 (TOMORROW): T12 W30-W33 Day-42 finals + W41 Day-21 midpoints (DataForSEO restored ✅)
+- 2026-09-09: B7 reviewer batch 2 eligible (T11 to fire)
+- 2026-09-10: ALGO_WATCH settle check — critical unlock gate
+- 2026-09-11: W36/W37 Day-42 finals (depression + anxiety YMYL, schema-fix recovery path) + anger-management + values-clarification-act Day-42 finals
+- 2026-09-13: 3 Meta-Learner proposals apply (FIRST ACTION of T10 09-13 run)
+- 2026-09-15: W38 narrative-therapy Day-42 final (YMYL — Kushal a/b/c pending)
+- 2026-09-16: W39 yoga-for-anxiety Day-42 final
+- 2026-09-21: W18/W19/W20/W21 extended obs windows close + W43 Day-21 midpoints
+
+---
+## T10 Strategist Material Update — 2026-09-08
+
+**ALGO_WATCH:** ACTIVE — settle check 2026-09-10 (2 days). Core Update Aug 22→Sep 21 still rolling (confirmed by gsc-validation-2026-09-08 Step 7).
+**Site posture:** CONSERVATIVE/HOLD until 09-10. All CRITICAL drops today confirmed AP8 noise.
+**DataForSEO:** CLEAN — 290 KWs pulled, 4 flagged, 0 confirmed.
+
+**AP8 pattern confirmed again (5th+ instance):** 3 CRITICAL pos-100 drops (overthinking, types-of-adhd-explained, understanding-chronic-insomnia) all showed identical Δ89 (11→100) on the same pull. GSC validation: 1 IMPROVING (overthinking blog: +114% clicks, +292% impr — already RESOLVED in tracking-db, consistent), 2 NOISE, 1 NOISE (OCD pos 2→8, impr +23%). 0 confirmed drops. AP8 rule is robust — identical-Δ same-day pos-100 clusters require no investigation.
+
+**W30-W33 Day-42 finals + W41 Day-21 midpoints:** Fire today via T12 Learner (DataForSEO restored 09-07 ✅). Results will determine Q3 late-stage auto-ship cohort health.
+
+**Meta-Learner proposals:** 3 proposals (t12-stub-pilot-qdf-guard, t17-tabs-create-fallback, t9-doctors-cluster-cap-separation) — Apply-on 2026-09-13. Step 10 NO-OP today.
+
+**Upcoming critical path:**
+- 2026-09-09 (TOMORROW): B7 reviewer batch 2 eligible (T11 fire)
+- 2026-09-10 (2 days): ALGO_WATCH settle check — unlock B5/B12/B18/B8/B16
+- 2026-09-11 (3 days): W36/W37 Day-42 finals (depression + anxiety YMYL — Core Update confound caveat if ALGO_WATCH not yet cleared on verdicts)
+- 2026-09-13 (5 days): 3 Meta-Learner proposals apply (FIRST ACTION of T10 09-13 run)
+- 2026-09-15: W38 narrative-therapy Day-42 final (YMYL — Kushal a/b/c pending)
+- 2026-09-16: W39 yoga-for-anxiety Day-42 final
+- 2026-09-21: W18/W19/W20/W21 extended obs windows close + W43 Day-21 midpoints
+
+---
+## T10 Strategist Material Update — 2026-09-09
+
+**ALGO_WATCH:** ACTIVE — settle check TOMORROW 2026-09-10. Core Update Aug 22→Sep 21 still rolling (confirmed GSC-validation-2026-09-08 Step 7; earlier "may conclude Sep 7" estimate withdrawn).
+**Site posture:** CONSERVATIVE/HOLD until 09-10. All CRITICAL drops today confirmed AP8 noise (0 confirmed drops).
+**DataForSEO:** CLEAN 09-08 — 290 KWs pulled, 0 confirmed.
+
+**CTR MILESTONE — 1.0% this week (first time above Q3 target 0.85%):** Simultaneous with clicks 3,735 vs 2,800 target (+33%). Both primary volume targets exceeded for first time simultaneously. Pattern attributable to Core Update quality-filtering low-intent queries + position recovery 14.2→12.8.
+
+**FOMO cluster fast-mover:** "fomo" pos 31→2.5 in one week (28.5-position jump, per weekly-summary-09-07). Fastest single-keyword movement in Q3 window. Cause unknown — possible QDF spike on fresh blog content or genuine rank establishment. No Strategist action; add position check to 2026-09-22 review (enough time for QDF to normalize or confirm).
+
+**online psychiatrist pos 9.6 (confirmed):** Query approaching page 1 organically without a dedicated hub (B18). Pattern mirrors therapist-near-me trajectory before the crash — Tier A commercial, high intent. Hub page + internal link injection = natural amplifier. Hold until 09-10 ALGO_WATCH clear.
+
+**Life coach AP11 rule held under pressure:** "what is a life coach" at 14,361 impr / 0% CTR (pos 10.6) — Tier C per INTENT-PRIORITY.md. Decision was NOT to rewrite meta for impressions. Rule functioning correctly. Weekly-summary noted it as "Key Action Item" — Strategist overruled based on AP11 intent-multiplier (score ×0.3).
+
+**Meta-Learner proposals on deck (Apply 09-13):** t12-stub-pilot-qdf-guard (stub-pilot QDF false-positive prevention), t17-tabs-create-fallback (fix 6-week Chrome AI citation stall), t9-doctors-cluster-cap-separation (unblock 43 Tier A /doctors/ briefs). All FUTURE — Step 10 NO-OP today.
+
+**anger-management + values-clarification-act Day-42 finals fire 2026-09-11 (T4 auto).**
+
+**Upcoming critical path:**
+- 2026-09-10 (TOMORROW): ALGO_WATCH settle check — unlock B5/B12/B8/B18/B16, YMYL refresh queue, biofeedback, chronic-stress/drug-addiction/ACT/CBT refreshes, B13 AEO sprint
+- 2026-09-11 (2 days): W36/W37 Day-42 finals (depression + anxiety YMYL, schema fix recovery path) + anger-management + values-clarification-act Day-42 finals
+- 2026-09-13 (4 days): 3 Meta-Learner proposals apply (FIRST ACTION of T10 09-13 run)
+- 2026-09-15: W38 narrative-therapy Day-42 final (YMYL — Kushal a/b/c pending)
+- 2026-09-16: W39 yoga-for-anxiety Day-42 final + B7 reviewer batch 3 eligible
+- 2026-09-21: W18/W19/W20/W21 extended obs windows close + W43 Day-21 midpoints
+- 2026-09-22: W40 Day-42 finals
+- 2026-09-29: W41 Day-42 finals
+
+---
+## T10 Strategist Material Update — 2026-09-11
+
+**ALGO_WATCH:** CLEARED 2026-09-10 ✅. No September Core Update. Settle check passed. All held actions eligible.
+
+**Site posture:** GROWTH. Clicks 3,735 (Q3 target 2,800 ✅). CTR 1.0% (target 0.85% ✅). Pages ~870 (target 800 ✅). All three primary Q3 targets exceeded simultaneously for the first time. Intent rate 24.1% (W36 T19). Position recovering 14.2→12.8 — first positive week in 8 weeks.
+
+**AP8 pattern (5th+ confirmation):** Today's 3 CRITICAL pos→100 drops (personality-disorder Δ91, postpartum-depression Δ87, stress-disorder Δ87) are probable API noise. Below 4-drop threshold (14/36 = 39% at pos-100). Pattern mirrors 4 prior AP8 events identically. Pending GSC validation on next T2 run.
+
+**domineering-vs-dominating CONFIRMED DROP:** GSC validation confirmed clicks -50%, impr -94%. Primary keyword "domineering meaning" has ZERO occurrences in page body. Root cause: keyword-gap (not algorithmic). Fix is trivial BUT page is in W37 professional-input hold until 2026-09-28 (Ms. Suhita Saha). Adding to B19 flag_for_human. This adds to evidence that T5 brief QA should verify primary keyword appears in body before filing a brief.
+
+**anger-management Day-42 QDF_BLOCKED:** High-DA mental health aggregators (therapymantra.in, innerhealing.in) dominate SERP at pos=0 for core queries. Extended obs to 2026-10-23. Pattern: /journeys/ content type has structurally weak SERP competition profile. Hypothesis: /journeys/ pages need topical authority cluster support to overcome aggregator dominance — standalone pages insufficient.
+
+**values-clarification-act SCHEMA_OPTIMIZATION_NEEDED:** AI Overview/Featured Snippet is absorbing clicks. CTR drop despite stable position (16→15). url_locked. HowTo + FAQ schema sprint would be the natural fix — but requires Kushal approval (B20). Consistent with HYPOTHESIS H2 (AI Overview cannibalization) — adds another data point.
+
+**W36/W37 depression + anxiety YMYL:** Day-42 window open 09-11 per schedule but these are T12 Learner tracked. Will evaluate 09-14 Sunday run. Schema fix PR #23 deployed 08-17 — recovery path open but Core Update confound still complicates signal read.
+
+**online-psychiatrist pos 9.6 (approaching page 1):** No hub page. W43-1 psychiatrist-online-consultation-india LIVE 08-31. Internal link injection from illness pages could lock top-5. Pattern mirrors therapist-near-me trajectory pre-crash. B18 queued for investigation.
+
+**T9-DOCTORS-QUEUE-MISLABEL-01 (pending 09-13 fix):** 43 Tier A /doctors/ briefs silently blocked by /blogs/ cap mislabeling. Proposal to separate cluster caps applies 09-13. When live: expect T9 to begin shipping doctor listing pages again — monitor for quality.

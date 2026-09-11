@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-03",
+  "queries": {
+    "best mental health platform india": {
+      "category": "commercial",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "online therapy bangalore": {
+      "category": "commercial",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "psychiatrist near me bangalore": {
+      "category": "commercial",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "cbt therapy online india": {
+      "category": "commercial",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "anxiety treatment india": {
+      "category": "commercial",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "depression treatment online india": {
+      "category": "condition",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "ocd specialist bangalore": {
+      "category": "condition",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "counselling": {
+      "category": "gap-YD",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "online counsellor": {
+      "category": "gap-YD",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "overthinking": {
+      "category": "gap-Amaha",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "situationship": {
+      "category": "gap-Amaha",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "therapy near me": {
+      "category": "gap-Amaha",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "therapist near me": {
+      "category": "gap-Amaha",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    },
+    "fear of heights": {
+      "category": "gap-phobia",
+      "mindtalk_pos": null,
+      "competitors": {},
+      "error": true
+    }
+  }
+}

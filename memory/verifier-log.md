@@ -27,6 +27,8 @@ One line per verdict. Format:
 
 # Run summary 2026-06-16 16:35 IST (Executor T11): 1 APPROVE (sleep-cluster investigate) / 0 VETO / 1 NEEDS_HUMAN (ERT round-2 investigate). Sleep investigation executed → deindex REFUTED (DataForSEO tracker noise). ERT routed to brain/needs-human-review/2026-06-16-ert-round2/.
 
+2026-09-08T10:00:00+05:30 | ship_NEW_blog | target: /blogs/online-counselling-in-malayalam | verdict: APPROVE | reason: All 11 checks pass. §1 intent_tier A ✅. §2 /blogs/ cluster 0/6 in strict >2026-09-01 window (09-01 ship does NOT count per strict > boundary) ✅. §3 weekly 1/20 ✅. §4 vijayalaxmi-umate load=3 (assigned_count=5), under cap ✅. §5 metaTitle 42ch + "| Mindtalk" ✅; metaDesc ~143ch ✅; QuickAnswer ✅; KeyTakeaways ✅; 5 FAQs in frontmatter ✅; 7 internal links ✅; Indian English (counselling/counsellor) ✅; no TODO/TBD/placeholder ✅; AP3 N/A (/blogs/ path) ✅. §6 YAML parseable, components standard ✅. §7 no explicit impact estimate, N/A ✅. §8 new slug, no prior action, not in any WATCH ✅. §9 cluster 0+1=1/6 ✅. §10 no PII ✅. AP12 new page, not url_locked ✅. AP9 slug not previously shipped (held 09-01 for placeholder quickAnswer — now resolved) ✅. ALGO_WATCH active but /blogs/ non-YMYL content is not on hold (YMYL HOLD from BRAIN.md covers illness/treatment refreshes; new blog discovery content unaffected) ✅.
+
 2026-06-17 16:30 IST | investigate_regression | target: /treatments/life-coach-therapy | verdict: APPROVE | reason: Read-only SERP/AI-Overview/GSC diagnostic; writes only to brain/memory/experiments/, 0 pages modified/shipped, no 301/title/H1/slug, no push (§1,§4,§9 clean). §8 prior-failure clause does NOT trigger NEEDS_HUMAN: this is a *different action type* (diagnostic) than the failed round-1 *content refresh*, not a re-attempt — matches sleep-cluster APPROVE precedent. Diverges from yesterday's ERT NEEDS_HUMAN because (a) it tees up NO human-gated migration (downstream rec is a reversible meta/title CTR test, not a 301/slug change), and (b) life-coaching is less clinically YMYL than ERP. algo_watch "Held" gates content changes, not reads. §10 PII: aggregated GSC keyword/impr/pos only — output kept aggregated. AP5-aligned verify-before-act.
 
 # Run summary 2026-06-17 16:30 IST (Executor T11): 1 APPROVE (life-coach-therapy investigate) / 0 VETO / 0 NEEDS_HUMAN. Investigation executed → "regression" REFUTED: "what is a life coach" is permanent SERP-eligibility loss (zero impr pre-refresh), page is actually a growing CTR-harvest candidate (footprint 95→172, pos ~10.8, ~0% CTR). BACKLOG #6 replaced with deferred meta-test row, HELD until 06-25.
@@ -250,3 +252,16 @@ One line per verdict. Format:
 2026-08-25T16:30:00+05:30 | draft_sprint_prompt | target: prompts/auto-drafted-sprint-chatgpt-aeo-2026-08-25.md | action_id: CHATGPT-AEO-FAQ-EXPANSION-01 | verdict: APPROVE | reason: §1 PATH SAFE — writes to prompts/ only (draft, not production code). §2 NO AP violated — AP11 N/A (target pages are Tier A commercial, AI-attributed payments confirmed W34, not vocabulary/zero-click content). §3 GOAL ALIGNED — P5 MAJOR AI revenue channel, Strategist 08-24 TOP 5 #3. §4 0 caps consumed (draft only, no content shipped). §5-6 N/A. §7 impact reasonable vs W34 baseline. §8 no prior draft found for this action ID. §9-10 N/A. Conservative Core Update posture respected: human-gated fire after 09-05. | run=verifier-2026-08-25-chatgpt-aeo
 
 2026-08-25T16:30:00+05:30 | flag_for_human | target: Slack #seo-workflow-mindtalk | action_id: T5-KERALA-TREATMENTS-GAP-01 | verdict: APPROVE | reason: §1 SAFE — Slack notification only, no MDX. §2 NO AP violated. §3 GOAL ALIGNED — P8 Kerala 4-week conversion signal, /treatments/ brief starvation blocks T9. §4 0 caps consumed. §8 new action ID (T5-KERALA-TREATMENTS-GAP-01) — not a duplicate of prior T5-REFILL flags. §10 PII-clean. Slack delivered ts: 1787656423.107109. | run=verifier-2026-08-25-t5-kerala
+
+## 2026-09-04 T11 Executor Run
+
+### B9 — investigate_regression /blogs/guide-to-easy-anxiety-coping-techniques-for-kids
+- Verifier verdict: **APPROVE**
+- Reasoning: Read-only diagnostic, no content changes, no commits, no AP triggered
+- Condition: Core Update confound flag required in findings ✅ (included)
+- Outcome: APPROVED, investigation completed, BACKLOG updated
+
+### B11 — flag_for_human DataForSEO balance depleted
+- Verifier verdict: **APPROVE**
+- Reasoning: Pure Slack notification, no content/code changes, no PII
+- Outcome: APPROVED, Slack posted ts:1788520291.747429, B11 CLOSED

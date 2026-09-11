@@ -162,3 +162,39 @@ Doha 3 W33 + not visible W34. Confirmed one-week anomaly.
 
 ### Pattern 12: Australia (Melbourne/Sydney) NRI market
 **W34 status:** 26 total (NSW 12 + Victoria 14). Stable at lower level than W32 peak (60). W3 of signal. Does not meet 3-week growth threshold (flat not growing). On watch — promote to Pattern if W35 shows growth.
+
+---
+
+## W37 Pattern Status Update (2026-09-09)
+
+### P5 (chatgpt.com AI search) — RECOVERED, W7, ACTIVE
+**W37:** 286 book clicks (utm_source), 60 by domain. vs W36 211 → **+35.5% RECOVERY** from step-back.
+**Revenue milestone:** 3 payments + 4 bookings directly attributed to chatgpt.com utm_source — highest AI-search revenue week ever.
+**Status:** Upgraded from WATCH back to ACTIVE. W7 of pattern. chatgpt.com now = 10.8% of total book clicks.
+**Action:** Protect AI-citation-friendly content (quickAnswer/keyTakeaways frontmatter). Continue AEO investments.
+
+### P1 Tamil Nadu — SUSTAINED, W3+ recovery
+**W37:** 132 clicks (Chennai 79, Coimbatore 30, Madurai 9, Salem 4, Tiruvananthapuram 9, Nagercoil 1).
+**Status:** 3rd+ consecutive recovery week post W32 crash. Pattern confirmed sustained.
+
+### P1 Telugu/Telangana — FLAT, watching
+**W37:** Telangana 123, Hyderabad 120, AP 57. Flat vs W36 step-back. Neither recovering nor declining further.
+
+### P8 Kerala — 🔴 WATCH (regression W37)
+**W37:** Kerala 43 (Kochi 27, Thiruvananthapuram 9, Kannur 2, Kozhikode 2, Malappuram 2, Kottayam 1).
+**vs W36 estimated:** ~67 → -35.8% WoW. After being "FULLY CONFIRMED" at W6.
+**Status:** Demoted to WATCH. Need W38 to distinguish noise from regression. Do not escalate Kerala T5 proposals until W38 confirms.
+
+### Europe Diaspora — NEW SEED W2
+**W37:** Germany 35 (Frankfurt 19, Munich 6, Stuttgart 3, Konstanz 5, Düsseldorf 2) + Italy 11 (Monza) + UK 17 = 63.
+**W36:** 15 (Frankfurt) + 11 (Monza) = 26 (first week).
+**Growth:** +142% WoW. Growing fast. Zero Europe-specific content exists.
+**Status:** W2 seed. Promote to Pattern (P16) if W38 ≥ 50. T5 proposal: "online therapy for Indians in Germany/UK/Europe."
+
+### US NRI — NEW SEED W2
+**W37:** ~116 clicks across NY(29), TX(24), MD(13), IL(12), GA(10), CA(9), NC(3), DC(4), PA(5), IN(2), VA(3), WA(2).
+**Status:** Strongest US week ever. W2 seed. Promote to Pattern (P17) if W38 ≥ 80. T5 proposal: "online therapy for Indians in USA."
+
+### Gulf NRI (P13) — ACTIVE, STABLE
+**W37:** Abu Dhabi 22 + Dubai 12 + Mecca 3 + Eastern Province 2 + Sharjah 1 = 41.
+**Status:** Stable at ~41/week. Content gap remains. T5 has proposals filed.

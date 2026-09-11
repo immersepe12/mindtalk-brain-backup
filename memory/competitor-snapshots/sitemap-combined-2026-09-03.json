@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-03",
+  "results": {
+    "amahahealth.com": {
+      "brand": "Amaha",
+      "url_count": 1180,
+      "last_count": 0,
+      "delta": null,
+      "error": null
+    },
+    "yourdost.com": {
+      "brand": "YourDOST",
+      "url_count": 0,
+      "last_count": 0,
+      "delta": null,
+      "error": "https: 404; http: 404"
+    },
+    "betterhelp.com": {
+      "brand": "BetterHelp",
+      "url_count": 0,
+      "last_count": 0,
+      "delta": null,
+      "error": "https: 404; http: 404"
+    },
+    "manastha.com": {
+      "brand": "Manastha",
+      "url_count": 211,
+      "last_count": 0,
+      "delta": null,
+      "error": null
+    },
+    "mfine.co": {
+      "brand": "MFine",
+      "url_count": 18078,
+      "last_count": 0,
+      "delta": null,
+      "error": null
+    },
+    "mindtalk.in": {
+      "brand": "Mindtalk",
+      "url_count": 905,
+      "last_count": 0,
+      "delta": null,
+      "error": null
+    }
+  }
+}

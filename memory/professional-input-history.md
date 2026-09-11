@@ -73,3 +73,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W36 | /illnesses/stress-disorder | Dr. Abhimanyu Chandak | 55 | brief_generated |
 | 2026-W36 | /illnesses/schizophrenia | Dr. Thejus Kumar B R | 45 | brief_generated |
 | 2026-W36 | /blogs/anxiety-in-relationships | Dr. Krishna K R | 50 | brief_generated |
+
+| 2026-W37 | /illnesses/learning-disability | Dr. Akanksha Kashinath Bhor | 85 | brief_generated |
+| 2026-W37 | /illnesses/gender-identity-disorder | Sufia Nusrat | 85 | brief_generated |
+| 2026-W37 | /illnesses/dual-diagnosis | Dr. Vishal Kasal | 80 | brief_generated |
+| 2026-W37 | /treatments/transcranial-direct-current-stimulation-tdcs-therapy | Dr. Arun Kumar V | 70 | brief_generated |
+| 2026-W37 | /treatments/art-therapy | Ms. Navyashri S | 70 | brief_generated |
+| 2026-W37 | /blogs/domineering-vs-dominating | Ms. Suhita Saha | 45 | brief_generated |

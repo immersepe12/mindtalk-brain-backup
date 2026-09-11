@@ -39,6 +39,12 @@
 
 
 ---
+**T12 Learner stamp — 2026-09-06 (weekly run):** ⚠ LEARNER FLAG: Dual data failure this week — DataForSEO 402 (day 3, B17 IMMEDIATE) + gsc-pull.py library missing. 5 watches DEFERRED to 09-10 (ALGO_WATCH settle): W30/W31/W32/W33 Day-42 finals, W-PSYCH-BLR-20260821, W-COUN-BLR-20260821. W40 Day-21 also DATA_GAP (not in T4 pipeline). Stub-pilot + hyperactive-ADHD Day-42 batch FORMALLY CLOSED: 0🟢 / 0🟡 / 1🔴 / 5⚫ (100% stalled/worse) — worst single-batch result in system history. W24 (panic-attack-grounding) 🔴 STALLED (AI Overview trap, url_locked=true, B16 queued). W25/W26/W27/W28 + hyperactive-ADHD ⚫ WORSE — closed. Weekly metrics (Aug 22-28): 3,239 clicks (−4.6%), 346,320 impr (−5.4%), CTR 0.9%, pos 14.2. **Active watches next week:** W30-W33 Day-42 finals → 09-10; W-PSYCH-BLR + W-COUN-BLR → 09-10; W40 Day-21 → 09-10; W36/W37 Day-42 → 09-11; W38 Day-42 → 09-15; W39 Day-42 → 09-16; W41 Day-21 → 09-08; W41 Day-42 → 09-29.
+
+---
+**T10 Strategist stamp — 2026-09-04 8 PM IST:** DataForSEO 402 (2nd consecutive day) — 0 rank data. 6 Day-42 evaluations DEFERRED (hyperactive-vs-inattentive-adhd + 5 mindful-minutes stub-pilot pages; DataForSEO credits must be restored by Kushal before T12 can close these). ALGO_WATCH ACTIVE (settle 09-10). No new watches opened today. Meta-Learner proposals apply 09-06. **Upcoming (flagged as `pending_evaluation`):** W30/W31/W32/W33 Day-42 finals → **2026-09-08** (T12 evaluates Sunday 09-07); W41 Day-21 midpoint → **2026-09-08**; W36/W37 Day-42 finals → **2026-09-11**; W38 Day-42 final → **2026-09-15**; W39 Day-42 final → **2026-09-16**. Step 10 NO-OP (proposals future-dated).
+
+---
 **T10 Strategist stamp — 2026-08-28 8 PM IST:** Core Update Day 3 LIVE. No new watches opened today (psychologists-in-mysore MODERATE read at Core Update Day 3 — confound, defer AP5 check to 09-05). W38 narrative-therapy still OPEN (URGENT Day-21 regression, Day-42 final 09-15 — investigate_regression on 09-05). Step 10 NO-OP. **Upcoming**: 09-01 W40 Day-21; 09-04 stub-pilot Day-42 (6 URLs) + W-PSYCH-BLR-20260821; 09-05 Core Update settle → unblock YMYL + narrative-therapy investigate_regression; 09-08 W30-W33 Day-42 finals + W41 Day-21; 09-11 W36/W37 Day-42; 09-15 W38 Day-42; 09-16 W39 Day-42.
 
 ---
@@ -69,11 +75,11 @@
 
 | W22 | /blogs/burnout-treatment | burnout treatment | investigate_regression (CRITICAL) | 2026-06-29 | Weekly summary Jun 20-26 flagged pos 6.8→85.9 (-79.1). Page published 2026-05-18; 4 sibling pages exist. AP5 check ran 2026-06-30 (Executor T11). | AP5 spike check + cannibalization diagnostic completed 2026-06-30. | ✅ **CLOSED 2026-06-30 (Executor T11 + GSC validator confirmed) — 🟡 QDF CONFIRMED + TRACKER ERROR.** Peak pos 6.8 at day 26-32 post-publish = textbook QDF window; collapse at day 33-39 = standard QDF decay. GSC validator 2026-06-30 additionally confirmed the CRITICAL was a DataForSEO tracker error: GSC impressions 4→5 (+25%, IMPROVING). Cannibalization (guide-to-burnout-syndrome 184KB, pos 7.1) is pre-existing, not the cause. **NO content action.** DO NOT add to #18 recovery batch. Monitor organic floor mid-July; low-priority differentiation sprint candidate for Q3 2026. Log: `memory/experiments/investigation-burnout-treatment-2026-06-30.md` |
 | W23 | /treatments/life-coach-therapy | what is a life coach | CTR_metarewrite (meta_ctr_update) | 2026-07-23 | T11 LIFE-COACH-CTR-01: P11 title ("What Is a Life Coach? 7 Types") + keyword-forward desc + FAQ H3 upgrade. **Corrected commit `6d2fe76`** (original commit 675dc26 was correct in git history but got dropped from the tree during a later FUSE-recovery commit — Vercel showed READY on the wrong tree; re-applied via GitHub Git Data API, verified live via curl). AP6 FUSE fallback — Vercel prod 200 as AP6 gate (precedent T9 2026-07-14), but tree-level verification now required in addition (see lesson below). | CTR 0.02%→≥0.3% (+65 clicks/wk). 21,757 impr/wk baseline. P11 number-add pattern (confirmed Sprint C winner). | 2026-08-06 | ✅ **CLOSED 2026-08-06 — 🔴 INFORMATIONAL CLOSURE (Tier C disqualification).** "what is a life coach" = proven Tier C per AP11 + INTENT-PRIORITY.md §0 (26K+ impr/wk, 0.0% CTR confirmed 08-03; AP11 explicitly names "life coach" as a proven dead family). Under 2026-07-30 intent reframe, CTR lift on a Tier C page does not constitute success — booking conversion path is absent. Even a 3× CTR improvement (0.02%→0.06%) = ~19 clicks/wk with 0 booking path; Tier C ×0.3 multiplier → action score ≈ 0. Measurement deliberately deferred — structural Tier C gate is not data-dependent. Tag: NO-INTEREST-TIER-C. **Precedent established:** do not open CTR watches on Tier C vocabulary pages — the gate is booking-path classification, not CTR baseline. Full reasoning: brain/memory/decisions/2026-08-06.md. |
-| W24 | /mindful-minutes/panic-attack-grounding | 5-4-3-2-1 grounding technique | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship — new `type: item` mindful-minutes page (commit `f8a7429`, merged to main same day). Same push also added an `isItem`/AudioObject branch to `mindful-minutes/[slug]/page.tsx` (new code, mirrors the existing worksheets pattern). Reviewer abhimanyu-chandak. AP6 FUSE + disk-full (ENOSPC) fallback — local build/npm install blocked by known sandbox infra limits, so Vercel prod 200 is the AP6 gate; additionally verified `<title>`, `AudioObject` schema string, and the new "Listen in the Mindtalk app" CTA copy all present via curl (tree-level content check, not just status code). | Indexed within 4-6wk; impressing on "5-4-3-2-1 grounding technique" / "panic attack grounding" within 14d. | 2026-08-07 (14d) | ✅ **CLOSED 2026-08-09 by Learner — 🟢 RECOVERED.** GSC (Jul 24–Aug 8): impr=1,297, pos=8.1, clicks=3, CTR=0.23%. Primary query family ("12345 panic attack" pos 6.7, "5-4-3-2-1 grounding technique anxiety" pos 3.0) impressing within 14d. Strong 14-day indexation signal. Log: `memory/experiments/closed-W24-2026-08-09.md` |
-| W25 | /mindful-minutes/pre-sleep-body-scan | body scan for sleep | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer dr-rayani-m-dessa. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "body scan for sleep" / "pre-sleep body scan" within 14d. | 2026-08-07 (14d) | ✅ **CLOSED 2026-08-09 by Learner — 🟡 PARTIAL.** GSC (Jul 24–Aug 8): impr=141, pos=8.2, clicks=0, CTR=0%. Indexed but primary "body scan for sleep" cluster not ranking — impressions are brand leakage ("vandrevala", "cadabams") + fringe variants ("sleep scan"). Competition lockout: high-DA global sleep meditation sites dominate. Log: `memory/experiments/closed-W25-2026-08-09.md` |
-| W26 | /mindful-minutes/4-7-8-breathing | 4-7-8 breathing | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "4-7-8 breathing" within 14d. | 2026-08-07 (14d) | ✅ **CLOSED 2026-08-09 by Learner — 🟢 RECOVERED (EXCEPTIONAL).** GSC (Jul 24–Aug 8): impr=293, pos=9.7 avg; "4 7 8 breathing" query at pos 2.5 (top-3!). AEO/AI Overview citation candidate — flag for T17. Log: `memory/experiments/closed-W26-2026-08-09.md` |
-| W27 | /mindful-minutes/loving-kindness-meditation | loving-kindness meditation | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Parent category mapped to "Emotional Processing & Resilience" (app-side inventory category — no matching mindtalk.in category page exists yet, so internal body links point to the live `/mindful-minutes/anxiety` page instead; CTA still resolves correctly to the real app category). Same AP6 FUSE/disk fallback as W24. | Indexed within 4-6wk; impressing on "loving-kindness meditation" / "metta meditation" within 14d. | 2026-08-07 (14d) | ✅ **CLOSED 2026-08-09 by Learner — ⚫ WORSE (dark).** GSC (Jul 24–Aug 8): impr=0, pos=—, clicks=0, CTR=0%. ZERO GSC signal after 16 days. Root cause: "loving-kindness meditation" is dominated globally by Headspace/Calm/GGSC/Tara Brach (DA 80-95+) — competition lockout. 1st data point for globally-competitive meditation term failure. Log: `memory/experiments/closed-W27-2026-08-09.md` |
-| W28 | /mindful-minutes/morning-energy-activation | morning energy activation | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "morning energy activation" within 14d. | 2026-08-07 (14d) | ✅ **CLOSED 2026-08-09 by Learner — 🟡 PARTIAL.** GSC (Jul 24–Aug 8): impr=71, pos=11.5, clicks=2, CTR=2.82%. Indexed and ranking on adjacency ("morning activation" pos 4.0) but "morning energy activation" is near-zero India volume term (P12 exception class E3 analog). High CTR when found = content resonates, but market thin. Log: `memory/experiments/closed-W28-2026-08-09.md` |
+| W24 | /mindful-minutes/panic-attack-grounding | 5-4-3-2-1 grounding technique | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship — new `type: item` mindful-minutes page (commit `f8a7429`, merged to main same day). Same push also added an `isItem`/AudioObject branch to `mindful-minutes/[slug]/page.tsx` (new code, mirrors the existing worksheets pattern). Reviewer abhimanyu-chandak. AP6 FUSE + disk-full (ENOSPC) fallback — local build/npm install blocked by known sandbox infra limits, so Vercel prod 200 is the AP6 gate; additionally verified `<title>`, `AudioObject` schema string, and the new "Listen in the Mindtalk app" CTA copy all present via curl (tree-level content check, not just status code). | Indexed within 4-6wk; impressing on "5-4-3-2-1 grounding technique" / "panic attack grounding" within 14d. | 2026-08-07 (14d) | ⚠️ **DAY-42 CLOSED 2026-09-06 by T12 Learner — 🔴 STALLED (AI Overview trap).** Day-14 was 🟢 RECOVERED (1,297 impr/pos 8.1). Day-42 (T4 09-05, GSC-only): 136 impr / 0 clicks / pos ~13. Rank exists but AI Overview absorbs 100% of clicks. url_locked=true. B16 (schema_optimization for AI Overview compatibility) queued post-09-10. Log: `memory/experiments/closed-stubpilot-day42-batch-2026-09-06.md` |
+| W25 | /mindful-minutes/pre-sleep-body-scan | body scan for sleep | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer dr-rayani-m-dessa. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "body scan for sleep" / "pre-sleep body scan" within 14d. | 2026-08-07 (14d) | ✅ **DAY-42 CLOSED 2026-09-06 by T12 Learner — ⚫ WORSE.** Day-14 was 🟡 PARTIAL (141 impr, competition lockout). Day-42 (T4 09-05): 3 impr — collapsed further. Global sleep meditation sites (Headspace/Calm/Sleep Foundation) own this SERP. No recovery path. Dark page confirmed. Log: `memory/experiments/closed-stubpilot-day42-batch-2026-09-06.md` |
+| W26 | /mindful-minutes/4-7-8-breathing | 4-7-8 breathing | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "4-7-8 breathing" within 14d. | 2026-08-07 (14d) | ✅ **DAY-42 CLOSED 2026-09-06 by T12 Learner — ⚫ WORSE (QDF false positive).** Day-14 was 🟢 EXCEPTIONAL (pos 2.5 on "4 7 8 breathing"). Day-42 (T4 09-05): pos ~36.2 — QDF boost expired + Core Update. Global meditation/breathing sites reclaimed SERP. Day-14 EXCEPTIONAL was freshness signal, not durable authority. Log: `memory/experiments/closed-stubpilot-day42-batch-2026-09-06.md` |
+| W27 | /mindful-minutes/loving-kindness-meditation | loving-kindness meditation | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Parent category mapped to "Emotional Processing & Resilience" (app-side inventory category — no matching mindtalk.in category page exists yet, so internal body links point to the live `/mindful-minutes/anxiety` page instead; CTA still resolves correctly to the real app category). Same AP6 FUSE/disk fallback as W24. | Indexed within 4-6wk; impressing on "loving-kindness meditation" / "metta meditation" within 14d. | 2026-08-07 (14d) | ✅ **DAY-42 CLOSED 2026-09-06 by T12 Learner — ⚫ WORSE (dark confirmed).** Day-14 was ⚫ WORSE (0 impr). Day-42 (T4 09-05): 0 impr — never achieved any visibility. Global brand lockout confirmed. Dark page pattern (2nd data point — anger-management W34 was 1st). Log: `memory/experiments/closed-stubpilot-day42-batch-2026-09-06.md` |
+| W28 | /mindful-minutes/morning-energy-activation | morning energy activation | NEW_indexation + stub_pilot_batch_1 | 2026-07-24 | Stub-Pilot Batch 1 (re-scoped) auto-ship (commit `f8a7429`). Reviewer tejal-jaiswal. Same AP6 FUSE/disk fallback as W24 — see that row for detail. | Indexed within 4-6wk; impressing on "morning energy activation" within 14d. | 2026-08-07 (14d) | ✅ **DAY-42 CLOSED 2026-09-06 by T12 Learner — ⚫ WORSE.** Day-14 was 🟡 PARTIAL (71 impr, thin market). Day-42 (T4 09-05): ~0 impr — market confirmed too thin. "Morning energy activation" is app catalog label, not a search query. Pre-flight volume gate needed. Log: `memory/experiments/closed-stubpilot-day42-batch-2026-09-06.md` |
 
 | W30 | /blogs/how-to-deal-with-relationship-stress | relationship stress | NEW_indexation | 2026-07-28 | T9 auto-ship (commit `bc57812d`). Verifier VETO-fixed (added /blogs/understanding-the-signs internal link). HTTP 200 ✓ | indexed within 4-6wk; impressing on "relationship stress" / "dealing with relationship stress" within 21d | 2026-08-18 (Day-21) + 2026-09-08 (Day-42) | 🟢 **LIVE** 2026-07-28. 🔴 **DAY-21 INTERIM (2026-08-23 T12):** pos-100 sentinel (AP8), 0 GSC impressions Aug 13-20 window. No ranking signal at Day-26. Confound: August Core Update (2026-08-26) + broad SERP volatility. Watch OPEN → Day-42 final 2026-09-08. Log:  | ⛔ **T20 2026-08-23 — the 2026-08-23 T12 🔴 interim verdict on this row is MEASUREMENT-INVALID and is superseded.** T12 recorded *'GSC Aug 13-20: 0 impressions'*. The pull passed a FULL URL to `scripts/gsc-pull.py --url`, which builds `full_url = PAGE_URL_BASE + url_path` (line 80) → `https://www.mindtalk.inhttps://mindtalk.in/...` → matches 0 GSC rows. **Verified ground truth, same window, page-dimension: 78 impressions / 0 clicks / pos 8.6.** pos 8.6 = page 1; query 'relationship stress' pos 7.2. Watch stays OPEN to its Day-42 final; T12 to re-issue this interim verdict on corrected data. Evidence: `brain/memory/remediation-log.md` 2026-08-23; corrected data in `gsc-data/https:__mindtalk.in_*.json` (`_AUTHORITATIVE_page_dimension_2026_08_23`).
 | W31 | /blogs/how-to-fix-your-sleep-schedule-quickly | fix sleep schedule | NEW_indexation | 2026-07-28 | T9 auto-ship (commit `bc57812d`). Verifier VETO-fixed (added /illnesses/anxiety internal link). HTTP 200 ✓ | indexed within 4-6wk; impressing on "how to fix sleep schedule" / "sleep schedule fix" within 21d | 2026-08-18 (Day-21) + 2026-09-08 (Day-42) | 🟢 **LIVE** 2026-07-28. 🔴 **DAY-21 INTERIM (2026-08-23 T12):** pos-100 sentinel (AP8), 0 GSC impressions Aug 13-20. No ranking signal at Day-26. Core Update confound. Watch OPEN → Day-42 final 2026-09-08. Log:  | ⛔ **T20 2026-08-23 — the 2026-08-23 T12 🔴 interim verdict on this row is MEASUREMENT-INVALID and is superseded.** T12 recorded *'GSC Aug 13-20: 0 impressions'*. The pull passed a FULL URL to `scripts/gsc-pull.py --url`, which builds `full_url = PAGE_URL_BASE + url_path` (line 80) → `https://www.mindtalk.inhttps://mindtalk.in/...` → matches 0 GSC rows. **Verified ground truth, same window, page-dimension: 1608 impressions / 2 clicks / pos 9.6.** primary KW 'how to fix your sleep schedule quickly' pos 1.8 (183 impr). Watch stays OPEN to its Day-42 final; T12 to re-issue this interim verdict on corrected data. Evidence: `brain/memory/remediation-log.md` 2026-08-23; corrected data in `gsc-data/https:__mindtalk.in_*.json` (`_AUTHORITATIVE_page_dimension_2026_08_23`).
@@ -1161,8 +1167,8 @@ tirzah-johnson load=9 (over cap; brief-specified override). tejal-jaiswal load=7
 - **2026-09-22:** W40 Day-42 finals
 - **2026-09-29:** W41 Day-42 finals
 
-| W-PSYCH-BLR-20260821 | /doctors/psychologists-in-bangalore | ship_REFRESH_brief | 2026-08-21 | 2026-09-04 | open | PSYCHOLOGISTS-BANGALORE-REFRESH-01: +900w, 4 new H2s, 2 new FAQs, updated meta. Watch: 'adult psychologist near me' pos 5→8, 'adhd therapist near me', 'anxiety psychologist Bangalore'. Commit 7163c6793b3c. |
-| W-COUN-BLR-20260821 | /doctors/counsellors-in-bangalore | ship_REFRESH_brief | 2026-08-21 | 2026-09-04 | open | COUNSELLORS-BANGALORE-THIN-01: +900w, 4 new H2s, typos fixed, KW in para1. Watch: 'counselling bangalore' pos 51 recovery, 'best counsellors bangalore'. Commit 7163c6793b3c. |
+| W-PSYCH-BLR-20260821 | /doctors/psychologists-in-bangalore | ship_REFRESH_brief | 2026-08-21 | 2026-09-04 → **DEFERRED 2026-09-10** | ⏳ DATA_GAP | PSYCHOLOGISTS-BANGALORE-REFRESH-01: +900w, 4 new H2s, 2 new FAQs, updated meta. Watch: 'adult psychologist near me' pos 5→8, 'adhd therapist near me', 'anxiety psychologist Bangalore'. Commit 7163c6793b3c. **T12 09-06 DEFERRED**: DataForSEO 402 (day 3) + ALGO_WATCH active. Log: `memory/experiments/deferred-W-PSYCH-BLR-20260821-2026-09-06.md`. Re-evaluate 09-10. |
+| W-COUN-BLR-20260821 | /doctors/counsellors-in-bangalore | ship_REFRESH_brief | 2026-08-21 | 2026-09-04 → **DEFERRED 2026-09-10** | ⏳ DATA_GAP | COUNSELLORS-BANGALORE-THIN-01: +900w, 4 new H2s, typos fixed, KW in para1. Watch: 'counselling bangalore' pos 51 recovery, 'best counsellors bangalore'. Commit 7163c6793b3c. **T12 09-06 DEFERRED**: DataForSEO 402 (day 3) + ALGO_WATCH active. Log: `memory/experiments/deferred-W-COUN-BLR-20260821-2026-09-06.md`. Re-evaluate 09-10. |
 
 **2026-08-22 T10 Strategist stamp:** Clean signal day — 0 new watches opened (no content shipped today). ✅ psychology-of-love CTR_DROP CONFIRMED by GSC (from 08-21 validation run) — already in BACKLOG as PSYCHOLOGY-OF-LOVE-CTR-DROP-01 (score 24). ✅ W30-W33 Day-21 confirmed evaluated 2026-08-18 — no observation pipeline gap. W30-W33 Day-42 finals due 2026-09-08. **⚡ IMMINENT — W39 yoga-for-anxiety Day-42 final fires 2026-08-26 (4 DAYS). Same day as August Core Update. Strategist must review W39 verdict FIRST on 08-26 run before assessing Core Update signals. Schema CLEAR (PR #23 live 08-17). CWV-DOCTORS-PAGE-01 dev fix deadline was 08-26 — confirm with dev team.** ⚡ 2026-08-23 TOMORROW: Meta-Learner t11+t17+t9 proposals apply (FIRST ACTION of T10 run). ⚡ 2026-08-25: drug-addiction/intellectual-disability/signs-of-adhd/narrative-therapy Day-21 midpoints (T4 auto-evaluates). No WATCH status changes today. Existing watch summary from 2026-08-20 stamp remains current.
 
@@ -1238,3 +1244,131 @@ tirzah-johnson load=9 (over cap; brief-specified override). tejal-jaiswal load=7
 **Watch status:** open
 
 | W-B7-REVIEWER-BATCH1-2026-09-09 | B7 staged batch 1 | 5 blogs (abandonment, burnout, emotional-distress, gaslighting, seasonal-affective) | reviewer=sucheta-saha added | check GSC impressions stability | 2026-09-02 | 2026-09-09 | scheduled |
+| W-B7-REVIEWER-BATCH2-2026-09-09 | B7 staged batch 2 | 10 blogs (inner-peace, quotes-relationships, alexithymia, balancing-vulnerability, eustress-distress, emotionally-unavailable, psychological-distress, divorce-india, top-stressors, burnout-syndrome) | reviewer=sucheta-saha added (commit 8f7617bb) | check GSC impressions stability; if stable → proceed batch 3 (next 10 of remaining ~32 blogs) | 2026-09-09 | 2026-09-16 | scheduled |
+
+---
+## T10 Strategist Stamp — 2026-09-03
+
+**Run time:** 2026-09-03 20:00 IST
+**Site posture:** CONSERVATIVE — ALGO_WATCH ACTIVE (settle check 2026-09-10)
+**DataForSEO:** BLIND — 402 error today (0/299 keywords). Balance depleted. B11 raised.
+
+**⚡ IMMINENT — TOMORROW 2026-09-04:**
+- W24-W28 5 mindful-minutes stub-pilot pages Day-42 final (T4 auto-evaluates; no GSC baseline — SERP evidence only)
+- /blogs/hyperactive-vs-inattentive-adhd Day-42 final (T4 auto-evaluates; no GSC baseline)
+- W-PSYCH-BLR-20260821 (/doctors/psychologists-in-bangalore) check date
+- W-COUN-BLR-20260821 (/doctors/counsellors-in-bangalore) check date
+- ⚠ Core Update confound still potentially active (Aug 22–~Sep 7)
+
+**No new watches opened** today (no content shipped).
+
+**Watch summary changes:** None. Active watches from 2026-08-29/31 stamp remain current. W43 (8 blogs 08-31) open, Day-21 2026-09-21.
+
+**Upcoming watch density:**
+- **2026-09-04 (TOMORROW):** ⚡⚡ 6 Day-42 finals + 2 refresh-page checks (see above)
+- **2026-09-08 (5 days):** W30-W33 Day-42 finals (relationship-stress, sleep-schedule, mental-exhaustion, eft-tapping) + W41 Day-21 midpoints (7 blogs 08-18). NOTE: W30-W33 verdicts depend on corrected GSC data (GSC-MEASUREMENT-INTEGRITY-01 fix must be verified)
+- **2026-09-09 (6 days):** B7 reviewer batch 2 eligibility (AP1 7-day stability wait from batch 1 shipment 09-01)
+- **2026-09-10 (7 days):** ALGO_WATCH settle check — unblock: YMYL refresh, sprints, position-slide investigation, chronic-stress/drug-addiction/ACT/CBT refreshes, therapy-near-me hub sprint
+- **2026-09-11 (8 days):** W36/W37 Day-42 finals (depression + anxiety YMYL — schema fix PR #23 recovery path)
+- **2026-09-15 (12 days):** W38 narrative-therapy Day-42 final (YMYL — Kushal a/b/c pending)
+- **2026-09-16 (13 days):** W39 yoga-for-anxiety Day-42 final
+- **2026-09-21 (18 days):** W18/W19/W20/W21 extended obs windows close + W43 Day-21 midpoints (8 blogs 08-31)
+- **2026-09-22 (19 days):** W40 Day-42 finals (5 blogs 08-11)
+- **2026-09-29 (26 days):** W41 Day-42 finals (7 blogs 08-18)
+- **2026-10-12:** W43 Day-42 finals (8 blogs 08-31)
+
+**Meta-Learner proposals:** 3 pending (ap12-url-locked-violation, t12-gsc-zero-data-guard, t14-cwv-multisample-gate) — Apply on 2026-09-06. NO-OP today; apply pass runs Saturday.
+
+
+---
+**T10 Strategist stamp — 2026-09-05 8 PM IST:** ⚠ STRATEGIST FLAG: DataForSEO 402 day 3 — rank data blind for 3rd consecutive day. T12 W30-W33 Day-42 finals fire 09-08; DataForSEO MUST be restored before then (B17 IMMEDIATE). **Mindful-minutes Day-42 batch processed by T4 (09-05):** panic-attack-grounding → SCHEMA_OPTIMIZATION_NEEDED (136 impr/0 clicks/pos 13 = AI Overview absorption, url_locked=true, B16 queued post-09-10); 4-7-8-breathing → NEEDS_REFRESH (pos 2.5→36.2 regression, Core Update impact); loving-kindness + morning-energy + pre-sleep-body-scan → NEEDS_REFRESH/dark (global brand lockout/near-zero volume). Stub-pilot dark-page pattern confirmed. **No new watches opened** (ALGO_WATCH active, no content shipped). **Meta-Learner proposals apply TOMORROW 09-06** (Step 10 NO-OP today). **Upcoming:** W30/W31/W32/W33 Day-42 finals → **2026-09-08** (T12); W-B7-REVIEWER batch 2 eligible → **2026-09-09**; ALGO_WATCH settle check → **2026-09-10**; W36/W37 Day-42 finals → **2026-09-11**; W38 Day-42 final → **2026-09-15**; W39 Day-42 final → **2026-09-16**; W43 (8 blogs) Day-42 → **2026-10-12**.
+
+---
+**T10 Strategist stamp — 2026-09-06 8 PM IST:**
+ALGO_WATCH ACTIVE (settle check 2026-09-10 — 4 days). No content shipped. No new watches opened.
+**Meta-Learner apply pass: 3 proposals applied** — AP12 (url_locked rule formalized in ANTI-PATTERNS.md), T12 zero-data guard (task12-learner.md), T14 CWV multisample gate (task14-technical-health-monitor.md). 3 future proposals (Apply-on 09-13) left in queue.
+**Active watch list unchanged from 09-05 stamp.** Next action: 2026-09-08 — T12 W30-W33 Day-42 finals + W41 Day-21 midpoints (DataForSEO must be restored first — B17 CRITICAL).
+**Upcoming:** 09-08 W30-W33 Day-42 finals | 09-09 B7 reviewer batch 2 eligible | 09-10 ALGO_WATCH unlock | 09-11 W36/W37 Day-42 finals | 09-15 W38/blogs Day-42 finals.
+
+---
+**T10 Strategist stamp — 2026-09-07 8 PM IST:**
+ALGO_WATCH ACTIVE (settle check 2026-09-10). No content shipped. No new watches opened.
+DataForSEO RESTORED — T12 09-08 finals can proceed.
+Position improving: 14.2 → 12.8 (weekly-summary-09-07). Core Update Aug 22–Sep 7 may be concluding today; settle check 09-10 still warranted.
+Meta-Learner proposals: 3 pending (t12-stub-pilot-qdf-guard, t17-tabs-create-fallback, t9-doctors-cluster-cap). All Apply-on 2026-09-13. NO-OP today. Apply on 09-13 T10 run (FIRST ACTION).
+Active watch list unchanged from 09-06 stamp.
+
+**IMMINENT watch events:**
+- **2026-09-08 (TOMORROW):** ⚡ W30-W33 Day-42 finals (relationship-stress, sleep-schedule, mental-exhaustion, eft-tapping) + W41 Day-21 midpoints (7 blogs 08-18). T12 auto-evaluates. DataForSEO ✅.
+- **2026-09-09 (2 days):** B7 reviewer batch 2 eligible (T11 fire — AP1 7-day stability from batch 1 09-01).
+- **2026-09-10 (3 days):** ALGO_WATCH settle check — unlock gate for: YMYL refresh queue, B12 therapy-near-me hub sprint, B18 online-psychiatrist push, CHATGPT-AEO-SPRINT, PTSD-CLUSTER, position-slide investigation, biofeedback refresh, chronic-stress/drug-addiction/ACT/CBT refreshes.
+- **2026-09-11 (4 days):** W36/W37 Day-42 finals (depression + anxiety YMYL — schema fix PR #23 recovery path) + anger-management Day-42 final + values-clarification-act Day-42 final. High-density.
+- **2026-09-13 (6 days):** 3 Meta-Learner proposals apply (T10 first action).
+- **2026-09-15 (8 days):** W38 narrative-therapy Day-42 final + drug-addiction-symptoms/intellectual-disability/signs-of-adhd Day-42 finals.
+- **2026-09-16 (9 days):** W39 yoga-for-anxiety Day-42 final (corrected date — was misstated as 08-26).
+- **2026-09-21 (14 days):** W18/W19/W20/W21 extended obs close + W43 Day-21 midpoints (8 blogs 08-31).
+- **2026-09-22 (15 days):** W40 Day-42 finals (5 blogs 08-11).
+- **2026-09-29 (22 days):** W41 Day-42 finals (7 blogs 08-18).
+- **2026-10-12:** W43 Day-42 finals (8 blogs 08-31).
+
+---
+**T10 Strategist stamp — 2026-09-09 8 PM IST:**
+0 new watches opened (no content shipped). Clean signal day — 0 CRITICAL, 0 MODERATE confirmed. All 3 CRITICAL pos→100 drops confirmed AP8 noise by GSC.
+
+**ALGO_WATCH settle check TOMORROW 2026-09-10** — all held actions unlock if gsc-validation is clean. Priority sequence: fire therapy-near-me hub sprint prompt (B12), investigate online psychiatrist hub (B18), unblock biofeedback refresh + chronic-stress/drug-addiction/ACT/CBT refreshes, fire AEO Perplexity sprint (B13, prompt ready), open position slide investigation (B8).
+
+**W30-W33 Day-42 finals + W41 Day-21 midpoints:** Processed by T12 today (09-08 run). Results expected in logs tonight.
+
+**2026-09-11 (2 days):** anger-management + values-clarification-act Day-42 finals (T4 auto). W36/W37 Day-42 finals (depression + anxiety YMYL — schema fix recovery path; Core Update confound caveat still applies if ALGO_WATCH not yet cleared on 09-11).
+
+**FOMO cluster note (not a formal watch):** "fomo" pos 31→2.5 per weekly-summary-09-07. Check position stability at 2026-09-22 review — if still page 1, could inform new brief on FOMO cluster.
+
+**Active watches summary (2026-09-09, unchanged from 09-08):** W18 (QDF_BLOCKED, obs to 09-21), W19 (QDF_BLOCKED, obs to 09-21), W20 (NEEDS_REFRESH, obs to 09-21, BACKLOGGED), W21 (QDF_BLOCKED, obs to 09-21), W24-W28 (stub-pilot, verdict 08-14 — Kushal a/b/c pending), W30-W33 (Day-42 finals processed today 09-08 by T12), W36 (🔴 STALLED, Day-42 final 09-11), W37 (⚫ WORSE, Day-42 final 09-11), W38 (narrative-therapy, Day-42 09-15, YMYL, Kushal decision pending), W39 (yoga-for-anxiety, Day-42 09-16), W40 (5 blogs 08-11, Day-21 09-01 done, Day-42 09-22), W41 (7 blogs 08-18, Day-21 09-08 done, Day-42 09-29), W43 (8 blogs 08-31, Day-21 09-21, Day-42 10-12), W-B7-REVIEWER-BATCH2 (check 09-16), W-PSYCH-BLR-20260821 (check 09-10 on unlock), W-COUN-BLR-20260821 (check 09-10 on unlock).
+
+**Upcoming watch checks:**
+- **2026-09-10:** ALGO_WATCH settle check + W-PSYCH-BLR + W-COUN-BLR check
+- **2026-09-11:** W36/W37 Day-42 finals + anger-management + values-clarification-act Day-42 finals
+- **2026-09-13:** 3 Meta-Learner proposals apply (T10 FIRST ACTION)
+- **2026-09-15:** W38 narrative-therapy Day-42 final + drug-addiction/intellectual-disability/signs-of-adhd Day-42 finals
+- **2026-09-16:** W39 yoga-for-anxiety Day-42 final + W-B7-REVIEWER-BATCH2 check
+- **2026-09-21:** W18/W19/W20/W21 obs windows close + W43 Day-21 midpoints
+- **2026-09-22:** W40 Day-42 finals
+- **2026-09-29:** W41 Day-42 finals
+- **2026-10-12:** W43 Day-42 finals
+
+---
+**T10 Strategist stamp — 2026-09-11 8 PM IST:**
+ALGO_WATCH CLEARED 2026-09-10 ✅. No September Core Update confirmed. All held actions now eligible.
+
+**Watch status updates:**
+- **anger-management** (Day-42 final TODAY): QDF_BLOCKED — pos=0 GSC (high-DA aggregators dominating SERP: therapymantra.in, innerhealing.in). Extended obs to **2026-10-23**. Confirms /journeys/ content type faces aggregate-lockout risk. Do NOT re-brief /journeys/ without SERP competition audit.
+- **values-clarification-act** (Day-42 final TODAY): SCHEMA_OPTIMIZATION_NEEDED — pos 16.0→15.1 (marginal), CTR drop vs Featured Snippet/AI Overview absorption. url_locked=true. HowTo + FAQ schema sprint flagged to human (B20). Extended obs — no close date set.
+- **W36 (depression YMYL)** + **W37 (anxiety YMYL)**: Day-42 window open TODAY per schedule, but NOT in T4 observation pipeline. These are T12 Learner watches — will be formally evaluated on next T12 weekly run **2026-09-14 (Sunday)**. Do not close early.
+- **W-PSYCH-BLR-20260821 + W-COUN-BLR-20260821**: ALGO_WATCH cleared 09-10, now eligible for re-evaluation. T11 to pick up.
+
+**No new watches opened** today (no content shipped).
+
+**Active watches (2026-09-11):**
+- W18/W19/W21 (QDF_BLOCKED, obs to 09-21), W20 (NEEDS_REFRESH, obs to 09-21)
+- W24-W28 (stub-pilot, Kushal a/b/c pending — B15)
+- W30-W33 (Day-42 processed 09-08 by T12)
+- W36 🔴 STALLED (Day-42 pending T12 09-14), W37 ⚫ WORSE (Day-42 pending T12 09-14)
+- W38 narrative-therapy (Day-42 09-15, YMYL, Kushal decision pending)
+- W39 yoga-for-anxiety (Day-42 09-16)
+- W40 (5 blogs 08-11, Day-42 09-22), W41 (7 blogs 08-18, Day-42 09-29)
+- W43 (8 blogs 08-31, Day-21 09-21, Day-42 10-12)
+- anger-management: QDF_BLOCKED (obs extended to 2026-10-23)
+- values-clarification-act: SCHEMA_OPTIMIZATION_NEEDED, url_locked (pending B20 human decision)
+- W-B7-REVIEWER-BATCH2 (check 09-16), W-PSYCH-BLR-20260821 (now eligible), W-COUN-BLR-20260821 (now eligible)
+
+**Upcoming watch checks:**
+- **2026-09-13:** 3 Meta-Learner proposals apply (T10 FIRST ACTION)
+- **2026-09-14:** W36/W37 Day-42 finals (T12 Learner weekly run)
+- **2026-09-15:** W38 narrative-therapy Day-42 final (YMYL — Kushal a/b/c pending)
+- **2026-09-16:** W39 yoga-for-anxiety Day-42 final + W-B7-REVIEWER-BATCH2 check
+- **2026-09-21:** W18/W19/W20/W21 obs windows close + W43 Day-21 midpoints
+- **2026-09-22:** W40 Day-42 finals
+- **2026-09-28:** domineering-vs-dominating professional-input hold expires (Ms. Suhita Saha)
+- **2026-09-29:** W41 Day-42 finals
+- **2026-10-12:** W43 Day-42 finals
+- **2026-10-23:** anger-management QDF_BLOCKED obs window close
