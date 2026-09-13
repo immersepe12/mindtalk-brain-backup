@@ -36,6 +36,19 @@
 > All 4 Jul-28 T9 blogs on page-1 at Day-21/33 — P12 trajectory confirmed. W31 EXCEPTIONAL. W39 refresh P11 confirmed. Day-42 finals (09-08 for W30-W33, 09-16 for W39) will carry CORE-UPDATE-CONFOUND (August CU Day 4). Experiment files: `brain/memory/experiments/corrected-interim-W{30-33,39}-2026-08-30.md`.
 
 
+> ### T12 LEARNER STAMP — 2026-09-13
+> **⚠ LEARNER WARNING: zero-impression cohort — possible GSC pull format bug / disk full**
+> All 4 watches due this week (W36, W37, W-PSYCH-BLR-20260821, W-COUN-BLR-20260821) returned 0 impressions in their GSC data files. Root cause: GSC-INFRA-01 disk full (5th recurrence) prevents fresh pulls. Per Step 2.1b zero-data guard, NO verdicts written. All 4 marked PENDING_EVALUATION (data error).
+> 
+> Experiment files written: `brain/memory/experiments/pending-W36-2026-09-13.md`, `pending-W37-2026-09-13.md`, `pending-W-PSYCH-BLR-2026-09-13.md`, `pending-W-COUN-BLR-2026-09-13.md`.
+>
+> **Action required before next Learner run (2026-09-20):** Fix disk space (GSC-INFRA-01) so fresh gsc-pull.py runs can execute. W36/W37 are now 44 days overdue from their Day-42 final (2026-09-11). W38/W39 Day-42 finals land 2026-09-15/16 — same disk issue will block those too.
+>
+> **Stale watch check:** W18/W19/W20/W21 opened ~2026-06-26, now 79 days old (>60-day threshold). However, Strategist explicitly extended observation window to 2026-09-21. Not pruning — honoring Strategist's extension. Flag: W18-W21 extended obs must close 09-21 regardless of disk state.
+>
+> **TRAJECTORY update:** Week 2026-08-31→09-06: Clicks 3,735 (+15.3%), Impr 384,195 (+10.9%), CTR 1.0% ✅, Pos 12.8. Q3 targets exceeded.
+
+
 
 
 ---
@@ -1372,3 +1385,36 @@ ALGO_WATCH CLEARED 2026-09-10 ✅. No September Core Update confirmed. All held 
 - **2026-09-29:** W41 Day-42 finals
 - **2026-10-12:** W43 Day-42 finals
 - **2026-10-23:** anger-management QDF_BLOCKED obs window close
+
+---
+**T10 Strategist stamp — 2026-09-12 8 PM IST:**
+ALGO_WATCH CLEARED. Site posture: GROWTH. No content shipped today (T9 /blogs/ cap 6/6 — resets 09-15).
+
+**DataForSEO 09-11:** PARTIAL (36/299 KWs). 3 CRITICAL pos→100 drops (personality-disorder Δ91, postpartum-depression Δ87, stress-disorder Δ87) — AP8 likely noise (identical-Δ pattern, 14/36 at pos-100). Below 4-drop threshold. GSC validation pending T2 next run (09-13).
+
+**No new watches opened** (no content shipped).
+
+**Watch status (unchanged from 09-11 stamp):** W18/W19/W21 QDF_BLOCKED (obs to 09-21), W20 NEEDS_REFRESH (obs to 09-21), W24-W28 stub-pilot (Kushal a/b/c pending — B15), W30-W33 (Day-42 processed 09-08 by T12), W36 🔴 STALLED (T12 evaluates 09-14), W37 ⚫ WORSE (T12 evaluates 09-14), W38 narrative-therapy (Day-42 **IMMINENT 09-15** — YMYL, Kushal a/b/c still pending), W39 yoga-for-anxiety (Day-42 09-16), W40 (Day-42 09-22), W41 (Day-42 09-29), W43 (Day-21 09-21, Day-42 10-12), anger-management (QDF_BLOCKED obs to 10-23), values-clarification-act (SCHEMA_OPTIMIZATION_NEEDED, url_locked, B20), W-B7-REVIEWER-BATCH2 (check 09-16), W-PSYCH-BLR-20260821 (now eligible post ALGO_WATCH clear), W-COUN-BLR-20260821 (now eligible).
+
+**⚠ IMMINENT watch events:**
+- **2026-09-13 (TOMORROW):** 3 Meta-Learner proposals apply (FIRST ACTION of T10 09-13 run) — includes t9-doctors-cluster-cap-separation (highest-velocity Q3 unlock)
+- **2026-09-14 (2 days):** T12 Learner weekly run — W36/W37 Day-42 finals (depression + anxiety YMYL, schema-fix recovery path). Critical health check.
+- **2026-09-15 (3 days):** ⚡⚡ W38 narrative-therapy Day-42 final (YMYL — Kushal a/b/c STILL PENDING). Also: drug-addiction-symptoms / intellectual-disability-symptoms / signs-of-adhd / narrative-therapy Day-42 finals (T4 auto, Day-39 today).
+- **2026-09-16 (4 days):** W39 yoga-for-anxiety Day-42 final + W-B7-REVIEWER-BATCH2 check + B7 Batch 3 eligible.
+- **2026-09-21 (9 days):** W18/W19/W20/W21 obs windows close + W43 Day-21 midpoints (8 blogs 08-31).
+- **2026-09-22 (10 days):** W40 Day-42 finals (5 blogs 08-11).
+- **2026-09-29 (17 days):** W41 Day-42 finals (7 blogs 08-18).
+- **2026-10-12:** W43 Day-42 finals (8 blogs 08-31).
+
+---
+### ⚙️ T10 STRATEGIST NOTE — 2026-09-13
+
+**Day-42 finals due 2026-09-15 (2 days):**
+| Watch | URL | Day | Primary keyword | Status |
+|---|---|---|---|---|
+| W-AUG04-DRUG | /blogs/drug-addiction-symptoms | 40/42 | drug addiction symptoms | PENDING_EVALUATION 09-15 |
+| W-AUG04-INTELL | /blogs/intellectual-disability-symptoms | 40/42 | intellectual disability symptoms | PENDING_EVALUATION 09-15 |
+| W-AUG04-ADHD | /blogs/signs-of-adhd | 40/42 | signs of adhd | PENDING_EVALUATION 09-15 |
+| W-AUG04-NARR | /treatments/narrative-therapy | 40/42 | Narrative Therapy Bangalore | PENDING_EVALUATION 09-15 |
+
+**T12 Learner must evaluate these on 2026-09-15.** Use GSC page-dimension pull (path form) for each — do not use full URL form to avoid gsc-pull.py URL-prefix bug (T20 2026-08-23 remediation).

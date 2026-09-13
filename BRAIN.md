@@ -1,5 +1,16 @@
 # BRAIN — Mindtalk SEO Growth Engine
 
+### 2026-09-12 T20 Auto-Remediation — READ BEFORE T10 09-13 (overrides tonight's 20:13 Strategist scoring on B8/B19/B20/B21)
+- ✅ **Deploy health READY (content-proven):** origin/main HEAD `d5b6443` (09-11 16:07) is live — /doctors/shweta-kiran-wani 200, 09-09 blogs 200, reviewer=sucheta-saha in JSON-LD. Vercel MCP was auto-DECLINED in the scheduled run → Step 0 cannot see ERROR-then-retry deploys; Kushal to approve the MCP for this task.
+- ⛔ **B21 CLOSED (false positive):** the 3 DataForSEO pos→100 "CRITICAL" illness pages are impressing daily in GSC (personality-disorder pos 24.6→15.8; the tracked "…treatment bangalore" queries rank 7–11 via /doctors/*-in-bangalore). dataforseo_client matches by domain → sentinel noise, 14/36 = 39%. Do NOT queue T2/T11 on these.
+- ⛔ **B20 CLOSED (false positive):** values-clarification-act ALREADY emits HowTo + FAQPage + reviewedBy. T4's SCHEMA_OPTIMIZATION_NEEDED verdict fired without reading the JSON-LD → T13 item.
+- ⛔ **B19 CLOSED — no action (Tier C/AP11), not "nothing dropped":** page growing (+84% impr, 6→9 clicks); the "domineering meaning" rank drop 2.4→10.3 is real but the query has 0 clicks at pos 2 AND at pos 10. T2's "−94%" is a measurement artefact (GSC-MEASUREMENT-INTEGRITY-01, still unfixed).
+- 🔴 **B8 RE-OPENED, RE-SCOPED (T20's own closure was VETOED by the Verifier):** query-level "therapist near me" pos 11.9→27.0 over 8 weeks is REAL — /doctors/therapists-in-bangalore 9.3→16.2 (7→4 clicks/wk) and /doctors/therapists-in-hyderabad 10.1→49.5 (crash), plus mix dilution from new /doctors/ URLs at pos 130–220. Tier A §5 cliff queries. T11: investigate_regression on the 2 URLs; T12: mix watch.
+- 🔧 **Auto-fixed:** 7 shipped briefs archived; 14 redundant `/doctors-listings/` briefs archived (task5 spec line 43 names a dead route — T13); keyword-map +7 (shipped pages were invisible to rank-pull); tracking-db: psychiatrist-vs-psychologist had no status/window since 09-01 → populated; url_locked back-filled on the 09-09 cohort (AP12); reviewer pool: 301-orphans santanu-tripathy + dr-akanksha-bhor REMOVED (T9 assigned santanu-tripathy again on 09-09 → /blogs/therapist-for-depression has NO reviewedBy → **B22 NEEDS_HUMAN**). Discovery re-run (cache fresh, 1,750 new — Intent Gate must filter the AP11 families at the top).
+- 📝 **Brief queue:** refill fired. 7 Tier B decision-spoke briefs authored → Verifier VETOED 3 (autism / personality-disorder / ptsd: the site already holds page 1 for those families at query level — P12-E2) and corrected 4 (alcohol-addiction doctor, best-doctor-for-panic-attacks, anxiety-counselling, teenage-counselling). /blogs/ queue now 10 by spec metric (7 authorable) vs target 12; covers T9's 09-15/09-16 slots. **Tier A for /blogs/ is exhausted — all Tier A demand is on the 14 genuine /doctors/ briefs (unblocked by the 09-13 cap-separation proposal).**
+- ⚠️ **NEW STANDING RULE (f):** a query's position/impressions must come from `dimensions=[query]`. The stock discovery script's `avg_position` is a naive per-page mean across every site URL on the SERP (reported pos 41.6 for a query the site holds at 4.7; inflated demand up to 6×). Every T5 brief inherits this → DISCOVERY-AVG-POSITION-IS-NOT-QUERY-POSITION-01 filed to T13. Rule (g): never close a query-level alert with page rows or a 2-window comparison.
+- Full log: `brain/memory/remediation-log.md` 2026-09-12. Verifier: 5 APPROVE / 4 VETO / 1 NEEDS_HUMAN / 6 CORRECTION (all applied).
+
 ### 2026-09-06 T12 Learner — Weekly Run (Dual Data Failure Week)
 
 **Strategic posture: MEASUREMENT-RECOVERY + ALGO_WATCH HOLD**
@@ -341,7 +352,7 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 - **Brief queue cap:** 20 NEW + 20 REFRESH per week — /blogs/ cap 6/20 used as of 07-24 (14 remaining)
 - **Auto-ship cap:** 5 NEW blogs per run (3 first-run), 20 per week
 - **Tracking-db:** T5 brief queue thin but functional (4 NEW + 4 REFRESH from 07-20 run — short of 12-floor; needs live Mac Mini T5 run before 07-27 to avoid starvation). T9 shipping again ✅ (6 blogs this week). P12 principle written by Learner 07-26.
-- **Last Learner run:** 2026-08-09 (T12 weekly — W24–W28 stub-pilot batch 1 indexation, 2🟢/2🟡/1⚫)
+- **Last Learner run:** T12 2026-09-13 (W36/W37/W-PSYCH-BLR/W-COUN-BLR PENDING_EVALUATION — GSC-INFRA-01 disk full)
 
 ### Active hypotheses (under test)
 
@@ -886,7 +897,7 @@ ALGO_WATCH: ACTIVE (settle check 2026-09-10). Site posture: CONSERVATIVE.
 ---
 ## T10 Strategist Material Update — 2026-08-31
 
-**ALGO_WATCH:** ACTIVE — settle check remains 2026-09-10 (no change from 08-28)
+**ALGO_WATCH:** CLEARED 2026-09-10 ✅ (August Core Update settled). All held actions now eligible.
 **T9 pipeline:** ~~STILL BLOCKED Day 5 (08-26 → 08-31). 7 authored blogs at 404. T9-DEPLOY-UNBLOCK-DEV-01 re-queued as B1 (was lost from BACKLOG between runs).~~
 **T9 pipeline — CORRECTED 2026-08-31 21:15 by T20 auto-remediation: ✅ UNBLOCKED, NOT BLOCKED.**
 All 8 pages are live 200 on www.mindtalk.in with real unique content, each present once in sitemap.xml
@@ -944,7 +955,7 @@ All future-dated. No apply executed today. No stale proposals (none overdue by >
 ---
 ## T10 Strategist Material Update — 2026-09-01
 
-**ALGO_WATCH:** ACTIVE — settle check 2026-09-10 (no change)
+**ALGO_WATCH:** CLEARED 2026-09-10 ✅ (August Core Update settled). All held actions now eligible.
 **Site posture:** CONSERVATIVE. Core Update Aug 22–Sep 7 confirmed active by GSC validation.
 **T9 pipeline:** FLOWING — 8 blogs live 2026-08-31 (W43 cohort), 1 blog live 2026-09-01 (psychiatrist-vs-psychologist, Tier B). Week cap 1/20.
 **flagged-drops.json:** EMPTY. confirmed-drops.json: EMPTY. 0 confirmed drops today.
@@ -991,7 +1002,7 @@ All future-dated. No apply executed today. No stale proposals (none overdue by >
 ---
 ## T10 Strategist Material Update — 2026-09-07
 
-**ALGO_WATCH:** ACTIVE — settle check 2026-09-10 (3 days). Core Update Aug 22–Sep 7 may be concluding today.
+**ALGO_WATCH:** CLEARED 2026-09-10 ✅ (August Core Update settled). All held actions now eligible.
 **Site posture:** CONSERVATIVE/HOLD.
 **DataForSEO:** RESTORED 09-07. rank-summary-2026-09-07.txt ran 290 KWs; 0 CRITICAL/MAJOR/MODERATE. 6 pos-100 quarantined AP8. B17 CLOSED.
 
@@ -1018,7 +1029,7 @@ All future-dated. No apply executed today. No stale proposals (none overdue by >
 ---
 ## T10 Strategist Material Update — 2026-09-08
 
-**ALGO_WATCH:** ACTIVE — settle check 2026-09-10 (2 days). Core Update Aug 22→Sep 21 still rolling (confirmed by gsc-validation-2026-09-08 Step 7).
+**ALGO_WATCH:** CLEARED 2026-09-10 ✅ (August Core Update settled). All held actions now eligible.
 **Site posture:** CONSERVATIVE/HOLD until 09-10. All CRITICAL drops today confirmed AP8 noise.
 **DataForSEO:** CLEAN — 290 KWs pulled, 4 flagged, 0 confirmed.
 
@@ -1040,7 +1051,7 @@ All future-dated. No apply executed today. No stale proposals (none overdue by >
 ---
 ## T10 Strategist Material Update — 2026-09-09
 
-**ALGO_WATCH:** ACTIVE — settle check TOMORROW 2026-09-10. Core Update Aug 22→Sep 21 still rolling (confirmed GSC-validation-2026-09-08 Step 7; earlier "may conclude Sep 7" estimate withdrawn).
+**ALGO_WATCH:** CLEARED 2026-09-10 ✅ (August Core Update settled). All held actions now eligible.
 **Site posture:** CONSERVATIVE/HOLD until 09-10. All CRITICAL drops today confirmed AP8 noise (0 confirmed drops).
 **DataForSEO:** CLEAN 09-08 — 290 KWs pulled, 0 confirmed.
 
@@ -1069,7 +1080,7 @@ All future-dated. No apply executed today. No stale proposals (none overdue by >
 ---
 ## T10 Strategist Material Update — 2026-09-11
 
-**ALGO_WATCH:** CLEARED 2026-09-10 ✅. No September Core Update. Settle check passed. All held actions eligible.
+**ALGO_WATCH:** CLEARED 2026-09-10 ✅ (August Core Update settled). All held actions now eligible.
 
 **Site posture:** GROWTH. Clicks 3,735 (Q3 target 2,800 ✅). CTR 1.0% (target 0.85% ✅). Pages ~870 (target 800 ✅). All three primary Q3 targets exceeded simultaneously for the first time. Intent rate 24.1% (W36 T19). Position recovering 14.2→12.8 — first positive week in 8 weeks.
 
@@ -1086,3 +1097,40 @@ All future-dated. No apply executed today. No stale proposals (none overdue by >
 **online-psychiatrist pos 9.6 (approaching page 1):** No hub page. W43-1 psychiatrist-online-consultation-india LIVE 08-31. Internal link injection from illness pages could lock top-5. Pattern mirrors therapist-near-me trajectory pre-crash. B18 queued for investigation.
 
 **T9-DOCTORS-QUEUE-MISLABEL-01 (pending 09-13 fix):** 43 Tier A /doctors/ briefs silently blocked by /blogs/ cap mislabeling. Proposal to separate cluster caps applies 09-13. When live: expect T9 to begin shipping doctor listing pages again — monitor for quality.
+
+---
+## T10 Strategist Material Update — 2026-09-12
+
+**Site posture:** GROWTH. ALGO_WATCH cleared 09-10. All Q3 targets exceeded. /blogs/ cap 6/6 resets 09-15.
+
+**T9-DOCTORS-QUEUE-MISLABEL-01 CONFIRMED LIVE (09-11 auto-ship log):** T9 categorized ALL 24 doctor/city listing briefs (psychiatrists-in-chennai, psychiatrists-in-delhi, therapists-in-delhi, etc.) as /blogs/ and blocked them under the /blogs/ cap. The t9-doctors-cluster-cap-separation Meta-Learner proposal (Apply-on 2026-09-13) will fix this. When live: T9 should begin shipping /doctors/ Tier A briefs at up to 6/week. Monitor T9 09-15 run for correct cap-bucket resolution.
+
+**AP8 pattern (09-11 instance):** 3 CRITICAL pos→100 drops (personality-disorder Δ91, postpartum-depression Δ87, stress-disorder Δ87) on partial DataForSEO run (36/299 KWs). Pattern matches prior AP8 events identically. 14/36 = 39% at pos-100, below 4-drop threshold. Treating as likely noise. GSC validation pending T2 09-13.
+
+**domineering-vs-dominating confirmed (GSC 09-11):** clicks -50%, impr -94%. Keyword "domineering meaning" = 0 occurrences in body. B19 flag_for_human active — professional hold until 09-28. Adds evidence that T5 brief QA should verify primary keyword appears in body before filing.
+
+**W38 narrative-therapy Day-42 fires 09-15 (3 days):** YMYL. Kushal a/b/c decision still pending. URGENT: if no decision by 09-15, T4 will evaluate against no-action baseline.
+
+**3 Meta-Learner proposals apply 09-13 (TOMORROW — first action of T10 09-13 run):**
+1. t12-stub-pilot-qdf-guard — adds QDF_RISK_INTERIM label at Day-14 for stub-pilot content class (prevents false 🟢 at Day-14 QDF spike, forces Day-42 as evaluation gate). Low risk.
+2. t17-tabs-create-fallback — adds Step 5.6 navigate-existing-tab fallback when tabs_create_mcp stalls. Fixes 6-week AI citation blind spot. Low risk.
+3. t9-doctors-cluster-cap-separation — separates /doctors/ cap from /blogs/ cap in T9 spec. Unblocks 24+ Tier A /doctors/ briefs immediately. Medium risk (up to 6 /doctors/ pages/week unlock).
+
+**Upcoming critical path:**
+- 2026-09-13: 3 proposals apply (FIRST ACTION T10)
+- 2026-09-14: T12 W36/W37 Day-42 finals (depression + anxiety YMYL, schema fix recovery)
+- 2026-09-15: W38 Day-42 final (Kushal decision needed) + T9 /blogs/ cap resets + 4 Day-42 obs finals (T4)
+- 2026-09-16: W39 yoga Day-42 + B7 batch 3 + W-B7-REVIEWER-BATCH2 check
+- 2026-09-21: W18-W21 obs close + W43 Day-21 midpoints
+
+---
+### T10 Strategist update — 2026-09-13
+
+**t17 proposal file mismatch (T13 action required):**
+Proposal `t17-tabs-create-fallback-20260906T2030.md` names target `cowork-tasks/task17-competitive.md` — this file does NOT exist. Actual file is `cowork-tasks/task17-competitive-ai-monitor.md`. Additionally, the Before block in the proposal (one-liner simplified Step 5.5) does not match the verbatim content in the actual file (detailed numbered Step 5.5 with restart logic). T13 must rewrite this proposal with: (a) correct target filename, and (b) verbatim Before block matching the current file content.
+
+**t9 cap enforcement architecture unknown:**
+Verifier flagged that it cannot confirm whether T9's cluster-cap counter runs from task spec instructions (Claude-read text) or a Python/shell script that won't change when the spec changes. If script-based, the `t9-doctors-cluster-cap-separation` proposal is a no-op at the spec level. Kushal or T11 must confirm before apply. This is the #1 blocker on unblocking 14 Tier A /doctors/ briefs.
+
+**t12-stub-pilot-qdf-guard APPLIED 2026-09-13:**
+4a-stub QDF guard inserted into cowork-tasks/task12-learner.md before 4b. Stub-pilot Day-14 interim verdicts must now be labeled QDF_RISK_INTERIM and NOT closed as 🟢 regardless of position. Day-42 remains the mandatory closure gate for this content class. Snapshot: brain/before-snapshots/task12-learner-20260913T201323.bak.

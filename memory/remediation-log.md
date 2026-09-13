@@ -3024,3 +3024,213 @@ thing that broke the loop was not more reasoning. It was one curl against the
 right hostname with a control beside it. Cheap ground truth beats expensive
 inference, and this task should reach for it first, not last.
 ================================================================================
+
+================================================================================
+🔧 T20 AUTO-REMEDIATION — 2026-09-12 (Saturday, 20:45 IST scheduled run; ran 20:55–00:20)
+================================================================================
+First T20 run since 2026-08-31 (12-day gap). Verifier sub-agent: 5 APPROVE / 4 VETO /
+1 NEEDS_HUMAN / 6 CORRECTION — every correction applied tonight; one VETO reversed a
+closure I had already written into BACKLOG. Sixth run running in which the Verifier
+changed the output materially.
+
+--------------------------------------------------------------------------------
+DEPLOY HEALTH (Step 0) — ✅ READY, content-proven (Vercel MCP DECLINED this run)
+--------------------------------------------------------------------------------
+The Vercel MCP call (list_deployments) was auto-declined (no approver in a scheduled
+run). Fallback = content proof against origin/main via the GitHub commits API (the PAT
+in secrets/ reads commits but is 403 on deployments/statuses/check-runs):
+  origin/main HEAD d5b6443 (2026-09-11 16:07 IST, merge PR #33: adds
+  src/content/doctors/shweta-kiran-wani.mdx + llms-full.txt)
+  → https://www.mindtalk.in/doctors/shweta-kiran-wani  200 (180,969 B)
+  → llms-full.txt mentions Shweta                       yes
+  4c8e02e (09-09, 5 blogs)  → all 5 slugs 200 (105–110 KB each)
+  8f7617b (09-09, reviewer=sucheta-saha ×10) → /blogs/alexithymia JSON-LD reviewedBy
+    = Dr. Sucheta Saha ✓
+  df348ea (09-08) → /blogs/online-counselling-in-malayalam 200
+  Controls in the same sweep: garbage /blogs/ slug 404, garbage /doctors/ slug 404.
+  No commits after d5b6443 as of the 12:46 IST fetch of origin/main by another session.
+=> The production deploy containing HEAD reached READY. What this method CANNOT see:
+   whether any of the last 5 deploys ERRORed and was retried. Kushal: approve the Vercel
+   MCP for the scheduled run so Step 0 can read deploy states directly.
+
+--------------------------------------------------------------------------------
+A. FALSE POSITIVES CLOSED (Rule 1) — 3 (a 4th closure was WITHDRAWN, see D)
+--------------------------------------------------------------------------------
+A1. B21 — 3 DataForSEO CRITICAL pos→100 (personality-disorder, postpartum-depression-ppd,
+    stress-disorder). GSC page-dimension, canonical host, windows 08-26..09-01 (7d) vs
+    09-02..09-09 (8d), per-day: personality 24→33/day (+38%), pos 24.6→15.8;
+    postpartum 8.4→6.3/day, pos 66→55; stress 14.9→12.4/day, pos 29.5→23.8. All three
+    impressing every day through 09-10. The tracked "…treatment bangalore" queries rank
+    pos 7.8 / 11 / 9 via /doctors/*-specialists-in-bangalore; dataforseo_client.py:140
+    matches by DOMAIN, so "not in top 100" is API noise (14/36 = 39% sentinel rate).
+    Verifier APPROVE.
+A2. B20 — values-clarification-act "HowTo + FAQ schema needed". Live JSON-LD read in
+    context: HowTo (6 HowToStep) + FAQPage (6 Q&A) + reviewedBy tejal-jaiswal +
+    BreadcrumbList. Nothing to approve. tracking-db status → MONITOR (prev kept).
+    Verifier APPROVE (independently re-read the JSON-LD).
+A3. B19 — domineering-vs-dominating "CONFIRMED DROP −50% clicks / −94% impr, keyword 0×".
+    Page-dimension: 6→9 clicks, 6,446→11,841 impr, pos 8.6→8.5 (growing). Body has
+    "domineering" ×34. ** Verifier CORRECTION, applied: the query-level rank drop
+    "domineering meaning" 2.4→10.3 IS real and GSC-corroborated (3.9→9.7, 15→754 impr);
+    closure is "no action — Tier C / AP11, 0 clicks at pos 2 and at pos 10", not
+    "nothing dropped". ** Refresh brief archived; tracking-db → MONITOR.
+
+--------------------------------------------------------------------------------
+B. AUTO-FIXED (Rule 2) — 9
+--------------------------------------------------------------------------------
+B1. 7 shipped briefs archived (slugs 200 with controls): adhd-diagnosis-bangalore,
+    online-counselling-in-malayalam, psychiatrist-for-anxiety, psychiatrist-vs-psychologist,
+    psychologist-for-bipolar-disorder, psychologist-for-schizophrenia, therapist-for-depression.
+B2. 14 redundant briefs archived (.regenerated-2026-09-07.md): all propose the dead
+    /doctors-listings/<slug> route (404) while /doctors/<slug> is live (200, 205–298 KB)
+    since de29c86. T5 regenerated them on 09-07 because cowork-tasks/task5-new-content-
+    discovery.md:43 still names /doctors-listings/. → T13 item (spec fix, one line).
+B3. keyword-map.json 299→306: the 7 shipped pages were live but invisible to rank-pull
+    (consumer named + target filter re-tested offline, rule e).
+B4. tracking-db: /blogs/psychiatrist-vs-psychologist had NO status/window/lock since its
+    09-01 ship → populated (PUBLISHED, Day-42 2026-10-13, url_locked). [Verifier]
+B5. tracking-db: url_locked set on the 5 T9 09-09 pages (T9 left it unset — AP12
+    hygiene; rank-pull would otherwise pull them mid-window). [Verifier F4]
+B6. logs/reviewer-load-state.json: the two 301-orphan reviewer slugs (santanu-tripathy,
+    dr-akanksha-bhor) REMOVED from the assignable pool (backup kept). T9 assigned
+    santanu-tripathy AGAIN on 09-09 because the pool still listed it.
+B7. Discovery re-run (DISCOVERY STALE cleared): the stock script dies at the sandbox's
+    ~180 s bash cap mid-pagination, so its own functions/constants were imported and run
+    with 25k-row pages — 195,288 rows, 4,336 opportunities, 1,750 new; all 4,822 prior
+    entries byte-identical [Verifier]. logs/discovery-2026-09-12.txt carries the method
+    record + a DIMENSION CAVEAT (see LESSON).
+B8. scripts/google-ads-search-terms.py ran clean (296 terms ≥5 clicks / 30d; top
+    converters: therapist near me 78 conv, psychologist near me 30, psychologist
+    bangalore 27, couple therapy bangalore 15) — all Tier A demand already owned by
+    live /doctors/ pages; no paid-mining skip to log.
+B9. BACKLOG header corrected: the doctors-cap proposal unblocks 14 (not "24+") genuine
+    /doctors/ briefs.
+
+--------------------------------------------------------------------------------
+C. STANDING JOB — BRIEF QUEUE (refill FIRED, 7 authored → 4 survived the Verifier)
+--------------------------------------------------------------------------------
+Pre-run: spec metric 6–7 /blogs/ (intent_tier AND 404) but only 3 truly authorable
+(hindi, telugu, therapist-for-bipolar); the 08-31 commitment ("if the 6 are still
+blocked at the next run, the refill fires regardless") applied. Tier A for /blogs/ is
+EXHAUSTED — every Tier A gap in discovery + paid data is a /doctors/ surface that
+already exists (14 genuine /doctors/ briefs queued for T9 after the 09-13 cap-separation
+proposal applies). Per INTENT-PRIORITY §3 no Tier C backfill.
+  Authored (all Tier B "who to consult / what happens" decision spokes, each ≥2 Tier A
+  links, reviewer resolving 200, AP9 by READING the nearest live page):
+    ✅ which-doctor-to-consult-for-alcohol-addiction  (350 impr / pos 10.4 query-level)
+    ✅ best-doctor-for-panic-attacks                   (201 / 24.3) — retitled/re-slugged (P11)
+    ✅ anxiety-counselling                             (412 / 38.2 + 89 / 26.8)
+    ✅ teenage-counselling                             (127 / 19.3 + 47 / 16.1) — re-targeted
+    ⛔ psychologist-for-autism         VETO → archived: site already pos 5.9–9.4, 0 clicks (P12-E2)
+    ⛔ therapist-for-personality-disorder VETO → archived: pos 4.7 / 5.1 already (P12-E2)
+    ⛔ therapist-for-ptsd              VETO → archived: 69 impr / 90d (~23/mo, P12-E3)
+  Rejected at the Intent Gate before authoring (Verifier agreed with all four):
+    psychologist-for-ocd (exact-H2 duplicate of how-to-find-a-therapist-for-ocd),
+    psychologist-for-anxiety (duplicate of psychiatrist-for-anxiety §"vs"),
+    which-doctor-for-adhd (adhd-diagnosis-bangalore "Who Diagnoses ADHD"),
+    psychologist-for-dementia (§2.3 zero-click trap: /illnesses/dementia 3,290 impr / 0.12%).
+Post-run: spec metric 10 (7 authorable + insurance/gender-identity/confidential gated)
+vs registry target ≥12 → SHORT BY 2. T9 needs 1 slot 09-15 + 6 on 09-16 = 7; the 7
+authorable exactly cover the week (ship order: Hindi → Telugu → bipolar → the 4 new).
+NEXT RUN, FIRST JOB: derive ≥2 more from dimensions=[query] data (candidates the site
+does NOT already hold on page 1) — never again from the discovery aggregate.
+
+--------------------------------------------------------------------------------
+D. WITHDRAWN — my own closure, reversed by the Verifier — 1
+--------------------------------------------------------------------------------
+D1. B8 "therapist near me pos 32→52". I closed it on two adjacent 7/8-day page rows
+    (/doctors/therapists-in-bangalore 21.7→16.2 = "improving"). WRONG KIND OF EVIDENCE:
+    the alert is query-level and 8 weeks long. Query-level 90d: pos 27.3 on 18,888 impr /
+    78 clicks. Page-attributed re-pull, wk 07-11..07-18 vs 09-02..09-09:
+      /doctors/therapists-in-bangalore   pos 9.3 → 16.2  (7 → 4 clicks)
+      /doctors/therapists-in-hyderabad   pos 10.1 → 49.5 (crash)
+      /doctors/therapists                11.5 → 12.3
+      property impr-weighted             11.9 → 27.0 ; 11 → 7 clicks/wk
+    Part of the property slide is mix dilution — new /doctors/ URLs now appear for the
+    query at pos 130–220 (psychologists-in-bangalore, mental-health-professionals-in-
+    bangalore, english-speaking-doctors-in-bangalore; plausibly the 08-31 de29c86 batch) —
+    but the primary page's own 9.3→16.2 and the Hyderabad crash are real Tier A
+    regressions on the §5 "pos 8–11 cliff" queries. B8 RE-OPENED in BACKLOG, re-scoped
+    with this evidence (T11 investigate_regression on the 2 URLs + T12 mix watch).
+    Secondary signals were also real at query level (counselling psychologist near me
+    1,100 impr / pos 22.5; talk therapy 1,363 / 28.4) — I had called them "single-digit
+    noise" off page rows.
+
+--------------------------------------------------------------------------------
+E. ESCALATED — 3 new + standing (each verified THIS run, fix pre-written)
+--------------------------------------------------------------------------------
+E1. B22 NEEDS_HUMAN — /blogs/therapist-for-depression (shipped 09-09) carries
+    reviewer: santanu-tripathy (301 orphan) → live page emits NO reviewedBy; generic
+    byline. REVIEWER-SLUG-ORPHAN-02 recurring 9 days after escalation. Fix: one
+    frontmatter line in src/content/blogs/therapist-for-depression.mdx → reviewer:
+    dr-sneha (live load 3, 200). Inside Day-42 window (to 10-21): Kushal decides now
+    vs after. Pool cleaned tonight (B6) so it cannot recur via auto-assign.
+E2. VERCEL-MCP-DECLINED-01 — Step 0 cannot read deploy states in a scheduled run
+    (auto-declined). Approve the Vercel MCP for this task, or Step 0 stays content-proof
+    only (blind to ERROR-then-retry).
+E3. DISCOVERY-AVG-POSITION-IS-NOT-QUERY-POSITION-01 (scripts/new-content-discovery.py,
+    T20 may not edit): avg_position = naive mean of per-page positions across every site
+    URL on the SERP and impressions are summed across them. Every T5 brief's "Search
+    Volume / pos" line inherits this. Tonight it inflated demand 1.1–6.2× and reported
+    "pos 41.6" for a query the site holds at 4.7. Fix: derive per-query stats at
+    dimensions=[query] (property-aggregated) and keep query+page only for the
+    triggering-page attribution. Same class: T2's −94% (rowLimit-truncated query rows).
+Standing (unchanged, not re-argued): GITHUB-PAT-PLAINTEXT-01 (brain/.git/config still
+embeds a credential — Kushal only); GSC-MEASUREMENT-INTEGRITY-01 (gsc-pull.py windows
+share today-10, rowLimit 50/25; mtime still Apr 21); WEBSITE-CHECKOUT-CORRUPT-01 (local
+clone 161 behind, feb506b — repo facts this run came from the GitHub API); B12/B15/W38
+Kushal decisions; GSC-INFRA-01 (/sessions VM disk 100% — worked around via /tmp).
+
+--------------------------------------------------------------------------------
+F. FILED TO T13 (meta-learner) — 5
+--------------------------------------------------------------------------------
+F1. task5-new-content-discovery.md:43 "/doctors-listings/" → "/doctors/" (dead route
+    regenerates redundant briefs; 14 tonight, 53 on 08-31).
+F2. E3 above (discovery dimension) + new standing rule (f) below.
+F3. T4 SCHEMA_OPTIMIZATION_NEEDED verdict must curl + read the JSON-LD before it fires
+    (B20 was a false flag; registry rule 1 already says so for T20 — push it upstream).
+F4. REVIEWER-LOAD-DUAL-COUNTER-01: logs/reviewer-load-state.json has a live top-level
+    counter (T9 Step 7 increments it) AND a stale assigned_count sub-dict (05-26). I
+    read the stale one; ~30 clinicians exist only in the stale dict. Reconciliation
+    policy is a one-line Kushal call; T9 step 4 must also verify the slug resolves 200.
+F5. T9 is not setting url_locked on its own ships (5/6 of the 09-09 cohort unset) —
+    AP12 protection absent until T20 back-filled it.
+
+--------------------------------------------------------------------------------
+CONSTRAINTS HONOURED (Verifier-audited)
+--------------------------------------------------------------------------------
+src/** untouched (newest mtime 2026-09-09 15:24; 0 files today). scripts/*.py untouched
+(newest 09-01). Website repo HEAD feb506b, nothing pushed; a failed `git fetch` from the
+sandbox truncated .git/FETCH_HEAD to 0 bytes — transient, regenerated on next fetch,
+harmless. Nothing deleted — 28 files archived (22 + 3 vetoed + 2 superseded-by-rename
++ 1 raw duplicate; FUSE denies unlink, rename used). tracking-db / keyword-map /
+BACKLOG / reviewer-load-state / new-content-opportunities all backed up to logs/ before
+any write; JSON re-parsed after. 0 pages shipped; no YMYL touched; weekly cap untouched;
+billing/ads/credentials untouched (PAT used read-only for commits, reported not rotated).
+
+--------------------------------------------------------------------------------
+LESSON — the sixth run: the dimension was wrong, and the rule that catches it
+--------------------------------------------------------------------------------
+Every number I put in seven briefs and one BACKLOG closure came from query+page rows.
+That dimension answers "how did THIS page do on THIS query"; it cannot answer "where does
+the SITE rank for this query". Averaged naively across pages it produced pos 41.6 for a
+query the site holds at 4.7, and summed across pages it inflated demand up to 6×. I then
+used the same rows to close a query-level alert. The stock discovery script has always
+done this; tonight was the first time anyone checked the primary keyword at the query
+dimension before writing a brief.
+
+Standing rules now read:
+  (a) no -L on any status code cited as evidence
+  (b) a schema claim must READ the JSON-LD in context, never count @type tokens
+  (c) a redundancy check must fetch and read the nearest LIVE page
+  (d) every status sweep runs against the CANONICAL host with a NEGATIVE control
+  (e) a data fix must name the CONSUMER that reads the field and be re-tested through it
+  (f) NEW — a claim about a QUERY's position or impressions must come from
+      dimensions=[query] (property-aggregated). query+page rows are page facts and must
+      be labelled as such. The discovery aggregate is a candidate list, not evidence.
+  (g) NEW — a query-level alert cannot be closed with page-row evidence, nor with a
+      2-window comparison that ignores the alert's own baseline window. Re-pull the
+      alert's dimension over the alert's span, then attribute by page.
+================================================================================
+
+[T20 2026-09-12] Slack digest UNDELIVERED — slack_send_message + slack_search_channels auto-declined in the scheduled run; archived at brain/memory/experiments/2026-09-12-t20-slack-digest-UNDELIVERED.md. Vercel MCP list_deployments also auto-declined (Step 0 fell back to content proof).
