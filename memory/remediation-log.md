@@ -3234,3 +3234,420 @@ Standing rules now read:
 ================================================================================
 
 [T20 2026-09-12] Slack digest UNDELIVERED — slack_send_message + slack_search_channels auto-declined in the scheduled run; archived at brain/memory/experiments/2026-09-12-t20-slack-digest-UNDELIVERED.md. Vercel MCP list_deployments also auto-declined (Step 0 fell back to content proof).
+
+================================================================================
+T20 AUTO-REMEDIATION — 2026-09-13 (Sunday) 22:57–23:45 IST
+================================================================================
+Seventh run. Verifier sub-agent: 4 APPROVE / 2 CORRECTION (both applied) / 0 VETO /
+0 NEEDS_HUMAN. Auto-declined in this scheduled run: Vercel MCP list_deployments (again).
+Slack: see bottom line.
+
+--------------------------------------------------------------------------------
+DEPLOY HEALTH (Step 0) — ✅ READY, content-proven (Vercel MCP DECLINED)
+--------------------------------------------------------------------------------
+origin/main HEAD d5b6443 (2026-09-11 16:07 IST) — no commits after it (GitHub commits
+API, read-only PAT). Live proof (canonical host, no -L, 22:58 IST):
+  /doctors/shweta-kiran-wani (fe0cee9)          200  180,969 B
+  /blogs/adhd-diagnosis-bangalore (4c8e02e)     200  106,753 B
+  /blogs/alexithymia (8f7617b reviewer)         200  135,484 B
+  control /blogs/zz-nonexistent-control-9913    404
+  llms-full.txt mentions Shweta                 yes
+  homepage x-vercel-cache HIT, age 197,295 s (54.8 h) → nothing redeployed since 09-11.
+"Latest deploy older than 48 h while commits exist after it" — N/A, no commits after HEAD.
+What this method cannot see: ERROR-then-retry in the last 5 deploys. E2 stands.
+
+--------------------------------------------------------------------------------
+FLAGS COLLECTED (Step 1) — BACKLOG 09-13, BRAIN 09-12 T20 stamp, WATCH T12 09-13 stamp,
+logs/observation-2026-09-13, decisions/2026-09-13, ops-health-2026-09-12, auto-ship-09-11
+--------------------------------------------------------------------------------
+B23 (Kushal: spec-vs-script cap) · B8 (verify MDX) · B24 (Day-42 09-15, "disk will block")
+· T12 09-13 LEARNER WARNING zero-impression cohort + "fix disk space" · ops-health: two
+stale .git/index.lock + brain backup FAILED · t17-tabs-create-fallback MISMATCH-SKIP (T13)
+· standing: B22/B12/B15/B7/B18, W37 holds, E2/E3, PAT plaintext, GSC integrity, checkout.
+No CRITICAL in rank-summary beyond the B21 noise already closed 09-12. Discovery ran 09-12
+(not stale). observation-09-13: 0 alerts.
+
+--------------------------------------------------------------------------------
+A. FALSE POSITIVES / MIS-ROUTED FLAGS CLOSED (Rule 1) — 2
+--------------------------------------------------------------------------------
+A1. B23 "Kushal must confirm whether the T9 cluster cap lives in spec text or
+    scripts/*.py" — ANSWERED BY EVIDENCE, not a human decision. grep -rn -i
+    "cluster.cap|cluster_cap|per_cluster" scripts/*.py → 0 hits (only keyword-clustering
+    scripts contain "cluster"); scripts/audit-unshipped-briefs.py (the only script T9 Step 1
+    calls) has no cap logic; task9 L43 (7/run, 20/wk), L160 (published_at > window_start from
+    tracking-db.json), VERIFIER.md §9 L131–140 (table). Corroboration: T9's own 09-09 run
+    evaluated CLUSTER_CAP_SKIP 6/6 in-run (briefs/NEW-therapist-for-bipolar-disorder-
+    brief.md:110). [Verifier APPROVE] → B23 re-routed to T10 apply-pass. BUT see D1: the
+    cap is not the real blocker.
+A2. T12 09-13 "zero-impression cohort — W36/W37/W-PSYCH-BLR/W-COUN-BLR returned 0
+    impressions; fix disk space before next run". Pull-side error. Fresh page-dimension
+    pulls (canonical host, no -L; logs/t20-gsc-watch-verify-2026-09-13.{py,json}):
+      W36 /illnesses/depression   07-03..07-30 2,411 impr/4 clk (86/d) → 08-15..09-11 2,672/3 (95/d) pos 13.7→14.5
+      W37 /illnesses/anxiety      1,028/4 (37/d) → 1,398/3 (50/d) pos 11.3→30.3; page ranks 8.3 on
+                                  "anxiety treatment bangalore" (25 impr) — the Day-14 "39.5 crash" recovered
+      W-PSYCH-BLR                 13,755/88 (491/d) → 16,597/67 (790/d) pos 26.5→18.1
+      W-COUN-BLR                  2,841/20 (102/d) → 2,203/14 (105/d) pos 15.7→14.1
+      target queries at dimensions=[query] (rule f): depression-treatment-bangalore 6.8→11.3
+      (owned by /doctors/depression-specialists-in-bangalore 6.7); anxiety 7.5→16.7 (property
+      drag = other /doctors/ URLs at 53–100); adult-psychologist-near-me 5→4 (2 impr);
+      counselling-bangalore 26.5→30.7 (owned by /centers/indiranagar 5.7).
+      Daily tails 09-07..09-11 all non-zero; garbage-path control 0.
+    [Verifier APPROVE — independent re-pull 09-05..09-11: 802 / 191 / 6,155 / 732 impr.]
+    Root cause of the abstention: (i) /sessions VM disk 100% full (real) but / has 3.7 GB —
+    HOME/XDG_CACHE_HOME/TMPDIR=/tmp makes googleapiclient's cache write succeed; (ii) "google.
+    oauth2 not installed" is false — libs are in .pip-packages/ (PYTHONPATH). The stock
+    scripts/gsc-pull.py --url ran for all 4 (⚪/⚪/🟢/🟡 signals) → gsc-data files mtime
+    23:01 IST. Also pre-pulled the 4 Day-42 URLs due 09-15 (B24). Data written to WATCH.md
+    (T20 correction block) + appended to the 4 pending-W*-2026-09-13.md experiment files.
+    VERDICTS NOT ISSUED — that is T12's job (next run 09-20). B25 filed for the spec line.
+    Verifier caveat carried into WATCH.md: gsc-pull.py files aggregate dimensions=[query]
+    at rowLimit 50 and undercount page totals (155 vs 802) — non-zero evidence, not totals.
+
+--------------------------------------------------------------------------------
+B. AUTO-FIXED (Rule 2) — 5
+--------------------------------------------------------------------------------
+B1. mindtalk/.git/index.lock (0 B, 103.8 h) and brain/.git/index.lock (0 B, 23.8 h) RENAMED
+    to *.stale-2026-09-13-t20 (os.rename works on the FUSE mount; unlink does not — 07-14
+    lesson). No git process alive. Effect: T16 Ops Health at 23:09 IST committed AND pushed
+    brain snapshot 71922c5 (21 files) — first off-site backup since 09-11 (2615520).
+    [Verifier CORRECTION: a NEW 0-byte brain/.git/index.lock appeared at 23:09:24, one second
+    after that commit — git creates the lock, commits, then cannot unlink it on FUSE. This is
+    the mechanism behind the 65-file lock graveyard. Renamed again as the LAST step of this
+    run (see bottom). Filed: T16 must rename-not-rm; every FUSE git op will leave a lock.]
+B2. gsc-data refreshed for the 4 watch pages + the 4 Day-42 (09-15) pages via the env
+    workaround (A2). Consumer: T12 Step 2 reads gsc-data/<path>.json → re-tested by
+    reading the refreshed files (rule e): impressions 155 / 121 / 4,454 / 569, mtime today.
+B3. briefs/NEW-bhojpuri-speaking-doctors-in-bangalore-brief.md ARCHIVED (renamed) →
+    briefs/archive/…nonviable-2026-09-13.md (+ .raw.md original). A doctors-listings MDX with
+    filterLanguage "Bhojpuri" is matched against the 62 live profiles by getDoctorsForListing;
+    roster 2026-09-13 (frontmatter scan of all 62 src/content/doctors/*.mdx): English 62,
+    Hindi 56, Kannada 31, Telugu 14, Tamil 10, Bengali 9, Marathi 7, Malayalam 4, Assamese 4,
+    Gujarati 3, Urdu 1, Odia 1, Punjabi 1, Bhojpuri 0 → empty listing under a meta that
+    promises Bhojpuri clinicians. Live (no -L): /doctors/bhojpuri-speaking-doctors 404,
+    …-in-bangalore 404; every language with ≥1 profile except Punjabi has a listing.
+    [Verifier APPROVE archive; conditions met: re-open trigger + roster pre-flight written into
+    the archived file and into the companion proposal. 3 Punjabi briefs (1 profile) FLAGGED
+    thin, not archived — Odia/Urdu listings live at 1.]
+B4. B8 pre-check done for T11: src/content/doctors-listings/therapists-in-bangalore.mdx and
+    therapists-in-hyderabad.mdx both exist (GitHub tree @ d5b6443). Note the dir name.
+B5. Backups before every brain write: logs/{BACKLOG,WATCH,BRAIN}.md.backup-2026-09-13-2320-
+    pre-t20. Nothing deleted anywhere.
+
+--------------------------------------------------------------------------------
+C. BRIEF QUEUE (Step 4) — 7 shippable /blogs/ → floor 6 met, NO refill fired
+--------------------------------------------------------------------------------
+Inventory logs/t20-brief-inventory-2026-09-13.{py,json} (27 NEW briefs; canonical host, no -L):
+  /blogs/ 10 with intent_tier + 404 (spec metric); 7 shippable — anxiety-counselling (B),
+  best-doctor-for-panic-attacks (B), online-counselling-in-hindi (A), online-therapy-in-
+  telugu (A), teenage-counselling (B), therapist-for-bipolar-disorder (B), which-doctor-to-
+  consult-for-alcohol-addiction (B). 3 blocked: does-insurance-cover (veto date 09-05 lapsed
+  but VETO 1 = AP9 redundancy with /blogs/therapy-cost-in-india — structural, stands;
+  literal "DO NOT SHIP" still trips T9 rule 1), is-online-therapy-confidential (clinical
+  hold 08-26), gender-identity-disorder (illness-hub conflict, NEEDS_HUMAN since 08-24).
+  /doctors/ 14 → 13 viable after B3, all 404, none has a listing MDX yet (genuinely
+  unshipped Tier A). /treatments/ 2 (cbt-for-ocd, dbt-for-bpd) AP3 clinical gate.
+  conduct-disorder-in-adults DO-NOT-SHIP since 08-26 (malformed Suggested File "`,").
+  [Verifier APPROVE; parser cosmetics: faqs false-negative on bipolar (bold-question FAQs);
+  veto_until captured a trailing "`.**" — inventory script only, no consumer.]
+T9 /blogs/ cap resets 09-15 (first rolloff online-counselling-in-malayalam) → Monday's run
+ships up to 6 of the 7 → T20 09-15 must refill. Untiered: 0. Discovery: ran 09-12, fresh.
+
+--------------------------------------------------------------------------------
+D. VERIFIED-REAL, PRE-WRITTEN, ROUTED (not to Kushal)
+--------------------------------------------------------------------------------
+D1. THE 14 /doctors/ BRIEFS ARE CODE-PATH-BLOCKED, NOT CAP-BLOCKED. Ground truth (GitHub
+    tree @ d5b6443 + src/app/doctors/[slug]/page.tsx): src/content/doctors-listings/ holds
+    281 listing MDX (src/content/doctors/ = 62 profiles, 0 listings); generateStaticParams
+    (L38) includes getCollection("doctors-listings"); getFile("doctors-listings/<slug>")
+    (L89/L132) renders it at /doctors/<slug> with the filter* frontmatter feeding
+    getDoctorsForListing. So "/doctors-listings/" is a dead URL but the LIVE content dir —
+    the 09-12 archival of 14 regenerated briefs still stands (all 14 slugs already have a
+    listing MDX; re-checked tonight). A NEW listing is a content-only ship. What blocks it:
+    task9 Step 1 L74 `for dir_name in ['blogs','treatments','illnesses']` and L85 regex
+    `src/content/(blogs|treatments|illnesses)/` default everything else to /blogs/; the
+    `existing` scan skips doctors-listings (double-publish risk); scripts/audit-unshipped-
+    briefs.py L21 CATEGORIES + L61 `expected /blogs/{slug}` identical — and that script runs
+    FIRST (inline python is the `||` fallback). Also task9 L96 "secondary check for stuck
+    out-of-scope briefs" has an empty body. [Verifier CORRECTION — all four points confirmed]
+    → Written: brain/proposed-changes/t9-doctors-listings-scope-20260913T2330.md (Apply on
+    2026-09-20: two exact Step 1 hunks + Step 2 rule 7 listing-viability gate ≥1 matching
+    profile + README online-only framing for non-open cities + /doctors/ 6 own cap bucket +
+    VERIFIER §9 row). T20 VERIFICATION section appended to the 09-06 proposal: apply with caps
+    6/6/7/5 (its After-block's /treatments/ 3 and /illnesses/ 3 contradict §9 and would
+    silently lower YMYL caps), anchor the rule under Step 2 rule 5 (its Before line is an
+    example inside the rejection template). Dev/Strategist-Verifier item (scripts/*.py —
+    T20 may not edit): audit-unshipped-briefs.py L21 add "doctors-listings", L61 print the
+    resolved prefix.
+D2. B25 (new): task12-learner.md + every sandbox task calling gsc-pull.py needs the one env
+    line; T12 Step 2.1b needs "a 0-impression file older than the post-window is STALE, not
+    zero — re-pull before abstaining". → T13 09-19.
+
+--------------------------------------------------------------------------------
+E. ESCALATED — standing only (each re-verified this run; nothing new needs Kushal)
+--------------------------------------------------------------------------------
+E1. B22 /blogs/therapist-for-depression reviewer frontmatter (src/**) — unchanged; page
+    still 200 with generic byline. Fix pre-written 09-12.
+E2. VERCEL-MCP-DECLINED-01 — 3rd consecutive scheduled-run decline; Step 0 stays content-
+    proof. E3. DISCOVERY-AVG-POSITION (scripts) unchanged. GITHUB-PAT-PLAINTEXT-01 (the PAT
+    still reads commits/trees; fine-grained `github_pat_` prefix — an extraction regex that
+    only knew `ghp_` produced a spurious 401 tonight, caught and corrected). GSC-MEASUREMENT-
+    INTEGRITY-01 (gsc-pull.py rowLimit 50 undercount reconfirmed by Verifier: 155 vs 802).
+    WEBSITE-CHECKOUT-CORRUPT-01 (local feb506b, 161 behind; nothing pushed; index.lock
+    graveyard now explained — git cannot unlink on FUSE). B12 / B15 Kushal calls. W37
+    professional-input holds (6 pages) to 09-28. t17-tabs-create-fallback MISMATCH-SKIP →
+    T13 (proposal names a non-existent file; not T20's to rewrite).
+
+--------------------------------------------------------------------------------
+F. FILED TO T13 — 4
+--------------------------------------------------------------------------------
+F1. D1 companion proposal (already in proposed-changes; T13 to sanity-check the hunks).
+F2. B25 env line + STALE-not-zero rule for T12 (and T10/T11/T20 that touch GSC in-sandbox).
+F3. T16: rename-not-rm for index.lock (FUSE unlink denied; rename works) so the brain
+    backup never blocks on its own previous commit.
+F4. T5 / STANDING_TIER_A_BACKLOG: roster pre-flight for /doctors/ listing briefs (≥1 live
+    matching profile) — Bhojpuri would have been caught at authoring.
+
+--------------------------------------------------------------------------------
+CONSTRAINTS HONOURED
+--------------------------------------------------------------------------------
+src/** untouched (GitHub API read-only; nothing pushed to the website repo). scripts/*.py
+untouched (two new read-only helper scripts written under logs/, not scripts/). No YMYL
+page touched; 0 pages shipped; weekly cap untouched. Billing/ads/credentials untouched (PAT
+consumed read-only, not rotated, not printed). Nothing deleted — 1 brief archived by rename,
+2 lock files renamed, 3 brain files backed up before write. Verifier's own scratch file was
+moved by it to brain/.git/verifier-unlink-test.scratch-2026-09-13 (outside the tree).
+
+--------------------------------------------------------------------------------
+LESSON — the seventh run: "needs a human" was a question, not a decision
+--------------------------------------------------------------------------------
+B23 reached Kushal's queue as "confirm X" when X was greppable in 30 seconds — and the
+answer turned out not to matter, because the real blocker was two lines of Step 1 that
+never learned a content directory exists. The same shape as A2: "disk full, fix it" was a
+missing env line. Standing rule (h): a flag_for_human whose body is a factual question is
+verified and answered by T20; only decisions escalate. Standing rule (i): before calling a
+content path "out of scope" or "dead", read the route file that serves it.
+[T20 2026-09-13] Slack digest UNDELIVERED — slack_search_channels + slack_send_message auto-declined (2nd consecutive scheduled run); archived at brain/memory/experiments/2026-09-13-t20-slack-digest-UNDELIVERED.md. Vercel MCP list_deployments auto-declined (Step 0 content-proof). FINAL STEP: re-spawned brain/.git/index.lock (0 B, 23:09:24) renamed → index.lock.stale-2026-09-13-t20-post-t16.
+[T20 2026-09-13 23:50 IST] Confirmed mechanism: my own `git update-index --refresh` printed 'unable to unlink .../index.lock: Operation not permitted' and left a fresh 0-B lock. Renamed → index.lock.stale-2026-09-13-t20-final. Brain repo lock-free at run end; NO further git ops this run. T16 (23:00 daily) must rename any existing index.lock BEFORE committing (F3).
+
+================================================================================
+T20 AUTO-REMEDIATION — 2026-09-14 (Monday) 22:55–23:45 IST
+================================================================================
+Eighth run. Verifier sub-agent: 17 APPROVE / 6 CORRECTION (all applied before --apply) /
+0 VETO / 0 NEEDS_HUMAN. Auto-declined in this scheduled run: Vercel MCP list_deployments
+(4th consecutive). Slack: see bottom line. Helper scripts (read-only / data-only, under
+logs/): t20-brief-inventory-2026-09-14.py, t20-t5-brief-query-verify-2026-09-14.py,
+t20-narrative-baseline-2026-09-14.py, t20-fix-2026-09-14.py (+ .log, dry-run then --apply).
+
+--------------------------------------------------------------------------------
+DEPLOY HEALTH (Step 0) — ✅ READY, content-proven (Vercel MCP DECLINED)
+--------------------------------------------------------------------------------
+origin/main HEAD d5b6443 (2026-09-11 16:07 IST); staging HEAD fe0cee9 (same merge) — no
+commits after it on either branch (GitHub commits API, read-only PAT). Live proof
+(canonical host, no -L, 22:57 IST): /doctors/shweta-kiran-wani 200 180,969 B ·
+/blogs/adhd-diagnosis-bangalore 200 106,753 B · /blogs/alexithymia 200 135,484 B ·
+/blogs/psychiatrist-vs-psychologist 200 114,673 B · control /blogs/zz-nonexistent-control-9914
+404. Homepage x-vercel-cache HIT age 283,707 s (78.8 h) → nothing redeployed since 09-11,
+consistent with no commits. "Latest deploy >48 h while commits exist after it" — N/A.
+What this method cannot see: ERROR-then-retry inside the last 5 deploys. E2 stands.
+
+--------------------------------------------------------------------------------
+FLAGS COLLECTED (Step 1) — BACKLOG 09-14 (T10 8 PM), BRAIN 09-13 T20 stamp + 09-14 T10
+stamp, WATCH (T12 09-13), decisions/2026-09-14, logs/{observation,rank-summary,
+gsc-validation,new-content,professional-input}-2026-09-14
+--------------------------------------------------------------------------------
+New today: (1) rank-summary: "rank-pull.py DID NOT COMPLETE — API timeout" (T10: "DataForSEO
+outage, carry 09-11"); (2) observation-monitor: 4 Aug-04 pages hit Day-42 tomorrow with "no
+rank_before_refresh / gsc_clicks_before baseline → tomorrow's eval will flag for human
+review"; (3) observation-monitor: 6 URLs (09-01/09-09 ships) missing primary_keyword in
+tracking-db; (4) new-content: DISCOVERY STALE (script >120 s, cache 1.5 d) + 20 briefs
+written + "tracking-db.json: 20 NEW_CONTENT entries added"; (5) T10: DataForSEO failed,
+B23 APPLIED, t17-tabs-create-fallback MISMATCH-SKIP again (T13). Standing: B8/B12/B15/B18/
+B22/B25/B7, W37 + W38 professional-input holds, E2/E3, PAT plaintext, GSC integrity,
+checkout corrupt. gsc-validation: nothing to validate. Untiered briefs: 0.
+
+--------------------------------------------------------------------------------
+A. FALSE POSITIVES / MIS-ROUTED FLAGS CLOSED (Rule 1) — 3
+--------------------------------------------------------------------------------
+A1. "DataForSEO outage 09-14" — TRANSIENT, not an outage. Probe at 22:59 IST (free endpoint
+    /v3/appendix/user_data, credentials consumed not printed): HTTP 200 in 1.1 s,
+    status_code 20000, balance $15.82 (total deposited $251), no daily-limit block. The
+    morning run actually processed 17 /illnesses/ URLs (rank-checkpoint-09-14 + rank-results-
+    09-14 exist, 07:08 IST) before run-rank-pull-until-complete.sh's 3-minute wall clock hit;
+    rank-summary's "no rank data files were produced" is itself wrong. No re-run fired (T1
+    runs again 07:00; a 23:30 re-pull adds one data point at DataForSEO cost for no consumer
+    tonight). Nothing for Kushal. NOTE for runway watching: at ~36 keywords/day the balance
+    is weeks, not days.
+A2. "4 Aug-04 pages have no baseline → flag for human" — a factual question, not a decision
+    (rule h). 3 of the 4 are NEW blogs published 2026-08-04: a pre-publish baseline does not
+    exist by definition → tracking-db now carries baseline_type=NEW_CONTENT_NO_PRIOR + a note
+    to evaluate against P12 (page-1 within 42 d). The 4th, /treatments/narrative-therapy, IS
+    a refresh and its baseline was recoverable: GSC page-dimension pre-window 2026-06-23..
+    08-03 = 899 impr / 5 clicks / pos 16.7 (21.4/d) → post 08-04..09-11 = 443 / 4 / 14.8
+    (11.4/d); watch keyword "narrative therapy bangalore" = 0 impressions in BOTH windows
+    (phantom target); real top query "narrative therapy" 61→24 impr, pos 37.2→9.5. Backfilled
+    into tracking-db (gsc_*_before / _post_window, baseline_source) — verdict is T12's.
+    [Verifier APPROVE; wording correction applied: the DataForSEO 6→100 is a SINGLE 08-04
+    snapshot with no pulls since (url_locked; rank-pull.py:91 skips), title-change causation
+    inferred not observed; a one-day 100 blip also occurred 07-14.]
+A3. "DISCOVERY STALE" — cache age 1.5 d, ran 09-12 (T20 B7, 195k rows). Registry says
+    re-run; NOT re-run tonight because the consumer (T5) has already run for the week and
+    every one of its 20 picks failed for a reason a fresher cache would not change (query
+    ownership, see B2). Re-run is queued for the 09-15 run ahead of the refill, when it has
+    a consumer.
+
+--------------------------------------------------------------------------------
+B. AUTO-FIXED (Rule 2) — 7   (all via logs/t20-fix-2026-09-14.py; backups
+   logs/{tracking-db,keyword-map,new-content-opportunities}.json.backup-2026-09-14-2321-pre-t20
+   taken BEFORE any mutation [Verifier correction 6])
+--------------------------------------------------------------------------------
+B1. P1 — tracking-db.json shape. T5 10:35 wrote a top-level key `new_content` whose value is
+    a LIST of 20 dicts (task5 Step 6 specifies one `NEW-<path>` dict entry per brief; no
+    backup before today has such a key). scripts/day42-evaluate-v2.py:40, day42-evaluate.py:34,
+    day42-batch-gsc.py:84 all do `for url, entry in db.items(): entry.get(...)` →
+    AttributeError: 'list' object has no attribute 'get' at key new_content — reproduced by
+    T20 and independently by the Verifier. The 4 B24 Day-42 finals due TOMORROW would have
+    crashed. Fixed: 20 spec-format entries written (2 BRIEF_CREATED, 18 ARCHIVED — see B2),
+    list key removed; post-check `all(isinstance(v, dict) for v in db.values())` passes.
+B2. 18 of today's 20 T5 briefs ARCHIVED (renamed briefs/archive/NEW-<slug>-brief.t20-archived-
+    2026-09-14.md, evidence block appended, tracking-db ARCHIVED with archived_reason +
+    redirect_to, opportunity → REDIRECT_TO_REFRESH so T5 cannot re-select the keyword).
+    Ground truth = GSC dimensions=[page] filtered by the brief's exact query, 28 d + 90 d
+    (logs/t20-t5-brief-query-verify-2026-09-14.json) + live curls (no -L):
+      ALREADY_LIVE (1): dbt-therapy-near-me → /doctors/dbt-therapists 200.
+      DUPLICATE_OF_QUEUE (2): child-psychologist-bangalore (= queued NEW-child-psychologists-
+        in-bangalore, 08-31 — its BRIEF_CREATED record preserved under a non-colliding key
+        [Verifier correction 1]); online-psychologist-consultation (= queued NEW-online-
+        psychologist-india; query owned by /treatments/online-therapy 274 impr pos 7.3, 28 d).
+      ALREADY_LIVE_SYNONYM (1): family-counselor-near-me → live national /doctors/family-
+        therapists (200); 28 d holder family-therapists-in-hyderabad 87 impr pos 9.6
+        [Verifier correction 2: the 90 d "owner" my rowLimit-6 pull showed was a truncation
+        artefact — re-verify with rowLimit ≥ 25 next time].
+      REDUNDANT_QUERY_OWNED / P12-E2 (14): psychiatrist-online-consultation-free-tamil →
+        /doctors/tamil-speaking-doctors 339/45/pos 1.7; emdr → /doctors/emdr-specialists
+        252/6/8.4; erp → /doctors/erp-therapists 304/14/5.8; tamil-speaking-psychiatrists →
+        tamil-speaking-doctors-in-bangalore 63/7/2.1; telugu-psychologist / telugu-psychiatrist
+        → telugu-speaking-doctors(-in-bangalore) pos 2.2–8.4; biofeedback → /doctors/
+        biofeedback-specialists 340/4/8.4; couple-counselling-online → /treatments/couples-
+        therapy 278/1/10.2; cptsd-test → /assessments/itq 2,067/52/9.3 (the ITQ IS the CPTSD
+        test); childhood-trauma-test → IDENTICAL live slug /assessments/childhood-trauma-test
+        863/21/9.5; social-anxiety-scale → /blogs/guide-to-liebowitz-social-anxiety-scale
+        393/11/8.4; ocd-test-online → /assessments/ocd 468/15/8.8; couples-therapy-guide →
+        /treatments/couples-therapy 2,130/3/8.4; deaddiction-treatment → /blogs/what-is-de-
+        addiction 365/4/7.4 + /treatments/drug-deaddiction 361/1/6.8.
+      KEPT (2, Tier A, URL corrected in place from the dead /doctors-listings/ route, slug/
+        file mismatch fixed, viability pre-flight note added): adhd-specialist-near-me →
+        /doctors/adhd-specialists (no national ADHD listing; property pos 18.5 on 448 impr;
+        best page hyderabad 8.4 on 33 % of impr); cbt-therapy-near-me → /doctors/cbt-
+        therapists [Verifier correction 3 — parity: no national CBT listing, 28 d pos 11.5 =
+        page 2, the 4 live national therapy listings hold their "near me" query at 5.2–8.4].
+    Pattern: T5's redundancy gate reads only the triggering_page slug and only /blogs/;
+    4 of its 6 Tier B picks were assessment queries the site already owns (the STUB-PILOT
+    defect class, 07-09) and 3 were synonyms of live national listings. → proposal
+    brain/proposed-changes/t5-query-ownership-gate-and-trackingdb-shape-20260914T2330.md
+    (query-ownership gate ≥50 % impr at pos ≤12, rowLimit ≥25; collection + queue collision
+    check; tracking-db shape assert). Companion to T13's dead-route proposal (apply 09-20).
+B3. tracking-db primary_keyword back-filled on 6 PUBLISHED pages (psychiatrist-vs-
+    psychologist, adhd-diagnosis-bangalore, psychiatrist-for-anxiety, psychologist-for-bipolar-
+    disorder, psychologist-for-schizophrenia, therapist-for-depression) from their NEW- twins
+    (= keyword-map, which rank-pull already reads). Observation-monitor's "manual keyword
+    entry recommended before 09-22" is done.
+B4. Aug-04 cohort baselines (A2) written to tracking-db; WATCH.md got a 2026-09-14 T20 block
+    for W38 + the B24 blogs; BACKLOG B24 row annotated.
+B5. keyword-map.json 306→309: the 3 Aug-04 blogs (live, locked, Day-42 tomorrow) were absent
+    → rank-pull matched 0 targets (09-12 precedent, same fix). /treatments/narrative-therapy
+    primary_keyword "Narrative Therapy: Types, Benefits, and How it Works" (the pre-refresh
+    TITLE, build-keyword-map title fallback) → "narrative therapy"; previous kept in
+    primary_keyword_previous. [Verifier APPROVE: day42-evaluate-v2.py reads GSC cache +
+    week_3_check_notes, not keyword-map, so tomorrow's verdict is untouched.]
+B6. 81 NEW_CONTENT rows still BRIEF_CREATED with their brief file gone from briefs/ →
+    79 SHIPPED (live 200 no -L, or tracking-db page record with published_at; brief_path
+    cross-match catches slug renames — dbt-skills-four-modules shipped as /blogs/dbt-skills-
+    modules [Verifier correction 4]) / 2 ARCHIVED (the-4-stages-of-sleep-explained 404 —
+    AP9-rejected 07-24; bhojpuri 404 — archived 09-13). Effect: BRIEF_CREATED NEW_CONTENT
+    97 → 18, every one with a file; T5's floor formula (N_WEEKS = BRIEF_CREATED ÷ 6) and
+    T16's runway rule now count the real queue. [Verifier: no consumer harmed — T16 total
+    141→61 still ≥15; T3 counts REFRESH; T2 skips post-brief states; T9 reads briefs/.]
+B7. Backups before every brain write: logs/{BACKLOG,WATCH,BRAIN}.md.backup-2026-09-14-2335-
+    pre-t20. Nothing deleted anywhere (18 renames into briefs/archive/).
+
+--------------------------------------------------------------------------------
+C. BRIEF QUEUE (Step 4) — 7 shippable /blogs/ → floor 6 met, NO refill fired
+--------------------------------------------------------------------------------
+Inventory logs/t20-brief-inventory-2026-09-14.{py,json} after B2 (28 NEW briefs): /blogs/
+spec metric 10 (intent_tier + 404), 7 shippable — anxiety-counselling (B), best-doctor-for-
+panic-attacks (B), online-counselling-in-hindi (A), online-therapy-in-telugu (A), teenage-
+counselling (B), therapist-for-bipolar-disorder (B), which-doctor-to-consult-for-alcohol-
+addiction (B); 3 gated (insurance AP9-veto, confidential clinical hold, gender-identity
+NEEDS_HUMAN). /doctors/ 15 (13 from 08-31/09-12 + adhd-specialists + cbt-therapists), all
+404, none has a listing MDX; T9 can only route them after the 09-20 companion proposal.
+/treatments/ 2 AP3-gated. conduct-disorder-in-adults DO-NOT-SHIP. Untiered 0.
+Cache scan for tomorrow (70 blog-type OPPORTUNITY rows ≥400 impr, pos >12): dominated by
+Tier C vocabulary/quotes (relationship quotes 4,309 impr / 3 clicks; "therapy" 3,146/3;
+inner peace 2,354/1) and queries already owned via /assessments/ (bpd-test → am-i-borderline-
+test) — nothing clean. T9 consumes up to 6 of the 7 on 09-15 → **T20 09-15 must refill
+(≥2 Tier B decision-spokes derived from dimensions=[query] data the site does NOT hold on
+page 1; run discovery first, rowLimit ≥25 on the ownership check).**
+
+--------------------------------------------------------------------------------
+D. VERIFIED-REAL, PRE-WRITTEN, ROUTED (not to Kushal)
+--------------------------------------------------------------------------------
+D1. B26 COUPLES-THERAPY-CTR-01 (new BACKLOG row, T10 to score 09-15 → T11 meta_ctr_update):
+    /treatments/couples-therapy holds "couples therapy" at pos 7.8 on 1,672 impr with 0
+    clicks (28 d; 2,130/3/8.4 over 90 d) + "couple counselling online" 278/1/10.2. Page-1
+    with ~0.1 % CTR = snippet problem. Title/meta/FAQ pre-written in the row. T5 had tried to
+    "solve" it with a competing blog (archived).
+D2. KEYWORD-MAP-TITLE-DERIVED-01 (T13): keyword-map primary_keyword equals the page title
+    for ~233 of 309 URLs (build-keyword-map.py title fallback when seo.primaryKeywords is
+    absent). Any retitle reads as a rank CRITICAL (narrative-therapy 6→100 on the day of its
+    own refresh). Fix belongs in scripts/build-keyword-map.py (GSC top-query fallback) —
+    not T20's file. Cross-ref GSC-MEASUREMENT-INTEGRITY-01, AP8.
+D3. T5 shape/gate proposal (B2) — T13 sanity-check 09-19, apply 09-21.
+D4. Hygiene noted, not touched: 9 page records /doctors/{psychiatrists,psychologists,
+    therapists}-in-{mumbai,delhi,chennai,pune,kolkata} carry status BRIEF_CREATED with no
+    published_at although the pages are live (de29c86 batch) — T4/T12 never opened windows
+    for them; T13 to decide whether they get retroactive PUBLISHED records. Also
+    /blogs/relationship-problems-signs-causes-and-solutions AND …-causes-solutions are BOTH
+    live (duplicate pages, Verifier spot) — cannibalization call, queue for T10.
+
+--------------------------------------------------------------------------------
+E. ESCALATED — standing only (each re-verified; NOTHING NEW needs Kushal tonight)
+--------------------------------------------------------------------------------
+E1. B22 therapist-for-depression reviewer frontmatter (src/**) — unchanged, fix pre-written
+    09-12. E2. VERCEL-MCP-DECLINED-01 4th consecutive; Step 0 content-proof. E3. DISCOVERY-
+    AVG-POSITION (scripts). GITHUB-PAT-PLAINTEXT-01 (read-only use tonight). GSC-MEASUREMENT-
+    INTEGRITY-01. WEBSITE-CHECKOUT-CORRUPT-01 (local feb506b, 161 behind; no live lock at
+    22:57). B12 / B15 Kushal calls. W37 holds to 09-28, W38 holds to 10-05 (professional-
+    input 09-14 picked depression/anxiety/CBT/EFT/bipolar/overthinking — no conflict with
+    open watches: no refresh, hold only).
+
+--------------------------------------------------------------------------------
+F. FILED TO T13 — 4
+--------------------------------------------------------------------------------
+F1. Proposal t5-query-ownership-gate-and-trackingdb-shape-20260914T2330 (B2, B1).
+F2. KEYWORD-MAP-TITLE-DERIVED-01 (D2).
+F3. T20 self-lesson: query-ownership pulls must use rowLimit ≥25 (rowLimit 6 truncated a
+    0-click query's 90 d page list and produced a wrong "owner"; caught by Verifier).
+F4. D4 hygiene (9 live listing pages with BRIEF_CREATED page records; duplicate relationship-
+    problems pages).
+
+--------------------------------------------------------------------------------
+CONSTRAINTS HONOURED
+--------------------------------------------------------------------------------
+src/** untouched (GitHub API read-only; nothing pushed). scripts/*.py untouched (4 helper
+scripts under logs/). No YMYL page touched; 0 pages shipped; weekly cap untouched. Billing/
+ads/credentials untouched (DataForSEO + GitHub credentials consumed read-only, not printed).
+Nothing deleted — 18 briefs archived by rename, 3 data files + 3 brain files backed up
+before write. Verifier corrections applied BEFORE --apply (dry-run → audit → patch → apply).
+
+--------------------------------------------------------------------------------
+LESSON — the eighth run: a sensor can poison the store it reports on
+--------------------------------------------------------------------------------
+T5 reported success ("20 briefs, ALL 20 PASS §5.5, 20 tracking-db entries added") while
+(a) 19 of the 20 targeted something the site already ranks for, and (b) the entries it
+added would have crashed the next evaluator to open the file. Neither showed up as a flag
+anywhere — the observation monitor ran BEFORE T5 and T10 read T5's log at face value. Two
+standing rules: (j) every T20 run asserts the shape of tracking-db.json and keyword-map.json
+(flat dict, dict values) before reading anything else; (k) a "brief created" is not a
+finding until its query has been checked for a live page-1 owner at query level.
+[T20 2026-09-14] Slack digest UNDELIVERED — slack_send_message auto-declined (3rd consecutive scheduled run); archived at brain/memory/experiments/2026-09-14-t20-slack-digest-UNDELIVERED.md. Vercel MCP list_deployments auto-declined (4th; Step 0 content-proof).
+[T20 2026-09-14 23:26 IST] FINAL STEP: brain/.git/index.lock (0 B, left by T16 23:08) renamed → index.lock.stale-2026-09-14-t20; no git process alive; no further git ops this run.

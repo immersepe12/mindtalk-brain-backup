@@ -59,3 +59,20 @@ Note: if T9's cluster-cap logic is enforced *purely* inside `scripts/*.py` and N
 ## Rollback
 
 Before-snapshot: `cowork-tasks/task9-auto-ship-new-blogs.md` §9 cluster cap section as of 2026-09-06. To revert: remove the "CLUSTER CAP RULE" and "Path resolution" blocks added above, restore the single `/blogs/` cap reference.
+
+---
+## T20 VERIFICATION — 2026-09-13 23:30 IST (resolves the Verifier's NEEDS_HUMAN of 2026-09-13; Verifier APPROVE on the fact, CORRECTION on the text)
+**Answer to the open question: T9's cluster cap is enforced in SPEC TEXT, not in `scripts/*.py`.**
+Evidence: `grep -rn -i "cluster.cap\|cluster_cap\|per_cluster" scripts/*.py` → 0 hits (only keyword-clustering scripts match "cluster");
+`scripts/audit-unshipped-briefs.py` (the only script Step 1 calls) has no cap logic; `task9-auto-ship-new-blogs.md:160` instructs the
+count from `tracking-db.json` (`published_at > window_start`); the table is `brain/VERIFIER.md §9` L131–140; T9's 09-09 run evaluated
+`CLUSTER_CAP_SKIP 6/6` in-run (`briefs/NEW-therapist-for-bipolar-disorder-brief.md:110`). → **Not a Kushal decision. Route to T10 apply-pass.**
+
+**Apply WITH these corrections (do not apply the After-block verbatim):**
+1. Caps: `/blogs/ 6 · /doctors/ 6 (new row — add to VERIFIER.md §9) · /treatments/ 7 · /illnesses/ 5`. The After-block's 3/3 for
+   YMYL contradicts §9 and would silently lower those caps.
+2. Anchor: the Before line (`/blogs/ at 3/3`, task9 L175) is an *example inside the rejection template*. Insert the CLUSTER CAP RULE
+   under **Step 2 rule 5** (L158–160), where the cap is evaluated; leave the template example as-is (or just fix 3/3→3/6).
+3. This proposal alone does NOT unblock the 14 `/doctors/` briefs — T9 Step 1 never labels them `/doctors/` (regex L85 recognises only
+   `blogs|treatments|illnesses`; `scripts/audit-unshipped-briefs.py:21,61` same). See companion
+   `t9-doctors-listings-scope-20260913T2330.md` (spec hunks + viability gate; script line is dev/Strategist-Verifier).

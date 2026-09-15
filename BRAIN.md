@@ -1,4 +1,54 @@
+### 2026-09-15 T11 Executor — READ BEFORE T10 09-15 (B8-HYD + B24 re-queue) and T12 09-21 (Day-42 catch-up)
+
+🚨 **MISSED ESCALATION: B24 — Slack failed 2026-09-15. Check logs/pending-human-actions-2026-09-15.txt**
+🚨 **MISSED ESCALATION: B8-HYD — Slack failed 2026-09-15. Kushal has not seen this. Check logs/pending-human-actions-2026-09-15.txt**
+
+**T11 run 2026-09-15 summary:**
+- **B24 (schedule_watch_check, Day-42 finals):** FAILED. `create_scheduled_task` auto-declined (no user present in automated run). B24 left open for Strategist re-queue. Day-42 GSC data pre-pulled (T20 2026-09-13). T12 Sunday 09-21 can still catch these — 6 days late but usable. Failure log: `brain/memory/experiments/2026-09-15-watch-creation-failed-b24.md`.
+- **B8 (investigate_regression):** COMPLETE. Root causes confirmed: (1) mix dilution from de29c86 2026-08-31 batch → 13 therapist listing pages competing for "therapist near me"; (2) Hyderabad thin content (2 clinicians, near-empty listing, pos 10.1→49.5); (3) missing faqs:/quickAnswer/keyTakeaways. Full investigation: `brain/memory/experiments/investigation-therapists-regression-2026-09-15.md`. B8 replaced by: **B8-BLR** (ship_REFRESH_brief for therapists-in-bangalore, IMMEDIATE), **B8-HYD** (flag_for_human, Kushal decision: redirect or reframe Hyderabad page — URGENT), **B8-MON** (monitor sibling batch, check 2026-09-29).
+- **Slack:** both tools auto-declined (no user present). Slack summary UNDELIVERED. Archived in logs/pending-human-actions-2026-09-15.txt.
+
+**Actions needed from Kushal (cannot auto-fire):**
+1. **B8-HYD URGENT:** therapists-in-hyderabad only has 2 matching clinicians → near-empty listing page, crashed to pos 49.5. Options: A=301 to /doctors/online-therapists-india, B=reframe as "Online Therapists Serving Hyderabad" (recommended — change filterCity:null, update title), C=hold. Decision blocks the fix.
+2. **B24 Day-42 finals:** Run T12 Learner today (data pre-pulled) OR wait for Sunday 09-21 T12 run.
+3. **B8-BLR:** therapists-in-bangalore refresh brief — T11 can ship next automated run (AP4 CLEAR, 154 days).
+
+### 2026-09-14 T20 Auto-Remediation — READ BEFORE T12 09-15 (Day-42 finals) and T5 09-21
+- **tracking-db.json was in a shape that crashes the Day-42 scripts** (T5 10:35 wrote a list under `new_content`; `day42-evaluate-v2.py:40` → AttributeError, reproduced). Fixed: 20 spec-format `NEW-` entries, key removed, backup `logs/tracking-db.json.backup-2026-09-14-2321-pre-t20`. T12 tomorrow: baselines for the 4 B24 pages are in tracking-db (`baseline_type`/`gsc_*_before`/`rank_baseline_note`) — do not flag "missing baseline" to Kushal.
+- **T5's redundancy gate is broken outside /blogs/:** 19/20 briefs today were owned on page 1 by live `/assessments/`, `/treatments/`, `/doctors/` URLs or duplicated queued briefs (evidence `logs/t20-t5-brief-query-verify-2026-09-14.json`). Archived with evidence; opportunities → REDIRECT_TO_REFRESH; proposal `brain/proposed-changes/t5-query-ownership-gate-and-trackingdb-shape-20260914T2330.md` (T13 check 09-19, apply 09-21). Kept: `adhd-specialists`, `cbt-therapists` national listings (URL fixed to /doctors/).
+- **Measurement finding (filed, not fixed):** `keyword-map.json` `primary_keyword` is the literal page TITLE for ~233/309 URLs (build-keyword-map title fallback); a title change therefore reads as a rank CRITICAL (narrative-therapy 6→100 on 08-04 = the refresh's own retitle). One entry fixed (narrative-therapy → `narrative therapy`, previous kept in `primary_keyword_previous`); systemic fix = KEYWORD-MAP-TITLE-DERIVED-01 for T13 (needs `seo.primaryKeywords` or a GSC top-query fallback in build-keyword-map.py — scripts/, not T20's).
+- Hygiene: 6 PUBLISHED pages got their missing `primary_keyword`; 3 Aug-04 blogs added to keyword-map; 81 stale BRIEF_CREATED NEW_CONTENT rows → 79 SHIPPED / 2 ARCHIVED (T5 floor formula + T16 runway now count the real queue: 18 BRIEF_CREATED, all with files). New BACKLOG row B26 COUPLES-THERAPY-CTR-01 (/treatments/couples-therapy 1,672 impr / 0 clicks at pos 7.8, 28d).
+- DataForSEO 09-14 timeout = transient (probe 200 in 1.1 s, balance $15.82). Brain repo: T16 left a fresh 0-B `.git/index.lock` at 23:08 again — renamed at run end (F3 stands: T16 must rename-not-rm).
+- Full log: `brain/memory/remediation-log.md` 2026-09-14. Verifier: 17 APPROVE / 6 CORRECTION (all applied) / 0 VETO.
+
+### 2026-09-15 T10 Strategist — Material Learning: August Core Update pattern + ATH + CTR priority shift
+
+**August 2026 Core Update (08-26→09-21) — YMYL DataForSEO volatility pattern confirmed:**
+- 4 MODERATE drops today (ADHD pos 2→7, Biofeedback pos 3→7, CBT pos 10→14, Psychotherapy pos 5→12) — ALL confirmed NOISE by GSC validation
+- ADHD: impressions +58.4%; Biofeedback/CBT: 0 clicks both windows (no volume); Psychotherapy: +100% clicks, +14% impressions
+- Pattern: DataForSEO position reads during Core Update period show elevated false-positive moderate-drop rates (~4/day vs ~0 pre-update); GSC consistently contradicts with flat-to-improving signal
+- **Site-level verdict:** YMYL architecture is holding under Core Update pressure — 0 GSC-confirmed drops through the entire update period (08-26→09-15, 20 days). SCHEMA-MEDICAL-TYPES-01 fix (PR #23, 08-17) is likely shielding illness/treatment pages.
+
+**Strategic posture shift: from impression-growth to CTR extraction**
+- W36 ATH: 3,904 clicks / 451,557 impr (new ATH) / CTR 0.9% / pos 9.7 — all Q3 targets exceeded
+- Primary constraint is now **Tier A CTR**, not indexation or impressions volume
+- B26 couples-therapy (1,672 impr / 0 clicks at pos 7.8) exemplifies the pattern: high-position, high-impression, near-zero CTR due to generic title/meta
+- P13 (intent tier decides what gets built) + intent-reframe 07-30: focus entirely on Tier A+B CTR extraction and booking conversion, not raw impr growth
+- **New finding:** "couples therapy" holds pos 7.8 with 0.1% CTR — title/meta fix has 15-40 clicks/wk upside, score 96, no YMYL gating needed
+
+**Decision log:** `brain/memory/decisions/2026-09-15.md`
+**Last updated: 2026-09-15 T10 Strategist**
+
 # BRAIN — Mindtalk SEO Growth Engine
+
+### 2026-09-13 T20 Auto-Remediation — READ BEFORE T10 09-14 (Step 10 apply-pass) and T12 09-20
+- ✅ **Deploy health READY (content-proven):** origin/main HEAD still `d5b6443` (no commits since 09-11 16:07) — /doctors/shweta-kiran-wani 200, llms-full.txt carries Shweta, control slug 404, homepage edge-cache age 54.8 h (no newer deploy). Vercel MCP auto-DECLINED again (E2 standing).
+- ⛔ **B23 is NOT a Kushal decision — answered by evidence (Verifier APPROVE):** cap enforcement is spec text (0 hits in scripts/*.py; task9 L160; VERIFIER §9). **T10: apply the 09-06 proposal with the T20 corrections appended to it** (caps 6/6/7/5 not 3/3; rule goes under Step 2 rule 5). **The cap is not what blocks the 14 /doctors/ briefs:** they target `src/content/doctors-listings/*.mdx`, which renders at `/doctors/<slug>` (page.tsx `getCollection("doctors-listings")`, 281 live) — content-only ships — but T9 Step 1 + `scripts/audit-unshipped-briefs.py` only know blogs|treatments|illnesses. Companion proposal `t9-doctors-listings-scope-20260913T2330` (apply 09-20) adds the dir + a ≥1-matching-profile viability gate + README online-only framing for non-open cities. One dev line remains (`audit-unshipped-briefs.py:21,61`). `/doctors-listings/` = dead URL, live content dir — the 09-12 archival of 14 briefs stands (all 14 slugs already have listing MDX).
+- ⛔ **T12's "zero-impression cohort" (W36/W37/W-PSYCH-BLR/W-COUN-BLR) is a pull-side error:** all four impress daily through 09-11 (W36 95 impr/day, W37 50/day, PSYCH 790/day, COUN 105/day). GSC works from the sandbox with `HOME=/tmp XDG_CACHE_HOME=/tmp TMPDIR=/tmp PYTHONPATH=.pip-packages` (libs are in `.pip-packages/`). Files refreshed 23:01 IST; Day-42 09-15 cohort (B24) pre-pulled. Data + T20 reading in the WATCH.md correction block — **verdicts are T12's** (W37's page now ranks 8.3 on its target query; property drag is other /doctors/ URLs). B25 filed for the spec line.
+- 🔧 **Auto-fixed:** stale 0-byte `.git/index.lock` renamed on both repos (104 h / 24 h; `os.rename` works where `unlink` fails on FUSE) → T16 23:09 committed + pushed brain snapshot `71922c5` (first off-site backup since 09-11). **Git cannot unlink on FUSE, so a lock re-spawns after every git op** — T20 renames it again as its last step; T16 should rename-not-rm. Bhojpuri listing brief archived (0 of 62 profiles speak Bhojpuri → empty page; re-open trigger + roster pre-flight filed). B8's two listing MDX confirmed present.
+- 📝 **Brief queue:** 7 shippable `/blogs/` (A: hindi, telugu; B ×5) ≥ floor 6 — no refill fired; spec metric 10. T9 cap resets 09-15 → expect the queue to drop to ~1 after Monday's ship; T20 09-15 refills. 13 viable `/doctors/` Tier A briefs wait on B23 (3 Punjabi = 1-profile roster, thin).
+- 🔴 **Escalated (standing, each re-verified tonight):** VERCEL-MCP-DECLINED-01, SLACK auto-declined (digest archived if undelivered), GITHUB-PAT-PLAINTEXT-01, GSC-MEASUREMENT-INTEGRITY-01, WEBSITE-CHECKOUT-CORRUPT-01 (local 161 behind), B22 reviewer frontmatter (src/**), B12 / B15 Kushal calls, W37 professional-input holds to 09-28.
+- Full log: `brain/memory/remediation-log.md` 2026-09-13. Verifier: 4 APPROVE / 2 CORRECTION (both applied) / 0 VETO.
 
 ### 2026-09-12 T20 Auto-Remediation — READ BEFORE T10 09-13 (overrides tonight's 20:13 Strategist scoring on B8/B19/B20/B21)
 - ✅ **Deploy health READY (content-proven):** origin/main HEAD `d5b6443` (09-11 16:07) is live — /doctors/shweta-kiran-wani 200, 09-09 blogs 200, reviewer=sucheta-saha in JSON-LD. Vercel MCP was auto-DECLINED in the scheduled run → Step 0 cannot see ERROR-then-retry deploys; Kushal to approve the MCP for this task.
@@ -1134,3 +1184,17 @@ Verifier flagged that it cannot confirm whether T9's cluster-cap counter runs fr
 
 **t12-stub-pilot-qdf-guard APPLIED 2026-09-13:**
 4a-stub QDF guard inserted into cowork-tasks/task12-learner.md before 4b. Stub-pilot Day-14 interim verdicts must now be labeled QDF_RISK_INTERIM and NOT closed as 🟢 regardless of position. Day-42 remains the mandatory closure gate for this content class. Snapshot: brain/before-snapshots/task12-learner-20260913T201323.bak.
+
+### 2026-09-14 T10 Strategist — 8 PM IST
+
+**Site: ALL-TIME HIGH posture.** W36 (09-05→09-11): 3,904 clicks (+4.5% WoW) / 451,557 impr (+17.5% WoW, new ATH) / CTR 0.9% / avg pos 9.7 (largest single-week position gain in tracked history). 937 URLs ranking. All Q3 targets exceeded.
+
+**B23 APPLIED (Meta-Learner Step 10):** t9-doctors-cluster-cap-separation-20260906T2030 applied today with T20 corrections — caps /blogs/ 6 · /doctors/ 6 · /treatments/ 7 · /illnesses/ 5, path-resolution rule under Step 2 rule 5. Proposal renamed to .applied.md. Applied-history updated. Companion t9-doctors-listings-scope applies 09-20.
+
+**t17-tabs-create-fallback MISMATCH-SKIP (2nd):** task17-competitive.md does not exist (file was never created). T13 must create the file or refile the proposal against the correct target.
+
+**DataForSEO outage 09-14:** API timeout, no fresh rank data. Single-day event, no strategic implication. Carry 09-11 state.
+
+**Standing escalations (re-verified tonight):** VERCEL-MCP-DECLINED-01, t17 Chrome stall (AI citation data ~6 weeks stale), GITHUB-PAT-PLAINTEXT-01, WEBSITE-CHECKOUT-CORRUPT-01, B22 reviewer frontmatter, B12/B15 Kushal calls, W37 professional-input holds to 09-28.
+
+Full log: brain/memory/decisions/2026-09-14.md

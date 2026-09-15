@@ -3,6 +3,16 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T20 AUTO-REMEDIATION — 2026-09-14 — W38 baseline backfill + B24 cohort (Day-42 finals 2026-09-15)
+> **W38 /treatments/narrative-therapy:** the DataForSEO series is INVALID for this watch — `keyword-map.json` tracked the pre-refresh page TITLE
+> (`Narrative Therapy: Types, Benefits, and How it Works`) as the query; the single 08-04 snapshot read 100 (rank_previous 6) and there have been
+> no pulls since (locked). The watch keyword `narrative therapy bangalore` has **0 impressions in both 42-day windows** (phantom target). Use GSC
+> page totals (`logs/t20-narrative-baseline-2026-09-14.json`, page-dimension, canonical host): **pre 2026-06-23..08-03 = 899 impr / 5 clicks / pos 16.7
+> (21.4 impr/day) → post 08-04..09-11 = 443 / 4 / 14.8 (11.4 impr/day)**; top real query `narrative therapy` 61 → 24 impr, pos 37.2 → 9.5. Verdict is T12's.
+> **B24 blogs (drug-addiction-symptoms, intellectual-disability-symptoms, signs-of-adhd):** NEW pages — no pre-publish baseline exists by definition
+> (`baseline_type=NEW_CONTENT_NO_PRIOR` in tracking-db); evaluate against the P12 standard (page-1 within 42d), not "missing baseline → human".
+> tracking-db.json `new_content` list (T5 09-14) that crashed `day42-evaluate-v2.py` has been removed. Evidence: `brain/memory/remediation-log.md` 2026-09-14.
+
 > ### ⛔ T20 AUTO-REMEDIATION CORRECTION — 2026-08-23
 > **The five 🔴 interim verdicts issued by T12 today (W30, W31, W32, W33, W39) are measurement-invalid and are superseded.**
 > T12 recorded *"GSC Aug 13-20 window: all 5 show 0 impressions"* and concluded a broad pre-Core-Update stall.
@@ -48,8 +58,32 @@
 >
 > **TRAJECTORY update:** Week 2026-08-31→09-06: Clicks 3,735 (+15.3%), Impr 384,195 (+10.9%), CTR 1.0% ✅, Pos 12.8. Q3 targets exceeded.
 
+> ### ⛔ T20 AUTO-REMEDIATION CORRECTION — 2026-09-13 23:20 IST (Verifier APPROVE, independently re-pulled)
+> **The "zero-impression cohort" is a pull-side data error, not a page fact. All four pages impressed every day through 2026-09-11.**
+> GSC is reachable from the Cowork sandbox: the `/sessions` VM disk is 100% full but `/` has 3.7 GB — run
+> `HOME=/tmp XDG_CACHE_HOME=/tmp TMPDIR=/tmp PYTHONPATH=.pip-packages python3 scripts/gsc-pull.py --url /path`
+> (the google libs ARE installed under `.pip-packages/`; "google.oauth2 not installed" was a PYTHONPATH miss). T20 refreshed
+> `gsc-data/illnesses_depression.json`, `illnesses_anxiety.json`, `doctors_psychologists-in-bangalore.json`, `doctors_counsellors-in-bangalore.json`
+> (all mtime 2026-09-13 23:01 IST) **and pre-pulled the 4 Day-42 URLs due 2026-09-15** (drug-addiction-symptoms, intellectual-disability-symptoms,
+> signs-of-adhd, narrative-therapy) so B24 is not blocked. Workaround line filed to T13 for task12-learner.md (and every sandbox task that calls gsc-pull.py).
+>
+> **Ground truth (page dimension, canonical host, no -L; target query at `dimensions=[query]` property-level per rule (f)) — `logs/t20-gsc-watch-verify-2026-09-13.json`:**
+>
+> | Watch | Page | Pre-window (per day) | Post-window (per day) | Page pos pre→post | Target query (property) pos pre→post | Page's own rank on target query (post) |
+> |---|---|---|---|---|---|---|
+> | W36 | /illnesses/depression | 07-03→07-30: 2,411 impr / 4 clk (86/d) | 08-15→09-11: 2,672 impr / 3 clk (95/d, +11%) | 13.7 → 14.5 | "depression treatment bangalore" 6.8 → 11.3 (53→32 impr) | pos 10.0 on 3 impr — the query is owned by /doctors/depression-specialists-in-bangalore (pos 6.7, 30 impr) |
+> | W37 | /illnesses/anxiety | 07-03→07-30: 1,028 impr / 4 clk (37/d) | 08-15→09-11: 1,398 impr / 3 clk (50/d, +36%) | 11.3 → 30.3 | "anxiety treatment bangalore" 7.5 → 16.7 (35→31 impr) | **pos 8.3 on 25 impr** — the Day-14 "crash to 39.5" has recovered to page 1 for the page itself; the property drag is other /doctors/ URLs at pos 53–100 |
+> | W-PSYCH-BLR | /doctors/psychologists-in-bangalore | 07-24→08-20: 13,755 impr / 88 clk (491/d) | 08-22→09-11: 16,597 impr / 67 clk (790/d, +61%) | 26.5 → 18.1 | "adult psychologist near me" 5 → 4 (2 impr each — too thin to score) | pos 4 |
+> | W-COUN-BLR | /doctors/counsellors-in-bangalore | 07-24→08-20: 2,841 impr / 20 clk (102/d) | 08-22→09-11: 2,203 impr / 14 clk (105/d, flat) | 15.7 → 14.1 | "counselling bangalore" 26.5 → 30.7 (82→79 impr) | pos 48.6 on 8 impr — /centers/indiranagar (5.7) and /treatments/counselling-therapy (10.5) own the query |
+>
+> Daily tails 09-07…09-11 (impr): depression 118/96/106/147/116 · anxiety 22/18/31/37/16 · psychologists-blr 515/2,580/426/1,210/544 · counsellors-blr 114/128/100/132/96. Negative control (garbage path) = 0.
+> **Verdicts remain T12's to issue** (next run 2026-09-20; no disk fix needed — use the env line above). T20's reading, for T12 to confirm or reject: W36 target missed / page flat (🔴 by target, not ⚫); W37 page-1 recovery on the target query but page-average slid (🟡); W-PSYCH-BLR impressions +61%, page pos +8.4 (🟢-leaning); W-COUN-BLR flat (🟡/🔴 by target). Caveat (Verifier): `gsc-pull.py` files aggregate `dimensions=[query]` at rowLimit 50 and undercount page totals (e.g. 155 vs 802 for depression 09-05..09-11) — read them as non-zero evidence, not as page-dimension totals.
 
 
+
+
+---
+**T10 Strategist stamp — 2026-09-15 8 PM IST:** 0 CRITICAL drops today. August 2026 Core Update ACTIVE (08-26→09-21 est.) — DataForSEO volatility but 0 GSC-confirmed drops through entire update period. YMYL architecture holding. **Day-42 finals due today (09-15):** W38 (/treatments/narrative-therapy) — DataForSEO series INVALID (wrong keyword tracked); use GSC page totals from `logs/t20-narrative-baseline-2026-09-14.json` (pre: 899 impr/5 clk/pos 16.7 → post: 443/4/14.8). B24 cohort (drug-addiction-symptoms, intellectual-disability-symptoms, signs-of-adhd) — NEW pages, no prior baseline, evaluate against P12 standard. **T12 evaluates all Day-42 finals on 2026-09-20.** W39 (/blogs/yoga-for-anxiety) Day-42 due tomorrow 09-16 — T12 evaluates 09-20. W18/W19/W20/W21 extended obs must close **2026-09-21 regardless of disk state**. W36/W37/W-PSYCH-BLR/W-COUN-BLR: 44 days overdue from Day-42 final — T12 evaluates 09-20 using T20 pre-pulled data + sandbox workaround (`HOME=/tmp XDG_CACHE_HOME=/tmp TMPDIR=/tmp PYTHONPATH=.pip-packages`). B26 couples-therapy: CTR problem confirmed (1,672 impr/0 clicks pos 7.8) — APPROVED to T11, not a watch issue.
 
 ---
 **T12 Learner stamp — 2026-09-06 (weekly run):** ⚠ LEARNER FLAG: Dual data failure this week — DataForSEO 402 (day 3, B17 IMMEDIATE) + gsc-pull.py library missing. 5 watches DEFERRED to 09-10 (ALGO_WATCH settle): W30/W31/W32/W33 Day-42 finals, W-PSYCH-BLR-20260821, W-COUN-BLR-20260821. W40 Day-21 also DATA_GAP (not in T4 pipeline). Stub-pilot + hyperactive-ADHD Day-42 batch FORMALLY CLOSED: 0🟢 / 0🟡 / 1🔴 / 5⚫ (100% stalled/worse) — worst single-batch result in system history. W24 (panic-attack-grounding) 🔴 STALLED (AI Overview trap, url_locked=true, B16 queued). W25/W26/W27/W28 + hyperactive-ADHD ⚫ WORSE — closed. Weekly metrics (Aug 22-28): 3,239 clicks (−4.6%), 346,320 impr (−5.4%), CTR 0.9%, pos 14.2. **Active watches next week:** W30-W33 Day-42 finals → 09-10; W-PSYCH-BLR + W-COUN-BLR → 09-10; W40 Day-21 → 09-10; W36/W37 Day-42 → 09-11; W38 Day-42 → 09-15; W39 Day-42 → 09-16; W41 Day-21 → 09-08; W41 Day-42 → 09-29.
@@ -1418,3 +1452,30 @@ ALGO_WATCH CLEARED. Site posture: GROWTH. No content shipped today (T9 /blogs/ c
 | W-AUG04-NARR | /treatments/narrative-therapy | 40/42 | Narrative Therapy Bangalore | PENDING_EVALUATION 09-15 |
 
 **T12 Learner must evaluate these on 2026-09-15.** Use GSC page-dimension pull (path form) for each — do not use full URL form to avoid gsc-pull.py URL-prefix bug (T20 2026-08-23 remediation).
+
+---
+### ⚙️ T10 STRATEGIST STAMP — 2026-09-14
+
+**Site posture:** GROWTH + ALL-TIME HIGH. W36 (09-05→09-11): 3,904 clicks / 451,557 impr (new ATH) / CTR 0.9% / pos 9.7 (best single-week gain). 937 URLs ranking.
+
+**DataForSEO:** API timeout 09-14 — no fresh rank data. Carrying 09-11 state. No new flags.
+
+**No new watches opened** today (no content shipped).
+
+**B23 Cap-separation APPLIED:** t9-doctors-cluster-cap-separation-20260906T2030 applied with T20 corrections (caps /blogs/ 6 · /doctors/ 6 · /treatments/ 7 · /illnesses/ 5, rule under Step 2 rule 5). Next T9 run can now evaluate /doctors/ briefs against their own cap.
+
+**Watch status (2026-09-14 unchanged from 09-13 stamp except):**
+- W36 🔴 STALLED — T12 evaluates TODAY (09-14 weekly run due)
+- W37 ⚫ WORSE — T12 evaluates TODAY (09-14 weekly run due)
+- W38 narrative-therapy (Day-42 **TOMORROW 09-15** — YMYL, Kushal a/b/c still pending)
+- W39 yoga-for-anxiety (Day-42 09-16)
+- W-AUG04 cohort (drug-addiction, intellectual-disability, signs-of-adhd, narrative-therapy) — **Day 41/42, final eval TOMORROW 09-15** (GSC pre-pulled by T20 09-13)
+
+**Upcoming watch checks:**
+- **2026-09-15 (TOMORROW):** ⚡ W38 Day-42 + 4 Aug-04 cohort Day-42 finals (T12)
+- **2026-09-16:** W39 yoga-for-anxiety Day-42 + W-B7-REVIEWER-BATCH2 check + B7 batch 3 eligible
+- **2026-09-20:** 3 Meta-Learner proposals apply (t9-doctors-listings-scope, t3-dead-route, t5-dead-route + t5-position-warning) — T10 FIRST ACTION
+- **2026-09-21:** W18/W19/W20/W21 obs windows close + W43 Day-21 midpoints
+- **2026-09-22:** W40 Day-42 finals
+- **2026-09-29:** W41 Day-42 finals
+- **2026-10-12:** W43 Day-42 finals
