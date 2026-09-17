@@ -3,6 +3,17 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T20 AUTO-REMEDIATION — 2026-09-15 — T9 0001be1 cohort (7 pages) has records now; T10 09-15 stamp said "no content shipped" — it missed T9's 15:19 ship
+> **T10: open watch rows for these on 09-16.** Shipped 2026-09-15 (commit `0001be1`, all 200 no -L, deployed): `/doctors/anxiety-therapists-in-kolkata` (A, 600/mo),
+> `/doctors/anxiety-therapists-in-mumbai` (A, 900), `/doctors/depression-specialists-in-kolkata` (A, 550), `/doctors/depression-specialists-in-mumbai` (A, 800),
+> `/doctors/online-psychologist-india` (A, 3,200), `/blogs/anxiety-counselling` (B, reviewer vijayalaxmi-umate) — **Day-21 midpoint 2026-10-06 · Day-42 final 2026-10-27**,
+> `url_locked`, `baseline_type NEW_CONTENT_NO_PRIOR` (evaluate per P12). **`/doctors/child-psychologists-in-bangalore` IS now in a window (T20 09-17: fix live 09-16, Day-42 10-28)** — ~~it renders 0 clinicians~~
+> (`filterAgeGroup: "Child"` matches nobody; roster value `"Children"`); tracking-db `DEFECTIVE_PENDING_FIX`, unlocked; open its window on the fix commit (BACKLOG CHILD-PSYCH-BLR-EMPTY-01, T11 IMMEDIATE).
+> **B24 cohort (Day-42 due today):** T4 08:09 set all 4 `QDF_BLOCKED`, windows → 2026-10-27, on "no baseline" + DataForSEO ">100". GSC page truth (`logs/t20-gsc-verify-2026-09-15.json`, no -L):
+> signs-of-adhd post-window 628 impr / 0 clicks / pos_w 7.3 (top query "adhd full form" 116 impr pos 2.6 — Tier C, AP11: page-1 there is not a 🟢) · intellectual-disability 464 / 1 / 14.5 (last 7 d 83 / 0 / 7.3) ·
+> drug-addiction 125 / 1 / 16.6 · narrative-therapy 444 / 4 / 14.8 (last 7 d 53 / 2 / 9.0; T4's "−38 % (5 vs 899)" is a stale-file read — B25). Verdicts are T12's (09-20).
+> **B8-MON scope +6:** today's listings join the dilution watch; therapists-in-hyderabad = duplicate roster+copy of Bangalore; talk-therapy-specialists-in-hyderabad holds "therapist near me" at 7.4.
+
 > ### ℹ️ T20 AUTO-REMEDIATION — 2026-09-14 — W38 baseline backfill + B24 cohort (Day-42 finals 2026-09-15)
 > **W38 /treatments/narrative-therapy:** the DataForSEO series is INVALID for this watch — `keyword-map.json` tracked the pre-refresh page TITLE
 > (`Narrative Therapy: Types, Benefits, and How it Works`) as the query; the single 08-04 snapshot read 100 (rank_previous 6) and there have been
@@ -1479,3 +1490,60 @@ ALGO_WATCH CLEARED. Site posture: GROWTH. No content shipped today (T9 /blogs/ c
 - **2026-09-22:** W40 Day-42 finals
 - **2026-09-29:** W41 Day-42 finals
 - **2026-10-12:** W43 Day-42 finals
+
+## T11 Executor — 2026-09-16 new watches
+
+| Watch ID | Page | Action | Open date | Check date (Day-14) | Day-42 | Target |
+|---|---|---|---|---|---|---|
+| W-B26 | /treatments/couples-therapy | B26 meta CTR fix: title/meta + 2 FAQs (cost/online) | 2026-09-16 | 2026-09-30 | 2026-10-28 | CTR ≥1% on "couples therapy" (pos 7.8, 0 clicks) |
+
+**CHILD-PSYCH-BLR-EMPTY-01 (defect fix):** Not a ranking watch — page was DEFECTIVE_PENDING_FIX. Open 42-day window from fix commit: check 2026-10-28. Target: ≥18 clinicians shown, enters index, pos ≤30 within 42d.
+
+
+---
+## T10 Strategist — 2026-09-17 — T9 09-15 cohort watch rows
+
+⚠️ T20 2026-09-15 flagged: "T10: open watch rows for these on 09-16." Opening now (09-17, 1 day late due to context compaction).
+
+**Ship date:** 2026-09-15 · Commit: `0001be1` · Day-21: **2026-10-06** · Day-42: **2026-10-27**
+
+| Watch ID | Page | Tier | Volume (mo) | Reviewer | Notes |
+|---|---|---|---|---|---|
+| W-SEP15-KOL-ANX | /doctors/anxiety-therapists-in-kolkata | A | 600 | Mindtalk Clinical Team | |
+| W-SEP15-MUM-ANX | /doctors/anxiety-therapists-in-mumbai | A | 900 | Mindtalk Clinical Team | |
+| W-SEP15-KOL-DEP | /doctors/depression-specialists-in-kolkata | A | 550 | Mindtalk Clinical Team | |
+| W-SEP15-MUM-DEP | /doctors/depression-specialists-in-mumbai | A | 800 | Mindtalk Clinical Team | |
+| W-SEP15-ONLINE-PSY | /doctors/online-psychologist-india | A | 3,200 | Mindtalk Clinical Team | Highest-volume page in cohort |
+| W-SEP15-ANX-BLOG | /blogs/anxiety-counselling | B | — | vijayalaxmi-umate | |
+| W-SEP15-CHILD-PSY-BLR | /doctors/child-psychologists-in-bangalore | A | 1,200 | Mindtalk Clinical Team | ✅ **T20 2026-09-17: defect FIXED and live** — T11 09-16 commit bfcdb03 → merge `a7a4c08` (Vercel prod READY 22:01 IST); live page renders "Showing 18 professionals". Window opened on the fix commit: **Day-0 2026-09-16 · Day-21 2026-10-07 · Day-42 2026-10-28** (tracking-db PUBLISHED, locked). Evaluate with the 09-16 cohort below, not this cohort. ~~⚠️ DEFECTIVE — T11 IMMEDIATE fix pending~~ |
+
+**Next checks:** T12 evaluates midpoints 2026-10-06 · T12 evaluates finals 2026-10-27
+
+---
+## T10 Strategist — 2026-09-17 — T9 09-16 cohort watch rows
+
+**Ship date:** 2026-09-16 · Commit: `c3aafc44` (merge `16e829b1`) · Day-21: **2026-10-07** · Day-42: **2026-10-28**
+
+| Watch ID | Page | Tier | Primary KW | Reviewer | Notes |
+|---|---|---|---|---|---|
+| W-SEP16-HINDI | /blogs/online-counselling-in-hindi | A | online counselling in hindi | vijayalaxmi-umate | |
+| W-SEP16-TELUGU | /blogs/online-therapy-in-telugu | A | online therapy in telugu | puja-jaiswara | |
+| W-SEP16-TEEN | /blogs/teenage-counselling | B | teenage counselling | puja-jaiswara | |
+| W-SEP16-PANIC-DR | /blogs/best-doctor-for-panic-attacks | B | best doctor for panic attacks | keerthi-sagar | Medical-safety disclaimer included |
+
+**Next checks:** T12 evaluates midpoints 2026-10-07 · T12 evaluates finals 2026-10-28
+
+---
+**Updated watch schedule (09-17 T10):**
+- **2026-09-20:** T12 evaluates: W36/W37 (depression/anxiety — 44d overdue), W38 narrative-therapy, W39 yoga-for-anxiety, W-PSYCH-BLR, W-COUN-BLR
+- **2026-09-21:** W18/W19/W20/W21 MUST CLOSE + W43 Day-21 midpoints (8 blogs 08-31)
+- **2026-09-20:** Meta-Learner proposals t3/t5-* apply (T10 09-20 FIRST ACTION)
+- **2026-09-21:** t5-query-ownership-gate proposal applies (T10 09-21 FIRST ACTION)
+- **2026-09-22:** W40 Day-42 finals
+- **2026-09-29:** W41 Day-42 finals + B8-MON cannibalization check
+- **2026-10-06:** W-SEP15 cohort Day-21 midpoints (7 pages)
+- **2026-10-07:** W-SEP16 cohort Day-21 midpoints (4 blogs)
+- **2026-10-12:** W43 Day-42 finals (8 blogs 08-31)
+- **2026-10-27:** W-SEP15 cohort Day-42 finals
+- **2026-10-28:** W-SEP16 cohort Day-42 finals + W-B26 (couples-therapy CTR, 14d check 09-30)
+

@@ -38,3 +38,12 @@ This is a **new error class**: the 2026-06-15 block was "per-project access not 
 ## Service account rotation pending
 
 EU service account (`mp-autonomous-seo-loop.d7e328.mp-service-account`) was created and secret was exposed in chat. Since the loop can't use it anyway, Kushal should delete it from eu.mixpanel.com → Settings → Service Accounts when convenient. No urgency — secret is useless without API access.
+
+---
+
+## BLOCK PERSISTS — 2026-09-16 (T15 Wed run, 8 weeks later)
+
+Same error: `"Your account is blocked because payment is required."` — Project 4011856.
+Block has now been active for **8 consecutive weeks** (since 2026-07-22). No T15 data since 2026-07-08.
+T15 fallback log written to: `logs/mixpanel-conversion-2026-09-16.md`
+**Escalating urgency: Kushal action required immediately.**

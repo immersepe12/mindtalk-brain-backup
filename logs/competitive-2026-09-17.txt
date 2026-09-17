@@ -1,0 +1,1 @@
+2026-09-17 | CHROME: CONNECTED | Browser 1, macOS, deviceId=9d564974-bd13-49c2-90cf-d410a75e530f | Perplexity queries: 8/10 tested (Q5, ChatGPT, Claude.ai skipped to conserve time) | Google AI OV: 3 queries tested

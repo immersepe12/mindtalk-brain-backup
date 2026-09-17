@@ -70,8 +70,8 @@
 | Top-3 ranking queries | **how-to-find-therapist-india pos 2** (W14 EXCEPTIONAL, DataForSEO 08-03), somatic-therapy pos 3.3 | — | 7,500 (Q3) | 🟡 Two top-3 confirmed. Aggregate count pending DataForSEO fresh pull. |
 | Pages live | 829 (GSC URLs Ranking wk Jul 25-31) | — | 800 (Q3) | 🟢 **Q3 target EXCEEDED (+3.6%)**. 829 vs 800 target. |
 | Inventory coverage (Track B) | 27% | 27% | 45% (Q3) | 🟡 Brief queue EMPTY (T5-REFILL-NOW CRITICAL) — velocity stalled until T5 refills. Stub-pilot 5 pages live (mindful-minutes). |
-| AI citation share (Perplexity) | 5/10 (50%) | ~4/10 | — | 🔴 Week 11 (2026-08-28): ⬜ Chrome stall 5th consecutive Thursday — untested. Carrying forward Week 8 score (5/10). Last confirmed: Q3 ✅ Q4 ✅ Q6 ✅ Q8 ✅ Q10 ✅. URGENT: Chrome restart on Mac Mini + extension reload required — 200+ citation data points missed across 5 weeks. |
-| AI citation share (Google AI OV) | 1/5 tested | ~2/5 | — | 🔴 Week 11 (2026-08-28): ⬜ Chrome stall 5th consecutive Thursday — untested. Carrying forward Week 8 score (1/5 tested, Q4 ✅). Full sweep blocked until Chrome stall resolved. |
+| AI citation share (Perplexity) | **6/10 (60%)** | ~4.5/10 | — | 🟢 Week 14 (2026-09-17): Chrome CONNECTED. **GAINED Q9 "depression treatment online india" (cited FIRST — 7wk propagation lag from 07-31 YMYL update)**. Retained: Q3✅ Q4✅ Q6✅ Q8✅ Q10✅. Still absent: Q1❌ Q2❌ Q7❌. 6/10 = best score ever. Q5 + Q9 Google AI OV not tested this run. |
+| AI citation share (Google AI OV) | 0/3 tested | ~1/4 | — | 🔴 Week 14 (2026-09-17): Chrome CONNECTED. Tested Q4/Q9/Q10 — all 0 AI OV shown. Q10 showed AI OV last week (possible session variation, monitor next Thursday). Full 10-query sweep pending dedicated pass. |
 
 | 2026-08-31 to 09-06 | 1 | 0 | 0 | 0 | 0 | 4 (W36/W37/W-PSYCH-BLR/W-COUN-BLR PENDING_EVALUATION — disk full; T12 09-13) | **1 LIVE** (T9 09-01: psychiatrist-vs-psychologist `0b6cf4b5`). /blogs/ 1/6 this week. ALGO_WATCH CLEARED 09-10. B7 batch 3 due 09-16. |
 ---

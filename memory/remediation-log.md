@@ -3651,3 +3651,639 @@ standing rules: (j) every T20 run asserts the shape of tracking-db.json and keyw
 finding until its query has been checked for a live page-1 owner at query level.
 [T20 2026-09-14] Slack digest UNDELIVERED — slack_send_message auto-declined (3rd consecutive scheduled run); archived at brain/memory/experiments/2026-09-14-t20-slack-digest-UNDELIVERED.md. Vercel MCP list_deployments auto-declined (4th; Step 0 content-proof).
 [T20 2026-09-14 23:26 IST] FINAL STEP: brain/.git/index.lock (0 B, left by T16 23:08) renamed → index.lock.stale-2026-09-14-t20; no git process alive; no further git ops this run.
+
+================================================================================
+T20 AUTO-REMEDIATION — 2026-09-15 (Tuesday) 22:55–23:50 IST
+================================================================================
+Ninth run. Verifier sub-agent: 6 APPROVE / 3 CORRECTION (all applied before --apply) / 0 VETO /
+0 NEEDS_HUMAN + 4 unprompted findings (all filed). Auto-declined in this scheduled run: Vercel MCP
+list_deployments (5th consecutive). Slack: see bottom line. Helper scripts (read-only / data-only,
+under logs/): t20-brief-inventory-2026-09-15.py, t20-gsc-verify-2026-09-15.py,
+t20-gsc-decision-mine-2026-09-15.py, t20-candidate-ownership-2026-09-15.py, t20-fix-2026-09-15.py
+(+ .log, dry-run → Verifier → patch → --apply), t20-verifier-claims-2026-09-15.md.
+
+--------------------------------------------------------------------------------
+DEPLOY HEALTH (Step 0) — ✅ READY on 0001be1, content-proven (Vercel MCP DECLINED)
+--------------------------------------------------------------------------------
+origin/main HEAD 0001be1 (2026-09-15 15:19 IST, "feat(seo): ship 6 doctors-listings + 1 blog
+(T9 auto-ship 2026-09-15)", 7 files added under src/content/). staging HEAD fe0cee9 unchanged.
+Live proof (canonical host, no -L, 22:57 IST): all 7 URLs 200 (296–347 KB listings, 117 KB blog),
+x-vercel-cache HIT age ≈27,240 s (7.57 h → cached ~15:22 IST, i.e. built right after the commit);
+homepage age 27,260 s (redeployed then); control /blogs/zz-nonexistent-control-9915 404 age 0.
+Verifier: old and new pages embed the same build id dpl_T7mo3UXgreqXXVVkQb4XVFqubHqA → one deploy
+containing 0001be1. What this method cannot see: ERROR-then-retry inside the last 5 (E2 stands).
+
+--------------------------------------------------------------------------------
+FLAGS COLLECTED (Step 1) — BACKLOG 09-15 (T10 8 PM), BRAIN 09-15 T11 + T10 stamps, WATCH,
+decisions/2026-09-15, logs/{observation,rank-summary,gsc-validation,data-quality-suspect,
+pending-human-actions}-2026-09-15, briefs-2026-09-14.txt (T9 block)
+--------------------------------------------------------------------------------
+New today: (1) pending-human-actions: T11 Slack failed → B8-HYD "URGENT Kushal decision" + B24
+"run T12 manually?" undelivered; (2) T9 shipped 7 pages (commit 0001be1) — no auto-ship log, no
+verifier-log lines, no tracking-db page records, no keyword-map entries, briefs still queued;
+(3) T4: all 4 B24 pages QDF_BLOCKED, windows extended to 10-27 ("no baseline" + DataForSEO >100);
+(4) rank: 291 KWs, 0 CRITICAL, 4 MODERATE all cleared as NOISE by T2/GSC, 10 pos→100 quarantined
+(AP8) — nothing to verify; (5) T10: B26 + B8-BLR queued for T11 09-16 (not mine). Standing: B22,
+B12, B15, B25, E2/E3, PAT plaintext, GSC integrity, checkout corrupt, W37/W38 holds. Untiered 0.
+Shape rule (j): tracking-db 388 dict/dict ✓, keyword-map 309 ✓.
+
+--------------------------------------------------------------------------------
+A. FALSE POSITIVES / MIS-ROUTED FLAGS CLOSED (Rule 1) — 2
+--------------------------------------------------------------------------------
+A1. B8-HYD (T11 flag_for_human, "only 2 clinicians match filterCity:'Hyderabad' → near-empty
+    listing → Kushal choose A/B/C") — FALSE PREMISE. Ground truth: main's
+    src/content/doctors-listings/therapists-in-hyderabad.mdx has `filterCity: null` since commit
+    7113261 (2026-08-05, "fix(doctors): populate the empty Hyderabad listing pages") with an
+    in-file comment saying exactly why; the live page renders "Showing 5 professionals" — the same
+    5 as therapists-in-bangalore. T11's recommended Option B ("change filterCity:null") was
+    implemented 41 days ago. Cause of the false flag: T11 read the LOCAL checkout
+    /Users/agent/Documents/GitHub/mindtalk — HEAD feb506b (2026-07-21), 161 commits behind, stuck
+    in an interactive rebase (`.git/rebase-merge`, 6 commands remaining) — whose copy still says
+    filterCity: "Hyderabad" and carries the old in-person body. WEBSITE-CHECKOUT-CORRUPT-01 has
+    now produced a false human escalation (priority ⬆). What IS real: "therapist near me" on the
+    Hyderabad page pos 51.7 (1,040 impr/28 d, 1 click); page series 1,811→1,541→1,298→1,143
+    impr/wk, pos_w 28.0→39.5→47.6→26.3. New facts for B8-MON: the Hyderabad page is a roster+copy
+    duplicate of the Bangalore page, and /doctors/talk-therapy-specialists-in-hyderabad holds
+    "therapist near me" at pos 7.4 on 421 impr — the consolidation question is a 09-29 B8-MON
+    item, not a decision tonight. [Verifier APPROVE; evidence wording corrected: "Showing 5
+    professionals", not "View Profile ×6" (those were body-text hits).]
+A2. B24 "Kushal: run T12 manually today or wait to 09-21" — not a decision (rule h). T10 (20:00)
+    set T12 09-20. T4 had already (08:09) set all 4 QDF_BLOCKED + windows→10-27. GSC page truth
+    (logs/t20-gsc-verify-2026-09-15.json): signs-of-adhd post-window 628 impr / 0 clicks / pos_w
+    7.3 (top query "adhd full form" 116 impr pos 2.6 = Tier C — AP11, not a 🟢), intellectual-
+    disability 464 / 1 / 14.5 (last 7 d pos 7.3), drug-addiction 125 / 1 / 16.6, narrative-
+    therapy 444 / 4 / 14.8 (last 7 d 53 / 2 / 9.0). T4's "−38 % (5 vs 899)" is arithmetically
+    impossible (5/899 = −99 %) — a stale/partial GSC file read (B25 class). Verdicts are T12's.
+    New flag class filed to T13: SCHEDULED-TASK-TOOL-DECLINED-01 — T11 must not call
+    create_scheduled_task in automated runs; T12's weekly run is the evaluator.
+
+--------------------------------------------------------------------------------
+B. AUTO-FIXED (Rule 2) — 6   (logs/t20-fix-2026-09-15.py; backups logs/{tracking-db,keyword-map}
+   .json.backup-2026-09-15-2327-pre-t20 + logs/{BACKLOG,WATCH,BRAIN}.md.backup-2026-09-15-2327-pre-t20)
+--------------------------------------------------------------------------------
+B1. 7 page records created in tracking-db for today's ships (PUBLISHED, type NEW, published_at
+    09-15, commit, observation_window_end 2026-10-27, midpoint 2026-10-06, url_locked, primary_
+    keyword from the NEW- row / brief, baseline_type NEW_CONTENT_NO_PRIOR, `week_3_check_done:
+    false` [Verifier: T4 depends on it], `verified_live_at` [T10 AP10 rule 3], search_volume 0
+    not None). 09-12 defect class (shipped pages invisible to rank-pull/T4/T10).
+B2. 6 NEW-/doctors-listings/* rows BRIEF_CREATED→SHIPPED; NEW-/blogs/anxiety-counselling SHIPPED
+    record created (the 09-12 refill wrote no tracking-db row). BRIEF_CREATED NEW_CONTENT 18→11.
+B3. keyword-map.json 309→316 (7 entries; rank-pull would otherwise match 0 targets).
+B4. 7 shipped briefs → briefs/archive/*-shipped-2026-09-15.md (rename). Reviewer on
+    /blogs/anxiety-counselling = vijayalaxmi-umate: /doctors/vijayalaxmi-umate 200, reviewedBy
+    Person node present in live JSON-LD (not a B22-class orphan). She is now at load 5 (cap).
+B5. Brief queue on merit: NEW-therapist-for-bipolar-disorder ARCHIVED (REDUNDANT_SIBLING_LIVE —
+    GSC 90 d: 0 clicks across 4 holders; live sibling /blogs/psychologist-for-bipolar-disorder
+    (09-09) carries H2s "Psychiatrist, Psychologist, or Both?" + "What Therapy Works" = the
+    brief's outline; no reviewer/faqs frontmatter; links dead /doctors-listings/ route + a 308).
+    NEW-couples-therapists-in-bangalore ARCHIVED (DUPLICATE_OF_LIVE — plural twin of
+    /doctors/couple-therapists-in-bangalore, live 08-31, 28 profiles). Both with evidence blocks
+    + tracking-db ARCHIVED rows (redirect_to set so T5 cannot re-select).
+B6. NEW-which-doctor-to-consult-for-alcohol-addiction → HOLD until 2026-10-06 (T9 "HOLD until"
+    block appended; tracking-db HOLD_PENDING_REFRESH). I had proposed ARCHIVE (query held by
+    /doctors/alcohol-addiction-specialists 326/351 impr = 93 % at pos 10.5); Verifier CORRECTION:
+    identical evidence to the 09-12 approval, the ownership gate is my own proposal (apply
+    09-21) not policy — re-litigating an approved brief on the same facts is drift. Sequence:
+    ALCOHOL-SPECIALISTS-CTR-01 first; at hold expiry archive if the listing's decision-query CTR
+    ≥1 %, else release. Honoured.
+
+--------------------------------------------------------------------------------
+C. BRIEF QUEUE (Step 4) — /blogs/ 4 shippable (< floor 6) → refill FIRED → 0 authorable
+--------------------------------------------------------------------------------
+Inventory (logs/t20-brief-inventory-2026-09-15.{py,json}, canonical host, no -L): /blogs/ spec
+metric 8 (tier + 404), shippable 4 — online-counselling-in-hindi (A), online-therapy-in-telugu
+(A), best-doctor-for-panic-attacks (B), teenage-counselling (B); gated 4 (insurance AP9-veto,
+confidential hold, gender-identity NEEDS_HUMAN, alcohol HOLD). /doctors/ 8 (all 404, none has a
+listing MDX; 3 Punjabi thin). /treatments/ 2 AP3-gated. Untiered 0. Next /blogs/ T9 slot: the
+09-09 five roll off 09-16 → up to 5 could ship; the 4 cover it.
+Refill steps run (registry): scripts/google-ads-search-terms.py --days 30 --min-clicks 5 →
+281 qualified of 5,814 terms (logs/t20-google-ads-terms-2026-09-15.json): every converting term
+is a live listing shape (therapist near me 406 clk / 77 conv, psychologist near me 212/32,
+psychologist bangalore 109/22, couple(s) therapy bangalore 83/22, marriage counselling bangalore
+44/5.7, counselling psychologist 15/3, psychologist whitefield 9/2, marriage counselor whitefield
+5/2.6). GSC decision-shape mine over 75,000 query rows (90 d) → 9 shapes, 5,900+ queries
+(logs/t20-gsc-decision-mine-2026-09-15.json); ownership pulls (dimensions=[page], rowLimit 25,
+28 d + 90 d, logs/t20-candidate-ownership-2026-09-15.json) on 9 families: OCD doctor/treatment
+(ocd-specialists 12–18; how-to-find-a-therapist-for-ocd owns "which doctor" at 4.7), drug-
+addiction doctor (drug-addiction-specialists 7–17, 0 clicks), burnout (TWO live blogs split it),
+online counselling (/treatments/online-therapy 14–44), ADHD/depression/bipolar near-me (listings
+11–43), Whitefield (7 profiles, no listing, /centers 404). Every family with impressions already
+has a Mindtalk holder → the correct action is a refresh/CTR fix of the holder, not a competing
+page (rule k, P12-E2, Pattern 3). 0 briefs authored. Verifier CORRECTION (honoured): label is
+"ownership sweep incomplete", not "Tier A/B exhausted" — insomnia light therapy (617/0/10.9;
+/blogs/light-therapy-for-insomnia live → likely CTR), autism professional-selection (~406 impr /
+0 clicks / 7.5–13.6; /doctors/autism-specialists live), psychologist for dementia (93/0/7.3) were
+not pulled → next run. Discovery cache NOT re-run (no DISCOVERY STALE flag today; T5 09-21 re-runs
+it itself; a 6-day-old cache would be stale again by then).
+Demand converted into BACKLOG rows (all pre-written, T10 to score 09-16): THERAPISTS-DELHI-CTR-01
+(/doctors/therapists-in-delhi 6,928 impr / 3 clicks / pos 9.6 in 15 days = 0.04 % CTR on page 1 —
+largest single CTR gap found), ALCOHOL-SPECIALISTS-CTR-01, DRUG-ADDICTION-SPECIALISTS-CTR-01
+(≈600 impr / 0 clicks), OCD-SPECIALISTS-CTR-01 (654 impr / 0 clicks). Also noted, no row:
+/blogs/how-to-find-a-therapist-in-india 3,288 impr / 4 clicks / pos 1.8 (28 d: 1,904 / 0 / pos
+1.1 — AI-Overview/feature absorption; T17 AEO territory).
+
+--------------------------------------------------------------------------------
+D. ESCALATED — 1 new dev item (fix pre-written) + 3 human calls (all new, none urgent)
+--------------------------------------------------------------------------------
+D1. 🚨 CHILD-PSYCH-BLR-EMPTY-01 — /doctors/child-psychologists-in-bangalore (Tier A 1,200/mo,
+    shipped today) renders ZERO clinicians (empty-cohort fallback; items_count 0). Cause on main:
+    `filterAgeGroup: "Child"`; src/lib/doctors.ts:89-91 matches d.agePreferrence exactly; roster
+    values Adult 58 / Adolescent 53 / Geriatric 32 / Children 32 / Teenager 14 — "Child" → 0,
+    "Children" + Bangalore + Psychologist → 18. Fix = one word in src/content (T20 may not touch
+    src/**): dev-specs/2026-09-15-child-psychologists-bangalore-empty-cohort-fix.md. Verifier:
+    AP4/§8 do NOT block — same-day ship correction → T11 IMMEDIATE, no Kushal gate. Record set
+    DEFECTIVE_PENDING_FIX, unlocked. (My second proposed fix — strip "Whitefield" from the centre
+    list — was WRONG: doctors-listings/README lists Whitefield as a verified OPEN centre on CRM
+    evidence; dropped per Verifier.)
+D2. BURNOUT-CANNIBAL-01 — consolidation call (registry): guide-to-burnout-syndrome vs
+    burnout-treatment split ≈1,600 impr / 1 click across the family. Recommendation in the row;
+    sequence after the 09-16 W-B7 batch-2 check.
+D3. HFA-CANNIBAL-01 — consolidation call: understanding-high-functioning-anxiety holds "high
+    functioning anxiety treatment" 795/796 impr at pos 10.5 / 0 clicks; the 08-18 page built for
+    that query gets 1 impr at pos 52. Decide with W43 Day-42 (09-29).
+D4. WHITEFIELD-LISTING-01 — Tier A gap, paid-converting, 7 profiles carry subLocation Whitefield;
+    README requires a verification pass on physical-availability claims for a distinct-location
+    page and /centers/whitefield is 404 → Kushal confirms bookable-in-person → T5 authors.
+Standing, re-verified, unchanged: B22 (src/**), B12, B15, VERCEL-MCP-DECLINED-01 (5th), GITHUB-
+PAT-PLAINTEXT-01 (read-only use tonight; Verifier: also embedded in the local checkout's
+.git/config remote URL), GSC-MEASUREMENT-INTEGRITY-01, WEBSITE-CHECKOUT-CORRUPT-01 (⬆: A1 —
+fix spec unchanged: `git rebase --abort && git checkout main && git fetch && git reset --hard
+origin/main` by a human with the repo open, or retire local reads in T11 in favour of the API).
+
+--------------------------------------------------------------------------------
+E. CONTRADICTION FLAG + FILED TO T13 — 6
+--------------------------------------------------------------------------------
+E1. Contradiction (CLAUDE.md rule): T9 shipped 6 more /doctors/ listings today (anxiety-
+    therapists-in-kolkata/mumbai render the SAME 6 profiles; depression-specialists-in-kolkata/
+    mumbai the same 47) while B8's diagnosed root cause is therapist-listing mix dilution. Not
+    reversed (live, content-only); B8-MON 09-29 scope extended to include them.
+F1. T9 2026-09-15 left no logs/auto-ship-2026-09-15* and no verifier-log lines for a 7-page ship
+    — "All VERIFIER-approved" in the commit is unauditable (Verifier unprompted).
+F2. T9 invented `filterAgeGroup` (the child-psych brief had no filter frontmatter; it also named
+    centres Koramangala / JP Nagar / Mysore Road not on the README list). The 09-20 viability
+    gate must resolve filter values against the roster AND curl "Showing N professionals ≥1".
+F3. SCHEDULED-TASK-TOOL-DECLINED-01 (A2). F4. T4 observation-monitor reads only rank_before_
+    refresh for "baseline" and produced an impossible "−38 % (5 vs 899)" — read gsc_*_before and
+    assert file freshness (B25). F5. T11 must read the product repo via GitHub API / live curl,
+    never the local checkout, until WEBSITE-CHECKOUT-CORRUPT-01 is fixed (A1). F6. T10 09-15
+    stamp said "no content shipped today" and opened no watches for T9's 7 pages — T10 must read
+    logs/briefs-*.txt T9 block / GitHub commits before stamping (WATCH.md T20 block carries the
+    dates).
+
+--------------------------------------------------------------------------------
+CONSTRAINTS HONOURED
+--------------------------------------------------------------------------------
+src/** untouched (GitHub API read-only; nothing pushed; local checkout not touched). scripts/*.py
+untouched (5 helper scripts under logs/). No YMYL page touched; 0 pages shipped; weekly cap
+untouched. Billing/ads/credentials untouched (DataForSEO not called; GitHub PAT + GSC token +
+Google Ads env consumed read-only, not printed). Nothing deleted — 9 briefs renamed into
+briefs/archive/, 2 JSON + 3 brain files backed up before write. Verifier corrections applied
+BEFORE --apply.
+
+--------------------------------------------------------------------------------
+LESSON — the ninth run: the stale checkout is now an escalation generator
+--------------------------------------------------------------------------------
+Two of the three "URGENT" items waiting for Kushal tonight were not decisions: one was answered
+by a file on main 41 days ago (T11 read a tree 161 commits old), the other was answered by T10
+two hours before T11 asked it. Meanwhile the one thing that actually needed a human was on
+nobody's list — a Tier A page that shipped this afternoon with no clinicians on it — and it
+surfaced only because Step 0 curls what shipped rather than trusting the commit message. Two
+rules for next run: (l) any flag whose evidence came from the local website checkout is
+unverified until reproduced on main via the API or the live page; (m) every T9 ship gets a
+"Showing N professionals ≥1" / body-length assertion on the live page the same evening,
+before the page record is opened.
+[T20 2026-09-15] Slack digest UNDELIVERED — slack_search_channels + slack_send_message auto-declined (4th consecutive scheduled run); archived at brain/memory/experiments/2026-09-15-t20-slack-digest-UNDELIVERED.md. Vercel MCP list_deployments auto-declined (5th; Step 0 content-proof).
+
+
+================================================================================
+T20 AUTO-REMEDIATION — 2026-09-17 (run 10:15–11:20 IST; off-cadence morning run — the whole
+daily pipeline fired 10:10–10:20 today: T2, T4, T16, T10, T1)
+================================================================================
+Slack digest ✅ DELIVERED (ts 1789622013.611199, #seo-workflow-mindtalk) — first delivery in 5 runs.
+Vercel MCP ✅ ANSWERED — first time in 6 runs (VERCEL-MCP-DECLINED-01 stands down tonight).
+Verifier: 5 APPROVE / 3 CORRECTION (all applied before the log) / 0 VETO / 0 NEEDS_HUMAN
+(claims: logs/t20-verifier-claims-2026-09-17.md).
+
+--------------------------------------------------------------------------------
+0. DEPLOY-HEALTH GATE — ✅ READY
+--------------------------------------------------------------------------------
+list_deployments(prj_48AlhTOwnl64I8qD0jyV4x2mH1Sz): last 5 production deploys
+  569c7bd  READY  2026-09-16 22:02 IST  merge(exec) B26 COUPLES-THERAPY-CTR-01   dpl_3DEQuXNUqU9Sin5NKtc3as1iYDQh
+  a7a4c08  READY  2026-09-16 22:01 IST  merge(exec) CHILD-PSYCH-BLR-EMPTY-01 fix dpl_DeLTHAqntmG9wDo7WBRHMi68uwvU
+  c3aafc4  READY  2026-09-16 20:38 IST  T9 4 NEW blogs                          dpl_4DgZUJEMHCreSj8DvjZJfBx6e9td
+  0001be1  READY  2026-09-15 15:19 IST  T9 6 listings + 1 blog                  dpl_T7mo3UXgreqXXVVkQb4XVFqubHqA
+  d5b6443  READY  2026-09-11 16:07 IST  PR #33 Shweta Kiran Wani                dpl_E8B8Mjee7HSMhagsa7Ggs652J9Kn
+0 ERROR in the window (2 BLOCKED are staging-branch previews, not prod). T16 10:14: remote HEAD
+569c7bd = deployed HEAD → no commits after the last deploy. Live proof: /treatments/couples-therapy
+title is the B26 title; /doctors/child-psychologists-in-bangalore "Showing 18 professionals".
+
+--------------------------------------------------------------------------------
+A. FLAGS COLLECTED (BACKLOG 10:20 stamp, BRAIN, WATCH, logs/*-2026-09-17, T14 09-16, T15 09-16)
+--------------------------------------------------------------------------------
+CHILD-PSYCH-BLR-EMPTY-01 (RE-OPENED by T10 09-17) · T14-BLOG-CWV-01 · T14-GSC-OAUTH-12 ·
+T14-SCHEMA-STALE-02 · Mixpanel MCP_BLOCKED_AGAIN (T15 09-16) · ops-health: 2 stale index.lock,
+rank-summary missing (T1 still running at 10:20 — not a flag), competitive-ai-monitor 14 d (T17 is
+Thursday-cadence, today; not due yet at 10:15) · standing: B22, B12, B15, B7, B8-BLR, THERAPISTS-
+DELHI-CTR-01, WHITEFIELD, BURNOUT/HFA-CANNIBAL, T17-7, W37/W38 holds.
+
+--------------------------------------------------------------------------------
+B. FALSE POSITIVES CLOSED (Rule 1) — 2  (+1 downgraded)
+--------------------------------------------------------------------------------
+B1. FALSE POSITIVE: CHILD-PSYCH-BLR-EMPTY-01 re-open (T10 09-17 "T11 did NOT apply fix") —
+    Vercel prod a7a4c08 READY 09-16 22:01 IST ("fix filterAgeGroup Child→Children"); live curl
+    10:25 IST (canonical host, no -L) → "Showing 18 professionals", 10 Physician nodes in ItemList.
+    Mechanism: T11 09-16 updated NEW-/doctors-listings/child-psychologists-in-bangalore (notes:
+    "18 profiles show. Commit bfcdb03/a7a4c08") but left /doctors/child-psychologists-in-bangalore
+    at DEFECTIVE_PENDING_FIX with null window; T4 observation-monitor printed "NEW-… day 2 (no
+    obs_end)" and T10 promoted that to "DEFECTIVE Day-2, re-open IMMEDIATE". Nobody curled.
+    Verifier APPROVE. → T13: a defect flag is re-opened only on a live curl.
+B2. FALSE POSITIVE: T14-GSC-OAUTH-12 ("GSC OAuth expired 11+ weeks; renew immediately") —
+    gsc-token.pickle refreshed 10:23:42 IST by scripts/gsc-pull.py (--url the dominant-personality
+    page, returned clicks −21 % / impr −12 %) and logs/t20-gsc-authorable-mine-2026-09-17.py pulled
+    100,000 dimensions=[query,page] rows at 10:27 with the same credential. T14 runs without the
+    B25 env line (HOME=/tmp XDG_CACHE_HOME=/tmp TMPDIR=/tmp PYTHONPATH=.pip-packages) and reports
+    its own import/disk failure as an expired credential. Verifier APPROVE. → T13 (B25).
+B3. DOWNGRADED (Verifier CORRECTION — not closed): T14-BLOG-CWV-01 — the flagged slug
+    /blogs/understanding-dominant-personality is a 404 (T14 measured the 404 template); real page
+    /blogs/understanding-dominant-personality-and-dominating-nature. PSI mobile ×2 (10:35 IST,
+    identical = cached): perf 0.81, lab LCP 2.6 s, FCP 1.2 s, TBT 610 ms; CrUX LCP p75 1,497 ms
+    FAST 91.4 % good BUT loadingExperience.origin_fallback = true (origin-level, not page-level —
+    CRUX-PAGE-FIELD-DATA-GAP-01). CRITICAL → P2; close after 2 weekly lab reads < 2.5 s on the real
+    slug. If lab stays ≥ 2.5 s the lever is TBT 610 ms (script), not the hero preload T14 guessed.
+    → T13: T14 must resolve slugs against the sitemap and print CrUX + fallback flag with lab.
+
+--------------------------------------------------------------------------------
+C. VERIFIED REAL → REGISTRY
+--------------------------------------------------------------------------------
+C1. T14-SCHEMA-STALE-02 — REAL (live JSON-LD, canonical host): homepage @types = Organization ×3,
+    WebSite ×2, SearchAction, PostalAddress, MedicalOrganization, InteractionCounter, ImageObject,
+    ContactPoint (no ItemList, no BreadcrumbList); /illnesses/depression = WebPage + FAQPage(10)
+    + Person ×2 (no MedicalWebPage); /treatments/narrative-therapy = MedicalTherapy + FAQPage(4)
+    (no MedicalWebPage); dominant-personality blog = BlogPosting + BreadcrumbList + Person ×2, no
+    FAQPage although the body has "## Frequently Asked Questions". 3/4 = src/** template
+    (SCHEMA-MEDICALWEBPAGE-RESIDUAL-01, standing since 08-26, dev-specs/) — not re-escalated as new;
+    1/4 content-only → BACKLOG DOMINANT-PERSONALITY-FAQ-01 (Tier C family, AP11; expected REJECT —
+    listed so T14 stops counting it as "unchanged"). Registry: website code → dev spec exists.
+C2. MIXPANEL-BILLING-BLOCK-01 — REAL: Get-Projects lists 4011856; Run-Query ($all_events, 7 d) →
+    "Your account is blocked because payment is required" (10:30 IST). Registry: payment → Kushal.
+    Blind since 07-22 (T15 log recurrence table). Verifier APPROVE.
+C3. B22 — re-verified: /blogs/therapist-for-depression emits no Person/reviewedBy (MedicalOrganization
+    ×2 only). Still src/** → Kushal decision (apply now vs 10-21). Unchanged.
+C4. Stale index.lock ×2 (ops-health) — auto-fixed (D3).
+
+--------------------------------------------------------------------------------
+D. AUTO-FIXED (Rule 2) — 6
+--------------------------------------------------------------------------------
+D1. tracking-db /doctors/child-psychologists-in-bangalore: DEFECTIVE_PENDING_FIX → PUBLISHED,
+    url_locked true, observation_start 2026-09-16, midpoint 2026-10-07, observation_window_end
+    2026-10-28, fix_commit a7a4c08, defect → "CLOSED 2026-09-17 …", verified_live_at 10:25 IST.
+    WATCH.md W-SEP15-CHILD-PSY-BLR row + line-10 note amended (evaluate with the 09-16 cohort).
+    BACKLOG row struck + closure text. Backups: logs/tracking-db.json.backup-2026-09-17-1027-pre-t20,
+    logs/BACKLOG.md.backup-2026-09-17-1027-pre-t20, logs/{BRAIN,WATCH}.md.backup-2026-09-17-1115-pre-t20.
+D2. Briefs archived (never deleted): NEW-online-counselling-in-hindi, NEW-online-therapy-in-telugu,
+    NEW-teenage-counselling, NEW-best-doctor-for-panic-attacks → briefs/archive/*-shipped-2026-09-16.md
+    (all 200, records PUBLISHED, commit c3aafc4). NEW-does-insurance-cover-therapy-in-india →
+    briefs/archive/…t20-archived-2026-09-17-AP9.md with evidence block: the time-veto lapsed 09-05 but
+    VETO 1 (AP9) is not time-bound — /blogs/therapy-cost-in-india carries "## Does Insurance Cover
+    Therapy in India?" verbatim (live), /blogs/affordable-therapy-bangalore contradicts the thesis.
+    Verifier APPROVE ×2.
+D3. .git/index.lock renamed (os.rename; unlink fails on FUSE): website repo (0 B, 09-16 16:37, 18 h)
+    → index.lock.stale-2026-09-17-t20; brain repo (0 B, 10:15 — T16 re-spawn) → same suffix.
+    T16 ops-health still prints "rm …/index.lock" as the remedy — must be rename (F3, standing).
+D4. tracking-db NEW-/blogs/phobia-treatment-in-bangalore BRIEF_CREATED row + new-content-
+    opportunities.json entry (query-level position, rule f note).
+D5. logs/t20-brief-evidence-2026-09-17.json amended with the exact-match query-level rows the
+    first pass printed but did not save (Verifier CORRECTION on Claim 8).
+D6. BACKLOG: T20 stamp paragraph; CHILD-PSYCH row closed; T14 ×3 rows re-written with evidence;
+    new "T20 Entries — 2026-09-17" table (12 rows, all pre-written). BRAIN.md stamp prepended.
+
+--------------------------------------------------------------------------------
+E. BRIEF QUEUE (Step 4) — /blogs/ 0 shippable → refill FIRED → 1 authorable (queue 1 < floor 6)
+--------------------------------------------------------------------------------
+Inventory (logs/t20-brief-inventory-2026-09-17.{py,json}, canonical host, no -L): 19 NEW- briefs →
+/blogs/ spec metric 4 (tier + 404) but shippable 0 after the 09-16 ship (the 4 that were 200 are
+now archived; gated: confidential DO-NOT-SHIP, gender-identity NEEDS_HUMAN, alcohol HOLD→10-06,
+insurance AP9→archived). /doctors/ 8 (all 404, cap-blocked 6/6 until 09-22), /treatments/ 2 (AP3),
+conduct-disorder-in-adults NEEDS_HUMAN (target-path contradiction + clinical). Untiered 0.
+Refill (registry): google-ads miner NOT re-run (09-15 file is 2 days old; every converter was a live
+listing shape — unchanged). Discovery cache NOT re-run (no DISCOVERY STALE flag; T5 09-21 re-runs).
+New mine: logs/t20-gsc-authorable-mine-2026-09-17.py — 100,000 dimensions=[query,page] rows, 90 d
+(06-16→09-14), 9 booking/decision regex shapes → 691 queries ≥ 80 impr → 80 with top&best page
+pos > 12 (no page-1 holder) → family-level ownership at query level (rule f, exact + regex pulls:
+logs/t20-brief-evidence-2026-09-17.{py,json}) → 79 of 80 belong to a family a live page already
+holds elsewhere (autism: "for autism which doctor to consult" 8.5, "autism specialist near me" 8.2;
+bipolar/depression/anxiety decision shapes: 09-09 + 09-15/16 spokes at Day 2–8; de-addiction: drug-
+deaddiction at 2.7–10; online-therapy family: /treatments/online-therapy 14–39 + 09-15 listing;
+dementia: alzheimers listings 5–12) → rule k / P12-E2 = refresh the holder.
+AUTHORED (1): briefs/NEW-phobia-treatment-in-bangalore-brief.md — query-level: "phobia treatment in
+bangalore" 99 / pos 37.7 / 0, "best doctor for phobia in bangalore" 96 / 42.0 / 0, "mental health
+centre for phobias in bangalore" 85 / 35.5, "phobia treatment in hyderabad" 86 / 32.6, "…phobias in
+hyderabad" 45 / 22.2, "best doctor for phobia in hyderabad" 21 / 51.8, "acrophobia treatment" 70 /
+22.0 → 510 impr / 0 clicks, no Mindtalk page ≤ 12 on any; /illnesses/phobia + /illnesses/specific-
+phobia 404 (no hub — T5 YMYL opportunity noted); peniaphobia (16k, Tier C) and social-phobia-
+inventory (assessment) families explicitly excluded. Reviewer dr-sneha (200 no -L, load 3/5). 7
+internal links + 4 Tier A surfaces all 200; slug 404 (controls: garbage 404 / acrophobia 200).
+Verifier CORRECTION ×4, all applied: (1) quickAnswer placeholder → written (55 words; T9 skips
+placeholder quickAnswers — 09-01 precedent); (2) intent_tier A → B ({condition} treatment shape on a
+/blogs/ spoke; same class as best-doctor-for-panic-attacks); (3) expected_impact +5–12 → +1–4
+clicks/wk by Day-42 (base rates: acrophobia page 5 clicks/90 d; W14/W24 0–3) and the false "09-09
+cohort reached page 1" sentence replaced; (4) cap arithmetic: /blogs/ 5/6 today → 1 slot free NOW
+(I had said 09-22). Hyderabad section online-only (README).
+REJECTED (1): autism professional-selection blog — page-1 holders exist at query level; converted to
+AUTISM-LISTING-DECISION-H2-01 (refresh of /doctors/autism-specialists-in-bangalore).
+Demand → BACKLOG T20 table: MIXPANEL-BILLING-BLOCK-01 (Kushal), MEDITATION-THERAPY-REFRESH-01
+(1,010 impr @19.5), ONLINE-THERAPY-HUB-REFRESH-01 (≈2,300 impr family, Tier A shape), ACT-REFRESH-01
+(≈480 @33–77), ERT-REFRESH-01 (223 @83; page 7,979 impr / 0.44 %), DEVELOPMENTAL-DELAY-REFRESH-01
+(339 @51–57), GROUP-THERAPY-TYPES-REFRESH-01 (483 @24.5), LIGHT-THERAPY-INSOMNIA-CTR-01 (616 @10.9
+/ 0 clicks), DEMENTIA-LISTING-TITLE-01 (754 @5–12 / 0 clicks), AUTISM-LISTING-DECISION-H2-01,
+DOMINANT-PERSONALITY-FAQ-01 (expect REJECT), CHILD-PSYCH-HYD-LISTING-01 (T5 candidate, 126 impr).
+Queue after run: /blogs/ 1 shippable (< floor 6). /blogs/ cluster 5/6 → 1 slot free now; 2 on 09-22;
+6 on 09-23. Weekly cap 4/20 (week of 09-14) untouched — nothing shipped by T20.
+
+--------------------------------------------------------------------------------
+F. ESCALATED — 1 new (Kushal), 0 new dev
+--------------------------------------------------------------------------------
+F1. MIXPANEL-BILLING-BLOCK-01 — payment (registry). Kushal: Mixpanel → Billing → clear hold →
+    T20 re-probes with Run-Query next run and closes.
+Standing, re-verified, unchanged: B22 (src/**), B12, B15, WHITEFIELD-LISTING-01, BURNOUT-CANNIBAL-01
+(after W-B7 batch-2 check 09-16 — T12), HFA-CANNIBAL-01 (with W43 09-29), T17-7 (dev), GITHUB-PAT-
+PLAINTEXT-01, GSC-MEASUREMENT-INTEGRITY-01, WEBSITE-CHECKOUT-CORRUPT-01 (local feb506b, 161 behind —
+T16 10:14 confirms), SCHEMA-MEDICALWEBPAGE-RESIDUAL-01 (C1). NOT escalated: T14-GSC-OAUTH-12 (false),
+T14-BLOG-CWV-01 (P2), rank-summary-missing (T1 in flight), competitive-ai-monitor (T17 is today).
+
+--------------------------------------------------------------------------------
+G. FILED TO T13 — 5
+--------------------------------------------------------------------------------
+G1. DEFECT-REOPEN-NEEDS-CURL-01: T4 observation-monitor + T10 must curl the live page before
+    re-opening a defect; a tracking-db status is not evidence (B1). Also: T11 must update the PAGE
+    record (status/window) when it fixes a defect, not only the NEW- row.
+G2. B25 extension: task14 needs the sandbox env line; "OAuth expired" must be asserted only on an
+    auth error string, never on ImportError/ENOSPC (B2).
+G3. T14 slug resolution + CrUX-with-fallback-flag reporting (B3).
+G4. /blogs/ floor: after 3 consecutive refills (09-12 → 7 vetoed to 4; 09-15 → 0; 09-17 → 1) the
+    holder-free /blogs/ space is exhausted at ≥80 impr. Proposal: floor becomes "≥1 authorable brief
+    OR ≥N verified refresh rows filed"; T5's weekly composition should weight refreshes of holders on
+    page 2 (meditation-therapy 1,010 impr @19.5 is worth more than any new blog found today).
+G5. logs/tracking-db.json (12 KB, 20 records, 09-15 15:24) is a stale side-file beside the 400 KB
+    canonical root tracking-db.json (Verifier side observation) — any task reading logs/ sees a
+    truncated DB; rename or delete it via a human (T20 never deletes; renamed NOT done tonight
+    because a task may be writing it — confirm the writer first).
+
+--------------------------------------------------------------------------------
+CONSTRAINTS HONOURED
+--------------------------------------------------------------------------------
+src/** untouched (live curls + Vercel MCP read-only; nothing pushed; local checkout untouched).
+scripts/*.py untouched (3 helper scripts under logs/). No YMYL page touched; 0 pages shipped; weekly
+cap untouched. Billing/ads/credentials untouched (Mixpanel probed read-only; GSC token consumed
+read-only — refreshed by the library, not edited; PSI key consumed read-only). Nothing deleted —
+5 briefs renamed into briefs/archive/, 2 locks renamed, 5 backups written before writes. Verifier
+corrections applied BEFORE the BACKLOG/BRAIN writes and before this log.
+
+--------------------------------------------------------------------------------
+LESSON — the tenth run: a status field is not a page
+--------------------------------------------------------------------------------
+The one "IMMEDIATE" item on tonight's queue had been fixed 12 hours earlier. T11 fixed the page,
+Vercel built it, the page served 18 clinicians — and two downstream tasks re-opened the defect
+because a JSON field still said DEFECTIVE. Same shape as 09-15 (T11 read a stale checkout) and
+08-31 (T9 trusted a commit message): the engine keeps re-reading its own notes instead of the
+server. Rule (n): any flag that says a live page is broken carries a curl timestamp or it is not a
+flag. Rule (o): a task that fixes a defect closes the record it was opened on, in the same commit.
+[T20 2026-09-17] Slack digest DELIVERED (ts 1789622013.611199). Vercel MCP ANSWERED (list_deployments OK).
+
+
+================================================================================
+T20 AUTO-REMEDIATION — 2026-09-17 RUN #2 (10:32–10:55 IST) — DUPLICATE INVOCATION, VERIFICATION ONLY
+================================================================================
+Session local_840eb0ce (this) started 10:32 IST while session local_c7fb3a88 (10:15 IST, the run of
+record above) was still writing. Scheduler `mindtalk-auto-remediation` lastRunAt = 10:17 IST; nextRunAt
+20:54 IST tonight. Cause: the 09-16 evening slate (T10 20:09 / T16 23:08 / T20 20:54) was catch-up-fired
+10:10–10:17 IST after a Mac Mini gap, and T20 fired twice. Detected via `list_sessions` BEFORE any write.
+Decision: stand down from writes, wait (`read_transcript`), then re-verify run #1's outputs independently.
+Slack: threaded reply under run #1's digest (ts 1789622013.611199) — NOT a second top-level digest
+(spec: ONE digest per day).
+
+0. DEPLOY GATE (independent): Vercel MCP list_deployments answered. Last 5 prod: 569c7bd / a7a4c08 /
+   c3aafc4 / 0001be1 / d5b6443 — all READY, 0 ERROR (2 BLOCKED = staging previews). Latest prod 09-16
+   16:42 IST; T16 10:14 says origin/main = 569c7bd → no commits after the deploy. ✅ CONCUR.
+
+1. FLAGS RE-VERIFIED (read-only, canonical host, no -L):
+   - CHILD-PSYCH-BLR-EMPTY-01 re-open (T10 10:23 Slack "still DEFECTIVE"): curl 10:44 IST → "Showing 18
+     professionals", 10 Physician nodes. FALSE (fixed 09-16 a7a4c08). ✅ CONCUR with run #1 B1.
+   - T14-GSC-OAUTH-12: `HOME=/tmp XDG_CACHE_HOME=/tmp TMPDIR=/tmp PYTHONPATH=.pip-packages python3
+     scripts/gsc-pull.py --url /blogs/understanding-dominant-personality-and-dominating-nature` → data
+     written (clicks −21 % / impr −12 %); gsc-pull.py has no `--coverage` flag (T14 spec says "if
+     available"). FALSE POSITIVE. ✅ CONCUR with run #1 B2.
+   - T14-BLOG-CWV-01: flagged slug /blogs/understanding-dominant-personality = 404 ×2 (42 KB 404 shell).
+     Real slug: PSI mobile sample 1 = LCP 2.3 s (perf 0.87, TBT 470 ms, CLS 0), sample 2 = 2.7 s (perf
+     0.80) → best-of-2 2.3 s < 2.5 s under T14's own rule; CrUX p75 1,497 ms FAST (origin fallback per
+     run #1). Additional data point for run #1's B3 (which saw 2.6 s cached ×2): the page passes when
+     sampled uncached. Recommend CLOSE at the next T14 read if lab < 2.5 s again. LCP element not
+     reported by PSI; no `<link rel=preload as=image>` in head (fonts + low-priority script only).
+   - T14-SCHEMA-STALE-02: homepage @types = Organization ×3 / WebSite ×2 / SearchAction / PostalAddress /
+     MedicalOrganization / InteractionCounter / ImageObject / ContactPoint — no ItemList, no
+     BreadcrumbList (real; no rich-result value on a homepage — dev item, low). /illnesses/depression =
+     MedicalCondition + Article + FAQPage(10) + BreadcrumbList + Person ×2; /treatments/cbt =
+     MedicalTherapy + FAQPage(4) + BreadcrumbList + Person — no MedicalWebPage on either (real; src/**
+     template, SCHEMA-MEDICALWEBPAGE-RESIDUAL-01 standing). Real dominant blog = BlogPosting +
+     BreadcrumbList + Person ×2, body "Frequently Asked Questions" with 5 Q&As, no FAQPage (real;
+     content-only → DOMINANT-PERSONALITY-FAQ-01, Tier C, expect REJECT). ✅ CONCUR with run #1 C1.
+
+2. RUN #1 OUTPUT INTEGRITY (post-completion):
+   - tracking-db.json parses (403 records); child-psych → PUBLISHED, window_end 2026-10-28;
+     NEW-/blogs/phobia-treatment-in-bangalore = BRIEF_CREATED. keyword-map.json (316) and
+     new-content-opportunities.json parse.
+   - BACKLOG.md: T20 stamp, CHILD-PSYCH closed, T14 ×3 rows rewritten, "T20 Entries — 2026-09-17"
+     table present. BRAIN.md 10:15 stamp on top. WATCH.md amended.
+   - briefs/: 17 queued (15 NEW- + 2 legacy); archive has the 4 shipped-09-16 + insurance AP9 moves.
+   - No live index.lock in mindtalk/.git or brain/.git (renamed *.stale-2026-09-17-t20). Noted: ~100
+     accumulated renamed 0-byte lock files per repo — human `rm` hygiene, not T20's.
+   - logs/t20-verifier-claims-2026-09-17.md present.
+
+3. PHOBIA BRIEF — INDEPENDENT MECHANICAL VERIFICATION (VERIFIER §1/§5/§9 items, no sub-agent —
+   run #1 already ran the Verifier with 4 CORRECTIONS applied):
+   metaTitle 61 ch ends "| Mindtalk" ✓ · metaDescription 154 ch ✓ · quickAnswer 56 words (≤60) ✓ ·
+   faqs 6 (5–6) ✓ · intent_tier B ✓ · reviewer dr-sneha → /doctors/dr-sneha 200 ✓ · 12/12 internal +
+   Tier A links 200 (no -L) ✓ · slug /blogs/phobia-treatment-in-bangalore 404 ✓ (control garbage slug
+   404; /illnesses/phobia 404 as stated) ✓ · no drug names/classes ✓ · Hyderabad online-only section ✓ ·
+   query-level evidence file present (peniaphobia family correctly excluded as Tier C holder) ✓.
+   VERDICT: CONCUR — APPROVE. /blogs/ cluster 5/6 → 1 slot free for T9 09-18 (Fri).
+
+4. AUTO-FIXED: nothing (run #1 did the mechanical work; re-doing it would be a second writer).
+   Writes by run #2 (3, all append-only, backups in logs/*.backup-2026-09-17-1050-pre-t20-run2):
+   BACKLOG T20-table row T20-DUPLICATE-INVOCATION-01; BRAIN.md 5-bullet run #2 stamp; this entry.
+
+5. ESCALATED: 0 new to Kushal (MIXPANEL-BILLING-BLOCK-01 from run #1 stands — confirmed by T15 09-16
+   log, not re-probed). Standing list unchanged.
+
+6. FILED TO T13/T16 — 1 new:
+   T20-DUPLICATE-INVOCATION-01 — task20 needs Step 0.5: `list_sessions` → if a "Mindtalk auto
+   remediation" session is already running, wait for it and run verification-only (no refill, no
+   second digest, no writes to tracking-db/BACKLOG except an appended note). T16: stamp real
+   wall-clock on catch-up-fired runs (ops-health printed "23:00 IST" at 10:14 IST). Also for tonight:
+   the 20:54 T20 is the 3rd invocation of the day — it must read the 10:15 log and not refill again.
+
+CONSTRAINTS HONOURED: src/** untouched; scripts/*.py untouched (helper under logs/); nothing shipped;
+no YMYL page touched; billing/ads/credentials untouched (GSC token consumed read-only; PSI key read-only;
+Vercel MCP read-only); nothing deleted; weekly cap untouched (4/20).
+
+LESSON — run eleven: a scheduler can fire the same task twice; the second instance's only safe move is
+to look for the first before touching shared state. `list_sessions` costs one call and prevented two
+writers on tracking-db.json today. Rule (p): every daily task checks for a running twin before Step 1.
+[T20 2026-09-17 run #2] Slack: threaded reply under ts 1789622013.611199 (see below for delivery status).
+[T20 2026-09-17 run #2] Slack thread reply DELIVERED (ts 1789630694.930659 under 1789622013.611199, #seo-workflow-mindtalk).
+
+
+================================================================================
+T20 AUTO-REMEDIATION — 2026-09-17 RUN #3 (20:55–21:20 IST) — SCHEDULED EVENING SLOT
+================================================================================
+Third invocation of 2026-09-17, and the only one that fired on its own cadence (scheduler
+nextRunAt 20:54). Runs #1 (10:15, run of record) and #2 (10:32, duplicate) were catch-up fires of
+the 09-16 evening slate. Step 0.5 per run #2's rule (p): `list_sessions` BEFORE any write — 12
+sessions, all idle, no running twin. Safe to write. Ten hours of new sensor output exist since
+run #1 (T1 rank pull 11:16, T3 briefs 12:01), so this is a real run, not a stand-down: it verifies
+the new flags, re-counts the queue independently, and threads its digest under today's root rather
+than posting a second top-level one.
+
+--------------------------------------------------------------------------------
+0. DEPLOY GATE — ✅ CLEAN (independent, third read of the day)
+--------------------------------------------------------------------------------
+Vercel MCP answered (3rd consecutive day the MCP has not auto-declined). Last 5 PRODUCTION
+deploys, newest first — all READY, 0 ERROR:
+  569c7bd  READY  prod  09-16 16:42 IST  merge(exec): B26 COUPLES-THERAPY-CTR-01
+  a7a4c08  READY  prod  09-16 16:41 IST  merge(exec): CHILD-PSYCH-BLR-EMPTY-01 filterAgeGroup fix
+  c3aafc4  READY  prod  09-16 15:18 IST  merge: 4 NEW blogs auto-shipped by T9
+  0001be1  READY  prod  09-15        T9 auto-ship 6 doctors-listings + 1 blog
+  d5b6443  READY  prod  09-11        PR #33 Shweta Kiran Wani
+(2 BLOCKED entries in the same window are `staging`-branch previews, target=null — not production.
+ Same reading as runs #1/#2.)
+STALENESS CHECK — the part that actually matters tonight: `git ls-remote origin main` = 569c7bd,
+byte-identical to the SHA of the latest production deploy. **No commits exist after the deploy**,
+so the deploy hook is not sitting on unshipped work. Latest prod is ~28 h old, inside the 48 h
+rule. ✅ CONCUR with runs #1 and #2. `Deploy health: ✅ READY (569c7bd)`.
+
+--------------------------------------------------------------------------------
+1. NEW FLAGS SINCE RUN #1 (10:55) — 1 source, 3 items, all VERIFIED FALSE
+--------------------------------------------------------------------------------
+Only one sensor produced new output after run #1: T1 rank surveillance (logs/rank-summary-
+2026-09-17.txt, 11:16). 290 keywords, script COMPLETE. CRITICAL 0, MAJOR 0, MODERATE 3.
+
+A1. THREE MODERATE DROPS — **FALSE POSITIVE ×3, closed on GSC ground truth (Rule 1 / AP8).**
+    The rank tracker is the only thing that moved. GSC says clicks are flat on all three:
+      /blogs/chronic-stress-all-symptoms-causes-and-treatment  7 → 11 (Δ+4)
+         GSC: ⚪ NOISE | clicks +0% | impressions −22%
+      /blogs/how-to-survive-a-panic-attack                     3 →  7 (Δ+4)
+         GSC: ⚪ NOISE | clicks +0% | impressions −19%
+      /blogs/the-fear-of-ending-a-relationship                 5 →  9 (Δ+4)
+         GSC: ⚪ NOISE | clicks +0% | impressions −51%
+    All three pages HTTP 200 on the canonical host (0.17–0.52 s) — nothing is broken, nothing was
+    de-indexed. Δ+4 is exactly the moderate_drop_positions threshold (config.json = 4), i.e. these
+    three cleared the bar by zero. Not escalated, no BACKLOG row, no watch opened.
+    CORROBORATION — this was a bad DataForSEO sampling day, not a bad Mindtalk day: the same run
+    quarantined **12 pages falling to position 100 in a single pull** (AP8 gate caught them
+    correctly, including /illnesses/perinatal-mental-health 7→100 and /blogs/benefits-of-yoga-in-
+    treating-sleep-disorder 2→100). Twelve simultaneous pos-100s plus three exactly-at-threshold
+    Δ+4s is one API artifact, not fifteen independent events. The AP8 gate did its job on the 12;
+    the 3 that slipped past it are the same artifact wearing a smaller number.
+    → Standing note for T10/T12: do not open a watch on any of these three.
+
+A2. T3 (12:01) — "No confirmed drops to process. Refresh briefs this week: 0/20." Not a flag;
+    correct behaviour with confirmed-drops.json empty. No action.
+
+A3. Re-verified, unchanged from run #2 (no re-probe, no new evidence, not re-escalated):
+    MIXPANEL-BILLING-BLOCK-01 (Kushal, payment), B22, B12, B15, WHITEFIELD-LISTING-01,
+    BURNOUT-CANNIBAL-01, HFA-CANNIBAL-01, T17-7 (dev), GITHUB-PAT-PLAINTEXT-01,
+    GSC-MEASUREMENT-INTEGRITY-01, WEBSITE-CHECKOUT-CORRUPT-01 (local HEAD feb506b, still 161
+    behind origin/main — confirmed again tonight by `git log`), SCHEMA-MEDICALWEBPAGE-RESIDUAL-01.
+
+--------------------------------------------------------------------------------
+2. BRIEF-QUEUE HEALTH — independently re-counted, 1 shippable, floor NOT met, NO third refill
+--------------------------------------------------------------------------------
+Counted from scratch (not read off run #1's number): 17 files in briefs/, every one opened for
+`intent_tier` + slug probed live on the canonical host. Note for future runs: `grep "^intent_tier:"`
+MISSES the legacy `**intent_tier:** B` format — the two "untiered" files are not untiered.
+
+  /blogs/ briefs with intent_tier AND a 404 slug — 7 files, of which SHIPPABLE = **1**:
+    ✅ phobia-treatment-in-bangalore            B  404  ← Verifier-approved by run #1, clean
+    ⛔ conduct-disorder-in-adults               B  404  DO NOT SHIP / NEEDS_HUMAN (T20 08-26)
+    ⛔ cbt-for-ocd                              B  404  AP3 VETO — YMYL, no clinical sign-off
+    ⛔ dbt-for-borderline-personality-disorder  B  404  AP3 VETO — YMYL, no clinical sign-off
+    ⛔ gender-identity-disorder                 B  404  NEEDS_HUMAN — illness-hub conflict
+    ⛔ is-online-therapy-confidential           B  404  DO NOT SHIP block
+    ⛔ which-doctor-to-consult-for-alcohol-...  B  404  HOLD until 2026-10-06 (Verifier)
+  /doctors/ briefs (8, all Tier A, all 404) — out of T20 scope; T9 ships those, and T17-7 says the
+    route needs a dev touch first.
+  2 refresh briefs against LIVE pages (both 200, so neither is a new-content candidate):
+    guide-to-reset-your-sleep-cycle  Tier B  ·  psychology-of-love  Tier C (ON HOLD, human call)
+    NOT archived: the registry's "200 = shipped → archive" rule is written for NEW-content briefs.
+    Archiving an unapplied refresh brief because its target page exists would silently destroy the
+    work. Left in place; flagged to T13 below.
+
+  **1 shippable < floor 6. No refill run tonight — deliberate, and this is the third time today.**
+  Run #1 (10:15) already executed the full starvation auto-fix: 691 shaped GSC queries mined →
+  exactly 1 authorable brief (phobia) + 8 refresh/CTR rows. That was the third consecutive refill
+  to come up nearly empty (09-12: 7 authored → 4 survived Verifier; 09-15: 0; 09-17: 1). Re-running
+  new-content-discovery 10 h later against the same GSC window would return the same rows and burn
+  the same quota to reach the same answer. The floor is not being missed through neglect — the
+  holder-free /blogs/ space at ≥80 impressions is **exhausted**, which is a queue-design fact, not
+  a starvation event, and it is already filed to T13 as G4 (09-17 run #1). Restating it here so the
+  third data point is on the record rather than looking like a skipped standing job.
+
+--------------------------------------------------------------------------------
+3. AUTO-FIXED — 1
+--------------------------------------------------------------------------------
+D1. SLEEP-CYCLE-BRIEF-DOSE-CONTRADICTION-01 (found tonight, fixed tonight).
+    `briefs/guide-to-reset-your-sleep-cycle-brief.md` instructed the writer, in the FAQ block at
+    line 107, to publish an explicit medication dose and schedule: "a short-term low-dose melatonin
+    (0.5–3mg) 2 hours before target bedtime". The SAME brief's Notes-for-Writer at line 157 says:
+    "Do NOT cite melatonin dosages as medical advice — frame as 'some people find low-dose
+    melatonin helpful; consult a physician for your specific case'." A writer following the brief
+    top-to-bottom would have shipped a drug dose onto a /blogs/ page and been VETOed by the
+    VERIFIER's no-drug-names/classes check — after the writing was already paid for.
+    FIX: line 107's dose clause rewritten in the brief's own §157 words, with an inline comment
+    recording what was removed and why. Mechanical consistency fix; the clinical direction is
+    untouched and no dose was re-stated anywhere. Backup: logs/*.backup-2026-09-17-2100-pre-t20-run3.
+    Registry basis: brief-file hygiene (same class as the 08-18 intent_tier classification and the
+    08-22 broken-link correction on psychology-of-love). Not src/**, not scripts/*.py, not YMYL
+    sign-off — a clinician is not needed to delete a number the brief already said not to print.
+
+--------------------------------------------------------------------------------
+4. ESCALATED — 0 new
+--------------------------------------------------------------------------------
+Nothing tonight cleared the bar: could a competent operator with repo access fix it without a
+password, a clinician, money, or a strategic decision? The 3 rank flags were false; the one queue
+item is a design fact already with T13; the brief defect was fixable here. MIXPANEL-BILLING-BLOCK-01
+(run #1, payment — Kushal must clear the Mixpanel hold) remains the single open item addressed to
+Kushal and is NOT re-sent tonight: re-flagging a live item every 10 h is the exact behaviour this
+task exists to stop.
+
+--------------------------------------------------------------------------------
+5. FILED TO T13 — 2
+--------------------------------------------------------------------------------
+H1. BRIEF-TIER-GREP-FORMAT-01 — two brief formats coexist (`intent_tier: B` frontmatter and
+    `**intent_tier:** B` markdown). Any task counting the queue with `grep "^intent_tier:"`
+    undercounts and will archive a tiered brief as untiered. Queue counters must match both.
+H2. REFRESH-BRIEF-IN-NEW-QUEUE-01 — refresh briefs (live 200 target) sit in the same briefs/
+    directory as NEW- briefs, so the registry's "slug 200 → shipped → archive" auto-fix is a
+    live hazard against them. Proposal: refresh briefs get a `brief_type: refresh` field, or a
+    briefs/refresh/ subdirectory, before that rule is ever run unattended.
+
+--------------------------------------------------------------------------------
+CONSTRAINTS HONOURED
+--------------------------------------------------------------------------------
+src/** untouched (live curls read-only; Vercel MCP read-only; local checkout read-only).
+scripts/*.py untouched (gsc-pull.py invoked, not edited). 0 pages shipped; weekly cap untouched
+(4/20, week of 09-14). No YMYL page touched — the 2 AP3-VETO briefs were counted, not opened for
+shipping. Billing/ads/credentials untouched (GSC token consumed read-only). Nothing deleted —
+1 brief edited in place with 3 backups written first. `list_sessions` run before the first write.
+
+--------------------------------------------------------------------------------
+LESSON — run twelve: the threshold is not the finding
+--------------------------------------------------------------------------------
+Three pages "dropped" by exactly 4 positions on a day when twelve other pages "dropped" to 100.
+The AP8 gate caught the twelve because falling to 100 is obviously absurd; the three slipped
+through because Δ+4 looks plausible. It was the same artifact. GSC settled it in three calls —
+clicks +0% on all three — and the correct output was three closures and zero watches. Rule (q):
+when a rank run quarantines a cluster of impossible drops, every other drop in that same run is
+suspect by association and gets GSC-verified before it becomes a flag; a drop that merely equals
+the threshold is the weakest evidence the tracker can produce, not the strongest.
+[T20 2026-09-17 run #3] Slack thread reply DELIVERED (ts 1789658976.212759 under root 1789622013.611199, #seo-workflow-mindtalk C0AUAPS4J83). Vercel MCP ANSWERED (list_deployments OK, 3rd day running).
