@@ -4287,3 +4287,179 @@ when a rank run quarantines a cluster of impossible drops, every other drop in t
 suspect by association and gets GSC-verified before it becomes a flag; a drop that merely equals
 the threshold is the weakest evidence the tracker can produce, not the strongest.
 [T20 2026-09-17 run #3] Slack thread reply DELIVERED (ts 1789658976.212759 under root 1789622013.611199, #seo-workflow-mindtalk C0AUAPS4J83). Vercel MCP ANSWERED (list_deployments OK, 3rd day running).
+
+---
+
+## 2026-09-18 (Fri) 20:50–21:35 IST — T20 Auto-Remediation
+
+**Step 0.5 concurrency check:** `list_sessions` before any write — 12 sessions, all idle, no running
+T20 twin. This is the single T20 invocation of the day (contrast 09-17, which fired three times).
+
+### Step 0 — DEPLOY HEALTH: ✅ READY (`1c09372`)
+
+Last 5 **production** deploys, via Vercel MCP (answered on the first call — 2nd consecutive run):
+
+| Deploy | Commit | State | What |
+|---|---|---|---|
+| `dpl_Di2pQRAj…` | `1c09372` | **READY** | T11 today: B8-BLR therapists-in-bangalore refresh + THERAPISTS-DELHI-CTR-01 |
+| `dpl_2ZEggXTP…` | `633b7f50` | READY | T9 today: /blogs/phobia-treatment-in-bangalore |
+| `dpl_3DEQuXNU…` | `569c7bd` | READY | B26 couples-therapy CTR fix (09-16) |
+| `dpl_DeLTHAqn…` | `a7a4c08` | READY | CHILD-PSYCH filterAgeGroup fix (09-16) |
+| `dpl_4DgZUJEM…` | `c3aafc4` | READY | T9 4 blogs (09-16) |
+
+0 ERROR. `git ls-remote origin main` = `1c09372` = the SHA of the latest production deploy →
+**no commits sitting after the deploy.** Latest prod ~2 h old, well inside the 48 h rule.
+
+**Not a P0, logged for the record:** two deploys today entered `BLOCKED` — both are *preview*
+builds of the `staging` branch (PR #34, `f0de4df` + `b5c4333`, doctor booking-link content by
+imawadh), `target: null`. Production is unaffected and PR #34 is not on main. Preview `BLOCKED`
+is a Vercel concurrency/protection state, not a build failure.
+
+**Ship claims verified on the live site, not on HTTP 200 alone** — all three of today's shipped
+URLs are 200 (no `-L`) *and* sit on deploys confirmed READY:
+`/blogs/phobia-treatment-in-bangalore` 200 (0.54 s) · `/doctors/therapists-in-bangalore` 200
+(0.46 s) · `/doctors/therapists-in-delhi` 200 (0.24 s).
+
+### Step 2 — VERIFICATION (Rule 1)
+
+#### 🔴 DATAFORSEO-402-0918 — **VERIFIED REAL, upgraded from "may be" to confirmed. Kushal (payment).**
+
+T1's 07:07 log recorded HTTP 402 Payment Required on both the live SERP endpoint and the queue
+endpoint, on all 30 iterations, 0 of 316 keywords processed — and filed the row as *"09-18 may be
+a genuine billing issue"*, because the identical 402 on 09-14 turned out to be transient
+(resolved by 22:59 the same day, balance $15.82).
+
+Ground truth, read-only, tonight: `POST /v3/appendix/user_data` with the config credentials
+returns `status_code 20000 Ok` — **the credentials are valid, so this is not an auth failure** —
+and reports:
+
+```
+BALANCE  -0.00136 USD   (negative)
+```
+
+The account is **overdrawn**. 402 on the SERP endpoints is the correct, expected response to a
+negative balance; it will not self-resolve the way 09-14 did, because 09-14 had $15.82 behind it
+and today has less than nothing. **This is the 2nd 402 in 5 days and the 3rd since 09-07**
+(B17 closed 09-07 on the same symptom) — the account is being run to zero repeatedly, not
+failing intermittently.
+
+Blast radius while it stands: T1 rank surveillance produces **no rank data at all** (0/316
+keywords), which in turn starves T2 (nothing to validate — it spent today re-validating
+*yesterday's* three drops), T10's rank signal, and every watch that reads a DataForSEO series.
+Registry: payment → nobody but Kushal can clear it.
+
+#### 🔴 MIXPANEL-BILLING-BLOCK-01 — re-verified REAL, **carried, not re-escalated**
+
+`Run-Query` on project 4011856 tonight → *"Your account is blocked because payment is required."*
+Conversion data now blind since **07-22 = 58 days (8½ weeks)**. Deliberately **not** re-sent as a
+new escalation — it is already open with Kushal from 09-17 and re-flagging a live item every day
+is the exact behaviour this task exists to end. It appears in the digest as a standing line with
+the day count, which is new information, and nothing else.
+
+#### Rank drops — nothing to verify, already retired
+
+`flagged-drops.json` = `{}` and `confirmed-drops.json` = `{}`. T2's 09:40 run validated the three
+09-17 MODERATE drops against GSC and removed all three as ⚪ NOISE (clicks Δ 0 % on every one;
+impressions −20 % / −16 % / −47 %). Those are the same three T20 run #3 closed as false positives
+last night on the same evidence — no double-closure, no new watches, nothing carried.
+
+### Step 3 — AUTO-FIXES
+
+**1. Brief archived-as-shipped (registry: stale brief, slug now 200).**
+`briefs/NEW-phobia-treatment-in-bangalore-brief.md` → `briefs/archive/`. Shipped by T9 today
+(commit `633b7f50`, Verifier APPROVE, deploy `dpl_2ZEggXTP` READY, live 200, 1,219 words).
+
+**2. Deliberate NON-action, and it matters:** `guide-to-reset-your-sleep-cycle-brief.md` and
+`psychology-of-love-brief.md` both have **live 200 slugs** and would have been swept into the
+archive by the naive "slug 200 → shipped" rule. Both are **REFRESH briefs** (`**URL:**` points at
+an existing page; sleep-cycle is the one this task de-conflicted on 09-17, psychology-of-love is
+on a human hold). This is REFRESH-BRIEF-IN-NEW-QUEUE-01, filed to T13 last night — honoured here
+before it destroyed two briefs. The rule needs to be "slug 200 **and** the brief is a NEW- brief".
+
+### Step 4 — BRIEF-QUEUE HEALTH: 0 shippable `/blogs/`, floor 6 unmet, refill run on new ground
+
+Independent recount, 16 briefs opened and every slug probed live (no `-L`):
+
+| Brief | Slug | Status |
+|---|---|---|
+| conduct-disorder-in-adults | 404 | **blocked** — NEEDS_HUMAN block in brief |
+| gender-identity-disorder | 404 | **blocked** — NEEDS_HUMAN (illness-hub conflict) |
+| is-online-therapy-confidential | 404 | **blocked** — ⛔ DO NOT SHIP (suicide-safety wording needs clinical sign-off) |
+| which-doctor-to-consult-for-alcohol-addiction | 404 | **blocked** — HOLD until 2026-10-06 |
+| cbt-for-ocd · dbt-for-borderline-personality-disorder | 404 | `/treatments/` — AP3 VETO, YMYL |
+| 8 × doctors-listings (adhd-specialists, cbt-therapists, bengali/punjabi/tamil ×6) | all 404 | **viable, cap-blocked** — `/doctors/` 6/6 until 09-22 |
+
+→ **Shippable `/blogs/`: 0.** Floor 6 unmet for the 4th consecutive run.
+
+**Important qualifier the last three runs did not state clearly: T9 is not actually starving.**
+Eight `/doctors/` briefs are authored, tiered and 404 — real, shippable work — waiting only on the
+cluster cap, which rolls off **2026-09-22**. The `/blogs/` queue is empty; the *engine* is not.
+
+**Refill fired — and on ground that had never been mined.** The last three refills (09-12, 09-15,
+09-17) all mined booking/decision queries at **≥80 impressions** and returned 4 → 0 → 1 authorable
+briefs. Re-mining the same window a fourth time would have returned the same rows, so tonight went
+below the floor instead: a fresh 100,000-row `query × page` pull (90 d, 2026-06-17→09-15) filtered
+to the **30–79 impression band, 0 clicks, no Mindtalk page at position ≤10, decision-shaped** —
+a band no previous run has touched.
+
+*(The stock `scripts/new-content-discovery.py --all` was attempted twice and cannot finish inside
+the sandbox's hard 180 s bash cap — the known constraint; backgrounding does not help because each
+bash call is its own sandbox and the child dies with it. The bounded in-process mine above is the
+established workaround. `scripts/google-ads-search-terms.py` ran clean: paid terms are all
+Bangalore therapy/CBT head terms already held.)*
+
+Result: **234 candidates in the band, 0 authorable.** Every single one resolves to one of two
+shapes:
+1. a family a live Mindtalk page already serves (→ refresh/CTR, not a new page — rule k / P12-E2);
+2. a `best psychiatrist near me <small district>` geo tail that belongs to `/doctors/` listings,
+   at 30–40 impressions each — below any honest authoring threshold.
+
+Two families that looked holder-free were checked explicitly and are not:
+`how to find/choose a {therapist,psychiatrist,child psychiatrist}` (80 queries, 8,156 impr) is held
+by `/blogs/how-to-find-a-therapist-in-india` at **position 1**; the `psychiatrist near me` family
+(266 queries, 27,409 impr) is held by `/doctors/psychiatrists-in-bangalore` at 3.2.
+
+**Reading — now evidenced twice, from two different impression bands:** the holder-free `/blogs/`
+space is exhausted, and the `/blogs/` floor of 6 is not a starvation event that can be fixed by
+mining harder. It is a design constraint. The floor rule should become *"≥1 authorable NEW brief
+**or** N verified refresh/CTR rows"* — filed to T13 on 09-17 (G4), reinforced tonight with a
+second, independent band. **No brief was force-written to hit a number**, and the Verifier gate was
+therefore not invoked (nothing authored to gate).
+
+### Step 4b — what the mine DID produce: the largest page-1 CTR gap this task has found
+
+The demand is real; it is just CTR, not coverage. Two rows filed to BACKLOG for T10 to score:
+
+**FIND-THERAPIST-CTR-01 — `/blogs/how-to-find-a-therapist-in-india`, non-YMYL, T11-actionable.**
+Position **1.7** on "how to find a therapist in india" with **3,448 impressions and 4 clicks
+(0.12 % CTR)**. Same page: "how to find a therapist" pos 5.4, 1,271 impr, 1 click; "how to choose
+a therapist" pos 4.2, 532 impr, **0 clicks**. Page total 90 d: **7,010 impr / 21 clicks / 0.30 %
+CTR**. A page at position 1–2 on a 3,448-impression query earning four clicks is a snippet
+problem, not a ranking problem — and it is ~3.4× the impression volume of
+MEDITATION-THERAPY-REFRESH-01 (1,010 impr), which was the biggest row the 09-17 mine produced.
+
+**PSYCHIATRIST-NEAR-ME-DILUTION-01 — consolidation call → human (registry).**
+On the national head term "psychiatrist near me" (17,400 impr), `/doctors/psychiatrists-in-bangalore`
+takes 9,708 impr at pos 8.9 (**0.28 % CTR**) while **`/doctors/tamil-speaking-doctors` absorbs
+3,332 impr at pos 8.4 on the same national query** — a language-listing page taking ~a fifth of a
+national head term. Sibling benchmark in the same family: "child psychiatrist near me" →
+`/doctors/child-psychiatrists` **2.43 % CTR at pos 7.8**, i.e. the shape converts ~9× better when
+the page matches the query. Two live pages splitting one head term is a consolidation/canonical
+decision → escalates with the recommendation, does not auto-fix.
+
+### Verifier
+
+No content was authored or shipped by this run, so there was nothing to put through the Verifier
+gate. The two closures/escalations above rest on primary reads (DataForSEO `user_data` response,
+Mixpanel error string, Vercel deploy states, live curls, a 100k-row GSC pull) rather than on any
+tool's summary of them.
+
+### Totals
+
+- Deploy health: ✅ READY (`1c09372`), 5/5 production READY, remote = deployed
+- Auto-fixed: **1** (phobia brief archived-as-shipped) + 1 deliberate non-action that protected 2 refresh briefs
+- False positives closed: **0** (T2 had already retired today's only rank candidates as NOISE)
+- Escalated: **1 new** (DATAFORSEO-402-0918, verified overdrawn) + **1 carried** (MIXPANEL, day 58)
+- Brief queue: 0 shippable `/blogs/` (floor 6 unmet, 4th run) · 8 viable `/doctors/` briefs cap-held to 09-22
+- New rows for T10: 2 (FIND-THERAPIST-CTR-01, PSYCHIATRIST-NEAR-ME-DILUTION-01)
+- Artefacts: `logs/t20-gsc-mine-2026-09-18.json` (100k rows), `logs/t20-candidates-2026-09-18.json` (234), `logs/t20-googleads-2026-09-18.log`
