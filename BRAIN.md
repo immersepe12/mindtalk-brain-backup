@@ -1,3 +1,24 @@
+### 2026-09-20 T10 Strategist (8 PM IST) — 4 Meta-Learner proposals applied, BACKLOG ranked, no new content shipped
+- 🔴 **DATAFORSEO-402 — day 3, still CRITICAL, Kushal action required.** No rank data for 3rd consecutive day. T1 blind.
+- 🔴 **MIXPANEL-BILLING-BLOCK-01 — day 60, CRITICAL.** T15/T19 conversion data blind since 07-22.
+- ✅ **4 Meta-Learner proposals applied (Apply-on 09-20):** t3-doctors-listings-dead-route (task3), t5-dead-route (task5 line 43), t5-position-integrity-warning (task5 before Step 2), t9-doctors-listings-scope (task9 hunk1+hunk2+rule7). T9 now correctly recognizes `src/content/doctors-listings/` as a valid content directory with a listing-viability gate.
+- ⚠️ **t17-tabs-create-fallback MISMATCH-SKIP #5** — proposal targets `task17-competitive.md` (file does not exist; actual file is `task17-competitive-ai-monitor.md`). Apply-on 09-13 (7 days overdue). Stale threshold 09-27. **T13 must fix the proposal filename before next T10 run.**
+- 📋 **/blogs/ floor confirmed design constraint:** 3 independent data sources (paid-conversion mine 09-19, T20 09-18 holder sweep, prior runs) all show holder-free /blogs/ space is exhausted. Not a pipeline failure — a structural limit. T13 has filed a floor-rule change proposal.
+- 📋 **Priority posture:** RELATIONSHIP-COUNSELLOR-CLIFF-01 (T11 IMMEDIATE, paid-validated pos 9–12 cliff) + T9-DOCTORS-SHIP-0922 (09-22 cap reset, 8 Tier A listings unblocked by today's t9 proposal) + FIND-THERAPIST-CTR-01 (T11 IMMEDIATE, 3,448 impr pos 1.7 at 0.12% CTR).
+- 📋 **W43 Day-21 midpoints (8 URLs):** fire tomorrow 09-21. T12 evaluates. W18-W21 treatment extension closes 09-21.
+
+### 2026-09-19 T20 Auto-Remediation (20:55–21:40 IST) — 8 auto-fixes, 1 hypothesis killed on primary data, 0 new escalations
+- **Step 0.5:** `list_sessions` clean — 12 sessions, all idle, no T20 twin. Single invocation today.
+- ✅ **Deploy health: READY (`1c09372`)** — last 5 production deploys **all READY, 0 ERROR** (`1c09372` T11 B8-BLR+Delhi · `633b7f50` T9 phobia · `569c7bd` B26 · `a7a4c08` CHILD-PSYCH · `c3aafc4` T9 4 blogs). `git ls-remote origin main` = `1c09372` = the SHA of the latest prod deploy → **no commits sitting after the deploy**. Deploy is ~28 h old, inside the 48 h rule *because nothing has been committed since* (Saturday: no T9/T11 ship today). Vercel MCP answered first call — 3rd consecutive run.
+- 🔴 **DATAFORSEO-402 — re-verified REAL, day 2, CARRIED not re-escalated.** `/v3/appendix/user_data` tonight: `status_code 20000 Ok`, **`balance = −0.00136 USD`** — byte-identical to last night. Credentials fine, account overdrawn, will not self-heal. Already open with Kushal from 09-18; re-sending a live item daily is what this task exists to stop. Cost today: T1 produced no rank data (no `rank-summary-2026-09-19.txt`), T2 had nothing to validate.
+- 🔴 **MIXPANEL-BILLING-BLOCK-01 — re-verified REAL, day 59, CARRIED.** Project 4011856 still "payment is required". Conversion data blind since 07-22.
+- 🧪 **The night's real finding — a hypothesis built, tested on primary data, and killed.** Four consecutive refills had concluded the holder-free `/blogs/` space is exhausted using GSC-only mines. Tonight tried the one source GSC structurally cannot see: **Google Ads converting search terms** (fresh pull, 6,111 terms / 375 qualified / **251 with ≥1 conversion**), cross-referenced against the 100k-row GSC mine. That produced **99 "zero-organic-impression" converting terms** — apparent blind spots. **They are not blind spots.** Per-query filtered GSC pulls (the only honest test) show the site *does* appear, mostly on page 1: `marriage counselor near me` **pos 1** (173 impr) · `in person therapy bangalore` **pos 1** (147) · `marriage counseling near me` **pos 2** (165) · `offline therapist near me` **pos 6** (33) · `psychological assessment` **pos 6.3** (122). **Root cause: a 100,000-row `query×page` pull is TRUNCATED — absence from it is not evidence of absence.** This is the B25 error class ("a 0-impression file is stale, not zero") in a new costume, and it would have produced briefs for queries the site already ranks #1 for. Filed to T13 as **MINE-TRUNCATION-ABSENCE-01**: any "no holder" claim must be proven by a per-query filtered pull, never by absence from a bulk mine.
+- 📋 **Queue: 0 shippable `/blogs/`, floor 6 unmet (5th run) — 8 `/doctors/` briefs viable, cap rolls off 09-22 (3 days).** The 4 remaining `/blogs/` briefs are all human-gated (2 NEEDS_HUMAN, 1 DO-NOT-SHIP suicide-safety, 1 HOLD→10-06); 2 more are `/treatments/` AP3-VETO YMYL. **No brief force-written.** Third independent direction (paid-conversion demand) now agrees with the two impression bands: the floor of 6 is a design constraint, not starvation — T13 G4 stands.
+- 🎯 **What the paid mine DID yield — 1 row for T10 + 1 watch enrichment, both paid-validated (stronger than impressions alone):** **RELATIONSHIP-COUNSELLOR-CLIFF-01** — the relationship-counselling family is **3,119 impr / 30 clicks (0.96% CTR) / 90 d** with every major row parked at **pos 9–12**, the INTENT-PRIORITY §5 cliff: `relationship counsellor` 670 @10.9 + 402 @11.5, `relationship counselling` 522 @10.2, `best relationship counsellor in bangalore` 457 @10.0, `relationship counselling bangalore` 165 @12.1. Paid corroboration: **couple therapy bangalore 11 conv · couple counselling bangalore 6 · relationship counsellor near me 4 · relationship counselling bangalore 2** in 30 days. `/doctors/relationship-issues-psychologists-in-bangalore` is live 200, **not url_locked, no tracking-db record**, non-YMYL, title 49 ch with no fee/near-me/session signal → T11-actionable. **W-BLR-THERAPISTS-0918 enriched:** "therapy in bangalore" = **1,245 impr @ pos 11.4** on `/doctors/therapists-in-bangalore` (+400 @11.0 bleeding to `/treatments/counselling-therapy`), and paid pays **9 conversions / 30 d** for `therapist in bangalore`. The 09-18 B8-BLR refresh is aimed at real money demand; the watch now carries this as a second success metric instead of a competing BACKLOG row.
+- 🔧 **8 auto-fixes.** (1–6) **`published_at` back-filled on 6 records** — T4 flagged "7 URLs missing published_at, observation windows cannot be tracked" on 09-18 *and* 09-19 and nothing had ever fixed it. Cause is schema drift, not missing data: T9 writes `published_on`, T11 writes `last_refresh_date`, T4 reads `published_at` only. Back-filled from each record's own evidenced field, every one commit- and deploy-confirmed: 4 × 09-16 blogs (`c3aafc4`) + therapists-in-bangalore/delhi 09-18 (`1c09372`). (7) **`NEW-/doctors-listings/child-psychologists-in-bangalore` marked SUPERSEDED_DUPLICATE** — a dead-route artifact double-counting the same live page, which has its own complete record. (8) **14 GSC files pre-pulled** so T12 (09-20) and the 09-21 midpoints cannot be blocked by GSC-INFRA-01 again: the 8 W43 Day-21 URLs + W18/W19/W20/W21 (extended windows close 09-21) + W36/W37. **Signal for T12, not a verdict:** W20 `/treatments/biofeedback-therapy-for-anxiety` — the page T12 verdicted NEEDS_REFRESH on "0 impressions / pos 100" — now reads **🟢 IMPROVING, impressions +125%, clicks +100%**.
+- ⚪ **1 pre-emptive false positive closed:** the pre-pull threw 🔴 HIGH_PRIORITY_DROP on `/blogs/rtms-treatment-cost-in-india` (clicks −43%, impr −30%). Ground truth: 7→4 clicks, 296→208 impr, **position 4.6 → 4.6, delta 0.0**. A 19-day-old page moving 3 clicks at a flat page-1 position is small-number volatility in its QDF-normalisation window, not a ranking event. Noted in WATCH so T12's 09-21 midpoint does not open a watch on it.
+- Full log: `brain/memory/remediation-log.md` 2026-09-19.
+
 ### 2026-09-18 T20 Auto-Remediation (20:50–21:35 IST) — 1 verified escalation, 1 auto-fix, 0 false positives, queue floor unmeetable (4th)
 - **Step 0.5:** `list_sessions` clean — single T20 invocation today (09-17 fired three times).
 - ✅ **Deploy health: READY (`1c09372`)** — 5/5 production deploys READY, 0 ERROR; `git ls-remote origin main` = `1c09372` = latest prod deploy SHA, **no commits after the deploy**, ~2 h old. Vercel MCP answered first call (2nd consecutive run). Today's 3 shipped URLs all 200 (no -L) **on deploys confirmed READY**, not on 200 alone. *2 `BLOCKED` deploys today are `staging` PR-#34 previews (`target: null`) — production untouched, not a P0.*
@@ -1277,3 +1298,73 @@ Full log: brain/memory/decisions/2026-09-14.md
 - 2026-09-20: T12 Learner — W36/W37/W-PSYCH-BLR/W-COUN-BLR verdicts + B24 Day-42 finals (drug-addiction-symptoms, intellectual-disability-symptoms, signs-of-adhd, narrative-therapy); 3 Meta-Learner proposals apply (t3-doctors-listings-dead-route, t5-position-page-level-warning, t5-doctors-listings-dead-route)
 - 2026-09-21: W43 Day-21 midpoints (8 URLs: psychiatrist-online-consultation-india, therapy-cost-in-india, therapy-after-a-breakup, acrophobia-treatment, rtms-treatment-cost, and 3 others); W18/W19/W20/W21 extended obs windows close; t5-query-ownership-gate + t9-doctors-listings-scope apply
 - 2026-09-29: W41 Day-42 finals + B8-MON check (therapist dilution) + HFA-CANNIBAL-01 decision
+
+**Last updated:** 2026-09-19 GOOGLE ADS COMPETITIVE + KEYWORD REVIEW (Kushal, for Monday mtg; read-only — account is the other manager's). Data: Airbyte Google Ads connector `fac5057b-3a97-48b3-b27e-fe6e90598a39` (accepts ARBITRARY GAQL via /v23 googleAds:search — this is the paid-search data route now, replaces Supermetrics) + direct Google Ads API v23 for Keyword Planner + Ads Transparency Centre via browser. **30d: ₹3,17,761 / 18,207 clicks / 937 conv / ₹339 blended CPA** (form-fills not bookings). **THE HEADLINE — impression share weighted across 10 search campaigns: we WIN 33.4%, lose 44.8% TO AD RANK, 21.8% to budget. More budget cannot fix the bigger half.** Quality Score avg **4.0/10**, cost-weighted 4.43, **zero keywords above QS 7** (20 kws at QS3 = ₹72,935). Mechanical cause: **17 live ad creatives vs Practo ~3,000 and Amaha ~600** (Ads Transparency Centre, India). Amaha = ~80% VIDEO (MindCrescent Wellness + Children First sub-brand); YourDOST effectively exited paid (4 ads); Manastha 32. **CPA BY CAMPAIGN: best FTA_Professional ₹191, FTA_Couple ₹201, Therapy_BLR ₹274 · worst FTA_Depression ₹629, FTA_Anxiety ₹616, Smart_Kanakpura ₹706, Pmax_Store-Visit ₹6,671 for ZERO conv (flagged 08-14, still live).** **BRANCH ANSWER: un-fenced city-wide campaigns ₹286 CPA beat EVERY geo-fenced branch — Sarjapura ₹337, Indiranagar ₹343, Kalyan Nagar ₹377, Kanakapura ₹564.** Geo-fencing shrinks the auction pool and raises CPC; 98.9% of spend is Bangalore. **DAYPARTING (search only — Pmax/Smart are 64% of clicks for 12 conv and MUST be stripped first): overnight 22:00–05:00 = ₹232 CPA (30% cheaper than the 09:00–18:00 ₹331); 19:00 is the worst hour in the account at ₹560 CPA / 8.1% conv rate.** Tuesday ₹289 best, Friday ₹372 worst. **KEYWORD GAPS (Google Keyword Planner, Ahrefs NOT authorised): (1) couple/marriage Bangalore cluster ≈10,700/mo, our BEST CPA ₹201, only 46% IS — biggest scale lever, but budget-lost is only 13% so the rest needs QS. (2) `online psychiatrist consultation` 3,600/mo India — ZERO of our 70 search terms carry an online/virtual modifier; the pan-India virtual product has no virtual paid presence. (3) cost/fee cluster ~1,430/mo, zero coverage. (4) condition campaigns chase 30–60 searches/mo in BLR while spending ₹47,381 at ₹621 — re-scope. (5) ⚠️ LANGUAGE IS NOT A PAID PLAY: Tamil/Telugu/Kannada/Malayalam/Hindi therapist = 90 searches/mo TOTAL in India. Our organic language pages convert (tamil-speaking-doctors 117 booking clicks/mo) because that's long-tail discovery, NOT head search — keep it in SEO, do NOT build language ad groups.** Negatives needed: education counselling (210/mo, career not therapy), physiologist, mannasukh; brand leak `cadabams kanakapura road` 36 clicks ₹634 0 conv. **LIMITATION: Auction Insights is NOT in the Google Ads API (UI export only) — named per-ad-group competitor list still needs Kushal/manager to export.** Report: `reports/google-ads-competitive-and-keyword-review-2026-09-19.md`.
+
+---
+### T10 Strategist stamp — 2026-09-19 8 PM IST
+
+**Site posture:** GROWTH · ATH maintained (W36 09-05→09-11: 3,904 clicks / 451,557 impr / CTR 0.9% / pos 9.7 / 937 URLs). All Q3 targets exceeded.
+
+**Signals today:**
+- DataForSEO: 402 Payment Required CONFIRMED NEGATIVE balance (2nd consecutive day, verified real by T20 09-18 at −$0.0014). No rank data. Carrying W36 (09-05→09-11) as last valid baseline.
+- GSC validation (09-18): 3 flagged drops (chronic-stress, how-to-survive-a-panic-attack, fear-of-ending-a-relationship) — ALL classified NOISE (0 GSC clicks delta). flagged-drops.json now empty. September 2026 Google algo update active (spam + brand signal revision) — YMYL architecture holding, 0 confirmed drops through full update period.
+- W43 Day-21 midpoints: 8 URLs at day 19 of 42 (2 days to midpoint 09-21). 7 URLs missing published_at (tracking gap, not a health signal).
+- phobia-treatment-in-bangalore shipped 09-18 (T9, commit 633b7f50). Day-1 observation started.
+- MIXPANEL-BILLING-BLOCK-01: 59 days blind (re-verified). No conversion data.
+
+**Decisions made:**
+1. FIND-THERAPIST-CTR-01 → T11 IMMEDIATE. /blogs/how-to-find-a-therapist-in-india holds pos 1.7 / 3,448 impr / 4 clicks (0.12% CTR) on "how to find a therapist in india" — biggest single actionable CTR gap on site. Score 80 (Tier B ×1.0). Non-YMYL, no AP3. AP4 verified: page not in 14d lock.
+2. T9-DOCTORS-SHIP-0922 → 8 /doctors/ Tier A briefs ready (adhd-specialist-near-me, cbt-therapy-near-me, bengali-speaking ×2, punjabi-speaking ×3, tamil-speaking-mumbai). Cap resets 09-22. Score 72 (Tier A ×1.5).
+3. DATAFORSEO-402-ESCALATION → Kushal immediate: top up DataForSEO account (NEGATIVE balance, not transient).
+4. PSYCHIATRIST-NEAR-ME-DILUTION-01 → flag_for_human queued. "Psychiatrist near me" 17,400 impr/90d split between wrong pages — Kushal decision needed.
+5. W43-MIDPOINTS-0921 → T12 must evaluate tomorrow (09-21) — 8 URLs Day-21 midpoints.
+
+**Material learnings:**
+- /blogs/ holder-free space fully exhausted (3 independent mining runs confirm). The 6-brief/run floor is a permanent design constraint, not a starvation event. T9 can only ship /doctors/ and /blogs/ refreshes until new intent families emerge.
+- September 2026 Google algo update (spam + brand signal): YMYL architecture holding after full update period. 0 GSC-confirmed drops. E-E-A-T + reviewer-frontmatter strategy is working.
+- FIND-THERAPIST-CTR-01: pos 1.7 with 0.12% CTR = snippet mismatch, not ranking problem. CTR fix is highest ROI action on site today.
+- DataForSEO NEGATIVE balance: balance $15.82 on 09-14 → NEGATIVE on 09-18 in 4 days. Suggests a large batch pull or billing cycle hit. Not transient (confirmed by T20 09-18).
+- Perplexity citation ATH 6/10 (W14): 7-week E-E-A-T propagation lag confirmed as principle (P17).
+
+**Meta-Learner proposals (09-19 pass):**
+- t17-tabs-create-fallback: MISMATCH-SKIP #6 (Apply-on 09-13, today 09-19 = 6 days overdue; stale threshold 09-27 — no alert yet). Target file `task17-competitive.md` does not exist.
+- t3-doctors-listings-dead-route: FUTURE-SKIP (Apply-on 09-20 — TOMORROW)
+- t5-discovery-position-page-level-warning: FUTURE-SKIP (Apply-on 09-20 — TOMORROW)
+- t5-doctors-listings-dead-route: FUTURE-SKIP (Apply-on 09-20 — TOMORROW)
+- t5-query-ownership-gate-and-trackingdb-shape: FUTURE-SKIP (Apply-on 09-21)
+- t9-doctors-listings-scope: FUTURE-SKIP (Apply-on 09-20 — TOMORROW)
+
+**Weekly caps (09-19):**
+- New content: 12/20 used (7 on 09-15 + 4 on 09-16 + 1 on 09-18). 8/20 remaining.
+- /blogs/ cluster: 6/6 FULL — resets 09-22 (anxiety-counselling rolls off).
+- /doctors/ cluster: 6/6 FULL — resets 09-22.
+- Refresh briefs: 0/20 used.
+
+
+---
+**T12 Learner stamp — 2026-09-20 (weekly run):**
+
+**Watches closed:** 9 (W36/W37/W38/W18/W19/W20/W21/W-PSYCH-BLR/W-COUN-BLR) + W39 DATA_GAP pending T20.
+
+**Verdicts:** 🟢 3 (W18 online-therapy, W20 biofeedback, W-PSYCH-BLR psychologists-blr) · 🟡 2 (W37 anxiety, W38 narrative-therapy) · 🔴 3 (W36 depression, W21 talk-therapy, W-COUN-BLR) · ⚫ 1 (W19 emdr)
+
+**Key learnings this week:**
+1. **AP3-B extended obs outcome confirmed**: 2/4 pages recovered in 84-day window (W18 online-therapy 🟢, W20 biofeedback 🟢). 2/4 remained stalled/worse (W19 emdr ⚫, W21 talk-therapy 🔴). Differentiator: pages facing brand-dedicated platforms (TalktoAngel for W21, EMDR Association for W19) do not recover — brand signal trumps content quality at this DA level. W18 recovered because "online therapy" is a multi-stakeholder query with no single brand dominant.
+2. **YMYL illness page ≠ commercial query owner**: W36 (depression) showed target query "depression treatment bangalore" owned by /doctors/depression-specialists-in-bangalore at pos 6.7 — the illness page can't outrank Mindtalk's own /doctors/ URL for commercial queries. Commercial treatment queries belong to /doctors/ pages by intent architecture.
+3. **/doctors/ pages gaining organic impressions under September algo update**: W-PSYCH-BLR +61% impr (490→790/d), pos 26.5→18.1. This is the category to invest in for Q4 (therapist-near-me, psychiatrist-online, specialists in major cities).
+4. **Internal cannibalization (W-COUN-BLR)**: /centers/ and /treatments/ URLs outranking /doctors/ for "counselling bangalore" on Mindtalk's own property. URL assignment architecture is a Q4 structural gap.
+
+**Active hypotheses updates:**
+- [CONFIRMED] AP3-B extended obs works for broad queries with no single brand dominant; fails against brand-dedicated platforms
+- [PENDING] QDF_BLOCKED at Day-42 is not final for hub pages — W18 proved 84-day window needed; add to P14 candidate when 3rd data point available
+- [OPEN] SCHEMA-MEDICAL-TYPES-01 fix (PR #23, shipped 08-17): not yet confirmed to have helped — W36/W37 still missed commercial targets despite schema fix. Possible that fix arrived too late in the observation window or that intent-type mismatch is the primary driver.
+
+**Open structural gaps updated:**
+- [NEW] Internal query routing: /doctors/ pages cannibalized by /treatments/ and /centers/ on geo-commercial queries. Need canonical geo-routing strategy for "X in Bangalore" cluster across URL types.
+- [ONGOING] /treatments/ YMYL pages compete for informational queries, not commercial ones — commercial queries consistently resolve to /doctors/.
+- [ONGOING] CTR extraction: site at ATH impressions but CTR 0.9% — the SCHEMA + FAQPage fix needed across all treatment templates.
+
+**Site posture:** GROWTH · ATH maintained · Q3 targets exceeded · W37 (09-12→09-18) data pending (no weekly report yet).
+
+**Next T12 run:** 2026-09-27 — evaluate W43 Day-21 batch (8 blogs) + W39 DATA_GAP resolution.

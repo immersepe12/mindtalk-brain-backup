@@ -4,6 +4,21 @@
 **Apply on:** 2026-09-13T20:30:00+05:30
 **Status:** preview
 
+> ### 🔧 T20 auto-remediation 2026-09-20 — target filename corrected (was MISMATCH-SKIP ×5)
+> This proposal had `File to edit: cowork-tasks/task17-competitive.md`, **which does not exist**. The
+> real file is `cowork-tasks/task17-competitive-ai-monitor.md`. T10's apply-pass skipped it on 09-13,
+> 09-15, 09-17, 09-19 and 09-20 (MISMATCH-SKIP #1–#5) purely on that filename; the proposal's substance
+> was never rejected. Corrected below so the next apply-pass can act on it. Stale threshold 2026-09-27.
+>
+> **Verified against the real file (2026-09-20):** `#### Step 5.5 — Chrome connection pre-check` exists
+> at **line 115**; `Step 5.6` does **not** exist (0 matches). The proposal is still valid and un-applied.
+>
+> ⚠️ **Note for the applier:** the "### Before" block below is a *paraphrase* of Step 5.5, not its
+> verbatim text — the real Step 5.5 is a prose sentence plus a numbered list. Do **not** attempt a
+> literal string replace. **Append the new Step 5.6 block immediately after the existing Step 5.5
+> section** and leave Step 5.5 itself unchanged, except to redirect its "proceed to Step 6" branch on
+> the *connected* path to "proceed to Step 5.6".
+
 ## Issue detected
 
 T17 has stalled on AI citation queries for **6 consecutive Thursdays** (07-31, 08-07, 08-14, 08-21, 08-28, 09-04). The 08-23 applied proposal `t17-chrome-precheck-20260816T2030` added Step 5.5: check Chrome connection before running AI citation queries. But the stall persists. Root cause (confirmed in `logs/competitive-2026-09-03.txt`): *"CHROME: STALL-SKIPPED | tabs_create_mcp timed out after list_connected_browsers confirmed 2 browsers connected | 6th consecutive Thursday stall"*
@@ -17,7 +32,7 @@ The precheck correctly detects that Chrome IS connected (2 browsers) — the fai
 - The precheck added Step 5.5 detect-and-skip, but no Step 5.6 recovery attempt.
 
 ## Proposed change
-**File to edit:** `cowork-tasks/task17-competitive.md`
+**File to edit:** `cowork-tasks/task17-competitive-ai-monitor.md` *(corrected by T20 2026-09-20; was `task17-competitive.md`, which does not exist)*
 **Edit type:** append (add Step 5.6 immediately after the existing Step 5.5 block)
 
 ### Before

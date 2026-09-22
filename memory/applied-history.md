@@ -213,3 +213,16 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 20260917T200000+0530 | FUTURE-SKIP | proposal: t9-doctors-listings-scope-20260913T2330 | Apply-on: 2026-09-20 — 3 days in future. Skip.
 
 20260918T200000+0530 | MISMATCH-SKIP #5 | proposal: t17-tabs-create-fallback-20260906T2030 | file: cowork-tasks/task17-competitive.md | reason: Target file does not exist — actual file on disk is task17-competitive-ai-monitor.md; Before block text cannot be matched. Apply-on 2026-09-13 (5 days overdue). 5th consecutive MISMATCH-SKIP (09-13, 09-14, 09-15, 09-17, 09-18). Becomes stale 2026-09-27 (Apply-on + 14d). T13 must rename proposal target OR create task17-competitive.md.
+
+20260919T200000+0530 | MISMATCH-SKIP #6 | proposal: t17-tabs-create-fallback-20260906T2030 | file: cowork-tasks/task17-competitive.md | reason: Target file does not exist — actual file on disk is task17-competitive-ai-monitor.md; Before block text cannot be matched. Apply-on 2026-09-13 (6 days overdue). Stale threshold: 2026-09-27 (14d after Apply-on). 6th consecutive MISMATCH-SKIP. T13 must rename proposal target OR create task17-competitive.md. Not yet stale.
+20260919T200000+0530 | FUTURE-SKIP | proposal: t3-doctors-listings-dead-route-20260913T2030 | Apply-on: 2026-09-20 — 1 day in future. Skip.
+20260919T200000+0530 | FUTURE-SKIP | proposal: t5-discovery-position-page-level-warning-20260913T2030 | Apply-on: 2026-09-20 — 1 day in future. Skip.
+20260919T200000+0530 | FUTURE-SKIP | proposal: t5-doctors-listings-dead-route-20260913T2030 | Apply-on: 2026-09-20 — 1 day in future. Skip.
+20260919T200000+0530 | FUTURE-SKIP | proposal: t5-query-ownership-gate-and-trackingdb-shape-20260914T2330 | Apply-on: 2026-09-21 — 2 days in future. Skip.
+20260919T200000+0530 | FUTURE-SKIP | proposal: t9-doctors-listings-scope-20260913T2330 | Apply-on: 2026-09-20 — 1 day in future. Skip.
+
+2026-09-20T14:48:48Z | APPLIED | proposal: t3-doctors-listings-dead-route-20260913T2030 | file: cowork-tasks/task3-serp-analysis-briefs.md | snapshot: brain/before-snapshots/task3-serp-analysis-briefs-20260920T144848.bak
+2026-09-20T14:48:48Z | APPLIED | proposal: t5-doctors-listings-dead-route-20260913T2030 | file: cowork-tasks/task5-new-content-discovery.md | snapshot: brain/before-snapshots/task5-new-content-discovery-20260920T144848.bak
+2026-09-20T14:48:48Z | APPLIED | proposal: t5-discovery-position-page-level-warning-20260913T2030 | file: cowork-tasks/task5-new-content-discovery.md | snapshot: brain/before-snapshots/task5-new-content-discovery-20260920T144848.bak
+2026-09-20T14:48:48Z | APPLIED | proposal: t9-doctors-listings-scope-20260913T2330 | file: cowork-tasks/task9-auto-ship-new-blogs.md | snapshot: brain/before-snapshots/task9-auto-ship-new-blogs-20260920T144848.bak
+2026-09-20T14:48:48Z | MISMATCH-SKIP | proposal: t17-tabs-create-fallback-20260906T2030 | file: cowork-tasks/task17-competitive.md | reason: Target file does not exist; actual file is task17-competitive-ai-monitor.md — manual review required (5th recurrence)

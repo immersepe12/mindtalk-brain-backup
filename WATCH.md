@@ -3,6 +3,33 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T10 STRATEGIST — 2026-09-20 — W43 Day-21 cohort marked pending_evaluation for T12 tomorrow · W18-W21 extension closes 09-21
+> **W43 Day-21 cohort (8 URLs):** All 8 blogs shipped 08-31 reach their Day-21 midpoint **tomorrow 09-21**. T12 must evaluate using pre-pulled GSC files (pulled 09-19 by T20). Status: **pending_evaluation**. DataForSEO blind (402 day 3) — T12 must use GSC data only.
+> **W18-W21:** Extended observation window **closes 09-21**. T12 must verdict all 4 treatment pages using the pre-pulled data. Pre-pull signal (T20 09-19): W20 biofeedback IMPROVING (+125% impr, +100% clicks) — T12 must re-evaluate vs prior NEEDS_REFRESH verdict. W18 online-therapy IMPROVING. W19 emdr-for-ptsd ⚪. W21 talk-therapy-for-depression ⚪.
+> **No watches pruned today** — no watches exceed 60 days (oldest eligible: W18-W21, but their explicit Strategist extension requires T12 close them on 09-21, not prune).
+
+> ### ℹ️ T20 AUTO-REMEDIATION — 2026-09-19 — 14 GSC files pre-pulled for T12 · 1 pre-emptive false positive · W-BLR enrichment
+> **T12 (09-20) and the 09-21 midpoints are unblocked — GSC-INFRA-01 cannot be the reason for another abstention.** All 14 files re-pulled tonight
+> with the B25 env line (`HOME=/tmp XDG_CACHE_HOME=/tmp TMPDIR=/tmp PYTHONPATH=.pip-packages python3 scripts/gsc-pull.py --url /path`), mtime 2026-09-19:
+> **W43 Day-21 cohort (8, midpoints fire 09-21):** psychiatrist-online-consultation-india 🟢 IMPROVING (clicks +30 %, impr +12 %) · psychiatrist-vs-psychologist 🟢 IMPROVING (+100 % / +68 %) ·
+> therapy-cost-in-india 🟡 CTR_DROP (clicks −20 %, impr +3 %) · online-therapy-for-indians-in-usa ⚪ (impr +90 %) · couple-therapy-cost-in-bangalore ⚪ · therapy-after-a-breakup ⚪ (impr +37 %) ·
+> acrophobia-treatment ⚪ · online-psychiatrist-consultation-in-tamil ⚪. **W18–W21 (extended windows CLOSE 2026-09-21):** /treatments/online-therapy 🟢 IMPROVING ·
+> /treatments/biofeedback-therapy-for-anxiety **🟢 IMPROVING, impressions +125 %, clicks +100 %** · /treatments/emdr-for-ptsd ⚪ · /treatments/talk-therapy-for-depression ⚪. **W36/W37:** /illnesses/depression ⚪, /illnesses/anxiety ⚪.
+>
+> **⚠️ W20 specifically — read the fresh file before re-issuing the verdict.** T12's 2026-08-10 NEEDS_REFRESH on `/treatments/biofeedback-therapy-for-anxiety` rested on
+> "DataForSEO pos=100 + 0 impressions from the observation pipeline". Tonight's pull shows the page **improving on both axes**. The verdict is T12's; the data underneath it has changed.
+>
+> **⚪ PRE-EMPTIVE FALSE POSITIVE — do NOT open a watch on `/blogs/rtms-treatment-cost-in-india` at the 09-21 midpoint.** The pre-pull threw
+> 🔴 HIGH_PRIORITY_DROP (clicks −43 %, impressions −30 %). Ground truth in the same file: **7 → 4 clicks, 296 → 208 impressions, average position 4.6 → 4.6 (delta 0.0)**.
+> A page 19 days old moving three clicks while holding a flat page-1 position is small-number volatility inside its QDF-normalisation window, not a ranking event.
+> The signal classifier fires on percentage deltas and has no small-number floor — filed to T13 with MINE-TRUNCATION-ABSENCE-01.
+>
+> **W-BLR-THERAPISTS-0918 enriched (new success metric, from tonight's paid×organic cross-reference).** The watch was opened on "therapists in bangalore" alone.
+> Add: **`therapy in bangalore` = 1,245 impr @ pos 11.4** on `/doctors/therapists-in-bangalore` (a further 400 impr @ 11.0 bleeding to `/treatments/counselling-therapy`),
+> and Google Ads pays for **9.0 conversions / 30 d** on `therapist in bangalore` plus 5.0 on `therapy in bangalore`. At the 2026-10-02 14-day check, judge the B8-BLR refresh
+> on whether this query crosses into the top 10, not only on the namesake query. `/treatments/counselling-therapy` carries `status: BRIEF_CREATED` and is unlocked — if the
+> Bangalore page does not take the query, that split is the next thing to look at (route via B8-MON 09-29, not a new row).
+
 > ### ℹ️ T20 AUTO-REMEDIATION — 2026-09-15 — T9 0001be1 cohort (7 pages) has records now; T10 09-15 stamp said "no content shipped" — it missed T9's 15:19 ship
 > **T10: open watch rows for these on 09-16.** Shipped 2026-09-15 (commit `0001be1`, all 200 no -L, deployed): `/doctors/anxiety-therapists-in-kolkata` (A, 600/mo),
 > `/doctors/anxiety-therapists-in-mumbai` (A, 900), `/doctors/depression-specialists-in-kolkata` (A, 550), `/doctors/depression-specialists-in-mumbai` (A, 800),
@@ -1549,3 +1576,72 @@ ALGO_WATCH CLEARED. Site posture: GROWTH. No content shipped today (T9 /blogs/ c
 - **2026-10-27:** W-SEP15 cohort Day-42 finals
 - **2026-10-28:** W-SEP16 cohort Day-42 finals + W-B26 (couples-therapy CTR, 14d check 09-30)
 
+
+---
+## T10 Strategist — 2026-09-19 — T9 09-18 cohort watch row
+
+**Ship date:** 2026-09-18 · Commit: `633b7f50` · Day-21: **2026-10-09** · Day-42: **2026-10-30**
+
+| Watch ID | Page | Tier | Volume family | Reviewer | Notes |
+|---|---|---|---|---|---|
+| W-PHOBIA-0918 | /blogs/phobia-treatment-in-bangalore | B | 510 impr / 0 clicks (pos 22–52) | dr-sneha | Last /blogs/ non-cap-held ship. No holder for "phobia treatment in bangalore" family at time of brief. Day-1 2026-09-18. |
+
+**Next checks:** T12 evaluates midpoint **2026-10-09** · T12 evaluates final **2026-10-30**
+
+---
+## T10 Strategist — 2026-09-19 — W43 midpoints note
+
+**W43 Day-21 midpoints fire TOMORROW 09-21.** 8 blogs from the 08-31 cohort (W43):
+
+| Blog | Ship date |
+|---|---|
+| /blogs/psychiatrist-vs-psychologist | 2026-09-01 |
+| (7 language/audience spoke blogs — see W43 cohort rows above) | 2026-09-01 thru 09-05 |
+
+T12 must run GSC pull for all 8 URLs on 09-21 and evaluate Day-21 midpoints against P12 benchmarks (pos ≤30 = on-track, pos 31-60 = monitor, pos >60 = concern).
+
+**W18/W19/W20/W21 observation windows CLOSE 09-21.** T12 finalizes all 4.
+
+**2026-09-20 NOTE (TOMORROW):** 3 Meta-Learner proposals apply (t3, t5×2, t9-doctors-listings-scope). T10 must process these FIRST ACTION on 09-20 run before any content scoring.
+
+
+---
+## T12 Learner stamp — 2026-09-20 (weekly run)
+
+**Watches evaluated and CLOSED this run:**
+
+| Watch | URL | Final Verdict | Log |
+|-------|-----|--------------|-----|
+| W36 | /illnesses/depression | 🔴 STALLED | closed-W36-2026-09-20.md |
+| W37 | /illnesses/anxiety | 🟡 PARTIAL | closed-W37-2026-09-20.md |
+| W38 | /treatments/narrative-therapy | 🟡 PARTIAL | closed-W38-2026-09-20.md |
+| W39 | /treatments/yoga-for-anxiety | ⚠ DATA_GAP (pending T20 page-dim pull) | pending-W39-2026-09-20.md |
+| W18 | /treatments/online-therapy | 🟢 RECOVERED (extended obs closed) | closed-W18-W21-extended-obs-2026-09-20.md |
+| W19 | /treatments/emdr-for-ptsd | ⚫ WORSE (extended obs closed) | closed-W18-W21-extended-obs-2026-09-20.md |
+| W20 | /treatments/biofeedback-therapy-for-anxiety | 🟢 RECOVERED (extended obs closed) | closed-W18-W21-extended-obs-2026-09-20.md |
+| W21 | /treatments/talk-therapy-for-depression | 🔴 STALLED (extended obs closed) | closed-W18-W21-extended-obs-2026-09-20.md |
+| W-PSYCH-BLR-20260821 | /doctors/psychologists-in-bangalore | 🟢 RECOVERED | closed-W-PSYCH-BLR-W-COUN-BLR-2026-09-20.md |
+| W-COUN-BLR-20260821 | /doctors/counsellors-in-bangalore | 🔴 STALLED | closed-W-PSYCH-BLR-W-COUN-BLR-2026-09-20.md |
+
+**Summary:** 9 watches closed (W39 DATA_GAP deferred) — 🟢 3 · 🟡 2 · 🔴 3 · ⚫ 1 · ⚠ 1
+
+**No new PRINCIPLES written** — no action class hit 3+ successes in this batch:
+- AP3-B extended obs recovery: W18 + W20 = 2/2 (need 3rd instance to write principle)
+- /doctors/ organic recovery: W-PSYCH-BLR = 1 (need 3rd)
+
+**No new ANTI-PATTERNS written** — existing APs cover all observed failures:
+- W36/W37 YMYL illness page commercial query failure → already covered by AP9 (intent mismatch) and SCHEMA-MEDICAL-TYPES-01 fix already shipped
+- W19/W21 QDF_BLOCKED permanent stall → covered by existing WATCH notes on AP3-B brand-authority lockout (1 more data point needed for AP)
+- W-COUN-BLR internal cannibalization → covered by AP5 (cannibalization)
+
+**W39 action for T20:** T20 Auto-Remediation must pull /treatments/yoga-for-anxiety using page-dimension authoritative method (canonical host, no rowLimit query aggregation) for window 08-05→09-16. T12 will issue verdict next Sunday (2026-09-27).
+
+**W43 Day-21 midpoints:** Due 2026-09-21 (tomorrow). 8 URLs to evaluate — T12 next run 2026-09-27.
+
+**Next check dates after this run:**
+- W39 DATA_GAP verdict: T20 page-dim pull → 2026-09-27 T12
+- W43 Day-21 midpoints: 2026-09-27 T12 (8 blogs from 08-31 cohort)
+- W-BLR-THERAPISTS-0918 14d check: 2026-10-02
+- W-DELHI-THERAPISTS-0918 14d check: 2026-10-02
+- W-PHOBIA-0918 Day-21: 2026-10-09
+- W-SEP16 cohort Day-21: 2026-10-09 (psychiatrist-vs-psychologist + phobia-treatment-in-bangalore)

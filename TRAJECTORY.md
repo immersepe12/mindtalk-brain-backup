@@ -24,6 +24,7 @@
 | 2026-08-24 to 08-30 | 3,239 | −4.6% | 346,320 | −5.4% | 0.9% | 14.2 | ~870 | 27% | Backfilled 2026-09-06 by T12 Learner from `reports/weekly-summary-2026-08-31.txt` (GSC Aug 22-28). Clicks 3,239 vs 3,394 prior week: −4.6% 🔴 (first down week since Aug 10). Impr 346,320 vs 366,184 prior: −5.4% 🔴. CTR 0.9% 🟢 (Q3 target met). Pos 14.2 (softer — August Core Update 08-26 causing broad SERP turbulence). **Production: 0 NEW blogs shipped** (T9 silently died 08-26 + 08-28 due to FUSE git lock file — T9-SILENT-DEATH-01 escalated, fix applied 08-28 per T11). August Core Update LIVE since 08-26 (Day 4 today). YMYL refresh queue ON HOLD until Core Update settles ~09-05. T12 08-30: W30-W33 + W39 corrected interim verdicts re-issued (🟡W30, 🟢W31, 🟡W32, 🟢W33, 🟢W39) using T20 pre-Core-Update data. 0 final closures. 0 new PRINCIPLES, 0 new ANTI-PATTERNS. ⚡ T12 09-06: Stub-pilot Day-42 batch formally closed (0🟢/0🟡/1🔴/5⚫ — worst batch ever). W30-W33 + W-PSYCH/W-COUN + W40 DEFERRED to 09-10. |
 
 | 2026-08-31 to 09-06 | 3,735 | +15.3% | 384,195 | +10.9% | 1.0% | 12.8 | ~871 | 27% | ✅ **Clicks 3,735 — strongest week in Q3, Q3 target EXCEEDED +33.4%.** ✅ **CTR 1.0% — Q3 target EXCEEDED** (first time). ALGO_WATCH CLEARED 2026-09-10 after August Core Update settled. 931 URLs surfacing in SERPs (+11.5% WoW — broad SERP expansion). 1 NEW blog shipped T9 09-01 (psychiatrist-vs-psychologist). Life Coach cluster +123.6% impr (14,361 impr pos 10.6 / 0 CTR — AP11 dead zero-click). "psychologist near me" pos 8.1, 3,208 impr. "therapist near me" crashed pos 32.5→52.0 (B8 CRITICAL — 2,237 impr). W36/W37 Day-42 PENDING_EVALUATION (GSC-INFRA-01 disk full blocks fresh pulls). |
+| 2026-09-05 to 09-11 | 3,904 | +4.5% | 451,557 | +17.5% | 0.9% | 9.7 | 937 | 27% | 🏆 **ALL-TIME HIGH: clicks 3,904 + impr 451,557.** Pos 12.8→9.7 = **strongest single-week position gain in tracked history.** 6 NEW blogs shipped 09-08/09-09 (T9: online-counselling-in-malayalam `df348ea`, + adhd-diagnosis-bangalore, psychiatrist-for-anxiety, psychologist-for-bipolar-disorder, psychologist-for-schizophrenia, therapist-for-depression `4c8e02e`). Top clusters: Sleep +400.2% (9,643 impr), Dry-begging +232.5% (13,920 impr), Emotional distress +217.8% (14,237 impr), Best Therapists doctors-listings +1,263.8% (7,392 impr / 0 clicks — SERP feature). CTR dip 1.0%→0.9%: impressions grew faster than clicks (position 9.7 = more page-2 exposure). Life Coach 17,388 impr / 0 clicks (AP11 dead). "therapists in delhi" 6,879 impr / 0 clicks (CTR-01 queue). B5/B10/B13/B14 all DONE 09-11. T12 09-20: 10 watches closed (W36/W37/W38/W39-DATA_GAP/W18/W19/W20/W21/W-PSYCH-BLR/W-COUN-BLR). |
 
 (Learner fills new row every Sunday)
 
@@ -47,6 +48,7 @@
 | 2026-08-10 to 08-16 | 5 | 0 | 0 | 0 | 0 | 4 (T12 08-16: W36🔴+W37⚫+W11 stale; T11 08-14: personality-disorder investigate + T17-7 flag + T5-REFILL-NOW-12 Slack) | **5 LIVE** (all T9 new blogs). /blogs/ 5/6. T5-REFILL 12th carry. ⚠ LEARNER FLAG: 3/4 watches 🔴/⚫. Schema fix PR #23 DEPLOYED 08-17. |
 | 2026-08-17 to 08-23 | 7 | 0 | 0 | 0 | 0 | 1 (T12 08-23: 5 interim watch evals W30-W33+W39 — all 🔴 STALLED intermediate; Core Update confound) | **7 LIVE** (T9 08-18: overthinking/situationship/peniaphobia/panic-attack/financial-anxiety/high-functioning-anxiety/adhd-task-paralysis — commit `d390fcd`). W41 opened. Core Update 08-26 in 3 days. |
 | 2026-08-31 to 09-06 | 1 | 0 | 0 | 0 | 0 | 4 (W36/W37/W-PSYCH-BLR/W-COUN-BLR PENDING_EVALUATION — disk full; T12 09-13) | **1 LIVE** (T9 09-01: psychiatrist-vs-psychologist `0b6cf4b5`). /blogs/ 1/6 this week. ALGO_WATCH CLEARED 09-10. B7 batch 3 due 09-16. |
+| 2026-09-05 to 09-11 | 6 | 0 | 0 | 0 | 0 | 3 (B5/B10/B13/B14 DONE 09-11; W36-W39+W18-W21+W-PSYCH-BLR+W-COUN-BLR closed 09-20 T12) | **6 LIVE** (T9 09-08: online-counselling-in-malayalam `df348ea`; T9 09-09: adhd-diagnosis-bangalore + psychiatrist-for-anxiety + psychologist-for-bipolar-disorder + psychologist-for-schizophrenia + therapist-for-depression `4c8e02e`). /blogs/ 6/6 at cap (resets 09-15). 10 watches closed by T12 09-20 (deferred from this window). |
 ---
 
 ## Conversion KPIs — weekly (T19)
@@ -73,7 +75,6 @@
 | AI citation share (Perplexity) | **6/10 (60%)** | ~4.5/10 | — | 🟢 Week 14 (2026-09-17): Chrome CONNECTED. **GAINED Q9 "depression treatment online india" (cited FIRST — 7wk propagation lag from 07-31 YMYL update)**. Retained: Q3✅ Q4✅ Q6✅ Q8✅ Q10✅. Still absent: Q1❌ Q2❌ Q7❌. 6/10 = best score ever. Q5 + Q9 Google AI OV not tested this run. |
 | AI citation share (Google AI OV) | 0/3 tested | ~1/4 | — | 🔴 Week 14 (2026-09-17): Chrome CONNECTED. Tested Q4/Q9/Q10 — all 0 AI OV shown. Q10 showed AI OV last week (possible session variation, monitor next Thursday). Full 10-query sweep pending dedicated pass. |
 
-| 2026-08-31 to 09-06 | 1 | 0 | 0 | 0 | 0 | 4 (W36/W37/W-PSYCH-BLR/W-COUN-BLR PENDING_EVALUATION — disk full; T12 09-13) | **1 LIVE** (T9 09-01: psychiatrist-vs-psychologist `0b6cf4b5`). /blogs/ 1/6 this week. ALGO_WATCH CLEARED 09-10. B7 batch 3 due 09-16. |
 ---
 
 ## Conversion KPIs — weekly (Mixpanel T15 / project 4011856)
@@ -245,6 +246,8 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 
 > **Week of 2026-08-31 → 09-06 (Learner run 09-13):** The strongest week of Q3 — clicks hit 3,735 (+15.3% WoW) and CTR reached 1.0%, both exceeding Q3 targets for the first time simultaneously. ALGO_WATCH cleared 2026-09-10 as August Core Update settled, unlocking the IMMEDIATE backlog (B8/B12/B18). The structural risk remains: "therapist near me" crashed 19.5 positions to pos 52 (B8 CRITICAL, 2,237 impr at stake), Life Coach AP11 dead cluster contributes 14,361 impr with 0 clicks (diluting CTR averages), and GSC-INFRA-01 disk full blocked all 4 watch evaluations (W36/W37/W-PSYCH-BLR/W-COUN-BLR) — all deferred pending disk fix. Next week's critical path: (1) fix disk space to unblock W36/W37/W-PSYCH-BLR/W-COUN-BLR evaluations overdue since 09-11; (2) fire B12 therapy-near-me hub sprint (60.5K/mo, IMMEDIATE); (3) T11 run B8 therapist-near-me investigate_regression; (4) W38/W39 Day-42 finals due 09-15/09-16.
 
+> **Week of 2026-09-05 → 09-11 (Learner run 09-20):** The site reached all-time highs across every headline metric — 3,904 clicks (+4.5% WoW), 451,557 impressions (+17.5% WoW, ATH), pos 9.7 (strongest single-week position improvement in the tracked period, from 12.8). T9 shipped 6 new blogs during this window (09-08/09-09), expanding coverage in language-specific (Malayalam) and diagnostic professional queries. T12 on 09-20 closed 10 outstanding watches: 3🟢 RECOVERED (W18/W20/W-PSYCH-BLR), 2🟡 PARTIAL (W37/W38), 3🔴 STALLED (W36/W21/W-COUN-BLR), 1⚫ WORSE (W19), 1 DATA_GAP (W39 — T20 page-dimension pull required 09-27). Key structural finding: YMYL /illnesses/ pages cannot own commercial "treatment" queries (owned by /doctors/ specialist pages — intent mismatch); internal URL cannibalization is blocking /doctors/counsellors-in-bangalore. **Next week's critical path:** (1) W39 final verdict via T20 page-dimension pull 2026-09-27; (2) W43 Day-21 midpoints 2026-09-27; (3) DataForSEO balance top-up needed (balance negative as of 09-18 — T17/T20 rank pulls blocked); (4) Mixpanel billing block (day 62+) continues to blind conversion intelligence.
+
 
 ---
 
@@ -266,7 +269,6 @@ Every Sunday 6 PM, Learner:
 
 Strategist reads this every day before deciding actions — knows where the gaps are.
 
-| 2026-08-31 to 09-06 | 1 | 0 | 0 | 0 | 0 | 4 (W36/W37/W-PSYCH-BLR/W-COUN-BLR PENDING_EVALUATION — disk full; T12 09-13) | **1 LIVE** (T9 09-01: psychiatrist-vs-psychologist `0b6cf4b5`). /blogs/ 1/6 this week. ALGO_WATCH CLEARED 09-10. B7 batch 3 due 09-16. |
 ---
 
 ## Conversion KPIs (T19-owned — Conversion Intelligence, Wed weekly)

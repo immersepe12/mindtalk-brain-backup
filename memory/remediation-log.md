@@ -4463,3 +4463,387 @@ tool's summary of them.
 - Brief queue: 0 shippable `/blogs/` (floor 6 unmet, 4th run) · 8 viable `/doctors/` briefs cap-held to 09-22
 - New rows for T10: 2 (FIND-THERAPIST-CTR-01, PSYCHIATRIST-NEAR-ME-DILUTION-01)
 - Artefacts: `logs/t20-gsc-mine-2026-09-18.json` (100k rows), `logs/t20-candidates-2026-09-18.json` (234), `logs/t20-googleads-2026-09-18.log`
+
+---
+
+## 2026-09-19 (Sat) 20:55–21:40 IST — T20 Auto-Remediation
+
+**Step 0.5 concurrency check:** `list_sessions` before any write — 12 sessions, all idle, no running
+T20 twin. Single T20 invocation today.
+
+### Step 0 — DEPLOY HEALTH: ✅ READY (`1c09372`)
+
+Last 5 **production** deploys, via Vercel MCP (answered first call — 3rd consecutive run):
+
+| Deploy | Commit | State | What |
+|---|---|---|---|
+| `dpl_Di2pQRAj…` | `1c09372` | **READY** | T11 09-18: B8-BLR therapists-in-bangalore refresh + THERAPISTS-DELHI-CTR-01 |
+| `dpl_2ZEggXTP…` | `633b7f50` | READY | T9 09-18: /blogs/phobia-treatment-in-bangalore |
+| `dpl_3DEQuXNU…` | `569c7bd` | READY | B26 couples-therapy CTR fix (09-16) |
+| `dpl_DeLTHAqn…` | `a7a4c08` | READY | CHILD-PSYCH filterAgeGroup fix (09-16) |
+| `dpl_4DgZUJEM…` | `c3aafc4` | READY | T9 4 blogs (09-16) |
+
+0 ERROR. `git ls-remote origin main` = `1c09372` = the SHA of the latest production deploy →
+**no commits sitting after the deploy.** The deploy is ~28 h old, which passes the 48 h staleness
+rule *for the right reason*: it is Saturday, T9 and T11 did not run, and nothing has been committed
+since. Stale-deploy alarm is about commits stranded behind a deploy, and there are none.
+
+No ship claims to verify tonight — nothing shipped today.
+
+### Step 2 — VERIFICATION (Rule 1)
+
+#### 🔴 DATAFORSEO-402 — re-verified REAL, **day 2**, carried, NOT re-escalated
+
+`POST /v3/appendix/user_data` with the config credentials, read-only:
+
+```
+status_code 20000 Ok
+BALANCE  -0.00136 USD    (negative — byte-identical to last night's reading)
+day limits: serp 0 / keywords_data 0 / labs 0
+```
+
+Credentials valid, account overdrawn, unchanged in 24 h. It cannot self-heal (09-14's identical 402
+cleared itself because $15.82 sat behind it; there is nothing behind this one). **It was escalated
+to Kushal last night.** Re-sending it tonight as a new escalation is precisely the behaviour this
+task exists to end, so it appears in the digest as a standing line with a day count — which is the
+only new information — and nothing else.
+
+Cost of the outage today, stated once: no `logs/rank-summary-2026-09-19.txt` exists — T1 produced
+no rank data at all, and T2 therefore had nothing to validate. Two days of rank blindness.
+
+#### 🔴 MIXPANEL-BILLING-BLOCK-01 — re-verified REAL, **day 59**, carried
+
+`Run-Query` on project 4011856 → *"Your account is blocked because payment is required."*
+Conversion data blind since 07-22. Same treatment: standing line, day count, no re-escalation.
+
+#### ⚪ `/blogs/rtms-treatment-cost-in-india` — **pre-emptive FALSE POSITIVE, closed before it became a flag**
+
+Tonight's GSC pre-pull (Step 3, item 8) classified this page **🔴 HIGH_PRIORITY_DROP** on
+clicks −43 % / impressions −30 %. The numbers underneath that verdict:
+
+```
+current  2026-09-09 → 09-16 :   4 clicks / 208 impressions / avg position 4.6
+previous 2026-09-02 → 09-09 :   7 clicks / 296 impressions / avg position 4.6
+position_delta 0.0
+```
+
+Three clicks and 88 impressions, at an **unchanged page-1 position**, on a page published 08-31 and
+19 days into its observation window. That is small-number volatility during QDF normalisation, not a
+ranking event — the classifier fires on percentage deltas with no small-number floor. Its Day-21
+midpoint fires **2026-09-21**, so the correction is written into `WATCH.md` *now*, where T12 will
+read it, rather than after a watch has been opened on noise.
+
+#### Rank drops — nothing else to verify
+
+`flagged-drops.json` = `{}`, `confirmed-drops.json` = `{}`. T2's last run (09-18) retired the three
+09-17 MODERATE candidates as ⚪ NOISE; T20 run #3 had closed the same three the night before on the
+same evidence. Nothing carried, no double-closure.
+
+### Step 3 — AUTO-FIXES (8)
+
+**1–6. `published_at` back-filled on 6 tracked pages — a flag that had been raised twice and fixed never.**
+
+T4's observation monitor has ended its report with *"7 URLs are missing published_at timestamps.
+Their observation windows cannot be accurately tracked"* on 09-18 **and** again this morning. It is
+not missing data — it is **schema drift between three tasks writing the same fact under three names**:
+
+| Writer | Field it writes |
+|---|---|
+| T9 auto-ship | `published_on` |
+| T11 executor (refresh) | `last_refresh_date` |
+| T4 observation monitor | reads **`published_at`** and nothing else |
+
+Back-filled from each record's own evidenced field — never invented, and every one confirmed against
+a commit SHA *and* a Vercel deploy that reached READY *and* a live 200:
+
+| Record | Source field | `published_at` | Ground truth |
+|---|---|---|---|
+| /blogs/online-counselling-in-hindi | `published_on` | 2026-09-16 | `c3aafc4`, deploy `dpl_4DgZUJEM` READY, live 200 |
+| /blogs/online-therapy-in-telugu | `published_on` | 2026-09-16 | idem |
+| /blogs/teenage-counselling | `published_on` | 2026-09-16 | idem |
+| /blogs/best-doctor-for-panic-attacks | `published_on` | 2026-09-16 | idem |
+| /doctors/therapists-in-bangalore | `last_refresh_date` | 2026-09-18 | `1c09372`, deploy `dpl_Di2pQRAj` READY, live 200 |
+| /doctors/therapists-in-delhi | `last_refresh_date` | 2026-09-18 | idem |
+
+Each carries `published_at_source` recording the derivation. The two refresh pages also received
+`observation_window_end: 2026-10-30` (consistent with their watches' Day-42) and
+`baseline_type: REFRESH_PRIOR_BASELINE`. Backup: `logs/tracking-db.json.backup-2026-09-19-2100-pre-t20`.
+**Filed to T13 (PUBLISHED-AT-SCHEMA-DRIFT-01):** either T4 should read
+`published_at || published_on || last_refresh_date`, or T9/T11 should write `published_at` too. Until
+one of those lands, every future ship re-creates this gap.
+
+**7. The 7th "missing published_at" URL was not a missing date — it was a duplicate row.**
+`NEW-/doctors-listings/child-psychologists-in-bangalore` tracks the *same live page* as
+`/doctors/child-psychologists-in-bangalore`, which already has a complete record (`published_at`
+2026-09-15, window to 10-28, midpoint 10-07, live 200 showing 18 professionals since the 09-16 fix
+`a7a4c08`). It is a `/doctors-listings/` dead-route artifact and T4 was counting the page twice.
+Marked `SUPERSEDED_DUPLICATE` with `superseded_by` pointing at the real record — **not deleted**.
+
+**8. 14 GSC files pre-pulled so T12 cannot be blocked by GSC-INFRA-01 again.**
+T12 runs tomorrow (09-20); the W43 Day-21 midpoints fire 09-21; W18–W21's extended windows close
+09-21; W36/W37 are long overdue. GSC-INFRA-01 has caused an abstention on exactly this shape before
+(09-13, 4 verdicts). All 14 pulled with the B25 env line, mtime 2026-09-19:
+
+- **W43 cohort (8):** psychiatrist-online-consultation-india 🟢 (+30 % clicks / +12 % impr) ·
+  psychiatrist-vs-psychologist 🟢 (+100 % / +68 %) · therapy-cost-in-india 🟡 CTR_DROP (−20 % / +3 %) ·
+  online-therapy-for-indians-in-usa ⚪ (+90 % impr) · couple-therapy-cost-in-bangalore ⚪ ·
+  therapy-after-a-breakup ⚪ (+37 %) · acrophobia-treatment ⚪ · online-psychiatrist-consultation-in-tamil ⚪
+  · **rtms-treatment-cost-in-india → closed as noise above.**
+- **W18–W21 (4):** /treatments/online-therapy 🟢 · **/treatments/biofeedback-therapy-for-anxiety 🟢
+  impressions +125 %, clicks +100 %** · /treatments/emdr-for-ptsd ⚪ · /treatments/talk-therapy-for-depression ⚪
+- **W36/W37 (2):** /illnesses/depression ⚪, /illnesses/anxiety ⚪
+
+The W20 reading is worth stating plainly and leaving alone: T12's 2026-08-10 **NEEDS_REFRESH** verdict
+rested on "DataForSEO pos=100 + 0 impressions", and the page is now improving on both axes. The verdict
+is T12's to re-issue — T20 supplies the data, not the judgement.
+
+### Step 4 — BRIEF-QUEUE HEALTH: 0 shippable `/blogs/`, floor 6 unmet (5th run)
+
+Independent recount — 16 briefs opened, every slug probed live (no `-L`):
+
+| Brief | Slug | Status |
+|---|---|---|
+| conduct-disorder-in-adults | 404 | blocked — ⛔ DO NOT SHIP / NEEDS_HUMAN |
+| gender-identity-disorder | 404 | blocked — NEEDS_HUMAN (illness-hub conflict) |
+| is-online-therapy-confidential | 404 | blocked — ⛔ DO NOT SHIP (suicide-safety wording, clinical sign-off) |
+| which-doctor-to-consult-for-alcohol-addiction | 404 | blocked — HOLD until 2026-10-06 |
+| cbt-for-ocd · dbt-for-borderline-personality-disorder | 404 | `/treatments/` — AP3 VETO, YMYL, T20 may never ship |
+| 8 × doctors-listings (adhd-specialists, cbt-therapists, bengali ×2, punjabi ×3, tamil) | all 404 | **viable, cap-blocked** — `/doctors/` rolls off **2026-09-22** |
+| guide-to-reset-your-sleep-cycle · psychology-of-love | both **200** | REFRESH briefs — correctly spared again (REFRESH-BRIEF-IN-NEW-QUEUE-01) |
+
+→ **Shippable `/blogs/`: 0.** T9 is still not starving: 8 authored, tiered, 404 `/doctors/` briefs are
+three days from their cap lifting.
+
+#### The refill, and the hypothesis it killed
+
+Four refills (09-12, 09-15, 09-17, 09-18) have concluded the holder-free `/blogs/` space is exhausted
+— all four from **GSC**. GSC can only report queries the site has already appeared for, so a fifth GSC
+mine could not falsify the conclusion; it could only repeat it. Tonight used the one demand source
+that is structurally outside GSC: **Google Ads converting search terms**.
+
+`scripts/google-ads-search-terms.py --days 30 --min-clicks 3` → **6,111 terms, 375 qualified, 251 with
+≥1 conversion** (`logs/t20-googleads-2026-09-19.json`). *(An initial `--days 90` attempt returned
+HTTP 400 — the report window is an enum; re-run at 30 d, clean. Registry rule respected: a paid-mining
+skip is logged and fallen through, never escalated.)* Cross-referenced against the 100k-row GSC mine:
+
+```
+HELD organically (pos ≤10) : 134
+WEAK (pos > 10)            :  18
+ZERO GSC impressions       :  99   ← apparent blind spots
+```
+
+Ninety-nine converting paid terms with no organic footprint would be the largest content-gap find in
+the task's history. **They are not blind spots.** Before writing a single brief, each candidate family
+was re-tested the only honest way — a **per-query filtered GSC pull** (`dimensions=[query,page]`,
+`operator: equals`, 90 d, `logs/t20-blindspot-verify-2026-09-19.json`):
+
+| "blind spot" | Reality |
+|---|---|
+| `marriage counselor near me` | **173 impr, position 1** |
+| `marriage counseling near me` | 165 impr, position 2 |
+| `in person therapy bangalore` | **147 impr, position 1** |
+| `psychological assessment` | 122 impr, position 6.3 |
+| `marriage counselor bangalore` | 97 impr, position 2 |
+| `therapists near me in person` | 45 impr, position 1 |
+| `offline therapist near me` | 33 impr, position 6 |
+
+**Root cause: a 100,000-row `query × page` pull is truncated at the row cap. Absence from a bulk mine
+is not evidence of absence.** This is the B25 error class ("a 0-impression file is stale, not zero")
+wearing a new costume, and acted on it would have produced a batch of briefs for queries the site
+already ranks **#1** for — cannibalising its own page-1 positions. The check that caught it cost four
+minutes of API calls.
+
+**Filed to T13 — MINE-TRUNCATION-ABSENCE-01:** any "no holder / holder-free" claim must be proven by a
+per-query filtered pull. Absence from a bulk mine is evidence about the mine, not about the site. This
+is the twin of rule (f) ("query claims need `dimensions=[query]`") and should sit beside it.
+
+**Net: 0 authorable briefs, 0 briefs written.** No content was authored, so the Verifier gate was not
+invoked — there was nothing to gate. Three independent directions (≥80 impr band, 30–79 impr band,
+paid-conversion demand) now agree: the `/blogs/` floor of 6 is a design constraint, not starvation.
+T13 G4 stands unchanged.
+
+### Step 4b — what the paid mine *did* produce
+
+**RELATIONSHIP-COUNSELLOR-CLIFF-01 → BACKLOG, T10 to score.** The strongest evidence class this task
+can produce — organic impressions **and** money — pointing at the same page. GSC 90 d
+(`logs/t20-cliff-verify-2026-09-19.json`): the relationship-counselling family is **3,119 impressions /
+30 clicks / 0.96 % CTR**, with every major row parked on the INTENT-PRIORITY §5 **pos 9–12 cliff**:
+`relationship counsellor` 670 @ 10.9 + 402 @ 11.5 · `relationship counselling` 522 @ 10.2 ·
+`best relationship counsellor in bangalore` 457 @ 10.0 · `relationship counselling bangalore` 165 @ 12.1 ·
+`relationship counsellor near me` 133 @ 11.3. Google Ads, same intent, 30 d: `couple therapy bangalore`
+**11.0 conversions** · `couple counselling bangalore` 6.0 · `relationship counsellor near me` 4.0 ·
+`relationship counselling bangalore` 2.0 — Mindtalk is paying for demand it nearly ranks for.
+`/doctors/relationship-issues-psychologists-in-bangalore` is live 200, **not url_locked, carries no
+tracking-db record at all**, already emits FAQPage, and its title (49 ch) carries no fee, near-me or
+session vocabulary. Non-YMYL listing → no AP3. Pre-write in the BACKLOG row.
+
+**W-BLR-THERAPISTS-0918 enriched rather than duplicated.** `therapy in bangalore` is **1,245 impr @
+pos 11.4** on `/doctors/therapists-in-bangalore` (+400 @ 11.0 bleeding to `/treatments/counselling-therapy`),
+and paid pays **9.0 conversions / 30 d** for `therapist in bangalore`. The page is url_locked to 10-30
+after the 09-18 B8-BLR refresh, so the correct move is not a competing BACKLOG row but a second success
+metric on the existing watch: at the 10-02 check, judge the refresh on whether this query crosses into
+the top 10. Written into `WATCH.md`.
+
+### Hard constraints — all clean
+
+`src/**` untouched · no push to the website repo · `scripts/*.py` unmodified (only executed) ·
+no billing/credential/ad-account writes (the DataForSEO and Mixpanel probes were read-only) ·
+no YMYL page shipped · nothing deleted (the duplicate row was marked, the refresh briefs were spared) ·
+weekly caps irrelevant (0 shipped) · digest posted.
+
+### Totals
+
+- Deploy health: ✅ READY (`1c09372`), 5/5 production READY, remote = deployed
+- Auto-fixed: **8** (6 × `published_at` back-fill · 1 duplicate row superseded · 14 GSC files pre-pulled)
+- False positives closed: **1** (rtms-treatment-cost-in-india, pre-emptively, before a watch existed)
+  \+ **1 hypothesis killed before it produced work** (99 "blind spots" → site ranks, several at #1)
+- Escalated: **0 new** · **2 carried** (DATAFORSEO-402 day 2, MIXPANEL day 59)
+- Brief queue: 0 shippable `/blogs/` (floor unmet, 5th run) · 8 viable `/doctors/` briefs, cap rolls off 09-22
+- New rows for T10: **1** (RELATIONSHIP-COUNSELLOR-CLIFF-01) · 1 watch enrichment (W-BLR-THERAPISTS-0918)
+- Filed to T13: **MINE-TRUNCATION-ABSENCE-01**, **PUBLISHED-AT-SCHEMA-DRIFT-01**, small-number floor on the GSC signal classifier
+- Artefacts: `logs/t20-googleads-2026-09-19.json` (6,111 terms) · `logs/t20-paid-vs-gsc-2026-09-19.json` ·
+  `logs/t20-blindspot-verify-2026-09-19.json` · `logs/t20-cliff-verify-2026-09-19.json` · 14 refreshed `gsc-data/*.json`
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-09-20 (Sunday) 20:50–21:40 IST
+
+## Step 0 — DEPLOY-HEALTH GATE: ✅ READY `1c09372`
+
+Vercel MCP answered. Last **5 production deploys on `mindtalk`: 5/5 READY, 0 ERROR** —
+`1c09372` (T11 B8-BLR + Delhi CTR) · `633b7f50` (T9 phobia blog) · `569c7bd` (B26) ·
+`a7a4c08` (CHILD-PSYCH fix) · `c3aafc4` (T9 4 blogs).
+
+**Undeployed-commit check (the 48 h rule):** GitHub `commits?sha=main` → HEAD is
+`1c093722` (2026-09-18T11:21:02Z) = **the deployed SHA**. Zero commits after the deploy.
+The deploy is ~52 h old, but the 48 h escalation only fires *while commits exist after it* —
+nothing has shipped since Friday (Saturday T20 shipped nothing, Sunday has no ship task).
+**Not a stalled hook. No escalation.**
+
+## Step 2 — VERIFICATION (Rule 1)
+
+### 🟢 MIXPANEL-BILLING-BLOCK-01 — **RESOLVED. CLOSED.** (day 60 ends)
+
+The row's own exit condition was "T20 will re-probe next run and close". Probed:
+
+- `Run-Query` project **4011856**, `$all_events`, last 3 d → **102,767 events**. No billing error.
+- Backfill check, weekly, last 75 d → **every week of the blind window is queryable**:
+  07-06 136,203 · 07-13 171,475 · 07-20 190,893 · 07-27 209,473 · 08-03 183,909 · 08-10 195,278 ·
+  08-17 202,887 · 08-24 188,047 · 08-31 194,053 · 09-07 207,016 · 09-14 197,376.
+
+**No data was lost — only API access was blocked.** T15 (conversion monitor) and T19 (conversion
+intelligence) resume with the full 07-22 → 09-20 retrospective intact; the doctor_card attribution
+bleed and the P15/P8 geo seeds are measurable again. Removed from the Kushal escalation list.
+
+### 🔴 DATAFORSEO-402-0918 — VERIFIED REAL, day 4. CARRIED, not re-escalated.
+
+`appendix/user_data` → `status_code 20000 Ok`, **balance −0.00136 USD**. Byte-identical to the
+09-18 and 09-19 reads — three consecutive nights at the same negative figure. A negative balance
+does not self-heal. Registry: **payment → Kushal only.** Already on the escalation list since
+09-18; re-sending it nightly is the re-flagging behaviour this task exists to stop, so it is
+carried in the digest, not re-raised as new.
+
+### ✅ FALSE POSITIVE CLOSED — DEAD-CLICKS-CRITICAL (T19 W34, 2026-08-19)
+
+The W34 run flagged **"Dead clicks 4,441 (+111 %) — CRITICAL, paid traffic amplifying broken UX"**
+and it has been **unverifiable for 60 days** because Mixpanel was blocked. With access restored it
+was the first thing checked. `$mp_dead_click`, weekly, 60 d:
+
+```
+07-20 4,393 · 07-27 4,392 · 08-03 4,069 · 08-10 3,803 · 08-17 4,047
+08-24 3,701 · 08-31 4,197 · 09-07 4,339 · 09-14 4,260
+```
+
+**A flat 3,701–4,393 band. No trend, ±10 % noise, and today's 4,260 is BELOW the 4,441 that was
+flagged as a crisis.** The "+111 %" was a week-over-week delta measured against an anomalously low
+week — not a regression. At ~4,000 dead clicks against ~200,000 events/wk (≈2 %) this is a stable
+baseline and a minor UX row at most. **It was never a CRITICAL.** Closed with evidence; not escalated.
+
+*(Same error class as the CDC "₹18,757/lead" and the B25 stale-file reads: a ratio quoted without
+its baseline. Worth T13's attention — a WoW percentage on a noisy weekly metric needs a trend check
+before it earns a severity label.)*
+
+### Carried without re-verification (deliberate — no re-flagging)
+
+- **T14-SCHEMA-STALE-02** — verified real 09-17, 3 of 4 gaps are `src/**` template work
+  (SCHEMA-MEDICALWEBPAGE-RESIDUAL-01, standing dev item with a spec already in `dev-specs/`).
+  Re-curling it nightly changes nothing.
+- **T14-BLOG-CWV-01 (P2)** — closes on *two weekly* lab reads < 2.5 s; last read 09-17, next due
+  ~09-24. Not due today.
+
+## Step 3 — AUTO-FIXES (2)
+
+1. **`brain/.git/index.lock` cleared.** A 0-byte lock from 23:08 on 09-19 had blocked T16's brain
+   backup for two nights (T16's own 09-19 log: *"commit blocked by index.lock… needs manual rm"*).
+   `os.unlink` fails on this FUSE mount; `os.rename` works (established 07-14) → renamed to
+   `index.lock.t20-cleared-20260920`. **T16 can commit tonight.**
+
+   **Filed to T13 — `T16-LOCK-CORPSE-ACCUMULATION-01`:** `brain/.git/` now holds **~120** renamed
+   lock corpses going back to 2026-06-15, most of them dated ~23:08–23:12 — T16's own slot. T16
+   leaves a lock behind *almost every night* and T20 renames it the next day. Renaming is a
+   workaround; the fix is T16 releasing its lock (or clearing a stale one itself on startup).
+   Nobody has ever fixed the cause because the symptom is cleared daily.
+
+2. **t17 proposal target filename corrected — MISMATCH-SKIP ×5 → applyable.**
+   `brain/proposed-changes/t17-tabs-create-fallback-20260906T2030.md` carried
+   `File to edit: cowork-tasks/task17-competitive.md`, **which does not exist**; the real file is
+   `cowork-tasks/task17-competitive-ai-monitor.md`. T10's apply-pass skipped it on 09-13, 09-15,
+   09-17, 09-19 and **again today (#5)** purely on the filename — the substance was never rejected,
+   and the stale threshold is 09-27.
+
+   Verified against the real file before touching it: `#### Step 5.5 — Chrome connection pre-check`
+   exists at **line 115**; `Step 5.6` returns **0 matches** — the proposal is still valid and
+   un-applied. Filename corrected, plus an applier note that the proposal's "### Before" block is a
+   **paraphrase** of Step 5.5, not its verbatim text (the real Step 5.5 is prose + a numbered list),
+   so the apply must **append** Step 5.6 rather than string-replace. Only the proposal file was
+   touched — `cowork-tasks/*.md` is T10/T13's to edit, and it was left alone.
+
+## Step 4 — BRIEF-QUEUE HEALTH: 0 shippable `/blogs/`, floor unmeetable (6th run)
+
+All 16 briefs re-opened, every slug probed live:
+
+| Brief | Slug | Status |
+|---|---|---|
+| conduct-disorder-in-adults | 404 | blocked — ⛔ DO NOT SHIP / NEEDS_HUMAN |
+| gender-identity-disorder | 404 | blocked — NEEDS_HUMAN (illness-hub conflict) |
+| is-online-therapy-confidential | 404 | blocked — ⛔ DO NOT SHIP (binding Verifier veto) |
+| which-doctor-to-consult-for-alcohol-addiction | 404 | blocked — HOLD until 2026-10-06 |
+| cbt-for-ocd · dbt-for-borderline-personality-disorder | 404 | `/treatments/` — YMYL, AP3, T20 may never ship |
+| 8 × doctors-listings (adhd, cbt, bengali ×2, punjabi ×3, tamil) | all 404 | **viable, cap-blocked → 2026-09-22** |
+| guide-to-reset-your-sleep-cycle · psychology-of-love | both **200** | REFRESH briefs, human-gated — spared again (REFRESH-BRIEF-IN-NEW-QUEUE-01) |
+
+**Shippable `/blogs/`: 0.** T9 is **not starving** — 8 authored, tiered, 404 `/doctors/` briefs are
+**two days** from their cap lifting (T9-DOCTORS-SHIP-0922).
+
+**The one new thing tried, and its honest answer.** Five refills have now exhausted the ≥80 impr GSC
+band, the 30–79 impr band, and Google Ads converting terms. Tonight Mixpanel came back online for the
+first time in 60 days, which raised a fair question: does on-site behaviour expose demand GSC and paid
+cannot see? **It does not — `Get-Events(query="search")` returns 0 events.** The site has no
+site-search instrumentation, so there is no internal-demand corpus to mine. That closes the last
+untested direction rather than leaving it as a someday-maybe.
+
+**No sixth GSC re-mine was run.** The 09-17 finding stands verbatim: re-mining the same window
+returns the same rows, and DataForSEO (SERP/PAA, the only non-GSC keyword source) is 402-blocked.
+The `/blogs/` floor of 6 is a **design constraint**, not starvation — T13 G4 unchanged.
+
+## Step 5 — VERIFIER GATE
+
+**Not invoked — 0 briefs authored, nothing to gate.** The bar was not lowered; there was no content.
+
+## Hard constraints — all clean
+
+`src/**` untouched · no push to the website repo · `scripts/*.py` unmodified (only executed) ·
+`cowork-tasks/*.md` untouched (only the proposal file was edited) · no billing / credential /
+ad-account writes (the DataForSEO and Mixpanel probes were read-only) · no YMYL page shipped ·
+nothing deleted (the lock was renamed, the refresh briefs spared) · weekly caps irrelevant (0 shipped) ·
+digest posted.
+
+## Totals
+
+- Deploy health: ✅ READY (`1c09372`), 5/5 production READY, remote = deployed, 0 commits after
+- **Resolved & closed: 1 — MIXPANEL-BILLING-BLOCK-01 (60-day blindness ended, full history intact)**
+- **False positives closed: 1 — DEAD-CLICKS-CRITICAL (flat 60-day band; the flagged figure is above today's)**
+- Auto-fixed: **2** (brain `index.lock` cleared → T16 unblocked · t17 proposal filename → applyable)
+- Escalated: **0 new · 1 carried** (DATAFORSEO-402, day 4, balance −$0.00136)
+- Brief queue: 0 shippable `/blogs/` (floor unmeetable, 6th run) · 8 viable `/doctors/`, cap rolls off 09-22
+- Filed to T13: **T16-LOCK-CORPSE-ACCUMULATION-01** · WoW-percentage-needs-a-trend-check (dead-clicks class)
