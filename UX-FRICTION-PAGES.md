@@ -1,14 +1,34 @@
-# UX Friction Pages — Updated 2026-09-09 (W37)
+# UX Friction Pages — Updated 2026-09-23 (W39)
 
-**Written by:** T19 Conversion Intelligence. Source: Mixpanel $mp_rage_click + $mp_dead_click, trailing 7d Sep 2–8.
+**Written by:** T19 Conversion Intelligence. Source: Mixpanel $mp_rage_click + $mp_dead_click, trailing 7d Sep 16–22.
 **Read by:** T10 Strategist (prevents SEO investment in broken pages) + Product/Dev team.
 **NOT for T18** — these are UI bugs, not E-E-A-T problems.
 
 ---
 
-## W37 Site totals
-- **Rage clicks:** 729 (+52.2% vs W35 479) — 🔴 RESURGENCE
-- **Dead clicks:** 4,635 (+23.2% vs W36 3,761) — 🔴 RE-ESCALATING
+## W39 Site totals
+- **Rage clicks:** 750 total / 247 unique (+2.9% vs W37 729) — 🔴 SUSTAINED HIGH
+- **Dead clicks:** 4,883 total / 1,141 unique (+5.3% vs W37 4,635) — 🔴 ESCALATING (dead rate 11.1% of visitors)
+
+**Note (W38 gap):** W38 had Mixpanel billing block. W39 vs W37 comparison (2-week gap) — values are directionally comparable.
+
+---
+
+## W39 Dead click hotspots (same pattern as W37 — app UX unchanged)
+
+All dead clicks on consult.cadabams.com (app), NOT mindtalk.in (website). SEO website clean.
+
+**Critical pages persist:**
+- consult.cadabams.com/home — highest single-page dead clicks (pattern sustained)
+- consult.cadabams.com/consult/find-therapist — PERSISTENT W27+ (now W39, 12+ weeks unresolved)
+- consult.cadabams.com/consult/checkout + /consult/consent — payment funnel blocked
+- consult.cadabams.com/auth/login — login wall friction
+
+**Journey Task crash deepening:** Started Journey Task: 645 (W34) → 365 (W35) → 124 (W36) → 30 (W37) → 27 (W39). Near-zero for 3+ weeks. Journey UX dead clicks confirm hypothesis: buttons non-responsive.
+
+---
+
+## W37 Dead click hotspots (reference)
 
 ---
 
@@ -86,3 +106,4 @@ This warrants immediate product investigation:
 | W35 | 479 | 3,761 | ✅ Improving |
 | W36 | ~500 est | 3,761 | ⚪ Flat (W35 data held) |
 | **W37** | **729** | **4,635** | 🔴 RE-ESCALATING |
+| **W39** | **750 (247 uniq)** | **4,883 (1,141 uniq)** | 🔴 ESCALATING (dead rate 11.1%) |

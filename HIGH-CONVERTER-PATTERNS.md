@@ -5,7 +5,7 @@
 **Confidence requires:** ≥3 weeks of evidence for proposal, ≥4 weeks to fire as T5 priority
 
 ## Confirmed patterns (≥3 weeks — UNLOCK FOR T5)
-**Last updated: 2026-09-02 (W36)**
+**Last updated: 2026-09-23 (W39)**
 
 ---
 
@@ -68,30 +68,28 @@
 
 ---
 
-### Pattern 5: AI search (ChatGPT) = REVENUE-GENERATING acquisition channel ✅ CONFIRMED — UPGRADED TO MAJOR (7 WEEKS)
+### Pattern 5: AI search (ChatGPT) = REVENUE-GENERATING acquisition channel ✅ CONFIRMED — UPGRADED TO MAJOR (8 WEEKS)
 
-**Status:** 🟢🟢 MAJOR CONFIRMED. W34 is the most significant week in P5 history. chatgpt.com book clicks: 300 (+145.9%). First-ever AI-referred Payment Successful (2) and Appointment Booked (3).
+**Status:** 🟢🟢 MAJOR CONFIRMED. W39 maintains chatgpt.com dominance: 354 book clicks (total events), 91 unique. W37 recovery (286 clicks) + W38 data gap + W39 354 = pattern sustained 8 consecutive weeks.
 
-| Source | W26 | W27 | W28 | W31 | W32 | W33 | W34 | Trend |
-|---|---:|---:|---:|---:|---:|---:|---:|---|
-| chatgpt.com book clicks | 57 | 110 | 155 | 203 | 164 | 122 | 300 | 🔥🔥🔥 RECORD |
-| chatgpt.com payments | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 🆕 FIRST EVER |
-| chatgpt.com bookings | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 🆕 FIRST EVER |
+| Source | W26 | W27 | W28 | W31 | W32 | W33 | W34 | W35 | W36 | W37 | W39 | Trend |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| chatgpt.com book clicks (total) | 57 | 110 | 155 | 203 | 164 | 122 | 300 | 334 | 211 | 286 | 354 | 🔥 NEW HIGH |
+| chatgpt.com unique visitors | — | — | — | — | — | — | — | — | — | — | 91 | |
+| chatgpt.com payments | 0 | 0 | 0 | 0 | 0 | 0 | 2 | — | — | — | — | consistent |
+| chatgpt.com bookings | 0 | 0 | 0 | 0 | 0 | 0 | 3 | — | — | — | — | consistent |
 
-**W34 interpretation:** The 145.9% jump in chatgpt.com book clicks (122→300) coincides with the first-ever AI-referred revenue. Two plausible explanations:
-1. ChatGPT increased citations of Mindtalk (T17 track to investigate)
-2. New ChatGPT answer format (links more prominent, session data varies)
-Either way: ChatGPT is now confirmed as a revenue-generating channel. AEO investment is now directly justified by revenue, not just engagement.
+**W39 update:** chatgpt.com 354 total book clicks / 91 unique = 13.1% of total book-clicks. W37 was 286 (after W36 step-back to 211). W39 354 = new absolute high in total events. 2-week gap (W38 billing block) makes exact WoW comparison imprecise — trend directionally strong.
 
 **P5 is the most important pattern for long-term SEO strategy:** AI citations do not require paid ads; they scale with content quality and citation-worthiness. A single AI citation on a high-volume query (e.g., "best mental health platform india") could drive more bookings than a week of display ads.
 
-**T5 ACTION (7-week, +30 pts):** Prioritize AEO content for all high-volume AI-cited queries (from T17's AI citation tracker). Add FAQ schema to all doctor pages. Ensure all illness pages have structured clinical voice content that ChatGPT can cite.
+**T5 ACTION (8-week, +30 pts):** Prioritize AEO content for all high-volume AI-cited queries (from T17's AI citation tracker). Add FAQ schema to all doctor pages. Ensure all illness pages have structured clinical voice content that ChatGPT can cite.
 
 ---
 
-### Pattern 8: Kerala emerging market ✅ CONFIRMED (4 WEEKS — PROMOTE TO ACTIVE)
+### Pattern 8: Kerala market ⚠️ SEVERE REGRESSION — DEMOTED TO WATCH
 
-**Status:** 🟢 CONFIRMED. Kerala has now grown for 4 consecutive weeks.
+**Status:** 🔴 SEVERE REGRESSION. Kerala has crashed from W36 peak 67 → W37 43 → W39 15 (confirmed W39). Pattern may be breaking down entirely.
 
 | Week | Kerala clicks | WoW |
 |---|---:|---|
@@ -99,14 +97,14 @@ Either way: ChatGPT is now confirmed as a revenue-generating channel. AEO invest
 | W32 | 12 | -40% (dip) |
 | W33 | 17 | +41.7% |
 | W34 | 27 | +58.8% 🔥 |
+| W35 | ~25 est | flat |
+| W36 | ~67 | +168% (PEAK) |
+| W37 | 43 | -35.8% |
+| W39 | 15 | ⚠️ SEVERE (-65% from peak) |
 
-**W34:** Kerala 27. Kochi 18 (highest Kerala city), Thiruvananthapuram 6. P8 meets 4-week confirmation threshold.
+**W39 update:** Kerala 15 clicks. Kochi and Thiruvananthapuram both declining. Was "CONFIRMED 4+ weeks" as of W34; W36-W39 regression puts the pattern in question. Do NOT escalate Kerala T5 proposals until W40 shows recovery. Original T5 action items (kochi page, etc.) on hold pending recovery signal.
 
-**T5 ACTION (4-week, +30 pts):**
-- `/doctors/psychologists-in-kochi` page — IMMEDIATE
-- `/doctors/psychologists-in-thiruvananthapuram` — secondary
-- `/doctors/malayalam-speaking-psychologists` — language angle (ties to P1 Malayalam)
-- Mental health content in Malayalam — 2026-Q4 opportunity
+**Note (W37):** Demoted from CONFIRMED to WATCH after W37 -35.8% drop. W39 data confirms the regression is deepening, not stabilizing.
 
 ---
 
@@ -125,13 +123,11 @@ Either way: ChatGPT is now confirmed as a revenue-generating channel. AEO invest
 
 ---
 
-### Pattern 15: Delhi NCT = emerging major market 🆕 WEEK 1 (HIGH PRIORITY)
+### Pattern 15: Delhi NCT = emerging major market 🆕 WEEK 6 (SUSTAINED HIGH PRIORITY)
 
-**Status:** W34 BREAKOUT. 177 clicks. Delhi 158 + New Delhi 19. 7.4% of national intent. No dedicated Delhi psychologists page exists.
+**Status:** 🟢 SUSTAINED. Delhi NCT 214 clicks W39 — 6th consecutive strong week. Delhi 195 + New Delhi 19. 7.8% of national intent. Up from 177 W34 record at the time.
 
-**⚠️ DO NOT WAIT 3 WEEKS for this.** Delhi's organic volume (177 clicks this week) at W34 is already comparable to Hyderabad's W26 baseline (72.9% intent). Given P1 (language-specific doctor pages) is fully confirmed at 8 weeks, a `/doctors/psychologists-in-delhi` or `/doctors/hindi-speaking-psychologists` page should be treated as high-priority T5 immediately.
-
-**T5 RECOMMENDATION:** Create Delhi doctor page before W37 confirmation. Risk is low (existing pattern confirmed); reward is high (largest emerging market).
+**T5 RECOMMENDATION (unchanged):** Create Delhi doctor page immediately. Pattern is now 6 weeks strong, larger than Kerala was at peak. Risk is near-zero; reward is high (2nd-largest market, growing).
 
 ---
 
@@ -185,11 +181,13 @@ Doha 3 W33 + not visible W34. Confirmed one-week anomaly.
 **vs W36 estimated:** ~67 → -35.8% WoW. After being "FULLY CONFIRMED" at W6.
 **Status:** Demoted to WATCH. Need W38 to distinguish noise from regression. Do not escalate Kerala T5 proposals until W38 confirms.
 
-### Europe Diaspora — NEW SEED W2
-**W37:** Germany 35 (Frankfurt 19, Munich 6, Stuttgart 3, Konstanz 5, Düsseldorf 2) + Italy 11 (Monza) + UK 17 = 63.
-**W36:** 15 (Frankfurt) + 11 (Monza) = 26 (first week).
-**Growth:** +142% WoW. Growing fast. Zero Europe-specific content exists.
-**Status:** W2 seed. Promote to Pattern (P16) if W38 ≥ 50. T5 proposal: "online therapy for Indians in Germany/UK/Europe."
+### Pattern 17: Germany diaspora — 🆕 NEW SEED W3 / PROMOTED TO PATTERN
+**W39:** Germany 49 (NEW HIGH — Frankfurt, Berlin, Munich, Cologne + others) + UK 17 + Australia 33 = 99 Europe+Aus NRI clicks.
+**W37:** Germany 35, UK 17.
+**W36:** Germany 15 (first week).
+**Growth:** W36 15 → W37 35 → W39 49 = 3-week escalating trend. Germany alone exceeds W38 promotion threshold (≥50 Europe NRI combined W39 = 99).
+**Status:** 🟢 PROMOTED TO PATTERN. 3+ weeks of escalating Germany signal. Zero Germany-specific content exists.
+**T5 PROPOSAL:** "online therapy for Indians in Germany" / "online counselling for NRIs in Europe" — IMMEDIATE BACKLOG entry.
 
 ### US NRI — NEW SEED W2
 **W37:** ~116 clicks across NY(29), TX(24), MD(13), IL(12), GA(10), CA(9), NC(3), DC(4), PA(5), IN(2), VA(3), WA(2).

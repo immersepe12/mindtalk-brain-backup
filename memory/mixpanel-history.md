@@ -210,3 +210,38 @@ One line per Task 15 run. Most recent at bottom.
   ✅✅ riya_page_viewed +133% (6→14) — first meaningful jump; may be responding to content/internal linking
   ✅✅ doctor→book CTA +10.6% (66%→73%) — new record high; doctor pages = strongest conversion path
   ⚠ illness_page_viewed -26.7% (161→118) — high-intent pages losing traffic; check ranking
+
+
+2026-09-23T10:00 IST | T15 SCHEDULED — weekly conversion monitor | funnel = unique users; volume = total events |
+  VOLUME (total events):
+  - $mp_web_page_view: 48,028 total events (funnel A entry: 10,257 unique, -0.8% vs 10,344 last week — stable)
+  - blog_viewed: 1,993 | doctor_profile_viewed: 4,011 total (funnel entry: 1,719) | treatment_page_viewed: 500 | illness_page_viewed: 186 | riya_page_viewed: 20 (+53.8%✅ vs 13)
+  - book_appointment_clicked: 2,674 total (funnel: 942, +27.3%✅ vs 740) | cta_clicked: 217 | whatsapp_clicked: 104 | call_clicked: 52
+  - form_submitted: 117 total events (funnel unique: 71, +29.1%✅ vs 55) | lp_form_submitted: 68 (+17.2%✅ vs 58)
+  - form_started: 972 total | form_error: 2 | lead_create_failed: 420 (+2,233%🚨🚨🚨 vs 18)
+  FUNNELS:
+  - A (main): page view 10,257 → book CTA 942 (9.19%, was 7.16% +28.4%✅) → form_submit 71 (7.54% of CTA, 0.69% of PVs, was 0.53%✅)
+  - B (doctor-driven): doctor_profile 1,719 → book CTA 615 (35.77%, was 32.9%✅) → form_submit 4 (0.65% of CTA, was 0.81% — tiny sample, noise)
+  - C (where-to-start): viewed 16 → started 10 (62.5%) → completed 8 (80% of started; 50% overall, was 53% — stable)
+  KEY METRICS:
+  - Backend fail rate: 420/(117+68+420) = 69.4% 🚨🚨🚨 CATASTROPHIC (was 13.7% last week; previous peak was 35.7% in June — NEW WORST)
+  - lp:form ratio (total events): 68/117 = 0.58:1 (on-site form dominant, stable vs prior period)
+  - Doctor→book CTA: 35.77% (was 32.9%, +8.7% — stable/improving ✅)
+  - Riya discovery rate: 20/10,257 = 0.195% (was 13/10,344 = 0.126% — +54.8% ✅)
+  - where-to-start overall completion: 50% (16→10→8; was 53% — stable)
+  WoW FLAGS (>20%):
+  🚨🚨🚨 lead_create_failed +2,233% (18→420) — backend fail rate 13.7%→69.4% — NEW ALL-TIME WORST. Something broke in the Freshsales/lead-creation backend. Urgently flag to engineering.
+  ✅ book_appointment_clicked (funnel) +27.3% (740→942) — biggest WoW jump in commercial intent this quarter
+  ✅ form_submitted (funnel) +29.1% (55→71) — on-site booking form conversion growing
+  ✅ page→book CTA rate +28.4% (7.16%→9.19%) — structural intent improvement
+  ✅ riya_page_viewed +53.8% (13→20) — continued discovery growth; best reading ever
+  ✅ lp_form_submitted +17.2% (58→68) — approaching flag threshold; LP form recovering
+  ⚠ Note: form_started = 972 (total events) vs 20 unique last week — volume jump suggests ads are running at scale
+  IMPLICATIONS:
+  - The lead_create_failed explosion (18→420) is the P0 issue this week. Even if the on-site funnel is the best it's been (form_submit +29%, book_CTA +27%), nearly 70% of leads are being LOST in the Freshsales backend. Urgently investigate API/webhook to Freshsales.
+  - form_started = 972 total events vs form_submitted = 117 (funnel) suggests either very high multi-try rates OR paid ad traffic driving form starts that bounce. With 972 starts and only 117 total submits + 420 failures, ~435 are neither succeeding nor failing — abandonment is also high.
+  - Commercial intent metrics are the best recorded: book CTA rate 9.19%, form submit rate 0.69% of PVs. The funnel is working. The backend is breaking.
+  - If lead_create_failed is correctly counted: at 420 failures, we are likely losing 60-70% of would-be leads. This is a critical revenue leak.
+  - Riya hitting 20 views (best ever) — internal linking from new high-volume blogs (overthinking, situationship) may finally be routing users to it.
+
+| 2026-09-23 (7d) | 48,028 total / 10,257 funnel | 942 funnel | 71 funnel / 117 total | 68 | 420 🚨 | 35.8% | 🚨 backend fail 69.4% (NEW WORST); ✅ book CTA +27%, form +29%; ✅ riya=20 best ever |

@@ -1,3 +1,28 @@
+### 2026-09-22 T20 Auto-Remediation (EVENING 20:55–21:50 IST) — 11 auto-fixes, 1 false positive, 0 new Kushal escalations, and T20 catching itself
+- **Step 0.5:** `list_sessions` — 12 sessions, all idle, no twin. The 16:20 block below was an off-cycle catch-up; **this is tonight's run of record.** `local_75a632d9` (strategist stuck `running` 26 h on the entitlement kill) is **now idle** — CLAUDECODE-ENTITLEMENT-KILL-01 is intermittent, not an active outage; stays open with Kushal.
+- ✅ **Deploy health: READY `a8259c16`** (T11 meta_ctr_update). 5/5 — Verifier independently pulled 10/10 — production READY, 0 ERROR. `git ls-remote origin main` = deployed SHA → 0 stranded. T9's `f6250ddf` deployed 14 min earlier, ancestor of the live tree.
+- ✅ **T9-DOCTORS-SHIP-0922: carried escalation does NOT fire — row PARTIAL, not closed.** T9 shipped **4 of 8**, all HTTP 200 and all non-empty live (**10 / 9 / 9 / 1** professionals). Other 4 still 404, cap-held to 09-29. **punjabi-delhi at 1 professional is thin** → 30-day watch (W-PUNJABI-DELHI-THIN-0922).
+- 🔎 **A verification pattern the whole engine has been trusting matches nothing.** CHILD-PSYCH established "assert `Showing N professionals`" as the post-ship listing check. That grep returns **0 on every listing page including known-good controls** — the count is interpolated across the Next.js RSC payload. Correct pattern: `Showing \\",[0-9]+`. Controls: therapists-in-bangalore 5, child-psychologists-in-bangalore 18. Anything "verified" with the old pattern was not verified. → T13.
+- 🆕 **The night's real finding: T5 ran WITH the new gates in its spec and applied neither.** task5 mtime **16:25:09**; T5 authored **16:30–16:37** (timed off briefs T20 never touched). **0 of 20 briefs carry an ownership check**, and `logs/new-content-2026-09-21.txt` asserts *"§5 Pre-check status: ALL PASS"* while omitting both new §5 lines — a pass claimed on checks never run. Collision check (§179) also unrun: **4 briefs re-authored from 24–31 Aug** opened duplicate tracking rows → *"20/20 cap MET"* was really **16/20**. **4 new-content slots were never used this week.** → T13 (`T5-GATE-NOT-APPLIED-01`), not Kushal.
+- ⛔ **T20 committed the error it exists to catch, and the Verifier caught it.** The first ownership pull used `rowLimit 10`, 90d only; task5 §174 requires ≥25 and **28d AND 90d**. Four queries hit the cap = truncated — `MINE-TRUNCATION-ABSENCE-01` committed by its own enforcer. Re-pulled properly; **one verdict flipped**: `/doctors/therapists-near-me` is **NOT owned** (43.9 % @ **pos 14.8** on 20,137 impr) and T20's DO-NOT-SHIP was **withdrawn in the brief itself**. The psychologists hold survives on the singular — `/doctors/psychologists-in-bangalore` owns "psychologist near me" at **80.3 % @ 6.0 (28d)** / 61.7 % @ 6.6 (90d), 18,030 impr. → T13 (`T20-SELF-TRUNCATION-01`).
+- 🎯 **B12 / T17-8 (CRITICAL, 7+ weeks stalled) now has the draft brief it was waiting for.** T5 independently rediscovered it: `briefs/NEW-therapists-near-me-brief.md`, 60.5K/mo cluster, and per the brief the account's **highest-converting paid term — 83.5 conversions / 451 clicks / ₹19,073 in 30d**. Ownership-free. Blocked only on scope, which is the *same question* as `PSYCHIATRIST-NEAR-ME-DILUTION-01` — decide the two together.
+- 🔧 **11 auto-fixes** (write-avoidance posture from 16:20 lifted once T9 went idle): 4 briefs archived-as-shipped (2 refresh briefs spared again per REFRESH-BRIEF-IN-NEW-QUEUE-01); 1 archived on **AP9 slug-twin** (`how-to-handle-stress-in-a-relationship` vs live `how-to-deal-with-relationship-stress`); 2 near-me briefs blocked/rerouted; 2 Indiranagar briefs → NEEDS_HUMAN; 6 dead-route rows + 4 duplicate cap rows → SUPERSEDED_DUPLICATE. tracking-db: **429 keys before and after, 0 lost** (Verifier-checked).
+- 🔴 **DATAFORSEO-402 day 7 — re-verified REAL, CARRIED, not re-escalated.** Balance **−0.00136 USD**, byte-identical on a 5th consecutive check, `limits.total_serp: 0`. **Standing caveat:** `logs/rank-2026-09-22.txt` checked **1 keyword of 291** — the empty `flagged-drops`/`confirmed-drops` are a consequence of the 402, not a healthy site.
+- ⚪ **1 false positive closed:** T16's ops-health listed `rank-surveillance` + `observation-monitor` ❌ MISSING; both log files exist, written 16:18/16:19 — T16 read the directory the same minute. Timing artifact.
+- 📋 **Queue: `/blogs/` 0 shippable, floor unmeetable 8th run — cause documented, not assumed.** T5's own fresh discovery (the refill, 16:30) produced **one** `/blogs/` candidate in 20 briefs and it failed AP9 on a live slug twin. No 8th T20 re-mine (DataForSEO SERP/PAA 402-dead; every other direction closed on primary data). **T9 is not starving:** 14 clean Tier A `/doctors/` briefs, all ownership-verified tonight as genuinely free.
+- **Verifier: 4 APPROVE / 4 CORRECTION / 0 VETO** — all corrections applied; its 4 missed-items (duplicate cap rows, unchecked briefs, no-brain-write, mtime-before-edit) all closed in-run.
+- Full log: `brain/memory/remediation-log.md` 2026-09-22 (evening).
+
+### 2026-09-22 T10 Strategist (8 PM IST) — 2 Meta-Learner proposals applied, BACKLOG maintained, DataForSEO day 5+, Mixpanel RESOLVED
+- ✅ **MIXPANEL-BILLING-BLOCK-01 RESOLVED** (T20 09-20). T15/T19 conversion intelligence unblocked.
+- 🔴 **DATAFORSEO-402 — day 5+, still CRITICAL.** No rank data. T10/T17 operating GSC-only. Kushal action required (payment).
+- ✅ **2 Meta-Learner proposals applied:**
+  - `t5-query-ownership-gate-and-trackingdb-shape-20260914T2330`: 3 hunks inserted into task5-new-content-discovery.md — QUERY-OWNERSHIP GATE (per-query GSC ownership check before briefing), COLLECTION+QUEUE COLLISION CHECK, tracking-db Shape rule (FLAT dict assertion), and 2 §5.5 pre-check rows. Addresses 19/20 wasted briefs on 09-14 (site already owns those queries). Apply-on 09-21 (1 day overdue). Snapshot at brain/before-snapshots/task5-new-content-discovery-20260922T2000.bak.
+  - `t17-tabs-create-fallback-20260906T2030`: Step 5.6 Tab creation fallback appended to task17-competitive-ai-monitor.md. Step 5.5 connected paths redirected to Step 5.6. Prevents a tabs_create_mcp stall from skipping AI citation step when Chrome is confirmed connected. Apply-on 09-13 (9 days overdue, stale threshold 09-27). Snapshot at brain/before-snapshots/task17-competitive-ai-monitor-20260922T2000.bak.
+- 📋 **T9 cap reset today (09-22):** 8 Tier A `/doctors/` listing briefs now shippable (adhd-specialist-near-me, cbt-therapy-near-me, bengali-speaking-in-delhi/mumbai, punjabi-speaking-in-bangalore/delhi/mumbai, tamil-speaking-in-mumbai). Queued as T9-DOCTORS-SHIP-0922 at top of BACKLOG.
+- 📋 **W43 Day-21 midpoints** (8 URLs shipped 08-31) were due YESTERDAY 09-21. T12 overdue on evaluation. psychiatrist-vs-psychologist Day-21 fires TODAY.
+- 📋 **Priority posture:** RELATIONSHIP-COUNSELLOR-CLIFF-01 (T11 IMMEDIATE, Tier A paid-validated) + FIND-THERAPIST-CTR-01 (T11 IMMEDIATE, pos 1.7 / 0.12% CTR) + T9-DOCTORS-SHIP-0922 (cap reset today).
+
 ### 2026-09-20 T10 Strategist (8 PM IST) — 4 Meta-Learner proposals applied, BACKLOG ranked, no new content shipped
 - 🔴 **DATAFORSEO-402 — day 3, still CRITICAL, Kushal action required.** No rank data for 3rd consecutive day. T1 blind.
 - 🔴 **MIXPANEL-BILLING-BLOCK-01 — day 60, CRITICAL.** T15/T19 conversion data blind since 07-22.
@@ -1368,3 +1393,32 @@ Full log: brain/memory/decisions/2026-09-14.md
 **Site posture:** GROWTH · ATH maintained · Q3 targets exceeded · W37 (09-12→09-18) data pending (no weekly report yet).
 
 **Next T12 run:** 2026-09-27 — evaluate W43 Day-21 batch (8 blogs) + W39 DATA_GAP resolution.
+
+---
+
+### T10 Strategist — 2026-09-23
+
+**DataForSEO 402:** Day 8 CRITICAL. Balance NEGATIVE −$0.0014 confirmed. Longest sustained outage to date (09-14 single-day transient was false positive; this run since 09-15 is real). All rank data unavailable. flagged-drops.json empty = 402 artifact, NOT healthy signal. Escalating to Kushal every run until resolved.
+
+**CTR harvest batch (this week):**
+- 09-22: FIND-THERAPIST-CTR-01 ✅ SHIPPED (commit a8259c16, /doctors/find-therapist)
+- 09-22: RELATIONSHIP-COUNSELLOR-CLIFF-01 ✅ SHIPPED (commit a8259c16, /doctors/relationship-counsellors-in-bangalore)
+- 09-23: DEMENTIA-LISTING-TITLE-01 ✅ SHIPPED (commit 691c02ff, /doctors/alzheimers-specialists-in-bangalore, 754 impr / 0 clicks, baseline page-1, W-DEMENTIA-BLR-0923 open 10-07)
+- 09-23: LIGHT-THERAPY-INSOMNIA-CTR-01 ✅ SHIPPED (commit 2ea8fdcd, /blogs/light-therapy-for-insomnia, 616 impr / 0 clicks / pos 10.9, W-LIGHT-THERAPY-0923 open 10-07; SCHEMA-MEDICAL-TYPES-01 gap noted: blog template does not emit FAQPage JSON-LD)
+
+4 CTR fixes in 2 days — strongest CTR harvesting batch since site launch.
+
+**Queued for T11 IMMEDIATE:** B18 — online-psychiatrist-hub internal links. Inject links from /illnesses/depression + /illnesses/anxiety to /doctors/online-psychiatrist-consultation. Tier A page organically moved pos 20.7→9.6; internal link injection expected +15-30 clicks/wk.
+
+**BURNOUT-CANNIBAL-01 escalated:** W-B7 batch2 check date (09-16) has passed. Row updated to IMMEDIATE. Awaiting Kushal decision on guide-to-burnout-syndrome vs burnout-treatment differentiation.
+
+**Meta-Learner proposals confirmed:** t17-tabs-create-fallback + t5-query-ownership-gate both in brain/applied-changes/ ✅. Three future-dated proposals (t11-published-at-schema-drift, t20-mine-truncation-absence-guard, t20-refresh-brief-archive-hazard) due 09-27 — skipped today per spec.
+
+**Upcoming checkpoints:**
+- 09-27: T12 Learner — W43 Day-21 midpoints (8 blog URLs from 08-18 ship)
+- 09-27: Apply 3 Meta-Learner proposals (t11 + 2x t20)
+- 09-29: W43 Day-42 finals (HFA-CANNIBAL-01 decision needed — old page 795/796 impr, new page 1 impr @ pos 52)
+- 09-29: B8-MON check
+- 09-29: T9-DOCTORS-SHIP-0922 cap reset (4 remaining listing pages)
+
+**Site posture:** GROWTH · ATH maintained · Q3 targets all exceeded · DataForSEO blind (Day 8) · GSC clean · 4 CTR wins this week · Internal link injection queued.

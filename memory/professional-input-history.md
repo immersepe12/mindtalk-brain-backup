@@ -87,3 +87,9 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W38 | /treatments/emotionally-focused-therapy-eft | Dr. Swarupa Mohan Udgiri | 45 | brief_generated |
 | 2026-W38 | /illnesses/bipolar-disorder | Dr. Thejus Kumar B R | 40 | brief_generated |
 | 2026-W38 | /blogs/how-to-stop-overthinking | Ms. Tejal Jaiswal | 35 | brief_generated |
+| 2026-W39 | /illnesses/posttraumatic-stress-disorder-ptsd | Abhimanyu Chandak (abhimanyu-chandak) | 55 | brief_generated |
+| 2026-W39 | /illnesses/drug-addiction | Dr. Vishal Kasal (vishal-kasal) | 55 | brief_generated |
+| 2026-W39 | /illnesses/alzheimers | Dr. Arun Kumar V (dr-arun-kumar) | 55 | brief_generated |
+| 2026-W39 | /treatments/emdr-for-anxiety | Dr. Krishna K R (krishna-k-r) | 55 | brief_generated |
+| 2026-W39 | /treatments/talk-therapy-for-depression | Dr. Arun Kumar V (dr-arun-kumar) | 55 | brief_generated |
+| 2026-W39 | /blogs/guide-to-stop-overthinking-and-anxiety-naturally | Rangapriya Raghavan (rangapriya-raghavan) | 45 | brief_generated |

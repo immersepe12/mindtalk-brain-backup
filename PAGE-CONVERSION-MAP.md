@@ -1,92 +1,100 @@
-# Page Conversion Map — Updated 2026-09-09 (W37)
+# Page Conversion Map — Updated 2026-09-23 (W39)
 
-**Source:** T19 Conversion Intelligence. Site-level only this run (per-page Mixpanel queries deferred due to query budget). Tier classifications held from W34 last full per-page run.
+**Source:** T19 Conversion Intelligence. Site-level run (W39). Per-page UTM campaign breakdown used for page-type tier inference. Tier classifications held from W34 last full per-page run; updated where W39 data gives clear signal.
 **Read by:** T10 Strategist (action scoring), T18 Professional Input (Leaky Bucket queue), T5 New Content Discovery (pattern weighting).
 
 ---
 
-## Site-Level KPIs (W37)
+## Site-Level KPIs (W39)
 
-| Metric | W37 | W36 | WoW |
+| Metric | W39 | W37 | WoW (vs W37) |
 |---|---|---|---|
-| Unique visitors | 9,350 | ~10,715 (est) | -12.7% |
-| Total book clicks | 2,647 | ~2,582 (est) | +2.5% |
-| Unique book clicks | 925 | — | — |
-| Intent rate (total/unique) | 28.3% | 24.1% | +4.2pp 🔺 NEW HIGH |
-| Payments (unique) | 177 | 200 | -11.5% |
-| Bookings (unique) | 204 | 237 | -13.9% |
-| mindtalk_web payments | 3 | 5 | -40% |
-| mindtalk_web bookings | 5 | — | — |
-| chatgpt.com book clicks | 286 | 211 | +35.5% RECOVERY |
-| chatgpt.com payments | 3 | — | AI-rev record |
-| chatgpt.com bookings | 4 | — | AI-rev record |
-| Assessment Completed | 303 | ~490 est | -38% |
-| Started Journey Task | 30 | 124 | -75.8% 🔴 EMERGENCY |
-| Stress Tracker Started | 50 | — | — |
-| Rage clicks | 729 | 479 | +52.2% 🔴 |
-| Dead clicks | 4,635 | 3,761 | +23.2% 🔴 |
+| Unique visitors | 10,324 | 9,350 | +10.4% 🟢 |
+| Total book clicks | 2,697 | 2,647 | +1.9% |
+| Unique book clicks | 959 | 925 | +3.7% |
+| Intent rate (total/visitors) | 26.1% | 28.3% | -2.2pp 🔴 (lower-intent traffic returning) |
+| form_submitted | 113 | — | — |
+| whatsapp_clicked | 93 | — | — |
+| call_clicked | 51 | — | — |
+| Payments (unique) | 202 | 177 | +14.1% 🟢 RECORD-TIED (=W36) |
+| Bookings (unique) | 230 | 204 | +12.7% 🟢 |
+| mindtalk_web payments | 0 | 3 | ↓ (UTM chain still sparse) |
+| mindtalk_web bookings | 1 | 5 | ↓ |
+| chatgpt.com book clicks | 354 total / 91 unique | 286 total | +23.8% 🔥 P5 W8 |
+| Assessment Completed | 367 | 303 | +21.1% 🟢 RECOVERY |
+| Started Journey Task | 27 | 30 | -10% (still at emergency low) |
+| Stress Tracker Started | 51 | 50 | flat |
+| Rage clicks | 750 total / 247 unique | 729 / 479 | stable |
+| Dead clicks | 4,883 total / 1,141 unique | 4,635 / — | +5.3% (persistent) |
+
+**Note:** W38 had no data (Mixpanel billing block). W39 is compared to W37 (2-week gap).
 
 ---
 
-## Attribution Layers (W37)
+## Attribution Layers (W39)
 
-| Layer | Book clicks | Payments | Bookings |
-|---|---:|---:|---:|
-| mindtalk_web (true SEO-attributed) | ~30 (domain) | 3 | 5 |
-| chatgpt.com (AI search, utm_source) | 286 | 3 | 4 |
-| chatgpt.com (AI search, by domain) | 60 | — | — |
-| gemini.google.com (by domain) | 25 | — | — |
-| Organic (undefined utm_source) | 1,463 | 194 | 252 |
-| Paid (google/Google/GMB/sitelink/ig) | 670 | 3 | 4 |
-| Direct | 208 | — | — |
-| **Organic-attributable total** | **1,977** | **~199** | **~261** |
+| Layer | Book clicks (total) | Book clicks (unique) | Payments | Notes |
+|---|---:|---:|---:|---|
+| mindtalk_web (true SEO-attributed) | — | 0 | 0 | UTM chain still not flowing |
+| chatgpt.com (AI search, utm_source) | 354 | 91 | — | P5 W8, growing |
+| Paid Google Ads (named campaigns) | ~578 est | ~294 unique | 1 | NND+FTA Bangalore campaigns |
+| Organic/undefined (no utm_campaign) | 2,118 | ~665 est | 201 | 78.5% of all book clicks |
+| Direct / Other | — | — | — | — |
+| **Organic-attributable total** | **2,118** | **~665 est** | **~201** | Paid excluded |
 
-**Organic book clicks W37: 1,977** (paid: 670 = 25.3% of total — ads contribution lower than W34 peak)
-
----
-
-## UTM Medium Attribution (payments)
-
-| Medium | Payments | Notes |
-|---|---:|---|
-| undefined | 198 | UTM chain not preserved through checkout (persistent gap) |
-| doctor | 2 | Doctor page CTAs working |
-| organic | 2 | Tagged organic |
-| google_ads | 1 | Paid bleed |
-| site | 1 | |
-
-**UTM medium data is sparse** — 198/204 payments have no medium. This is a persistent tracking gap. The UTM source is captured (mindtalk_web=3, chatgpt.com=3) but medium is lost in the checkout redirect.
+**UTM medium breakdown (payments):**
+- undefined: 196/202 = 97% (UTM chain broken through checkout — persistent gap)  
+- organic: 5
+- google_ads: 1
+- **UTM content: 100% undefined** (CTA position tracking completely absent)
 
 ---
 
-## Tier Classifications (W37 — held from last full per-page run)
+## UTM Campaign Attribution (book clicks — page-type inference)
+
+| Campaign type | Total clicks | % of total | Source |
+|---|---:|---:|---|
+| Undefined (no campaign) | 1,822 | 67.5% | Organic SEO / direct |
+| Empty string | 296 | 11.0% | Organic GMB / no-tag |
+| NND + FTA Bangalore (Google Ads) | ~578 | 21.4% | Paid campaigns |
+| Organic illness pages (anxiety/depression/burnout) | ~47 | 1.7% | anxiety_center(14)+anxiety_treatment(9)+depression_treatment(18)+burnout(6) |
+
+---
+
+## Tier Classifications (W39)
 
 ### 🟢 Goldmines (2 pages — protect + amplify)
+
 | URL | Notes |
 |---|---|
-| /treatments/cbt-therapy | Consistent high-intent treatment page |
-| /doctors/* cluster | Doctor profile pages (P2: highest per-page payment attribution) |
+| /treatments/cbt-therapy | Consistent high-intent treatment page; depression_treatment campaign (18 clicks organic) |
+| /doctors/* cluster + find-therapist | Doctor listing hub — majority of organic booking intent flows here; P2 CONFIRMED 8 WEEKS |
 
-### 🟡 Rockets (4 pages — drive traffic)
+### 🟡 Rockets (5 pages — drive traffic)
+
 | URL | Notes |
 |---|---|
-| /illnesses/anxiety | High intent, needs more traffic |
-| /illnesses/depression | High intent |
-| /blogs/anxiety-working-professionals | Strong pattern match |
-| /blogs/[chatgpt-cited pages] | AI-search cited content gaining direct revenue W37 |
+| /illnesses/anxiety | 14+9=23 organic clicks from anxiety campaigns — high intent, needs traffic |
+| /illnesses/depression | 18 organic clicks (depression_treatment) — high intent |
+| /blogs/chatgpt-cited pages | AI-search cited content (chatgpt.com 354 book clicks); real revenue emerging |
+| /illnesses/burnout | 6 organic clicks from burnout campaign; small but consistent |
+| /doctors/therapists-in-delhi | Delhi NCT 214 book clicks (+43% vs W37) — P15 re-emerging strong |
 
-### 🔴 Leaky Buckets (0 this week — UX issues are app-side, not SEO pages)
-App pages (consult.cadabams.com) have severe UX friction but these are outside SEO scope.
+### 🔴 Leaky Buckets (0 organic SEO pages — app UX issues tracked separately)
 
-### ⚫ Dead Weight (3 — de-prioritize)
-Low-traffic informational pages not generating intent signals.
+App UX pages (consult.cadabams.com) have severe dead-click rates but outside organic SEO scope.
+
+### ⚫ Dead Weight
+
+/lps/* — paid landing pages; exclude from organic SEO analysis.
 
 ---
 
-## Active Flags
+## UX Friction Summary (W39)
 
-🔴 **Journey Task EMERGENCY** (product, not SEO): 645→365→124→30 over 4 weeks. Investigate /journeys/* dead clicks (27 dead W37) and /wellness/* (47 dead). Hypothesis: UX bug causing event mis-fire, not behavioral shift.
+- **Rage rate:** 2.4% (247 unique / 10,324 visitors) — below 5% threshold ✅
+- **Dead rate:** 11.1% (1,141 unique / 10,324 visitors) — ABOVE 10% threshold 🔴
+- Dead clicks total: 4,883 (persistent; slight +5.3% from W37)
+- Rage clicks total: 750 (stable; slight +2.9% from W37)
+- **Action:** Product/dev flag maintained — see brain/UX-FRICTION-PAGES.md
 
-🔴 **Dead clicks re-escalating**: 4,635 (+23.2%). Top: consult/home (789), appointments (246), find-therapist (237+121 paginated). ALL on app side. SEO pages clean.
-
-🟡 **Assessment Completed decline**: 1,031 → ~640 → ~490 → 303. 4-week trend. May be related to app UX degradation or journey-task bug affecting assessment flow.

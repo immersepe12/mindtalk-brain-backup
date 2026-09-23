@@ -57,6 +57,9 @@
 |---|---:|---:|---:|---:|---:|---:|---:|---|---:|---|
 | 2026-W35 | 10,401 | 2,065 | 1,539 | 181 | 228 | 334 | 19.9% | Bengaluru (48.6%) | 2 | Organic streak broken (−13.9%) but payments +7.7% — better conversion quality. Journey Task CRASHED −43.4%. P8 Kerala W5 confirmed. P15 Delhi demoted. Dead clicks improving 4,441→3,761. chatgpt.com = 16.2% of all book clicks (P5 W6). |
 | 2026-W36 | 9,072 | 2,190 | 1,425 | 200 | 237 | 211 | 24.1% | Bengaluru (53.4%) | 2 | Visitors -12.8% but intent rate surges 19.9%→24.1% (Aug Core Update quality filter). Payments 200 (+10.5%) + Bookings 237 (+3.9%). chatgpt.com STEP-BACK 334→211 (-36.8%) — P5 WATCH. Journey Task CRITICAL CRASH 365→124 (-66%, 3rd consecutive week). Kerala P8 W6 FULLY CONFIRMED (+71.8%, 8+ cities). Coimbatore TN BREAKOUT +422%. UP surge +238% (4 cities). Telangana step-back -37.9%. Europe diaspora W1. GA4 SKIPPED. |
+| 2026-W37 | 9,350 | 2,178 | ~1,560 | 177 | 204 | 286 | 28.3% | Bengaluru (47.8%) | 2 | W37 data (last valid prior to billing block). Payments 177 (-11.5%). chatgpt.com RECOVERY 211→286 (+35.5%). Journey Task 124→30 (-75.8%, CRITICAL). P8 Kerala REGRESSION 67→43. Germany diaspora W2 +142%. P15 Delhi NCT sustained. |
+| 2026-W38 | MCP_BLOCKED | — | — | — | — | — | — | — | — | Mixpanel billing block. No data. |
+| 2026-W39 | 10,324 | 2,697 (total) / 959 uniq | ~1,787 est | 202 | 230 | 354 total/91 uniq | 26.1% (total book/vis) | Karnataka 47.8% / Bengaluru 1,277 | 2 | MIXPANEL RESTORED (W38 billing resolved). 2-week gap vs W37. Visitors +10.4%. Payments 202 (+14.1% vs W37). Bookings 230 (+12.7%). chatgpt.com 354 total / 91 unique = NEW HIGH. Assessment Completed RECOVERY 367 (+21.1% vs W37). Journey Task 30→27 (near-zero sustained). Kerala P8 SEVERE REGRESSION 43→15 (demoted). Delhi NCT 214 (P15 W6 sustained). Germany 49 NEW HIGH (P17 promoted). Dead click rate 11.1% threshold exceeded. UTM chain still broken (196/202 payments undefined utm_medium). |
 
 ---
 

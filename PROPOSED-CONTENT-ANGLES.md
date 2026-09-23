@@ -183,3 +183,38 @@
 | MP dual-city W2 (Indore 11, Bhopal 10) | 2 | /doctors/psychologists-in-indore | MP market seed | MEDIUM (confirm W37) |
 | Gujarat multi-city W2 (Rajkot 8, Surat 9) | 2 | /doctors/psychologists-in-surat + /doctors/psychologists-in-rajkot | Gujarat market seed | MEDIUM |
 
+
+---
+
+## W39 UPDATE (2026-09-23)
+
+**Source:** T19 W39 Conversion Intelligence. 2-week gap (W38 billing block). Comparing to W37.
+
+### NEW PATTERN PROMOTIONS:
+
+| Pattern | Action |
+|---|---|
+| P17 Germany NRI diaspora | 🟢 PROMOTED TO PATTERN. Germany 49 W39 (3-week escalating: 15→35→49). **T5: "Online therapy for Indians in Germany / NRIs in Europe"** — IMMEDIATE |
+| P15 Delhi NCT | 🟢 SUSTAINED W6. Delhi NCT 214 W39 (up from 177 W34 record). **T5: `/doctors/psychologists-in-delhi`** — OVERDUE |
+| P1 Tamil | 🟢 W39 Tamil Nadu 187 = new record. **Chennai + Coimbatore pages still priority** |
+| P5 chatgpt.com | 🟢 W8 SUSTAINED. 354 total / 91 unique W39 = all-time high |
+
+### DEMOTED:
+
+| Pattern | Action |
+|---|---|
+| P8 Kerala | 🔴 DEMOTED TO WATCH. 43→15 W39 (-65% from W36 peak 67). DO NOT build Kerala content until W40+ recovery confirmed. |
+
+### BACKLOG ENTRIES (fire to T5):
+
+1. **`T17-NRI-EUROPE-01`**: "Online therapy for Indians in Germany" + "NRI mental health Europe" content cluster. P17 confirmed (3 weeks). Germany 49 + UK 17 + rest of Europe = 99 NRI Europe clicks W39.
+2. **`T17-DELHI-DOCTORS-01`**: `/doctors/psychologists-in-delhi` — P15 W6, 214 clicks. Most overdue T5 proposal in system.
+3. **`T17-MAHARASHTRA-01`**: Maharashtra 174 clicks W39 (3rd-largest state). `/doctors/psychologists-in-pune` + `/doctors/psychologists-in-mumbai` — Pune growing.
+
+### Evidence timeline update:
+
+| Week | Date | Evidence update |
+|---|---|---|
+| W37 | 2026-09-09 | P5 RECOVERY 211→286 (+35.5%). P8 Kerala regression confirmed (-35.8%). Germany W2 seed. Delhi NCT sustained. |
+| W38 | 2026-09-16 | MCP_BLOCKED (billing). No data. |
+| W39 | 2026-09-23 | **P17 Germany PROMOTED** (49, 3rd week). **P8 Kerala DEMOTED** (15, -65% from peak). P15 Delhi 214 W6. Tamil 187 record. chatgpt.com 354 NEW HIGH. Revenue record 202 payments. Dead click rate 11.1%. |

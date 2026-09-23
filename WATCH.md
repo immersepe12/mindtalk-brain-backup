@@ -3,6 +3,65 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+
+> ### 🚨 T20 AUTO-REMEDIATION — 2026-09-23 — TWO WATCHES ARE MEASURING A SHIP THAT DELIVERED NOTHING
+> **`W-LIGHT-THERAPY-0923` — opened today on `/blogs/light-therapy-for-insomnia`, expected "+10–25 clicks/wk" from
+> "action-keywords title, 3 FAQs". The title landed. The FAQs did not.** The live page emits **zero**
+> `"@type":"Question"` nodes (curled tonight, reproduced independently by the Verifier). Half the intervention
+> does not exist, so the watch cannot attribute its result. **Do not read this watch as a test of the FAQ lever.**
+> Either annul it, or re-baseline it the day BLOG-FAQ-KEY-MISMATCH-01 Fix A ships and restart the 42-day clock.
+>
+> **`W39` / `YOGA-FOR-ANXIETY-SHIP-01` (2026-08-05) has the same defect and has been running blind for 49 days.**
+> That ship reported "5 FAQs"; `/blogs/yoga-for-anxiety` emits **zero** Question nodes. Any verdict already drawn
+> from it about FAQs or snippet capture rests on content that was never on the page. The other elements of that
+> ship (metaTitle 57ch, 3 new poses, 2 new H2s, NYU RCT citations) did land and remain measurable.
+>
+> **Neither of these is a ranking finding — both are instrumentation failures.** They are listed here because a
+> watch that silently measures nothing will produce a confident 🔴 at its midpoint and teach the engine something
+> false. Root cause, blast radius (exactly 2 pages) and a pre-written fix: `dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md`.
+>
+> **⚠️ PSI-based verdicts now require three consecutive reads.** Tonight a single PSI read returned 2.7 s for
+> `/blogs/emotional-distress-all-you-need-to-know` and T20's first draft closed T14's CRITICAL as a false positive on
+> it. The Verifier re-measured: 12.0 s, stable over 3 runs. T20 re-measured: **11.5 s / 11.5 s / 11.5 s**. One PSI
+> call can return a cached analysis of a different run — the flag is real and the page is ~4.6× the threshold.
+> Its control on the same run sits at a stable 2.6 s, so this is page-specific, not the site baseline. → BACKLOG.
+
+> ### ℹ️ T20 AUTO-REMEDIATION — 2026-09-22 (evening 20:55–21:50) — thin-page watch opened · viability-check pattern corrected · 4 free cap slots
+> **🆕 W-PUNJABI-DELHI-THIN-0922 (30-day thin-page watch, NOT a defect).** `/doctors/punjabi-speaking-doctors-in-delhi` shipped today
+> (`f6250ddf`) and renders **exactly 1 professional**. It passes the ≥1 listing-viability gate, so it is not the CHILD-PSYCH
+> zero-cohort failure — but the bhojpuri precedent (archived 09-13 at 0 profiles) and the standing B23 note ("3 Punjabi briefs ride on
+> 1 profile — thin, flagged not archived") both apply. **Check 2026-10-22:** if impressions are ~0 AND the roster still has one
+> Punjabi profile, archive the page rather than ship punjabi-bangalore and punjabi-mumbai into the same shape. Sibling counts for
+> contrast, same commit: tamil-mumbai **10**, bengali-mumbai **9**, bengali-delhi **9**.
+>
+> **⚠️ The documented post-ship viability check has been silently matching nothing — fix before the next `/doctors/` ship.**
+> CHILD-PSYCH-BLR-EMPTY-01 established "curl the page and assert `Showing N professionals` ≥1". That grep returns **zero on every
+> listing page on the site, including known-good ones**, because the count is interpolated across the Next.js RSC flight payload.
+> The working pattern is `grep -oE 'Showing \\",[0-9]+'`. Verified against controls tonight: therapists-in-bangalore **5**,
+> child-psychologists-in-bangalore **18** (the page whose fix that assertion was written for). Any task that "verified" a listing
+> page with the old pattern verified nothing. → T13.
+>
+> **📋 For T5/T9: the week has 4 unused new-content slots.** T5's "20/20 cap MET" counted 4 briefs it re-authored from 24–31 Aug
+> (duplicate tracking rows, now SUPERSEDED_DUPLICATE). True count **16/20**. The 4 slots are available before the 09-29 roll.
+>
+> **📋 For T9's next `/doctors/` slot (cap rolls 09-29):** all 13 remaining language×city / couple-therapy / marriage-counsellor
+> brief queries were ownership-checked tonight at the gate's real parameters (`rowLimit 25`, 28d AND 90d, utm excluded —
+> `logs/t20-query-ownership-v2-2026-09-22.json`) and every one returns **zero rows in both windows** = genuinely free, no holder.
+> adhd-specialist-near-me (35.9 % @ 8.5) and cbt-therapy-near-me (43.3 % @ 8.6) are also free. **`/doctors/psychologists-near-me` is
+> the one exception — blocked**, see BACKLOG.
+>
+> **⚪ Do NOT open a watch on the empty `flagged-drops.json` / `confirmed-drops.json`.** Both are `{}` for a 7th day because
+> DataForSEO is 402-blocked (balance −0.00136 USD, `limits.total_serp: 0`); `logs/rank-2026-09-22.txt` checked **1 keyword of 291**.
+> Absence of drops is absence of measurement.
+
+> ### ℹ️ T10 STRATEGIST — 2026-09-22 — W43 Day-27 evaluation 09-27 (T12 Sunday-only) · psychiatrist-vs-psychologist Day-21 fires today · DataForSEO blind day 5+
+> **W43 Day-21 cohort (8 URLs):** Midpoints were due 09-21. T12 is Sunday-only — T12 missed 09-21 (Monday). T12 evaluates all 8 W43 URLs on 09-27 at Day-27 (still inside 42-day window; Day-42 final 10-12). NOT a true overdue — Sunday cadence by design. Status: **pending_evaluation → T12 picks up 09-27**.
+> **psychiatrist-vs-psychologist Day-21:** Fires TODAY 09-22 (shipped 09-01, Day-21). Pre-pull signals (T20 09-19): 🟢 IMPROVING (+100% clicks / +68% impr). T12 will evaluate at Day-27 on 09-27 along with the rest of W43.
+> **W18-W21 extended observation:** Should have closed 09-21 (Strategist extension). T12 Sunday-only means closure happened at Day-27 via 09-20 run or will happen 09-27. No new extension granted — T12 must verdict on 09-27 if not already closed.
+> **DataForSEO:** Account still overdrawn (day 5+, since 09-18). All rank-based watches carry no fresh DataForSEO data — T12 must use GSC data only via env-line workaround (`HOME=/tmp XDG_CACHE_HOME=/tmp TMPDIR=/tmp PYTHONPATH=.pip-packages`).
+> **Upcoming watch checks:** B8-MON 09-29 · B26 couples-therapy 09-30 · W-BLR-THERAPISTS-0918 + W-DELHI-THERAPISTS-0918 10-02 · W43 Day-42 finals 10-12 · W-0001be1-cohort (T9 09-15 ship) Day-42 finals 10-27.
+> **2 Meta-Learner proposals applied today:** t5-query-ownership-gate (3 hunks, task5-new-content-discovery.md) + t17-tabs-create-fallback (Step 5.6 appended, task17-competitive-ai-monitor.md). Snapshots in brain/before-snapshots/.
+
 > ### ℹ️ T10 STRATEGIST — 2026-09-20 — W43 Day-21 cohort marked pending_evaluation for T12 tomorrow · W18-W21 extension closes 09-21
 > **W43 Day-21 cohort (8 URLs):** All 8 blogs shipped 08-31 reach their Day-21 midpoint **tomorrow 09-21**. T12 must evaluate using pre-pulled GSC files (pulled 09-19 by T20). Status: **pending_evaluation**. DataForSEO blind (402 day 3) — T12 must use GSC data only.
 > **W18-W21:** Extended observation window **closes 09-21**. T12 must verdict all 4 treatment pages using the pre-pulled data. Pre-pull signal (T20 09-19): W20 biofeedback IMPROVING (+125% impr, +100% clicks) — T12 must re-evaluate vs prior NEEDS_REFRESH verdict. W18 online-therapy IMPROVING. W19 emdr-for-ptsd ⚪. W21 talk-therapy-for-depression ⚪.
@@ -1645,3 +1704,34 @@ T12 must run GSC pull for all 8 URLs on 09-21 and evaluate Day-21 midpoints agai
 - W-DELHI-THERAPISTS-0918 14d check: 2026-10-02
 - W-PHOBIA-0918 Day-21: 2026-10-09
 - W-SEP16 cohort Day-21: 2026-10-09 (psychiatrist-vs-psychologist + phobia-treatment-in-bangalore)
+
+---
+
+## W-FIND-THERAPIST-0922 — 2026-09-22
+
+**Action:** FIND-THERAPIST-CTR-01 meta_ctr_update
+**Target:** /blogs/how-to-find-a-therapist-in-india
+**Commit:** a8259c16
+**Baseline:** pos 1.7, 3,448 impr / 4 clicks = 0.12% CTR (7d prior to 2026-09-22)
+**Change:** metaTitle → 'How to Find a Therapist in India — Cost, How to Choose | Mindtalk' (65ch); metaDescription → 126ch with cost+online signal
+**Expected:** CTR lift to ≥0.5% (+17 clicks/wk at current impression volume)
+**14d check:** 2026-10-06 (T12)
+**42d final:** 2026-11-03 (T12)
+**Status:** OPEN
+
+---
+
+## W-REL-COUNSELLORS-BLR-0922 — 2026-09-22
+
+**Action:** RELATIONSHIP-COUNSELLOR-CLIFF-01 meta_ctr_update
+**Target:** /doctors/relationship-issues-psychologists-in-bangalore
+**Commit:** a8259c16
+**Baseline:** pos 9-12, 3,119 impr / 30 clicks = 0.96% CTR, 21 GA conversions (30d)
+**Changes:** metaTitle → "Relationship Counsellors in Bangalore | Fees, Online | Mindtalk" (63ch); metaDescription → 148ch with fee+online signal; faqs: ×3 added; 2 internal links added
+**Expected:** CTR lift to ≥1.5% (+17 clicks/wk); FAQ schema → AI Overview eligibility; internal link equity flow
+**14d check:** 2026-10-06 (T12)
+**42d final:** 2026-11-03 (T12)
+**Status:** OPEN
+
+| W-DEMENTIA-BLR-0923 | /doctors/alzheimers-specialists-in-bangalore | meta_ctr_update | 2026-09-23 | 2026-10-07 | open | DEMENTIA-LISTING-TITLE-01: front-loaded 'Dementia', new metaDesc, +2 FAQs. Commit 691c02ff. Baseline: 754 impr / 0 clicks (page 1). Expected: +15-40 clicks/wk. |
+| W-LIGHT-THERAPY-0923 | /blogs/light-therapy-for-insomnia | meta_ctr_update | 2026-09-23 | 2026-10-07 | open | LIGHT-THERAPY-INSOMNIA-CTR-01: action-keywords title, specific metaDesc, +3 FAQs (frontmatter). Commit 2ea8fdcd. Baseline: 616 impr / 0 clicks / pos 10.9. Expected: +10-25 clicks/wk. Note: blog template does not emit FAQPage JSON-LD (SCHEMA-MEDICAL-TYPES-01 gap). |

@@ -198,3 +198,34 @@
 6. **Tamil content** = WATCH (do not propose new pages until W33 confirms recovery)
 7. Doctor content > all other types (P2 cumulative 60 payments over 6 weeks)
 8. Every content piece must mandate internal links to /doctors or /experts (P3)
+
+## 2026-09-23 — W39 Conversion Intelligence (T19 — W38 billing block resolved)
+
+**⚠️ 2-week gap (W38 blocked): all WoW vs W37.**
+
+**Revenue:** Payments 202 (+14.1% vs W37 177). Bookings 230 (+12.7% vs W37 204). RECORD territory sustained.
+
+**Traffic:** Site visitors 10,324. Total book clicks 2,697 / unique 959 (26.1% intent rate, down from W37 28.3% due to ad traffic dilution).
+
+**chatgpt.com W39:** 354 total book clicks / 91 unique = P5 NEW HIGH total. 13.1% of all book clicks. W8 of pattern. ✅
+
+**App engagement:** Assessment Completed 367 (+21.1% recovery). Journey Task 27 (near-zero, 3rd consecutive week — product emergency sustained).
+
+**Dead clicks W39:** 4,883 total / 1,141 unique. Dead rate 11.1% (above 10% threshold). All on consult.cadabams.com app, not marketing site.
+
+**Geo W39 signals:**
+- Karnataka 1,290 / 47.8% — stable anchor
+- Delhi NCT 214 (P15 W6 sustained, 7.8% of intent) — needs /doctors/psychologists-in-delhi urgently
+- Tamil Nadu 187 (P1 Tamil W39 RECORD) — pattern sustained
+- Kerala 15 (**P8 SEVERE REGRESSION** — demoted to WATCH)
+- Germany 49 NEW HIGH (P17 PROMOTED to pattern)
+- NRI total (USA+UK+Aus+Gulf+Germany+Canada) = 330+ clicks
+
+**Attribution gap:** 196/202 payments have undefined utm_medium. UTM chain still broken at checkout redirect.
+
+**URGENT flags for Strategist:**
+1. DEAD-CLICK-RATE-01: 11.1% dead rate — dev must audit consult.cadabams.com/home + find-therapist + checkout
+2. Journey Task crash continues (27 unique — down from 645 peak W34) — product emergency
+3. P8 Kerala DEMOTED — content investment hold
+4. P17 Germany PROMOTED — NRI-Europe content angle ready for T5
+5. UTM chain broken — ad attribution blind on 97%+ of revenue events
