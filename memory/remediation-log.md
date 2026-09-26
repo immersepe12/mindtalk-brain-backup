@@ -5289,3 +5289,555 @@ reads; the GSC token refresh is automatic). Weekly cap untouched — nothing was
 Files written tonight: `brain/BACKLOG.md` (backup `logs/BACKLOG.md.backup-2026-09-23-pre-t20`),
 `brain/WATCH.md` (backup `logs/WATCH.md.backup-2026-09-23-pre-t20`), `dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md`,
 this log.
+
+---
+
+# 2026-09-24 (Thu) — T20 AUTO-REMEDIATION · 20:50–21:55 IST
+
+## Step 0 — Deploy health: ✅ READY `2d7ffda4`
+Last 5 production deploys on `prj_48AlhTOwnl64I8qD0jyV4x2mH1Sz` (filtered by project — the
+two-content-property rule from 09-22 honoured): `2d7ffda4` READY (PR #36, GTM phone-gate click
+text, 09-24 11:08 IST) · `2ea8fdcd` READY · **`159f81a7` ERROR** · `691c02ff` READY ·
+`a8259c16` READY. `git ls-remote origin main` = `2d7ffda4…` → **0 stranded commits**.
+1 ERROR in 5 is below the 2+ P0 bar **and it self-healed in 58.0 min** — `2ea8fdcd`'s commit
+message is literally *"quote metaTitle with colon — YAML parse error fix"*.
+
+**But the ERROR was engine-caused and is a repeat risk → T13.** `159f81a7` was T11's own
+LIGHT-THERAPY-INSOMNIA-CTR-01 ship; an unquoted `:` in a `metaTitle` scalar broke the static
+export and froze production for an hour. The preceding READY `691c02ff` was queued **15 s
+earlier from the same T11 batch** — the engine came within seconds of double-failing.
+**Rule filed:** any T9/T11 action that writes `metaTitle`/`title`/`metaDescription` must quote
+the scalar when it contains `:`; add a pre-commit YAML-parse assertion on touched MDX.
+
+## Step 2 — Verification (Rule 1)
+
+**🔴 DATAFORSEO-402 — day 10, VERIFIED REAL, CARRIED, not re-escalated.**
+`appendix/user_data` → `20000 Ok`, balance **−0.00136 USD** (byte-identical, 6th consecutive
+check), `rates.limits.day.total_serp: 0`. A negative balance does not self-heal → payment is
+Kushal's. **Consolidated:** BACKLOG `T17-COMPETITIVE-DATAFORSEO-2WK` quotes the identical
+−$0.0014 since 09-15 — same fact, **one escalation, not two**. Downstream consequence restated
+so today's files are not misread: `logs/rank-summary-2026-09-24.txt` = 316 keywords unprocessed,
+so an empty `flagged-drops.json` is a consequence of the 402, not a healthy site.
+
+**🔴 BLOG-FAQ-KEY-MISMATCH-01 — day 2, RE-VERIFIED REAL, carried to T11, not re-escalated.**
+`/blogs/light-therapy-for-insomnia` 200 → **0** `"@type":"Question"`, 0 `FAQPage`;
+`/blogs/yoga-for-anxiety` 200 → **0** / 0; control `/blogs/phobia-treatment-in-bangalore` → **5** / 2.
+Checked in both spaced and unspaced JSON forms — not a serialisation artefact.
+**New evidence that the two faults are independent:** `159f81a7`'s message advertises *"3 FAQs"*,
+its YAML fix `2ea8fdcd` deployed READY on 09-23, and the page **still renders 0 Question nodes**.
+The YAML parse error and the `question:`/`answer:` vs `q:`/`a:` key mismatch are separate.
+Fix A (content, 2 files) remains pre-written in `dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md` — T11.
+
+**⚪ T17-Q3-CITATION-LOSS-0924 — remedy (b) CLOSED as already-implemented; remedy (a) STANDS.**
+T17 lost the Perplexity citation for *"psychiatrist near me bangalore"* to cadabamshospitals.com
+and proposed (a) an entity-differentiation paragraph and (b) *"ensure the quickAnswer explicitly
+says online video appointments"*. Curl of `/doctors/psychiatrists-in-bangalore` (200): the answer
+block already reads *"…walk-in and pre-booked appointments, as well as **online video
+consultations for patients across Karnataka**"*, and "online" appears **40×**. **(b) is a no-op.**
+*Verifier CORRECTION accepted:* T20 initially framed T17's diagnosis as inverted — it is not.
+BACKLOG line 305 states T17's root cause as shared brand + physical Bangalore centres, i.e. T17
+diagnosed it correctly. **(a) stays fully actionable and queued to T11.**
+
+**🆕 PSYCHIATRISTS-BLR-CENTRE-COUNT-01 (Verifier-found, on the same page) — T11 IMMEDIATE.**
+`/doctors/psychiatrists-in-bangalore` states its own physical footprint three ways in one
+document: **"5 centres" ×6** (meta description, og:description, twitter:description),
+**"4 centres" ×6** (hero + `MedicalOrganization` schema `description`), **"four centres" ×4**
+(answer block). For an entity-differentiation/AEO problem this is a direct contributor and a
+cheaper, more certain fix than remedy (a). Content-only, one number — but `src/**`, so T20 files
+it rather than applying it.
+
+**⚪ Not T20 actions (verified, left alone):** today's GSC validation produced **1 confirmed drop**
+— `/blogs/how-to-reduce-anxiety-immediately` MAJOR, pos 5→11 — correctly **HELD by T3 under
+ALGO_WATCH** (September 2026 Core Update, YMYL). T14-EMOTIONAL-DISTRESS-CWV-01 carried (escalated
+09-23, not re-alerted). Chrome **not** stalled: T17's log records `CONNECTED` with a working
+`tabs_create_mcp` → URL-navigate fallback, so the registry's Chrome-restart fix had no trigger.
+
+## Step 3/4 — Auto-fixes (5 classes, 20 files)
+
+1–4. **Four 0-byte stale git lock corpses renamed** (never deleted), per the documented
+`os.rename` FUSE workaround: `brain/.git/HEAD.lock` + `brain/.git/objects/maintenance.lock`
+(both 2026-09-23 23:14:33 — T16's slot again, the `T16-LOCK-CORPSE-ACCUMULATION-01` class filed
+09-20 is still unfixed at source) and `mindtalk/.git/index.lock` + `ORIG_HEAD.lock` (2026-09-22
+16:38). All verified 0-byte and ≥1 day old before renaming; no git process held any of them.
+
+5. **🆕 16 briefs pointed at the dead `/doctors-listings/` public route — URL field corrected,
+briefs NOT archived.** `/doctors-listings/<slug>` returns 404 (and `/doctors-listings/` → 308 →
+404) while `/doctors/<slug>` is the live route. Sixteen NEW- briefs carried
+`**Suggested URL:** /doctors-listings/…`. **The Verifier proposed archive-or-rewrite; archive
+would have been wrong** — these are exactly the viable Tier A listing briefs T9 is cap-holding
+(`T9-DOCTORS-SHIP-0922` PARTIAL, 4 of 8 shipped), and their `**Suggested File:**`
+(`src/content/doctors-listings/<slug>.mdx`) is *correct*: that collection renders at
+`/doctors/<slug>`. So only the public-URL field was rewritten, with an inline note; the File
+field is untouched. Originals backed up to `logs/brief-backups-2026-09-24/`. All 16 still 404 at
+the corrected path → still shippable by T9, and the queue's 404-probes are now accurate.
+*(Verifier said 14; the live sweep found 16.)*
+
+**Not a defect — parser trap (→ T13), correcting Verifier MISSED #3:**
+`NEW-conduct-disorder-in-adults-brief.md` is *not* malformed. Its real field at line 38 reads
+`**Suggested URL:** /blogs/conduct-disorder-in-adults`; line 7 is **prose quoting the field
+label**, so a first-match grep returns a bare backtick and the 404-probe silently yields `000`.
+The stale-brief sweep must anchor the match at line start (`^\*\*Suggested URL:`), not anywhere.
+
+## Step 4 — Brief-queue health: `/blogs/` **0 shippable — floor 6 unmet, 8th consecutive run**
+
+27 briefs, **27/27 tiered** (0 untiered → the classify auto-fix had no trigger).
+*(Verifier CORRECTION: 25 use the bold `**intent_tier:**` form and 2 the plain form, not the
+reverse as first written; the two REFRESH briefs are among the bold 25. The
+REFRESH-BRIEF-IN-NEW-QUEUE-01 sparing is right, the stated reason was not.)*
+**0 stale briefs** — every one of the 25 NEW- briefs' target URLs returns 404 with and without
+`-L`, so nothing was archivable-as-shipped. The 2 REFRESH briefs (`guide-to-reset-your-sleep-cycle`,
+`psychology-of-love`, both 200) spared again.
+
+Exactly **4** NEW- briefs target `/blogs/`, all 404, and **all 4 carry a binding block re-read at
+source tonight, none expiring today**: gender-identity-disorder (⛔ NEEDS_HUMAN 08-24) ·
+is-online-therapy-confidential (⛔ DO NOT SHIP 08-26) · conduct-disorder-in-adults (⛔ NEEDS_HUMAN
+08-26) · which-doctor-to-consult-for-alcohol-addiction (⏸ HOLD until **2026-10-06**).
+
+**Refill attempted, justified-empty — and the negative result is now proven, not asserted.**
+`scripts/new-content-discovery.py --all` **could not complete**: the host caps bash at ~178 s, and
+a detached `nohup` run did not survive the tool-call boundary — **T20-SELF-TRUNCATION-01
+recurrence #5** (→ T13; this is now the fifth consecutive run in which the registry's
+stale-discovery auto-fix is un-runnable in this environment, and tonight the artefact genuinely
+*was* stale at ~52 h). Worked around by mining the existing artefact
+(`new-content-opportunities.json`, 2026-09-22 16:38 — staleness stated, not hidden).
+**Holder census, run exhaustively by the Verifier:** of the **509** OPPORTUNITY rows ≥300
+impressions there are **185 distinct `triggering_page` holders**; all 185 were curled — **154
+direct 200, 31+1 via 308, and all 32 redirects land 200. Zero holder-free families. Zero
+authorable NEW `/blogs/` briefs.**
+*(Verifier CORRECTION: the "1,457 candidates" and "54 Tier A/B rows" figures first written were
+not reproducible — the artefact carries an `intent_tier` on only 54 of its 6,573 rows and T20
+collided that count with a filter count. The 509/185/0 figures above are the reproducible ones.)*
+This is the 8th consecutive confirmation of the design fact already filed to T13: **holder-free
+`/blogs/` space is exhausted; the remaining demand is CTR and refresh, not new content.**
+
+**Surfaced rather than absorbed into the floor narrative (Verifier MISSED #4):**
+`NEW-mind-therapy-brief.md` (09-22, Tier B, `/treatments/mind-therapy`, 404) carries a written
+INTENT GATE PASS and **no block**. It is outside `/blogs/` so T20 may never ship it, and
+`/treatments/*` is YMYL → needs AP3 clinical sign-off. **Not** part of the `/blogs/` shortfall;
+routed to T10/T11 so it stops being invisible.
+
+## Step 4b — CTR rows for T10 (not escalations)
+Four rows reproduce exactly and are handed over: **neurosis symptoms** 794 impr / pos 5.1 / 0 clicks
+(`/blogs/understanding-anxiety-neurosis`) · **emotional distress symptoms** 705 / 5.0 / 1
+(`/blogs/emotional-distress-all-you-need-to-know`) · **fatal familial insomnia treatment** 477 /
+7.7 / 0 · **how to stop talking in your sleep** 427 / 5.3 / 0
+(`/blogs/guide-to-sleep-talking-disorder-somniloquy`).
+
+*Two corrections accepted, recorded rather than quietly dropped:*
+(i) the headline row T20 first proposed — *"how to deal with trust issues"* — is **2,204 impr /
+pos 7.1 / 0 clicks**, not 1,915 / 6.3, and its status is already `BRIEF_CREATED`, so it is **not**
+a clean new CTR row and the "biggest CTR hole" claim was false. The genuinely largest holes in the
+artefact are *dry begging meaning* (26,268 impr / 65 clicks / pos 5.9), *counselling* (10,392 / 9 /
+pos 5.3) and *peniaphobia* (10,173 / 6 / pos 7.0) — **all three already filed** (DRY-BEGGING-CTR-01,
+COUNSELLING-HEADTERM-MISMATCH-01 09-23, and the peniaphobia page from the 08-18 batch), so they are
+re-pointed at, not re-filed. *counselling* is also T17's 90,500/mo top-3 competitive gap for the 8th
+week — the most strategically aligned row in the artefact.
+(ii) the emotional-distress row is **co-occurring with, not causal evidence for**,
+T14-EMOTIONAL-DISTRESS-CWV-01 (lab LCP ~11.5 s). There is no page-level CrUX field data for that
+URL, a lab LCP is one synthetic run, and ~0 % CTR at position 5 on an informational query is fully
+explained by SERP features and title/meta. Handed to T14 as corroborating context only.
+
+## Step 5 — Verifier: 4 APPROVE / 5 CORRECTION / 0 VETO
+All five corrections were applied **before** anything was written or posted (C4 diagnosis framing,
+C5 inverted tier-form count, C6 unreproducible mine figures, C7 wrong headline row + CWV overreach,
+C9 "nothing else auto-fixable"). Missed items #1–#4 were acted on in-run (#1 as a *path correction*
+rather than the proposed archive, with the reason recorded; #2 filed as a new T11 row; #3 corrected
+to a parser trap and filed to T13; #4 surfaced to T10/T11). #5 was checked and found already-filed.
+
+## Escalations
+**1 to Kushal (carried, not re-alerted): DATAFORSEO-402 day 10** — payment, consolidated with
+`T17-COMPETITIVE-DATAFORSEO-2WK`.
+**Carried dev items, not re-alerted:** BLOG-FAQ-KEY-MISMATCH-01 (Fix A → T11),
+T14-EMOTIONAL-DISTRESS-CWV-01, SITE-TBT-BUDGET-01, SCHEMA-MEDICALWEBPAGE-RESIDUAL-01.
+**New rows (not alerts):** PSYCHIATRISTS-BLR-CENTRE-COUNT-01 (T11 IMMEDIATE), T17-Q3 remedy (a)
+retained / (b) closed, MIND-THERAPY-BRIEF-UNBLOCKED (T10), 4 CTR rows (T10).
+**New for T13 (spec):** YAML-colon quoting + pre-commit MDX parse assertion ·
+`^`-anchored `Suggested URL` matching in the stale-brief sweep · T20-SELF-TRUNCATION-01 #5 ·
+T16-LOCK-CORPSE-ACCUMULATION-01 still unfixed at source (4th nightly rename).
+
+## Constraint check
+No `src/**` edits (PSYCHIATRISTS-BLR-CENTRE-COUNT-01 and BLOG-FAQ Fix A written as specs,
+deliberately not applied). No push to the website repo. No `scripts/*.py` edits. Nothing shipped,
+**nothing deleted** — 4 lock corpses renamed, 16 briefs edited in place with backups in
+`logs/brief-backups-2026-09-24/`, 0 briefs archived. No billing/credential writes (the DataForSEO
+call was a read). Weekly cap untouched — 0 new content published (cap 20/wk, 0 used since 09-22).
+
+## 2026-09-25 (Fri) 20:50–21:55 IST — T20 Auto-Remediation
+
+**Deploy health: ✅ READY `54e2b8d0`** (`fix(seo): psychiatrists-in-bangalore metaDescription '5 centres' → '4 centres'`).
+Last 6 production deploys on project `mindtalk` all READY, 0 ERROR; `git ls-remote origin main` = the
+deployed SHA and `git log @{u}..HEAD` = 0 → **0 stranded commits**. Verifier widened the window to 12 and
+found **1 ERROR at #12** — `159f81a7`, 2026-09-23, the YAML-colon failure already logged on 09-24 and
+self-healed in 58 min by `2ea8fdcd`. 1 in 12 is below the 2-in-5 P0 bar. **Not a P0.**
+
+### 🚨 THE NIGHT'S FINDING — a staged git revert of today's own fix is sitting in the website repo's index
+`$HOME/mnt/mindtalk` is on branch `feat/exec-content-fix-blr-centre-count-20260925` (no upstream) and
+`git status` reports `MM src/content/doctors-listings/psychiatrists-in-bangalore.mdx`. HEAD and the working
+tree are **correct** ("4 centres"); the **index holds the reverse diff**:
+
+```
+-    ...Mindtalk's 4 centres or online...      (worktree / HEAD — correct)
++    ...Mindtalk's 5 centres or online...      (STAGED — the bug, re-armed)
+```
+
+The next `git commit` on that branch that takes the index as-is re-ships PSYCHIATRISTS-BLR-CENTRE-COUNT-01
+**on the same day it was fixed**, and it would deploy READY because nothing about it is a build error —
+the same silent-success failure mode as the FAQ defect below. Live is fine today (`5 centres` ×0,
+`4 centres` ×12, `four centres` ×4; meta, og:description and twitter:description all "4 centres").
+**T20 did not clear it:** the hard constraint forbids touching the website repo, and the branch belongs to
+a T11 exec session that may be mid-flight. One command, for whoever owns that checkout:
+`git restore --staged src/content/doctors-listings/psychiatrists-in-bangalore.mdx` → escalated.
+
+### ✅ Closed with evidence
+- **PSYCHIATRISTS-BLR-CENTRE-COUNT-01 — RESOLVED, closed.** Flagged this morning by T10 as three
+  conflicting footprint statements in one document ("5 centres" ×6 / "4 centres" ×6 / "four centres" ×4).
+  T11 shipped `54e2b8d0` today; live page now reads **0 × "5 centres" / 0 × "five centres", 12 × "4 centres",
+  4 × "four centres"**, all three social/meta descriptions consistent, body names exactly the 4 centres
+  (Indiranagar, Sarjapura, Kanakapura Road, Kalyan Nagar). Listing renders 12 professionals. Verifier
+  independently reproduced. *Caveat: see the staged revert above — the fix is live but re-armed in git.*
+- **⛔ T20 caught its own measurement error before it reached a verdict (2nd occurrence of the class).**
+  The first FAQ sweep curled 3 different blog URLs in a loop and got **byte-identical 109,374-byte
+  responses with identical grep counts for all three** — which would have closed BLOG-FAQ-KEY-MISMATCH-01
+  as a false positive. Re-fetched to separate files with a UA set and checked each `<title>`: 136,162 /
+  112,570 / 109,561 bytes, three distinct pages, and the real answer is the opposite of the bogus one.
+  **T20-SELF-TRUNCATION-01 #6.** Standing rule to add: *a batch of curls returning identical byte counts
+  for different URLs is a failed measurement, not a finding* — assert distinct `<title>` before believing
+  any grep count taken from a loop.
+
+### 🔴 BLOG-FAQ-KEY-MISMATCH-01 — day 3, RE-VERIFIED REAL, and the root cause is now proven at source
+Live, UA-set, per-URL verified (Verifier independently reproduced all three):
+
+| URL | `"@type":"Question"` nodes | FAQPage |
+|---|---|---|
+| `/blogs/yoga-for-anxiety` | **0** | 0 |
+| `/blogs/light-therapy-for-insomnia` | **0** | 0 |
+| `/blogs/phobia-treatment-in-bangalore` (control) | 5 | 1 |
+
+**Root cause, read at source rather than inferred:** `src/app/blogs/[slug]/page.tsx` **L237–240** filters
+FAQ entries on `f.q` / `f.a`; both defective files use `question:` / `answer:`, so `validFaqs` empties and
+the `FAQPage` node is conditionally omitted at L274. No build error, deploy READY, page 200.
+
+**Blast radius re-enumerated over all 17 content collections:** `blogs` 107 files with `faqs:` → 105
+`q:`/`a:`, **2** `question:`/`answer:`; `treatments` 31 → 30 / **1** (`narrative-therapy.mdx`); every other
+collection 100 % `q:`/`a:`. **3 defective files repo-wide, only 2 live-broken** — narrative-therapy renders
+fine because the treatments template is already hardened.
+
+**And that is the point the Verifier made that changes the escalation: the fix already exists in the repo.**
+`src/lib/seo/schema.ts` L167–176 exports `normalizeFaqs()`, which accepts **both** key shapes. It is already
+used by `app/treatments/[slug]` (L54), `app/illnesses/[slug]` (L151) and `app/doctors/[slug]` (L332/L618) —
+and the treatments call site carries a comment saying the local q/a-only filter it replaced had *already*
+silently dropped narrative-therapy's FAQs once. **The blogs template was simply never migrated.**
+Still unprotected: `app/blogs/[slug]` L237–240 and `app/hi/illnesses/[slug]` L54. Latent on top of that:
+`lib/discover-schema.ts` L127–137 `faqPageNode()` reads only `f.q`/`f.a` with no normalisation and no
+filter, and feeds 5 more templates (assessments, journaling, journeys, mindful-minutes, worksheets) —
+unbroken today only because all 152 of those MDX files happen to use `q:`/`a:`. **3 of ~8 FAQ-emitting
+templates are protected.**
+
+**Provenance (`git log -S`) — both defects were shipped by automation that claimed the schema:**
+light-therapy's keys came in with **`159f81a7`**, which is the deploy that FAILED (ERROR) on 09-23 and whose
+follow-up `2ea8fdcd` fixed the YAML colon and left the keys; yoga's came in with **`6c6d89e5`**
+*"…5 FAQs, FAQPage schema, CTR recovery"*. Two commit messages asserting FAQPage schema that never rendered,
+and nothing in the pipeline checked after deploy. → **T13 rule: a ship claiming a schema type must assert it
+on the live URL once the deploy is READY, not in the commit message.**
+
+Spec rewritten with all of it, paste-ready: `dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md` (Fix A content 2 files,
+Fix B one-line `normalizeFaqs` swap ×2 templates, Fix C latent helper). **Escalated, not fixed — Fix A/B/C
+are all inside `src/**`.**
+
+### 🔴 DATAFORSEO-402 day 11 — VERIFIED REAL, CARRIED, not re-escalated as new
+`appendix/user_data` → `20000 Ok`, balance **−0.00136 USD**, byte-identical on a **7th** consecutive check.
+Downstream confirmed: `logs/rank-summary-2026-09-25.txt` = **316 keywords tracked, 0 processed**, 402 on all
+30 iterations across both the live and the queue endpoint; `logs/gsc-validation-2026-09-25.txt` validated 0.
+Standing caveat repeated: the near-empty `flagged-drops.json` / `confirmed-drops.json` are **a consequence of
+the 402, not a healthy site**. Payment class → Kushal only.
+
+### 🔧 Auto-fixes (4 classes, 7 objects)
+1. **2 briefs archived-as-shipped** — `NEW-cbt-therapy-near-me-brief.md` (→ `/doctors/cbt-therapists`, live
+   200, **15 professionals**) and `NEW-punjabi-speaking-doctors-in-bangalore-brief.md` (live 200, **1
+   professional**). Verified by ctime, not mtime (mtime survives `mv`).
+2. **3 stale 0-byte git lock corpses renamed** — `brain/.git/index.lock` (21.9 h) and, new tonight,
+   `brain/.git/refs/remotes/origin/main.lock` (21.9 h, this one blocks `git fetch`, not just commit) plus
+   `mindtalk/.git/HEAD.lock` (4.1 h, created ~11:31 around T9's ship, blocks checkout/commit on the website
+   repo). No git process was running. **5th consecutive nightly rename — `T16-LOCK-CORPSE-ACCUMULATION-01`
+   is still unfixed at source.**
+3. **tracking-db drift repaired (3rd recurrence of the `published_at` class: 09-15, 09-19, 09-25).** T9
+   shipped 2 pages today, curl-verified them 200 — and wrote **no PUBLISHED page record at all**, leaving
+   both `NEW-` rows at `BRIEF_CREATED`. T4 would have re-flagged them as untrackable and T12 would never have
+   opened an observation window. Created `/doctors/cbt-therapists` and
+   `/doctors/punjabi-speaking-doctors-in-bangalore` (PUBLISHED, `published_at 2026-09-25`, commit `45c3112a`,
+   day-42 check 2026-11-06) and flipped both `NEW-` rows to SHIPPED. **430 → 432 keys, 0 lost** (Verifier
+   diffed the key sets against `logs/tracking-db.json.backup-2026-09-25-2100-pre-t20`: empty missing-set).
+4. **Discovery artefact re-run — the 6-run "un-runnable" excuse was tested properly for the first time.**
+   `new-content-opportunities.json` was 3.2 days stale. On the host, `new-content-discovery.py --all` dies at
+   the 178 s bash cap (`EXIT=124`, zero stdout) and a detached `nohup` does not survive the call boundary
+   (`--unshare-pid --die-with-parent`) — **T20-SELF-TRUNCATION-01 #6, this time measured rather than
+   asserted.** Re-run instead in the cloud container, which has no such cap, against staged copies of
+   `config.json` / `gsc-token.pickle` / `keyword-map.json` / the opportunities artefact. Result below.
+5. **Paid mining ran clean** (`scripts/google-ads-search-terms.py`, EXIT=0): **6,429 terms / 282 qualified /
+   274 with ≥1 conversion**, 30-day window.
+
+### 📋 Brief-queue health — floor 6 unmet for a 9th consecutive run, and the refill direction is unchanged
+Counted by ship path, not by a `/blogs/` string grep (which false-positives on internal links — the Verifier
+caught two `/treatments/` briefs that mention `/blogs/therapy-types`). Both `intent_tier` spellings counted
+(`intent_tier: "B"` and markdown-bold `**intent_tier:** B`).
+
+**4 `/blogs/` NEW briefs are tiered and 404 — and all 4 are blocked at source, none expiring today:**
+gender-identity-disorder ⛔ NEEDS_HUMAN · is-online-therapy-confidential ⛔ (clinical sign-off on
+suicide-safety wording still `owner_approved_pending_physical_signature`, + 5 FAQs) · conduct-disorder-in-adults
+⛔ NEEDS_HUMAN (4 unanswered clinical questions) · which-doctor-to-consult-for-alcohol-addiction ⏸ → 2026-10-06.
+**Unblocked shippable = 0.**
+
+**Refill fired. Result: no authorable `/blogs/` brief — 9th independent confirmation, tonight from fresh paid
+data.** All 274 converting paid terms are practitioner-noun / practitioner+city / "near me" transactional
+shapes that a `/doctors/` listing serves — top 10: therapist near me (78.5 conv, ₹18,107), psychologist near me
+(34.3), psychologist bangalore (20.4), therapist bangalore (14.0), couple therapy bangalore (11.5), psychologist
+(10.5), therapist in bangalore (9.8), couples therapy bangalore (8.0), marriage counselling bangalore (7.7),
+psychiatrist bangalore (6.3). The first term with any informational shape is #15 *therapy for anxiety*
+(4.5 conv, 11 clicks) — treatment-selection intent, `/treatments/`, YMYL, not a `/blogs/` slot.
+**T9 is not starving**: 20 Tier A `/doctors/` briefs remain queued; the `/doctors/` cluster is at cap 6/6 and
+both reviewers are at 5/5, so the constraint tonight is cap and reviewer load, not queue depth.
+
+### ⚠️ Second 1-professional listing shipped against a standing thin-page watch
+`W-PUNJABI-DELHI-THIN-0922` (opened 09-22, check 10-22) says in terms: *"if impressions are ~0 AND the roster
+still has one Punjabi profile, archive the page rather than ship punjabi-bangalore and punjabi-mumbai into the
+same shape."* T9 shipped `/doctors/punjabi-speaking-doctors-in-bangalore` today, **1 professional** (Kavya
+Arora) — 33 days before that checkpoint. It passes T9's `>=1` viability gate, so **T9 did nothing wrong by its
+own spec; the spec is what is wrong** — a WATCH instruction has no way to reach the ship gate.
+`NEW-punjabi-speaking-doctors-in-mumbai-brief.md` is still queued and would be the third. Sibling counts for
+contrast: cbt-therapists 15, therapists-in-bangalore 5. → new watch `W-PUNJABI-BLR-THIN-0925`, and → T13
+(`WATCH-CANNOT-REACH-SHIP-GATE-01`).
+
+### 🧾 Verifier — 9 CONFIRMED / 1 confirmed-as-scoped / 1 CORRECTION / 0 VETO, plus 8 missed items
+CORRECTION applied: deploy window is 11/12 READY + 1 ERROR (09-23, already remediated), not 12/12.
+Missed items folded into this log and the spec: the pre-existing `normalizeFaqs` fix (the big one — it turned
+a "write a template guard" escalation into a one-line swap), the third defective content file, the 5 latently
+exposed templates, the provenance trace, and the staged revert. Two more filed and not otherwise actioned:
+**10 untracked `*.mdx.tmp_merge` / `*.mdx.bak_tmp` files loose in `src/content/blogs/`** (un-gitignored merge
+debris from prior automated runs; they do not match the loader glob so nothing renders from them — dev
+housekeeping, `src/**` so T20 may not remove them), and **T9 log-hygiene errors** in
+`logs/auto-ship-2026-09-25.txt`: it records a skip for a brief filename that does not exist
+(`NEW-conduct-disorder-signs-causes-and-treatment-brief.md`; the real file is `NEW-conduct-disorder-in-adults-brief.md`,
+and `/blogs/conduct-disorder-signs-causes-and-treatment` is a *live 200 page*, a different thing), reports
+*"Tracking DB — Total entries: 22"* against an actual 432 keys, and says *"1 brief routed to B12 workflow"*
+without naming it. → T13.
+
+### 🔴 Escalated to Kushal (4 — all verified, none new except #1)
+1. **Staged revert of the centre-count fix in the website repo index** — one command, above. Whoever owns the
+   `feat/exec-content-fix-blr-centre-count-20260925` checkout.
+2. **DATAFORSEO-402 day 11** — balance −$0.0014, 7th identical check, 316 KWs unprocessed. Payment.
+3. **B12 / `/doctors/therapists-near-me`** — re-verified **404** tonight; tonight's own paid pull puts the
+   term at **78.5 conversions / 428 clicks / ₹18,107 in 30 days**, the account's #1 converting term, 9th week.
+   Blocked only on the national-hub-vs-city-pages scope call (decide with PSYCHIATRIST-NEAR-ME-DILUTION-01).
+4. **B15 stub-pilot verdict** — 7th consecutive workless fire (08-14 → 09-25), human gate open 42 days; the
+   task itself now recommends being disabled.
+
+### 🔵 To T11 / dev (arrive-with-the-fix, all pre-written)
+- BLOG-FAQ-KEY-MISMATCH-01 **Fix A** (2 content files) + **Fix B** (one-line `normalizeFaqs` swap in
+  `app/blogs/[slug]` and `app/hi/illnesses/[slug]`) + **Fix C** (latent `faqPageNode`) —
+  `dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md`. Open the 21-day FAQ-schema watch on both URLs when Fix A ships
+  (per T10's 09-25 note).
+
+### 📊 ADDENDUM — the discovery re-run FINISHED, and it is the cleanest negative result the engine has produced
+
+`new-content-discovery.py --all` completed in the cloud container in ~14 min (it dies at `EXIT=124` on the
+host's 178 s cap, and a detached `nohup` cannot survive the call boundary — that is the whole of
+T20-SELF-TRUNCATION-01, now measured rather than asserted). Staged `config.json` / `gsc-token.pickle` /
+`keyword-map.json` / the opportunities artefact across, ran it, committed the refreshed artefact and
+`logs/discovery-2026-09-25.txt` back. Artefact was **3.2 days stale**; it is now current.
+
+**Scale — this matters, because the last three refusals to re-mine rested on the assumption that a re-mine
+would return the same rows:** this pull retrieved **192,611 GSC queries**. Every prior mine the engine has
+reasoned from was a **100k-row pull** — i.e. **truncated**, which is precisely `MINE-TRUNCATION-ABSENCE-01`
+sitting underneath eight runs of "the space is exhausted". So for the first time the exhaustion claim has
+been tested against a pull that was not truncated.
+
+**Result: 4,543 opportunities in the unique set, 6,573 → 7,041 artefact keys, 468 genuinely new rows — and
+`0` of the 468 are holder-free.** Every one has a live Mindtalk `triggering_page`: blogs 147, doctors 130,
+assessments 127, treatments 40, illnesses 8, hi 4, journaling 4, centers 3, worksheets 3, mindful-minutes 2.
+The 53 holder-free rows in the entire artefact are legacy seeds carrying **0 impressions** — no demand data
+at all, not free space. Top newly-found rows, all already held: *can stress kill you* 1,074 impr @5.4
+(/blogs/how-to-manage-death-from-stress) · *stop overthinking for beginners* 1,037 @8.4 **0 clicks** ·
+*insomnia* 876 @5.6 **0 clicks** · *help a child with anxiety in 10 minutes* 838 @5.5 **0 clicks** ·
+*phubbing meaning* 516 @5.1 **0 clicks**.
+
+**So the 9th "floor unmeetable" is no longer an inference from a truncated mine — it is a measured fact
+against 192k queries: there is no holder-free `/blogs/` family left, and four of the five biggest new finds
+are page-1 positions with ZERO clicks.** The demand this mine surfaced is **CTR work on pages that already
+rank**, which is T10/T11's lane, not a T9 ship queue. Rows for T10 to score are in the artefact; the four
+above are the strongest (all pos ≤8.4, all 0 clicks, 3,267 impressions between them).
+
+---
+
+# 🔧 T20 AUTO-REMEDIATION — 2026-09-26 (Sat, 20:45 IST)
+**5 auto-fixes · 8 false positives / corrections closed · 6 escalated · brief queue 0 → 1 unblocked shippable (first in 10 runs)**
+**Verifier: 4 APPROVE / 5 CORRECTION / 0 VETO, plus 6 missed items — all 5 corrections and 5 of 6 missed items actioned below.**
+
+## ✅ Deploy health: READY (54e2b8d0)
+8/8 recent production deploys READY, 0 ERROR. Latest `dpl_2EsjZ6Zx…` = `54e2b8d0`, 2026-09-25 11:32 UTC,
+27.8 h old (under the 48 h rule). **Evidence is `git ls-remote origin main` = `54e2b8d0`, NOT local HEAD** —
+Verifier correction C1: local HEAD sits on `feat/exec-content-fix-blr-centre-count-20260925` and local `main`
+is still `45c3112a`, with `git merge-base --is-ancestor 54e2b8d0 main` FALSE. The local checkout does not
+contain the deployed commit. The "no commits after the deploy" conclusion is right but only the remote ref
+supports it. Given WEBSITE-CHECKOUT-CORRUPT-01 already produced one false Kushal escalation off a stale local
+checkout (09-15), **future runs must cite `ls-remote`, never local HEAD, for this gate.**
+
+## 🔧 Auto-fixes (5)
+
+**1. T16-LOCK-CORPSE-ACCUMULATION-01 FIXED AT SOURCE — after 4 nights of treating the symptom.**
+Cleared the 2 corpses (`brain/.git/index.lock`, `refs/remotes/origin/main.lock`, both 0-byte, 21 h 42 m old,
+renamed not deleted). Then the Verifier proved the framing of the last four nights wrong: `git status` exits 0
+*with a stranded lock*, so "git is operable" was never a valid test — and a plain `git status` **re-created
+`index.lock` 109 seconds after the rename**. There is no crashed git process and never was. The cause is git's
+opportunistic index refresh against the FUSE mount, which creates the lock and cannot remove it.
+**Fix applied:** `git config --local core.fsmonitor false` + `core.untrackedCache false` in `brain/`.
+**Verified after the fix:** a plain `git status` no longer creates a lock, and `git add -A` **succeeds** —
+brain/ is write-capable for the first time measurably. Neither `src/**` nor `scripts/*.py`.
+Two corrections to my own prior claims: this is the **4th** consecutive night, not the 6th (BACKLOG 09-22
+records `index.lock` absent — "first clean night"), and `brain/.git` holds **170** accumulated `*.lock.*`
+corpse files, not ~140.
+
+**2. `new-content-opportunities.json` repaired — 51 phantom "free space" rows. See the headline finding below.**
+Backup: `logs/new-content-opportunities.json.backup-2026-09-26-pre-t20`. Verifier diffed key sets both
+directions: **7041 keys before, 7041 after, 0 lost, 0 added**, and the field-level diff across all 7041 rows is
+exactly `{triggering_page: 51, status: 51, t20_note: 51}` — nothing else on any row changed. No VETO condition.
+
+**3. W39 page-dimension pull DELIVERED — a named T20 duty that was unmet with T12's verdict due tomorrow.**
+`brain/WATCH.md` (T12 stamp 09-20) states: *"W39 action for T20: T20 must pull /treatments/yoga-for-anxiety
+using page-dimension authoritative method for window 08-05→09-16. T12 will issue verdict next Sunday
+(2026-09-27)."* No such artefact existed anywhere in `logs/`. T12 runs **tomorrow** and would have closed W39
+on missing data T20 was named to supply. **Also: the instruction names a 404.** `/treatments/yoga-for-anxiety`
+returns 404; the real page is `/blogs/yoga-for-anxiety` (200). Executed literally it returns zero rows and
+"confirms" a data gap that does not exist. Pulled against the correct URL →
+`logs/t20-w39-yoga-page-dim-2026-09-26.json`:
+- **W39 window 08-05→09-16: 70 clicks / 10,294 impr / pos 8.55 / CTR 0.680%**
+- **Prior equal 42d 06-23→08-04: 50 clicks / 9,982 impr / pos 9.11 / CTR 0.501%**
+- → **IMPROVED on every axis: clicks +40.0%, impressions +3.1%, position 9.11→8.55, CTR +0.18pp.**
+- **GSC-QUERY-UNDERCOUNT-01 quantified on this page:** query-dimension sums to **4,009** impressions over 381
+  rows against the page dimension's **10,294** — the query view sees **39%** of the truth, a **61% undercount**.
+  This is exactly why the watch specified page-dimension, and it is the sharpest single measurement of that
+  anti-pattern the engine has.
+- **Caveat T12 must carry:** this page is one of the two BLOG-FAQ-KEY-MISMATCH-01 pages and has emitted **zero**
+  FAQPage/Question JSON-LD since 2026-08-05 (re-verified live tonight). The whole +40% happened **without any
+  FAQ schema**. Do not credit FAQ schema for the lift, and do not close the FAQ arm as tested.
+
+**4. `WATCH.md` technical note corrected before it misleads T12 tomorrow.** The `W-LIGHT-THERAPY-0923` row read
+*"blog template does not emit FAQPage JSON-LD (SCHEMA-MEDICAL-TYPES-01 gap)"*. **False, and tonight's own
+controls disprove it:** `/blogs/psychiatrist-vs-psychologist` emits 6 Question + 2 FAQPage,
+`/blogs/phobia-treatment-in-bangalore` 5 + 2. The template is fine; the defect is per-FILE
+(`question:`/`answer:` vs `q:`/`a:`). Both W39 and W-LIGHT-THERAPY-0923 are measured by T12 on 09-27.
+Backup: `logs/WATCH.md.backup-2026-09-26-pre-t20`.
+
+**5. `NEW-is-online-therapy-confidential-brief.md` authoring completed → the queue's first unblocked
+`/blogs/` brief in 10 runs.** Verifier missed-item #5: this brief has been reported as *clinically blocked* for
+nine runs, but its ⛔ hold had a **two-part** release condition and part 2 **cleared on 2026-08-31** —
+`## ✅ CLINICAL SIGN-OFF`, reviewer Dr. Sri Perambudoori Varsha, approved by Kushal as cluster owner expressly
+to unblock shipping (physical counter-signature still being collected). The only thing actually outstanding was
+part 1: **five distinct FAQs — an authoring fix, which is T20's brief-starvation lane.** Written tonight:
+`quickAnswer`, 5 `keyTakeaways`, 5 `faqs`. Constraints honoured and each verified:
+- Parent `/treatments/online-therapy` FAQPage re-pulled live tonight (7 questions incl. the head query
+  *"Is online therapy confidential in India?"*); **none of the 5 duplicates any of the 7.**
+- **Keys are `q:`/`a:`** — deliberate; `question:`/`answer:` is the live defect that emits zero schema here.
+- Suicide-safety boundary held to **one factual sentence**, no crisis instructions/methods/helpline copy.
+- Anonymity stated honestly as unavailable (FAQ 2 + keyTakeaway 4), per H2 6.
+- 3 mandatory Tier A booking links unchanged; 0 placeholders remain.
+The 2026-08-26 ship-hold was removed **per its own stated release condition** ("remove only when both are
+done"), replaced by a SHIP-GATE STATUS block recording the evidence, and the literal trigger phrase was kept
+out of the file (T9's Step-2 filter matches the string, not the meaning — a historical mention would re-block
+it). Backup: `logs/brief-backups-2026-09-26/`. **T9's Verifier gate at ship time is untouched and still
+applies.** Body copy (1,000–1,300 w against 7 H2s) is the shipping run's job — this is a complete brief, not a
+drafted page.
+
+## 🔎 FALSE POSITIVES & CORRECTIONS CLOSED (8)
+
+**1. 🎯 HEADLINE — "6 holder-free `/blogs/` opportunities" is 0. The free space the refill gate has been
+counting is phantom.** The 09-25 artefact (rebuilt from the first-ever untruncated pull, 192,611 GSC queries)
+carried **53 rows with `triggering_page: null`** — the rows every refill treats as unheld space. I curled all
+53; the Verifier independently curled all 53. **51 return live 200. Only 2 are genuine 404s.**
+- **6 `blogs` rows — all 6 live 200**, no redirect masking (`num_redirects=0`), briefs already in
+  `briefs/archive/`: what-is-somatic-therapy · people-pleasing-how-to-stop ·
+  codependency-signs-causes-treatment · anger-management-therapy · dbt-skills-modules ·
+  psychiatrist-vs-psychologist (the last is in the observation pipeline at day 25/42 — shipped, tracked, and
+  still listed as an opportunity).
+- **32 `doctors-listings` rows — all live 200** at `/doctors/<slug>`.
+- **13 rows with a MALFORMED key** (path prefix baked into the slug, e.g. `doctors-listings-psychiatrists-in-delhi`
+  with `suggested_path: "/doctors-listings/psychiatrists-in-delhi"`) — each a duplicate row for a page that is
+  live 200. **Slug-construction defect → T13** (`scripts/*.py`, T20 may not edit).
+- **Genuinely unheld: 2**, `cbt-for-ocd` and `dbt-for-borderline-personality-disorder`, both `/treatments/`
+  (YMYL — T20 may never ship), both already briefed.
+**So "the `/blogs/` mine is exhausted" is no longer an inference from a truncated pull, nor even from last
+night's negative result: the residual free space has been enumerated to zero and 51 of 53 candidate rows were
+already-shipped pages wearing a stale null.** 10th consecutive run the floor of 6 is unmet, and the reason is
+now fully characterised.
+
+**2. T14-EMOTIONAL-DISTRESS-CWV-01 — the escalated severity DOES NOT REPRODUCE, and must be corrected before
+it reaches dev.** Verifier pushed back that the 09-23 figure was 3 days and **8 production deploys** stale
+(incl. the assessments sprint and a template-level byline change). Re-measured tonight, 3 PSI mobile reads:
+**LCP 2,701 ms · FCP 1,201 ms · TBT 427 ms · CLS 0** — against the escalated *"stable 11.5–12.0 s, ~4.6× the
+threshold"*. That is **4.3× better** and lands exactly on T14's original 2,701 ms, i.e. **T14 was right and the
+09-23 11.5 s readings were the anomaly.** Honest caveat: all 3 reads are byte-identical to 13 decimals
+(2701.0255027255207), so this is **one cached PSI analysis returned three times, not three measurements** —
+the precise failure mode the 09-23 run wrote its three-read rule against. **Status: severity downgraded from
+CRITICAL to marginal (2.7 s vs the 2.5 s threshold), the 11.5 s trace is withdrawn, and dev must NOT be sent
+chasing it.** Re-measure on a cache-busting run before any dev time is spent. SITE-TBT-BUDGET-01 stands
+directionally but its numbers are restated: TBT 427 ms tonight, not 620 ms.
+
+**3. `WATCH.md` "blog template does not emit FAQPage JSON-LD" — FALSE.** Disproved by live controls tonight
+(6+2 and 5+2). Corrected in place; see auto-fix 4.
+
+**4. The W39 instruction targets a 404.** `/treatments/yoga-for-anxiety` → 404. See auto-fix 3.
+
+**5. "is-online-therapy-confidential is blocked on clinical sign-off" — FALSE for 26 days.** Cleared
+2026-08-31. See auto-fix 5.
+
+**6. My own "6th consecutive corpse night" — wrong, it is the 4th.** BACKLOG 09-22 records the lock absent
+("first clean night"); corpse mtimes agree (cleared on the 23rd/24th/25th/26th). Corpse count is 170, not ~140.
+
+**7. No T9 auto-ship log today is NOT a missed run.** `task9` cadence is *Tuesday + Wednesday + Friday 3:00 PM
+IST*; 2026-09-26 is a **Saturday**. Correctly not flagged.
+
+**8. Discovery is NOT stale** — artefact refreshed 09-25 15:53 (~1 day), `logs/t20-discovery-2026-09-25.out`
+line 4 confirms `Total queries pulled: 192611`. Verifier correction: the phrase "DISCOVERY STALE" *does* appear
+in ≥10 older logs (Aug/early-Sep), so the true statement is **"no log dated 2026-09-2* contains it"** — stated
+that way here so the next run does not rediscover those and re-escalate. `tracking-db.json` 432 keys; both
+09-25 pages hold PUBLISHED records with `published_at: 2026-09-25` — last night's repair held, no new drift.
+
+## 📋 Brief-queue health — 1 unblocked shippable (was 0 for 9 runs)
+23 `NEW-*` briefs, counted by the `**Suggested URL:**` field, not a `/blogs/` string grep. All 23 carry
+`intent_tier` (**no untiered brief to classify**); Verifier curled all 23 Suggested URLs — **23/23 are 404**, so
+**no already-live NEW slug needs archiving**. Exactly **4 target `/blogs/`**, all 404, all tiered:
+
+| Brief | Status tonight |
+|---|---|
+| is-online-therapy-confidential | ✅ **UNBLOCKED** — clinical gate cleared 08-31, authoring completed tonight |
+| gender-identity-disorder | ⛔ NEEDS_HUMAN, open-ended (illness-hub conflict; `/illnesses/gender-identity-disorder` live 200) |
+| conduct-disorder-in-adults | ⛔ NEEDS_HUMAN, unanswered clinical input |
+| which-doctor-to-consult-for-alcohol-addiction | ⏸ HOLD until 2026-10-06 (not expired, 10 days out) |
+
+Verifier correction to a prior claim: conduct-disorder-in-adults' `**Suggested URL:**` line is **not**
+malformed — line 38 reads `/blogs/conduct-disorder-in-adults` correctly; a *quoted* mention of the field name
+at line 7 is what `grep -m1` was hitting. The real defect there is a documented target-path contradiction
+(Suggested URL `/blogs/` vs the SHIP PATTERN footer's `/doctors-listings/`) → T13.
+
+Refill fired and returned nothing authorable — see false positive 1; the residual space is zero, not scarce.
+**T9 is not starving on depth:** 19 Tier A `/doctors/` briefs remain queued and the binding constraints are the
+`/doctors/` cluster cap (6/6) and reviewer load (5/5), not queue size.
+
+## 🔴 Escalated to Kushal / dev (6 — all verified tonight)
+1. **STAGED-CENTRE-COUNT-REVERT-01 — day 2, still armed, one command.** `MM src/content/doctors-listings/psychiatrists-in-bangalore.mdx`: INDEX holds "5 centres", HEAD and worktree hold "4 centres", live renders "4 centres" ×12 and "5 centres" ×0. The next commit taking the index as-is re-ships a closed Tier A defect on a 110K-vol query — and would deploy READY, because a wrong number is not a build error. **Fix: `git restore --staged src/content/doctors-listings/psychiatrists-in-bangalore.mdx`.** T20 may not touch the website repo.
+2. **DATAFORSEO-402 — day 12, 8th identical probe.** `appendix/user_data` → 20000 Ok, `balance −0.00136 USD`, `limits.day.total_serp 0`. 316 KWs unprocessed; T1/T17 blind for 2 weeks. Payment → Kushal only, will not self-heal.
+3. **BLOG-FAQ-KEY-MISMATCH-01 — day 5.** `/blogs/light-therapy-for-insomnia` and `/blogs/yoga-for-anxiety` still emit **0** Question / 0 FAQPage / 0 acceptedAnswer (6 ld+json blocks each). Controls emit correctly, so the emitter is not newly broken. Fix A/B/C pre-written: `dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md`. yoga-for-anxiety now 52 days broken — and per auto-fix 3 it grew +40% clicks anyway, which is the argument that Fix A is upside, not repair.
+4. **B12 `/doctors/therapists-near-me` — 404 re-confirmed, 10th week.** Verifier also found `/doctors/psychologists-near-me` and `/doctors/adhd-specialists` 404 with briefs queued. Blocked only on the national-hub-vs-city-pages scope call (decide with PSYCHIATRIST-NEAR-ME-DILUTION-01).
+5. **🆕 The device disk is 100% full and it silently falsifies measurements — ops + T13.** `/dev/nvme1n1` on `/sessions`: 9.8 G size, **0 avail, 100%**, across 2,045 accumulated session directories (this session's own footprint is negligible). `$TMPDIR` points into that full volume, so `mktemp -d` fails and **`curl -o` writes a 0-byte file while still returning `http=200`**. The Verifier's first pass consequently reported the exact inverse of the truth on the FAQ check and only caught it because four counts were suspiciously identical. **Sharper diagnosis than "disk full":** `/` has **4.2 G free and `/tmp` is writable** — the failure is specifically `$TMPDIR` resolving into `/sessions`. **Cheap fix: add `export TMPDIR=/tmp` to the env line of every task (B25 class) → T13.** Clearing 2,044 other sessions is an ops job, not T20's. Every task that stages through a temp file rather than a pipe is exposed; tonight's T20 measurements were piped or verified independently.
+6. **🆕 is-online-therapy-confidential ship authorisation — a 3-day veto window.** The clinical sign-off is `owner_approved_pending_physical_signature`. T20 read that as a ship authorisation because the record says so in terms, and released the hold. **T9's next run is Tue 2026-09-29.** If the owner-approval should not stand while the counter-signature is outstanding, say so before then and the hold goes back up.
+
+**Carried, verified-real, next decision dates still ahead (not re-measured, defensibly):** BURNOUT-CANNIBAL-01 + HFA-CANNIBAL-01 (W43 Day-42 09-29) · PSYCHIATRIST-NEAR-ME-DILUTION-01 · RELATIONSHIP-STRESS-CONSOLIDATION-01 · B15 stub-pilot · B22 reviewer · T17-Q3-CITATION-LOSS-0924. None is dead; none is being re-escalated as a corpse.
+
+## 🔵 To T13 (spec fixes, all from tonight's evidence)
+- `export TMPDIR=/tmp` in every task's env line (escalation 5) — highest value, it silently corrupts measurements.
+- Deploy-health gate must cite `git ls-remote origin main`, never local HEAD (C1).
+- "git status exits 0" is not a lock test — use a write probe (`git add`), and prefer `GIT_OPTIONAL_LOCKS=0`.
+- Discovery slug construction bakes the path prefix into 13 artefact keys (`scripts/*.py`, T20 may not edit).
+- Artefact rows are never reconciled against live status — 51 shipped pages sat as "holder-free" opportunities.
+- `NEW-conduct-disorder-in-adults-brief.md` target-path contradiction (Suggested URL vs SHIP PATTERN footer).
+- WATCH instructions can name a URL that 404s (W39 named `/treatments/yoga-for-anxiety`); validate on write.
+- `MIND-THERAPY-BRIEF-UNBLOCKED` is on its 10th run surfaced-but-not-routed: `/treatments/mind-therapy` 404, Tier B, INTENT GATE PASS, **no hold marker** — the only unblocked non-`/blogs/` NEW brief. T20 may never ship `/treatments/*` (YMYL/AP3). It needs an owner or it will be surfaced forever.

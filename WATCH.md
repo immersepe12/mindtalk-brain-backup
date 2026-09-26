@@ -3,6 +3,42 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### 🚨 T20 AUTO-REMEDIATION — 2026-09-25 — A STAGED GIT REVERT OF TODAY'S FIX IS ARMED IN THE WEBSITE REPO
+> **`$HOME/mnt/mindtalk` is on `feat/exec-content-fix-blr-centre-count-20260925` and `git status` reports
+> `MM src/content/doctors-listings/psychiatrists-in-bangalore.mdx`. HEAD and the working tree are correct
+> ("4 centres"); the INDEX holds the reverse diff ("5 centres").** The next `git commit` on that branch that
+> takes the index as-is re-ships PSYCHIATRISTS-BLR-CENTRE-COUNT-01 the same day it was fixed — and it will
+> deploy READY, because a wrong number is not a build error. Live is correct today (0 × "5 centres",
+> 12 × "4 centres", all three meta/og/twitter descriptions consistent). T20 may not touch the website repo,
+> and the branch belongs to a T11 exec session. One command for whoever owns that checkout:
+> `git restore --staged src/content/doctors-listings/psychiatrists-in-bangalore.mdx`.
+>
+> **🆕 W-PUNJABI-BLR-THIN-0925 (30-day thin-page watch) — and the reason it exists is a spec gap, not a T9 error.**
+> T9 shipped `/doctors/punjabi-speaking-doctors-in-bangalore` today with **exactly 1 professional** (Kavya Arora).
+> `W-PUNJABI-DELHI-THIN-0922` said in terms: *"archive the page rather than ship punjabi-bangalore and
+> punjabi-mumbai into the same shape"* — but that instruction lives in WATCH.md, which **T9's ship gate never
+> reads**, and the page passes the `>=1` viability gate. So the second 1-profile Punjabi page shipped 33 days
+> before the Delhi checkpoint, and `NEW-punjabi-speaking-doctors-in-mumbai-brief.md` is still queued as the
+> third. **Check 2026-10-25** alongside W-PUNJABI-DELHI-THIN-0922 (10-22): if both show ~0 impressions and the
+> roster still holds one Punjabi profile, archive both pages and the Mumbai brief rather than ship it.
+> Sibling counts from the same commit for contrast: `/doctors/cbt-therapists` **15**, therapists-in-bangalore 5.
+> → T13: `WATCH-CANNOT-REACH-SHIP-GATE-01` — a WATCH row has no channel to a ship gate.
+>
+> **✅ W-LIGHT-THERAPY-0923 / W39 — STILL BLIND, day 3, and now with the root cause and the fix located.**
+> `/blogs/yoga-for-anxiety` and `/blogs/light-therapy-for-insomnia` still emit **0** `"@type":"Question"` nodes
+> (control `/blogs/phobia-treatment-in-bangalore` = 5). Do not read either watch as a test of the FAQ lever.
+> **The fix already exists in the repo and was never applied to the blogs template:** `normalizeFaqs()` in
+> `src/lib/seo/schema.ts` L167–176 accepts both `q`/`a` and `question`/`answer` and is already used by
+> treatments, illnesses and doctors; `app/blogs/[slug]/page.tsx` L237–240 still runs its own `q`/`a`-only
+> filter. Re-baseline both watches the day Fix A ships — spec: `dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md`.
+>
+> **⚠️ New standing measurement rule (T20 caught itself again).** Tonight's first FAQ sweep curled three
+> different blog URLs in a shell loop and received **byte-identical 109,374-byte responses with identical grep
+> counts** — which would have closed a real defect as a false positive. **A batch of curls returning identical
+> byte counts for different URLs is a failed measurement, not a finding.** Re-fetch to separate files, set a UA,
+> and assert a distinct `<title>` before trusting any grep count taken from a loop. Also: mindtalk.in apex
+> 307-redirects to `www` — a bare `curl` without `-L` or `www.` returns 307 for *every* URL, live or 404.
+
 
 > ### 🚨 T20 AUTO-REMEDIATION — 2026-09-23 — TWO WATCHES ARE MEASURING A SHIP THAT DELIVERED NOTHING
 > **`W-LIGHT-THERAPY-0923` — opened today on `/blogs/light-therapy-for-insomnia`, expected "+10–25 clicks/wk" from
@@ -53,6 +89,9 @@
 > **⚪ Do NOT open a watch on the empty `flagged-drops.json` / `confirmed-drops.json`.** Both are `{}` for a 7th day because
 > DataForSEO is 402-blocked (balance −0.00136 USD, `limits.total_serp: 0`); `logs/rank-2026-09-22.txt` checked **1 keyword of 291**.
 > Absence of drops is absence of measurement.
+
+> ### ℹ️ T10 STRATEGIST — 2026-09-25 — DataForSEO-402 DAY 11 CRITICAL · No new watches today · PSYCHIATRISTS-BLR-CENTRE-COUNT-01 → T11 IMMEDIATE · BLOG-FAQ-KEY-MISMATCH-01 Fix A → T11 · Assessments watches already open (W-ASSESS-*-0925) · Day-21 midpoints fire 09-29 (T12)
+> **No new watches opened 2026-09-25.** DataForSEO 402 day 11 — rank data blind. No midpoints or finals due today. 29 URLs in active pipeline. Day-21 batch fires 2026-09-29 (T12 evaluates). Assessments observation windows W-ASSESS-*-0925 already open (midpoint 10-16, Day-42 11-06). **NOTE for T11:** when applying BLOG-FAQ-KEY-MISMATCH-01 Fix A, open a 21-day FAQ schema watch for yoga-for-anxiety + light-therapy.
 
 > ### ℹ️ T10 STRATEGIST — 2026-09-22 — W43 Day-27 evaluation 09-27 (T12 Sunday-only) · psychiatrist-vs-psychologist Day-21 fires today · DataForSEO blind day 5+
 > **W43 Day-21 cohort (8 URLs):** Midpoints were due 09-21. T12 is Sunday-only — T12 missed 09-21 (Monday). T12 evaluates all 8 W43 URLs on 09-27 at Day-27 (still inside 42-day window; Day-42 final 10-12). NOT a true overdue — Sunday cadence by design. Status: **pending_evaluation → T12 picks up 09-27**.
@@ -195,6 +234,7 @@
 
 | Watch ID | URL | Query | Type | Opened | Action that triggered watch | Expected outcome | Check on | Status |
 |---|---|---|---|---|---|---|---|---|
+| W-FAMILY-COUNSELLING-0924 | `/blogs/what-is-family-counselling` | 2026-09-24 | Opened T10 09-24 | CTR_DROP: clicks −100%, impr +31% WoW (week of 09-13). Impressions UP while clicks → 0 = probable AI Overview / SERP-feature steal. **Not a rank drop** — position unknown (DataForSEO 402 blind). Monitor for 14d to see if clicks recover as snippet normalises, or if AIO defence content needed. | check_2026-10-08 | ⬜ OPEN |
 | W1 | /illnesses/dementia | dementia treatment | YMYL_recovery | 2026-06-09 | Sprint A (commit `270cf0c`) | impressions +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🟡 PARTIAL (position-only).** GSC impr 84→75 (−10.7%), pos 7.5→**4.9** (+2.6). Position improved but query base collapsed (33 vs 280-420). Target MISSED. AP9 instance. Next: content-depth recovery in #18 batch (07-02). Log: `memory/experiments/closed-W1-2026-06-28.md` |
 | W2 | /illnesses/alzheimers | alzheimers treatment | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — ⚫ WORSE.** GSC impr 29→23 (−20.7%), pos 10.5→**13.1** (worsened). AP9 instance #1. Cannibalization by dementia (W1) confirmed (#19 verdict: DIFFERENTIATE). Recovery brief HELD in #18 batch. Log: `memory/experiments/closed-W2-2026-06-28.md` |
 | W3 | /illnesses/posttraumatic-stress-disorder-ptsd | ptsd | YMYL_recovery | 2026-06-09 | Sprint A | +15-25% | 2026-06-23 | ✅ **CLOSED 2026-06-28 by Learner — 🔴 STALLED (with re-verify flag).** GSC impr 803→**241** (−70.0%), pos ~10 stable, query count ROSE 57→61 = possible GSC under-report. AP9 instance #2. **⚠ Re-verify 06-30 (21-day window) before heavy rewrite** — **RE-VERIFY DONE 2026-07-01 → HOLD (normalization confirmed, NOT a real content drop).** Live GSC page-level weekly: 06-01→07 = 56 · 06-08→14 = 119 · 06-15→21 = 96 · **06-22→28 = 127 (June high)**, rank stable 9–11, query count **16→30 (WoW nearly doubled)** — the exact "GSC under-report / SERP-change, not content failure" signature the 14-day note predicted, now resolving upward. "127 (7d) < 241" is apples-to-oranges: trailing 14-day 06-15→28 = 223 ≈ flat vs 241, recent-week run-rate ≈254. **→ BACKLOG #18 ptsd brief scope REDUCED to E-E-A-T + FAQ additions only (no heavy rewrite); YMYL clinical sign-off still required.** Re-verify log: `memory/experiments/watch-W15-W3-recheck-2026-07-01.md`. Prior close log: `memory/experiments/closed-W3-2026-06-28.md` |
@@ -1734,4 +1774,35 @@ T12 must run GSC pull for all 8 URLs on 09-21 and evaluate Day-21 midpoints agai
 **Status:** OPEN
 
 | W-DEMENTIA-BLR-0923 | /doctors/alzheimers-specialists-in-bangalore | meta_ctr_update | 2026-09-23 | 2026-10-07 | open | DEMENTIA-LISTING-TITLE-01: front-loaded 'Dementia', new metaDesc, +2 FAQs. Commit 691c02ff. Baseline: 754 impr / 0 clicks (page 1). Expected: +15-40 clicks/wk. |
-| W-LIGHT-THERAPY-0923 | /blogs/light-therapy-for-insomnia | meta_ctr_update | 2026-09-23 | 2026-10-07 | open | LIGHT-THERAPY-INSOMNIA-CTR-01: action-keywords title, specific metaDesc, +3 FAQs (frontmatter). Commit 2ea8fdcd. Baseline: 616 impr / 0 clicks / pos 10.9. Expected: +10-25 clicks/wk. Note: blog template does not emit FAQPage JSON-LD (SCHEMA-MEDICAL-TYPES-01 gap). |
+| W-LIGHT-THERAPY-0923 | /blogs/light-therapy-for-insomnia | meta_ctr_update | 2026-09-23 | 2026-10-07 | open | LIGHT-THERAPY-INSOMNIA-CTR-01: action-keywords title, specific metaDesc, +3 FAQs (frontmatter). Commit 2ea8fdcd. Baseline: 616 impr / 0 clicks / pos 10.9. Expected: +10-25 clicks/wk. Note CORRECTED 2026-09-26 by T20: the blog template DOES emit FAQPage JSON-LD — controls verified live tonight (/blogs/psychiatrist-vs-psychologist 6 Question + 2 FAQPage; /blogs/phobia-treatment-in-bangalore 5 + 2). The defect is per-FILE, not template-level: this page's frontmatter uses `question:`/`answer:` where the blogs emitter reads `q:`/`a:`, so all entries map to undefined and are dropped (BLOG-FAQ-KEY-MISMATCH-01, dev-specs/BLOG-FAQ-KEY-MISMATCH-01.md). Live check 2026-09-26: this page still emits 0 Question nodes, so the FAQ half of this watch is NOT measurable until Fix A lands. |
+
+## ASSESSMENTS GROWTH SPRINT — 2026-09-25 (commit c9b9b731, prod dpl_85MyXpY9 READY, live-curled ✅)
+Section baseline: 8,430 clicks / 465,197 impr / 1.81% CTR (90d, page-dimension, all countries). Midpoint 2026-10-16 · Day-42 2026-11-06.
+Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
+
+| Watch | Page | Action | Opened | Check | Status | Baseline → Expected |
+|---|---|---|---|---|---|---|
+| W-ASSESS-YBOCS-0925 | /assessments/y-bocs | CTR retarget + evidence | 2026-09-25 | 2026-10-16 | open | 42683 impr / 574 clicks / pos 6.9 (90d 06-27→09-24) → +300 clicks/90d (CTR 1.34%→~2.5%) |
+| W-ASSESS-LLQ-0925 | /assessments/love-language-quiz | CTR retarget (trademark-safe) + depth | 2026-09-25 | 2026-10-16 | open | 38716 impr / 314 clicks / pos 9.2 (90d 06-27→09-24) → CTR 0.81%→1.5%+ |
+| W-ASSESS-BPD-0925 | /assessments/am-i-borderline-test | "BPD Test" retarget | 2026-09-25 | 2026-10-16 | open | 15447 impr / 522 clicks / pos 9.1 (90d 06-27→09-24) → pos 8.9→≤6 on "bpd test" |
+| W-ASSESS-ACE-0925 | /assessments/ace-test | "ACE score" retarget | 2026-09-25 | 2026-10-16 | open | 11594 impr / 91 clicks / pos 10.7 (90d 06-27→09-24) → CTR 0.78%→1.5%+ |
+| W-ASSESS-DASS-0925 | /assessments/dass-21 | depth + retarget | 2026-09-25 | 2026-10-16 | open | 2925 impr / 76 clicks / pos 9.0 (90d 06-27→09-24) → pos 29→≤15 on "dass 21" |
+| W-ASSESS-EI-0925 | /assessments/emotional-intelligence-test | depth + retarget | 2026-09-25 | 2026-10-16 | open | 2575 impr / 48 clicks / pos 10.7 (90d 06-27→09-24) → pos 28→≤15 |
+| W-ASSESS-AUTISM-0925 | /assessments/autism-test | "Autism test for adults" depth | 2026-09-25 | 2026-10-16 | open | 6330 impr / 96 clicks / pos 16.6 (90d 06-27→09-24) → pos 13→≤10 |
+| W-ASSESS-GAD7-0925 | /assessments/gad-7 | "anxiety test" title lead + evidence | 2026-09-25 | 2026-10-16 | open | 39059 impr / 922 clicks / pos 9.0 (90d 06-27→09-24) → hold ≥ baseline; +CTR on "anxiety test" |
+| W-ASSESS-HUBS-0925 | /assessments/depression|anxiety|ocd|trauma-ptsd|stress-and-tension | hub retargets to plain-English "X test" | 2026-09-25 | 2026-10-16 | open | (see section baseline) → first page-1 for "depression test"/"stress test" |
+| W-ASSESS-NEW8-0925 | /assessments/compatibility-test|mental-health-test|chronotype-test|riasec-career-test|highly-sensitive-person-test|introvert-extrovert-test|tinnitus-handicap-inventory|sleep-hygiene-index | NEW pages | 2026-09-25 | 2026-10-16 | open | (see section baseline) → indexed ≤14d; P12: ≥80% page-1 by Day 42 |
+| W-ASSESS-BYLINE-0925 | /assessments/ALL /assessments/* | visible reviewer byline + named reviewedBy (template) | 2026-09-25 | 2026-10-16 | open | (see section baseline) → section CTR 1.81%→2.3%+ over 42d |
+
+## ASSESSMENTS PHASE 2 — 2026-09-25 (commit 0c4562a6, live-curled ✅)
+| Watch | Page | Action | Opened | Check | Status | Baseline → Expected |
+|---|---|---|---|---|---|---|
+| W-ASSESS-CSSRS-0925 | /assessments/c-ssrs | safe-messaging CTR + evidence (professional intent) | 2026-09-25 | 2026-10-16 | open | 16623 impr / 71 clicks / pos 9.2 → CTR 0.43%→1%+ |
+| W-ASSESS-EAT26-0925 | /assessments/eat-26 | safe-messaging CTR + evidence | 2026-09-25 | 2026-10-16 | open | 1330 impr / 6 clicks / pos 13.0 → CTR ≥1% |
+| W-ASSESS-CUBE-0925 | /assessments/cube-test | NEW (1,400/mo KD 0) | 2026-09-25 | 2026-10-16 | open | 0 → indexed ≤14d, page-1 by Day 42 |
+| W-ASSESS-INDEX-0925 | /assessments | retarget to "psychometric test" (18,000/mo KD 18) | 2026-09-25 | 2026-10-16 | open | index had ~0 psychometric impressions → first page-1 appearance |
+| W-ASSESS-308-0925 | 33 orphan /assessments/* URLs | 404 → 308 canonical | 2026-09-25 | 2026-10-16 | open | GSC 404s on these paths drop to 0 |
+
+---
+<!-- T10 Strategist stamp — 2026-09-26 20:00 IST -->
+**T10 STAMP 2026-09-26**: No new watch windows opened today (DataForSEO-402 blocked; no new content shipped). Upcoming critical dates: W43 Day-27 eval 09-27 (T12), B8-MON cannibal check 09-29, HFA-CANNIBAL-01 W43 Day-42 decision 09-29, B26 couples-therapy check 09-30.

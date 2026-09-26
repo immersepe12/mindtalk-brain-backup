@@ -88,3 +88,16 @@ See `brain/INTENT-PRIORITY.md` §1–§2.
 ---
 
 (Learner appends new anti-patterns when closed watch windows reveal harmful actions to avoid.)
+
+
+## AP13. Never compute page totals by summing GSC query-dimension rows (2026-09-25)
+Query rows omit anonymised/rare queries and are row-capped — the sum was ~40% of the real page total on /assessments/* (212 vs 525 clicks/week). Page totals come from `dimensions:["page"]`; query rows are only for the keyword breakdown. Evidence: GSC-QUERY-UNDERCOUNT-01, `reports/assessments-growth-execution-plan-2026-09-25.md` §0.
+
+## AP14. Never build the URL list for a GSC pull from tracking-db / keyword-map alone (2026-09-25)
+19 live assessment pages — including gad-7, the #1 assessment page (922 clicks/90d) — were never pulled because they weren't in the tracked list. Union with the live sitemap. Evidence: GSC-URL-LIST-GAP-01.
+
+## AP15. Never publish a clinical figure, cut-off or "validated in India" claim that isn't verified against the primary source (2026-09-25)
+The assessments sprint found and removed dozens of unverifiable claims already live on signed-off pages (wrong PHQ-9 year, wrong ACE sample, unsourced cut-offs, invented Hindi/Kannada validations, near-verbatim copyrighted BAI items). Verify every PMID via NCBI E-utilities; if it can't be verified, don't write it. See `brain/ASSESSMENTS-PLAYBOOK.md` §4.
+
+## AP16. Never pick a reviewer by available load alone — match specialty first (2026-09-25)
+T9 assigned `shilpa-avarebeel` (Senior Geriatric Consultant, internal medicine) to `/doctors/cbt-therapists` because she had load headroom. Kushal swapped it to `smicky-priya-das` (Consultant Clinical Psychologist). Rule: therapy/psychology pages → clinical psychologists; medication/diagnostic/clinician-rated → psychiatrists; geriatric internal medicine only for dementia/elderly-medical topics. Load cap is a tiebreaker, never the selector.

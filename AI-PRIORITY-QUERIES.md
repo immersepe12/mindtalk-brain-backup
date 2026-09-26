@@ -51,3 +51,17 @@ Once weekly run stabilizes (3-4 weeks of data), Meta-Learner can propose:
 | {query} | cited / not | cited / not | cited / not | cited / not |
 
 Weekly diff vs previous snapshot → TRAJECTORY.md "AI Overview citation share" row.
+
+## Assessment-intent add-on queries (added 2026-09-25 — assessments growth sprint)
+Run alongside the core 10 in T17. Record whether Mindtalk is cited and which URL. Baseline = first run after 2026-09-25.
+| # | Query | Target URL |
+|---|---|---|
+| A1 | free anxiety test online india | /assessments/gad-7 |
+| A2 | bpd test online | /assessments/am-i-borderline-test |
+| A3 | what is a normal ybocs score | /assessments/y-bocs |
+| A4 | depression test free india | /assessments/depression |
+| A5 | adult adhd test online | /assessments/asrs |
+| A6 | cptsd test | /assessments/itq |
+| A7 | ace score test | /assessments/ace-test |
+| A8 | love language test free | /assessments/love-language-quiz |
+Rationale: assessments are the site's biggest organic section (8,430 clicks/90d) and now carry visible clinician bylines + PubMed-referenced evidence sections — the two signals most likely to earn AI citations.

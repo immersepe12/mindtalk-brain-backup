@@ -183,3 +183,8 @@ Reversal requires explicit human sign-off from Kushal, recorded in `brain/memory
 Learner (T12) reviews this policy monthly against measured outcomes. Promote a tier only on ≥3 weeks of
 evidence. If Tier A pages stop converting at ≥50% intent for 3 consecutive weeks, escalate to human —
 do not silently rebalance toward Tier C.
+
+
+> **2026-09-25 — assessment exception:** assessment briefs follow `brain/ASSESSMENTS-PLAYBOOK.md` §9. Clinical screeners = Tier B (≥2 Tier A links). Consumer/self tests from the company master = sanctioned Tier C exception "ASSESSMENT-DEMAND-GEN" (max 2 per weekly run, outside the 10% cap, judged on signups/assisted traffic).
+
+> **2026-09-25 — children rule:** child/adolescent intent routes to the Cadabams CDC site, never mindtalk.in. See ASSESSMENTS-PLAYBOOK §11. T5/T9 must reject child-focused briefs for mindtalk.
