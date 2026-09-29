@@ -1,0 +1,5 @@
+# Executor run 2026-09-29
+- BLOG-FAQ Fix A: Verifier APPROVE. Diff exactly 6+10 lines, 0 residual question:/answer:. Committed locally on feat/exec-fix-blog-faq-keys-2026-09-29. NOT merged/pushed: `npm run build` impossible on device (node_modules/next missing, /sessions disk 100% full); cloud-clone build was blocked (would need copying the GitHub PAT off-device). BACKLOG row left open; tracking-db/WATCH not modified (nothing shipped).
+- B18: Verifier NEEDS_HUMAN -> brain/needs-human-review/2026-09-29-B18/. BACKLOG row left open (not marked complete).
+- To finish Fix A: run `npm ci && npm run build` where it works, then merge feat/exec-fix-blog-faq-keys-2026-09-29 to main + push, curl-verify 3/5 Question nodes, open 21d watch.
+- Repo state left: website repo checked out on local branch feat/exec-fix-blog-faq-keys-2026-09-29 (commit fd67efb9, NOT pushed, main/origin unchanged at 4072d914). Switching back failed (FUSE mount blocks unlink; stuck HEAD.lock renamed to HEAD.lock.corpse-20260929). index==HEAD==worktree. Hazard: T9 branching from here would carry fd67efb9 — T9 should `git checkout main` first.

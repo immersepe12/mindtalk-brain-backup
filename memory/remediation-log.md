@@ -6251,3 +6251,42 @@ ad-account write (the DataForSEO call was read-only `appendix/user_data`) · no 
 were themselves checked against source before being acted on.
 **Writes this run:** 2 new briefs (+ backups), 2 brief renames (+ backups), 1 dev spec,
 `logs/t20-*-2026-09-28.*` (6 files), 2 pre-run backups, this log, `brain/BACKLOG.md`.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-09-29 (Tue) 20:59 IST (15:29 UTC fire)
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `4072d914`
+Vercel `mindtalk`, last 6 production deploys: 6/6 READY, 0 ERROR. Latest `dpl_5nTmMeSjvmnGnyyHGCxtKAE2cmFi` (2026-09-28T08:15Z, ~31 h, < 48 h).
+`git ls-remote origin main` = `4072d914` = deployed SHA → 0 stranded on main. Local branch
+`feat/exec-fix-blog-faq-keys-2026-09-29` carries 1 unpushed commit (`fd67efb9`) — that is the BLOG-FAQ fix, not stranded main work.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| BLOG-FAQ-KEY-MISMATCH-01 | live `curl --compressed` `"@type":"Question"` count: `/blogs/light-therapy-for-insomnia` = 0, `/blogs/yoga-for-anxiety` = 0 | **REAL** — fix `fd67efb9` exists only on a local unpushed branch; needs build-verify + merge/push (website repo) → ESCALATE (spec: `dev-specs/DEVSPEC-BLOG-FAQ-KEY-MISMATCH-01-2026-09-28.md`) |
+| DataForSEO-402 Day 16 | carried from 09-28 live read (balance −$0.00136, unchanged); T1 today 0/316 (402) | REAL, payment → carried, Kushal only |
+| Brief starvation | recount with T9 skip filter + live curl | REAL: 3 shippable (floor 6 unmet, 11th run) |
+| cbt-for-ocd / dbt-for-bpd briefs | `/treatments/*` YMYL paths, AP3 VETO (no clinical sign-off) | NOT `/blogs/` → not counted, not shippable by T20 |
+
+## STANDING JOB — BRIEF QUEUE: 3 shippable (no change)
+Shippable `/blogs/` NEW briefs (tier present, slug 404, no T9 skip phrase): `is-online-therapy-confidential`,
+`what-happens-in-a-therapy-session`, `online-therapy-vs-in-person-therapy`. Blocked on clinical input
+(skip phrase): `conduct-disorder-in-adults` (⛔ 08-26), `gender-identity-disorder` (⛔ 08-24),
+`which-doctor-to-consult-for-alcohol-addiction` (HOLD until 10-06).
+Auto-fix attempt: `scripts/google-ads-search-terms.py` ran clean (exit 0, 266 qualified terms). Top converting terms
+(therapist near me 63.9 conv, psychologist near me 35.2, psychologist/therapist bangalore, couple therapy bangalore, marriage
+counselling bangalore…) are all Tier A `/doctors/` intent — cannot ship as `/blogs/` by T20 (and existing hubs own them). **0 new
+briefs written**; padding with thin/held queries is forbidden by INTENT-PRIORITY §3 (same finding as 09-28).
+Discovery re-run **not attempted**: known 180 s device-shell ceiling (EXIT 124 ×3 on 09-28, T5 failed ×2); cached data 3 days old vs 21-day limit.
+Stale/untiered/unprefixed briefs: none to archive (0 unprefixed; the 3 REFRESH- briefs are live-by-design, kept).
+
+## Escalated (batched)
+1. BLOG-FAQ fix merge — Kushal/dev: on `mindtalk` repo, branch `feat/exec-fix-blog-faq-keys-2026-09-29`: run build, merge to staging→main, then curl-verify 3 + 5 FAQPage Question nodes.
+2. DataForSEO invoice (Day 16) — payment, Kushal only.
+3. Clinical answers for the two August-held briefs (queue 3→5) — carried, not re-escalated in detail.
+
+## Constraint check
+No `src/**` edit, no commit/push, no `scripts/*.py` edit, no billing/credential/ad-account write (paid-terms script is read-only), no YMYL shipped,
+nothing deleted, 0 shipped (weekly cap untouched). Writes: `logs/t20-paid-terms-2026-09-29.{out,err}`, pre-run log backup, this entry.
+Verifier gate: not spawned — no brief or page was written/shipped this run.

@@ -1556,3 +1556,7 @@ Full log: brain/memory/decisions/2026-09-14.md
 
 **Site posture:** GROWTH · ATH 4,458 clicks (T12 stamp 09-27) · DataForSEO blind Day 13 (CRITICAL — Kushal payment needed) · September Core Update ACTIVE · 3 task-spec improvements applied today · Observation pipeline healthy · W41 Day-42 critical window opens Monday 09-29.
 
+
+### T10 note 2026-09-29
+- Verify "brief ready" claims against `briefs/` before routing to T11 (B18 was routed IMMEDIATE with no brief file; Verifier returned NEEDS_HUMAN). B18 deferred to 2026-10-13.
+- T6 appends flagged-drops rows without `url_path` (747 unvalidatable) — T13 spec fix needed.
