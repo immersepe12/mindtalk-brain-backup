@@ -41,3 +41,7 @@ Copy `brain/before-snapshots/task11-executor-20260920T2030.bak` back to `cowork-
 ## Veto instructions
 To veto: rename to `t11-published-at-schema-drift-20260920T2030.vetoed.md` and add a `## Veto reason` section.
 To approve early: rename to `t11-published-at-schema-drift-20260920T2030.approved.md`.
+
+---
+**APPLIED by T10 Strategist: 2026-09-27**
+Verifier: APPROVE (risk low/medium, target paths allowed, before-snapshot taken: brain/before-snapshots/t11-published-at-schema-drift-20260920T2030-before-2026-09-27.md)

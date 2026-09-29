@@ -45,3 +45,7 @@ Copy `brain/before-snapshots/task20-auto-remediation-mine-truncation-20260920T20
 ## Veto instructions
 To veto: rename to `t20-mine-truncation-absence-guard-20260920T2030.vetoed.md` and add a `## Veto reason` section.
 To approve early: rename to `t20-mine-truncation-absence-guard-20260920T2030.approved.md`.
+
+---
+**APPLIED by T10 Strategist: 2026-09-27**
+Verifier: APPROVE (risk low/medium, target paths allowed, before-snapshot taken: brain/before-snapshots/t20-mine-truncation-absence-guard-20260920T2030-before-2026-09-27.md)

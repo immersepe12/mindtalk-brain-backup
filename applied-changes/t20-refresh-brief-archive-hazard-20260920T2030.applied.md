@@ -45,3 +45,7 @@ Copy `brain/before-snapshots/task20-auto-remediation-20260920T2030.bak` back to 
 ## Veto instructions
 To veto: rename this file to `t20-refresh-brief-archive-hazard-20260920T2030.vetoed.md` and add a `## Veto reason` section.
 To approve early: rename to `t20-refresh-brief-archive-hazard-20260920T2030.approved.md`.
+
+---
+**APPLIED by T10 Strategist: 2026-09-27**
+Verifier: APPROVE (risk low/medium, target paths allowed, before-snapshot taken: brain/before-snapshots/t20-refresh-brief-archive-hazard-20260920T2030-before-2026-09-27.md)

@@ -59,20 +59,33 @@ Each entry: principle + evidence + when it applies.
 
 **Source:** Jun-9 auto-ship cohort Day-42 final evaluation (5/6 RESOLVED; Learner T12, 2026-07-26). W14 Day-42 closed 2026-08-03 (7th formal 🟢). W12 and W13 closed as documented exception-class failures.
 
-**Evidence (10 data points: 7 formal 🟢 + 3 exception-class ⚠, action class: T9 auto-ship NEW blog to long-tail query):**
+**Evidence (19 data points: 15 formal 🟢 + 1 🟡 PARTIAL + 3 exception-class ⚠, action class: T9 auto-ship NEW blog to long-tail query):**
+*Jun-9 cohort (W10-W14):*
 1. /blogs/anger-management-therapy — pos 13.5 at Day-42 ✅
 2. /blogs/dbt-skills-modules — pos 9.6 at Day-42 ✅
 3. /blogs/people-pleasing-how-to-stop — pos 10.8 at Day-42 ✅
 4. /blogs/relationship-problems-signs-causes-solutions — pos 9–10.3 at Day-42 ✅
 5. /blogs/what-is-somatic-therapy — pos 3.3 at Day-42 ✅ (EXCEPTIONAL — TOP 3)
 6. /blogs/how-to-find-a-therapist-in-india (W14) — **pos 2 at Day-42** ✅ (EXCEPTIONAL)
-7. Two early-signal corroborating points (Jul-28 cohort) — pending Day-42
-— EXCEPTION CASES (not counted in 80% denominator; root cause is brief selection, not content quality) —
+*Jul-28 cohort (W30-W33, closed 2026-09-27 by T12):*
+7. /blogs/how-to-deal-with-relationship-stress (W30) — pos 7.6 at Day-42 ✅ (337 impr, 1 click)
+8. /blogs/how-to-fix-your-sleep-schedule-quickly (W31) — pos 4.1 at Day-42 ✅ EXCEPTIONAL (4,433 impr, 12 clicks)
+9. /blogs/mental-exhaustion-symptoms-causes (W32) — avg pos 14.0 (page 2) 🟡 PARTIAL; primary query "what is mental exhaustion" pos 6 = page 1 (improving trajectory, T10 60-day monitor 10-27)
+10. /blogs/what-is-eft-tapping-guide (W33) — pos 7.2 at Day-42 ✅ (579 impr, 5 clicks, WoW +67% clicks)
+*Aug-11 cohort (W40, closed 2026-09-27 by T12):*
+11. /blogs/anxiety-shortness-of-breath-relief — pos 3.7 at Day-42 ✅ EXCEPTIONAL (TOP 4)
+12. /blogs/handling-partners-anger-in-relationship — pos 4.8 at Day-42 ✅
+13. /blogs/how-to-fix-ptsd-recovery-steps — pos 6.6 at Day-42 ✅
+14. /blogs/how-to-stop-ocd-thoughts-immediately — pos 5.8 at Day-42 ✅ (516 impr, 5 clicks)
+15. /blogs/therapy-for-relationship-issues — pos 6.9 at Day-42 ✅
+— EXCEPTION CASES (not counted in denominator; root cause is brief selection, not content quality) —
 E1. /blogs/codependency-signs-causes-treatment — linguistic mismatch (Tamil-variant dominates English head term; Jun-9 cohort)
 E2. /blogs/couple-therapy-techniques (W12) — blog/treatment URL overlap cannibalization (`/treatments/couples-therapy` wins cluster at pos 4; blog not in top 100)
 E3. /blogs/how-to-find-a-therapist-for-ocd (W13) — target keyword near-zero India search volume (0 organic results DataForSEO India)
 
-**Establishment rate (content-quality cases only):** 6/6 formal closes = **100%** | Including exceptions: 6/9 = 67%
+**Establishment rate (content-quality cases only):** 14/15 formal closes = **93%** | Including 🟡 PARTIAL: 14 full + 1 partial out of 15 = 93% full-green. Including exceptions: 14/18 = 78%. ✅ All 9 new closures 2026-09-27 are content-quality cases — ZERO exception-class failures this batch. Cumulative rate well above 80% threshold.
+
+**⚡ Emerging pattern (flag for new principle after W43 Day-42 finals 2026-10-12):** Cost/pricing-query blogs appear to achieve page-1 faster and with higher impressions than average: therapy-cost-in-india (pos 4.4, 3,627 impr at Day-27), psychiatrist-online-consultation-india (pos 6.8, 1,367 impr at Day-27), couple-therapy-cost-in-bangalore (page 1 at Day-27). If W43 Day-42 confirms all 3 at page-1 → propose P[NEW] "cost/pricing query blogs are a premium T9 target class".
 
 **Known exception classes (brief-selection failures — T5 must screen these):**
 1. **Linguistic mismatch** — query has a dominant regional-language variant in India ("X meaning in tamil/hindi/kannada"). Check `reports/query-history.json` for non-English variant signal.
@@ -87,7 +100,7 @@ E3. /blogs/how-to-find-a-therapist-for-ocd (W13) — target keyword near-zero In
 
 **Ties to P4:** Shipping remains the bottleneck, not content quality. Investment should continue in brief velocity (T5) and shipping capacity (T9 cap). T5 should add the three exception-class screens to its brief-approval checklist.
 
-**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes).
+**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes). **Updated 2026-09-27** (T12 Learner: +9 data points from W30/W31/W32/W33 Day-42 finals + W40 Day-42 finals; cumulative 14/15 content-quality = 93%; emerging cost/pricing pattern flagged).
 
 ---
 

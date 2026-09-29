@@ -1,3 +1,22 @@
+### 2026-09-28 T10 Strategist (8 PM IST) — ALGO_WATCH discrepancy flagged; DataForSEO Day 15 blind; B18+BLOG-FAQ-FIX-A queued T11; 3 proposals cleaned up
+- ⚠️ **ALGO_WATCH DISCREPANCY — material learning for the engine.** T12 09-27 noted "Sep Core Update confound" (ACTIVE posture). GSC validator 09-28 sensor returned `ALGO_WATCH: NOT ACTIVE`. Two authoritative sources in conflict. Conservative ruling: keep ACTIVE until T12 10-04 confirms. **Lesson: two sensor sources can give contradictory algo-watch verdicts. Never relax YMYL posture on a single signal. ALGO_WATCH state requires T12 (weekly digest) + GSC validator agreement before clearing.**
+- 📡 **DataForSEO-402 Day 15** (balance −$0.00136, overdrawn since 09-15). All scoring this cycle GSC-only. Kushal: top-up urgent — every extra blind day degrades position-tracking and scoring accuracy.
+- 🎯 **Top actions scored (formula (I×C×G)/(E×R) × Tier-mult, reject < 5):** DataForSEO top-up (score 720, Tier A ×1.5, flag_for_human Kushal CRITICAL) · STAGED-CENTRE-COUNT-REVERT-01 (score 560, Tier A ×1.5, flag_for_human Kushal CRITICAL) · B18 online-psychiatrist internal links (score 144, T11 IMMEDIATE) · BLOG-FAQ-KEY-MISMATCH-01 Fix A (score 110, T11 IMMEDIATE) · B12 therapists-near-me 9th+ week (score 67.5, flag_for_human Kushal). Rejected: neurosis-symptoms (AP15) · fatal-familial-insomnia (AP15) · sleep-talking (AP11) · help-a-child-with-anxiety (child intent gate → Cadabams CDC) · phubbing-meaning (AP11).
+- ✅ **Proposal cleanup completed today.** t11-published-at-schema-drift + t20-mine-truncation-absence-guard + t20-refresh-brief-archive-hazard: all confirmed APPLIED by T10 09-27 (footers verified); moved to applied-changes/ 2026-09-28. t5-gate-enforcement + t9-faq-schema-claim + t9-watch-ship-block: Apply-on 2026-10-04 — future-skip, no action.
+- ⚡ **W41 Day-42 fires TOMORROW 09-29** (T20 pre-pull done; T12 evals 10-04). B12 → 9th+ week CRITICAL (pos 75, DOWN 62 from 13). Brief ready, flag_for_human Kushal.
+- **Site posture:** GROWTH — ATH 4,458 clicks (week 09-18→09-24). P12=93%. Weekly caps: ~15/20 new, 1/20 refresh — headroom available.
+
+### 2026-09-27 T12 Learner — Weekly Digest · New ATH 4,458 clicks · 9 final closures (8🟢 1🟡) · NO LEARNER FLAG · W41 Day-42 fires 09-29
+- ✅ **NEW ALL-TIME HIGH: 4,458 clicks (week 09-18→09-24)** — +15.3% WoW, surpassing previous ATH of 3,904 (W36). CTR 1.1% (↑ from 1.0%); avg pos 8.6 (↑ from 9.2); 398,909 impr (−4.9%, normal as CTR improves). Strategic posture: continue CTR EXTRACTION — the clicks ATH confirms this is working.
+- ✅ **9 final closures: 8🟢 / 1🟡 / 0🔴 / 0⚫ → NO LEARNER FLAG.** W40 (5 blogs, 08-11 ship) 5/5 🟢; W30/W31/W33 (07-28 ship) 3/3 🟢; W32 (07-28 ship) 🟡 PARTIAL (avg pos 14 page 2, but primary "what is mental exhaustion" pos 6 = page 1). P12 cumulative content-quality rate: 14/15 = 93% (above 80% threshold). ANTI-PATTERNS.md unchanged (0 failures).
+- ⚡ **W41 Day-42 fires 2026-09-29 (Monday, 2 DAYS).** T20 must pre-pull W41 GSC data by 09-29. T12 evaluates Sunday 10-04. W43 Day-42 finals: 10-12.
+- 🔴 **B12 CRITICAL (8th+ consecutive week):** "therapist near me" pos 75 (DOWN 62 from pos 13 in one week — September Core Update or algo change). T11 IMMEDIATE: `briefs/NEW-therapists-near-me-brief.md` ready, highest-converting paid term (83.5 conv/30d). Escalation count: 8+.
+- 📡 **DataForSEO 402 — Day 13 (since 09-15).** All verdicts this run were GSC-only. B17 unresolved. Kushal: balance −0.00136 USD, payment required.
+- 📊 **W41 midpoint (Day-21, ship 08-18):** 6/7 ON TRACK. EXCEPTIONAL: fear-of-poverty-peniaphobia 10,055 impr @ pos 5.2. LOW_SIGNAL: high-functioning-anxiety-treatment (11 impr — watch closely for Day-42 09-29).
+- 📊 **W43 midpoint (Day-27, ship 08-31):** 8/8 ON TRACK — all page 1 at Day-27. EXCEPTIONAL: therapy-cost-in-india 3,627 impr pos 4.4, psychiatrist-online-consultation-india 1,367 impr 30 clicks. Cost/pricing content emerging as fast-page-1 pattern.
+- 🟢 **online therapy pos 4.6** (UP 11.4 from 16.0) — "online therapist" pos 2.1 (UP 3.5 from 5.6). FIND-THERAPIST-CTR-01 result starting to show? T10 to attribute.
+- Full experiment logs: `brain/memory/experiments/closed-W40-2026-09-27.md` etc.
+
 ### 2026-09-25 T20 Auto-Remediation (20:50–21:55 IST) — a staged revert of today's fix found armed in git; the FAQ bug's fix found already in the repo; 4 auto-fix classes, 1 escalation closed
 - ✅ **Deploy health: READY `54e2b8d0`.** Last 6 production deploys READY, `git ls-remote origin main` = deployed SHA, `git log @{u}..HEAD` = 0 → **0 stranded commits**. Verifier widened to 12 and found **1 ERROR at #12** (`159f81a7`, the 09-23 YAML-colon failure, already logged, self-healed in 58 min). 1-in-12 is below the 2-in-5 bar — **not a P0**.
 - 🚨 **The night's finding: the website repo's git INDEX holds a staged revert of today's own fix.** Branch `feat/exec-content-fix-blr-centre-count-20260925`, `MM src/content/doctors-listings/psychiatrists-in-bangalore.mdx` — HEAD and worktree say "4 centres", the index says "5 centres". The next `git commit` that takes the index as-is re-ships PSYCHIATRISTS-BLR-CENTRE-COUNT-01 **the same day it was closed**, and it would deploy READY because a wrong number is not a build error. T20 may not touch the website repo and the branch belongs to a T11 exec session → escalated with the one command: `git restore --staged src/content/doctors-listings/psychiatrists-in-bangalore.mdx`.
@@ -162,14 +181,15 @@
 - **Site-level verdict:** YMYL architecture is holding under Core Update pressure — 0 GSC-confirmed drops through the entire update period (08-26→09-15, 20 days). SCHEMA-MEDICAL-TYPES-01 fix (PR #23, 08-17) is likely shielding illness/treatment pages.
 
 **Strategic posture shift: from impression-growth to CTR extraction**
-- W36 ATH: 3,904 clicks / 451,557 impr (new ATH) / CTR 0.9% / pos 9.7 — all Q3 targets exceeded
+- W36 ATH: 3,904 clicks / 451,557 impr / CTR 0.9% / pos 9.7 — all Q3 targets exceeded (superseded)
+- **W39 NEW ALL-TIME HIGH (2026-09-27 T12):** 4,458 clicks / 398,909 impr / CTR 1.1% / avg pos 8.6 (week 09-18→09-24) — +15.3% WoW. CTR 1.1% marks a step-change from months at 0.9–1.0%. CTR EXTRACTION posture is validated.
 - Primary constraint is now **Tier A CTR**, not indexation or impressions volume
 - B26 couples-therapy (1,672 impr / 0 clicks at pos 7.8) exemplifies the pattern: high-position, high-impression, near-zero CTR due to generic title/meta
 - P13 (intent tier decides what gets built) + intent-reframe 07-30: focus entirely on Tier A+B CTR extraction and booking conversion, not raw impr growth
 - **New finding:** "couples therapy" holds pos 7.8 with 0.1% CTR — title/meta fix has 15-40 clicks/wk upside, score 96, no YMYL gating needed
 
 **Decision log:** `brain/memory/decisions/2026-09-15.md`
-**Last updated: 2026-09-15 T10 Strategist**
+**Last updated: 2026-09-27 T12 Learner** (weekly run: 9 final closures, new ATH 4,458 clicks)
 
 # BRAIN — Mindtalk SEO Growth Engine
 
@@ -1499,3 +1519,40 @@ Full log: brain/memory/decisions/2026-09-14.md
 **Meta-Learner proposals (09-25 pass):** CLEAN NO-OP. t5-query-ownership-gate CONFIRMED in applied-changes; t17-tabs-create-fallback CONFIRMED in applied-changes; t11-published-at-schema-drift/t20-mine-truncation-absence-guard/t20-refresh-brief-archive-hazard all Apply-on 09-27 → FUTURE-SKIP.
 
 **Site posture:** GROWTH · ATH maintained · Q3 targets exceeded · DataForSEO blind Day 11 (CRITICAL — Kushal payment needed) · Assessments sprint complete · Mixpanel RESTORED · YMYL architecture holding through September Core Update.
+
+---
+
+### T10 Strategist — 2026-09-27 (Sun)
+
+**DataForSEO 402:** Day 13 CRITICAL. Balance unchanged negative. All rank watches carry no fresh data — GSC-only verdicts remain in effect. September 2026 Core Update STILL ACTIVE per gsc-validation-2026-09-25.txt.
+
+**Sensors summary:**
+- Rank tracking: BLIND (DataForSEO 402 day 13 — all rank-based watches invalid)
+- GSC: upstream failure in last validation run (09-25); 1 active MONITOR (/blogs/what-is-family-counselling CTR_DROP)
+- Observation pipeline: 29 URLs active; 0 checks today; ⚡ Day-42 W41 fires 09-29 + online-counselling-malayalam Day-21 on 09-29
+- Weekly caps (week of 09-21): 6 NEW pages shipped (09-22: 4, 09-25: 2) — 14 NEW / 12 URL slots remaining
+- Meta-Learner: 3 proposals applied today (published_at schema drift T11; MINE-TRUNCATION guard T20; REFRESH-brief archive protection T20)
+
+**Material learnings from this Strategist run:**
+
+1. **P12 SUCCESS RATE NOW 93% (14/15):** Fourteen of fifteen new long-tail English-intent blogs shipped by T9 reached page-1 within 42 days. Only HFA-treatment remains LOW_SIGNAL (1/7 W41 pages). The one non-page-1 case is an ultra-long-tail with marginal volume — not a counter-signal. P12 confidence level upgraded to HIGH.
+
+2. **COST/PRICING CONTENT → FAST PAGE-1 (EMERGING PATTERN, 3 data points):** therapy-cost-in-india (3,627 impr, pos 4.4 at Day-21), rtms-treatment-cost (W43 ON TRACK), couple-therapy-cost (W43 ON TRACK). Hypothesis: cost queries are underserved by incumbents who avoid price discussion; Mindtalk's transparent pricing pages fill a gap quickly. **Do NOT promote to Principle yet** — wait for W43 Day-42 finals (2026-10-12). If ≥2/3 hold page-1 at Day-42, propose new Principle: "Transparent cost content reaches page-1 faster than category median."
+
+3. **T3 SPEC CONCERN — P6 RISK:** T3 created REFRESH-how-to-reduce-anxiety-immediately-brief.md on 09-25 while algo_watch=TRUE (confirmed GSC drop −33% clicks / −36% impr) and September Core Update STILL ACTIVE. P6 = NEVER override algo_watch HOLD without evidence update has settled (>7 days volatility decrease). REFRESH-ANXIETY-ALGO-HOLD-01 flagged in BACKLOG as T11_BLOCK. T3's brief creation during an active algo_watch window may indicate a missing check in T3's gate logic — T13 candidate for next Meta-Learner cycle.
+
+4. **MINE-TRUNCATION-ABSENCE-01 GUARD NOW LIVE (T20):** Proposal applied today. No new briefs for "no holder" queries without per-query GSC validation. Historical context: 5 queries at pos 1 confirmed absent from 100k-row bulk mine (2026-09-19). This closes the phantom-orphan brief creation loop that ARTEFACT-PHANTOM-FREESPACE-01 quantified on 09-26.
+
+5. **REFRESH-BRIEF ARCHIVE HAZARD CLOSED (T20):** Proposal applied today. REFRESH-brief files for live pages (slug returns 200) must NOT be archived — they are pending content updates, not stale. Only NEW-* briefs for shipped (200) pages move to archive. This prevents T20 from masking pending REFRESH work.
+
+**Queued this run (top actions):**
+- W41-DAY42-PREP-0929 → T20 IMMEDIATE (pre-pull all 7 W41 URLs before 09-29)
+- REFRESH-ANXIETY-ALGO-HOLD-01 → T11_BLOCK + flag_for_human Kushal URGENT
+- Carried from prior: STAGED-CENTRE-COUNT-REVERT-01, DATAFORSEO-402, BLOG-FAQ-KEY-MISMATCH-01, B18, B12, BURNOUT-CANNIBAL-01, MIND-THERAPY-BRIEF-UNBLOCKED
+
+**WATCH.md:** No new watches opened today. Next critical date: 09-29 (W41 Day-42 + online-counselling-malayalam Day-21 — T20 must cover both).
+
+**Meta-Learner proposals (09-27 pass):** 3 applied (t11-published-at-schema-drift, t20-mine-truncation-absence-guard, t20-refresh-brief-archive-hazard). 3 skipped (future-dated 10-04: t5-gate-enforcement-mandatory-log, t9-faq-schema-claim-verification, t9-watch-ship-block-list). Stale scan clean — no proposals overdue.
+
+**Site posture:** GROWTH · ATH 4,458 clicks (T12 stamp 09-27) · DataForSEO blind Day 13 (CRITICAL — Kushal payment needed) · September Core Update ACTIVE · 3 task-spec improvements applied today · Observation pipeline healthy · W41 Day-42 critical window opens Monday 09-29.
+

@@ -93,3 +93,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W39 | /treatments/emdr-for-anxiety | Dr. Krishna K R (krishna-k-r) | 55 | brief_generated |
 | 2026-W39 | /treatments/talk-therapy-for-depression | Dr. Arun Kumar V (dr-arun-kumar) | 55 | brief_generated |
 | 2026-W39 | /blogs/guide-to-stop-overthinking-and-anxiety-naturally | Rangapriya Raghavan (rangapriya-raghavan) | 45 | brief_generated |
+
+| 2026-W40 | /illnesses/obsessive-compulsive-disorder-ocd | Dr. Krishna K R (krishna-k-r) | 75 | brief_generated |
+| 2026-W40 | /illnesses/mood-disorder | Dr. Thejus Kumar B R (dr-thejus-kumar) | 65 | brief_generated |
+| 2026-W40 | /illnesses/perinatal-mental-health | Dr. Swarupa Mohan Udgiri (swarupa-mohan-udgiri) | 60 | brief_generated |
+| 2026-W40 | /treatments/mindfulness-therapy | Keerthi Sagar (keerthi-sagar) | 55 | brief_generated |
+| 2026-W40 | /treatments/exposure-response-therapy-ert | Dr. Krishna K R (krishna-k-r) | 55 | brief_generated |
+| 2026-W40 | /blogs/understanding-the-major-types-of-anxiety-disorders | Ms. Tejal Jaiswal (tejal-jaiswal) | 50 | brief_generated |
