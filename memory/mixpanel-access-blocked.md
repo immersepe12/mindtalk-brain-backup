@@ -1,49 +1,21 @@
-# Mixpanel access — partial resolution, 2026-06-16
+# Mixpanel Access Blocked Log
 
-## Resolved sources (autonomous loop has access)
+## Incidents
+| Date | Error | Resolution |
+|---|---|---|
+| 2026-07-22 | "account blocked — payment required" | Resolved before 2026-07-29 run |
+| 2026-09-30 | "account blocked — payment required" | Pending — T15 2026-09-30 run blocked |
 
-| Project | Region | Method | Status |
-|---|---|---|---|
-| 4011856 Mindtalk website | US | MCP (mcp.mixpanel.com) | ✅ Working |
-| 3986277 Cadabams consult | US | MCP (mcp.mixpanel.com) | ✅ Working |
+## Notes
+- Mixpanel MCP tools return HTTP-level error when billing is overdue
+- Last successful read: 2026-09-23 (T15 weekly run)
+- Pattern: two billing blocks observed (July and September); both from same root cause
+- Action: contact Mixpanel billing support at https://mixpanel.com/get-support
+- Once resolved, T15 can backfill from the 2026-09-30 window if GSC/Freshsales data available for cross-reference
 
-## Blocked source (intentionally unaddressed)
-
-| Project | Region | Wall | Decision |
-|---|---|---|---|
-| 3984638 cadabams group (Mindtalk app) | EU | Two stacked blockers: (a) no Mixpanel EU MCP connector in Cowork registry, (b) project plan tier blocks Data Export API (HTTP 402 on all /api/2.0/ endpoints) | **Kushal decided NOT to upgrade Mixpanel plan.** Wait for Anthropic to add EU MCP connector. No timeline. App engagement signals (assessments, journeys, Riya, audio) stay out of autonomous loop for now. |
-
-## What this means for the loop
-
-The autonomous loop's primary job is SEO + conversion. The two working sources cover:
-- Marketing-site traffic, content engagement, top-of-funnel behaviour (4011856)
-- Booking funnel, payment flow, doctor selection UX (3986277)
-
-App engagement signals are product/UX inputs more than SEO inputs. Strategist + Learner have enough data to do their job; Meta-Learner can flag if they ever NEED the missing data to make a specific decision, at which point we revisit the cost/wait tradeoff.
-
-## ⚠ NEW BLOCK — 2026-07-22 (T15 Wed run)
-
-| Project | Error | Date | Previously |
-|---|---|---|---|
-| 4011856 Mindtalk website | `"Your account is blocked because payment is required. Please contact support via https://mixpanel.com/get-support"` | 2026-07-22 | ✅ Working — last successful T15 run was 2026-07-08 |
-
-This is a **new error class**: the 2026-06-15 block was "per-project access not enabled" and was resolved by enabling project-level access. The 2026-07-22 block is a billing/payment block on the Mixpanel account — likely the MCP service account's subscription lapsed or the Mixpanel plan expired.
-
-**Kushal action required:** Log into Mixpanel → check account billing status → resolve payment issue → confirm MCP access restored.
-
-**Impact:** T15 has no Mixpanel data for W30 (2026-07-22 run). No conversion KPIs updated in TRAJECTORY.md this week.
-
----
-
-## Service account rotation pending
-
-EU service account (`mp-autonomous-seo-loop.d7e328.mp-service-account`) was created and secret was exposed in chat. Since the loop can't use it anyway, Kushal should delete it from eu.mixpanel.com → Settings → Service Accounts when convenient. No urgency — secret is useless without API access.
-
----
-
-## BLOCK PERSISTS — 2026-09-16 (T15 Wed run, 8 weeks later)
-
-Same error: `"Your account is blocked because payment is required."` — Project 4011856.
-Block has now been active for **8 consecutive weeks** (since 2026-07-22). No T15 data since 2026-07-08.
-T15 fallback log written to: `logs/mixpanel-conversion-2026-09-16.md`
-**Escalating urgency: Kushal action required immediately.**
+## W40 — 2026-09-30 (3rd billing block)
+- Task: T19 Conversion Intelligence
+- Error: "Your account is blocked because payment is required"
+- Action: Slack posted to #seo-workflow-mindtalk; W39 classifications held; logs written
+- Impact: No W40 data. 2-week gap (W39→W41) pending payment resolution.
+- Pattern: 3rd billing block (W30, W38, W40). Auto-pay strongly recommended.

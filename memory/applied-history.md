@@ -234,3 +234,4 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-09-24T20:00:00+05:30 | FUTURE-SKIP | proposal: t11-published-at-schema-drift-20260920T2030 | Apply-on: 2026-09-27T20:00:00+05:30 — 3 days in future. Skip.
 2026-09-24T20:00:00+05:30 | FUTURE-SKIP | proposal: t20-mine-truncation-absence-guard-20260920T2030 | Apply-on: 2026-09-27T20:00:00+05:30 — 3 days in future. Skip.
 2026-09-24T20:00:00+05:30 | FUTURE-SKIP | proposal: t20-refresh-brief-archive-hazard-20260920T2030 | Apply-on: 2026-09-27T20:00:00+05:30 — 3 days in future. Skip.
+2026-10-02T20:00:00+05:30 | FUTURE-SKIP | proposals: t5-gate-enforcement-mandatory-log-20260927T2030, t9-faq-schema-claim-verification-20260927T2030, t9-watch-ship-block-list-20260927T2030 | Apply-on 2026-10-04T20:00:00+05:30 — 2 days in future. Skip. No stale.

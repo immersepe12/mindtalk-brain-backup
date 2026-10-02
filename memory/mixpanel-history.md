@@ -245,3 +245,4 @@ One line per Task 15 run. Most recent at bottom.
   - Riya hitting 20 views (best ever) — internal linking from new high-volume blogs (overthinking, situationship) may finally be routing users to it.
 
 | 2026-09-23 (7d) | 48,028 total / 10,257 funnel | 942 funnel | 71 funnel / 117 total | 68 | 420 🚨 | 35.8% | 🚨 backend fail 69.4% (NEW WORST); ✅ book CTA +27%, form +29%; ✅ riya=20 best ever |
+| 2026-09-30 (7d) | MCP_BLOCKED | — | — | — | — | — | ⛔ MCP_BLOCKED: Mixpanel returned "account blocked — payment required". Billing issue on Mixpanel account. No data this week. See mixpanel-access-blocked.md. |

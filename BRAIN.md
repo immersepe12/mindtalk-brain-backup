@@ -549,6 +549,8 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 
 ## Current strategic state
 
+- **Tech health (T14 2026-09-30):** 72/100 (+1 WoW). 4 marginal lab-LCP criticals (2.55–2.78s) but CrUX FAST; indexation ~85% est; schema 4 gaps wk 4; AI OV unmeasured (DataForSEO negative). See reports/technical-health-2026-09-30.md.
+
 ### Site posture
 - **Phase:** Growth (June Core Update CLOSED 07-17; ALGO_WATCH LIFTED — no YMYL drops confirmed)
 - **Pages live:** ~804 (795 Jul-26 baseline + 4 blogs 07-28 + 2 stub-pilot batch 2 07-31 + 3 blogs 08-04; yoga/narrative 08-04/05 = refreshes not new)
@@ -1560,3 +1562,7 @@ Full log: brain/memory/decisions/2026-09-14.md
 ### T10 note 2026-09-29
 - Verify "brief ready" claims against `briefs/` before routing to T11 (B18 was routed IMMEDIATE with no brief file; Verifier returned NEEDS_HUMAN). B18 deferred to 2026-10-13.
 - T6 appends flagged-drops rows without `url_path` (747 unvalidatable) — T13 spec fix needed.
+
+### T10 note 2026-09-30
+- Mixpanel billing blocked a 3rd time (W30, W38, W40; auto-pay recommended). "MIXPANEL-BILLING-BLOCK-01 CLOSED" (09-27) was premature — re-opened as -02. Last T15 datapoint (09-23): lead_create_failed 420 / 69.4% fail — must be verified first once data returns.
+- 5 blogs published 2026-09-09 show 0 impressions through Day 21 — treat as possible indexing lag, not ranking failure; re-check 10-07.

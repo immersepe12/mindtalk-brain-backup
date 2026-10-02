@@ -1830,3 +1830,14 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 
 <!-- T10 Strategist stamp — 2026-09-27 -->
 **T10 STAMP 2026-09-27**: No new watch windows opened (DataForSEO-402 Day 13, no rank data; 14 NEW slots / 12 URL slots remaining this week). 3 Meta-Learner proposals applied (published_at schema drift → T11; MINE-TRUNCATION-ABSENCE guard → T20; REFRESH-brief archive protection → T20). BACKLOG: +W41-DAY42-PREP-0929 (T20 IMMEDIATE — pre-pull all 7 W41 URLs before 09-29), +REFRESH-ANXIETY-ALGO-HOLD-01 (T11_BLOCK — P6 risk on T3 REFRESH brief during active Core Update). ⚡ CRITICAL — 09-29 (Mon): W41 Day-42 final fires AND online-counselling-in-malayalam Day-21 midpoint — T20 must cover both. P12 now at 93% (14/15). Emerging cost-content pattern (3 data points: therapy-cost, rtms-treatment-cost, couple-therapy-cost → fast page-1) — monitor at W43 Day-42 (10-12) before candidate principle.
+
+<!-- T11 Executor 2026-09-30 -->
+| W-FAQ-SCHEMA-0930 | /blogs/yoga-for-anxiety + /blogs/light-therapy-for-insomnia | schema_fix_faq_keys | 2026-09-30 | 2026-10-21 | open | BLOG-FAQ-KEY-MISMATCH-01 Fix A shipped `2c9ffa1d` (question/answer -> q/a). Live-verified 2026-09-30: yoga 5 Question nodes, light-therapy 3. Success = FAQ rich-result eligibility + CTR/impr lift. CONFOUND: light-therapy also has W-LIGHT-THERAPY-0923 (title/meta/FAQ, 09-23) — attribute jointly; do not touch other content on either page during the window. |
+
+<!-- T11 Executor 2026-10-02 -->
+| W-GROUP-THERAPY-TYPES-1002 | /blogs/types-of-group-therapy | ship_REFRESH_brief | 2026-10-02 | 2026-10-23 | open | GROUP-THERAPY-TYPES-REFRESH-01 shipped `a5577609` (quickAnswer, keyTakeaways, comparison table, /doctors/ links). Baseline: 'types of group therapy' 399 impr @24.5 + 'group therapy types' 84 @14.6, 1 click (28d). Live-verified 5 Question nodes, table, links. CONFOUND: Sept Core Update still active per 09-27 T10 note — CORE-UPDATE-CONFOUND flag. |
+
+<!-- T10 Strategist 2026-10-02 -->
+| W-HOMEPAGE-PSI-1002 | / (homepage) | verify_first | 2026-10-02 | 2026-10-09 | open | AUDIT-PERF-2026-10-02: PSI mobile 53 / LCP 11.2s (was 81) from ONE monthly-audit lab read; /doctors + /illnesses sample pages 86/89. UNVERIFIED (09-24 precedent: 11.5s withdrawn on re-measure). T14 to take 3 reads + CrUX origin LCP; close as noise or escalate to dev. |
+| W-T9-BUILD-BLOCK-1002 | feat/auto-ship-blogs-2026-09-30 | infra | 2026-10-02 | 2026-10-06 | open | 2 APPROVED NEW blogs unmerged (ENOSPC on npm ci, 2 cycles). Convert to W-rows with ship date +21d midpoint only after deploy. No watch baseline yet. |
+

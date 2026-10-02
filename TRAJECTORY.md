@@ -79,8 +79,8 @@
 | Top-3 ranking queries | **how-to-find-therapist-india pos 2** (W14 EXCEPTIONAL, DataForSEO 08-03), somatic-therapy pos 3.3 | — | 7,500 (Q3) | 🟡 Two top-3 confirmed. Aggregate count pending DataForSEO fresh pull. |
 | Pages live | 829 (GSC URLs Ranking wk Jul 25-31) | — | 800 (Q3) | 🟢 **Q3 target EXCEEDED (+3.6%)**. 829 vs 800 target. |
 | Inventory coverage (Track B) | 27% | 27% | 45% (Q3) | 🟡 Brief queue EMPTY (T5-REFILL-NOW CRITICAL) — velocity stalled until T5 refills. Stub-pilot 5 pages live (mindful-minutes). |
-| AI citation share (Perplexity) | **6/10 (60%)** | ~4.5/10 | — | 🟢 Week 14 (2026-09-17): Chrome CONNECTED. **GAINED Q9 "depression treatment online india" (cited FIRST — 7wk propagation lag from 07-31 YMYL update)**. Retained: Q3✅ Q4✅ Q6✅ Q8✅ Q10✅. Still absent: Q1❌ Q2❌ Q7❌. 6/10 = best score ever. Q5 + Q9 Google AI OV not tested this run. |
-| AI citation share (Google AI OV) | 0/3 tested | ~1/4 | — | 🔴 Week 14 (2026-09-17): Chrome CONNECTED. Tested Q4/Q9/Q10 — all 0 AI OV shown. Q10 showed AI OV last week (possible session variation, monitor next Thursday). Full 10-query sweep pending dedicated pass. |
+| AI citation share (Perplexity) | **7/10 (70%)** | ~4.5/10 | — | 🟢 Week 16 (2026-10-01): Chrome CONNECTED. **GAINED Q9 "depression treatment online india" (cited FIRST — 7wk propagation lag from 07-31 YMYL update)**. Retained: Q3✅ Q4✅ Q6✅ Q8✅ Q10✅. Still absent: Q1❌ Q2❌ Q7❌. 6/10 = best score ever. Q5 + Q9 Google AI OV not tested this run. |
+| AI citation share (Google AI OV) | 0/3 tested | ~1/4 | — | 🔴 Week 16 (2026-10-01): Chrome CONNECTED. Tested Q4/Q9/Q10 — all 0 AI OV shown. Q10 showed AI OV last week (possible session variation, monitor next Thursday). Full 10-query sweep pending dedicated pass. |
 
 ---
 

@@ -6337,26 +6337,3 @@ Auto-fix: `google-ads-search-terms.py` ran clean (exit 0, 530 lines output) — 
 ## Escalated: DataForSEO invoice · Mixpanel billing · clinical answers for held briefs · B12 therapists/psychologists-near-me scope.
 ## Constraint check
 No src/** edit, no commit/push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Verifier gate not spawned (no brief written). Writes: logs/t20-paid-terms-2026-10-01.{out,err}, pre-run log backup, this entry.
-
----
-
-# T20 AUTO-REMEDIATION — 2026-10-02 (Fri) 15:17 UTC fire
-
-## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
-Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. Latest = merge feat/exec-refresh-types-of-group-therapy-2026-10-02 (today).
-
-## RULE 1 — VERIFICATION
-| Flag | Verification | Verdict |
-|---|---|---|
-| T9-BUILD-BLOCK-01 | logs/auto-ship-2026-10-02.txt: build gate blocked, Cowork VM disk full; 2 commits on feat/auto-ship-blogs-2026-09-30 content-ready | REAL — infra/disk; Kushal builds from Mac terminal (not a T20 fix: src/** + build) |
-| DataForSEO-402 (day 19) | carried; rank-summary-2026-10-02 | REAL — payment, Kushal only |
-| Mixpanel billing / lead_create_failed | carried, unverified | REAL — Kushal only |
-| HOMEPAGE-PSI-REGRESSION-01 | assigned T14 verify-first | not escalated by T20 (unverified) |
-
-## STANDING JOB — BRIEF QUEUE: 3 shippable /blogs/ (floor 6 NOT met, no change)
-is-online-therapy-confidential, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy — all intent_tier B, slugs 404 (curl). 
-Auto-fix: google-ads-search-terms.py ran clean (exit 0). Opportunity cache (09-28): 22 rows without triggering_page, all /treatments/ hubs (YMYL, not shippable by T20) or Tier A /doctors listings → no holder-free Tier B /blogs/ candidate; INTENT-PRIORITY §3 forbids padding. 0 briefs written. Discovery re-run skipped (device-shell ceiling, cache 4d old). Untiered briefs: only 3 REFRESH- (live by design, spared). Nothing to archive.
-
-## Escalated: T9 build block (disk) · DataForSEO invoice · Mixpanel billing.
-## Constraint check
-No src/** edit, no commit/push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Verifier not spawned (no brief written). Writes: logs/t20-paid-terms-2026-10-02.{out,err}, pre-run log backup, this entry.

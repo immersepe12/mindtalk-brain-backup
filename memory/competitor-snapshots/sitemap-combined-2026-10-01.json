@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-01",
+  "method": "sitemap_fallback",
+  "results": {
+    "mindtalk.in": {
+      "count": 941,
+      "prev_count": 929,
+      "delta": 12,
+      "is_index": false,
+      "error": null,
+      "status": "OK"
+    },
+    "amahahealth.com": {
+      "count": 11,
+      "prev_count": 11,
+      "delta": 0,
+      "is_index": true,
+      "error": null,
+      "status": "OK (index only)"
+    },
+    "yourdost.com": {
+      "count": 0,
+      "prev_count": 0,
+      "delta": 0,
+      "is_index": false,
+      "error": "HTTP 404",
+      "status": "ERROR: HTTP 404 (3rd consecutive week)"
+    },
+    "manastha.com": {
+      "count": 211,
+      "prev_count": 0,
+      "delta": null,
+      "is_index": false,
+      "error": null,
+      "status": "OK (recovered from 404)"
+    },
+    "mfine.co": {
+      "count": 25,
+      "prev_count": 18078,
+      "delta": -18053,
+      "is_index": true,
+      "error": null,
+      "status": "OK (MAJOR COLLAPSE \u2014 MH exit confirmed)"
+    },
+    "betterhelp.com": {
+      "count": 0,
+      "prev_count": 0,
+      "delta": 0,
+      "is_index": false,
+      "error": "HTTP 404 or blocked",
+      "status": "ERROR"
+    }
+  }
+}
