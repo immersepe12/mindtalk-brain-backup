@@ -1581,3 +1581,6 @@ Full log: brain/memory/decisions/2026-09-14.md
 ### T10 note 2026-09-30
 - Mixpanel billing blocked a 3rd time (W30, W38, W40; auto-pay recommended). "MIXPANEL-BILLING-BLOCK-01 CLOSED" (09-27) was premature — re-opened as -02. Last T15 datapoint (09-23): lead_create_failed 420 / 69.4% fail — must be verified first once data returns.
 - 5 blogs published 2026-09-09 show 0 impressions through Day 21 — treat as possible indexing lag, not ranking failure; re-check 10-07.
+
+<!-- T10 Strategist 2026-10-06 -->
+**T10 2026-10-06 (catch-up):** DataForSEO-402 ~Day 21 (4 failed run-days 09-29..10-05 -> infra FLAG pushed). Growth intact: wk 09-26..10-02 clicks 4,275 / CTR 1.1% / pos 9.0; Life Coach -82% is Tier C (AP11) cleanup, not harm. No hypothesis contradicted. Meta-Learner proposals (t19/t3/t6) all Apply-on 10-11; Verifier to run then.

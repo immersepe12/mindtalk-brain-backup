@@ -6402,3 +6402,41 @@ is-online-therapy-confidential, what-happens-in-a-therapy-session, online-therap
 ## Escalated: DataForSEO invoice · Mixpanel billing · T9 build block (Mac terminal build) · clinical answers for held briefs.
 ## Constraint check
 No src/** edit, no commit/push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Verifier not spawned (no brief written).
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-06 (Tue) 10:40 UTC fire (catch-up for missed 10-05 15:15 UTC slot)
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
+Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. Latest = merge feat/exec-refresh-types-of-group-therapy-2026-10-02. Sitemap 941 <loc> unchanged.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| DataForSEO-402 (gsc-validation-2026-10-05 CRITICAL, 4 run-days) | carried, no new probe by T20 | REAL, payment, Kushal only |
+| Mixpanel billing / T9-BUILD-BLOCK-01 / B12 therapists-near-me | carried, no new evidence today | REAL, Kushal only |
+| DISCOVERY STALE (new-content-2026-10-05) | log line present | REAL → auto-fix attempted (below) |
+
+## STANDING JOB — BRIEF QUEUE: 4 shippable /blogs/ (floor 6 NOT met)
+is-online-therapy-confidential, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy, therapy-for-anxiety (NEW from T3 10-05) — all intent_tier B, /blogs/<slug> = 404 (curl). Net +1 vs 10-04. cbt-for-ocd / mind-therapy also 404 on /blogs/ but are /treatments/ YMYL (not shippable by T20).
+Auto-fix: google-ads-search-terms.py EXIT=0 (logs/t20-paid-terms-2026-10-06.out). Discovery re-run attempted in background (nohup); process died with device shell at the 180 s ceiling, 0 bytes output, new-content-opportunities.json unchanged (10-05 05:05) → NOT refreshed. 0 briefs written (no holder-free Tier B /blogs/ candidate per MINE-TRUNCATION-ABSENCE-01 / INTENT-PRIORITY §3; no padding). Nothing stale/untiered to archive (3 REFRESH- briefs live by design).
+
+## Escalated: DataForSEO invoice · Mixpanel billing · T9 build block (Mac terminal build) · B12 scope decision.
+## Constraint check
+No src/** edit, no commit/push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Verifier not spawned (no brief written). Writes: logs/t20-paid-terms-2026-10-06.{out,err}, logs/t20-discovery-2026-10-06.{out,err}, logs/remediation-log.backup-2026-10-06-pre-t20, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-06 (Tue) 15:17 UTC fire (scheduled slot; second run of the day, 10:40 UTC catch-up already ran)
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
+Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. `git ls-remote origin main` = `a5577609` = deployed SHA (0 stranded commits).
+
+## RULE 1 — VERIFICATION
+No new flags since the 10:40 run (no new sensor logs after 11:23 UTC). Carried items (DataForSEO-402, Mixpanel billing, T9-BUILD-BLOCK-01, B12 scope) unchanged, already escalated this morning; not re-escalated.
+
+## STANDING JOB — BRIEF QUEUE: 4 shippable /blogs/ (floor 6 NOT met, unchanged)
+is-online-therapy-confidential, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy, therapy-for-anxiety — all tier B, /blogs/<slug> = 404 (curl re-verified 15:17). Opportunity cache unchanged since 10-05 05:05; discovery re-run not repeated (180 s device-shell ceiling failed at 10:41 today). No holder-free Tier B /blogs/ candidate; INTENT-PRIORITY §3 forbids padding. 0 briefs written, Verifier not spawned. Nothing stale/untiered to archive.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-06-1517-pre-t20, this entry.

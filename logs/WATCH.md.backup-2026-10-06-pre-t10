@@ -1858,7 +1858,3 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 | W-T9-BUILD-BLOCK-1002 | feat/auto-ship-blogs-2026-09-30 | infra | 2026-10-02 | 2026-10-06 | open | 2 APPROVED NEW blogs unmerged (ENOSPC on npm ci, 2 cycles). Convert to W-rows with ship date +21d midpoint only after deploy. No watch baseline yet. |
 
 | W-MEDICATION-404-1003 | /treatments/medication | audit_404 | 2026-10-03 | 2026-10-05 | open | AUDIT-CRITICAL-2026-10-03: 404 while in sitemap; no MDX in repo. Kushal/T11 decide author vs sitemap-drop+301 within 48h. Verify GSC impressions first. |
-
-<!-- T10 Strategist 2026-10-06 -->
-**T10 STAMP 2026-10-06 (catch-up for missed 10-05):** W-MEDICATION-404-1003 -> pending_evaluation (window ended 10-05, 404 unresolved, AUDIT-CRITICAL SLA overdue, escalated). W-T9-BUILD-BLOCK-1002 check date reached, still blocked (carried). DataForSEO-402 ~Day 21: all rank-based watches remain GSC-only.
-| W-THERAPIST-NEAR-ME-RISE-1006 | "therapist near me" (URL TBD by T20 GSC page-dim pull) | verify_first | 2026-10-06 | 2026-10-13 | open | Weekly report: pos 53.2->17.6, 1,125 impr. Confirm holder URL + 7d stability before any conversion work; no content changes during window (keeps AP12 clean). |
