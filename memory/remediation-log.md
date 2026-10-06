@@ -6360,3 +6360,45 @@ Auto-fix: google-ads-search-terms.py ran clean (exit 0). Opportunity cache (09-2
 ## Escalated: T9 build block (disk) · DataForSEO invoice · Mixpanel billing.
 ## Constraint check
 No src/** edit, no commit/push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Verifier not spawned (no brief written). Writes: logs/t20-paid-terms-2026-10-02.{out,err}, pre-run log backup, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-03 (Sat) 15:16 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
+Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. `git ls-remote origin main` = `a5577609` = deployed SHA (0 stranded). Latest deploy ~28 h old, no newer commits on main.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| AUDIT-CRITICAL-2026-10-03 / TREATMENTS-MEDICATION-404-01 ("in sitemap, 404") | curl -L https://www.mindtalk.in/treatments/medication = 404 (real). sitemap.xml (941 <loc>) contains NO /treatments/medication; /treatments index has no link to it; no GSC cache rows for the URL. | PARTIAL FALSE POSITIVE: "listed in sitemap / crawl-budget" claim is FALSE. 404 itself real but orphan (not in sitemap, not linked). Downgraded CRITICAL→P3; no 48h fix needed; no escalation from T20. (Residual: external backlinks unknowable here; T11 may check GSC page-dim if desired.) |
+| T9-BUILD-BLOCK-01 | carried from 10-02 | REAL, Kushal (build from Mac terminal) |
+| DataForSEO-402 (day 20) | carried | REAL, payment, Kushal only |
+| Mixpanel billing / lead_create_failed | carried | REAL, Kushal only |
+
+## STANDING JOB — BRIEF QUEUE: 3 shippable /blogs/ (floor 6 NOT met, no change)
+is-online-therapy-confidential, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy — all intent_tier B, slugs 404 (curl). Auto-fix: google-ads-search-terms.py ran clean (EXIT=0, 1869 lines → logs/t20-paid-terms-2026-10-03.out). Opportunity cache (09-28) already shown holder-free-exhausted for /blogs/ (MINE-TRUNCATION-ABSENCE-01, INTENT-PRIORITY §3 forbids padding). 0 briefs written. Discovery re-run skipped (180 s device-shell ceiling). Nothing stale/untiered to archive.
+
+## Escalated: T9 build block (disk) · DataForSEO invoice · Mixpanel billing.
+## Constraint check
+No src/** edit, no commit/push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Verifier not spawned (no brief written). Writes: logs/t20-paid-terms-2026-10-03.{out,err}, logs/remediation-log.backup-2026-10-03-pre-t20, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-04 (Sun) 15:17 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
+Vercel `mindtalk`, last 5 production deploys 5/5 READY, 0 ERROR. Latest ~52 h old but `git ls-remote origin main` = `a5577609` = deployed SHA → 0 commits after it (weekend idle, not a stalled hook).
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| therapists-near-me / psychologists-near-me | curl /doctors/therapists-near-me = 404 | REAL, B12 scope decision carried |
+| DataForSEO-402 (day 22), Mixpanel billing, T9-BUILD-BLOCK-01 | carried from 10-03, no new evidence today | REAL, Kushal only |
+
+## STANDING JOB — BRIEF QUEUE: 3 shippable /blogs/ (floor 6 NOT met, no change)
+is-online-therapy-confidential, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy (tier B, 404, no hold marker). Others: Tier A /doctors-intent, /treatments/ YMYL (cbt-for-ocd, dbt-bpd, mind-therapy) or HOLD (conduct-disorder, gender-identity, which-doctor-alcohol). Auto-fix: google-ads-search-terms.py EXIT=0 (logs/t20-paid-terms-2026-10-04.out). No holder-free Tier B /blogs/ candidate (INTENT-PRIORITY §3: no padding). 0 briefs written. Discovery re-run skipped (180 s shell ceiling; cache <21 d). Nothing stale/untiered to archive.
+
+## Escalated: DataForSEO invoice · Mixpanel billing · T9 build block (Mac terminal build) · clinical answers for held briefs.
+## Constraint check
+No src/** edit, no commit/push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Verifier not spawned (no brief written).

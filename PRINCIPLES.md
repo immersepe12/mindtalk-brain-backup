@@ -59,7 +59,7 @@ Each entry: principle + evidence + when it applies.
 
 **Source:** Jun-9 auto-ship cohort Day-42 final evaluation (5/6 RESOLVED; Learner T12, 2026-07-26). W14 Day-42 closed 2026-08-03 (7th formal 🟢). W12 and W13 closed as documented exception-class failures.
 
-**Evidence (19 data points: 15 formal 🟢 + 1 🟡 PARTIAL + 3 exception-class ⚠, action class: T9 auto-ship NEW blog to long-tail query):**
+**Evidence (26 data points: 20 formal 🟢 + 1 🟡 PARTIAL + 5 exception-class ⚠, action class: T9 auto-ship NEW blog to long-tail query):**
 *Jun-9 cohort (W10-W14):*
 1. /blogs/anger-management-therapy — pos 13.5 at Day-42 ✅
 2. /blogs/dbt-skills-modules — pos 9.6 at Day-42 ✅
@@ -78,12 +78,20 @@ Each entry: principle + evidence + when it applies.
 13. /blogs/how-to-fix-ptsd-recovery-steps — pos 6.6 at Day-42 ✅
 14. /blogs/how-to-stop-ocd-thoughts-immediately — pos 5.8 at Day-42 ✅ (516 impr, 5 clicks)
 15. /blogs/therapy-for-relationship-issues — pos 6.9 at Day-42 ✅
+*Aug-18 cohort (W41, closed 2026-10-04 by T12):*
+16. /blogs/fear-of-poverty-peniaphobia — pos 5.9 at Day-42 ✅ (6,396 impr; viral spike at midpoint normalized as expected)
+17. /blogs/how-to-stop-overthinking — pos 8.4 at Day-42 ✅ (352 impr)
+18. /blogs/what-is-a-situationship — pos 8.8 at Day-42 ✅ (523 impr, stable)
+19. /blogs/how-to-stop-a-panic-attack — pos 5.7 at Day-42 ✅ (283 impr, top-6)
+20. /blogs/financial-anxiety — pos 7.4 at Day-42 ✅ (135 impr)
+21. /blogs/adhd-task-paralysis — pos 5.0 at Day-42 ✅ EXCEPTIONAL (position improved from 6.3 at midpoint to 5.0 at final — still accelerating at Day-42)
 — EXCEPTION CASES (not counted in denominator; root cause is brief selection, not content quality) —
 E1. /blogs/codependency-signs-causes-treatment — linguistic mismatch (Tamil-variant dominates English head term; Jun-9 cohort)
 E2. /blogs/couple-therapy-techniques (W12) — blog/treatment URL overlap cannibalization (`/treatments/couples-therapy` wins cluster at pos 4; blog not in top 100)
 E3. /blogs/how-to-find-a-therapist-for-ocd (W13) — target keyword near-zero India search volume (0 organic results DataForSEO India)
+E4. /blogs/high-functioning-anxiety-treatment (W41) — target keyword near-zero India search volume (page 1 at pos 6.6 but only 14 impr/week; same class as E3; confirms ≥100/mo India volume gate needed at T5 brief approval)
 
-**Establishment rate (content-quality cases only):** 14/15 formal closes = **93%** | Including 🟡 PARTIAL: 14 full + 1 partial out of 15 = 93% full-green. Including exceptions: 14/18 = 78%. ✅ All 9 new closures 2026-09-27 are content-quality cases — ZERO exception-class failures this batch. Cumulative rate well above 80% threshold.
+**Establishment rate (content-quality cases only):** 20/21 formal closes = **95.2%** | Including 🟡 PARTIAL: 20 full + 1 partial out of 21 = 95.2% full-green. Including exceptions: 20/25 = 80%. ✅ W41 closes (2026-10-04): 6 formal 🟢 + 1 exception-class (E4 near-zero volume) — ZERO content-quality failures this batch. Cumulative rate at all-time high, well above 80% threshold.
 
 **⚡ Emerging pattern (flag for new principle after W43 Day-42 finals 2026-10-12):** Cost/pricing-query blogs appear to achieve page-1 faster and with higher impressions than average: therapy-cost-in-india (pos 4.4, 3,627 impr at Day-27), psychiatrist-online-consultation-india (pos 6.8, 1,367 impr at Day-27), couple-therapy-cost-in-bangalore (page 1 at Day-27). If W43 Day-42 confirms all 3 at page-1 → propose P[NEW] "cost/pricing query blogs are a premium T9 target class".
 
@@ -100,7 +108,7 @@ E3. /blogs/how-to-find-a-therapist-for-ocd (W13) — target keyword near-zero In
 
 **Ties to P4:** Shipping remains the bottleneck, not content quality. Investment should continue in brief velocity (T5) and shipping capacity (T9 cap). T5 should add the three exception-class screens to its brief-approval checklist.
 
-**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes). **Updated 2026-09-27** (T12 Learner: +9 data points from W30/W31/W32/W33 Day-42 finals + W40 Day-42 finals; cumulative 14/15 content-quality = 93%; emerging cost/pricing pattern flagged).
+**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes). **Updated 2026-09-27** (T12 Learner: +9 data points from W30/W31/W32/W33 Day-42 finals + W40 Day-42 finals; cumulative 14/15 content-quality = 93%; emerging cost/pricing pattern flagged). **Updated 2026-10-04** (T12 Learner: +6 formal 🟢 from W41 Day-42 finals + E4 exception codified; cumulative 20/21 content-quality = 95.2%; adhd-task-paralysis EXCEPTIONAL — position improved from midpoint to Day-42 final).
 
 ---
 
