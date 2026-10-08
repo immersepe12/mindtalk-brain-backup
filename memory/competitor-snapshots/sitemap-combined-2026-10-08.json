@@ -1,0 +1,19 @@
+{
+  "snapshot_date": "2026-10-08",
+  "week": 17,
+  "method": "sitemap_count_fallback",
+  "dataforseo_status": "BLOCKED — balance exhausted (4th consecutive week)",
+  "domains": {
+    "mindtalk.in": {"url_count": 941, "wow_delta": 0},
+    "amahahealth.com": {"url_count": 11, "url_count_type": "sitemap_index_entries", "wow_delta": 0},
+    "yourdost.com": {"url_count": 0, "url_count_type": "404_unavailable", "wow_delta": null},
+    "manastha.com": {"url_count": 211, "wow_delta": 0},
+    "mfine.co": {"url_count": 25, "url_count_type": "sitemap_index_entries", "wow_delta": 0},
+    "betterhelp.com": {"url_count": 0, "url_count_type": "404_unavailable", "wow_delta": null}
+  },
+  "gap_leaders": [
+    {"query": "therapy near me", "volume": 60500, "competitor": "amahahealth.com", "pos": "2-3", "consecutive_weeks": 10},
+    {"query": "counselling", "volume": 90500, "competitor": "yourdost.com", "pos": 2, "consecutive_weeks": 11},
+    {"query": "midlife crisis", "volume": 5400, "competitor": "amahahealth.com", "pos": 3, "consecutive_weeks": 4}
+  ]
+}

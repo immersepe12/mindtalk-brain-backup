@@ -246,3 +246,41 @@ One line per Task 15 run. Most recent at bottom.
 
 | 2026-09-23 (7d) | 48,028 total / 10,257 funnel | 942 funnel | 71 funnel / 117 total | 68 | 420 🚨 | 35.8% | 🚨 backend fail 69.4% (NEW WORST); ✅ book CTA +27%, form +29%; ✅ riya=20 best ever |
 | 2026-09-30 (7d) | MCP_BLOCKED | — | — | — | — | — | ⛔ MCP_BLOCKED: Mixpanel returned "account blocked — payment required". Billing issue on Mixpanel account. No data this week. See mixpanel-access-blocked.md. |
+
+
+2026-10-07T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d total events / unique funnel |
+  NOTE: 2026-09-30 was MCP_BLOCKED (billing). This run compares vs 2026-09-23 (2-week gap).
+  VOLUME (total events | unique funnel in parentheses where different):
+  - $mp_web_page_view: 52,724 total events (funnel entry: 13,470 unique; +31.3% vs 10,257 last valid)
+  - blog_viewed: 2,354 | doctor_profile_viewed: 4,998 total (funnel: 2,334 unique; +35.8% vs 1,719) | treatment_page_viewed: 520 | illness_page_viewed: 181 | riya_page_viewed: 23 (+15% vs 20 last valid)
+  - book_appointment_clicked: 2,960 total (funnel: 929 unique; -1.4% vs 942) | cta_clicked: 274 | whatsapp_clicked: 136 | call_clicked: 101
+  - form_submitted: 123 total (+5.1% vs 117) (funnel: 58 unique, -18.3% vs 71)
+  - lp_form_submitted: 62 (-8.8% vs 68) | form_started: 1,049 | form_error: 4 | lead_create_failed: 451 (+7.4% vs 420)
+  FUNNELS (unique users, 7d conversion window):
+  - A (main): page view 13,470 → book CTA 929 (6.9%, was 9.2%) → form_submit 58 (6.2% of CTA; 0.43% of PVs, was 0.69%)
+    ⚠ PV→CTA rate dropped 9.2%→6.9% (-25%): funnel entry grew faster (+31.3%) than book clicks (-1.4%)
+  - B (doctor-driven): doctor_profile 2,334 → book CTA 610 (26.1%, was 35.8%) → form_submit 5 (0.82% of CTA)
+    ⚠ Rate drop 35.8%→26.1% (-27%): DENOMINATOR EFFECT — doctor profile views +35.8% (1,719→2,334), absolute book clicks stable (615→610). Not a conversion regression.
+  - C (where-to-start): viewed 18 → started 9 (50%) → completed 9 (100% of started; 50% overall, was 50% — STABLE)
+  KEY METRICS:
+  - Backend fail rate: 451/(123+62+451) = 70.9% 🚨🚨🚨 (was 69.4% last valid — STABLE AT CATASTROPHIC LEVEL; P0 unresolved since 09-23)
+  - form_failure rate (lead_create_failed/form_started): 451/1,049 = 43.0% (was 43.2% — stable)
+  - lp:form ratio: 62/123 = 0.50:1 (on-site form dominant; consistent with prior pattern since ads resumed)
+  - Doctor→book CTA: 26.1% (was 35.8% — -27.1% WoW; DENOMINATOR EFFECT not a regression)
+  - Riya discovery rate: 23/13,470 = 0.171% (was 20/10,257 = 0.195% — -12.3%; direction improving in absolute, rate diluted by larger funnel entry)
+  WoW FLAGS (>20% vs 2026-09-23 — NOTE: 2-WEEK GAP due to 09-30 MCP_BLOCKED):
+  ✅ page view unique funnel entry +31.3% (10,257→13,470) — strong growth in users entering site
+  ✅ page view total events +9.8% (48,028→52,724)
+  ⚠ doctor→book CTA rate -27.1% (35.8%→26.1%) — FLAG but DENOMINATOR EFFECT; absolute clicks stable
+  ⚠ form_submitted rate (unique): -37.7% (0.69%→0.43%) — same denominator effect; absolute form_submitted stable
+  ⚠ lp_form_submitted rate: -30.3% (0.66%→0.46%) — denominator effect
+  NOT FLAGGED (close to threshold): form_submitted unique -18.3% (71→58); riya +15% (20→23)
+  STABLE: backend fail rate (69.4%→70.9% — catastrophic but no escalation); book_appointment_clicked funnel (-1.4%); lp_form_submitted (-8.8%)
+  IMPLICATIONS:
+  - P0 unresolved: backend fail rate 70.9% means ~7 in 10 lead-creation attempts are failing. Freshsales webhook still broken. Engineering fix is the highest-impact action available on the site.
+  - Traffic surge (funnel entry +31.3%) is masking conversion rate drops — absolute lead numbers are similar to prior weeks but the growing audience is not converting at the same rate. Once backend is fixed, this audience expansion should yield more leads.
+  - Doctor→book CTA denominator effect: doctor pages are driving strong organic discovery (2,334 unique doctor profile views vs 1,719), but converting at a lower rate because the new traffic is upper-funnel/SEO-discovery users. This is expected and acceptable — doctor content serves awareness, not conversion.
+  - where-to-start funnel stable at 50% (18 viewed, 9 completed). Still a high-quality feature with tiny reach — link building to this page would multiply impact without any product changes.
+  - lp_form_submitted (62) vs form_submitted (123): 0.50:1 ratio suggests on-site form remains primary lead channel.
+
+| 2026-10-07 (7d) | 52,724 total / 13,470 funnel | 929 funnel | 58 funnel / 123 total | 62 | 451 🚨 | 26.1% | 🚨 backend fail 70.9% (STABLE CATASTROPHIC; P0 unresolved); page view unique +31.3%✅; doctor→book CTA -27.1%⚠ (denominator effect only); form_submitted unique -18.3% (watch); riya=23✅; 2-wk gap (09-30 blocked) |

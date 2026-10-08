@@ -314,3 +314,4 @@ One line per verdict. Format:
 
 2026-10-06 | T11 | flag_for_human DATAFORSEO-402 + MIXPANEL-BILLING-BLOCK-02 | verdict: APPROVE (conditions: one message; row stays open until T20 sees 402 cleared) | outcome: Slack delivered ts 1791285805.897009
 2026-10-06 | T11 | flag_for_human T9-BUILD-BLOCK-01 | verdict: APPROVE (conditions: one message; mention T11 retry route; row open until URLs 200) | outcome: Slack delivered ts 1791285805.897009
+2026-10-07 | T11 | flag_for_human TREATMENTS-MEDICATION-404-01 | verdict: APPROVE (conditions: one message; no PII; row stays OPEN pending owner A/B decision, closed only on production 200/301 verification) | outcome: Slack delivered ts 1791372188.887559

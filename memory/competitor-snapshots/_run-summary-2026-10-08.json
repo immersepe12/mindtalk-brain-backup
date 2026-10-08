@@ -1,0 +1,21 @@
+{
+  "run_date": "2026-10-08",
+  "week": 17,
+  "task": "T17",
+  "chrome_status": "CONNECTED",
+  "dataforseo_status": "BLOCKED (balance exhausted, 4th consecutive week)",
+  "perplexity_score": "6/10",
+  "perplexity_delta": -1,
+  "google_aio_score": "0/3",
+  "chatgpt_status": "SKIPPED (auto-mode safety classifier)",
+  "assessment_queries": "BLOCKED (Perplexity free limit after 10 queries)",
+  "citations_gained": [],
+  "citations_lost": ["Q5: anxiety treatment india"],
+  "citations_retained": ["Q2", "Q4", "Q6", "Q8", "Q9", "Q10"],
+  "still_absent": ["Q1 (Amaha dominant)", "Q3 (sister-domain)", "Q7 (sister-domain)"],
+  "top_actions": [
+    "Top up DataForSEO balance IMMEDIATELY (4th week without KW data)",
+    "Investigate Q5 anxiety treatment india page regression (lost after 1 week)",
+    "Consider therapy-near-me hub (T17-8) — 10th consecutive week Amaha dominates 60.5K"
+  ]
+}

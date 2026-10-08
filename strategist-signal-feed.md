@@ -99,3 +99,50 @@
 6. **Europe/US diaspora** — zero content for either market. If W38 holds signal, priority T5 proposals.
 7. Doctor content > all other types (P2 sustained).
 8. Every content piece must mandate internal links to /doctors or /experts (P3).
+
+---
+
+## W41 Signal Feed — 2026-10-07
+
+**Run type:** T19 Conversion Intelligence (14d aggregate W40+W41; W40 data confirmed recovered)
+
+### 🔥 Priority Signals
+
+1. **Assessment Completed 445/week — ALL-TIME HIGH (+21% vs W39 367)** — Biggest engagement spike ever. Funnel: illness content → assessment → delayed booking. Assessment-to-booking conversion path needs investigation; if improving, this is a major organic flywheel.
+
+2. **UP SURGE: 69 organic book clicks/week (+109%)** — Uttar Pradesh multi-city organic demand with zero dedicated content. Hindi belt (UP + Bihar 26/week) = emerging market. First-mover opportunity.
+
+3. **Kerala P8 RECOVERY: 33/week (+120% vs W39 15)** — Reversed the W39 crash. Kochi + Thiruvananthapuram both contributing. /doctors/psychologists-in-kochi proposal REACTIVATED.
+
+4. **Maharashtra surge W2: 206/week (+18%)** — Pune now ~50/week with no dedicated page. /doctors/psychologists-in-pune is a near-zero-risk content investment.
+
+5. **chatgpt.com 4 payments + 4.5 bookings/week** — AI search is now reliably generating revenue. 8 payments in 14d = highest AI-search revenue reading ever. Perplexity emerging at 4/week.
+
+### 🔴 Concern Signals
+
+1. **Organic payments -11% WoW (180/week vs W39 202)** — Organic conversion dipping despite visitor growth. Could reflect paid traffic dilution in W40, W41 mix, or genuine organic conversion softness. Watch W42.
+
+2. **Journey Task 18/week (-33%)** — Product emergency persists (was 27/week W39, now 18/week). Multi-week crash (645→365→124→30→27→18). Product team action needed.
+
+3. **P15 Delhi NCT organic re-evaluated at 124/week** — W39 "record" of 214 included ~90 paid clicks. Organic Delhi is real but lower than historic total implied. Adjust T5 priority accordingly.
+
+4. **Germany diaspora step-back: ~11/week organic** — W39 49-click peak was likely partially paid. Do not invest in German content yet.
+
+5. **mindtalk_web UTM still 98% undefined** — UTM chain through checkout remains broken. 5 organic payments in 14d are almost certainly under-counted.
+
+### ✅ Stable / Positive
+
+- P1 Tamil (175/week) + P1 Telugu (158/week) both stable W9
+- P2 Doctor hub confirmed W9
+- P5 chatgpt.com W9 confirmed revenue-generating
+- Dead rate improving: 9.8% (from 11.1% W39)
+- Rage rate improving: 2.0% (from 2.4% W39)
+- West Bengal +64%, Gujarat +65% — organic growth markets
+- mindtalk_web payments recovered (2.5/week vs W39 0)
+
+### Proposed T5 Entries (for human review)
+
+- /doctors/psychologists-in-pune (Maharashtra surge, Pune 50/week, W2, zero-risk)
+- /doctors/psychologists-in-kochi (Kerala P8 recovery, reactivate)
+- /doctors/psychologists-in-kolkata (WB 54/week, +64%)
+- "therapists for Hindi speakers" / UP-focused page (UP surge W1, monitor W42 first)

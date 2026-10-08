@@ -564,7 +564,7 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 
 ## Current strategic state
 
-- **Tech health (T14 2026-09-30):** 72/100 (+1 WoW). 4 marginal lab-LCP criticals (2.55–2.78s) but CrUX FAST; indexation ~85% est; schema 4 gaps wk 4; AI OV unmeasured (DataForSEO negative). See reports/technical-health-2026-09-30.md.
+- **Tech health (T14 2026-10-07):** 77/100 (+5 WoW). 2 marginal lab-LCP criticals (/assessments 2626ms wk 2, dominant-personality 2551ms); CrUX FAST; schema gaps 4→3 (MedicalWebPage fixed); indexation ~85% est; AI OV unmeasured. See reports/technical-health-2026-10-07.md.
 
 ### Site posture
 - **Phase:** Growth (June Core Update CLOSED 07-17; ALGO_WATCH LIFTED — no YMYL drops confirmed)
@@ -1584,3 +1584,5 @@ Full log: brain/memory/decisions/2026-09-14.md
 
 <!-- T10 Strategist 2026-10-06 -->
 **T10 2026-10-06 (catch-up):** DataForSEO-402 ~Day 21 (4 failed run-days 09-29..10-05 -> infra FLAG pushed). Growth intact: wk 09-26..10-02 clicks 4,275 / CTR 1.1% / pos 9.0; Life Coach -82% is Tier C (AP11) cleanup, not harm. No hypothesis contradicted. Meta-Learner proposals (t19/t3/t6) all Apply-on 10-11; Verifier to run then.
+
+> **T10 2026-10-07 stamp:** T19 W41 shows organic payments -11% / bookings -12% vs W39 with Mixpanel restored (auto-pay still unset); no hypothesis contradicted. DataForSEO ~Day 23. Queued GSC-PAGE-PULL-01 + CONVERSION-DIP-VERIFY-01.

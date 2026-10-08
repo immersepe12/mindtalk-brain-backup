@@ -107,3 +107,10 @@ This warrants immediate product investigation:
 | W36 | ~500 est | 3,761 | ⚪ Flat (W35 data held) |
 | **W37** | **729** | **4,635** | 🔴 RE-ESCALATING |
 | **W39** | **750 (247 uniq)** | **4,883 (1,141 uniq)** | 🔴 ESCALATING (dead rate 11.1%) |
+| **W41 (14d/2)** | **~245/week (490/14d)** | **~1,186/week (2,372/14d)** | 🟡 IMPROVING (dead rate 9.8%, rage rate 2.0%) |
+
+**W41 Update (2026-10-07):**
+- Dead rate: 9.8% (below 10% threshold — first time under threshold since W36) ✅
+- Rage rate: 2.0% (below 5% threshold, improving from 2.4%) ✅
+- Trend: 3rd consecutive improvement period. If W42 holds <10% dead rate, de-escalate product flag.
+- Journey Task still at emergency low: 18/week (was 27 W39). Product action STILL REQUIRED.

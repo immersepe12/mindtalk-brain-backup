@@ -66,6 +66,8 @@
 | 2026-W37 | 9,350 | 2,178 | ~1,560 | 177 | 204 | 286 | 28.3% | Bengaluru (47.8%) | 2 | W37 data (last valid prior to billing block). Payments 177 (-11.5%). chatgpt.com RECOVERY 211→286 (+35.5%). Journey Task 124→30 (-75.8%, CRITICAL). P8 Kerala REGRESSION 67→43. Germany diaspora W2 +142%. P15 Delhi NCT sustained. |
 | 2026-W38 | MCP_BLOCKED | — | — | — | — | — | — | — | — | Mixpanel billing block. No data. |
 | 2026-W39 | 10,324 | 2,697 (total) / 959 uniq | ~1,787 est | 202 | 230 | 354 total/91 uniq | 26.1% (total book/vis) | Karnataka 47.8% / Bengaluru 1,277 | 2 | MIXPANEL RESTORED (W38 billing resolved). 2-week gap vs W37. Visitors +10.4%. Payments 202 (+14.1% vs W37). Bookings 230 (+12.7%). chatgpt.com 354 total / 91 unique = NEW HIGH. Assessment Completed RECOVERY 367 (+21.1% vs W37). Journey Task 30→27 (near-zero sustained). Kerala P8 SEVERE REGRESSION 43→15 (demoted). Delhi NCT 214 (P15 W6 sustained). Germany 49 NEW HIGH (P17 promoted). Dead click rate 11.1% threshold exceeded. UTM chain still broken (196/202 payments undefined utm_medium). |
+| 2026-W40 | MCP_BLOCKED (data confirmed post-hoc) | 2,705 total | — | 192 | — | — | — | — | — | Mixpanel billing block (3rd). BUT line chart confirms 192 payments + 2,705 book clicks DID flow. Data captured in W41 14d aggregate. |
+| 2026-W41 | 12,105/week est (24,210/14d) | 2,128/week est organic | ~620/wk organic unique | ~180/wk organic (-11%) | ~203/wk organic (-12%) | ~307/wk total (~84/wk unique) | 7.8% organic | Karnataka 33.8% organic (FLAT total; paid filter) | 2 | **14d AGGREGATE (W40+W41).** Assessment Completed 445/week 🔥 ALL-TIME HIGH. UP SURGE 69/week (+109% 🔥). Kerala P8 RECOVERY 33/week (+120%). Maharashtra 206/week (+18%) W2. Journey Task 18/week 🔴 critical. Delhi organic re-eval 124/week (vs 214 total). Germany step-back ~11/week organic. Dead rate 9.8% (improving). chatgpt.com 8 payments+9 bookings/14d. mindtalk_web RECOVERY 2.5/week. GA4 SKIPPED. |
 
 ---
 
@@ -81,8 +83,8 @@
 | Top-3 ranking queries | **how-to-find-therapist-india pos 2** (W14 EXCEPTIONAL, DataForSEO 08-03), somatic-therapy pos 3.3 | — | 7,500 (Q3) | 🟡 Two top-3 confirmed. Aggregate count pending DataForSEO fresh pull. |
 | Pages live | 829 (GSC URLs Ranking wk Jul 25-31) | — | 800 (Q3) | 🟢 **Q3 target EXCEEDED (+3.6%)**. 829 vs 800 target. |
 | Inventory coverage (Track B) | 27% | 27% | 45% (Q3) | 🟡 Brief queue EMPTY (T5-REFILL-NOW CRITICAL) — velocity stalled until T5 refills. Stub-pilot 5 pages live (mindful-minutes). |
-| AI citation share (Perplexity) | **7/10 (70%)** | ~4.5/10 | — | 🟢 Week 16 (2026-10-01): Chrome CONNECTED. **GAINED Q9 "depression treatment online india" (cited FIRST — 7wk propagation lag from 07-31 YMYL update)**. Retained: Q3✅ Q4✅ Q6✅ Q8✅ Q10✅. Still absent: Q1❌ Q2❌ Q7❌. 6/10 = best score ever. Q5 + Q9 Google AI OV not tested this run. |
-| AI citation share (Google AI OV) | 0/3 tested | ~1/4 | — | 🔴 Week 16 (2026-10-01): Chrome CONNECTED. Tested Q4/Q9/Q10 — all 0 AI OV shown. Q10 showed AI OV last week (possible session variation, monitor next Thursday). Full 10-query sweep pending dedicated pass. |
+| AI citation share (Perplexity) | **6/10 (60%)** | ~4.5/10 | — | 🔴 Week 17 (2026-10-08): Chrome CONNECTED. **LOST Q5 "anxiety treatment india" ❌ (was first-ever citation on 10-01; 1-week hold — investigate page/signal regression)**. Retained: Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅. Still absent: Q1❌ Q3❌ Q7❌. ChatGPT SKIPPED (auto-mode safety classifier). Assessment A1-A8 BLOCKED (Perplexity free limit). |
+| AI citation share (Google AI OV) | 0/3 tested | ~1/4 | — | 🔴 Week 17 (2026-10-08): Chrome CONNECTED. Tested Q1/Q4/Q9 — all 0 AI OV shown. 3rd consecutive week at 0. No AI OV rendering for any commercial query. |
 
 ---
 
@@ -100,6 +102,25 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-07-29 | 8,167 | 743 | 97 | 55 | 11 | 31% | Page views +29%✅ (3-wk vs 07-08); 🚨 lp:form INVERTED (on-site form 97 > LP form 55 — ads paused kills LP; on-site fills gap); net leads ~152 unique (97+55) = possible best week yet — verify Freshsales; doctor views +118%✅✅ (T9 discovery wins); doctor→book CTA rate -57%⚠⚠ (73%→31% — absolute clicks stable 431→406, new visitors are low-intent SEO); backend fail crept up 1.5%→6.7%⚠ (still ok; watch trend); riya -29%⚠ (14→10) |
 | 2026-08-05 | 9,884 | 780 | 115 | 55 | 14 | 29% | Page views +21%✅ (new weekly record); doctor views +26.5%✅ (1,293→1,636); net leads 170 (115+55, best week if Freshsales confirmed ✅); lp_form stable (55); doctor→book CTA 29% (-7.6%, stable); CTA→form 5%→8.75%✅✅ (on-site form improving structurally); backend fail 6.7%→7.5%⚠ (3rd consecutive increase); riya 10→7⚠ (persistent invisibility); lp:form=0.48:1 (on-site form primary, ads still paused) |
 | 2026-08-26 | 10,344 | 740 | 55 | 58 | 18 | 33% | 🚨 form_submitted -52%⚠⚠ CRITICAL (115→55); net leads 113 (-34% vs 170); backend fail 13.7%⚠⚠ (4th consecutive rise, 7.5%→13.7%); riya +86%✅ (7→13, best in 6 wks); doctor→book CTA +14%✅ (29%→33%); lp_form stable +5.5% (55→58); where-to-start completion 53% overall ✅; August Core Update 08-26 — monitor next week for SERP quality impact |
+| 2026-09-23 | 48,028 total / 10,257 funnel | 942 funnel | 71 funnel / 117 total | 68 | 420 🚨 | 35.8% | 🚨🚨🚨 backend fail 69.4% (NEW ALL-TIME WORST at time — Freshsales webhook broken); ✅ book CTA +27.3% funnel; ✅ form_submitted +29.1% funnel; ✅ riya=20 (best ever); page views +9.8% total |
+| 2026-09-30 | MCP_BLOCKED | — | — | — | — | — | Mixpanel billing block — no data |
+| 2026-10-07 | 52,724 total / 13,470 funnel | 929 funnel | 58 funnel / 123 total | 62 | 451 🚨 | 26.1% | 🚨 backend fail 70.9% (451/636 — STABLE CATASTROPHIC; vs 69.4% last valid); doctor→book CTA -27.1% ⚠ (35.8%→26.1% — denominator effect: doctor views grew +35.8% but absolute book clicks stable 615→610); page view unique +31.3% ✅ (10,257→13,470 funnel entry); form_submitted unique -18.3% (71→58); riya +15% (20→23); lp_form -8.8% (68→62); 2-week gap (09-30 was MCP_BLOCKED) |
+
+**Variance > 20% WoW (2026-10-07 reading — vs 2026-09-23; 2-week gap, 09-30 MCP_BLOCKED):**
+- Doctor→book CTA: **-27.1%** ⚠ (35.8%→26.1%) — DENOMINATOR EFFECT: doctor_profile views +35.8% (1,719→2,334) while absolute book clicks stable (615→610). Not a conversion regression — low-intent discovery traffic diluting rate.
+- form_submitted unique: **-18.3%** (71→58) — near threshold, watch
+- form_submitted rate (unique funnel entry): **-37.7%** ⚠ (0.69%→0.43%) — funnel entry grew faster than submissions; intent dilution
+- lp_form_submitted rate: **-30.3%** ⚠ (0.66%→0.46%)
+- page view unique funnel entry: **+31.3%** ✅ (10,257→13,470)
+- riya_page_viewed: **+15%** (20→23, positive trajectory, below threshold)
+- backend fail rate: **+2.2%** (69.4%→70.9%, stable at catastrophic level — P0 engineering issue unresolved)
+
+**Variance > 20% WoW (2026-09-23 reading — vs 2026-08-26):**
+- lead_create_failed: **+2,233%** 🚨🚨🚨 (18→420) — backend fail 13.7%→69.4% — Freshsales/webhook broken
+- book_appointment_clicked: **+27.3%** ✅ (740→942 funnel) — biggest WoW commercial intent jump this quarter
+- form_submitted: **+29.1%** ✅ (55→71 funnel) — on-site form recovering from August Core Update
+- page view→book CTA rate: **+28.4%** ✅ (7.16%→9.19%) — structural intent improvement
+- riya: **+53.8%** ✅ (13→20) — best ever reading
 
 **Variance > 20% WoW (2026-08-26 reading):**
 - form_submitted: **-52.2%** 🚨 (115→55) — largest single-week drop; August Core Update 08-26 (pre-update SERP volatility likely culprit); verify next T15 run 09-03
@@ -327,3 +348,9 @@ Strategist reads this every day before deciding actions — knows where the gaps
 **This week's loss:** Perplexity Q1 + Q3 dropped (rotation effect — organic positions still intact); Google AI OV Q9 "depression treatment online india" lost (action: audit depression page AEO content — verify specialist credentials copy is still present).
 **Strategic finding:** ChatGPT commercial citations now confirmed for first time. Perplexity commercial citations are volatile (Q1/Q3 on/off week by week) — likely tied to freshness rotation in Perplexity's source pool. Underlying organic positions unchanged. Google AI OV at 3/10 is lowest in 4 weeks — Q9 depression loss needs attention.
 **Tier movement:** Perplexity steady 5/10; Google AI OV 4→3 (Q9 lost); ChatGPT 0→2 commercial (historic first).
+| 2026-09-03 | ⬜ Chrome stall 6th wk | ⬜ untested (carried: 5/10) | ⬜ skipped | ⬜ not tested | ⬜ untested (carried: 1/5) | 0 testable | Chrome stall 6th consecutive Thursday. DataForSEO balance 402. T20 partial-recovery run (08-28 evening) confirmed Chrome IS working outside Thursday slot — render-wait bug slot-specific. |
+| 2026-09-10 | 6 confirmed (Perplexity 5 + Google AI OV 1) | 5/10 (Q3✅ Q4✅ Q6✅ Q8✅ Q10✅; Q1❌ Q2❌ Q7❌ Q9❌) | ⬜ untested | ⬜ untested | 1/4 tested (Q10✅ retained) | 2 (Q3+Q4) | 🟢 Chrome stall RESOLVED (week 13 — first working Chrome in 7 weeks); URL-navigate + 22s wait adopted. Q9 depression-treatment CRITICAL GAP (absent while 9 competitors cited). |
+| 2026-09-17 | 6 confirmed (Perplexity 6) | 6/10 (GAINED Q9 depression-treatment FIRST ✅ — 7wk propagation lag from 07-31 YMYL update; retained Q3✅ Q4✅ Q6✅ Q8✅ Q10✅; Q1❌ Q2❌ Q7❌) | ⬜ untested | ⬜ untested | 0/3 tested (none rendered AI OV) | 3 (Q3+Q4+Q9) | 🟢 NEW BEST 6/10. Q9 depression GAINED FIRST. DataForSEO BLOCKED 1st week — sitemap fallback. |
+| 2026-09-24 | 7 confirmed (Perplexity 7) | 7/10 (GAINED Q7✅ cadabams-mental-health; LOST Q3❌→cadabamshospitals.com sister-domain; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅) | ⬜ UI stall (skipped) | ⬜ untested | 0/3 tested (Q1 Q4 Q9 — none) | 3 (Q2+Q4+Q9) | 🟢 7/10 NEW BEST. Q7 GAINED via digital-platform differentiation. Q3 LOST = sister-domain cannibalization. DataForSEO BLOCKED 2nd week. |
+| 2026-10-01 | 7 confirmed (Perplexity 7) | 7/10 (GAINED Q5✅ anxiety-treatment FIRST; LOST Q7❌→sister-domain recurring; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅; Q1❌ Q3❌) | ⬜ UI stall (skipped) | ⬜ untested | 0/3 tested (2nd consecutive 0) | 3 (Q2+Q4+Q9) | 🟢 7/10 BEST RETAINED. Q5 anxiety-treatment FIRST CITATION. Q7 lost (sister-domain). A1-A8 BLOCKED (free limit). DataForSEO BLOCKED 3rd week. |
+| 2026-10-08 | 6 confirmed (Perplexity 6) | 6/10 (LOST Q5❌ anxiety-treatment — 1-week hold, Perplexity shifted to generic ICMR/clinical answer; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅; Q1❌ Q3❌ Q7❌ sister-domain) | ⬜ SKIPPED (auto-mode safety classifier) | ⬜ untested | 0/3 tested (Q1 Q4 Q9 — 3rd consecutive 0) | 2 (Q4+Q9) | 🔴 −1 WoW. Q5 LOST after 1-week hold. DataForSEO BLOCKED 4th consecutive week = CRITICAL. A1-A8 BLOCKED (free limit). Sitemap: 941 URLs stable. |
