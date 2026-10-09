@@ -6485,3 +6485,27 @@ Auto-fix: google-ads-search-terms.py EXIT=0 (258 qualified of 6187 terms; logs/t
 ## Escalated (carried, not new): DataForSEO invoice (6 run-days, rank data dark since 10-03) · Mixpanel auto-pay · T9 build block (Mac-terminal build) · medication 404 (due 10-09) · B12 scope · flagged-drops format mismatch (needs T6 URL-mapped output or mapper).
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/t20-paid-terms-2026-10-08.{out,err}, logs/t20-discovery-2026-10-08.{out,err}, logs/remediation-log.backup-2026-10-08-1517-pre-t20, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-09 (Fri) 15:17 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
+Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. `git ls-remote origin main` = `a5577609` = deployed SHA (deployed 10-02) → 0 commits after deploy, nothing stranded on main. (Last deploy >48h but no commits exist after it, so the "hook not firing" condition does not apply.)
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| DataForSEO-402 (7th failing run-day, 316 kw unprocessed) | gsc-validation/rank-summary 10-09 | REAL, payment, Kushal only (carried) |
+| /treatments/medication 404 (due 10-09) | curl -L = 404 (10-09) | REAL, src/**+YMYL, already escalated (301 → /treatments/ which is 200) |
+| /doctors/therapists-near-me + /therapists-near-me | curl -L = 404 both (B12) | REAL, carried |
+| flagged-drops.json 1647 query-level rows, 0 url_path | gsc-validation 10-09 | REAL, MEDIUM, dev/T6 scope — carried |
+| B26 couples CTR | T11 executor 10-09 flag_for_human | carried, no new evidence |
+
+## STANDING JOB — BRIEF QUEUE: 7 shippable /blogs/ (floor 6 MET; +2 vs 10-08 recount)
+Brief files carry `**Suggested URL:**`; all 7 are intent_tier B and curl -L (www.mindtalk.in) = 404: conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confidential, online-therapy-vs-in-person-therapy, therapy-for-anxiety, what-happens-in-a-therapy-session, which-doctor-to-consult-for-alcohol-addiction. (Note: bare-domain curl returns 308 → www; earlier counts using no -L would misread.) Caveats: 2 have committed .mdx on unmerged auto-ship branch (T9-BUILD-BLOCK-01); is-online-therapy-confidential has clinical sign-off note; conduct-disorder-in-adults may overlap live /blogs/conduct-disorder-signs-causes-and-treatment (cannibalization check before ship → T9/T10).
+Queue ≥ 6 → no refill triggered; 0 briefs written; Verifier not spawned. Nothing stale/untiered (all NEW- briefs tiered; 3 REFRESH- live by design). Discovery not stale (no DISCOVERY STALE in today's logs).
+
+## Escalated (carried, not new): DataForSEO invoice (7 run-days) · Mixpanel auto-pay · T9 build block (branch unmerged) · medication 404 (due today) · B12 · flagged-drops format mismatch.
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-09-pre-t20, this entry.
