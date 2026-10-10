@@ -1867,6 +1867,3 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 <!-- T10 Strategist 2026-10-06 -->
 **T10 STAMP 2026-10-06 (catch-up for missed 10-05):** W-MEDICATION-404-1003 -> pending_evaluation (window ended 10-05, 404 unresolved, AUDIT-CRITICAL SLA overdue, escalated). W-T9-BUILD-BLOCK-1002 check date reached, still blocked (carried). DataForSEO-402 ~Day 21: all rank-based watches remain GSC-only.
 | W-THERAPIST-NEAR-ME-RISE-1006 | "therapist near me" (URL TBD by T20 GSC page-dim pull) | verify_first | 2026-10-06 | 2026-10-13 | open | Weekly report: pos 53.2->17.6, 1,125 impr. Confirm holder URL + 7d stability before any conversion work; no content changes during window (keeps AP12 clean). |
-
-<!-- T10 Strategist 2026-10-10 -->
-**T10 STAMP 2026-10-10:** no watch added/closed. W-MEDICATION-404-1003 remains pending_evaluation (404 Day 8, live-checked). Day-42 finals due 10-12 (8 blogs), 10-13 (psychiatrist-vs-psychologist). W-ASSESS midpoint 10-16.

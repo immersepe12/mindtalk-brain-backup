@@ -6509,3 +6509,23 @@ Queue ≥ 6 → no refill triggered; 0 briefs written; Verifier not spawned. Not
 ## Escalated (carried, not new): DataForSEO invoice (7 run-days) · Mixpanel auto-pay · T9 build block (branch unmerged) · medication 404 (due today) · B12 · flagged-drops format mismatch.
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-09-pre-t20, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-10 (Sat) 15:16 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
+Vercel `mindtalk`, last 5 production deploys all READY (0 ERROR; BLOCKED entries are staging previews only). `git ls-remote origin main` = `a5577609` = deployed SHA (10-02) → no stranded commits.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| /treatments/medication 404 | curl -L = 404 (10-10) | REAL, src/**+YMYL, already escalated (301 → /treatments/); carried |
+| /doctors/therapists-near-me, /therapists-near-me 404 (B12) | curl -L = 404 both | REAL, carried |
+| DataForSEO-402, Mixpanel auto-pay, T9-BUILD-BLOCK-01, flagged-drops format mismatch | no new evidence today (only observation-2026-10-10.txt, 0 alerts) | REAL, Kushal/dev only, already escalated; not re-escalated |
+
+## STANDING JOB — BRIEF QUEUE: 7 shippable /blogs/ (floor 6 MET, unchanged)
+conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confidential, online-therapy-vs-in-person-therapy, therapy-for-anxiety, what-happens-in-a-therapy-session, which-doctor-to-consult-for-alcohol-addiction — all intent_tier B, curl -L = 404. Caveats unchanged (is-online-therapy-confidential clinical-sign-off note; conduct-disorder cannibalization check; 2 briefs have .mdx on unmerged auto-ship branch). No refill, 0 briefs written, Verifier not spawned. Nothing stale/untiered; 3 REFRESH- briefs live by design.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-10-pre-t20, this entry.
