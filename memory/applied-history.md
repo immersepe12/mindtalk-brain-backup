@@ -239,3 +239,4 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-10-04T14:46:00Z | VERIFIER-VETO | proposals: t5-gate-enforcement-mandatory-log-20260927T2030, t9-faq-schema-claim-verification-20260927T2030, t9-watch-ship-block-list-20260927T2030 | not applied; see verifier-log.md
 2026-10-04T14:46:00Z | STALE-SCAN | clean (remaining proposals Apply-on 2026-10-11)
 2026-10-10T14:50:00Z | STALE-SCAN | clean (3 proposals Apply-on 2026-10-11, none applied)
+2026-10-11T20:15+05:30 | VERIFIER-VETO x3 | t19-mixpanel-billing-escalation, t3-algo-watch-gate, t6-flagged-drops-url-path | nothing applied

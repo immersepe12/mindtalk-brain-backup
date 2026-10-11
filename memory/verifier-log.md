@@ -318,3 +318,9 @@ One line per verdict. Format:
 
 2026-10-09 | T11 | flag_for_human TREATMENTS-MEDICATION-404-01 | verdict: APPROVE (corrections applied: no "drop from sitemap" - orphan, 941 locs none match; 301 only if inbound links found; row OPEN) | outcome: Slack delivered ts 1791545112.500359
 2026-10-09 | T11 | flag_for_human B26-COUPLES-THERAPY-ESCALATION-01 | verdict: APPROVE (conditions applied: one message, Day-21 labelled unverifiable, algo confound stated, row OPEN) | outcome: Slack delivered ts 1791545113.913619
+
+## 2026-10-11T20:15+05:30 — T10 Step 10 Meta-Learner proposal verification (3 proposals, Apply-on 2026-10-11T20:00+05:30)
+- t19-mixpanel-billing-escalation-20261004T2030 → VETO. Step 11 has no status field; skipping 3-10 breaks Step 8 MCP_BLOCKED rows + feeds; Run-Query params unverified; PushNotification unused in specs; repeat count not derivable from prose BRAIN lines.
+- t3-algo-watch-gate-20261004T2030 → VETO. Wrong principle (P7 not P6); false 09-25 evidence; 8 stale per-URL flags with no expiry field; real posture is global ALGO_WATCH; Phase-1 fixes unaddressed.
+- t6-flagged-drops-url-path-20261004T2030 → VETO. keyword-map lookup matches 5/1,577 flagged queries; use GSC page dimension; two schemas in flagged-drops.json; snapshot path absent.
+- Before blocks matched verbatim; paths allowed; no snapshots, no edits applied. Proposals renamed .vetoed-by-verifier.md. Meta-Learner to re-propose corrected versions. Other 3 pending proposals (t1, t5-p14, t9-p14) Apply-on 2026-10-18 = future.

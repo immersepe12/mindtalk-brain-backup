@@ -56,3 +56,6 @@ Copy `brain/before-snapshots/task19-conversion-intelligence.md-{TIMESTAMP}.bak` 
 To veto: rename this file from `t19-mixpanel-billing-escalation-20261004T2030.md` to `t19-mixpanel-billing-escalation-20261004T2030.vetoed.md` and add a `## Veto reason` section explaining why.
 
 To approve early: rename to `t19-mixpanel-billing-escalation-20261004T2030.approved.md` — Strategist's next 8 PM run will apply it.
+
+## Veto reason (Verifier, 2026-10-11)
+Step 11 has no status field (Step 12 holds "Mixpanel access status"); skipping Steps 3-10 breaks Step 8 MCP_BLOCKED history rows and Steps 9-10 feeds; Run-Query params unverified; no cowork-task spec uses PushNotification (Slack C0AUAPS4J83 is the channel); 60-day repeat count not computable from prose BRAIN lines (use page-conversion-history.md MCP_BLOCKED rows). Re-propose corrected.

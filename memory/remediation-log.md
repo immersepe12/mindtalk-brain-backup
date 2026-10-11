@@ -6529,3 +6529,24 @@ conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confiden
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-10-pre-t20, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-11 (Sun) 15:17 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `a5577609`
+Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. `git ls-remote origin main` = `a5577609` = deployed SHA → no stranded commits.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| T9 auto-ship build blocked (sandbox disk 100% full, npm ci ENOSPC/EPERM; 4th+ cycle) | logs/auto-ship-2026-10-11.txt | REAL, environment/Kushal — already escalated (T9-BUILD-BLOCK-01); not re-escalated |
+| /treatments/medication 404 | curl -L = 404 (10-11) | REAL, src/**+YMYL, carried |
+| /doctors/therapists-near-me 404 (B12) | curl -L = 404 | REAL, carried |
+| DataForSEO-402, Mixpanel auto-pay, flagged-drops format mismatch | no new evidence (observation-2026-10-11: 0 alerts) | carried |
+
+## STANDING JOB — BRIEF QUEUE: 7 shippable /blogs/ (floor 6 MET, unchanged)
+conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confidential, online-therapy-vs-in-person-therapy, therapy-for-anxiety, what-happens-in-a-therapy-session, which-doctor-to-consult-for-alcohol-addiction — all intent_tier B, curl -L = 404. Caveats unchanged. No refill, 0 briefs written, Verifier not spawned. Nothing stale/untiered; 3 REFRESH- briefs live by design. Discovery data 6 d old (<21 d), not stale.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-11-pre-t20, this entry.

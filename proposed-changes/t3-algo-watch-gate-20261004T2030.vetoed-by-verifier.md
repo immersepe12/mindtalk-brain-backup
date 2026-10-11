@@ -62,3 +62,6 @@ Copy `brain/before-snapshots/task3-serp-analysis-briefs.md-{TIMESTAMP}.bak` back
 To veto: rename this file from `t3-algo-watch-gate-20261004T2030.md` to `t3-algo-watch-gate-20261004T2030.vetoed.md` and add a `## Veto reason` section explaining why.
 
 To approve early: rename to `t3-algo-watch-gate-20261004T2030.approved.md` — Strategist's next 8 PM run will apply it.
+
+## Veto reason (Verifier, 2026-10-11)
+Cites P6 but algo_watch HOLD rule is P7; 09-25 evidence false (that URL has no algo_watch field, url_locked False); only 8 stale May-June algo_watch entries, no algo_watch_until field anywhere (gate would skip them forever, "held until" blank); September core-update ALGO_WATCH is a global BRAIN posture, not per-URL; Phase-1 quality fixes not handled. Re-propose gating on global posture + url_locked.

@@ -79,3 +79,6 @@ Copy `brain/before-snapshots/task6-weekly-report-20261011T2000.bak` back to `cow
 To veto: rename this file from `t6-flagged-drops-url-path-20261004T2030.md` → `t6-flagged-drops-url-path-20261004T2030.vetoed.md` and add a `## Veto reason` section.
 To approve early: rename → `t6-flagged-drops-url-path-20261004T2030.approved.md` — Strategist's next 8 PM run will apply it.
 If neither, auto-applies on 2026-10-11.
+
+## Veto reason (Verifier, 2026-10-11)
+keyword-map.json (316 entries keyed by URL path) matches only 5 of 1,577 distinct flagged queries on primary_keyword/keyword_cluster, so "skip if unmapped" would drop ~99.7% of signal. Resolve url_path via GSC page dimension for each query, keyword-map as fallback; define one canonical schema (flagged-drops holds two schemas: 747 date/position_delta rows, 900 flagged_date/drop/pos_prev rows); snapshot path did not exist. Re-propose.

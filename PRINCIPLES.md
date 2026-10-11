@@ -85,15 +85,24 @@ Each entry: principle + evidence + when it applies.
 19. /blogs/how-to-stop-a-panic-attack — pos 5.7 at Day-42 ✅ (283 impr, top-6)
 20. /blogs/financial-anxiety — pos 7.4 at Day-42 ✅ (135 impr)
 21. /blogs/adhd-task-paralysis — pos 5.0 at Day-42 ✅ EXCEPTIONAL (position improved from 6.3 at midpoint to 5.0 at final — still accelerating at Day-42)
+*Aug-31 cohort (W43, closed 2026-10-11 by T12):*
+22. /blogs/psychiatrist-online-consultation-india — pos 5.2 at Day-42 ✅ EXCEPTIONAL (2,717 impr; top-5 on consultation query)
+23. /blogs/therapy-cost-in-india — pos 4.7 at Day-42 ✅ EXCEPTIONAL (3,245 impr; COST QUERY — see P14)
+24. /blogs/online-therapy-for-indians-in-usa — pos 4.7 at Day-42 ✅ (147 impr; diaspora niche)
+25. /blogs/couple-therapy-cost-in-bangalore — pos 4.6 at Day-42 ✅ EXCEPTIONAL (483 impr; COST QUERY — see P14)
+26. /blogs/therapy-after-a-breakup — pos 8.0 at Day-42 ✅ (193 impr; emotional query tier)
+27. /blogs/acrophobia-treatment-fear-of-heights — pos 8.6 at Day-42 ✅ (1,388 impr; strong niche)
+28. /blogs/rtms-treatment-cost-in-india — pos 4.1 at Day-42 ✅ EXCEPTIONAL (780 impr; "rtms therapy cost" pos 1.8 — COST QUERY, see P14)
+29. /blogs/online-psychiatrist-consultation-in-tamil — pos 8.9 at Day-42 ✅ (142 impr; low volume, potential E4)
 — EXCEPTION CASES (not counted in denominator; root cause is brief selection, not content quality) —
 E1. /blogs/codependency-signs-causes-treatment — linguistic mismatch (Tamil-variant dominates English head term; Jun-9 cohort)
 E2. /blogs/couple-therapy-techniques (W12) — blog/treatment URL overlap cannibalization (`/treatments/couples-therapy` wins cluster at pos 4; blog not in top 100)
 E3. /blogs/how-to-find-a-therapist-for-ocd (W13) — target keyword near-zero India search volume (0 organic results DataForSEO India)
 E4. /blogs/high-functioning-anxiety-treatment (W41) — target keyword near-zero India search volume (page 1 at pos 6.6 but only 14 impr/week; same class as E3; confirms ≥100/mo India volume gate needed at T5 brief approval)
 
-**Establishment rate (content-quality cases only):** 20/21 formal closes = **95.2%** | Including 🟡 PARTIAL: 20 full + 1 partial out of 21 = 95.2% full-green. Including exceptions: 20/25 = 80%. ✅ W41 closes (2026-10-04): 6 formal 🟢 + 1 exception-class (E4 near-zero volume) — ZERO content-quality failures this batch. Cumulative rate at all-time high, well above 80% threshold.
+**Establishment rate (content-quality cases only):** 28/29 formal closes = **96.6%** (ALL-TIME HIGH) | Including 🟡 PARTIAL: 28 full + 1 partial out of 29 = 96.6% full-green. Including exceptions: 28/33 = 84.8%. ✅ W43 closes (2026-10-11): 8 formal 🟢 + 0 failures — ZERO content-quality failures in W43 batch. P14 cost/pricing pattern promoted to standing principle.
 
-**⚡ Emerging pattern (flag for new principle after W43 Day-42 finals 2026-10-12):** Cost/pricing-query blogs appear to achieve page-1 faster and with higher impressions than average: therapy-cost-in-india (pos 4.4, 3,627 impr at Day-27), psychiatrist-online-consultation-india (pos 6.8, 1,367 impr at Day-27), couple-therapy-cost-in-bangalore (page 1 at Day-27). If W43 Day-42 confirms all 3 at page-1 → propose P[NEW] "cost/pricing query blogs are a premium T9 target class".
+**✅ Pattern confirmed → P14 written (2026-10-11):** Cost/pricing-query blogs (e.g., therapy-cost-in-india, couple-therapy-cost-in-bangalore, rtms-treatment-cost-in-india) all landed top-5 positions at Day-42 (W43 batch). See P14 for the standing principle.
 
 **Known exception classes (brief-selection failures — T5 must screen these):**
 1. **Linguistic mismatch** — query has a dominant regional-language variant in India ("X meaning in tamil/hindi/kannada"). Check `reports/query-history.json` for non-English variant signal.
@@ -108,7 +117,37 @@ E4. /blogs/high-functioning-anxiety-treatment (W41) — target keyword near-zero
 
 **Ties to P4:** Shipping remains the bottleneck, not content quality. Investment should continue in brief velocity (T5) and shipping capacity (T9 cap). T5 should add the three exception-class screens to its brief-approval checklist.
 
-**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes). **Updated 2026-09-27** (T12 Learner: +9 data points from W30/W31/W32/W33 Day-42 finals + W40 Day-42 finals; cumulative 14/15 content-quality = 93%; emerging cost/pricing pattern flagged). **Updated 2026-10-04** (T12 Learner: +6 formal 🟢 from W41 Day-42 finals + E4 exception codified; cumulative 20/21 content-quality = 95.2%; adhd-task-paralysis EXCEPTIONAL — position improved from midpoint to Day-42 final).
+**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes). **Updated 2026-09-27** (T12 Learner: +9 data points from W30/W31/W32/W33 Day-42 finals + W40 Day-42 finals; cumulative 14/15 content-quality = 93%; emerging cost/pricing pattern flagged). **Updated 2026-10-04** (T12 Learner: +6 formal 🟢 from W41 Day-42 finals + E4 exception codified; cumulative 20/21 content-quality = 95.2%; adhd-task-paralysis EXCEPTIONAL — position improved from midpoint to Day-42 final). **Updated 2026-10-11** (T12 Learner: +8 formal 🟢 from W43 Day-42 finals — 8/8 page-1; cumulative 28/29 = 96.6% ALL-TIME HIGH; cost/pricing pattern promoted to P14).
+
+---
+
+---
+
+## P14 — Cost/pricing-intent queries are a premium T9 blog target class (2026-10-11) 🔒 CORE
+
+**Signal:** Blog posts targeting queries of the form "[mental health treatment/therapy] cost in [india/city]" consistently reach top-5 positions within 42 days and achieve 3–5× higher impressions than average T9 blog targets at Day-42.
+
+**Evidence (3 formal Day-42 closes — W43 batch, 2026-10-11):**
+1. /blogs/therapy-cost-in-india — pos 4.7, **3,245 impr** at Day-42
+2. /blogs/couple-therapy-cost-in-bangalore — pos 4.6, 483 impr at Day-42
+3. /blogs/rtms-treatment-cost-in-india — pos 4.1, 780 impr; top keyword "rtms therapy cost" at pos 1.8
+
+**Pattern characteristics:**
+- Cost queries have high commercial intent — users researching fees are one step from booking
+- Indian healthcare cost search volume is structurally underserved (few authoritative Hindi + English price guides exist)
+- Mindtalk's fee transparency advantage (real provider profiles with consultation fees) creates a natural content+trust signal match
+- All 3 cases outperformed the general P12 Day-42 median (pos ~7-8) by landing top-5
+
+**What T5 brief generation should do:**
+- Flag all queries matching "[therapy/treatment/counselling] cost in [india/city/region]" as PRIORITY_A
+- Include cost-specific sub-pages (individual therapy, couples, group, online) as distinct blog opportunities
+- Cross-link every cost blog to the relevant /treatments/ page and the /doctors/ booking funnel
+
+**Anti-patterns:**
+- Do NOT apply this to consultation queries that are already well-served by a /treatments/ page (AP12 still blocks duplication)
+- Do NOT ship a cost blog without actual fee data on the site (P1 YMYL accuracy constraint)
+
+**Established:** 2026-10-11 (T12 Learner — W43 Day-42 closes trigger). Minimum 3 data points met.
 
 ---
 

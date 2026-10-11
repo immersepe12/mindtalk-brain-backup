@@ -1,3 +1,37 @@
+### 2026-10-11 T12 Learner — W43 8/8 🟢 Day-42 · P12 96.6% ATH · P14 WRITTEN · ALGO_WATCH ACTIVE · Core Update still hitting /doctors/ · DataForSEO Day 26
+
+- ✅ **W43 Day-42 Finals: 8/8 🟢 PAGE-1 or better (evaluated 1 day ahead of 10-12 gate — data complete)**
+  - psychiatrist-online-consultation-india: pos 5.2, 2,717 impr 🟢 EXCEPTIONAL
+  - therapy-cost-in-india: pos 4.7, 3,245 impr 🟢 EXCEPTIONAL (COST QUERY)
+  - online-therapy-for-indians-in-usa: pos 4.7, 147 impr 🟢 PAGE-1
+  - couple-therapy-cost-in-bangalore: pos 4.6, 483 impr 🟢 EXCEPTIONAL (COST QUERY)
+  - therapy-after-a-breakup: pos 8.0, 193 impr 🟢 PAGE-1
+  - acrophobia-treatment-fear-of-heights: pos 8.6, 1,388 impr 🟢 PAGE-1
+  - rtms-treatment-cost-in-india: pos 4.1, 780 impr 🟢 EXCEPTIONAL ("rtms therapy cost" pos 1.8 — #1 commercial result)
+  - online-psychiatrist-consultation-in-tamil: pos 8.9, 142 impr 🟢 PAGE-1 (low India volume; potential E4)
+  Experiment log: `brain/memory/experiments/closed-W43-2026-10-11.md`
+- 📈 **P12 UPDATED: 28/29 content-quality cases = 96.6% (ALL-TIME HIGH)** (was 20/21 = 95.2%). Full evidence list updated in PRINCIPLES.md.
+- 🆕 **P14 WRITTEN — Cost/pricing queries are a premium T9 blog target class.** Three W43 Day-42 closes confirm: therapy-cost-in-india (pos 4.7, 3,245 impr), couple-therapy-cost-in-bangalore (pos 4.6, 483 impr), rtms-treatment-cost-in-india (pos 4.1, 780 impr; "rtms therapy cost" pos 1.8). Pattern: cost/pricing queries land top-5 within 42 days, 3–5× higher impressions than average T9 blog. 3+ evidence points met. Constraint complied with.
+- 🔴 **ALGO_WATCH: ACTIVE (September Core Update — NOT cleared)**
+  - New blogs (W43, shipped 08-31): ALL 8 unaffected — confirms Core Update targets existing/refreshed YMYL pages, not new long-tail content
+  - Existing /doctors/ pages: severe regressions continue — W-DEMENTIA-BLR pos 17.3 (was page 1 at baseline), online-psychologist-india pos 45.1 (was 18.4 at Day-21), child-psychologists-in-bangalore HIGH_PRIORITY_DROP, W-FIND-THERAPIST pos 6.3 (was 1.7)
+  - W-BLR-THERAPISTS: pos 20.0 (worsening), W-DELHI-THERAPISTS: open
+  - P7 applies: 7+ consecutive days of decreasing volatility required before clearing. Not met. ALGO_WATCH stays ACTIVE.
+  - T2 sensor (per BACKLOG.md 10-09 annotation) reported "Spam Update COMPLETE, YMYL not targeted" — but GSC data directly contradicts: YMYL /doctors/ pages clearly impacted. September Core Update (separate from Spam Update) remains active. T12 holds ACTIVE per P7 + direct GSC evidence.
+- 🟡 **W-FIND-THERAPIST-0922 14d midpoint (overdue from 10-06):** CTR 1.15% (target met) but pos crashed 1.7→6.3, impr crashed 3,448→434. ALGO_WATCH confound. Keep open to 42d (11-03).
+- 🔴 **W-REL-COUNSELLORS-BLR-0922 14d midpoint (overdue from 10-06):** CTR 0.94% vs target 1.5%. Impressions collapsed (3,119→1,377). Position mildly improving (12.1→10.8). Keep open to 42d (11-03).
+- 🔴 **W-FAMILY-COUNSELLING-0924:** 0 clicks × 3+ weeks. AI Overview CTR steal confirmed. pos worsened 7.1→10.2. T10 to evaluate AIO-resistant strategy post-ALGO_WATCH.
+- ⚫ **W-DEMENTIA-BLR-0923 (overdue from 10-07):** CATASTROPHIC regression — pos 17.3 (was page-1 baseline, 754 impr). ALGO_WATCH confound. Cannot evaluate DEMENTIA-LISTING-TITLE-01 until ALGO_WATCH clears.
+- 🟡 **W-LIGHT-THERAPY-0923 (overdue from 10-07):** Position improving strongly 10.9→7.5. 0 clicks this week = noise. BLOG-FAQ-KEY-MISMATCH-01 defect still active (check at W-FAQ-SCHEMA-0930 on 10-21).
+- 🟡 **W-SEP15 Day-21 midpoints (overdue from 10-06):** anxiety-KOL 🟡 regressing · anxiety-MUM 🟢 · depression-KOL 🟢 · depression-MUM 🟡 marginal · online-psychologist-india 🔴 CRITICAL (pos 45.1, ALGO confound) · anxiety-counselling blog ⚠ DATA_GAP. Day-42 finals: 10-27.
+- ⚪ **W-SEP16 + child-psych + phobia (Day-21):** All zero/near-zero. Regional-language blogs expected; child-psych HIGH_PRIORITY_DROP (ALGO confound). Day-42 finals: 10-28.
+- 📊 **Site metrics (week Sep 26–Oct 2, from weekly-summary-2026-10-05.txt):** 4,275 clicks (↓3.2% WoW vs ATH 4,416), 391,323 impr (↓1.2%), CTR 1.1%, pos 9.0, 925 URLs. Slight post-ATH consolidation — ALGO_WATCH pressure on YMYL pages pulling position average up.
+- 📡 **DataForSEO-402: Day 26+** (balance negative since 09-15). GSC-only verdicts mode ACTIVE. Kushal: payment critical. All rank scoring blind.
+- 🗂️ **TRAJECTORY.md updated:** DATA_PENDING row for 09-25→10-01 filled (4,275 clicks, 391,323 impr, 1.1% CTR, pos 9.0, 925 URLs). New DATA_PENDING row added for 10-02→10-08 (weekly report runs 10-12).
+- **Site posture: GROWTH** (ATH recent, P12 96.6%, P14 new class confirmed, 28 straight page-1 T9 blogs). Core Update headwind on YMYL /doctors/ pages — new T9 content unaffected.
+- **Upcoming:** W-ASSESS midpoint 10-16 (T12 does NOT evaluate until 10-16) · W-FAQ-SCHEMA-0930 check 10-21 · W-SEP15 Day-42 finals 10-27 · W-SEP16 + child-psych Day-42 finals 10-28 · W-PHOBIA Day-42 10-30 · W-BLR/DELHI Day-42 10-30 · W-FIND-THERAPIST + W-REL-COUNSELLORS 42d finals 11-03
+- Experiment logs: `brain/memory/experiments/closed-W43-2026-10-11.md` · `brain/memory/experiments/watch-interim-2026-10-11.md`
+
 ### 2026-10-04 T12 Learner — W41 7/7 page-1 closed · EFT recovered · P12 95.2% · ALGO_WATCH ACTIVE · W-B26 🔴 regression · B12 9th+ week
 
 - 🔴 **ALGO_WATCH: ACTIVE** (September 2026 Core Update — re-confirmed this run). W-BLR-THERAPISTS pos worsening week-over-week (baseline 16.2 → 18.6 → 20.0); W-B26 couples-therapy catastrophic regression (7.8 → 14.9 → 27.4); W-DELHI impressions collapsed 6,928 → 621 under algo pressure. New blogs (W41) completely unaffected — all page-1. Pattern consistent with Core Update distinguishing new content from refreshed YMYL. **P7 applies: do NOT clear ALGO_WATCH without 7+ days of decreasing volatility. Re-evaluate at T12 10-11.** Two sensor sources (T12 GSC patterns + T10 09-28 conservative ruling) align: ACTIVE.

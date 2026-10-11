@@ -1452,7 +1452,7 @@ tirzah-johnson load=9 (over cap; brief-specified override). tejal-jaiswal load=7
 
 
 ---
-## W43 — 2026-09-01 OPENED (T10 Strategist)
+## W43 — 2026-09-01 OPENED (T10 Strategist) | ✅ CLOSED 2026-10-11 T12 (8/8 🟢 PAGE-1)
 
 **Cohort:** 8 new blogs shipped 2026-08-31 (T20 remediation + T9 recovery)
 **URLs:**
