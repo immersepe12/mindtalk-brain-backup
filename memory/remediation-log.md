@@ -6550,3 +6550,23 @@ conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confiden
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-11-pre-t20, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-12 (Mon) 15:16 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `50744388`
+Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. Latest = "merge: 2 T9 blogs" (50744388) = `git ls-remote origin main` → no stranded commits. (Supersedes a5577609 of 10-10/10-11.)
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| /treatments/medication 404 | curl -L = 404 (10-12) | REAL, src/**+YMYL, carried (already escalated) |
+| /doctors/therapists-near-me 404 (B12) | curl -L = 404 | REAL, carried |
+| DataForSEO-402, Mixpanel auto-pay, T9-BUILD-BLOCK-01, flagged-drops mismatch | no new evidence; no "DISCOVERY STALE" in 2026-10-12 logs | carried, not re-escalated |
+
+## STANDING JOB — BRIEF QUEUE: 11 shippable /blogs/ (floor 6 MET; was 7)
+Own-URL parse (not first-link grep), tier present, curl -L = 404: can-stress-kill-you, fear-of-abandonment, stress-buster-games (new from T5 10-12), therapy-cost-in-hyderabad (Tier A), conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confidential, online-therapy-vs-in-person-therapy, therapy-for-anxiety, what-happens-in-a-therapy-session, which-doctor-to-consult-for-alcohol-addiction. No refill, 0 briefs written, Verifier not spawned. Nothing stale/untiered; 3 REFRESH- briefs live by design. Note: gender-identity-disorder / therapy-for-anxiety etc. still 404 despite "2 T9 blogs" merge → that merge was a different pair; caveats (conduct-disorder cannibalization, is-online-therapy clinical note) unchanged.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-12-pre-t20, this entry.

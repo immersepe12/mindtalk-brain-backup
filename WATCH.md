@@ -1870,3 +1870,10 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 
 <!-- T10 Strategist 2026-10-10 -->
 **T10 STAMP 2026-10-10:** no watch added/closed. W-MEDICATION-404-1003 remains pending_evaluation (404 Day 8, live-checked). Day-42 finals due 10-12 (8 blogs), 10-13 (psychiatrist-vs-psychologist). W-ASSESS midpoint 10-16.
+
+
+## 2026-10-12 — Strategist daily stamp (Monday)
+- DataForSEO 402 CLEARED (balance $91.69 verified by user_data probe). Watch: T1 10-13 pos-100 noise rate (125/297 on 10-12, AP8 quarantined).
+- 8 Day-42 finals resolved (T12 to formalise). Soft watches: couple-therapy-cost-in-bangalore (clk -42% WoW), online-psychiatrist-consultation-in-tamil (pos 9.3 drifting), online-therapy-for-indians-in-usa (134 impr).
+- New verify watch: Depression Treatment cluster (-47% impr WoW), EMDR cluster (pos 8->20), child psychiatrist (13->22) — GSC page-dim pull via T20; no refresh until URL confirmed. Check by 10-15.
+- Closing soon: psychiatrist-vs-psychologist final 10-13; W-ASSESS midpoint 10-16; B-batch finals 10-20/21 (7 blogs).

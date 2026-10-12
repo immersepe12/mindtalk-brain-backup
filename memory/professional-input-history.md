@@ -100,3 +100,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W40 | /treatments/mindfulness-therapy | Keerthi Sagar (keerthi-sagar) | 55 | brief_generated |
 | 2026-W40 | /treatments/exposure-response-therapy-ert | Dr. Krishna K R (krishna-k-r) | 55 | brief_generated |
 | 2026-W40 | /blogs/understanding-the-major-types-of-anxiety-disorders | Ms. Tejal Jaiswal (tejal-jaiswal) | 50 | brief_generated |
+
+| 2026-W42 | /treatments/meditation-therapy | Keerthi Sagar (keerthi-sagar) | 65 | brief_generated |
+| 2026-W42 | /treatments/counselling-therapy | Dr. Swarupa Mohan Udgiri (swarupa-mohan-udgiri) | 50 | brief_generated |
+| 2026-W42 | /illnesses/trauma-disorder | Abhimanyu Chandak (abhimanyu-chandak) | 45 | brief_generated |
+| 2026-W42 | /illnesses/postpartum-depression-ppd | Dr. Swarupa Mohan Udgiri (swarupa-mohan-udgiri) | 40 | brief_generated |
+| 2026-W42 | /illnesses/psychosis | Dr. Thejus Kumar B R (dr-thejus-kumar) | 35 | brief_generated |
+| 2026-W42 | /blogs/understanding-everyday-habit-that-are-destroying-your-sleep | Sucheta Saha (sucheta-saha) | 25 | brief_generated |

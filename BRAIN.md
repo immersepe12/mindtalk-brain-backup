@@ -1,3 +1,5 @@
+⚠️ T5 FLOOR MISS 2026-10-12: 3/12 briefs created. Brief runway depletes in ~7 weeks at current T9 velocity. T5 run log: logs/discovery-2026-10-12.txt. Trigger live Mac Mini T5 run before T9 next fires. (Also: new-content-discovery.py did not finish in 46 min — needs rowLimit 25000 fix; Ahrefs keywords-explorer 'Insufficient plan'.)
+
 ### 2026-10-11 T12 Learner — W43 8/8 🟢 Day-42 · P12 96.6% ATH · P14 WRITTEN · ALGO_WATCH ACTIVE · Core Update still hitting /doctors/ · DataForSEO Day 26
 
 - ✅ **W43 Day-42 Finals: 8/8 🟢 PAGE-1 or better (evaluated 1 day ahead of 10-12 gate — data complete)**
