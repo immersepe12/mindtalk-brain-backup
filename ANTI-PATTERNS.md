@@ -37,6 +37,7 @@ See `brain/INTENT-PRIORITY.md` §1–§2.
 - Rule: if the prior week's value is >3x the 4-week median, treat the "drop" as normalization and skip action.
 
 ## AP6. Never push to main without successful build
+> 2026-10-12: a **Vercel preview deployment READY on a feature branch counts as the successful build** (local npm build is impossible — disk full). See scripts/gh_ship.py.
 - Counter-example: hypothetical malformed MDX would break the entire site build and Vercel deploy, taking everything offline.
 - Rule: hard `npm run build` gate before every push. If build fails, revert the offending commit and quarantine the brief.
 
