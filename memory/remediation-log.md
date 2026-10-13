@@ -6570,3 +6570,25 @@ Own-URL parse (not first-link grep), tier present, curl -L = 404: can-stress-kil
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: logs/remediation-log.backup-2026-10-12-pre-t20, this entry.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-13 (Tue) 15:17 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ Vercel READY `e7f1ee09` (6/6 prod READY, 0 ERROR; = origin/main) — 🚨 NEW P0-class finding PROD-ORIGIN-STALE-01
+www.mindtalk.in resolves to CloudFront (18.161.216.x), responses carry x-cache/via CloudFront + x-nextjs-cache, NO x-vercel-* headers; apex = nginx 301. mindtalk-lime.vercel.app (same dpl_JDtXyt4LonFWQxqm1bMxcQn2BkBb) serves 200 for /blogs/therapy-for-anxiety, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy; www returns 404 for all 3 (cache-busted, no-store). Sitemap www 940 URLs vs Vercel 944. Sept ships (30+ blogs checked) 200 on both; 9-30 OG fix live on both. => live origin stopped receiving builds after ~09-30. ESCALATED (infra/DNS/origin owner) — not website src.
+Correction: 10-12 note "merge was a different pair" was wrong; f90ffa61 shipped exactly online-therapy-vs-in-person + what-happens (Verifier-approved).
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| 59 pages fell to pos 100 (data-quality-suspect-2026-10-13) | AP8 noise; observation shows psychiatrist-vs-psychologist GSC pos 6.5 stable; gsc-validation only 1 URL flagged | FALSE POSITIVE closed |
+| /treatments/medication 404 | curl -L 404 | REAL, src/**+YMYL, carried |
+| /doctors/therapists-near-me 404 | carried | REAL, carried |
+| DataForSEO-402 | cleared 10-12 per BACKLOG | closed |
+
+## STANDING JOB — BRIEF QUEUE: 8 shippable /blogs/ (floor 6 MET; was 11)
+Excluded as shipped-in-repo (mdx on origin/main, live-404 only due to PROD-ORIGIN-STALE-01): therapy-for-anxiety, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy (kept in briefs/, not archived until www serves them). Shippable: can-stress-kill-you, conduct-disorder-in-adults, fear-of-abandonment, gender-identity-disorder, is-online-therapy-confidential, stress-buster-games, therapy-cost-in-hyderabad, which-doctor-to-consult-for-alcohol-addiction (none on main). No refill, 0 briefs written, Verifier not spawned. All tiered (table "Intent Tier"), no discovery-stale flag. 3 REFRESH- live by design.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry only. Slack digest posted.
