@@ -1,116 +1,94 @@
-# UX Friction Pages — Updated 2026-09-23 (W39)
+# UX Friction Pages — Updated 2026-10-14 (W42)
 
-**Written by:** T19 Conversion Intelligence. Source: Mixpanel $mp_rage_click + $mp_dead_click, trailing 7d Sep 16–22.
+**Written by:** T19 Conversion Intelligence. Source: Mixpanel $mp_rage_click + $mp_dead_click, trailing 7d Oct 7–14, 2026.
 **Read by:** T10 Strategist (prevents SEO investment in broken pages) + Product/Dev team.
 **NOT for T18** — these are UI bugs, not E-E-A-T problems.
 
 ---
 
-## W39 Site totals
-- **Rage clicks:** 750 total / 247 unique (+2.9% vs W37 729) — 🔴 SUSTAINED HIGH
-- **Dead clicks:** 4,883 total / 1,141 unique (+5.3% vs W37 4,635) — 🔴 ESCALATING (dead rate 11.1% of visitors)
+## W42 Site totals
+- **Rage clicks:** 272 unique (+11.0% vs W41 ~245/week) — 🟡 RISING (rage rate 2.2%, still <5% threshold ✅)
+- **Dead clicks:** 1,337 unique (+12.7% vs W41 ~1,186/week) — 🔴 ESCALATING (dead rate 10.7% of 12,488 visitors — ABOVE 10% threshold ⚠️)
 
-**Note (W38 gap):** W38 had Mixpanel billing block. W39 vs W37 comparison (2-week gap) — values are directionally comparable.
-
----
-
-## W39 Dead click hotspots (same pattern as W37 — app UX unchanged)
-
-All dead clicks on consult.cadabams.com (app), NOT mindtalk.in (website). SEO website clean.
-
-**Critical pages persist:**
-- consult.cadabams.com/home — highest single-page dead clicks (pattern sustained)
-- consult.cadabams.com/consult/find-therapist — PERSISTENT W27+ (now W39, 12+ weeks unresolved)
-- consult.cadabams.com/consult/checkout + /consult/consent — payment funnel blocked
-- consult.cadabams.com/auth/login — login wall friction
-
-**Journey Task crash deepening:** Started Journey Task: 645 (W34) → 365 (W35) → 124 (W36) → 30 (W37) → 27 (W39). Near-zero for 3+ weeks. Journey UX dead clicks confirm hypothesis: buttons non-responsive.
+**W42 Alert:** Dead rate re-crossed 10% threshold after W41 dipped to 9.8%. Both rage and dead trending upward 3rd consecutive week. Journey Task partial recovery (29 unique, up from 18 W41) — UX fix may be in progress.
 
 ---
 
-## W37 Dead click hotspots (reference)
+## W42 Dead click hotspots
 
----
+All dead clicks on consult.cadabams.com (app). SEO website (mindtalk.in) clean.
 
-## W37 Dead click hotspots (descending by count — top 20 of 898 pages)
-
-| URL (condensed) | Dead clicks | Status | Likely cause |
+| URL (condensed) | Dead clicks (W42) | Status | Likely cause |
 |---|---:|---|---|
-| consult.cadabams.com/home | 789 | 🔴 CRITICAL #1 | App home — broken CTAs or loading failures; 789 is highest single-page total ever |
-| consult.cadabams.com/consult/appointments | 246 | 🔴 CRITICAL | Appointments page UX broken — scheduler unresponsive |
-| consult.cadabams.com/consult/find-therapist | 237 | 🔴 PERSISTENT (W27+) | Filter/CTA non-responsive. On watchlist since W27. Not resolved. |
-| consult.cadabams.com/auth/login | 151 | 🔴 CRITICAL | Login wall frustration — users expect to proceed, hit gate |
-| consult.cadabams.com/consult/checkout | 82 | 🔴 HIGH | Checkout form issues — buttons/fields dead |
-| consult.cadabams.com/assessments/[specific] | 72 | 🟡 HIGH | Specific assessment details page broken |
-| consult.cadabams.com/assessments | 72 | 🟡 HIGH | Assessments hub — navigation unresponsive |
-| consult.cadabams.com/consult/find-therapist?p=2 | 61 | 🟡 HIGH | Pagination dead — page 2 therapist list broken |
-| consult.cadabams.com/consult/find-therapist?p=1 | 60 | 🟡 HIGH | Pagination dead — page 1 also affected |
-| consult.cadabams.com/consult/appointments/1444571 | 56 | 🟡 HIGH | Specific appointment detail unresponsive |
-| consult.cadabams.com/assessments/cmpc9j73l00jp01qp5xcf9l3d/details | 50 | 🟡 HIGH | Assessment detail page broken |
-| consult.cadabams.com/consult/consent | 48 | 🟡 HIGH | Consent page blocking payment completion |
-| consult.cadabams.com/wellness/mindful-minutes/sleep-and-deep-relaxation | 47 | 🟡 HIGH | Wellness content page — Journey Task adjacent? |
-| consult.cadabams.com/profile | 44 | 🟡 HIGH | Profile page UX unresponsive |
-| consult.cadabams.com/consult/booking/[id] | 36–29 | 🟡 HIGH | Multiple booking pages with dead clicks |
-| consult.cadabams.com/documents | 28 | 🟡 WATCH | Documents section |
-| consult.cadabams.com/journeys/[id]/details | 27 | 🟡 WATCH | Journey detail page — likely connected to Journey Task crash |
-
-**Note:** ALL dead clicks on consult.cadabams.com (the app), NOT on mindtalk.in (the website). SEO website is clean. App UX is broken.
+| consult.cadabams.com/home | 649 | 🔴 CRITICAL #1 (persistent W34+) | App home — broken CTAs; 649 down from W37 peak 789 but still dominant |
+| consult.cadabams.com/consult/appointments | 269 | 🔴 ESCALATING ⬆️ | Appointments page — was 246 W37, now 269 W42; growing 3 weeks |
+| consult.cadabams.com/auth/login | 158 | 🔴 CRITICAL | Login wall friction — persistent 10+ weeks |
+| consult.cadabams.com/consult/find-therapist | 130 | 🔴 PERSISTENT (W27+, 15+ weeks) | Filter/CTA non-responsive. On watchlist since W27. Not resolved in 15+ weeks. |
+| consult.cadabams.com/assessments/[details] | 78 | 🟡 HIGH | Specific assessment details page broken |
+| consult.cadabams.com/consult/checkout | 76 | 🔴 REVENUE CRITICAL | Checkout form issues — direct revenue impact |
 
 ---
 
-## Critical connection: Journey Task crash + UX friction
+## W42 Rage click hotspots — NEW CRITICAL
 
-Started Journey Task: 645 → 365 → 124 → **30** (W34→W37, -95.4% in 4 weeks)
-
-The `/journeys/[id]/details` dead clicks AND the `/wellness/mindful-minutes/sleep-and-deep-relaxation` dead clicks (47) suggest journey content is unresponsive. **Hypothesis: Journey Task crash is a UX bug, not behavioral.** Users may be trying to start tasks but the buttons/navigation are dead.
-
-This warrants immediate product investigation:
-1. Is `Started Journey Task` event still firing correctly?
-2. Are journey task buttons rendering/clickable?
-3. Is there a broken state on journey cards post-assessment?
+| URL (condensed) | Rage clicks (W42) | Status | Likely cause |
+|---|---:|---|---|
+| /worksheets/v270kfrkogycucbf4r74yulz/details | 233 | 🔴 NEW CRITICAL — HIGHEST EVER SINGLE PAGE | Worksheet detail page — unknown worksheet. 233 rage = users hammering non-responsive element. Possible worksheet content loading failure or button broken |
+| consult.cadabams.com/consult/booking/8796 | 111 | 🔴 PERSISTENT (W27+, 15+ weeks) | booking/8796 has been on critical list since W27 — NEVER RESOLVED |
+| consult.cadabams.com/consult/booking/20388 | 23 | 🟡 NEW W42 | New booking page joining rage list |
+| consult.cadabams.com/home | 23 | 🟡 HIGH | Home page dual-friction (dead + rage) |
+| consult.cadabams.com/consult/booking/86710 | 13 | 🟡 WATCH | Booking page cluster |
 
 ---
 
-## Most urgent dev actions (W37)
+## Critical connection: Journey Task partial recovery
 
-**Priority 1 — EMERGENCY:** `/consult/home` (789 dead clicks)
-- App home page is the single biggest friction point on the entire platform
-- 789 dead clicks = 8.4% of unique visitors hitting non-responsive elements
-- Fix: audit every CTA, card, and navigation element on the home page
+Started Journey Task: 645 (W34) → 365 (W35) → 124 (W36) → 30 (W37) → 27 (W39) → 18 (W41) → **29 (W42, +61% WoW)**
 
-**Priority 2 — EMERGENCY (Journey Task crash):** `/journeys/*` and `/wellness/*`
-- Journey-related pages have dead clicks
-- 4-week crash: 645→365→124→30 starts journey tasks is a product emergency
-- Fix: check if `Started Journey Task` event is firing, audit journey card UX
+First positive recovery signal in 8 weeks. W42 29 starts vs W41 18 = +61% WoW. Journey UX may be receiving fixes. Monitor W43 for continuation.
 
-**Priority 3 — PERSISTENT W27+:** `/consult/find-therapist` (237 dead + pagination)
-- Combined find-therapist pages (main + p1 + p2) = 358 dead clicks total
-- Filter UI or booking button non-responsive — persistent 10+ week issue
+---
 
-**Priority 4 — PAYMENT FUNNEL:** `/consult/checkout` (82) + `/consult/consent` (48)
-- Users reaching checkout are hitting dead elements — direct revenue impact
-- Consent page blocking payment completion (48 dead)
+## Most urgent dev actions (W42)
 
-**Priority 5 — AUTH WALL:** `/auth/login` (151 dead clicks)
-- Login wall still creating massive friction in mid-funnel
+**Priority 1 — NEW CRITICAL:** `/worksheets/v270kfrkogycucbf4r74yulz/details` (233 rage clicks)
+- Highest single-page rage click count ever recorded on a worksheet page
+- 233 rage = users actively frustrated with non-responsive element
+- Action: audit that specific worksheet's interactive elements; check if worksheet buttons/navigation are broken; check if this is a recently published worksheet with a broken CTA
+
+**Priority 2 — EMERGENCY (15+ weeks):** `/consult/booking/8796` (111 rage, PERSISTENT W27+)
+- Has been on watchlist since W27 — FIFTEEN weeks without resolution
+- 111 rage clicks = booking flow at this specific therapist URL is broken
+- Action: check if booking/8796 therapist is still active; test booking flow end-to-end
+
+**Priority 3 — ESCALATING:** `/consult/appointments` (269 dead clicks, rising W37→W42)
+- Was 246 W37, now 269 W42 = slow escalation, not improving
+- Users hitting appointments page are unable to interact with scheduler
+- Action: test appointments scheduling UI; check for JS errors in appointments view
+
+**Priority 4 — PAYMENT FUNNEL:** `/consult/checkout` (76 dead clicks)
+- Checkout dead clicks are REVENUE CRITICAL — users reaching checkout can't proceed
+- Action: test checkout flow end-to-end; check for form field/button rendering issues
+
+**Priority 5 — AUTH WALL:** `/auth/login` (158 dead clicks, PERSISTENT)
+- Login wall sustained friction — 10+ weeks without resolution
+- Action: check auth/login page for dead CTA elements, loading state issues
+
+**Priority 6 — PERPETUAL:** `/consult/find-therapist` (130 dead clicks, W27+ = 15+ weeks)
+- Still broken after 15+ weeks. Second-most persistent unresolved issue after booking/8796.
 
 ---
 
 ## Historical trend
 
-| Week | Rage clicks | Dead clicks | Status |
-|---|---:|---:|---|
-| W27 | ~200 est | ~1,800 est | ESCALATING |
-| W28 | ~220 est | ~2,100 est | CRITICAL (checkout dead clicks new) |
-| W34 | ~400 est | 4,441 | 🔴 CRITICAL spike (+111%) |
-| W35 | 479 | 3,761 | ✅ Improving |
-| W36 | ~500 est | 3,761 | ⚪ Flat (W35 data held) |
-| **W37** | **729** | **4,635** | 🔴 RE-ESCALATING |
-| **W39** | **750 (247 uniq)** | **4,883 (1,141 uniq)** | 🔴 ESCALATING (dead rate 11.1%) |
-| **W41 (14d/2)** | **~245/week (490/14d)** | **~1,186/week (2,372/14d)** | 🟡 IMPROVING (dead rate 9.8%, rage rate 2.0%) |
+| Week | Rage clicks (unique) | Dead clicks (unique) | Dead rate | Status |
+|---|---:|---:|---:|---|
+| W27 | ~200 est | ~1,800 est | ~28% | ESCALATING |
+| W34 | ~400 est | 4,441 total | ~47% | 🔴 CRITICAL spike (total, not unique) |
+| W35 | 479 | 3,761 | — | ✅ Improving |
+| W37 | 729 | 4,635 total | — | 🔴 RE-ESCALATING |
+| W39 | 247 | 1,141 | 11.1% | 🔴 HIGH (switching to unique tracking) |
+| W41 (14d/2) | ~245/week | ~1,186/week | 9.8% | 🟡 BELOW THRESHOLD (first time since W36) |
+| **W42** | **272** | **1,337** | **10.7%** | 🔴 **ABOVE THRESHOLD AGAIN** |
 
-**W41 Update (2026-10-07):**
-- Dead rate: 9.8% (below 10% threshold — first time under threshold since W36) ✅
-- Rage rate: 2.0% (below 5% threshold, improving from 2.4%) ✅
-- Trend: 3rd consecutive improvement period. If W42 holds <10% dead rate, de-escalate product flag.
-- Journey Task still at emergency low: 18/week (was 27 W39). Product action STILL REQUIRED.
+**Trend:** 3rd consecutive week of unique dead click growth. Dead rate re-crossed 10% after brief improvement in W41. New crisis: /worksheets rage (233) is unprecedented for that page type.

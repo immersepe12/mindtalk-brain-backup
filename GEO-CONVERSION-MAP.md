@@ -1,101 +1,124 @@
-# GEO Conversion Map — Updated 2026-10-07 (W41)
+# GEO Conversion Map — Updated 2026-10-14 (W42)
 
-**Source:** T19 Conversion Intelligence. Mixpanel book_appointment_clicked (organic only — paid sources excluded per 2026-06-22 hard rule). 14-day aggregate Sep 24–Oct 7, 2026. /week estimates used for WoW comparison vs W39 (7-day).
-Total organic book clicks (14d): 4,255 total events | ~2,128/week est
+**Source:** T19 Conversion Intelligence. Mixpanel book_appointment_clicked (organic only — paid sources excluded per 2026-06-22 hard rule). 7-day Oct 7–14, 2026. WoW vs W41 (/week estimates).
+Total organic book clicks W42 (unique): 644 | Total (all events): ~945
 
-**IMPORTANT:** Karnataka share drop vs W39 (47.8%→33.8%) is an ORGANIC FILTER ARTIFACT. Total Karnataka = 1,287/week (FLAT vs W39 1,290). Organic Karnataka = 719/week; paid Karnataka = 568/week (44% of Karnataka clicks are paid Google/GMB). W39 GEO was unfiltered total.
+**METHODOLOGY NOTE:** W42 is first 7-day run since W39. W41 was 14-day aggregate (/week est). W42 comparisons vs W41/week estimates. Karnataka share recovery (33.8% W41 organic → 49.8% W42) likely reflects different measurement — W41 was organic-only estimate from total traffic; W42 is confirmed organic from Mixpanel filter.
 
 ---
 
-## By Indian State (top 15, organic only, /week estimate)
+## By Indian State (top 15, organic book clicks, W42 7d)
 
-| State | Book clicks/week est | % organic total | vs W39 total | Notes |
+| State | Book clicks | % total | vs W41 /wk est | Notes |
 |---|---:|---:|---|---|
-| Karnataka | 719 | 33.8% | FLAT (paid added to W39 = 1,290 total) | Bengaluru dominant. Healthy organic base. |
-| Maharashtra | 206 | 9.7% | +18% 🟢 | Mumbai 130+, Pune recovering. P1 surge confirmed. |
-| Tamil Nadu | 175 | 8.2% | flat | Chennai dominant. P1 Tamil stable W9. |
-| Telangana | 158 | 7.4% | +7.5% | Hyderabad 150+. P1 Telugu stable. |
-| Delhi NCT | 124 | 5.8% | organic only (W39 214 was total) | P15 WATCH — organic 124/week vs W39 total 214. Paid portion estimated ~90/week. |
-| Uttar Pradesh | 69 | 3.2% | +109% 🔥 SURGE | Multi-city: Lucknow, Noida, Varanasi, Agra, Kanpur. P-NEW W1. |
-| West Bengal | 54 | 2.5% | +64% 🟢 | Kolkata dominant. Growing. |
-| Haryana | 27 | 1.3% | +42% | Gurugram, Faridabad, Rohtak. |
-| Gujarat | 43 | 2.0% | +65% 🟢 | Ahmedabad 30+, Surat. |
-| Kerala | 33 | 1.6% | +120% 🟢 P8 RECOVERY | Kochi + Thiruvananthapuram recovery. W40+W41 = 66 total. |
-| Bihar | 26 | 1.2% | NEW SIGNAL | Patna dominant. No dedicated page. |
-| Madhya Pradesh | ~20 | ~0.9% | stable | Indore dominant. |
-| Rajasthan | ~18 | ~0.8% | stable | Jaipur, Jodhpur. |
-| Andhra Pradesh | ~22 | ~1.0% | flat | Vijayawada, Guntur stable. |
-| Assam | ~15 | ~0.7% | stable | Guwahati. |
+| Karnataka | 471 | 49.8% | +719→471 est? (organic anchor) | Bengaluru dominant (459). Strong recovery in share. P2 therapist pages driving. |
+| NCT of Delhi | 85 | 9.0% | +124→85 (organic flat/slight decline) | P15 WATCH — organic demand real but step-back from W41 |
+| Maharashtra | 75 | 7.9% | +206→75 🔴 STEP-BACK | Mumbai 51, Pune 15. Was surging W41 (+18%) — reversal this week |
+| Telangana | 55 | 5.8% | +158→55 🔴 STEP-BACK | Hyderabad 53. P1 Telugu — weekly variance, pattern sustained |
+| Tamil Nadu | 47 | 5.0% | +175→47 🔴 STEP-BACK | Chennai 34. P1 Tamil — weekly variance, pattern sustained |
+| West Bengal | 20 | 2.1% | +54→20 flat | Kolkata 14. Growing market — within variance |
+| Kerala | 18 | 1.9% | +33→18 flat | Kochi 7, Thrissur 7. P8 pattern intact — no growth this week |
+| Uttar Pradesh | 10 | 1.1% | +69→10 🔴 STEP-BACK | DOWN from W41 surge. UP pattern may be high-variance. |
+| Haryana | 10 | 1.1% | +27→10 flat | Gurugram area. |
+| Bihar | 8 | 0.8% | +26→8 flat | Patna 7. Emerging market. |
+| Rajasthan | 7 | 0.7% | ~18→7 step-back | Jaipur dominant |
+| Madhya Pradesh | 6 | 0.6% | ~20→6 step-back | Indore dominant |
+| (Other states) | ~22 | ~2.3% | — | Assam, AP, Gujarat, Jharkhand etc. |
+
+**State trend note:** Most state-level numbers show step-backs from W41 estimates. This is likely a combination of: (1) W41 was 14-day aggregate (wider window captures more unique cities/states), (2) organic filter strictness may differ between runs, (3) weekly natural variance. Karnataka Bengaluru dominance intact.
 
 ---
 
-## By Tier-1 City (organic, /week estimate)
+## By Tier-1 City (organic book clicks, W42 7d)
 
-| City | Book clicks/week est | Notes |
+| City | Book clicks | Notes |
 |---|---:|---|
-| Bengaluru (incl. Urban) | ~700 | Dominant; organic base confirmed flat vs W39 total |
-| Mumbai | ~130 | Maharashtra surge driver |
-| Chennai | ~130 | P1 Tamil stable |
-| Hyderabad | ~150 | P1 Telugu stable |
-| Delhi + New Delhi | ~124 | Organic only; P15 WATCH (paid portion visible) |
-| Pune | ~50 | Recovering; Maharashtra surge |
-| Kolkata | ~40 | West Bengal growth |
+| Bengaluru | 459 | Dominant. 48.6% of all organic book clicks. Core market anchor. |
+| Delhi (all) | 54 | Delhi city + New Delhi 31. P15 organic demand confirmed. |
+| Hyderabad | 53 | P1 Telugu stable. Telangana anchor. |
+| Mumbai | 51 | Maharashtra — holding vs W41 surge momentum |
+| Chennai | 34 | P1 Tamil stable. |
+| New Delhi (specific) | 31 | Counted in Delhi total above |
+| Pune | 15 | W41 50/week est — step-back, within variance |
+| Kolkata | 14 | WB anchor; growing market |
+| Patna | 7 | Bihar anchor |
+| Kochi | 7 | P8 Kerala |
+| Thrissur | 7 | P8 Kerala — Thrissur parity with Kochi notable |
+| Coimbatore | 6 | Tamil Nadu secondary |
+| Guwahati | 4 | NE India anchor |
 
 ---
 
-## NRI / Diaspora Markets (W41 14d, organic, /week estimate)
+## NRI / Diaspora Markets (W42 7d, organic)
 
-| Country/Region | Book clicks/week est | vs W39 | Notes |
+| Country/Region | Book clicks | vs W41 /wk est | Notes |
 |---|---:|---|---|
-| USA | ~47 | stable | California 25, Washington 22, NJ 14, NY area distributed |
-| Australia | ~12 | -27% | Victoria + NSW; step-back from W39 33 |
-| Gulf (UAE+Qatar+Bahrain+Oman) | ~22 | flat | Dubai 10+, Doha 12+ organic |
-| UK | ~10 | stable | London area dominant |
-| Canada | ~10 | flat | Ontario dominant |
-| Germany | ~11 | -78% 🔴 STEP-BACK | Down from W39 peak 49. P17 under review. |
+| UAE (Dubai) | 6 | +10→6 flat | Dubai anchor |
+| USA | ~7 | +47→7 🔴 STEP-BACK | San Jose 4, New York 3, LA 2. Down from W41 ~47/week est |
+| Qatar (Doha) | 2 | +12→2 | Doha step-back |
+| Abu Dhabi | 1 | +4→1 | Step-back |
+| UK (London) | 1 | +10→1 🔴 | Significant step-back from W41 |
+| Germany (Berlin) | 3 | ~11→3 | P17 WATCH — within variance |
+| Australia | 1 | +12→1 🔴 | Melbourne 1 only |
+| Canada | 1 | +10→1 🔴 | Vancouver |
+| Sydney | 1 | — | AU secondary |
 
-**Germany diaspora (P17) step-back:** W39 49 clicks was a high; W41 organic ~22/week (11/week organic). Possible that W39 included paid social or referral traffic. P17 remains under watch — needs W42 data to determine if W39 was anomaly.
+**NRI note:** NRI numbers show significant step-backs across most markets vs W41/week estimates. This is likely due to W41 being a 14-day aggregate that captured a wider window. W42 7-day NRI clicks appear lower than typical. Monitor W43 for normalisation.
 
 ---
 
-## Pattern Watch (W41)
+## Pattern Watch (W42)
 
-### 🔥 UP SURGE — NEW SEED W1
-- Uttar Pradesh: 69 organic book clicks/week — +109% vs W39
-- Multi-city: Lucknow, Noida, Varanasi, Agra, Kanpur
-- No dedicated UP therapist page exists
-- Threshold: needs 3 weeks for pattern; monitor W42
+### ⚠️ P5 chatgpt.com COLLAPSE — CRITICAL
+- W41: 84 unique book clicks/week
+- W42: 44 unique book clicks (-47.6% WoW) 🔴 MAJOR DECLINE
+- Was 354 clicks W39. Pattern P5 severely weakened.
+- Action: Check if mindtalk.community / cadabams is still being cited in ChatGPT responses for mental health queries. May need content refresh or AI citation strategy.
 
-### 🟢 P8 Kerala RECOVERY CONFIRMED
-- W39: 15 (severe regression)
-- W41: 33/week (+120% vs W39) — full recovery
-- Kochi + Thiruvananthapuram both contributing
-- T5 ACTION: /doctors/psychologists-in-kochi — REACTIVATE (P8 pattern may resume)
+### 🟢 ASSESSMENT COMPLETED RECORD — W42
+- W42: 515 completed assessments 🔥 NEW ALL-TIME RECORD
+- W41: ~445/week (+15.7% WoW)
+- Was 367 W39 → 445 W41 → 515 W42: 3 consecutive weeks of growth
+- Strong top-of-funnel engagement; assessment→consult conversion opportunity
 
-### 🟡 P1 Tamil Nadu STABLE W9
-- TN: 175/week (flat vs W39 187) — P1 confirmed, stable
+### 🟡 P1 Tamil Nadu SUSTAINED
+- W42: 47 organic book clicks (Chennai 34 + Coimbatore 6 + others)
+- Weekly variance vs W41 175/week (14d aggregate issue — pattern intact)
+- P1 Tamil confirmed 10+ weeks
 
-### 🟡 P1 Telugu/Telangana STABLE W9
-- Telangana: 158/week (+7.5% vs W39 147) — P1 confirmed, healthy
+### 🟡 P1 Telugu/Telangana SUSTAINED
+- W42: 55 organic book clicks (Hyderabad 53 dominant)
+- P1 Telugu confirmed 10+ weeks
 
-### 🟡 Maharashtra SURGE CONFIRMED W2
-- Maharashtra: 206/week (+18% vs W39 174) — Mumbai + Pune
-- Pune ~50/week — no dedicated page yet
-- T5 ACTION: /doctors/psychologists-in-pune — PROPOSE
+### 🟡 Karnataka DOMINANT — ORGANIC ANCHOR
+- W42: 471 organic book clicks (49.8%)
+- Bengaluru 459 = near-exclusive anchor
+- No growth threat; steady base
 
-### 🔴 P15 Delhi NCT — DEMOTED TO WATCH
-- W39 total: 214 clicks (record) — but included ~90 paid clicks est
-- W41 organic: 124/week — significantly lower than W39 total
-- Pattern based on total traffic, not organic — needs reevaluation
-- Delhi organic demand is real but Delhi doctor page ROI lower than estimated
-- Status: WATCH (not DEMOTED; organic 124/week still significant)
+### 🟡 P8 Kerala — WATCHING (flat W42)
+- W42: 18 clicks (Kochi 7 + Thrissur 7)
+- vs W41: ~33/week — slight step-back, within variance
+- Pattern P8 intact; Thrissur appearing parity with Kochi is new
 
-### 🟡 West Bengal / Gujarat Growth
-- WB: 54/week (+64%), Gujarat: 43/week (+65%)
-- Both markets growing organically; no dedicated pages
-- Bihar: 26/week — new consistent signal; NE India + Bihar cluster forming
+### 🔴 Delhi NCT P15 — ORGANIC STEP-BACK
+- W42: 85 organic book clicks
+- vs W41: ~124/week (organic est) — step-back
+- Still significant market; doctor page investment warranted but ROI lower than W39 total 214 suggested
+- Status: WATCH
 
-### 🔴 Germany Diaspora (P17) STEP-BACK
-- W39: 49 (high); W41 organic: ~11/week
-- Significant decline — W39 peak may have included non-organic referrals
-- Status: WATCH; do not invest in German content until W42 confirms
+### 🔴 UP Surge — VOLATILITY HIGH
+- W42: 10 organic book clicks
+- vs W41: ~69/week — MAJOR step-back
+- UP surge W41 may have been partially paid-traffic or a spike
+- Status: DEMOTED to WATCH; need 3 consecutive weeks to reconfirm
+
+### 🟡 Maharashtra — WEEKLY VARIANCE
+- W42: 75 clicks (Mumbai 51, Pune 15)
+- vs W41: ~206/week (14d window effect) — appears as step-back
+- Pattern fundamentally intact; Mumbai 51 is healthy weekly number
+
+### 🔴 P17 Germany Diaspora — STATUS WATCH
+- W42: Berlin 3 organic book clicks
+- vs W41: ~11/week — roughly consistent
+- No evidence of surge or collapse; steady but small
+- Status: WATCH (insufficient volume for dedicated content investment)

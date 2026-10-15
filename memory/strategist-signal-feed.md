@@ -229,3 +229,52 @@
 3. P8 Kerala DEMOTED — content investment hold
 4. P17 Germany PROMOTED — NRI-Europe content angle ready for T5
 5. UTM chain broken — ad attribution blind on 97%+ of revenue events
+
+## 2026-10-14 — W42 Conversion Intelligence (T19)
+
+**📊 W42 7-day run (Oct 7–14, 2026). All organic — paid excluded per hard rule.**
+
+**Revenue 🟢 STRONG:**
+- Organic payments: 200 (+11.1% vs W41 ~180/week) ✅
+- Organic bookings: 228 (+12.3% vs W41 ~203/week) ✅
+- Total payments: 206 | Paid (Google+GMB+Meta): only 6 payments — revenue increasingly organic-driven
+
+**Traffic flat, engagement record:**
+- Unique visitors: 12,488 (+3.2% vs W41 12,105)
+- Organic book clicks: 644 unique (+3.9% vs W41 620)
+- Assessment Completed: **515 🔥 NEW ALL-TIME RECORD** (+15.7% WoW, 3rd consecutive growth week)
+- Started Journey Task: **29 (+61.1%)** — first positive WoW in 8 weeks. Monitor W43.
+- Stress Tracker Started: 70 (+29.6%)
+
+**🔴 chatgpt.com COLLAPSE — P5 CRITICAL WARNING:**
+- W42: 44 unique book clicks (was W41 84 → **-47.6% WoW**)
+- Was 354 total clicks W39, now 160 total W42 = -54.8% in 3 weeks
+- Perplexity: 0 book clicks this week (was ~4/week W41)
+- AI search channel severely contracting — may need content/citation audit
+
+**UX Friction — ESCALATING:**
+- Dead rate: 10.7% (re-crossed 10% threshold from W41 9.8%) ⚠️
+- Rage 272 unique (+11.0%) | Dead 1,337 unique (+12.7%)
+- NEW CRITICAL: /worksheets/[details] — **233 rage clicks** (highest ever single worksheet page)
+- PERSISTENT 15+ weeks: /consult/booking/8796 (111 rage), /consult/find-therapist (130 dead)
+- ESCALATING: /consult/appointments (269 dead, rising 3 weeks), /consult/checkout (76 dead — REVENUE CRITICAL)
+
+**Geographic W42:**
+- Karnataka 471 clicks (49.8%) — Bengaluru 459 dominant ✅
+- Delhi NCT 85 (organic step-back from W41 est 124)
+- Maharashtra 75, Telangana 55, TN 47 (all lower vs W41 14d estimates — likely W41 window effect)
+- UP surge REVERSAL: 10 clicks (was 69 W41) — UP pattern may be volatile; WATCH
+- Kerala 18 (P8 intact, flat week)
+- NRI: Dubai 6, USA 7, Berlin 3 — all step-backs from W41/week estimates
+
+**UTM chain still broken:** 197/206 payments (95.6%) undefined utm_medium. UTM tagging broken at checkout redirect — 15+ weeks unresolved.
+
+**URGENT flags for Strategist:**
+1. 🔴 P5 chatgpt.com -47.6% — AI citation audit URGENT (what changed? content freshness? citation displacement?)
+2. 🔴 /worksheets rage 233 — NEW page type in friction list; product must investigate
+3. 🔴 Dead rate 10.7% — dev action needed on /consult/appointments + /consult/checkout
+4. 🟢 Assessment Completed 515 RECORD — content SEO → assessment funnel is working; amplify this path
+5. 🟡 Journey Task recovery (29 W42 vs 18 W41) — watch W43 to confirm not statistical noise
+6. ⚫ UTM chain — organic revenue attribution still 95.6% undefined; UTM fix priority not changed
+
+**GA4:** SKIPPED (Supermetrics trial expired 2026-07-27 — no fallback).

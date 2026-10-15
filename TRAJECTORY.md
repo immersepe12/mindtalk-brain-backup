@@ -69,6 +69,7 @@
 | 2026-W39 | 10,324 | 2,697 (total) / 959 uniq | ~1,787 est | 202 | 230 | 354 total/91 uniq | 26.1% (total book/vis) | Karnataka 47.8% / Bengaluru 1,277 | 2 | MIXPANEL RESTORED (W38 billing resolved). 2-week gap vs W37. Visitors +10.4%. Payments 202 (+14.1% vs W37). Bookings 230 (+12.7%). chatgpt.com 354 total / 91 unique = NEW HIGH. Assessment Completed RECOVERY 367 (+21.1% vs W37). Journey Task 30→27 (near-zero sustained). Kerala P8 SEVERE REGRESSION 43→15 (demoted). Delhi NCT 214 (P15 W6 sustained). Germany 49 NEW HIGH (P17 promoted). Dead click rate 11.1% threshold exceeded. UTM chain still broken (196/202 payments undefined utm_medium). |
 | 2026-W40 | MCP_BLOCKED (data confirmed post-hoc) | 2,705 total | — | 192 | — | — | — | — | — | Mixpanel billing block (3rd). BUT line chart confirms 192 payments + 2,705 book clicks DID flow. Data captured in W41 14d aggregate. |
 | 2026-W41 | 12,105/week est (24,210/14d) | 2,128/week est organic | ~620/wk organic unique | ~180/wk organic (-11%) | ~203/wk organic (-12%) | ~307/wk total (~84/wk unique) | 7.8% organic | Karnataka 33.8% organic (FLAT total; paid filter) | 2 | **14d AGGREGATE (W40+W41).** Assessment Completed 445/week 🔥 ALL-TIME HIGH. UP SURGE 69/week (+109% 🔥). Kerala P8 RECOVERY 33/week (+120%). Maharashtra 206/week (+18%) W2. Journey Task 18/week 🔴 critical. Delhi organic re-eval 124/week (vs 214 total). Germany step-back ~11/week organic. Dead rate 9.8% (improving). chatgpt.com 8 payments+9 bookings/14d. mindtalk_web RECOVERY 2.5/week. GA4 SKIPPED. |
+| 2026-W42 | 12,488 | 945 total/644 organic unique | 644 organic unique | 200 organic (+11.1% 🟢) | 228 organic (+12.3% 🟢) | 160 total/44 unique (-47.9% 🔴 COLLAPSE) | 5.16% organic | Karnataka 49.8% (Bengaluru 459) | 2 | **W42 7-day run.** Assessment Completed 515 🔥 NEW ALL-TIME RECORD (+15.7%). Journey Task 29 (+61.1% RECOVERY signal — first positive in 8 weeks). Organic payments +11.1% 🟢. chatgpt.com SEVERE DECLINE: 44 unique (-47.6% WoW) from W41 84. Dead rate 10.7% (re-crossed 10% threshold ⚠️). NEW CRITICAL: /worksheets rage 233 clicks (unprecedented). Perplexity: 0 book clicks this week. Delhi organic 85 (step-back from W41 124). Maharashtra 75, Telangana 55, TN 47 (all step-backs from 14d W41 estimates). UP surge reversal: 10 clicks (was 69 W41). mindtalk_web payments: 1 (low variance week). GA4 SKIPPED (trial expired 2026-07-27). |
 
 ---
 
@@ -106,6 +107,7 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-09-23 | 48,028 total / 10,257 funnel | 942 funnel | 71 funnel / 117 total | 68 | 420 🚨 | 35.8% | 🚨🚨🚨 backend fail 69.4% (NEW ALL-TIME WORST at time — Freshsales webhook broken); ✅ book CTA +27.3% funnel; ✅ form_submitted +29.1% funnel; ✅ riya=20 (best ever); page views +9.8% total |
 | 2026-09-30 | MCP_BLOCKED | — | — | — | — | — | Mixpanel billing block — no data |
 | 2026-10-07 | 52,724 total / 13,470 funnel | 929 funnel | 58 funnel / 123 total | 62 | 451 🚨 | 26.1% | 🚨 backend fail 70.9% (451/636 — STABLE CATASTROPHIC; vs 69.4% last valid); doctor→book CTA -27.1% ⚠ (35.8%→26.1% — denominator effect: doctor views grew +35.8% but absolute book clicks stable 615→610); page view unique +31.3% ✅ (10,257→13,470 funnel entry); form_submitted unique -18.3% (71→58); riya +15% (20→23); lp_form -8.8% (68→62); 2-week gap (09-30 was MCP_BLOCKED) |
+| 2026-10-14 | 55,558 | 940 | 79 | 38.4% ✅ | 32.9% ✅ | 61.2% ⚠ | 341 ✅ | +47.1% CTA ✅; -29.2% doc funnel ⚠ |
 
 **Variance > 20% WoW (2026-10-07 reading — vs 2026-09-23; 2-week gap, 09-30 MCP_BLOCKED):**
 - Doctor→book CTA: **-27.1%** ⚠ (35.8%→26.1%) — DENOMINATOR EFFECT: doctor_profile views +35.8% (1,719→2,334) while absolute book clicks stable (615→610). Not a conversion regression — low-intent discovery traffic diluting rate.
@@ -355,3 +357,18 @@ Strategist reads this every day before deciding actions — knows where the gaps
 | 2026-09-24 | 7 confirmed (Perplexity 7) | 7/10 (GAINED Q7✅ cadabams-mental-health; LOST Q3❌→cadabamshospitals.com sister-domain; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅) | ⬜ UI stall (skipped) | ⬜ untested | 0/3 tested (Q1 Q4 Q9 — none) | 3 (Q2+Q4+Q9) | 🟢 7/10 NEW BEST. Q7 GAINED via digital-platform differentiation. Q3 LOST = sister-domain cannibalization. DataForSEO BLOCKED 2nd week. |
 | 2026-10-01 | 7 confirmed (Perplexity 7) | 7/10 (GAINED Q5✅ anxiety-treatment FIRST; LOST Q7❌→sister-domain recurring; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅; Q1❌ Q3❌) | ⬜ UI stall (skipped) | ⬜ untested | 0/3 tested (2nd consecutive 0) | 3 (Q2+Q4+Q9) | 🟢 7/10 BEST RETAINED. Q5 anxiety-treatment FIRST CITATION. Q7 lost (sister-domain). A1-A8 BLOCKED (free limit). DataForSEO BLOCKED 3rd week. |
 | 2026-10-08 | 6 confirmed (Perplexity 6) | 6/10 (LOST Q5❌ anxiety-treatment — 1-week hold, Perplexity shifted to generic ICMR/clinical answer; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅; Q1❌ Q3❌ Q7❌ sister-domain) | ⬜ SKIPPED (auto-mode safety classifier) | ⬜ untested | 0/3 tested (Q1 Q4 Q9 — 3rd consecutive 0) | 2 (Q4+Q9) | 🔴 −1 WoW. Q5 LOST after 1-week hold. DataForSEO BLOCKED 4th consecutive week = CRITICAL. A1-A8 BLOCKED (free limit). Sitemap: 941 URLs stable. |
+
+## WoW Variance Flags — 2026-10-14 (vs 2026-10-07)
+
+| Metric | Previous | Current | Δ% | Flag |
+|--------|----------|---------|-----|------|
+| Doctor→book CTA conv | 26.1% | 38.4% | +47.1% | ✅ STRONG RECOVERY |
+| form_submitted (unique) | 58 | 79 | +36.2% | ✅ |
+| lp_form_submitted | 62 | 79 | +27.4% | ✅ |
+| lead_create_failed | 451 | 341 | -24.4% | ✅ P0 IMPROVING |
+| backend fail rate (vs starts) | 43.0% | 32.9% | -23.5% | ✅ |
+| doctor_profile_viewed (funnel) | 2,334 | 1,653 | -29.2% | ⚠ WATCH |
+| where_to_start_page_viewed | 18 | 14 | -22.2% | ⚠ WATCH |
+| backend fail rate (vs submits) | 70.9% | 61.2% | -13.7% | ⚠ still P0 |
+
+**Narrative:** First full week of P0 Freshsales recovery. Doctor-driven CTA conversion rebounded +47% and absolute failures dropped -24%. Backend fail rate still catastrophic at 61% but trending down for first time in 3 weeks.

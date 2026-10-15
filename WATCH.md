@@ -1878,3 +1878,10 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 - 8 Day-42 finals resolved (T12 to formalise). Soft watches: couple-therapy-cost-in-bangalore (clk -42% WoW), online-psychiatrist-consultation-in-tamil (pos 9.3 drifting), online-therapy-for-indians-in-usa (134 impr).
 - New verify watch: Depression Treatment cluster (-47% impr WoW), EMDR cluster (pos 8->20), child psychiatrist (13->22) — GSC page-dim pull via T20; no refresh until URL confirmed. Check by 10-15.
 - Closing soon: psychiatrist-vs-psychologist final 10-13; W-ASSESS midpoint 10-16; B-batch finals 10-20/21 (7 blogs).
+
+| W-PSYCH-VS-PSYCH-CTR-1014 | /blogs/psychiatrist-vs-psychologist | meta_ctr_update | 2026-10-14 | 2026-10-28 | open | PSYCHIATRIST-VS-PSYCHOLOGIST-CTR-01: metaTitle "Psychiatrist vs Psychologist: Who to See First \| Mindtalk" (57ch), metaDescription rewritten (153ch); meta only. Commit 6dc8c2a9. Baseline GSC 10-03→10-10: 1,939 impr / 2 clk / CTR 0.1% / pos 6.5. Success bar: CTR ≥0.5% (+8-10 clk/wk), ≥1% strong. FLAG CORE-UPDATE-CONFOUND. url_locked to 10-28 (AP12). Check whether SERP has AI Overview (zero-click risk). |
+
+## 2026-10-14 - Strategist daily stamp (Wednesday)
+- No watch added/closed. W-PSYCH-VS-PSYCH-CTR-1014 already open (T11 6dc8c2a9, check 10-28, AP12 lock) - verify SERP AI Overview presence at check.
+- New verify items (not watches): HOMEPAGE-LCP-RESAMPLE-01 (T14 next run + 10-21); GSC-PAGE-PULL-01 due 10-15.
+- Closing soon: W-ASSESS midpoint 10-16; finals 10-20 (malayalam counselling), 10-21 (x5 blogs).

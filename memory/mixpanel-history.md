@@ -283,4 +283,48 @@ One line per Task 15 run. Most recent at bottom.
   - where-to-start funnel stable at 50% (18 viewed, 9 completed). Still a high-quality feature with tiny reach — link building to this page would multiply impact without any product changes.
   - lp_form_submitted (62) vs form_submitted (123): 0.50:1 ratio suggests on-site form remains primary lead channel.
 
-| 2026-10-07 (7d) | 52,724 total / 13,470 funnel | 929 funnel | 58 funnel / 123 total | 62 | 451 🚨 | 26.1% | 🚨 backend fail 70.9% (STABLE CATASTROPHIC; P0 unresolved); page view unique +31.3%✅; doctor→book CTA -27.1%⚠ (denominator effect only); form_submitted unique -18.3% (watch); riya=23✅; 2-wk gap (09-30 blocked) |
+| 2026-10-07 (7d) | 52,724 total / 13,470 funnel | 929 funnel | 58 funnel / 123 total | 62 | 451 🚨 | 26.1% | 🚨 backend fail 70.9% (STABLE CATASTROPHIC; P0 unresolved); page view unique +31.3%✅; doctor→book CTA -27.1%⚠ (denominator effect only); form_submitted unique -18.3% (watch); riya=23✅; 2-wk gap (09-30 blocked) || 2026-10-14 (7d) | 55,558 total / 12,416 funnel | 940 funnel | 79 funnel / 137 total | 79 | 341 ✅ | 38.4% ✅ | ✅ backend fail 61.2% (IMPROVING from 70.9%; -24.4% failures); ✅ doctor→book CTA +47.1% RECOVERY (26.1%→38.4%); ✅ form_submitted unique +36.2% (58→79); ✅ lp_form +27.4% (62→79); ⚠ doctor_profile_viewed funnel -29.2% (commercial intent concentration); P0 Freshsales partially fixed — fail rate declining first time in 3 weeks |
+
+---
+
+## 2026-10-14 — Weekly Mixpanel Digest (7-day trailing, auto-generated)
+
+### Volume Metrics
+| Event | Count |
+|-------|-------|
+| Page views (total) | 55,558 |
+| blog_viewed | 2,357 |
+| illness_page_viewed | 211 |
+| treatment_page_viewed | 540 |
+| doctor_profile_viewed | 4,602 (funnel unique: 1,653) |
+| riya_page_viewed | 25 |
+| book_appointment_clicked | 2,740 (funnel unique: 940) |
+| cta_clicked | 274 |
+| whatsapp_clicked | 133 |
+| call_clicked | 97 |
+| lp_form_submitted | 79 |
+| form_submitted | 137 |
+| form_started | 1,035 |
+| form_error | 5 |
+| lead_create_failed | 341 |
+
+### Funnel Results
+| Funnel | Step 1 | Step 2 | Step 2 Conv | Step 3 | Step 3 Conv |
+|--------|--------|--------|-------------|--------|-------------|
+| A: Main booking | 12,416 | 940 (7.6%) | - | 79 | 8.4% of CTA / 0.64% overall |
+| B: Doctor-driven | 1,653 | 635 (38.4%) | ✅ +47.1% WoW | 6 | 0.9% |
+| C: Where-to-start | 14 | 8 (57%) | - | 8 | 100% of started |
+
+### WoW Deltas vs 2026-10-07 (>20% flagged)
+- ✅ doctor→book CTA: +47.1% (26.1%→38.4%) — **STRONG RECOVERY**
+- ✅ form_submitted (unique): +36.2% (58→79)
+- ✅ lp_form_submitted: +27.4% (62→79)
+- ✅ lead_create_failed: -24.4% (451→341) — **P0 IMPROVING for first time in 3 weeks**
+- ✅ backend fail rate (vs form_started): 43.0%→32.9%
+- ⚠ doctor_profile_viewed (funnel): -29.2% (2,334→1,653)
+- ⚠ where_to_start_page_viewed: -22.2% (18→14)
+
+### Backend Fail Rate
+- vs form_started: 341/1,035 = **32.9%** (was 43.0% last week)
+- vs all submissions: 341/(79+137+341) = **61.2%** (was 70.9%)
+- **First decline in 3 weeks — P0 Freshsales fix is taking effect**

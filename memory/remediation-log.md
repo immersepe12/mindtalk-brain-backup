@@ -6592,3 +6592,26 @@ Excluded as shipped-in-repo (mdx on origin/main, live-404 only due to PROD-ORIGI
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry only. Slack digest posted.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-14 (Wed) 15:16 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `6dc8c2a9` (psych-vs-psych meta rewrite)
+Vercel `mindtalk`, last 6 production deploys 6/6 READY, 0 ERROR. `git ls-remote origin main` = `6dc8c2a9` = deployed SHA → 0 stranded. PROD-ORIGIN-STALE-01 re-verified STILL REAL: therapy-for-anxiety, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy = 200 on mindtalk-lime.vercel.app, 404 on www.mindtalk.in (cache-busted). Already escalated 10-13; carried, not re-escalated.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| /treatments/medication 404 | curl -L = 404 (10-14) | REAL, src/**+YMYL, carried |
+| /doctors/therapists-near-me 404 (B12) | curl -L = 404 | REAL, carried |
+| PROD-ORIGIN-STALE-01 | see above | REAL, carried |
+| WORKSHEETS-RAGE-CLICK-01 | product/UX, T10 flag_for_human 10-14 | REAL per T19 evidence, product/dev — carried |
+| Homepage LCP 3301ms | T10 re-sample; origin CrUX FAST | carried (T10 verify-only) |
+| DataForSEO-402 | cleared 10-12 | closed |
+
+## STANDING JOB — BRIEF QUEUE: 8 shippable /blogs/ (floor 6 MET, unchanged)
+can-stress-kill-you, conduct-disorder-in-adults, fear-of-abandonment, gender-identity-disorder, is-online-therapy-confidential, stress-buster-games, therapy-cost-in-hyderabad, which-doctor-to-consult-for-alcohol-addiction — all tiered (3 via "Intent Tier" table row, not frontmatter key), all 404 on www and Vercel. 3 shipped-in-repo briefs (therapy-for-anxiety, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy) kept un-archived until www serves them. 3 REFRESH- briefs live by design. Discovery artefact 10-12 (2 d) fresh. No refill, 0 briefs written, Verifier not spawned.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry only. Slack digest posted.
