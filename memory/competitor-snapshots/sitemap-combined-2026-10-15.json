@@ -1,0 +1,38 @@
+{
+  "snapshot_date": "2026-10-15",
+  "week": 18,
+  "method": "sitemap_count_fallback",
+  "dataforseo_status": "BLOCKED \u2014 balance exhausted (5th consecutive week)",
+  "domains": {
+    "mindtalk.in": {
+      "url_count": 941,
+      "url_count_type": "url_entries",
+      "wow_delta": 0
+    },
+    "amahahealth.com": {
+      "url_count": 0,
+      "url_count_type": "404_unavailable",
+      "wow_delta": null
+    },
+    "yourdost.com": {
+      "url_count": 0,
+      "url_count_type": "404_unavailable",
+      "wow_delta": null
+    },
+    "manastha.com": {
+      "url_count": 0,
+      "url_count_type": "404_unavailable",
+      "wow_delta": null
+    },
+    "mfine.co": {
+      "url_count": 25,
+      "url_count_type": "sitemap_index_entries",
+      "wow_delta": 0
+    },
+    "betterhelp.com": {
+      "url_count": 0,
+      "url_count_type": "404_unavailable",
+      "wow_delta": null
+    }
+  }
+}

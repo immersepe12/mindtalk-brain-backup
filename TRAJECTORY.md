@@ -372,3 +372,4 @@ Strategist reads this every day before deciding actions — knows where the gaps
 | backend fail rate (vs submits) | 70.9% | 61.2% | -13.7% | ⚠ still P0 |
 
 **Narrative:** First full week of P0 Freshsales recovery. Doctor-driven CTA conversion rebounded +47% and absolute failures dropped -24%. Backend fail rate still catastrophic at 61% but trending down for first time in 3 weeks.
+| 2026-10-15 | 7 confirmed (Perplexity 7) | 7/10 (RECOVERED Q5✅ anxiety-treatment; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅; Q1❌ Q3❌ Q7❌ sister-domain) | ⬜ SKIPPED (auto-mode safety classifier) | ⬜ untested | 0/4 tested (Q1 Q4 Q5 Q9 — 4th consecutive 0) | 2 (Q4+Q9) | 🟢 +1 WoW. Q5 RECOVERED after 1-week absence. DataForSEO BLOCKED 5th consecutive week = CRITICAL. Amaha+Manastha sitemaps 404 (URL changed). Organic: mindtalk.in #2 Google CBT query. A1-A8 BLOCKED (free limit). |

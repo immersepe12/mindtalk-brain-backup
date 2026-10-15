@@ -1,0 +1,13 @@
+{
+  "domain": "amahahealth.com",
+  "snapshot_date": "2026-10-15",
+  "week": 18,
+  "method": "sitemap_fallback",
+  "sitemap_url": "https://www.amahahealth.com/sitemap_index.xml",
+  "url_count": 0,
+  "url_count_type": "404_unavailable",
+  "wow_delta": null,
+  "prev_week_count": 11,
+  "notes": "Sitemap now returns 404 — was 11 index entries last week. Sitemap URL changed. Dominant on Q1 therapy queries. Perplexity Q7 cadabams mental health redirects to cadabamshospitals not amaha.",
+  "dataforseo_status": "BLOCKED — balance exhausted"
+}

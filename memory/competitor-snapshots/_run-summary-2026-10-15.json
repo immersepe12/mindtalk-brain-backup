@@ -1,0 +1,27 @@
+{
+  "run_date": "2026-10-15",
+  "week": 18,
+  "task": "T17",
+  "chrome_status": "CONNECTED",
+  "dataforseo_status": "BLOCKED (balance exhausted, 5th consecutive week)",
+  "perplexity_score": "7/10",
+  "perplexity_delta": +1,
+  "google_aio_score": "0/4",
+  "chatgpt_status": "SKIPPED (auto-mode safety classifier)",
+  "assessment_queries": "BLOCKED (Perplexity rate limit after 10 core queries)",
+  "citations_gained": ["Q5: anxiety treatment india (RECOVERED)"],
+  "citations_lost": [],
+  "citations_retained": ["Q2", "Q4", "Q6", "Q8", "Q9", "Q10"],
+  "still_absent": ["Q1 (Amaha dominant)", "Q3 (sister-domain)", "Q7 (sister-domain)"],
+  "organic_highlight": "mindtalk.in ranks #2 on Google for 'cbt therapy online india' (blog, 25 Aug 2026)",
+  "sitemap_alerts": [
+    "amahahealth.com sitemap now 404 — was 11 index entries last week (sitemap URL changed)",
+    "manastha.com sitemap now 404 — was 211 pages last week (sitemap URL changed)"
+  ],
+  "top_actions": [
+    "Top up DataForSEO balance IMMEDIATELY (5th consecutive week without KW data)",
+    "Find new sitemap URLs for amahahealth.com and manastha.com (both 404 this week)",
+    "Leverage Q5 recovery: anxiety treatment india now cited — protect with fresh content updates",
+    "Consider therapy-near-me hub (T17-8) — 11th consecutive week Amaha dominates 60.5K"
+  ]
+}

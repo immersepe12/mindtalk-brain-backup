@@ -1,0 +1,13 @@
+{
+  "domain": "manastha.com",
+  "snapshot_date": "2026-10-15",
+  "week": 18,
+  "method": "sitemap_fallback",
+  "sitemap_url": "https://www.manastha.com/sitemap.xml",
+  "url_count": 0,
+  "url_count_type": "404_unavailable",
+  "wow_delta": null,
+  "prev_week_count": 211,
+  "notes": "Sitemap now returns 404 — was 211 pages last week. Sitemap URL may have changed. Monitor.",
+  "dataforseo_status": "BLOCKED — balance exhausted"
+}

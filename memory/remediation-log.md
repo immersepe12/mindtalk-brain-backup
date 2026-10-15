@@ -6615,3 +6615,25 @@ can-stress-kill-you, conduct-disorder-in-adults, fear-of-abandonment, gender-ide
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry only. Slack digest posted.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-15 (Thu) 15:17 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ✅ READY `6dc8c2a9` (6/6 prod READY, 0 ERROR; = `git ls-remote origin main` → 0 stranded). Latest deploy 10-14 (<48h).
+PROD-ORIGIN-STALE-01 re-verified STILL REAL (day 3): therapy-for-anxiety, what-happens-in-a-therapy-session, online-therapy-vs-in-person-therapy = 200 on mindtalk-lime.vercel.app, 404 on www.mindtalk.in (cache-busted). Escalated 10-13; carried, not re-escalated.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| /treatments/medication 404 | curl -L 404 | REAL, src/**+YMYL, carried |
+| /doctors/therapists-near-me 404 | curl -L 404 | REAL, carried |
+| PROD-ORIGIN-STALE-01 | see above | REAL, carried |
+| DISCOVERY STALE | none in 10-14/10-15 logs; artefact 10-12 (3 d) | no flag |
+| 59→36 pos-100 rows | T1 AP8-quarantined | noise, closed |
+
+## STANDING JOB — BRIEF QUEUE: 8 shippable /blogs/ (floor 6 MET, unchanged)
+can-stress-kill-you, conduct-disorder-in-adults, fear-of-abandonment, gender-identity-disorder, is-online-therapy-confidential, stress-buster-games, therapy-cost-in-hyderabad, which-doctor-to-consult-for-alcohol-addiction — all tiered, 404 on www and Vercel. 3 shipped-in-repo briefs kept un-archived until www serves them; 3 REFRESH- live by design. No refill, 0 briefs written, Verifier not spawned.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry only. Slack digest posted.
