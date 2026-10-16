@@ -6637,3 +6637,26 @@ can-stress-kill-you, conduct-disorder-in-adults, fear-of-abandonment, gender-ide
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry only. Slack digest posted.
+
+---
+
+# T20 AUTO-REMEDIATION — 2026-10-16 (Fri) 15:16 UTC fire
+
+## Step 0 — DEPLOY HEALTH: ⚠️ UNVERIFIABLE (not READY-confirmed)
+Vercel MCP: team team_tco7VSJfBJwUA5uZRuGFqkyu lists 6 projects, none = mindtalk (prj_48AlhTOwnl64I8qD0jyV4x2mH1Sz) -> list_deployments 404 "Project not found". `git ls-remote origin main` = 6dc8c2a9 (same as 10-15, 0 new commits on main). NEW evidence vs 10-15: mindtalk-lime.vercel.app now returns 404 `x-vercel-error: DEPLOYMENT_NOT_FOUND` (was 200 for the 3 posts). www.mindtalk.in = 200 (CloudFront) but still 404 for therapy-for-anxiety / what-happens-in-a-therapy-session (merged on main) -> PROD-ORIGIN-STALE-01 day 4, still real. No ERROR deploy observed (cannot observe). Escalated: restore Vercel connector visibility / confirm project+aliases not removed; repoint www origin. Did not attempt code fix, no src/** touch.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| 63 pos-100 rows (data-quality-suspect-2026-10-16) | T1 AP8 quarantine; gsc-validation-2026-10-16: bipolar-disorder impr +35.9%, social-media-trap impr +12%, NOISE | FALSE POSITIVE closed |
+| T9-BUILD-BLOCK-01 | reproduced (list_projects, 404) | REAL, infra/credential (connector scope) — escalated by T10 10-16, carried with new DEPLOYMENT_NOT_FOUND evidence |
+| PROD-ORIGIN-STALE-01 | curl cache-busted www 404 for 2 merged posts | REAL, carried (day 4) |
+| /treatments/medication 404, /doctors/therapists-near-me 404 | curl -L 404 | REAL, src/**+YMYL, carried |
+| DataForSEO-402 | cleared 10-12 per BACKLOG (T17 still reports blocked) | carried, payment = Kushal |
+| DISCOVERY STALE | none in today's logs; artefact 10-12 (4 d) | no flag |
+
+## STANDING JOB — BRIEF QUEUE: 8 shippable /blogs/ (floor 6 MET)
+can-stress-kill-you, conduct-disorder-in-adults, fear-of-abandonment, gender-identity-disorder, is-online-therapy-confidential, stress-buster-games, therapy-cost-in-hyderabad, which-doctor-to-consult-for-alcohol-addiction — all tiered, 404 on www. Of these: stress-buster-games + fear-of-abandonment are Verifier-approved MDX on unmerged branch auto-ship-blogs-2026-10-16 (99713fe5); is-online-therapy-confidential (AP3 clinical sign-off pending), conduct-disorder (NEEDS_HUMAN), which-doctor-alcohol (HOLD C5b) held -> only 3 unblocked. 3 shipped-in-repo briefs (therapy-for-anxiety, what-happens, online-vs-in-person) kept un-archived until www serves them. No refill (floor met; discovery 10-12 = Tier A exhausted, volume tools down). 0 briefs written, Verifier not spawned.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry (backup logs/remediation-log.backup-2026-10-16-pre-t20). Slack digest posted.

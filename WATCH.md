@@ -1886,3 +1886,6 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 - No watch added/closed. W-PSYCH-VS-PSYCH-CTR-1014 already open (T11 6dc8c2a9, check 10-28, AP12 lock) - verify SERP AI Overview presence at check.
 - New verify items (not watches): HOMEPAGE-LCP-RESAMPLE-01 (T14 next run + 10-21); GSC-PAGE-PULL-01 due 10-15.
 - Closing soon: W-ASSESS midpoint 10-16; finals 10-20 (malayalam counselling), 10-21 (x5 blogs).
+
+## T10 stamp — 2026-10-16
+No watches added/closed. W-ASSESS-*-0925 midpoint reached 10-16: short-window deltas mixed (see observation-2026-10-16); formal 90d comparison queued as W-ASSESS-MIDPOINT-EVAL-01; Day-42 2026-11-06. Next Day-42 finals: 10-20 (online-counselling-in-malayalam), 10-21 (x5).
