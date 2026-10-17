@@ -3,6 +3,8 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T10 STRATEGIST — 2026-10-17 — No new watches · observation 10-17: nothing due · next finals 10-20 (malayalam), 10-21 (x5) · www prod frozen at 14 Oct (PROD-ORIGIN-STALE-01) — new ships cannot go live, existing watches unaffected · AP12 locks hold (assessments to 11-06)
+
 > ### ℹ️ T10 STRATEGIST — 2026-10-15 — No new watches · personality-disorder flag = NOISE (not watched) · T2 reports ALGO_WATCH OFF (confirm 10-18) · W-ASSESS midpoint 10-16 · next finals 10-20/21
 > ### ℹ️ T10 STRATEGIST — 2026-10-13 — No new watches · /blogs/psychiatrist-vs-psychologist Day-42 RESOLVED (rank held pos 6.5, CTR 0.1% -> PSYCHIATRIST-VS-PSYCHOLOGIST-CTR-01 queued) · dual-diagnosis rank flag = NOISE · next finals 10-20/21
 > ### ℹ️ T10 STRATEGIST — 2026-10-09 — No new watches · Sept Spam Update complete (no algo hold) · W-HOMEPAGE-PSI-1002 check due 10-09 (T14 owns) · W-MEDICATION-404-1003 pending_evaluation (Day 7, SEO-lead escalation today) · phobia-treatment-in-bangalore 0 impr at Day 21 -> index check queued (PHOBIA-BLR-INDEX-CHECK-01) · next finals 10-12

@@ -6660,3 +6660,22 @@ can-stress-kill-you, conduct-disorder-in-adults, fear-of-abandonment, gender-ide
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry (backup logs/remediation-log.backup-2026-10-16-pre-t20). Slack digest posted.
+
+---
+## T20 2026-10-17 (Sat) — scheduled run
+
+**Deploy health: ⚠ UNOBSERVABLE (carried).** Vercel MCP `list_projects` returns 6 projects (cadabams-live-analytics, gw, mhra, aure, mtfwebsite, joy-on-tap) — `mindtalk` (prj_48AlhTOwnl64I8qD0jyV4x2mH1Sz) absent; `get_project` = 404. `mindtalk-lime.vercel.app` = 404. `git ls-remote origin main` = 6dc8c2a9 (unchanged since 10-14, 0 new commits). www.mindtalk.in = 200 via CloudFront but 5 merged/branch blogs 404 (cache-busted). PROD-ORIGIN-STALE-01 now day 6, REAL, carried. No ERROR deploy observable.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| PROD-ORIGIN-STALE-01 | curl cache-busted: therapy-for-anxiety, what-happens, online-vs-in-person, stress-buster-games, fear-of-abandonment, can-stress-kill-you all 404 | REAL, carried (escalated 10-16/17) |
+| T9-BUILD-BLOCK-01 | Vercel project 404 reproduced | REAL, credential/connector, carried |
+| /treatments/medication, /doctors/therapists-near-me | curl -L 404 | REAL, src/**+YMYL, carried |
+| DISCOVERY STALE | no flag in 10-17 logs; artefact 10-12 (5 d) | no flag; not re-run (volume tools down, Tier A exhausted per 10-16) |
+
+## STANDING JOB — BRIEF QUEUE: 8 shippable /blogs/ (floor 6 MET)
+Same 8 as 10-16 (all tiered, all 404). Only 3 unblocked (see 10-16 entry). No refill, 0 briefs written, Verifier not spawned. No stale briefs archived (3 shipped-in-repo briefs kept until www serves them; 3 REFRESH- briefs spared by rule).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry (backup logs/remediation-log.backup-2026-10-17-pre-t20).
