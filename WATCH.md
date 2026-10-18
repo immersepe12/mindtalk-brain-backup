@@ -3,6 +3,20 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ✅ T12 LEARNER — 2026-10-18 — W-ASSESS-0925 Day-21 midpoint (NOT CLOSED) · ALGO_WATCH CLEARED · P12 96.6% ATH unchanged · no stale pruning needed · weekly digest posted
+> **Midpoint evaluation (Day-21, closes 2026-11-06):**
+> - W-ASSESS-0925 batch: 9🟢 ON_TRACK/EXCEPTIONAL / 1🟡 WATCH (Autism: pos regressing) / 2🔴 STALLED (C-SSRS below-baseline, EAT-26 position collapsed) / 5 DATA_LIMITED
+> - Full log: brain/memory/experiments/midpoint-W-ASSESS-0925-2026-10-18.md
+> - Watches updated: W-ASSESS-* check dates remain 2026-10-16 (already at midpoint); Day-42 close = 2026-11-06
+> **Watch changes this run:**
+> - W-THERAPIST-NEAR-ME-RISE-1006: check extended to 2026-10-25 (DATA_PENDING — URL never confirmed by T20)
+> - No watches closed this run (midpoints only)
+> - No stale watches (all open watches <60 days)
+> **ALGO_WATCH status:** CLEARED 2026-10-15 (T2 confirmed OFF). P6 >7d settled met.
+
+
+> ### ℹ️ T10 STRATEGIST — 2026-10-18 — No new watches · no watches closed · observation 10-18: nothing due · finals 10-20 (malayalam), 10-21 (x5) · ALGO_WATCH cleared (T12) · www prod still frozen at 14 Oct (day 6) · AP12 locks hold (assessments to 11-06); Day-42 attention: EAT-26, C-SSRS, Autism
+
 > ### ℹ️ T10 STRATEGIST — 2026-10-17 — No new watches · observation 10-17: nothing due · next finals 10-20 (malayalam), 10-21 (x5) · www prod frozen at 14 Oct (PROD-ORIGIN-STALE-01) — new ships cannot go live, existing watches unaffected · AP12 locks hold (assessments to 11-06)
 
 > ### ℹ️ T10 STRATEGIST — 2026-10-15 — No new watches · personality-disorder flag = NOISE (not watched) · T2 reports ALGO_WATCH OFF (confirm 10-18) · W-ASSESS midpoint 10-16 · next finals 10-20/21
@@ -1870,7 +1884,7 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 
 <!-- T10 Strategist 2026-10-06 -->
 **T10 STAMP 2026-10-06 (catch-up for missed 10-05):** W-MEDICATION-404-1003 -> pending_evaluation (window ended 10-05, 404 unresolved, AUDIT-CRITICAL SLA overdue, escalated). W-T9-BUILD-BLOCK-1002 check date reached, still blocked (carried). DataForSEO-402 ~Day 21: all rank-based watches remain GSC-only.
-| W-THERAPIST-NEAR-ME-RISE-1006 | "therapist near me" (URL TBD by T20 GSC page-dim pull) | verify_first | 2026-10-06 | 2026-10-13 | open | Weekly report: pos 53.2->17.6, 1,125 impr. Confirm holder URL + 7d stability before any conversion work; no content changes during window (keeps AP12 clean). |
+| W-THERAPIST-NEAR-ME-RISE-1006 | "therapist near me" (URL TBD by T20 GSC page-dim pull) | verify_first | 2026-10-06 | 2026-10-25 | open | Weekly report: pos 53.2->17.6, 1,125 impr. Confirm holder URL + 7d stability before any conversion work; no content changes during window (keeps AP12 clean). DATA_PENDING 2026-10-18: URL never confirmed by T20; gsc-data stale (2026-09-24); check extended to 2026-10-25. Full log: brain/memory/experiments/pending-W-THERAPIST-NEAR-ME-RISE-1006-2026-10-18.md |
 
 <!-- T10 Strategist 2026-10-10 -->
 **T10 STAMP 2026-10-10:** no watch added/closed. W-MEDICATION-404-1003 remains pending_evaluation (404 Day 8, live-checked). Day-42 finals due 10-12 (8 blogs), 10-13 (psychiatrist-vs-psychologist). W-ASSESS midpoint 10-16.

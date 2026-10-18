@@ -6679,3 +6679,22 @@ Same 8 as 10-16 (all tiered, all 404). Only 3 unblocked (see 10-16 entry). No re
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Writes: this entry (backup logs/remediation-log.backup-2026-10-17-pre-t20).
+
+---
+## T20 2026-10-18 (Sun) — scheduled run
+
+**Deploy health: ⚠ UNOBSERVABLE (carried, day 7).** Vercel MCP `list_projects` = 6 projects, `mindtalk` absent; mindtalk-lime.vercel.app 404; `git ls-remote origin main` = 6dc8c2a9 (unchanged). www.mindtalk.in 200 but 6 merged/branch blogs 404 cache-busted. PROD-ORIGIN-STALE-01 REAL, carried.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| PROD-ORIGIN-STALE-01 | curl cache-busted: 6 blogs 404 | REAL, carried |
+| T9-BUILD-BLOCK-01 | Vercel project absent | REAL, credential/connector, carried |
+| /treatments/medication, /doctors/therapists-near-me | curl -L 404 | REAL, src/**+YMYL, carried |
+| DISCOVERY STALE | no flag in 10-18 logs (observation log clean, 0 alerts) | none |
+
+## STANDING JOB — BRIEF QUEUE: 8+ shippable /blogs/ (floor 6 MET)
+Same set as 10-16/17 (all tiered, all 404). Also 404 + tiered: online-vs-in-person-therapy, cbt-for-ocd, dbt-for-borderline-personality-disorder, mind-therapy (not counted in prior runs; paths ambiguous). No refill, 0 briefs written, Verifier not spawned. No archive (shipped-in-repo briefs held; REFRESH- spared).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Note: `mindtalk` repo origin URL embeds a plaintext PAT in .git/config — credential hygiene item for Kushal (not touched).

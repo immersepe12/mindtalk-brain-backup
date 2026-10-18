@@ -1,5 +1,22 @@
 ⚠️ T5 FLOOR MISS 2026-10-12: 3/12 briefs created. Brief runway depletes in ~7 weeks at current T9 velocity. T5 run log: logs/discovery-2026-10-12.txt. Trigger live Mac Mini T5 run before T9 next fires. (Also: new-content-discovery.py did not finish in 46 min — needs rowLimit 25000 fix; Ahrefs keywords-explorer 'Insufficient plan'.)
 
+### 2026-10-18 T12 Learner — W-ASSESS-0925 Day-21 midpoint 9🟢/1🟡/2🔴 · ALGO_WATCH CLEARED ✅ · PROD-ORIGIN-STALE-01 day 5 (site frozen) · P12 96.6% (unchanged)
+
+- ✅ **ALGO_WATCH CLEARED**: T2 confirmed OFF on 2026-10-15 (Sept Spam Update completed ~10-08, no health targeting, no Oct core update). P6 >7d settled met (10 days post-update). ALGO-WATCH-CLEARANCE-REVIEW-01 condition fulfilled. YMYL refreshes now unblocked by ALGO_WATCH; AP3 clinical sign-off still required per normal rules.
+- 📊 **W-ASSESS-0925 Day-21 midpoint** (11 evaluable, 5 DATA_LIMITED):
+  - 🟢 9/11: GAD-7 (+128% clicks, pos 7.4), Y-BOCS (+193% but WoW-drop flagged, pos 3.6), Love Language (+466% clicks, impr near-5x), BPD (+252%, pos 6.1), ACE (+93%), DASS-21 (+267%, pos 6.9), EI (+433%, pos 4.7), Cube-test NEW (page-1 at Day-21 P12 confirmed)
+  - 🟡 1/11 WATCH: Autism test - clicks +300% vs norm BUT pos REGRESSING 8.4->11.6 WoW
+  - 🔴 2/11 STALLED: C-SSRS (-45% clicks vs norm, CTR 0.38% below baseline); EAT-26 (pos COLLAPSED 12.2->25.2)
+  - DATA_LIMITED (5): HUBS, NEW8, BYLINE, INDEX, 308 - defer to Day-42 2026-11-06
+  - Stalled/Worse 18% - below 50% flag threshold. No LEARNER FLAG.
+  - Candidate principles seeded (write at Day-42 if 3+ confirmed): P-ASSESS-byline-CTR, P-ASSESS-plain-english-retarget
+  - Full log: brain/memory/experiments/midpoint-W-ASSESS-0925-2026-10-18.md
+- ⏸️ **W-THERAPIST-NEAR-ME-RISE-1006**: DATA_PENDING - URL never confirmed by T20; GSC data stale (2026-09-24). Conversion work blocked. Check extended to 2026-10-25.
+- 🚨 **PROD-ORIGIN-STALE-01** (day 5): Site frozen since 2026-10-14 - top operational flag. No new content live.
+- 📈 **Site metrics (Oct 3-9)**: 4,966 clicks (+16.2% WoW), 423,524 impr (+8.2%), CTR 1.2%, pos 9.1, 926 URLs. TRAJECTORY.md updated.
+- 📚 **Archived BACKLOG**: PSYCHIATRIST-VS-PSYCHOLOGIST-CTR-01 moved to Completed (T11 6dc8c2a9, 2026-10-13-14).
+- 🔒 **P12**: 96.6% ATH unchanged (no new Day-42 closures this run). Cube-test midpoint confirms P12 holds for assessment class.
+
 ### 2026-10-11 T12 Learner — W43 8/8 🟢 Day-42 · P12 96.6% ATH · P14 WRITTEN · ALGO_WATCH ACTIVE · Core Update still hitting /doctors/ · DataForSEO Day 26
 
 - ✅ **W43 Day-42 Finals: 8/8 🟢 PAGE-1 or better (evaluated 1 day ahead of 10-12 gate — data complete)**
