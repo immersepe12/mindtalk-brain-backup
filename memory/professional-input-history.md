@@ -107,3 +107,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W42 | /illnesses/postpartum-depression-ppd | Dr. Swarupa Mohan Udgiri (swarupa-mohan-udgiri) | 40 | brief_generated |
 | 2026-W42 | /illnesses/psychosis | Dr. Thejus Kumar B R (dr-thejus-kumar) | 35 | brief_generated |
 | 2026-W42 | /blogs/understanding-everyday-habit-that-are-destroying-your-sleep | Sucheta Saha (sucheta-saha) | 25 | brief_generated |
+
+| 2026-W43 | /treatments/eye-movement-desensitization-and-reprocessing-therapy-emdr-therapy | Abhimanyu Chandak (abhimanyu-chandak) | 47 | brief_generated |
+| 2026-W43 | /treatments/drug-deaddiction | Dr. Vishal Kasal (vishal-kasal) | 45 | brief_generated |
+| 2026-W43 | /illnesses/relationship-issues | Dr. Swarupa Mohan Udgiri (swarupa-mohan-udgiri) | 40 | brief_generated |
+| 2026-W43 | /illnesses/attention-deficit-hyperactivity-disorder-adhd | Dr. Arohi Vardhan (dr-arohi-vardhan) | 50 | brief_generated |
+| 2026-W43 | /illnesses/dementia | Dr. Arun Kumar V (dr-arun-kumar) | 40 | brief_generated |
+| 2026-W43 | /blogs/fear-of-poverty-peniaphobia | Ms. Tirzah Johnson (tirzah-johnson) | 35 | brief_generated |

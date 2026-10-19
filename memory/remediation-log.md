@@ -6698,3 +6698,23 @@ Same set as 10-16/17 (all tiered, all 404). Also 404 + tiered: online-vs-in-pers
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Note: `mindtalk` repo origin URL embeds a plaintext PAT in .git/config — credential hygiene item for Kushal (not touched).
+
+---
+## T20 2026-10-19 (Mon) — scheduled run (15:18 UTC)
+
+**Deploy health: ⚠ UNOBSERVABLE (carried, day 8).** Vercel MCP `list_projects` = 6 projects, `mindtalk` (prj_48AlhTOwnl64I8qD0jyV4x2mH1Sz) absent; mindtalk-lime.vercel.app 404; `git ls-remote origin main` = 6dc8c2a9 (unchanged). www.mindtalk.in cache-busted 404 for therapy-for-anxiety, what-happens-in-a-therapy-session, stress-buster-games, fear-of-abandonment, can-stress-kill-you, gender-identity-disorder, cbt-for-ocd, mind-therapy. PROD-ORIGIN-STALE-01 REAL, carried (already escalated).
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| 43 pos-100 rows (data-quality-suspect-2026-10-19) | T1 AP8 quarantine; same pattern as 10-16 (confirmed NOISE via GSC impressions) | FALSE POSITIVE closed |
+| GSC NOISE x2 (OCD, therapy-vs-medication) | gsc-validation-2026-10-19 removed them | closed by T2 |
+| /illnesses/stress-disorder CTR_DROP | T3 brief written; YMYL, AP3 clinical sign-off | REAL, escalate-class (YMYL), not shipped |
+| PROD-ORIGIN-STALE-01 / T9-BUILD-BLOCK-01 | reproduced | REAL, credential/connector + infra, carried |
+| DISCOVERY STALE (cache 7d) | re-ran scripts/new-content-discovery.py --all (exit clean, new-content-opportunities.json refreshed) | FIXED |
+
+## STANDING JOB — BRIEF QUEUE
+Tiered NEW- briefs with 404 slug: 11 under /blogs/ (cbt-for-ocd, conduct-disorder-in-adults, dbt-for-bpd, gender-identity-disorder, is-online-therapy-confidential, mind-therapy, online-vs-in-person, therapy-cost-in-hyderabad, therapy-for-anxiety, what-happens-in-a-therapy-session, which-doctor-alcohol). Floor 6 MET. No refill, 0 briefs written, Verifier not spawned. Nothing archived (shipped-in-repo briefs held until www serves them). google-ads-search-terms.py not run (floor met).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted.
