@@ -6718,3 +6718,23 @@ Tiered NEW- briefs with 404 slug: 11 under /blogs/ (cbt-for-ocd, conduct-disorde
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted.
+
+---
+## T20 2026-10-20 (Tue) — scheduled run (15:17 UTC)
+
+**Deploy health: ⚠ UNOBSERVABLE (carried, day 9).** Vercel MCP `list_projects` now returns 403 forbidden (was: project absent) — connector/credential issue, still blocks deploy-state check. mindtalk-lime.vercel.app 404; `git ls-remote origin main` = 6dc8c2a9 (unchanged, 0 new commits). Cache-busted www.mindtalk.in 404 for therapy-for-anxiety, what-happens-in-a-therapy-session, stress-buster-games, fear-of-abandonment, can-stress-kill-you, cbt-for-ocd. PROD-ORIGIN-STALE-01 REAL, carried (already escalated).
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| 39 pos-100 rows (data-quality-suspect-2026-10-20) | T1 AP8 quarantine; same improbable pattern as 10-16/10-19 (confirmed NOISE) | FALSE POSITIVE closed |
+| /doctors/therapists-in-hyderabad, psychologists-in-mysore | gsc-validation-2026-10-20: NOISE/impressions flat | closed by T2 |
+| /illnesses/stress-disorder CTR_DROP | YMYL, needs clinical sign-off | REAL, escalate-class, not shipped (carried) |
+| PROD-ORIGIN-STALE-01 / T9-BUILD-BLOCK-01 | reproduced; Vercel 403 | REAL, credential/connector, carried |
+| DISCOVERY STALE | no flag in 10-20 logs; refreshed 10-19 | none |
+
+## STANDING JOB — BRIEF QUEUE: 12 tiered NEW- briefs with 404 slug (floor 6 MET)
+No refill, 0 briefs written, Verifier not spawned, nothing archived (REFRESH- spared; shipped-in-repo briefs held).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted.
