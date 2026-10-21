@@ -218,3 +218,31 @@
 | W37 | 2026-09-09 | P5 RECOVERY 211→286 (+35.5%). P8 Kerala regression confirmed (-35.8%). Germany W2 seed. Delhi NCT sustained. |
 | W38 | 2026-09-16 | MCP_BLOCKED (billing). No data. |
 | W39 | 2026-09-23 | **P17 Germany PROMOTED** (49, 3rd week). **P8 Kerala DEMOTED** (15, -65% from peak). P15 Delhi 214 W6. Tamil 187 record. chatgpt.com 354 NEW HIGH. Revenue record 202 payments. Dead click rate 11.1%. |
+
+---
+## 2026-10-21 (W43) — T19 Proposals
+
+### P1: /doctors/psychologists-in-mumbai [IMMEDIATE — P19 W3 CONFIRMED]
+- Signal: Mumbai 55 organic book clicks W43, Maharashtra 75 total (P19 W3 confirmed)
+- Mumbai is now the single largest non-Bengaluru city for organic intent
+- No dedicated Mumbai psychologist page exists
+- Confidence: HIGH (3 weeks Maharashtra data, Mumbai dominant)
+- T5 target: File for next sprint
+
+### P2: Kannada-speaking therapists page [HIGH — Karnataka 44.8% of all intent]
+- Signal: Karnataka 413 organic book clicks W43 = 44.8% of all organic intent
+- Pattern 1 (language pages) confirmed W10 for Telugu + Tamil — Kannada is the obvious next build
+- Karnataka = Mindtalk's home market + largest organic traffic source
+- Confidence: HIGH (P1 confirmed for other languages, Karnataka dominant)
+- T5 target: File for next sprint
+
+### P3: /doctors/psychologists-in-pune [PROPOSE — P19 W2+]
+- Signal: Pune 14 organic book clicks W43. Maharashtra W3 confirmed.
+- No Pune psychologist page exists. Pune is India's 8th largest metro.
+- Confidence: MEDIUM (Pune clicks modest but Maharashtra growth sustained)
+
+### P4: Hindi-speaking therapists page [PROPOSE — Hindi Belt signal forming]
+- Signal: Delhi NCT 80 + UP 22 + Rajasthan 10 + Bihar 6 + Haryana 8 = ~126 Hindi-belt clicks/week
+- Pattern 15 (Delhi) still on watch; P18 (UP) at W3
+- Confidence: MEDIUM (aggregate signal strong but no single-market breakthrough)
+

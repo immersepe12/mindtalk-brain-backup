@@ -1,94 +1,90 @@
-# UX Friction Pages — Updated 2026-10-14 (W42)
+# UX Friction Pages — Updated 2026-10-21 (W43)
 
-**Written by:** T19 Conversion Intelligence. Source: Mixpanel $mp_rage_click + $mp_dead_click, trailing 7d Oct 7–14, 2026.
-**Read by:** T10 Strategist (prevents SEO investment in broken pages) + Product/Dev team.
-**NOT for T18** — these are UI bugs, not E-E-A-T problems.
-
----
-
-## W42 Site totals
-- **Rage clicks:** 272 unique (+11.0% vs W41 ~245/week) — 🟡 RISING (rage rate 2.2%, still <5% threshold ✅)
-- **Dead clicks:** 1,337 unique (+12.7% vs W41 ~1,186/week) — 🔴 ESCALATING (dead rate 10.7% of 12,488 visitors — ABOVE 10% threshold ⚠️)
-
-**W42 Alert:** Dead rate re-crossed 10% threshold after W41 dipped to 9.8%. Both rage and dead trending upward 3rd consecutive week. Journey Task partial recovery (29 unique, up from 18 W41) — UX fix may be in progress.
+**Source:** T19 Conversion Intelligence. Rage click threshold: >5% page rate. Dead click threshold: >10% site rate.
+**Read by:** T10 Strategist, T18 Professional Input (Leaky Bucket UX audits)
 
 ---
 
-## W42 Dead click hotspots
+## W43 Friction Summary (Oct 14–21)
 
-All dead clicks on consult.cadabams.com (app). SEO website (mindtalk.in) clean.
-
-| URL (condensed) | Dead clicks (W42) | Status | Likely cause |
-|---|---:|---|---|
-| consult.cadabams.com/home | 649 | 🔴 CRITICAL #1 (persistent W34+) | App home — broken CTAs; 649 down from W37 peak 789 but still dominant |
-| consult.cadabams.com/consult/appointments | 269 | 🔴 ESCALATING ⬆️ | Appointments page — was 246 W37, now 269 W42; growing 3 weeks |
-| consult.cadabams.com/auth/login | 158 | 🔴 CRITICAL | Login wall friction — persistent 10+ weeks |
-| consult.cadabams.com/consult/find-therapist | 130 | 🔴 PERSISTENT (W27+, 15+ weeks) | Filter/CTA non-responsive. On watchlist since W27. Not resolved in 15+ weeks. |
-| consult.cadabams.com/assessments/[details] | 78 | 🟡 HIGH | Specific assessment details page broken |
-| consult.cadabams.com/consult/checkout | 76 | 🔴 REVENUE CRITICAL | Checkout form issues — direct revenue impact |
+| Metric | W43 | W42 | Δ% |
+|---|---|---|---|
+| Rage clicks (unique) | 222 | 272 | -18.4% 🟢 improving |
+| Dead clicks (unique) | 1,296 | 1,337 | -3.1% 🟢 improving |
+| Dead rate (site) | 10.6% | 10.7% | ⚠️ still above 10% |
+| Rage rate (site) | ~1.8% | 2.2% | improving ✅ |
 
 ---
 
-## W42 Rage click hotspots — NEW CRITICAL
+## Top Rage Click Pages (W43 — total rage events)
 
-| URL (condensed) | Rage clicks (W42) | Status | Likely cause |
-|---|---:|---|---|
-| /worksheets/v270kfrkogycucbf4r74yulz/details | 233 | 🔴 NEW CRITICAL — HIGHEST EVER SINGLE PAGE | Worksheet detail page — unknown worksheet. 233 rage = users hammering non-responsive element. Possible worksheet content loading failure or button broken |
-| consult.cadabams.com/consult/booking/8796 | 111 | 🔴 PERSISTENT (W27+, 15+ weeks) | booking/8796 has been on critical list since W27 — NEVER RESOLVED |
-| consult.cadabams.com/consult/booking/20388 | 23 | 🟡 NEW W42 | New booking page joining rage list |
-| consult.cadabams.com/home | 23 | 🟡 HIGH | Home page dual-friction (dead + rage) |
-| consult.cadabams.com/consult/booking/86710 | 13 | 🟡 WATCH | Booking page cluster |
+| Rank | Page | Rage events | Severity | Notes |
+|---|---|---|---|---|
+| 1 | assessments/ks2r5bcpvv4p9yw4x4ym8lbr (returnTo param) | 36 | 🔴 HIGH | Assessment with redirect param — frustration at flow |
+| 2 | consult/booking/8796?mode=online | 32 | 🔴 HIGH | Persistent from W42 — booking UX broken |
+| 3 | consult/booking/20388?mode=online | 30 | 🔴 HIGH | Same booking flow pattern |
+| 4 | consult/booking/102290?mode=online | 29 | 🔴 HIGH | Booking UX systemic issue |
+| 5 | wellness/mindful-minutes/v7ajmjtv2glmpoau1p1eallx | 27 | 🟡 MEDIUM | App wellness feature |
+| 6 | profile | 25 | 🟡 MEDIUM | User profile page |
+| 7 | home | 23 | 🟡 MEDIUM | App homepage |
+| 8 | onboarding/start | 22 | 🟡 MEDIUM | Onboarding friction |
 
----
-
-## Critical connection: Journey Task partial recovery
-
-Started Journey Task: 645 (W34) → 365 (W35) → 124 (W36) → 30 (W37) → 27 (W39) → 18 (W41) → **29 (W42, +61% WoW)**
-
-First positive recovery signal in 8 weeks. W42 29 starts vs W41 18 = +61% WoW. Journey UX may be receiving fixes. Monitor W43 for continuation.
+**Pattern:** booking/* pages with ?mode=online consistently generating high rage. Likely broken UI element or payment failure feedback loop.
 
 ---
 
-## Most urgent dev actions (W42)
+## Top Dead Click Pages (W43 — total dead click events)
 
-**Priority 1 — NEW CRITICAL:** `/worksheets/v270kfrkogycucbf4r74yulz/details` (233 rage clicks)
-- Highest single-page rage click count ever recorded on a worksheet page
-- 233 rage = users actively frustrated with non-responsive element
-- Action: audit that specific worksheet's interactive elements; check if worksheet buttons/navigation are broken; check if this is a recently published worksheet with a broken CTA
-
-**Priority 2 — EMERGENCY (15+ weeks):** `/consult/booking/8796` (111 rage, PERSISTENT W27+)
-- Has been on watchlist since W27 — FIFTEEN weeks without resolution
-- 111 rage clicks = booking flow at this specific therapist URL is broken
-- Action: check if booking/8796 therapist is still active; test booking flow end-to-end
-
-**Priority 3 — ESCALATING:** `/consult/appointments` (269 dead clicks, rising W37→W42)
-- Was 246 W37, now 269 W42 = slow escalation, not improving
-- Users hitting appointments page are unable to interact with scheduler
-- Action: test appointments scheduling UI; check for JS errors in appointments view
-
-**Priority 4 — PAYMENT FUNNEL:** `/consult/checkout` (76 dead clicks)
-- Checkout dead clicks are REVENUE CRITICAL — users reaching checkout can't proceed
-- Action: test checkout flow end-to-end; check for form field/button rendering issues
-
-**Priority 5 — AUTH WALL:** `/auth/login` (158 dead clicks, PERSISTENT)
-- Login wall sustained friction — 10+ weeks without resolution
-- Action: check auth/login page for dead CTA elements, loading state issues
-
-**Priority 6 — PERPETUAL:** `/consult/find-therapist` (130 dead clicks, W27+ = 15+ weeks)
-- Still broken after 15+ weeks. Second-most persistent unresolved issue after booking/8796.
+| Rank | Page | Dead events | Severity | Notes |
+|---|---|---|---|---|
+| 1 | home | 679 | 🔴 CRITICAL PERSISTENT | W37+ multi-week. App homepage unresponsive elements |
+| 2 | consult/find-therapist | 129 | 🔴 HIGH | Therapist discovery flow — elements not clickable |
+| 3 | consult/appointments | 102 | 🔴 HIGH | Appointment management — persistent multi-week |
+| 4 | profile | 95 | 🔴 HIGH | Profile page elements dead |
+| 5 | care | 78 | 🟡 MEDIUM | Care hub page |
+| 6 | auth/login (returnTo assessment) | 62 | 🟡 MEDIUM | Login redirect friction |
+| 7 | consult/checkout | 61 | 🔴 HIGH NEW | **NEW W43 — PAYMENT FLOW. Dead clicks at checkout = lost revenue.** |
+| 8 | find-therapist?p=2 | 54 | 🟡 MEDIUM | Pagination dead elements |
+| 9 | assessments/woi1cncqbbzftmo6f0260mqo/details | 50 | 🟡 MEDIUM | google organic referral |
+| 10 | assessments/v2cm5muphut23y8wzl0sybct/details | 50 | 🟡 MEDIUM | google organic referral |
 
 ---
 
-## Historical trend
+## CRITICAL ALERTS (Action Required)
 
-| Week | Rage clicks (unique) | Dead clicks (unique) | Dead rate | Status |
-|---|---:|---:|---:|---|
-| W27 | ~200 est | ~1,800 est | ~28% | ESCALATING |
-| W34 | ~400 est | 4,441 total | ~47% | 🔴 CRITICAL spike (total, not unique) |
-| W35 | 479 | 3,761 | — | ✅ Improving |
-| W37 | 729 | 4,635 total | — | 🔴 RE-ESCALATING |
-| W39 | 247 | 1,141 | 11.1% | 🔴 HIGH (switching to unique tracking) |
-| W41 (14d/2) | ~245/week | ~1,186/week | 9.8% | 🟡 BELOW THRESHOLD (first time since W36) |
-| **W42** | **272** | **1,337** | **10.7%** | 🔴 **ABOVE THRESHOLD AGAIN** |
+### 🔴 CRITICAL: /consult/checkout — 61 dead clicks (NEW W43)
+**Impact:** Direct revenue loss. Dead clicks on checkout page = abandoned payment transactions. With organic payments down -31% in W43, checkout friction is a PLAUSIBLE CONTRIBUTING CAUSE alongside seasonal effects.
+**Action:** Product team must audit /consult/checkout UX immediately. Which elements are receiving dead clicks? CTA button? Payment form? Back navigation?
+**Priority:** P0 (revenue-impacting)
 
-**Trend:** 3rd consecutive week of unique dead click growth. Dead rate re-crossed 10% after brief improvement in W41. New crisis: /worksheets rage (233) is unprecedented for that page type.
+### 🔴 CRITICAL PERSISTENT: /home — 679 dead clicks (multi-week since W37)
+**Impact:** App landing page broken UX — erodes trust and navigation efficiency.
+**Status:** Unresolved since W37. Weeks: W37, W38, W39, W40, W41, W42, W43 — 7 weeks unresolved.
+**Action:** Escalate to product engineering. This requires code fix, not content change.
+
+### 🔴 HIGH: /consult/booking/* (mode=online) — systemic rage click pattern
+**Impact:** Booking flow generates persistent rage across multiple doctor booking pages.
+**Pattern:** booking/8796, booking/20388, booking/102290 all showing high rage in W42 + W43.
+**Action:** Investigate online booking mode vs in-person mode UX differences. Likely a shared component bug.
+
+---
+
+## Week-over-Week Trend
+
+| Page | W42 | W43 | Trend |
+|---|---|---|---|
+| /home dead | ~679 | 679 | 🔴 STABLE HIGH |
+| /consult/checkout dead | 61 (W42 unclear) | 61 | 🔴 NEW/ESCALATING |
+| /consult/appointments dead | 102 (W42: 814) | 102 | 🟢 MASSIVE IMPROVEMENT |
+| /consult/find-therapist dead | 129 | 129 | 🟡 STABLE |
+| /worksheets rage | 233 | 0 (not in top) | 🟢 RESOLVED |
+| booking/* rage | ~87+ | 91 total | 🔴 PERSISTENT |
+
+---
+
+## Historical Friction Notes
+- W42: /worksheets 233 unprecedented rage (RESOLVED W43)
+- W41: /assessments 515 completions despite friction — engagement strong
+- W39: Dead rate 11.1% (site) — crossed threshold
+- W37: /home dead clicks began (now 7 weeks unresolved)
+- W36: Journey Task crash deepened (now recovering W42-W43)

@@ -328,3 +328,37 @@ One line per Task 15 run. Most recent at bottom.
 - vs form_started: 341/1,035 = **32.9%** (was 43.0% last week)
 - vs all submissions: 341/(79+137+341) = **61.2%** (was 70.9%)
 - **First decline in 3 weeks — P0 Freshsales fix is taking effect**
+
+
+2026-10-21T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d trailing (total events / unique funnel in parentheses) |
+  VOLUME (total events):
+  - $mp_web_page_view: 54,129 total (funnel entry: 12,138 unique, -2.2% WoW — stable)
+  - blog_viewed: 1,778 | doctor_profile_viewed: 3,715 total (funnel: 1,477 unique, -10.6% WoW) | treatment_page_viewed: 506 | illness_page_viewed: 209 | riya_page_viewed: 23 (-8% vs 25 last week — stable)
+  - book_appointment_clicked: 2,520 total (funnel: 910 unique, -3.2% WoW — stable)
+  - cta_clicked: 231 | whatsapp_clicked: 131 | call_clicked: 51
+  - form_submitted: 145 total (+5.8% WoW) | form_submitted funnel: 78 unique (-1.3% — stable)
+  - lp_form_submitted: 79 (0.0% WoW — flat stable)
+  - form_started: 948 | form_error: 5 | lead_create_failed: 13 (-96.2%!!! 341→13 🎉🎉🎉)
+  FUNNELS:
+  - A (main): page view 12,138 → book CTA 910 (7.0%, was 7.6%) → form_submit 78 (8.6% of CTA; 0.64% of PVs, was 0.64% — STABLE)
+  - B (doctor-driven): doctor_profile 1,477 → book CTA 566 (38.3%, was 38.4% — PERFECTLY STABLE ✅✅) → form_submit 4 (0.7% of CTA)
+  - C (where-to-start): viewed 23 → started 15 (65.2%, was 57%) → completed 15 (100% of started; 65.2% overall, was 57% — IMPROVED ✅)
+  KEY METRICS:
+  - Backend fail rate (vs form_started): 13/948 = 1.4% (was 32.9% → -95.8% 🎉🎉🎉 P0 RESOLVED)
+  - Backend fail rate (vs all submissions): 13/(78+79+13) = 5.5% (was 61.2% → -91% 🎉🎉🎉)
+  - Net leads: 78+79 = 157 unique submitters (vs 158 last week = -0.6% — FLAT, but now REACHING FRESHSALES)
+  - Doctor→book CTA: 38.3% (was 38.4% — STABLE ✅)
+  - lp:form ratio: 79/145 = 0.54:1 (on-site form still dominant; consistent with ads-resume pattern)
+  - Riya discovery rate: 23/12,138 = 0.189% (was 25/12,416 = 0.201% — stable)
+  WoW FLAGS (>20% threshold):
+  🎉🎉🎉 lead_create_failed -96.2% (341→13) — BACKEND P0 FULLY RESOLVED. Fail rate 32.9%→1.4% (vs form_started); 61.2%→5.5% (vs all). After 4+ consecutive weeks at catastrophic levels (peak 70.9% on 10-07), Freshsales fix is complete.
+  No other metric exceeded ±20% threshold. All conversion metrics stable.
+  IMPLICATIONS:
+  - P0 Freshsales is DONE. For the first time in 6 weeks, ~157 net leads/week are landing with <2% loss. This changes the revenue calculus entirely.
+  - Doctor→book CTA holding at 38.3% (was 38.4%) — commercial intent path fully structurally healthy.
+  - Net leads (157) essentially flat vs last week (158) but now actually arriving at CRM. With backend fixed, this is the REAL lead number.
+  - where-to-start completion improved: 23 viewed, 15 completed (65% overall, up from 57%). Feature getting stickier.
+  - Next priority: validate Freshsales lead arrivals for this week, then plan ads restart to amplify volume.
+  - Riya holding at 23 (stable) — long-term improvement trajectory intact.
+
+| 2026-10-21 (7d) | 54,129 total / 12,138 funnel | 910 funnel | 78 funnel / 145 total | 79 | 13 🎉🎉🎉 | 38.3% ✅ | 🎉🎉🎉 P0 RESOLVED: backend fail 1.4% (was 32.9%); net leads 157 FULLY REACHING FRESHSALES; all conversion metrics stable; doctor→book CTA 38.3% STABLE; where-to-start 65% ✅ |

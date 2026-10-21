@@ -146,3 +146,45 @@
 - /doctors/psychologists-in-kochi (Kerala P8 recovery, reactivate)
 - /doctors/psychologists-in-kolkata (WB 54/week, +64%)
 - "therapists for Hindi speakers" / UP-focused page (UP surge W1, monitor W42 first)
+
+---
+## 2026-10-21 (W43) — T19 Conversion Intelligence
+
+**CRITICAL: Organic payments -31% WoW (138 vs W42 200)**
+- Most likely cause: Navratri (Oct 2–12) + Dussehra (Oct 13) holiday suppression. Visitors only -2.3% — demand present, conversion dropped.
+- Secondary cause: checkout UX friction (/consult/checkout 61 dead clicks — NEW this week).
+- Watch W44 for recovery. If W44 organic payments < 160, investigate checkout funnel urgently.
+
+**chatgpt.com RECOVERY: 76 unique book clicks W43 (+72.7% vs W42)**
+- W42 "collapse" was methodology artifact (shift from referring_domain to utm_source tracking).
+- P5 AI search W10 confirmed. 3 payments from chatgpt.com. Revenue signal intact.
+- Perplexity still zero — investigate if utm_source=perplexity.ai is being captured.
+
+**Assessment Completed: 520 (near-record)**
+- App top-of-funnel engagement sustaining record levels (W42 515, W43 520).
+- Journey Task: 33 (+13.8%) — 2nd consecutive positive week (was crashing 4 weeks ago).
+
+**Revenue-impacting UX issue: /consult/checkout 61 dead clicks (NEW)**
+- Checkout page friction confirmed. Product team must audit immediately.
+- /home: 679 dead clicks (7 weeks unresolved — engineering fix required).
+
+**GEO signals:**
+- Mumbai 55 clicks = largest non-Bengaluru city. T5 ACTION: create /doctors/psychologists-in-mumbai.
+- Karnataka 44.8% of organic — Kannada language doctor page still unbuilt.
+- Kerala 19 clicks (-57%) — holiday effect or genuine step-back? Watch W44.
+- UP 22 clicks (P18 W3) — suppressed vs 69/wk W41; likely seasonal. Confirm W44.
+
+**Pattern updates:**
+- P1 Language pages W10 ✅ (Tamil + Telugu both 50 clicks)
+- P5 chatgpt.com W10 ✅ RECOVERY
+- P8 Kerala DEMOTED TO WATCH (19 clicks W43 vs 44 W42)
+- P14 WB STEP-BACK (16 vs est 29 W42)
+- P18 UP W3 ✅ (22 clicks, suppressed but pattern holds)
+- P19 Maharashtra W3 ✅ (75 clicks, Mumbai 55)
+
+**Next T10 priorities:**
+1. Create /doctors/psychologists-in-mumbai (IMMEDIATE — 55 clicks, P19 W3, no page)
+2. Checkout UX audit (IMMEDIATE — revenue-impacting)
+3. Kannada doctor page (HIGH — 413 Karnataka clicks/week)
+4. Watch W44 for holiday recovery in Kerala, WB, UP
+

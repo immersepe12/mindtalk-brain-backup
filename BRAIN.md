@@ -1,3 +1,9 @@
+### 2026-10-21 MANUAL (Kushal + Claude): REPO MOVE. Root cause of the site freeze found
+- ✅ **PROD-ORIGIN-STALE-01 CLOSED. T9-BUILD-BLOCK-01 CLOSED.** www.mindtalk.in moved to **EXARFit/mindtalk-website on AWS Amplify** around 2026-10-14. The SEO system kept shipping to the retired `immersepe12/mindtalk` (Vercel), so nothing it merged since then went live. "Vercel project not visible / DEPLOYMENT_NOT_FOUND" was a symptom of the move, not the cause.
+- Content parity was checked (old main vs new clone, 269 content files changed since 09-24). The new repo already holds every earlier ship. 105 files differ only because the new repo moved images to the CDN and stripped `similarBlogs`. **Missing were 3 blogs** (therapy-for-anxiety, online-therapy-vs-in-person-therapy, what-happens-in-a-therapy-session) **plus the 10-14 psychiatrist-vs-psychologist meta rewrite.** All 4 are staged in the new local clone; they go live on the next push.
+- The system is repointed: config.json, gh_ship.py and the T8/9/10/11/13/14/16/20/stub task files. Ship procedure is in `runbooks/SHIPPING-LIVE-REPO.md` (Amplify staging build = AP6; then main; then curl www).
+- Open: push credential for the new repo (PAT at secrets/github-pat-mindtalk-website.txt, or ship from the Mac mini with git), plus the Amplify staging URL. Until then T9/T11 ships end as SHIP_BLOCKED_NO_PUSH (flag once, not daily).
+
 ⚠️ T5 FLOOR MISS 2026-10-12: 3/12 briefs created. Brief runway depletes in ~7 weeks at current T9 velocity. T5 run log: logs/discovery-2026-10-12.txt. Trigger live Mac Mini T5 run before T9 next fires. (Also: new-content-discovery.py did not finish in 46 min — needs rowLimit 25000 fix; Ahrefs keywords-explorer 'Insufficient plan'.)
 
 ### 2026-10-18 T12 Learner — W-ASSESS-0925 Day-21 midpoint 9🟢/1🟡/2🔴 · ALGO_WATCH CLEARED ✅ · PROD-ORIGIN-STALE-01 day 5 (site frozen) · P12 96.6% (unchanged)
@@ -12,7 +18,7 @@
   - Candidate principles seeded (write at Day-42 if 3+ confirmed): P-ASSESS-byline-CTR, P-ASSESS-plain-english-retarget
   - Full log: brain/memory/experiments/midpoint-W-ASSESS-0925-2026-10-18.md
 - ⏸️ **W-THERAPIST-NEAR-ME-RISE-1006**: DATA_PENDING - URL never confirmed by T20; GSC data stale (2026-09-24). Conversion work blocked. Check extended to 2026-10-25.
-- 🚨 **PROD-ORIGIN-STALE-01** (day 5): Site frozen since 2026-10-14 - top operational flag. No new content live.
+- ✅ ~~PROD-ORIGIN-STALE-01~~ CLOSED 2026-10-21: the site moved to EXARFit/mindtalk-website (Amplify). See runbooks/SHIPPING-LIVE-REPO.md.
 - 📈 **Site metrics (Oct 3-9)**: 4,966 clicks (+16.2% WoW), 423,524 impr (+8.2%), CTR 1.2%, pos 9.1, 926 URLs. TRAJECTORY.md updated.
 - 📚 **Archived BACKLOG**: PSYCHIATRIST-VS-PSYCHOLOGIST-CTR-01 moved to Completed (T11 6dc8c2a9, 2026-10-13-14).
 - 🔒 **P12**: 96.6% ATH unchanged (no new Day-42 closures this run). Cube-test midpoint confirms P12 holds for assessment class.
@@ -617,6 +623,7 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 
 ## Current strategic state
 
+- **Tech health (T14 2026-10-21):** 77/100 (flat WoW). Homepage 3301ms and /journeys 2565ms lab-LCP criticals persist 2nd wk (promoted; CrUX p75 ~1.5s FAST); other 8 pages green; schema gaps 3 (wk 7); indexation ~85% est (GSC coverage not pulled); AI OV unmeasured. Report: reports/technical-health-2026-10-21.md
 - **Tech health (T14 2026-10-14):** 77/100 (flat WoW). 2 marginal lab-LCP criticals (homepage 3301ms +37%, /journeys 2626ms); /assessments + dominant-personality recovered; CrUX FAST; schema gaps 3; indexation ~85% est; AI OV unmeasured. See reports/technical-health-2026-10-14.md.
 - **Tech health (T14 2026-10-07):** 77/100 (+5 WoW). 2 marginal lab-LCP criticals (/assessments 2626ms wk 2, dominant-personality 2551ms); CrUX FAST; schema gaps 4→3 (MedicalWebPage fixed); indexation ~85% est; AI OV unmeasured. See reports/technical-health-2026-10-07.md.
 
@@ -1640,3 +1647,5 @@ Full log: brain/memory/decisions/2026-09-14.md
 **T10 2026-10-06 (catch-up):** DataForSEO-402 ~Day 21 (4 failed run-days 09-29..10-05 -> infra FLAG pushed). Growth intact: wk 09-26..10-02 clicks 4,275 / CTR 1.1% / pos 9.0; Life Coach -82% is Tier C (AP11) cleanup, not harm. No hypothesis contradicted. Meta-Learner proposals (t19/t3/t6) all Apply-on 10-11; Verifier to run then.
 
 > **T10 2026-10-07 stamp:** T19 W41 shows organic payments -11% / bookings -12% vs W39 with Mixpanel restored (auto-pay still unset); no hypothesis contradicted. DataForSEO ~Day 23. Queued GSC-PAGE-PULL-01 + CONVERSION-DIP-VERIFY-01.
+
+- 2026-10-21 T10: Lesson - after the repo move to Amplify, "publishing frozen" persists until the live repo is connected to the device shell and AMPLIFY_STAGING_URL is set; ship scripts that resolve repo paths silently report 0 candidates when the path is missing (environment artefact, not an empty queue). Also: 4/5 blogs published 2026-09-09 are live+indexable but 0 impressions at Day 42 -> treat as indexation/discovery (inspect + internal links), not content failure.

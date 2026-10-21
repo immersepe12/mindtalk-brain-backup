@@ -109,15 +109,13 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-09-30 | MCP_BLOCKED | — | — | — | — | — | Mixpanel billing block — no data |
 | 2026-10-07 | 52,724 total / 13,470 funnel | 929 funnel | 58 funnel / 123 total | 62 | 451 🚨 | 26.1% | 🚨 backend fail 70.9% (451/636 — STABLE CATASTROPHIC; vs 69.4% last valid); doctor→book CTA -27.1% ⚠ (35.8%→26.1% — denominator effect: doctor views grew +35.8% but absolute book clicks stable 615→610); page view unique +31.3% ✅ (10,257→13,470 funnel entry); form_submitted unique -18.3% (71→58); riya +15% (20→23); lp_form -8.8% (68→62); 2-week gap (09-30 was MCP_BLOCKED) |
 | 2026-10-14 | 55,558 | 940 | 79 | 38.4% ✅ | 32.9% ✅ | 61.2% ⚠ | 341 ✅ | +47.1% CTA ✅; -29.2% doc funnel ⚠ |
+| 2026-10-21 | 54,129 total / 12,138 funnel | 910 funnel | 78 funnel / 145 total | 79 | 13 🎉🎉🎉 | 38.3% ✅ | 🎉🎉🎉 P0 RESOLVED: backend fail 1.4% vs form_started (32.9%→1.4%, -95.8%); backend fail vs all 5.5% (was 61.2%); net leads 157 (78+79) stable (-0.6%); doctor→book CTA 38.3% STABLE ✅; all other metrics within ±5% WoW; where-to-start 23 viewed, 15 started (65%), 15 completed (100%); riya=23 stable |
 
-**Variance > 20% WoW (2026-10-07 reading — vs 2026-09-23; 2-week gap, 09-30 MCP_BLOCKED):**
-- Doctor→book CTA: **-27.1%** ⚠ (35.8%→26.1%) — DENOMINATOR EFFECT: doctor_profile views +35.8% (1,719→2,334) while absolute book clicks stable (615→610). Not a conversion regression — low-intent discovery traffic diluting rate.
-- form_submitted unique: **-18.3%** (71→58) — near threshold, watch
-- form_submitted rate (unique funnel entry): **-37.7%** ⚠ (0.69%→0.43%) — funnel entry grew faster than submissions; intent dilution
-- lp_form_submitted rate: **-30.3%** ⚠ (0.66%→0.46%)
-- page view unique funnel entry: **+31.3%** ✅ (10,257→13,470)
-- riya_page_viewed: **+15%** (20→23, positive trajectory, below threshold)
-- backend fail rate: **+2.2%** (69.4%→70.9%, stable at catastrophic level — P0 engineering issue unresolved)
+
+**Variance > 20% WoW (2026-10-21 reading — vs 2026-10-14):**
+- 🎉🎉🎉 lead_create_failed: **-96.2%** (341→13) — P0 FULLY RESOLVED. Backend fail rate 32.9%→1.4% vs form_started; 61.2%→5.5% vs all submissions. Freshsales fix complete after 4+ weeks at catastrophic levels.
+- No other metric exceeded ±20% threshold — all stable.
+- Net leads: 157 (78 form_submitted + 79 lp_form_submitted) vs 158 prior week = effectively flat, but NOW FULLY REACHING FRESHSALES.
 
 **Variance > 20% WoW (2026-09-23 reading — vs 2026-08-26):**
 - lead_create_failed: **+2,233%** 🚨🚨🚨 (18→420) — backend fail 13.7%→69.4% — Freshsales/webhook broken

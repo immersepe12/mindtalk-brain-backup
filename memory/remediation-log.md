@@ -6738,3 +6738,24 @@ No refill, 0 briefs written, Verifier not spawned, nothing archived (REFRESH- sp
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted.
+
+---
+## T20 2026-10-21 (Wed) — scheduled run (15:17 UTC)
+
+**Deploy health:** Vercel gate RETIRED (repo moved to EXARFit/mindtalk-website on Amplify, per runbooks/SHIPPING-LIVE-REPO.md). www 200. AMPLIFY_STAGING_URL still TODO-ask-dev; live repo not mounted in device shell (only retired immersepe12 clone + `mindtalk`). Not re-raised as a Vercel flag.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| T9 "0 candidates / 103 briefs unexamined" | audit-unshipped-briefs.py reads ~/Documents/GitHub/mindtalk-website, absent in device shell | FALSE POSITIVE (env artifact); real queue = 103 NEW- briefs |
+| REPO-ACCESS-SHIP-UNBLOCK-01 | live repo not in mnt/, staging URL TODO, PAT file present | REAL, credential/config — ESCALATED with pre-written fix |
+| BLOG5-INDEXATION-VERIFY-01 | 5 blogs: 200, robots index,follow, self-canonical, all in sitemap.xml. GSC URL Inspection not scriptable here | Technically clean; coverage state needs GSC UI; link-only remedy, carried |
+| PROD-ORIGIN-STALE-01 / T9-BUILD-BLOCK-01 | CLOSED by Kushal 10-21 (repo move) | not re-raised |
+
+## AUTO-FIXED
+- Untiered briefs (9) classified: wrote `intent_tier: B` (line 2) to NEW-anxiety-and-headaches, can-anxiety-cause-shortness-of-breath, can-stress-kill-you, drug-addiction-treatment, fear-of-abandonment, instant-anxiety-relief, masked-depression, stress-buster-games, yoga-for-anxiety-and-overthinking. Each already stated Tier B in its table. Note: stress-buster-games is borderline Tier C (games list, zero-click risk) — Strategist may demote. All 103 NEW- briefs now carry intent_tier.
+
+## STANDING JOB — BRIEF QUEUE: 19 shippable /blogs/ (10 B-tier + 9 newly tiered), all 404 on www (cache-busted). Floor 6 MET. No refill, 0 briefs written, no discovery/paid-mining run, Verifier not spawned (nothing shipped/written). Nothing archived (REFRESH- x3 spared). 3 of the 19 (therapy-for-anxiety, online-vs-in-person, what-happens) are staged in the new local clone, awaiting push.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-10-21-pre-t20.

@@ -1906,3 +1906,9 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 
 ## T10 stamp — 2026-10-16
 No watches added/closed. W-ASSESS-*-0925 midpoint reached 10-16: short-window deltas mixed (see observation-2026-10-16); formal 90d comparison queued as W-ASSESS-MIDPOINT-EVAL-01; Day-42 2026-11-06. Next Day-42 finals: 10-20 (online-counselling-in-malayalam), 10-21 (x5).
+
+| W-MENTAL-EXHAUSTION-REFRESH-1021 | /blogs/tips-to-overcome-mental-exhaustion-and-fatigue | how to overcome mental exhaustion | REFRESH (CTR) | PR #21 opened 2026-10-21 (NOT yet live) | Baseline: clicks -50%, impr -3%, tracker pos 4->9; queries 'drain mental health', 'exhausted mentally', 'feeling mentally exhausted all the time'. CORE-UPDATE-CONFOUND. Expect CTR recovery + FAQ rich result | Day-21 / Day-42 counted from merge date | ⏳ START ON MERGE; then set url_locked 42d (AP12); verify 6 Question nodes + title on live |
+
+## T10 2026-10-21 watch note
+- **W-BLOG5-INDEX-0921 (new):** 5 blogs published 2026-09-09 (adhd-diagnosis-bangalore, psychiatrist-for-anxiety, psychologist-for-schizophrenia, therapist-for-depression, psychologist-for-bipolar-disorder) at Day 42: live 200, self-canonical, no noindex, 0 GSC impressions. Status: pending_evaluation by T12 (10-22). Check: URL Inspection coverage state before any content change; re-pull GSC page-dim 2026-10-28.
+- Day-42 finals 10-21 closed by T12 tomorrow. Next finals: 10-27 (6), 10-28 (5), 10-30 (3).
