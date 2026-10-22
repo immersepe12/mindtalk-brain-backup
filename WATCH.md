@@ -3,6 +3,7 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T10 STRATEGIST — 2026-10-22 — No new watches/closures · group-therapy 1->6 = NOISE per GSC (no watch) · 13 finals due 10-27/28/30 · W-ASSESS Day-42 close 2026-11-06
 > ### ℹ️ T10 STRATEGIST — 2026-10-20 — No new watches · 5 Day-42 finals due 10-21 (T12) · mental-exhaustion-and-fatigue flag CONFIRMED but not yet shipped (no watch until prod fixed) · W-ASSESS Day-42 close 2026-11-06
 > ### ✅ T12 LEARNER — 2026-10-18 — W-ASSESS-0925 Day-21 midpoint (NOT CLOSED) · ALGO_WATCH CLEARED · P12 96.6% ATH unchanged · no stale pruning needed · weekly digest posted
 > **Midpoint evaluation (Day-21, closes 2026-11-06):**

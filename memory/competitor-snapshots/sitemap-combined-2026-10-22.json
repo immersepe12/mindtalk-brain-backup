@@ -1,0 +1,44 @@
+{
+  "snapshot_date": "2026-10-22",
+  "week": 19,
+  "method": "sitemap_count_fallback",
+  "dataforseo_status": "BLOCKED \u2014 balance exhausted (6th consecutive week)",
+  "domains": {
+    "amahahealth.com": {
+      "url_count": 11,
+      "url_count_type": "sitemap_index_entries",
+      "wow_delta": null,
+      "status": "ok"
+    },
+    "yourdost.com": {
+      "url_count": 0,
+      "url_count_type": "fetch_error",
+      "wow_delta": null,
+      "status": "error: HTTP Error 404: Not Found"
+    },
+    "manastha.com": {
+      "url_count": 0,
+      "url_count_type": "fetch_error",
+      "wow_delta": null,
+      "status": "error: HTTP Error 404: Not Found"
+    },
+    "mfine.co": {
+      "url_count": 25,
+      "url_count_type": "sitemap_index_entries",
+      "wow_delta": 0,
+      "status": "ok"
+    },
+    "betterhelp.com": {
+      "url_count": 0,
+      "url_count_type": "fetch_error",
+      "wow_delta": null,
+      "status": "error: HTTP Error 404: Not Found"
+    },
+    "mindtalk.in": {
+      "url_count": 941,
+      "url_count_type": "url_entries",
+      "wow_delta": 0,
+      "status": "ok"
+    }
+  }
+}

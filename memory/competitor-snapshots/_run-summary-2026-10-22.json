@@ -1,0 +1,74 @@
+{
+  "run_date": "2026-10-22",
+  "task": "T17",
+  "week": 19,
+  "part_a": {
+    "method": "sitemap_count_fallback",
+    "dataforseo_status": "BLOCKED \u2014 balance exhausted (6th consecutive week)",
+    "domains": {
+      "mindtalk.in": {
+        "url_count": 941,
+        "wow_delta": 0,
+        "status": "ok"
+      },
+      "amahahealth.com": {
+        "url_count": 11,
+        "status": "RECOVERED \u2014 was 404 W18",
+        "wow_delta": null
+      },
+      "mfine.co": {
+        "url_count": 25,
+        "wow_delta": 0,
+        "status": "ok"
+      },
+      "yourdost.com": {
+        "url_count": 0,
+        "status": "fetch_error"
+      },
+      "manastha.com": {
+        "url_count": 0,
+        "status": "fetch_error"
+      },
+      "betterhelp.com": {
+        "url_count": 0,
+        "status": "fetch_error"
+      }
+    },
+    "key_finding": "Amaha sitemap RECOVERED after W18 404. No meaningful URL-count changes elsewhere."
+  },
+  "part_b": {
+    "perplexity": {
+      "total": "8/10",
+      "all_time_high": true,
+      "wow_delta": "+1 (from 7/10 W18)",
+      "gained": [
+        "Q1 best mental health platform india",
+        "Q3 psychiatrist near me bangalore"
+      ],
+      "lost": [
+        "Q5 anxiety treatment india"
+      ],
+      "retained": [
+        "Q2",
+        "Q4",
+        "Q6",
+        "Q8",
+        "Q9",
+        "Q10"
+      ],
+      "assessment": {
+        "A1": "cited",
+        "A2": "not cited",
+        "A3": "cited",
+        "A4-A8": "BLOCKED rate limit"
+      },
+      "rate_limit_hit_at_query": 13
+    },
+    "chatgpt": "SKIPPED \u2014 permanent in auto-mode (safety classifier)",
+    "claude_ai": "UNTESTED",
+    "google_ai_ov": "NOT CHECKED \u2014 Chrome stall (2 browsers connected, unattended mode cannot select)"
+  },
+  "chrome_status": "STALL \u2014 2 browsers connected but unattended mode cannot call AskUserQuestion to select",
+  "slack_posted": true,
+  "notifications_sent": true
+}

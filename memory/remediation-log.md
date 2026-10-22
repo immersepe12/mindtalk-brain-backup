@@ -6759,3 +6759,22 @@ No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL s
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-10-21-pre-t20.
+
+---
+## T20 2026-10-22 (Thu) — scheduled run (15:19 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify, per runbooks/SHIPPING-LIVE-REPO.md). www 200. AMPLIFY_STAGING_URL still TODO-ask-dev; live repo not mounted. Ship mode = PR. Not re-raised as new.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| 46 pos-100 rows (data-quality-suspect-2026-10-22) | AP8 quarantine; curl 200 on /illnesses/anxiety, /treatments/play-therapy, /blogs/alexithymia, /blogs/psychology-of-love, /blogs/understanding-sleep-cycles | FALSE POSITIVE closed |
+| /treatments/group-therapy MODERATE; tips-to-overcome-mental-exhaustion | gsc-validation-2026-10-22: NOISE (clicks +100%/impr -7.1%; impr -8%) | closed by T2 |
+| REPO-ACCESS-SHIP-UNBLOCK-01 | config AMPLIFY_STAGING_URL still TODO; repo not in mnt | REAL, carried (raised 10-21, not re-pinged) |
+| BLOG5-INDEXATION-VERIFY-01 | 5 blogs still 200; GSC URL Inspection not scriptable here | carried |
+| STRESS-DISORDER-REFRESH-01 | YMYL, AP3 | REAL, escalate-class, never auto-ship, carried |
+
+## STANDING JOB — BRIEF QUEUE: 103 tiered NEW- briefs with 404 slug under /blogs/ (floor 6 MET). 0 untiered, 0 live. No refill, no discovery/paid-mining run, Verifier not spawned. Nothing archived (REFRESH- x3 spared).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-10-22-pre-t20.

@@ -1,0 +1,12 @@
+{
+  "domain": "betterhelp.com",
+  "snapshot_date": "2026-10-22",
+  "week": 19,
+  "method": "sitemap_fallback",
+  "sitemap_status": "error: HTTP Error 404: Not Found",
+  "url_count": 0,
+  "url_count_type": "fetch_error",
+  "wow_delta": null,
+  "notes": "Sitemap still 404 - India footprint weak",
+  "dataforseo_status": "BLOCKED \u2014 balance exhausted"
+}

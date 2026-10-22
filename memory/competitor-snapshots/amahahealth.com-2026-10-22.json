@@ -1,0 +1,12 @@
+{
+  "domain": "amahahealth.com",
+  "snapshot_date": "2026-10-22",
+  "week": 19,
+  "method": "sitemap_fallback",
+  "sitemap_status": "ok",
+  "url_count": 11,
+  "url_count_type": "sitemap_index_entries",
+  "wow_delta": null,
+  "notes": "Sitemap RECOVERED to 11 index entries (was 404 last week, now back). Dominant on Q1 therapy queries.",
+  "dataforseo_status": "BLOCKED \u2014 balance exhausted"
+}

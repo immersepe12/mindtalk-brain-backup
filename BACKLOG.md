@@ -51,6 +51,19 @@
 **T20 2026-09-14 22:55–23:45 IST:** deploy ✅ content-proven (HEAD d5b6443 unchanged on main+staging, no commits after; Vercel MCP auto-declined 4th run). **P1 fixed:** T5's 10:35 run wrote a list-valued `new_content` key into tracking-db.json — `day42-evaluate-v2.py:40` (and the other two Day-42 scripts) crash on it (`'list' object has no attribute 'get'`, reproduced) → converted to spec `NEW-<path>` entries; **B24's 4 Day-42 finals tomorrow are unblocked.** **19/20 of today's T5 briefs archived** (query-level GSC: 1 already live, 2 duplicates of queued briefs, 16 owned on page 1 by live URLs — e.g. `cptsd test` → /assessments/itq 2,067 impr/52 clk/pos 9.3; `couples therapy` → /treatments/couples-therapy 2,130/3/8.4; `childhood trauma test` → identical live /assessments/ slug); 2 kept after Verifier (adhd-specialists, cbt-therapists national listings — no page-1 owner). Proposal `t5-query-ownership-gate-and-trackingdb-shape-20260914T2330` (apply 09-21). Aug-04 cohort baselines pre-answered for T12 (3 NEW pages = no prior by definition; narrative-therapy GSC pre-window backfilled 899 impr/5 clk/pos 16.7 → 443/4/14.8; its DataForSEO series was tracking the OLD PAGE TITLE as the keyword — invalid). 6 missing primary_keywords + 3 keyword-map gaps filled; 81 stale BRIEF_CREATED rows reclassified (79 SHIPPED / 2 ARCHIVED) so T5's floor maths and T16's runway count are real. DataForSEO 09-14 timeout verified transient (API 200 in 1.1 s at 22:59, balance $15.82). /blogs/ queue 7 shippable (floor 6 met, no refill; T9 consumes up to 6 on 09-15 → **T20 09-15 must refill**). Full log: `brain/memory/remediation-log.md` 2026-09-14.
 **T20 2026-09-13 21:45–23:45 IST:** deploy ✅ content-proven (HEAD d5b6443 unchanged, Vercel MCP auto-declined again). B23 **answered by evidence** (cap = spec text) → re-routed to T10 apply-pass, not Kushal (row updated). T12's "zero-impression cohort" = pull-side error — all 4 pages impressing daily (WATCH.md correction block; verdicts still T12's). Both stale `.git/index.lock` files renamed → T16 23:09 brain snapshot `71922c5` pushed (first off-site backup since 09-11). Bhojpuri listing brief archived (0 matching profiles). /blogs/ queue 7 shippable (no refill trigger). Full log: `brain/memory/remediation-log.md` 2026-09-13.
 
+## Strategist update — 2026-10-22 (T10 8 PM IST, Thu)
+**Posture:** GROWTH, rankings healthy, but ship path STILL BLOCKED (no change since 10-21): `AMPLIFY_STAGING_URL` still `TODO-ask-dev`; live repo EXARFit/mindtalk-website not in the device-shell folder list. T10 curl 10-22: therapy-for-anxiety and what-happens-in-a-therapy-session still 404 on www.
+**Signals:** (a) T1 10-22: 304 kw checked, 0 CRITICAL/MAJOR, 1 MODERATE (/treatments/group-therapy 1->6) - T2 GSC says NOISE (clicks +100%, impr -7%), removed from flagged-drops. (b) 46 rank->100 rows quarantined as API noise (AP8) - not drops. (c) Observation: 14 in pipeline, 0 due; finals 10-27 (5), 10-28 (5), 10-30 (3). (d) No new alerts/ since 10-12. technical-health last 10-21 (77/100). Not Mon/Wed: no weekly/tech-health due.
+**Ranked actions (unchanged order, no new candidates scoring >=5):**
+1. **REPO-ACCESS-SHIP-UNBLOCK-01 -> flag_for_human (Kushal), ~80, carried (flag already raised 10-21; not re-pinged daily).**
+2. **BLOG5-INDEXATION-VERIFY-01 -> investigate (read-only URL Inspection), ~34, carried.**
+3. **DEPRESSION-TEST-DROP-VERIFY-01 -> verify-only, ~30, AP12 lock to 2026-11-06.**
+4. **MENTAL-EXHAUSTION-REFRESH-01 -> ship_REFRESH_brief, ~27, waits on ship path.**
+5. **STRESS-DISORDER-REFRESH-01 -> ~21, AP3 clinical sign-off, never auto-ship.**
+**Rejected today:** group-therapy retarget (GSC NOISE, clicks up) · acting on 46 pos-100 rows (AP8) · new briefs batch (103 queued, ship blocked).
+**Step 10:** 3 proposals (t12 tiebreaker, t6 url_path fix, t9 vercel preflight) all Apply-on 2026-10-25 -> future, skipped, no Verifier run; applied 0 / vetoed 0. No .approved/.vetoed files. Stale scan clean (0 overdue).
+**Next 72h:** 10-25 proposals due (t9 vercel likely obsolete) - 10-27/28/30 Day-42 finals.
+
 ## Strategist update — 2026-10-21 (T10 8 PM IST, Wed)
 **Posture:** GROWTH at ATH (last weekly 4,987 clicks, CTR 1.2%, pos 8.8) but **publishing is still NOT reaching www**. Repo move found this morning (EXARFit/mindtalk-website on Amplify); T9 3 PM run shipped 0 because the live repo is not connected to the Cowork device shell and `AMPLIFY_STAGING_URL` is still `TODO-ask-dev`. **Verified by T10 (AP10, cache-busted curl 10-21):** `/blogs/what-happens-in-a-therapy-session`, `/blogs/stress-buster-games`, `/blogs/therapy-for-anxiety` all still 404 on www. T1 10-21 rank pull: 1 keyword checked (partial/short run), 0 flagged. technical-health 10-21: 77/100 (=), / and /journeys LCP marginal CRITICAL 2nd week (SITE-TBT-BUDGET-01 standing). No new alerts/ since 10-12. Weekly caps: refresh 2/20, new content unchanged.
 **Signals:** (a) 10-21 observation: 5 Day-42 finals; 4/5 blogs (adhd-diagnosis-bangalore, psychiatrist-for-anxiety, psychologist-for-schizophrenia, therapist-for-depression) read pos 100 / 0 impr / 0 clicks after 42 days; psychologist-for-bipolar-disorder pos 4 in rank-pull but 0 GSC impr (low confidence). T10 curl: all 5 return 200, self-canonical, no noindex -> this is an INDEXATION/DISCOVERY problem, not a content problem (matches BRAIN 09-30 "5 blogs 09-09 0 impressions, possible indexing lag"). (b) T9 audit script resolves `~/Documents/GitHub/mindtalk-website` which does not exist in the device shell -> reported 0 candidates against 103 NEW briefs (environment artefact).
@@ -818,3 +831,23 @@ already filed to T13 on 09-17; re-stated here with evidence.
 
 **T11 2026-10-16:** GSC-REAUTH-01 `verifier_vetoed_until: 2026-10-23` (GSC pull SUCCESS 10-16 04:10; the 'OAuth expired' premise is stale - run GSC-PAGE-PULL-01 with the B25 env line). WORKSHEETS-RAGE-CLICK-01 flagged to Slack 10-16 (ts 1792149302.336899); row stays OPEN until T19 shows lower count.
 | T14-SITE-LAB-LCP-PLATEAU-01 (update 2026-10-21) | site-wide; / and /journeys persist 2nd wk | Score 77/100 (<80, flat WoW). Homepage 3301ms (both samples >2.5s, 2nd consecutive wk) and /journeys 2565ms (2nd consecutive wk) — promoted per protocol. Other 8 pages green after best-of-2 (7 of 20 reads had 6-11.5s single-run spikes = PSI variance). CrUX p75 ~1.5s FAST. | flag_for_human: attach to SITE-TBT-BUDGET-01, needs owner; target lab LCP <2.4s via shared script budget. No per-page dev work. | flag_for_human | MEDIUM |
+
+
+## T17 W19 Drop-ins (2026-10-22)
+
+### Competitive Gap Candidates (from W19 sitemap + citation analysis)
+
+1. **"anxiety treatment india" page AEO reinforcement** (Q5 — volatile citation)
+   Q5 lost again after W18 recovery. Pattern: 1 week gained, 1 week lost. Signals Perplexity freshness rotation rather than page deficiency. Action: audit AEO schema + ensure clinical outcome data is in opening 200 words. Priority: HIGH.
+
+2. **"best mental health platform india" citation consolidation** (Q1 — newly gained W19)
+   First ever Q1 citation — fragile. Action: ensure /about/ and homepage have explicit "India's mental health platform" entity language + breadcrumb schema. Priority: MEDIUM.
+
+3. **Assessment BPD page AEO gap** (A2 "bpd test online" — not cited)
+   BPD assessment page may lack sufficient AEO signals. Priority: LOW (assess after A4-A8 baseline complete).
+
+### Chrome stall resolution
+
+Chrome stall blocking Google AI OV checks for 4+ consecutive weeks.
+Propose: run T17 Perplexity queries in attended session OR configure Claude-in-Chrome
+to use single persistent browser profile (eliminate 2-browser ambiguity).
