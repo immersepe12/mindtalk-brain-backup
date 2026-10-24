@@ -242,3 +242,5 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-10-11T20:15+05:30 | VERIFIER-VETO x3 | t19-mixpanel-billing-escalation, t3-algo-watch-gate, t6-flagged-drops-url-path | nothing applied
 2026-10-18T14:45:00Z | VERIFIER-VETO x3 | t1-dataforseo-402-billing-guard, t5-p14-cost-query-premium, t9-p14-cost-brief-priority-sort | nothing applied, no snapshots needed; see verifier-log.md
 2026-10-18T14:45:00Z | STALE-SCAN | clean (no remaining unsuffixed proposals)
+2026-10-24T20:00+05:30 | STRATEGIST-APPLY-PASS | 3 proposals Apply-on 2026-10-25 (future) | skipped, 0 applied, 0 vetoed
+2026-10-24T20:00+05:30 | STALE-SCAN | clean

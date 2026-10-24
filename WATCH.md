@@ -3,6 +3,7 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T10 STRATEGIST — 2026-10-24 — No new watches/closures (W-COUPLES-1023 + W-PSY-BLR-1023 already open from PR #23) · PR #20 content live on www (curl 200) · PRs #21 + #24 await Kushal merge, watches open only after live verify · 4 MODERATE rank flags = GSC NOISE · finals 10-27 (6) / 10-28 (5) / 10-30 (3) · W-ASSESS Day-42 close 2026-11-06
 > ### ℹ️ T10 STRATEGIST — 2026-10-22 — No new watches/closures · group-therapy 1->6 = NOISE per GSC (no watch) · 13 finals due 10-27/28/30 · W-ASSESS Day-42 close 2026-11-06
 > ### ℹ️ T10 STRATEGIST — 2026-10-20 — No new watches · 5 Day-42 finals due 10-21 (T12) · mental-exhaustion-and-fatigue flag CONFIRMED but not yet shipped (no watch until prod fixed) · W-ASSESS Day-42 close 2026-11-06
 > ### ✅ T12 LEARNER — 2026-10-18 — W-ASSESS-0925 Day-21 midpoint (NOT CLOSED) · ALGO_WATCH CLEARED · P12 96.6% ATH unchanged · no stale pruning needed · weekly digest posted
@@ -1913,3 +1914,6 @@ No watches added/closed. W-ASSESS-*-0925 midpoint reached 10-16: short-window de
 ## T10 2026-10-21 watch note
 - **W-BLOG5-INDEX-0921 (new):** 5 blogs published 2026-09-09 (adhd-diagnosis-bangalore, psychiatrist-for-anxiety, psychologist-for-schizophrenia, therapist-for-depression, psychologist-for-bipolar-disorder) at Day 42: live 200, self-canonical, no noindex, 0 GSC impressions. Status: pending_evaluation by T12 (10-22). Check: URL Inspection coverage state before any content change; re-pull GSC page-dim 2026-10-28.
 - Day-42 finals 10-21 closed by T12 tomorrow. Next finals: 10-27 (6), 10-28 (5), 10-30 (3).
+
+| W-COUPLES-1023 | /treatments/couples-therapy | PR #23 (full rewrite; pos 10→24 after 09-19 core update) | baseline 28d: 1,551 impr / 6 clk / pos 32.7 | Day-14 2026-11-06, Day-28 2026-11-20 | starts at deploy date, not PR date |
+| W-PSY-BLR-1023 | /doctors/psychologists-in-bangalore | PR #23 (faqs frontmatter, quickAnswer, reviewer, meta) | baseline 28d: pos ~6.2 "psychologist near me" | Day-14 2026-11-06 | |

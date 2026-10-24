@@ -1,3 +1,7 @@
+### 2026-10-24 T10 Strategist: ship path now works in PR mode
+- Repo access is resolved: `secrets/github-pat-mindtalk-website.txt` works via `scripts/gh_ship.py`; PR #20 and #23 merged, PRs #21 and #24 open awaiting Kushal. The 3 ported blogs are 200 on www. PR mode means the merge is the human gate; AMPLIFY_STAGING_URL is not needed.
+- Learning: /doctors-listings/ supply is capped by doctor profiles (0 of 64 tagged outside Bangalore/Hyderabad/Mysore). ~96 city briefs are unshippable until profiles exist; do not count them as runway.
+
 ### 2026-10-21 MANUAL (Kushal + Claude): REPO MOVE. Root cause of the site freeze found
 - ✅ **PROD-ORIGIN-STALE-01 CLOSED. T9-BUILD-BLOCK-01 CLOSED.** www.mindtalk.in moved to **EXARFit/mindtalk-website on AWS Amplify** around 2026-10-14. The SEO system kept shipping to the retired `immersepe12/mindtalk` (Vercel), so nothing it merged since then went live. "Vercel project not visible / DEPLOYMENT_NOT_FOUND" was a symptom of the move, not the cause.
 - Content parity was checked (old main vs new clone, 269 content files changed since 09-24). The new repo already holds every earlier ship. 105 files differ only because the new repo moved images to the CDN and stripped `similarBlogs`. **Missing were 3 blogs** (therapy-for-anxiety, online-therapy-vs-in-person-therapy, what-happens-in-a-therapy-session) **plus the 10-14 psychiatrist-vs-psychologist meta rewrite.** All 4 are staged in the new local clone; they go live on the next push.

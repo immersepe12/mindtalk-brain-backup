@@ -6778,3 +6778,31 @@ No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL s
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-10-22-pre-t20.
+
+---
+## T20 2026-10-24 (Sat) — scheduled run (15:16 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify, runbooks/SHIPPING-LIVE-REPO.md). www home 200 (0.4s). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24 | curl www: /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404 (PR #24 unmerged); mental-exhaustion page 200 (PR #21 title change not confirmable by curl) | REAL, escalate (Kushal merges) |
+| CITY-LISTING-BRIEFS-VIABILITY-01 | T9 10-23 log: 0/64 doctor profiles tagged outside BLR/Hyd/Mysore. sitemap has 53 city /doctors/ pages live (other slugs) so supply claim is partial; none of the queued city slugs are live | REAL but strategic (onboard profiles vs HOLD); NOT auto-held; escalate with recommendation |
+| BLOG5-INDEXATION-VERIFY-01 | needs GSC URL Inspection UI, not scriptable | carried |
+| 4 MODERATE drops (OCD/psychosis/trauma-disorder/psychiatrists-mysore), 40 pos-100 rows | T2 gsc-validation 10-23 NOISE/IMPROVING; AP8 | FALSE POSITIVE, closed (already removed) |
+| PSYCHOTHERAPISTS-BLR-CENTRE-MISMATCH-01 | clinical/centre facts (AP15) | REAL, escalate-class, carried |
+| STRESS-DISORDER-REFRESH-01 | YMYL AP3 | carried, never auto-ship |
+
+## AUTO-FIXED
+- Archived 3 shipped NEW- briefs (slug 200 on www, cache-busted): online-therapy-vs-in-person-therapy, therapy-for-anxiety, what-happens-in-a-therapy-session -> briefs/archive/. REFRESH- x3 spared.
+- Saved sitemap snapshot logs/_t20_sitemap_2026-10-24.txt (944 URLs).
+
+## STANDING JOB — BRIEF QUEUE
+17 tiered NEW- briefs with /blogs/ target checked: 3 live (archived), 14 return 404. Of 14, gender-identity-disorder overlaps live YMYL /illnesses/gender-identity-disorder (cannibalization/clinical, hold, escalate-class) => **13 shippable /blogs/ briefs. Floor 6 MET.** No refill, 0 briefs written, no discovery run (last 10-19, not flagged stale), Verifier not spawned (nothing written/shipped). Briefs dir: 100 NEW- remain (~83 are /doctors-listings/ city briefs, supply-blocked).
+
+## Env notes
+Device VM disk (/sessions) is 100% full: no scratch writes outside mnt/. Test file brain/memory/_w20test left behind (deletion not permitted; harmless). Needs device cleanup if scripts need scratch.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted.
