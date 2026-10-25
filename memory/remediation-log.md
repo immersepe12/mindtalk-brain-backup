@@ -6806,3 +6806,26 @@ Device VM disk (/sessions) is 100% full: no scratch writes outside mnt/. Test fi
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted.
+
+---
+## T20 2026-10-25 (Sun) — scheduled run (15:16 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify, runbooks/SHIPPING-LIVE-REPO.md). www home 200 (0.13s), sitemap 200 (947 URLs, +3 vs 10-24). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24 | curl www cache-busted: /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404 (PR #24 still unmerged); GitHub API 404 (private repo, state not readable) | REAL, carried (raised 10-24, not re-pinged as new) |
+| CITY-LISTING-BRIEFS-VIABILITY-01 | no change; 83 /doctors/ city briefs, 0 live in sitemap | REAL, strategic, carried |
+| BLOG5-INDEXATION-VERIFY-01 | GSC URL Inspection UI only | carried |
+| Observation monitor 10-25 | 0 alerts, 14 URLs in window, none due | nothing to action |
+| STRESS-DISORDER-REFRESH-01, PSYCHOTHERAPISTS-BLR-CENTRE-MISMATCH-01 | YMYL / clinical (AP3/AP15) | escalate-class, carried, never auto-ship |
+
+## AUTO-FIXED
+- None needed. 0 untiered briefs (103 NEW- all tiered; 3 REFRESH- have no tier by design, slugs 200, spared). 0 NEW- briefs live in sitemap, so nothing to archive. Discovery last run 2026-10-19 (6 d, not stale). Paid-mining/Chrome: no flag.
+
+## STANDING JOB — BRIEF QUEUE
+14 tiered NEW- /blogs/ briefs, all 404 on www (cache-busted). Applying T9's skip filter (do not ship / HOLD until / ⛔): conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confidential held => **10 shippable** (11 if alcohol-addiction, whose HOLD date 2026-10-06 has lapsed but brief text still carries the HOLD banner, so T9 would skip it; Strategist to clear). Note therapy-cost-in-hyderabad has quoted tier "A" (counts). **Floor 6 MET. No refill, 0 briefs written, Verifier not spawned (nothing written/shipped).** Weekly cap not touched.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-10-25-pre-t20.

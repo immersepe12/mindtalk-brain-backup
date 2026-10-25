@@ -86,6 +86,11 @@
 > roster still holds one Punjabi profile, archive both pages and the Mumbai brief rather than ship it.
 > Sibling counts from the same commit for contrast: `/doctors/cbt-therapists` **15**, therapists-in-bangalore 5.
 > → T13: `WATCH-CANNOT-REACH-SHIP-GATE-01` — a WATCH row has no channel to a ship gate.
+
+> **🔴 T12 CLOSURE (2026-10-25) — W-PUNJABI-BLR-THIN-0925 + W-PUNJABI-DELHI-THIN-0922 — BOTH STALLED**
+> Oct 15–22 GSC pull: both pages 0 impr / 0 clk (neither window showed data). Same pull returned 1,531 impr for yoga-for-anxiety (not a measurement bug). Both conditions met: ~0 impressions AND roster still 1 profile each. **Verdict: 🔴 STALLED → ARCHIVE BOTH PAGES + CANCEL MUMBAI BRIEF.**
+> Action required from T10: (1) archive /doctors/punjabi-speaking-doctors-in-delhi, (2) archive /doctors/punjabi-speaking-doctors-in-bangalore, (3) cancel NEW-punjabi-speaking-doctors-in-mumbai-brief.md. Do NOT build Punjabi city pages until roster reaches ≥3 profiles per city.
+> Experiment logs: brain/memory/experiments/closed-W-PUNJABI-DELHI-THIN-0922-2026-10-25.md + closed-W-PUNJABI-BLR-THIN-0925-2026-10-25.md
 >
 > **✅ W-LIGHT-THERAPY-0923 / W39 — STILL BLIND, day 3, and now with the root cause and the fix located.**
 > `/blogs/yoga-for-anxiety` and `/blogs/light-therapy-for-insomnia` still emit **0** `"@type":"Question"` nodes
@@ -1874,10 +1879,10 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 **T10 STAMP 2026-09-27**: No new watch windows opened (DataForSEO-402 Day 13, no rank data; 14 NEW slots / 12 URL slots remaining this week). 3 Meta-Learner proposals applied (published_at schema drift → T11; MINE-TRUNCATION-ABSENCE guard → T20; REFRESH-brief archive protection → T20). BACKLOG: +W41-DAY42-PREP-0929 (T20 IMMEDIATE — pre-pull all 7 W41 URLs before 09-29), +REFRESH-ANXIETY-ALGO-HOLD-01 (T11_BLOCK — P6 risk on T3 REFRESH brief during active Core Update). ⚡ CRITICAL — 09-29 (Mon): W41 Day-42 final fires AND online-counselling-in-malayalam Day-21 midpoint — T20 must cover both. P12 now at 93% (14/15). Emerging cost-content pattern (3 data points: therapy-cost, rtms-treatment-cost, couple-therapy-cost → fast page-1) — monitor at W43 Day-42 (10-12) before candidate principle.
 
 <!-- T11 Executor 2026-09-30 -->
-| W-FAQ-SCHEMA-0930 | /blogs/yoga-for-anxiety + /blogs/light-therapy-for-insomnia | schema_fix_faq_keys | 2026-09-30 | 2026-10-21 | open | BLOG-FAQ-KEY-MISMATCH-01 Fix A shipped `2c9ffa1d` (question/answer -> q/a). Live-verified 2026-09-30: yoga 5 Question nodes, light-therapy 3. Success = FAQ rich-result eligibility + CTR/impr lift. CONFOUND: light-therapy also has W-LIGHT-THERAPY-0923 (title/meta/FAQ, 09-23) — attribute jointly; do not touch other content on either page during the window. |
+| W-FAQ-SCHEMA-0930 | /blogs/yoga-for-anxiety + /blogs/light-therapy-for-insomnia | schema_fix_faq_keys | 2026-09-30 | 2026-10-21 | closed | BLOG-FAQ-KEY-MISMATCH-01 Fix A shipped `2c9ffa1d` (question/answer -> q/a). Live-verified 2026-09-30: yoga 5 Question nodes, light-therapy 3. Success = FAQ rich-result eligibility + CTR/impr lift. CONFOUND: light-therapy also has W-LIGHT-THERAPY-0923 (title/meta/FAQ, 09-23) — attribute jointly; do not touch other content on either page during the window. |
 
 <!-- T11 Executor 2026-10-02 -->
-| W-GROUP-THERAPY-TYPES-1002 | /blogs/types-of-group-therapy | ship_REFRESH_brief | 2026-10-02 | 2026-10-23 | open | GROUP-THERAPY-TYPES-REFRESH-01 shipped `a5577609` (quickAnswer, keyTakeaways, comparison table, /doctors/ links). Baseline: 'types of group therapy' 399 impr @24.5 + 'group therapy types' 84 @14.6, 1 click (28d). Live-verified 5 Question nodes, table, links. CONFOUND: Sept Core Update still active per 09-27 T10 note — CORE-UPDATE-CONFOUND flag. |
+| W-GROUP-THERAPY-TYPES-1002 | /blogs/types-of-group-therapy | ship_REFRESH_brief | 2026-10-02 | 2026-11-13 | open | GROUP-THERAPY-TYPES-REFRESH-01 shipped `a5577609` (quickAnswer, keyTakeaways, comparison table, /doctors/ links). Baseline: 'types of group therapy' 399 impr @24.5 + 'group therapy types' 84 @14.6, 1 click (28d). Live-verified 5 Question nodes, table, links. CONFOUND: Sept Core Update still active per 09-27 T10 note — CORE-UPDATE-CONFOUND flag. DAY-21 MIDPOINT (2026-10-25): 🟡 MIXED_MIDPOINT — pos 24.5→12.1 (better vs baseline), impr 399→346 (-13% vs baseline), clk 0→3 (positive). Interim peak 466 @8.5 (Oct 8-15) regressed post-CORE-UPDATE-CLEAR. Position direction positive, Day-42 gate: 2026-11-13. Full log: brain/memory/experiments/midpoint-W-GROUP-THERAPY-TYPES-1002-2026-10-25.md |
 
 <!-- T10 Strategist 2026-10-02 -->
 | W-HOMEPAGE-PSI-1002 | / (homepage) | verify_first | 2026-10-02 | 2026-10-09 | open | AUDIT-PERF-2026-10-02: PSI mobile 53 / LCP 11.2s (was 81) from ONE monthly-audit lab read; /doctors + /illnesses sample pages 86/89. UNVERIFIED (09-24 precedent: 11.5s withdrawn on re-measure). T14 to take 3 reads + CrUX origin LCP; close as noise or escalate to dev. |
@@ -1887,7 +1892,7 @@ Totals from PAGE-dimension GSC only (GSC-QUERY-UNDERCOUNT-01).
 
 <!-- T10 Strategist 2026-10-06 -->
 **T10 STAMP 2026-10-06 (catch-up for missed 10-05):** W-MEDICATION-404-1003 -> pending_evaluation (window ended 10-05, 404 unresolved, AUDIT-CRITICAL SLA overdue, escalated). W-T9-BUILD-BLOCK-1002 check date reached, still blocked (carried). DataForSEO-402 ~Day 21: all rank-based watches remain GSC-only.
-| W-THERAPIST-NEAR-ME-RISE-1006 | "therapist near me" (URL TBD by T20 GSC page-dim pull) | verify_first | 2026-10-06 | 2026-10-25 | open | Weekly report: pos 53.2->17.6, 1,125 impr. Confirm holder URL + 7d stability before any conversion work; no content changes during window (keeps AP12 clean). DATA_PENDING 2026-10-18: URL never confirmed by T20; gsc-data stale (2026-09-24); check extended to 2026-10-25. Full log: brain/memory/experiments/pending-W-THERAPIST-NEAR-ME-RISE-1006-2026-10-18.md |
+| W-THERAPIST-NEAR-ME-RISE-1006 | "therapist near me" (URL TBD by T20 GSC page-dim pull) | verify_first | 2026-10-06 | 2026-10-25 | closed_inconclusive | Weekly report: pos 53.2->17.6, 1,125 impr. Confirm holder URL + 7d stability before any conversion work; no content changes during window (keeps AP12 clean). DATA_PENDING 2026-10-18: URL never confirmed by T20; gsc-data stale (2026-09-24); check extended to 2026-10-25. Full log: brain/memory/experiments/pending-W-THERAPIST-NEAR-ME-RISE-1006-2026-10-18.md |
 
 <!-- T10 Strategist 2026-10-10 -->
 **T10 STAMP 2026-10-10:** no watch added/closed. W-MEDICATION-404-1003 remains pending_evaluation (404 Day 8, live-checked). Day-42 finals due 10-12 (8 blogs), 10-13 (psychiatrist-vs-psychologist). W-ASSESS midpoint 10-16.
@@ -1914,6 +1919,18 @@ No watches added/closed. W-ASSESS-*-0925 midpoint reached 10-16: short-window de
 ## T10 2026-10-21 watch note
 - **W-BLOG5-INDEX-0921 (new):** 5 blogs published 2026-09-09 (adhd-diagnosis-bangalore, psychiatrist-for-anxiety, psychologist-for-schizophrenia, therapist-for-depression, psychologist-for-bipolar-disorder) at Day 42: live 200, self-canonical, no noindex, 0 GSC impressions. Status: pending_evaluation by T12 (10-22). Check: URL Inspection coverage state before any content change; re-pull GSC page-dim 2026-10-28.
 - Day-42 finals 10-21 closed by T12 tomorrow. Next finals: 10-27 (6), 10-28 (5), 10-30 (3).
+
+
+<!-- T12 LEARNER weekly stamp — 2026-10-25 -->
+> **T12 STAMP 2026-10-25 (Sunday LEARNER run):** Evaluated 7 watches due Oct 18–25.
+> CLOSED: W-FAQ-SCHEMA-0930 (🟢 RECOVERED yoga / 🟡 PARTIAL light-therapy) · W-PUNJABI-DELHI-THIN-0922 (🔴 STALLED→ARCHIVE) · W-PUNJABI-BLR-THIN-0925 (🔴 STALLED→ARCHIVE+CANCEL-MUMBAI) · W-THERAPIST-NEAR-ME-RISE-1006 (⏸ INCONCLUSIVE, URL unconfirmed).
+> DEFERRED (zero-data guard): W-BLOG5-INDEX-0921 (5/5 = 0 impr, re-pull 10-28) · online-counselling-in-malayalam (0 impr, URL Inspection required).
+> MIDPOINT: W-GROUP-THERAPY-TYPES-1002 (🟡 MIXED — pos improved 24.5→12.1, impr -13% vs baseline, Day-42 gate: 11-13).
+> ⚠ LEARNER WARNING: 11 zero-impression pages across 2 cohorts (W-BLOG5-INDEX-0921 × 5 + W-SEP16 × 6) — see Slack digest.
+> 🔴 rate: 2/5 definitively closed = 40% — below 50% LEARNER FLAG threshold. No LEARNER FLAG.
+> P12 remains at 96.6% (no new closes affecting denominator). No new PRINCIPLES/ANTI-PATTERNS entries (insufficient closed watch volume: Punjabi = 2 failures, FAQ-schema = 1 success — both below 3-data-point threshold).
+> Next finals: W-SEP15 cohort 10-27 (6 blogs) · W-SEP16 cohort 10-28 (5 blogs) · W-PHOBIA-0918 cohort 10-30 (3 blogs) · W32 60-day monitor 10-27.
+> Experiment logs: brain/memory/experiments/closed-W-FAQ-SCHEMA-0930-2026-10-25.md et al.
 
 | W-COUPLES-1023 | /treatments/couples-therapy | PR #23 (full rewrite; pos 10→24 after 09-19 core update) | baseline 28d: 1,551 impr / 6 clk / pos 32.7 | Day-14 2026-11-06, Day-28 2026-11-20 | starts at deploy date, not PR date |
 | W-PSY-BLR-1023 | /doctors/psychologists-in-bangalore | PR #23 (faqs frontmatter, quickAnswer, reviewer, meta) | baseline 28d: pos ~6.2 "psychologist near me" | Day-14 2026-11-06 | |

@@ -1653,3 +1653,47 @@ Full log: brain/memory/decisions/2026-09-14.md
 > **T10 2026-10-07 stamp:** T19 W41 shows organic payments -11% / bookings -12% vs W39 with Mixpanel restored (auto-pay still unset); no hypothesis contradicted. DataForSEO ~Day 23. Queued GSC-PAGE-PULL-01 + CONVERSION-DIP-VERIFY-01.
 
 - 2026-10-21 T10: Lesson - after the repo move to Amplify, "publishing frozen" persists until the live repo is connected to the device shell and AMPLIFY_STAGING_URL is set; ship scripts that resolve repo paths silently report 0 candidates when the path is missing (environment artefact, not an empty queue). Also: 4/5 blogs published 2026-09-09 are live+indexable but 0 impressions at Day 42 -> treat as indexation/discovery (inspect + internal links), not content failure.
+
+<!-- T12 LEARNER 2026-10-25 -->
+### T12 LEARNER stamp 2026-10-25 (Sunday automated run)
+
+**Watches evaluated this cycle (Check dates Oct 18–25, 2026):** 7 total
+
+**CLOSED (4):**
+- W-FAQ-SCHEMA-0930 → 🟢 RECOVERED (yoga-for-anxiety: +148.5% impr, pos 10.9→8.6) / 🟡 PARTIAL (light-therapy: -51% impr, W-LIGHT-THERAPY-0923 confound). Experiment log: 
+- W-PUNJABI-DELHI-THIN-0922 → 🔴 STALLED → ARCHIVE. 0 impr at Day-33. Action: T10 must archive . Log: 
+- W-PUNJABI-BLR-THIN-0925 → 🔴 STALLED → ARCHIVE BOTH + CANCEL MUMBAI. 0 impr at Day-30. Action: T10 must (1) archive Delhi page (2) archive BLR page (3) cancel Mumbai brief. Log: 
+- W-THERAPIST-NEAR-ME-RISE-1006 → ⏸ INCONCLUSIVE (DATA_PENDING — URL never confirmed by T20). No verdict written. Log: 
+
+**MIDPOINT (1):**
+- W-GROUP-THERAPY-TYPES-1002 → 🟡 MIXED_MIDPOINT. pos 24.5→12.1 (positive direction), impr 399→346 (-13% vs baseline). Post-CORE-UPDATE-CLEAR regression from interim peak (466 impr @pos 8.5 Oct 8-15). Day-42 gate: 2026-11-13. Log: 
+
+**DEFERRED — zero-data guard (2):**
+- W-BLOG5-INDEX-0921 → 5/5 = 0 impressions (zero-data guard triggered). Re-pull 2026-10-28. Log: 
+- online-counselling-in-malayalam → 0 impr at Day-47 (overdue). URL Inspection required. Log: 
+
+**Pattern extraction:**
+- FAQ schema fix = 1 success (need 3+ for PRINCIPLES.md → no new entry)
+- Punjabi thin-page = 2 failures (need 3+ for ANTI-PATTERNS.md → no new entry)
+- No PRINCIPLES.md or ANTI-PATTERNS.md changes this cycle
+
+**P12 status:** 96.6% ATH (28/29 data points) — unchanged this cycle (no new closes counting toward P12)
+
+**LEARNER FLAG:** 🔴 rate = 2/5 definitively closed = 40% → BELOW 50% threshold → NO FLAG
+
+**⚠ LEARNER WARNING:** 11 zero-impression pages across 2 cohorts (W-BLOG5-INDEX-0921 ×5 + Sep-16 batch ×6) — possible GSC pull format bug or indexation issue. Re-pull Oct 28.
+
+**Site posture (week 2026-10-10 to 10-16):** Clicks 4,987 (+0.4% flat), Impr 423,832 (+0.1%), Pos 8.8 (improved from 9.1 — best in 8wks), URLs 929. REPO-MOVE (Vercel→AWS Amplify) stabilising. ALGO_WATCH CLEARED 10-15. AI Search: 8/10 Perplexity citations ALL-TIME HIGH (T17).
+
+**Key actions queued for T10:**
+1. Archive `/doctors/punjabi-speaking-doctors-in-delhi` (W-PUNJABI-DELHI verdict 🔴)
+2. Archive `/doctors/punjabi-speaking-therapists-in-bangalore` (W-PUNJABI-BLR verdict 🔴)
+3. Cancel Punjabi-Mumbai brief (W-PUNJABI-BLR action)
+4. Confirm URL for therapist-near-me-rise watch (W-THERAPIST-NEAR-ME-RISE-1006 inconclusive)
+5. PRIORITY: Refresh depression-test content (dropped 7.8 pos → pos 1.5→9.3, 982 impr)
+
+**Next watch finals:** W-SEP15 cohort 10-27 (6 blogs) · W-SEP16 cohort 10-28 (5 blogs, with re-pull) · W-PHOBIA-0918 cohort 10-30 (3 blogs) · W32 60-day monitor 10-27
+
+
+### 2026-10-25 T10 note
+No material new learning. Step 10 lesson: Meta-Learner proposals drift out of sync with task specs within 7 days (t12/t9 Before blocks no longer verbatim; t9 proposal obsolete after Vercel retirement); proposals that embed code should use the repo's real GSC client (googleapiclient via gsc-pull.py), path-only url_path.

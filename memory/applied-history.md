@@ -244,3 +244,5 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-10-18T14:45:00Z | STALE-SCAN | clean (no remaining unsuffixed proposals)
 2026-10-24T20:00+05:30 | STRATEGIST-APPLY-PASS | 3 proposals Apply-on 2026-10-25 (future) | skipped, 0 applied, 0 vetoed
 2026-10-24T20:00+05:30 | STALE-SCAN | clean
+20261025T1435Z | MISMATCH-SKIP | proposal: t12-algo-watch-dual-sensor-tiebreaker-20261018T2030 | file: cowork-tasks/task12-learner.md | reason: Before block not found verbatim (no '#### Step 4b — Core update detection' heading; Step 4b is now 'Update TRAJECTORY.md') — manual review required
+20261025T1435Z | MISMATCH-SKIP | proposal: t9-vercel-preflight-build-block-20261018T2030 | file: cowork-tasks/task9-auto-ship-new-blogs.md | reason: Before block not found verbatim ('## Step 1 — Identify unshipped briefs' now '### Step 1 — Identify unshipped NEW blog briefs'); also obsolete: Vercel retired 2026-10-21 repo move
