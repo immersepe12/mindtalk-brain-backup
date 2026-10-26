@@ -3,6 +3,7 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T10 STRATEGIST — 2026-10-26 — No new watches opened. /assessments/depression (W-ASSESS-HUBS-0925, url_locked to 2026-11-06): "depression test" recovered pos 9.3 -> 5.0, 151 clk / 8.0% CTR in week 10-17->10-23 (leave locked, no edit). New Hyderabad listing MODERATE flags = GSC NOISE (not watched). Day-42 finals due 10-27 (x6), 10-28 (x5), 10-30 (x3): T4/T12 evaluate.
 > ### ℹ️ T10 STRATEGIST — 2026-10-24 — No new watches/closures (W-COUPLES-1023 + W-PSY-BLR-1023 already open from PR #23) · PR #20 content live on www (curl 200) · PRs #21 + #24 await Kushal merge, watches open only after live verify · 4 MODERATE rank flags = GSC NOISE · finals 10-27 (6) / 10-28 (5) / 10-30 (3) · W-ASSESS Day-42 close 2026-11-06
 > ### ℹ️ T10 STRATEGIST — 2026-10-22 — No new watches/closures · group-therapy 1->6 = NOISE per GSC (no watch) · 13 finals due 10-27/28/30 · W-ASSESS Day-42 close 2026-11-06
 > ### ℹ️ T10 STRATEGIST — 2026-10-20 — No new watches · 5 Day-42 finals due 10-21 (T12) · mental-exhaustion-and-fatigue flag CONFIRMED but not yet shipped (no watch until prod fixed) · W-ASSESS Day-42 close 2026-11-06

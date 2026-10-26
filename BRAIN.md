@@ -1697,3 +1697,9 @@ Full log: brain/memory/decisions/2026-09-14.md
 
 ### 2026-10-25 T10 note
 No material new learning. Step 10 lesson: Meta-Learner proposals drift out of sync with task specs within 7 days (t12/t9 Before blocks no longer verbatim; t9 proposal obsolete after Vercel retirement); proposals that embed code should use the repo's real GSC client (googleapiclient via gsc-pull.py), path-only url_path.
+
+
+### T10 note — 2026-10-26
+- Week 10-17->10-23: clicks 5,016 / CTR 1.2% = Q4 targets for clicks (5,000) and CTR (1.1%) already met; pos 9.5 (slipped from 8.8). Growth is plateauing (+0.6% WoW, +0.4% prior): the binding constraints are Kushal-gated merges (PR #21/#24) and doctor-profile supply, not demand ideas.
+- "depression test" rank drop (9.3) after the W-ASSESS hub retarget reversed to pos 5.0 with 8.0% CTR inside the AP12 lock: consistent with tracker/SERP volatility, supports leaving locked pages alone (AP12).
+- Proposal drift: t12 tiebreaker proposal has a stale Before block (task12 heading renamed); proposals filed against specs that later change keep MISMATCH-SKIPping; T13 should refile or veto.

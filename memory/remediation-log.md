@@ -6829,3 +6829,22 @@ No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL s
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-10-25-pre-t20.
+
+---
+## T20 2026-10-26 (Mon) — scheduled run (15:21 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify, runbooks/SHIPPING-LIVE-REPO.md). www home 200, sitemap 944 URLs (snapshot logs/_t20_sitemap_2026-10-26.txt). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| PHQ9-DROP-VERIFY-01 | GSC page-dim pull, query contains "phq 9", 28d vs prior 28d, rowLimit 25: /assessments/phq-9 pos 10.1 -> 7.5 (IMPROVED), impr 1109 -> 309, clicks 12 -> 2 | Rank drop NOT confirmed (tracker noise on position). Impression/click volume down (tiny absolute clicks, rowLimit-25 truncated). CLOSED as rank flag; watch impressions. No edits (safe-messaging slug). |
+| Discovery stale | new-content-2026-10-26 says cache age 7d, within 21d limit (PASS). Re-ran new-content-discovery.py --all: exited with no output / no new cache file (only a py3.10 FutureWarning) | Not stale by threshold; re-run no-op, logged. Not escalated. |
+| MERGE-PR-21-24, CITY-LISTING-BRIEFS-VIABILITY-01, BLOG5-INDEXATION-VERIFY-01, STRESS-DISORDER-REFRESH-01, PSYCHOTHERAPISTS-BLR-CENTRE-MISMATCH-01 | unchanged vs 10-25 | carried, not re-pinged |
+| Hyderabad MODERATE drops | gsc-validation 10-26: NOISE (clicks +33%/+300%) | FALSE POSITIVE, closed |
+
+## STANDING JOB — BRIEF QUEUE
+14 tiered NEW- /blogs/ briefs, all 404 on www (cache-busted). 3 held (conduct-disorder-in-adults, gender-identity-disorder, is-online-therapy-confidential) + alcohol-addiction HOLD banner => 10-11 shippable. Floor 6 MET. No refill, 0 briefs written, Verifier not spawned, nothing archived (0 live NEW-, REFRESH- x3 spared).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-26-pre-t20.

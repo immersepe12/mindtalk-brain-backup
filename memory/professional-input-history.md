@@ -114,3 +114,10 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W43 | /illnesses/attention-deficit-hyperactivity-disorder-adhd | Dr. Arohi Vardhan (dr-arohi-vardhan) | 50 | brief_generated |
 | 2026-W43 | /illnesses/dementia | Dr. Arun Kumar V (dr-arun-kumar) | 40 | brief_generated |
 | 2026-W43 | /blogs/fear-of-poverty-peniaphobia | Ms. Tirzah Johnson (tirzah-johnson) | 35 | brief_generated |
+
+| 2026-W44 | /treatments/dialectical-behaviour-therapy-dbt | Ms. Vindhya Shree P K | 85 | brief_generated |
+| 2026-W44 | /treatments/biofeedback-therapy | Dr. Rayani M Dessa | 60 | brief_generated |
+| 2026-W44 | /illnesses/conduct-disorder | Ms. Tirzah Johnson | 55 | brief_generated |
+| 2026-W44 | /illnesses/personality-disorder | Dr. Sneha | 50 | brief_generated |
+| 2026-W44 | /treatments/psychotherapy | Dr. Krishna K R | 45 | brief_generated |
+| 2026-W44 | /blogs/anger-management-therapy | Abhimanyu Chandak | 25 | brief_generated |
