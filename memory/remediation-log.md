@@ -6848,3 +6848,25 @@ No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL s
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-26-pre-t20.
+
+---
+## T20 2026-10-27 (Tue) — scheduled run (15:29 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (0.06s), sitemap 945 URLs. Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24 (+ new PR #27) | curl www cache-busted: /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404, /blogs/fear-of-abandonment 404 | REAL, escalate (Kushal merges) |
+| stress-buster-games NEEDS_HUMAN | curl 404; T9 log: slug absent from EXARFit main, old "merged" note was retired Vercel repo | REAL, one-line confirm needed |
+| CANNIBAL-BLOG-CSKY-01 | T9 Verifier veto until 2026-11-03; live how-to-manage-death-from-stress pos 8.7 | REAL, cannibalization call, escalate with recommendation |
+| CITY-LISTING-BRIEFS-VIABILITY-01, STRESS-DISORDER-REFRESH-01, PSYCHOTHERAPISTS-BLR-CENTRE-MISMATCH-01, BLOG5-INDEXATION-VERIFY-01 | unchanged | carried, not re-pinged |
+
+## AUTO-FIXED
+- None needed (0 untiered, 0 live NEW- briefs, discovery 2026-10-19 not stale, no paid-mining/Chrome flag).
+
+## STANDING JOB — BRIEF QUEUE
+13 tiered NEW- /blogs/ briefs, all 404. Excluded: can-stress-kill-you (veto), gender-identity-disorder, is-online-therapy-confidential, alcohol-addiction (holds), fear-of-abandonment (PR #27 open), stress-buster-games (NEEDS_HUMAN) => **7 shippable** (anxiety-and-headaches, can-anxiety-cause-shortness-of-breath, drug-addiction-treatment, instant-anxiety-relief, masked-depression, yoga-for-anxiety-and-overthinking, therapy-cost-in-hyderabad). Floor 6 MET, thin. No refill, 0 briefs written, Verifier not spawned.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-27-pre-t20. Slack digest posted.

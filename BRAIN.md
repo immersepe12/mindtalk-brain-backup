@@ -1703,3 +1703,8 @@ No material new learning. Step 10 lesson: Meta-Learner proposals drift out of sy
 - Week 10-17->10-23: clicks 5,016 / CTR 1.2% = Q4 targets for clicks (5,000) and CTR (1.1%) already met; pos 9.5 (slipped from 8.8). Growth is plateauing (+0.6% WoW, +0.4% prior): the binding constraints are Kushal-gated merges (PR #21/#24) and doctor-profile supply, not demand ideas.
 - "depression test" rank drop (9.3) after the W-ASSESS hub retarget reversed to pos 5.0 with 8.0% CTR inside the AP12 lock: consistent with tracker/SERP volatility, supports leaving locked pages alone (AP12).
 - Proposal drift: t12 tiebreaker proposal has a stale Before block (task12 heading renamed); proposals filed against specs that later change keep MISMATCH-SKIPping; T13 should refile or veto.
+
+
+### T10 note — 2026-10-27
+- Indexation, not content, is the binding constraint on the Sep-2026 /blogs/ cohort: 7 blogs published 09-15..09-18 sit at 0 impressions after 41-42 days ("Discovered - currently not indexed" x5, "unknown to Google" x1) despite HTTP 200 and sitemap inclusion (verified 10-27). Contrast: the same-week /doctors/ listings (Tier A) all indexed and impress/click. Working hypothesis: low crawl demand for new thin-intent blogs on the new Amplify host; /doctors/ pages get internal-link/crawl priority. Implication: do not scale more `/blogs/` NEW briefs (T9) until Request Indexing + internal links are tried; prefer Tier A listings where profile supply exists. Label: hypothesis, test via BLOG5-INDEXATION-VERIFY-01.
+- T9 Verifier gate working: first Verifier-gated run produced 1 APPROVE / 1 cannibalisation VETO / 1 NEEDS_HUMAN out of 3, i.e. the brief-level cannibalisation checkbox was previously never verified; GSC query ownership must be checked before any NEW blog.
