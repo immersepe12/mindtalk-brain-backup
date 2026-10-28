@@ -278,3 +278,58 @@
 6. ⚫ UTM chain — organic revenue attribution still 95.6% undefined; UTM fix priority not changed
 
 **GA4:** SKIPPED (Supermetrics trial expired 2026-07-27 — no fallback).
+
+---
+
+## W44 Signal Update — 2026-10-28 (T19 Conversion Intelligence Run)
+
+**Week:** Oct 21–27, 2026 | **Run date:** 2026-10-28 | **Queries used:** 13/30
+
+**HEADLINE: Post-Navratri FULL RECOVERY + Assessment ALL-TIME RECORD**
+
+**Revenue W44 (organic, paid excluded):**
+- Organic payments: 167 (+21.0% WoW vs W43 138) 🔥 RECOVERY
+- Organic bookings: 207 (+16.3% WoW vs W43 178) 🟢
+- Total payments: 192 (+22.3%) — Paid = 27 (14.1%: Google 20, GMB 7)
+- Organic intent rate: 5.45% (vs W43 5.0%) +0.45pp 🟢
+- mindtalk_web payments: 2 (RECOVERY from W43 zero) 🟢
+- chatgpt.com book clicks (unique): 84 (+10.5% WoW) — P5 W11 CONFIRMED 🔥
+- chatgpt.com payments: 2 (stable)
+
+**App engagement W44:**
+- Assessment Completed: 553 🔥🔥 ALL-TIME RECORD (+6.3% WoW vs W43 520)
+- Started Journey Task: 36 (+9.1%) — 3rd consecutive positive week ✅ FULLY RECOVERED
+- Stress Tracker Started: 72 (+26.3%) 🟢 accelerating
+- Visitors: 12,672 (+3.8% WoW)
+
+**UX Friction W44:**
+- Rage clicks: 220 (-0.9%) ✅ improving
+- Dead clicks: 1,295 (flat) ⚠️ persistent
+- Dead rate: 10.22% — 4th consecutive week above 10% threshold 🔴
+- /home dead clicks: ~679 — CRITICAL UNRESOLVED 8 WEEKS (W37–W44)
+- booking/8796 rage: 12 (vs W43 32) — 62.5% improvement 🟢
+- Per-page dead click breakdown unavailable this run (file too large for inline extraction)
+
+**Geographic W44 (organic, paid excluded):**
+- Karnataka 216 (31.3%) — organic-only filter applied; absolute number lower than W43 413 total
+- Maharashtra 72 (10.4%) — P19 W4 CONFIRMED 🟢🟢 → PROMOTE TO CONFIRMED
+- Delhi NCT 63 (9.1%) — strong market #3
+- Telangana 46 (6.7%) — P1 Telugu stable
+- Tamil Nadu 42 (6.1%) — P1 Tamil stable
+- UP 25 (3.6%) — P18 W4 CONFIRMED 🟢
+- Haryana 15 (2.2%) — EMERGING W1 🟡
+- Kerala 12 (1.7%) — P8 3rd step-back 🔴 DEMOTED TO CONCERN
+- West Bengal 16 (2.3%) — flat; P14 WATCH
+
+**UTM chain:** 156/192 payments (81.3%) undefined utm_medium — PERSISTENT 17+ weeks unresolved. UTM not passing through checkout.
+
+**URGENT flags for Strategist:**
+1. 🔥 Assessment Completed 553 ALL-TIME RECORD — content → assessment funnel at apex; amplify aggressively
+2. 🟢 P19 Maharashtra W4 CONFIRMED → T5 IMMEDIATE: /doctors/psychologists-in-mumbai (Mumbai 55 clicks, no page)
+3. 🟢 P18 UP W4 CONFIRMED → T5 PROPOSE: /doctors/therapists-in-uttar-pradesh (25 clicks)
+4. 🟢 P5 chatgpt.com W11 CONFIRMED: 84 unique book clicks — AEO + FAQ schema priority
+5. 🔴 Dead rate 10.22% — 4th consecutive week above threshold; /home 679 dead = 8W unresolved; ESCALATE to engineering NOW
+6. 🔴 UTM chain broken 17 weeks — 81.3% of payments unattributed; escalate to dev
+7. 🟡 Kerala P8 demoted to CONCERN — 3 consecutive step-backs; hold all Kerala T5 proposals until W45 confirms recovery
+8. 🟡 Diwali effect: W45 (Oct 28–Nov 4) may show Diwali seasonal dip (Oct 29 festival) — plan for W45 data anomaly
+9. ⚫ GA4: SKIPPED — Supermetrics trial expired 2026-07-27 (14 consecutive weeks without GA4). Action: renew Supermetrics or configure GA4 direct API.

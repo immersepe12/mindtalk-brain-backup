@@ -6870,3 +6870,30 @@ No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL s
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-27-pre-t20. Slack digest posted.
+
+---
+## T20 2026-10-28 (Wed) — scheduled run (15:22 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (ttfb 0.16s), /journeys 200 (0.11s), sitemap 945 URLs (logs/_t20_sitemap_2026-10-28.txt). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| T14-MEASUREMENT-GAPS-01 (GSC coverage "google.oauth2 import fails") | `PYTHONPATH=.pip-packages python3 -c "import google.oauth2"` OK; fails only without PYTHONPATH. Discovery/ads scripts ran fine with it | GSC half = FALSE POSITIVE / invocation error, CLOSED (task prompts must set PYTHONPATH=.pip-packages; scripts untouched). DataForSEO 402 half = billing, carried (not re-pinged) |
+| T14-LAB-LCP-PLATEAU-WK3-01 | curl www /: ttfb 0.16s, /journeys 0.11s; lab LCP 3.9s/2.7s is client-side JS (TBT 750-870ms); CrUX p75 ~1.5s FAST | REAL but low risk; website code -> escalate-class, carried to T14 dev spec, no ranking action |
+| MERGE-PR-21-24 + PR #27 | curl cache-busted: /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404, /blogs/fear-of-abandonment 404 | REAL, Kushal merges, carried |
+| INSTANT-ANXIETY-RELIEF-SHIP-DECISION-01, STRESS-BUSTER-GAMES-SHIP-DECISION-01 | slugs 404; MDX in brain/needs-human-review/ | REAL, cannibalization/ship call, escalate |
+| CANNIBAL-BLOG-CSKY-01 / CANNIBAL-BLOG-YFAO-01 | Verifier vetoes until 11-03 / 11-04 | REAL, carried |
+| CITY-LISTING-BRIEFS-VIABILITY-01, BLOG5-INDEXATION-VERIFY-01 | unchanged | carried, not re-pinged |
+
+## AUTO-FIXED
+- Re-ran new-content-discovery.py --all (PYTHONPATH set): ran ~12 min, no output, no new cache (same no-op as 10-26). Cache 10-19 (9 d) within 21-d limit, not stale.
+- Re-ran google-ads-search-terms.py: 245 terms; converting terms (therapist near me 47.2, therapist bangalore 18, psychologist near me 17.1, couple therapy bangalore 15 ...) are ALL Tier A /doctors/ or /treatments/ surfaces, none are /blogs/ queries.
+- 0 untiered NEW- briefs; 0 NEW- briefs live in sitemap, nothing to archive; REFRESH- x3 spared.
+
+## STANDING JOB — BRIEF QUEUE
+9 tiered NEW- /blogs/ briefs, all 404 on www. Excluded: can-stress-kill-you (veto), yoga-for-anxiety-and-overthinking (veto 10-28), instant-anxiety-relief (NEEDS_HUMAN), stress-buster-games (NEEDS_HUMAN), fear-of-abandonment (PR #27 open) => **4 shippable** (anxiety-and-headaches, can-anxiety-cause-shortness-of-breath, drug-addiction-treatment, masked-depression). **Below floor 6.**
+Refill attempt: screened 7,089-entry opportunity cache (OPPORTUNITY=6,716). Top treatment/condition blog candidates (150 with pos 8-35, impr>=120) ALL have a live /blogs/ holder as triggering page (insomnia tests/nursing, overthinking, social anxiety, trust issues, yoga, burnout...) => would be REDIRECT_TO_REFRESH, and the last two T9 vetoes (CSKY, YFAO) are exactly this failure. Per MINE-TRUNCATION-ABSENCE-01 and BRIEF-COLLISION-GATE-01 I did NOT write briefs that would be vetoed. 0 briefs written, Verifier not spawned (nothing written/shipped). Structural finding: /blogs/ net-new supply is exhausted; high-intent supply is /doctors/ (Tier A) = strategic call (CITY-LISTING-BRIEFS-VIABILITY-01).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-28-pre-t20.

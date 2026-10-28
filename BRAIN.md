@@ -627,6 +627,7 @@ Strategist reads TRAJECTORY next morning → adjusts BACKLOG
 
 ## Current strategic state
 
+- **Tech health (T14 2026-10-28):** 77/100 (flat WoW). Homepage (3938ms) and /journeys (8888ms, R3 2701) lab-LCP criticals 3rd consecutive week, CrUX p75 ~1.5s FAST; /illnesses/anxiety single-run spikes (ELEVATED, R3 green); schema gaps 3 (wk 8); sitemap 945; indexation ~85% est (GSC coverage unpullable in device shell); AI OV unmeasured. Report: reports/technical-health-2026-10-28.md.
 - **Tech health (T14 2026-10-21):** 77/100 (flat WoW). Homepage 3301ms and /journeys 2565ms lab-LCP criticals persist 2nd wk (promoted; CrUX p75 ~1.5s FAST); other 8 pages green; schema gaps 3 (wk 7); indexation ~85% est (GSC coverage not pulled); AI OV unmeasured. Report: reports/technical-health-2026-10-21.md
 - **Tech health (T14 2026-10-14):** 77/100 (flat WoW). 2 marginal lab-LCP criticals (homepage 3301ms +37%, /journeys 2626ms); /assessments + dominant-personality recovered; CrUX FAST; schema gaps 3; indexation ~85% est; AI OV unmeasured. See reports/technical-health-2026-10-14.md.
 - **Tech health (T14 2026-10-07):** 77/100 (+5 WoW). 2 marginal lab-LCP criticals (/assessments 2626ms wk 2, dominant-personality 2551ms); CrUX FAST; schema gaps 4→3 (MedicalWebPage fixed); indexation ~85% est; AI OV unmeasured. See reports/technical-health-2026-10-07.md.

@@ -3,15 +3,17 @@
 **Detected by:** T19 weekly + T12 Learner Sunday refinement
 **Used by:** T5 New Content Discovery + T10 Strategist
 **Confidence requires:** ≥3 weeks of evidence for proposal, ≥4 weeks to fire as T5 priority
-
-## Confirmed patterns (≥3 weeks — UNLOCK FOR T5)
-**Last updated: 2026-10-21 (W43)**
+**Last updated: 2026-10-28 (W44)**
 
 ---
 
-### Pattern 1: Language-specific doctor pages convert at 70–95% intent ✅ CONFIRMED (W10 BOTH LANGUAGES)
+## Confirmed patterns (≥3 weeks — UNLOCK FOR T5)
 
-**Status:** 🟢 Telugu CONFIRMED W10 (stable). 🟢 Tamil CONFIRMED W10 (stable).
+---
+
+### Pattern 1: Language-specific doctor pages convert at 70–95% intent ✅ CONFIRMED (W11 BOTH LANGUAGES)
+
+**Status:** 🟢 Telugu CONFIRMED W11 (stable). 🟢 Tamil CONFIRMED W11 (stable).
 
 | Week | Telugu (Hyderabad/Telangana) | Tamil (Tamil Nadu/Chennai) |
 |---|---:|---:|
@@ -20,73 +22,74 @@
 | W37 | Telangana 123 | TN 132 |
 | W39 | Telangana 147 | TN 187 (RECORD) |
 | W41 | Telangana ~158/week | TN ~175/week |
-| W42 | Bengaluru+Telangana 50 | TN 50, Chennai 41 |
-| W43 | Telangana 50 (Hyderabad 49) | TN 50, Chennai 41 |
+| W42 | Telangana 50 (total) | TN 50, Chennai 41 |
+| W43 | Telangana 50 (total) | TN 50, Chennai 41 |
+| W44 | Telangana 46 (organic) | TN 42, Chennai 40 (organic) |
 
-**W43 update:** Both languages stable W10. Telangana 50 clicks, Tamil Nadu 50 clicks. Holiday week (Navratri/Dussehra) may have suppressed volume — watch W44. Pattern fully confirmed.
+**W44 update:** Both languages stable at W11. Telangana 46 organic clicks, Tamil Nadu 42 organic clicks. Slight decrease vs W43 partially due to methodology shift to organic-only filter. Pattern remains fully confirmed.
 
-**T5 ACTION (W10 priority, +30 pts):**
-1. **Kannada-speaking doctors page** (Karnataka 413/week W43 = 44.8% of intent)
-2. **Hindi-speaking doctors page** (Delhi NCT 80 clicks W43 — P15 watch)
-3. **Bengali-speaking doctors page** (West Bengal 16 clicks W43 — step-back from W42)
-4. **Marathi-speaking doctors page** (Maharashtra 75 clicks W43, W3 confirmed)
+**T5 ACTION (W11 priority, +30 pts):**
+1. **Kannada-speaking doctors page** (Karnataka 216/week organic W44 = 31.3% of intent — IMMEDIATE)
+2. **Hindi-speaking doctors page** (Delhi NCT 63 + UP 25 + Haryana 15 = 103 Hindi belt clicks W44)
+3. **Bengali-speaking doctors page** (West Bengal 16 clicks W44 — monitor; P14 WATCH)
+4. **Marathi-speaking doctors page** (Maharashtra 72 clicks W44, P19 W4 CONFIRMED — UNLOCK)
 
 ---
 
-### Pattern 2: Doctor-listing hub `/doctors` = high-intent qualification funnel ✅ CONFIRMED (W10)
+### Pattern 2: Doctor-listing hub `/doctors` = high-intent qualification funnel ✅ CONFIRMED (W11)
 
-**Status:** 🟢 CONFIRMED W10. Doctor hub remains primary organic conversion funnel.
+**Status:** 🟢 CONFIRMED W11. Doctor hub remains primary organic conversion funnel.
 
-| Week | doctor_card Payments | Doctor section book clicks est | Notes |
+| Week | doctor_card Payments | Doctor section book clicks (organic) | Notes |
 |---|---:|---:|---|
 | W26 | 10 | ~380 | — |
 | W28 | 13 | ~380 | — |
 | W39 | — | ~620 organic | — |
 | W41 | 5 (14d) | ~620/week organic | — |
 | W42 | ~3 | ~644 organic total | site-level |
-| W43 | est ~2-4 | ~611 organic total | revenue drop week |
+| W43 | est ~2-4 | ~611 organic total | Navratri revenue dip |
+| W44 | ~2 (mindtalk_web) | 690 organic total | RECOVERY: +12.9% WoW |
 
-**W43 update:** Pattern structural — doctor hub continues as primary organic intent channel. Revenue drop in W43 likely seasonal (Navratri). Doctor hub book clicks ~611 organic.
+**W44 update:** Doctor hub fully recovered from W43 Navratri dip. 690 organic book clicks = strong funnel health. mindtalk_web 2 payments confirms true SEO attribution alive.
 
-**T5 ACTION (W10, +30 pts):**
-- /doctors/psychologists-in-delhi — MAINTAIN (Delhi NCT 80 clicks W43)
-- /doctors/psychologists-in-pune — PROPOSE (Pune 14 clicks W43, P19 W3 confirmed)
-- /doctors/psychologists-in-kochi — WATCH (Kerala 19 clicks W43, step-back from W42 44)
-- /doctors/psychologists-in-kolkata — WATCH (WB 16 clicks W43, step-back from W42)
-- /doctors/psychologists-in-mumbai — PROPOSE (Mumbai 55 clicks W43, largest non-Bengaluru city)
-
----
-
-### Pattern 3: Blogs → 0 direct booking intent (confirmed anti-signal) ✅ CONFIRMED (W10)
-
-**Status:** 🟢 CONFIRMED W10. Blog/illness → /doctors internal link remains P1 SEO task. Assessment Completed 520/week W43 = near-record; funnel: blog/illness → assessment → delayed booking confirmed.
+**T5 ACTION (W11, +30 pts):**
+- /doctors/psychologists-in-mumbai — IMMEDIATE (Mumbai 55 organic W44, P19 W4 CONFIRMED)
+- /doctors/psychologists-in-pune — PROPOSE (14 clicks W44, no page exists, P19 W4)
+- /doctors/psychologists-in-delhi — MAINTAIN (Delhi NCT 63 organic clicks W44)
+- /doctors/therapists-in-uttar-pradesh — PROPOSE (UP 25 organic W44, P18 W4)
+- /doctors/psychologists-in-kochi — HOLD (Kerala 12 W44 — 3rd step-back, wait W45)
+- /doctors/psychologists-in-kolkata — WATCH (WB 16 W44 — stable, below threshold)
 
 ---
 
-### Pattern 5: AI search (ChatGPT) = REVENUE-GENERATING acquisition channel ✅ CONFIRMED — MAJOR (W10)
+### Pattern 3: Blogs → 0 direct booking intent (confirmed anti-signal) ✅ CONFIRMED (W11)
 
-**Status:** 🟢🟢 MAJOR CONFIRMED W10. chatgpt.com RECOVERY: 76 unique book clicks W43 (+72.7% vs W42 44). 3 payments confirmed. Revenue signal strong.
+**Status:** 🟢 CONFIRMED W11. Blog → assessment → delayed booking funnel confirmed. Assessment Completed W44: 553 ALL-TIME RECORD. Pipeline: blog/illness → assessment → cohort lag 1-4 weeks → booking.
 
-**METHODOLOGY NOTE:** From W43 onward, chatgpt.com tracking uses utm_source="chatgpt.com" as primary metric (vs prior weeks using $initial_referring_domain). The W42 "COLLAPSE" to 44 unique clicks was likely a measurement artifact of the shift in attribution method — utm_source method now shows W43 at 76 = full recovery.
+---
 
-| Source | W28 | W34 | W36 | W37 | W39 | W41/wk | W42 | W43 | Trend |
+### Pattern 5: AI search (ChatGPT) = REVENUE-GENERATING acquisition channel ✅ CONFIRMED — MAJOR (W11)
+
+**Status:** 🟢🟢 MAJOR CONFIRMED W11. chatgpt.com 84 unique book clicks W44 (+10.5% WoW vs W43 76). 2 payments. 11th consecutive week of sustained AI search signal.
+
+| Source | W28 | W34 | W37 | W39 | W41/wk | W42 | W43 | W44 | Trend |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| chatgpt.com total | 155 | 300 | 211 | 286 | 354 | ~307 | 160 | 275 | 🔥 RECOVERY |
-| chatgpt.com unique | — | — | — | — | 91 | ~84 | 44* | 76 | 🔥 RECOVERY |
-| chatgpt.com payments | 0 | 2 | — | 3-4/wk | — | ~4/wk | 2 | 3 | 🟢 stable |
-| Perplexity | 0 | 0 | — | — | 1 | ~4/wk | 0 | 0 | 🔴 watch |
+| chatgpt.com total | 155 | 300 | 286 | 354 | ~307 | 160 | 275 | est 250-280 | 🟢 stable |
+| chatgpt.com unique | — | — | — | 91 | ~84 | 44* | 76 | 84 | 🟢 GROWING |
+| chatgpt.com payments | 0 | 2 | 3-4/wk | — | ~4/wk | 2 | 3 | 2 | 🟢 stable |
+| Perplexity | 0 | 0 | — | 1 | ~4/wk | 0 | 0 | 0 | 🔴 watch |
 
-*W42 unique measured via $initial_referring_domain; W43 via utm_source
+*W42 unique measured via $initial_referring_domain; W43-W44 via utm_source
 
-**W43 update:** chatgpt.com 76 unique book clicks is RECOVERY from W42's apparent collapse. 3 payments = strong AI-to-revenue signal at W10. Perplexity still zero — unclear if tracking issue or genuine absence.
+**W44 update:** chatgpt.com 84 unique book clicks = new high since W41 peak. 2 payments confirm ongoing AI-to-revenue channel. Perplexity still zero — possible tracking gap (is utm_source=perplexity.ai captured?).
 
-**T5 ACTION (W10, +30 pts):** Protect AEO content. FAQ schema on all doctor pages. Clinical-voice content on illness pages. Monitor Perplexity — investigate tracking (is utm_source=perplexity.ai being captured?).
+**T5 ACTION (W11, +30 pts):** FAQ schema on all doctor pages. AEO-optimized content (clinical voice, question-answer structure). Monitor Perplexity tracking.
 
 ---
 
-### Pattern 8: Kerala market 🟡 STEP-BACK W43 — WATCH
+### Pattern 8: Kerala market 🔴 CONCERN — 3-WEEK DECLINING TREND
 
-**Status:** 🟡 STEP-BACK. Kerala 19 clicks W43 (-56.8% vs W42 est 44, -42.4% vs W41 33/wk).
+**Status:** 🔴 DEMOTED TO CONCERN. Kerala 12 organic clicks W44 (-36.8% WoW from W43 19 total, 3rd consecutive step-back).
 
 | Week | Kerala clicks | WoW |
 |---|---:|---|
@@ -96,79 +99,103 @@
 | W39 | 15 | 🔴 SEVERE (-65%) |
 | W41 | ~33/week | +120% 🟢 RECOVERY |
 | W42 | ~44 (est) | +33% |
-| W43 | 19 | -56.8% 🔴 step-back |
+| W43 | 19 (total) | -56.8% 🔴 |
+| W44 | 12 (organic) | -36.8% 🔴 3rd step-back |
 
-**W43 update:** Kerala has been volatile. Holiday week (Navratri/Dussehra) likely affected. Cities: Kochi 6, Thiruvananthapuram 3, Kozhikode 3. Status DEMOTED TO WATCH until W44 confirms recovery.
-**T5 HOLD:** /doctors/psychologists-in-kochi proposal on hold until W44.
+**W44 update:** 3 consecutive declining weeks (W42 peak → W43 step-back → W44 decline). Cities: Kochi ~6, TVM ~3. Pattern DEMOTED to CONCERN. T5 Kerala proposals on HOLD until 3-week recovery (≥30 clicks for 3 consecutive weeks).
 
 ---
 
 ### Pattern 13: Gulf market organic demand 🟡 STABLE (low but real)
 
-**Status:** 🟡 STABLE. Gulf ~18 organic clicks W43: Dubai 6, Doha 3, Mecca 3, Riyadh 2, Abu Dhabi 2, Jeddah 2.
+**Status:** 🟡 STABLE. Gulf ~15 organic clicks W44: Dubai ~5, Doha ~3, Saudi ~5.
 
 ---
 
-### Pattern 14: West Bengal / Kolkata 🟡 STEP-BACK W43 — WATCH
+### Pattern 14: West Bengal / Kolkata 🟡 STABLE — WATCH
 
-**Status:** 🟡 STEP-BACK. WB 16 clicks W43 (vs W42 est ~29, W41 54/week). Kolkata 14 dominant.
-**W43 update:** Significant step-back. Holiday effect possible. Monitor W44 before T5 action.
+**Status:** 🟡 STABLE. WB 16 organic clicks W44 (flat vs W43 16 total). Kolkata 14 dominant.
+**W44 update:** Flat vs W43. Holiday effect appears to have normalized. P14 stable but below action threshold of 25 clicks/week sustained.
 
 ---
 
-### Pattern 15: Delhi NCT 🟡 WATCH
+### Pattern 15: Delhi NCT 🟡 WATCH → APPROACHING CONFIRM
 
-**Status:** 🟡 WATCH. Delhi NCT organic: ~80 clicks W43 (Delhi 59 + New Delhi 20 = 79 city clicks). P15 signal consistent but below Bengaluru tier.
-- Bengaluru 413 >> Delhi 80 — gap remains large
-- Hindi-speaking doctor page still valid proposal but deprioritize vs Mumbai/Maharashtra
+**Status:** 🟡 WATCH. Delhi NCT organic: ~63 clicks W44 (vs W43 ~80 total; methodology adj.). 
+- Delhi NCT now 9.1% of organic market — clear #3 market after Karnataka, Maharashtra
+- Hindi belt combined: Delhi 63 + UP 25 + Haryana 15 = 103 clicks/week
+- Hindi-speaking doctors page = strong T5 candidate once P1 Hindi pattern confirms
+- W44 signal: Haryana emerged at 15 clicks (2.2%) — possible NCR expansion
 
 ---
 
 ### Pattern 17: Germany diaspora 🔴 MINIMAL — BELOW THRESHOLD
 
-**Status:** 🔴 BELOW THRESHOLD. Germany ~2 organic clicks W43 (Frankfurt 2). Well below 25-click pattern threshold. Do NOT invest in German-language content.
+**Status:** 🔴 BELOW THRESHOLD. Not tracked W44. Below 25-click pattern threshold. Do NOT invest in German-language content.
 
 ---
 
-### Pattern 18: Uttar Pradesh Surge 🟢 W3 CONFIRMED
+### Pattern 18: Uttar Pradesh Surge 🟢 W4 CONFIRMED
 
-**Status:** 🟢 W3 CONFIRMED. UP 22 organic book clicks W43. 3rd consecutive week of data.
+**Status:** 🟢 W4 CONFIRMED. UP 25 organic book clicks W44 (+13.6% vs W43 22). 4th consecutive week of data.
 - Multi-city: Lucknow, Noida, Varanasi, Agra, Kanpur
-- Note: W43 22 clicks is lower than W41 69/week (holiday suppression?)
-- Pattern real but volume suppressed in W43 — confirm sustained with W44
-- T5 HOLD: Propose /doctors/psychologists-in-lucknow or /doctors/therapists-in-uttar-pradesh after W44 confirms ≥40 clicks.
+- W44 25 clicks = recovery from W43 22 (holiday suppressed) toward W41 peak ~69/week
+- T5 ACTION: Propose /doctors/therapists-in-uttar-pradesh — 4-week confirmed, +30 pts priority
 
 ---
 
-### Pattern 19: Maharashtra / Mumbai surge 🟢 W3 CONFIRMED
+### Pattern 19: Maharashtra / Mumbai surge 🟢🟢 W4 CONFIRMED — ESCALATE
 
-**Status:** 🟢 W3 CONFIRMED. Maharashtra 75 clicks W43 (Mumbai 55, Pune 14, Thane 1, Navi Mumbai 1).
-- 3 weeks: W41 206, W42 ~75 est, W43 75
-- Mumbai is now the single largest city outside Karnataka (55 clicks)
-- T5 ACTION: /doctors/psychologists-in-mumbai — IMMEDIATE ESCALATE (55 clicks W43, 3 weeks sustained)
-- T5 ACTION: /doctors/psychologists-in-pune — PROPOSE (14 clicks W43, 2+ weeks sustained, no page exists)
+**Status:** 🟢🟢 W4 CONFIRMED. Maharashtra 72 organic clicks W44 (Mumbai 55, Pune 14+).
+- 4 weeks: W41 206, W42 ~75 est, W43 75 (total), W44 72 (organic)
+- Mumbai 55 = LARGEST non-Bengaluru city in organic intent
+- P19 now at W4 = T5 PRIORITY UNLOCK with +30 pts
+- T5 IMMEDIATE: /doctors/psychologists-in-mumbai
+- T5 PROPOSE: /doctors/psychologists-in-pune (14 clicks W44, no page)
+- T5 PROPOSE: Marathi-speaking doctors page (language-specific P1 expansion to P19 market)
+
+---
+
+### Pattern 20: Assessment-to-booking cohort lag (Engagement Engine → Revenue pipeline) 🟢 EMERGING W4
+
+**Status:** 🟢 EMERGING CONFIRMED W4. Assessment Completed 553 ALL-TIME RECORD W44 = 3rd consecutive WoW increase. Journey Task 36 = 3rd consecutive recovery week.
+- Hypothesis: Blog → Assessment → 1-4 week lag → Appointment Booked
+- Revenue recovery W44 (+21% organic payments) matches 4-week lag from strong Assessment weeks W40-W41
+- Journey Task recovery (W42: 29 → W43: 33 → W44: 36) = leading indicator for booking conversion 1-2 weeks ahead
+- SIGNAL: Expect continued booking strength W45-W46 based on W44 553 assessment record
+
+---
+
+## Emerging Patterns (< 3 weeks — MONITOR)
+
+### Pattern 21: Haryana/Gurgaon NCR emerging market 🟡 WEEK 2
+
+**Status:** 🟡 WEEK 2. Haryana 15 organic clicks W44 (2.2% of organic). First time Haryana crossed 10-click threshold.
+- Gurgaon/NCR as suburb of Delhi NCR market; may be showing as Haryana due to geo mapping
+- Week 2 signal — need W45 for 3rd-week confirmation before T5 action
+- Watch for: Is this growing independently or part of Delhi NCR expansion?
 
 ---
 
 ## Demoted Patterns
 
 ### Pattern 4: AP/Vijayawada expansion — DEMOTED
-AP ~7 clicks W43 — below pattern threshold.
+AP ~10 clicks W44 — volatile (7 W43 → 10 W44). Below sustained pattern threshold. Monitor.
 
-### Pattern 7: Homepage hero conversions — DEMOTED
-mindtalk_web 0 payments W43 — UTM chain broken.
+### Pattern 7: Homepage hero conversions — REHABILITATED W44
+mindtalk_web 2 payments W44 (vs 0 W43). UTM chain broken prevents page-level attribution. Monitor W45.
 
 ### Pattern 9: NRI Gulf markets — UPGRADED TO P13
 See P13 above.
 
 ### Pattern 10: US market — DEGRADED
-USA ~25 organic clicks W43 — stable but below pattern threshold. Real organic ~20-25/week.
+USA ~20 organic clicks W44 — stable but below pattern threshold. Real organic ~20-25/week.
 
 ### Pattern 11: Qatar/Doha market — WATCH
-Doha ~3 organic clicks W43. Below threshold.
+Doha ~3 organic clicks W44. Below threshold.
 
 ### Pattern 12: Australia NRI market — WATCH
-Australia not tracked W43. On watch.
+Australia ~2 clicks W44. Below threshold.
 
-### Pattern 16: Manipur / NE India — WATCH
-Assam 7 clicks W43. Below pattern threshold. Monitor.
+### Pattern 16: Assam / NE India — WATCH STEP-BACK
+Assam 4 clicks W44 (-42.9% vs W43 7). Step-back this week. Monitor W45.

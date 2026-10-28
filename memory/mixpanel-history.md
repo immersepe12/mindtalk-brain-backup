@@ -362,3 +362,28 @@ One line per Task 15 run. Most recent at bottom.
   - Riya holding at 23 (stable) — long-term improvement trajectory intact.
 
 | 2026-10-21 (7d) | 54,129 total / 12,138 funnel | 910 funnel | 78 funnel / 145 total | 79 | 13 🎉🎉🎉 | 38.3% ✅ | 🎉🎉🎉 P0 RESOLVED: backend fail 1.4% (was 32.9%); net leads 157 FULLY REACHING FRESHSALES; all conversion metrics stable; doctor→book CTA 38.3% STABLE; where-to-start 65% ✅ |
+
+| 2026-10-28 (7d) | 58,572 total / 13,210 funnel | 1,043 funnel / 2,930 total | 85 funnel / 157 total | 87 | 23 ⚠ | 40.8% ✅ | ⚠ lead_create_failed +76.9% (13→23, backend fail creeping: 5.5%→11.8% vs all submissions); ⚠ riya -39.1% (23→14); ✅ doctor→book CTA +6.5% (38.3%→40.8%); form_submitted rate STABLE 0.64%; book CTA +14.6% funnel |
+
+---
+
+### T15 Run — 2026-10-28
+
+**Volume (7d totals):**
+- Page views: 58,572 total / 13,210 funnel unique
+- blog_viewed: 1,775 | illness_page_viewed: 194 | treatment_page_viewed: 523
+- doctor_profile_viewed: 4,278 (funnel: 1,673) | riya_page_viewed: 14
+- book_appointment_clicked: 2,930 (funnel: 1,043) | cta_clicked: 344 | whatsapp_clicked: 139 | call_clicked: 83
+- lp_form_submitted: 87 | form_submitted: 157 (funnel: 85) | form_started: 1,142 | form_error: 8 | lead_create_failed: 23
+
+**Funnels:**
+- A (main): 13,210 → 1,043 (7.9%) → 85 (8.2% of CTA; 0.64% overall)
+- B (doctor): 1,673 → 683 (40.8%) → 6 (0.88% of CTA)
+- C (where-to-start): 27 → 15 (55.6%) → 15 (100% of started; 55.6% overall)
+
+**WoW flags vs 2026-10-21:**
+- ⚠ lead_create_failed +76.9% (13→23) — backend fail rate creeping back: 5.5%→11.8% vs all submissions; P0 resolved last week but direction reversed
+- ⚠ riya_page_viewed -39.1% (23→14) — discovery rate 0.042%→0.024%
+- ✅ doctor→book CTA +6.5% (38.3%→40.8%) — structural improvement holding
+- ✅ form_submitted rate STABLE at 0.64% of page views
+- ✅ lp_form_submitted +10.1% (79→87)
