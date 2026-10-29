@@ -1938,3 +1938,5 @@ No watches added/closed. W-ASSESS-*-0925 midpoint reached 10-16: short-window de
 | W-PSY-BLR-1023 | /doctors/psychologists-in-bangalore | PR #23 (faqs frontmatter, quickAnswer, reviewer, meta) | baseline 28d: pos ~6.2 "psychologist near me" | Day-14 2026-11-06 | |
 
 > ### ℹ️ T10 STRATEGIST — 2026-10-28 — No new watches. T4 closed /doctors/child-psychologists-in-bangalore RESOLVED (pos 10.8, 10 clk); 4 blogs NEEDS_REFRESH = indexation (not content). Open: therapists-in-delhi/bangalore + phobia blog finals 10-30; W-COUPLES-1023/W-PSY-BLR-1023 Day-14 2026-11-06.
+| W-HUBSPOKE-B1-1029 | FOMO, trust-issues, abandonment, situationship, domineering + 2 new spokes | PR #28 | baseline: what is fomo 10.5k impr/2 clk @10.3; trust issues meaning in hindi ~5k/0 @6.7–10 | Day-14 / Day-28 from deploy | |
+| W-HUBSPOKE-B2-1029 | attachment-styles, riasec-codes, introvert-ambivert | PR #29 | new pages | Day-42 from deploy | |

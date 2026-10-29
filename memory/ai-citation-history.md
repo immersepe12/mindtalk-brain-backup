@@ -27,3 +27,15 @@ Assessment (partial): A1 ✅, A2 ❌, A3 ✅, A4-A8 BLOCKED (rate limit at query
 ChatGPT: SKIPPED (safety classifier permanent block in auto-mode)
 Claude.ai: UNTESTED
 Google AI OV: NOT CHECKED (Chrome stall)
+
+## 2026-10-29 — Week 20
+| Metric | Value | Delta |
+|--------|-------|-------|
+| Chrome status | STALL (2 browsers, unattended) | same as W19 |
+| Perplexity | CARRIED OVER — 8/10 (W19) | — |
+| ChatGPT | SKIPPED (permanent safety-classifier block in auto-mode) | — |
+| Claude.ai | UNTESTED | — |
+| Google AI OV | NOT CHECKED | — |
+| Assessment queries A1-A8 | UNTESTED (Chrome stall) | — |
+
+Note: W20 citation check blocked again by Chrome selection stall. Three consecutive weeks now (W18, W19, W20) with partial or no citation data. Resolving Chrome stall is high priority — it is blocking the AI citation track entirely. Action: human needs to manually reconnect/deduplicate Chrome extension so only 1 browser appears, or Kushal should manually run a citation check.

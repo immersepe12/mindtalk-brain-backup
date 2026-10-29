@@ -1,0 +1,55 @@
+{
+  "snapshot_date": "2026-10-29",
+  "week": 20,
+  "method": "sitemap_count_fallback",
+  "dataforseo_status": "BLOCKED — balance exhausted (7th consecutive week)",
+  "domains": {
+    "amahahealth.com": {
+      "url_count": 11,
+      "url_count_type": "sitemap_index_entries",
+      "wow_delta": 0,
+      "prev_count": 11,
+      "status": "ok"
+    },
+    "yourdost.com": {
+      "url_count": 0,
+      "url_count_type": "fetch_error",
+      "wow_delta": null,
+      "status": "error: HTTP Error 404: Not Found"
+    },
+    "manastha.com": {
+      "url_count": 211,
+      "url_count_type": "sitemap_entries",
+      "wow_delta": null,
+      "prev_count": 0,
+      "status": "RECOVERED — was 404 W19, now returns 211 entries from manastha.com/sitemap.xml (no-www path)"
+    },
+    "mfine.co": {
+      "url_count": 25,
+      "url_count_type": "sitemap_index_entries",
+      "wow_delta": 0,
+      "prev_count": 25,
+      "status": "ok"
+    },
+    "betterhelp.com": {
+      "url_count": 0,
+      "url_count_type": "fetch_error",
+      "wow_delta": null,
+      "status": "error: HTTP Error 404: Not Found"
+    },
+    "mindtalk.in": {
+      "url_count": 950,
+      "url_count_type": "sitemap_entries",
+      "wow_delta": 9,
+      "prev_count": 941,
+      "status": "ok — +9 URLs vs last week"
+    }
+  },
+  "key_findings": [
+    "mindtalk.in grew +9 URLs (941→950) — publishing activity healthy",
+    "manastha.com RECOVERED: 211 URLs now accessible via no-www sitemap (vs 404 last 3 weeks)",
+    "amahahealth.com stable at 11 sitemap index entries (minimal content footprint on public sitemap)",
+    "yourdost.com and betterhelp.com sitemaps still 404",
+    "mfine.co stable at 25"
+  ]
+}

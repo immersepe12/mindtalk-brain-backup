@@ -1,0 +1,59 @@
+{
+  "run_date": "2026-10-29",
+  "task": "T17",
+  "week": 20,
+  "baseline_run": false,
+  "part_a": {
+    "method": "sitemap_count_fallback",
+    "dataforseo_status": "BLOCKED \u2014 balance exhausted (7th consecutive week)",
+    "domains": {
+      "mindtalk.in": {
+        "url_count": 950,
+        "wow_delta": 9,
+        "status": "ok"
+      },
+      "amahahealth.com": {
+        "url_count": 11,
+        "wow_delta": 0,
+        "status": "ok"
+      },
+      "manastha.com": {
+        "url_count": 211,
+        "wow_delta": null,
+        "status": "RECOVERED \u2014 was 404 W19, 211 entries now accessible"
+      },
+      "mfine.co": {
+        "url_count": 25,
+        "wow_delta": 0,
+        "status": "ok"
+      },
+      "yourdost.com": {
+        "url_count": 0,
+        "status": "fetch_error (404 \u2014 persistent)"
+      },
+      "betterhelp.com": {
+        "url_count": 0,
+        "status": "fetch_error (404 \u2014 persistent)"
+      }
+    },
+    "key_finding": "mindtalk.in +9 URLs (941\u2192950). Manastha RECOVERED with 211-URL sitemap. No meaningful change in other monitored competitors."
+  },
+  "part_b": {
+    "chrome_status": "STALL \u2014 2 browsers connected, unattended mode cannot select between them (same as W19)",
+    "perplexity": "CARRIED_OVER \u2014 8/10 (W19 value)",
+    "chatgpt": "SKIPPED \u2014 permanent in auto-mode (safety classifier)",
+    "claude_ai": "UNTESTED",
+    "google_ai_ov": "NOT CHECKED \u2014 Chrome stall"
+  },
+  "chrome_status": "STALL \u2014 2 browsers connected but unattended mode cannot call AskUserQuestion to select. BACKLOG: CHROME-STALL-2026-10-29",
+  "content_gaps": [
+    {
+      "type": "competitive_gap",
+      "competitor": "manastha.com",
+      "note": "Manastha now confirmed 211-page site \u2014 larger content footprint than assumed. Run deep sitemap crawl to identify topic clusters."
+    }
+  ],
+  "slack_posted": true,
+  "notifications_sent": true,
+  "slack_message_link": "https://cadabamsgroup.slack.com/archives/C0AUAPS4J83/p1793283361281499"
+}

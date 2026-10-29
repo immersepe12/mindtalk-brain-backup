@@ -32,3 +32,25 @@
 
 **Key finding:** Amaha sitemap RECOVERED — was 404 last week, back to 11 index entries.
 **Chrome stall:** 2 browsers connected but unattended mode cannot interactively select — Google AI OV check skipped.
+
+## 2026-10-29 — Week 20
+
+| Metric | Value | Delta |
+|--------|-------|-------|
+| Competitors tracked (sitemap) | 4/5 (BetterHelp 404 excluded) | same |
+| mindtalk.in URLs | 950 | +9 vs W19 |
+| amahahealth.com URLs | 11 | 0 |
+| manastha.com URLs | 211 | RECOVERED (was 404 W18+W19) |
+| mfine.co URLs | 25 | 0 |
+| yourdost.com | fetch_error | persistent 404 |
+| DataForSEO | BLOCKED (7th consecutive week) | — |
+
+**Key findings:**
+- 🟢 mindtalk.in publishing at healthy pace: +9 URLs this week (941→950)
+- ⚠️ Manastha RECOVERED: 211-URL sitemap now accessible. Previous 3 weeks were 404 (sitemap likely moved to no-www). This is notably larger than assumed — Manastha may have more content density than tracked. Flag for Strategist: deep sitemap crawl recommended.
+- 🔄 Amaha and MFine stable — no meaningful sitemap changes
+- ❌ YourDOST and BetterHelp sitemaps still returning 404 (persistent multi-week)
+
+**Chrome stall (W20):** Same condition as W19 — 2 browsers connected but unattended mode cannot select. AI citation data carried over from W19 (Perplexity 8/10). BACKLOG item logged: CHROME-STALL-2026-10-29.
+
+**Content gap queued:** Manastha 211-page sitemap → deep-crawl topic audit recommended for Strategist

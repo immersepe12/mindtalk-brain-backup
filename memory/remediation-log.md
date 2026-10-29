@@ -6897,3 +6897,26 @@ Refill attempt: screened 7,089-entry opportunity cache (OPPORTUNITY=6,716). Top 
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-28-pre-t20.
+
+---
+## T20 2026-10-29 (Thu) — scheduled run (15:17 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (ttfb 0.06s). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| T1 22 pos-100 drops (data-quality-suspect-2026-10-29) | curl www 200 on 5 sampled pages (ADHD illness, group-therapy, gaslighting, four-methods-of-music-therapy, LSAS guide) | FALSE POSITIVE (DataForSEO noise, AP8), CLOSED |
+| MERGE-PR-21-24-27 | cache-busted curl: /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404, /blogs/fear-of-abandonment 404 | REAL, Kushal merges, escalated |
+| Hyderabad counsellors CTR_DROP | gsc-validation 10-29 CONFIRMED; REFRESH brief exists, T11 PR mode | carried, T11-owned, not escalated |
+| anxiety-counselling MODERATE | GSC NOISE (removed by T2) | already closed |
+| Others (CITY-LISTING-BRIEFS-VIABILITY-01, BLOG-INDEXATION-VERIFY-01, ship decisions, CSKY/YFAO vetoes) | unchanged | carried, not re-pinged |
+
+## AUTO-FIXED
+- None needed. 0 untiered; 0 live NEW- briefs (stress-buster-games, fear-of-abandonment still 404); discovery cache 10d < 21d (re-run was a no-op 10-26 and 10-28, skipped); no Chrome/paid-mining flag.
+
+## STANDING JOB — BRIEF QUEUE
+9 tiered NEW- /blogs/ briefs, all 404. Excluded: can-stress-kill-you (veto 11-03), yoga-for-anxiety-and-overthinking (veto 11-04), instant-anxiety-relief + stress-buster-games (NEEDS_HUMAN), fear-of-abandonment (PR #27) => **4 shippable**. Below floor 6. No refill: net-new /blogs/ supply exhausted (see 10-28) and T10 10-29 hard rule bars new NEW- blog briefs until a sample of the unindexed blogs indexes. 0 briefs written, Verifier not spawned. Escalated as strategic call.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-29-pre-t20. Slack digest posted.

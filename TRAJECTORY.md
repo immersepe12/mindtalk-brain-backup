@@ -383,3 +383,11 @@ Strategist reads this every day before deciding actions — knows where the gaps
 **Narrative:** First full week of P0 Freshsales recovery. Doctor-driven CTA conversion rebounded +47% and absolute failures dropped -24%. Backend fail rate still catastrophic at 61% but trending down for first time in 3 weeks.
 | 2026-10-15 | 7 confirmed (Perplexity 7) | 7/10 (RECOVERED Q5✅ anxiety-treatment; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅; Q1❌ Q3❌ Q7❌ sister-domain) | ⬜ SKIPPED (auto-mode safety classifier) | ⬜ untested | 0/4 tested (Q1 Q4 Q5 Q9 — 4th consecutive 0) | 2 (Q4+Q9) | 🟢 +1 WoW. Q5 RECOVERED after 1-week absence. DataForSEO BLOCKED 5th consecutive week = CRITICAL. Amaha+Manastha sitemaps 404 (URL changed). Organic: mindtalk.in #2 Google CBT query. A1-A8 BLOCKED (free limit). |
 | 2026-10-22 | 8 confirmed (Perplexity 8) | 8/10 ★ ALL-TIME HIGH (GAINED Q1✅ best-mental-health-platform + Q3✅ psychiatrist-bangalore; LOST Q5❌ anxiety-treatment again; retained Q2✅ Q4✅ Q6✅ Q8✅ Q9✅ Q10✅; Q7❌ sister-domain) | ⬜ SKIPPED (auto-mode safety classifier) | ⬜ untested | ⬜ NOT CHECKED (Chrome stall) | 5 (Q1+Q2+Q3+Q4+Q9) | 🟢 +1 WoW. 8/10 NEW ALL-TIME HIGH. Q1 "best mental health platform india" GAINED — major brand query. Q3 psychiatrist-bangalore REGAINED. Q5 LOST again (volatile). Assessment A1✅ A2❌ A3✅ A4-A8 BLOCKED (rate limit at query 13). DataForSEO BLOCKED 6th consecutive week. Amaha sitemap RECOVERED. |
+
+
+### W20 (2026-10-29) — AI Citation Update
+- **Chrome stall (3rd consecutive week):** W18, W19, W20 all unable to run AI citation queries in unattended mode due to 2-browser selection conflict.
+- **Perplexity (carried from W19):** 8/10 — all-time high maintained
+- **ChatGPT:** permanently skipped in auto-mode (safety classifier)
+- **Claude.ai, Google AI OV:** untested
+- **Action required:** Kushal to resolve Chrome extension duplication so T17 can run unattended again. Consider adding a browser `deviceId` preference to config.json.
