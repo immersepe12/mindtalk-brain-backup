@@ -6920,3 +6920,24 @@ No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL s
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-29-pre-t20. Slack digest posted.
+
+---
+## T20 2026-10-30 (Fri) — scheduled run (15:43 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (ttfb 0.15s), /journeys 200 (0.16s). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| T1 59 pos-100 drops (data-quality-suspect-2026-10-30) | Same AP8 API-noise signature as 10-29 (22 drops, sampled pages all 200); T10 quarantined | FALSE POSITIVE (carried from 10-29 verification), CLOSED |
+| MERGE-PR-21-24-27-52 | cache-busted curl: /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404, /blogs/fear-of-abandonment 404 | REAL, Kushal merges, carried (not re-pinged beyond digest) |
+| BLOG-INDEXATION-VERIFY-01, CITY-LISTING-BRIEFS-FILTERCITY-FIX-01, BRIEF-COLLISION-GATE-01, ship decisions, CSKY/YFAO vetoes | unchanged vs T10 10-30 | carried |
+
+## AUTO-FIXED
+- None needed. 0 untiered NEW- briefs (only 7 REFRESH- briefs lack intent_tier, by design); 0 live NEW- blog briefs to archive (all /blogs/ slugs 404; counsellors/psychotherapists/therapy-cost/conduct-disorder briefs are /doctors/ or already-shipped surfaces, not /blogs/); discovery cache 2026-10-19 (11 d) < 21 d, not stale, re-run was a no-op 10-26 and 10-28 so skipped; no Chrome/paid-mining flag.
+
+## STANDING JOB — BRIEF QUEUE
+Tiered NEW- /blogs/ briefs, all 404 on www: anxiety-and-headaches, can-anxiety-cause-shortness-of-breath, drug-addiction-treatment, masked-depression (shippable) + holds: can-stress-kill-you (veto 11-03), yoga-for-anxiety-and-overthinking (veto 11-04), instant-anxiety-relief + stress-buster-games (NEEDS_HUMAN), fear-of-abandonment (PR #27), is-online-therapy-confidential / gender-identity-disorder / alcohol-addiction (YMYL-adjacent holds). => **4 shippable. Below floor 6.** No refill: net-new /blogs/ supply exhausted (10-28 screen of 7,089-entry cache) and T10 hard rule (10-29/10-30) bars new NEW- blog briefs until a sample of unindexed blogs indexes. 0 briefs written, Verifier not spawned. Escalated (carried) as strategic call. /treatments/ briefs (cbt-for-ocd, dbt-for-bpd) are YMYL, not T20-shippable.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-30-pre-t20.
