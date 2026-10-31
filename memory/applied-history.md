@@ -256,3 +256,5 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-10-29T20:00+05:30 | STALE-SCAN | clean (t12 proposal 4 days overdue)
 2026-10-30T20:00+05:30 | STRATEGIST-APPLY-PASS | t12-algo-watch-dual-sensor-tiebreaker-20261018T2030 | MISMATCH-SKIP #6 (Before block absent from task12-learner.md) | 3 others Apply-on 2026-11-01 future | applied 0
 2026-10-30T20:00+05:30 | STALE-SCAN | clean (t12 proposal 5 days overdue)
+2026-10-31T20:00+05:30 | STRATEGIST-APPLY-PASS | t12-algo-watch-dual-sensor-tiebreaker-20261018T2030 | MISMATCH-SKIP #7 (Before block '#### Step 4b — Core update detection' absent from cowork-tasks/task12-learner.md) | 3 others Apply-on 2026-11-01 future | applied 0
+2026-10-31T20:00+05:30 | STALE-SCAN | clean (t12 proposal 6 days overdue; 14-day alert threshold 2026-11-08)

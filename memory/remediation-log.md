@@ -6941,3 +6941,24 @@ Tiered NEW- /blogs/ briefs, all 404 on www: anxiety-and-headaches, can-anxiety-c
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-30-pre-t20.
+
+---
+## T20 2026-10-31 (Sat) — scheduled run (15:20 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (0.20s), /journeys 200. Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24-27-52 | cache-busted curl: /blogs/fear-of-abandonment 404, /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404 | REAL, Kushal merges, carried (day 7+) |
+| 59 pos-100 drops (10-30) | AP8 noise, closed 10-30 | already closed |
+| Others (INDEXATION-VERIFY, FILTERCITY-FIX, COLLISION-GATE, vetoes, ship decisions) | unchanged vs T10 10-31 | carried |
+
+## AUTO-FIXED
+- None needed. 0 untiered NEW- briefs; no live NEW- blog briefs to archive; discovery cache 12 d < 21 d; no Chrome/paid-mining flag; Saturday, no new sensor alerts.
+
+## STANDING JOB — BRIEF QUEUE
+Unchanged from 10-30: 4 shippable tiered /blogs/ briefs (anxiety-and-headaches, can-anxiety-cause-shortness-of-breath, drug-addiction-treatment, masked-depression). Below floor 6; no refill because net-new /blogs/ supply is exhausted and T10 hard rule bars new NEW- blog briefs until unindexed blogs index. 0 briefs written, Verifier not spawned.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-31-pre-t20.
