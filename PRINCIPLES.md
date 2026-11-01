@@ -100,7 +100,7 @@ E2. /blogs/couple-therapy-techniques (W12) — blog/treatment URL overlap cannib
 E3. /blogs/how-to-find-a-therapist-for-ocd (W13) — target keyword near-zero India search volume (0 organic results DataForSEO India)
 E4. /blogs/high-functioning-anxiety-treatment (W41) — target keyword near-zero India search volume (page 1 at pos 6.6 but only 14 impr/week; same class as E3; confirms ≥100/mo India volume gate needed at T5 brief approval)
 
-**Establishment rate (content-quality cases only):** 28/29 formal closes = **96.6%** (ALL-TIME HIGH) | Including 🟡 PARTIAL: 28 full + 1 partial out of 29 = 96.6% full-green. Including exceptions: 28/33 = 84.8%. ✅ W43 closes (2026-10-11): 8 formal 🟢 + 0 failures — ZERO content-quality failures in W43 batch. P14 cost/pricing pattern promoted to standing principle.
+**Establishment rate (content-quality cases only):** 31/32 formal closes = **96.9%** (ALL-TIME HIGH) | Including 🟡 PARTIAL: 31 full + 1 partial out of 32 = 96.9% full-green. Including exceptions: 31/36 = 86.1%. ✅ W43 closes (2026-10-11): 8 formal 🟢 + 0 failures. ✅ W-SEP15 closes (2026-11-01 T12): 3 formal 🟢 (kolkata-anxiety, mumbai-anxiety, kolkata-depression) — ZERO content-quality failures in W-SEP15 batch.
 
 **✅ Pattern confirmed → P14 written (2026-10-11):** Cost/pricing-query blogs (e.g., therapy-cost-in-india, couple-therapy-cost-in-bangalore, rtms-treatment-cost-in-india) all landed top-5 positions at Day-42 (W43 batch). See P14 for the standing principle.
 
@@ -117,7 +117,7 @@ E4. /blogs/high-functioning-anxiety-treatment (W41) — target keyword near-zero
 
 **Ties to P4:** Shipping remains the bottleneck, not content quality. Investment should continue in brief velocity (T5) and shipping capacity (T9 cap). T5 should add the three exception-class screens to its brief-approval checklist.
 
-**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes). **Updated 2026-09-27** (T12 Learner: +9 data points from W30/W31/W32/W33 Day-42 finals + W40 Day-42 finals; cumulative 14/15 content-quality = 93%; emerging cost/pricing pattern flagged). **Updated 2026-10-04** (T12 Learner: +6 formal 🟢 from W41 Day-42 finals + E4 exception codified; cumulative 20/21 content-quality = 95.2%; adhd-task-paralysis EXCEPTIONAL — position improved from midpoint to Day-42 final). **Updated 2026-10-11** (T12 Learner: +8 formal 🟢 from W43 Day-42 finals — 8/8 page-1; cumulative 28/29 = 96.6% ALL-TIME HIGH; cost/pricing pattern promoted to P14).
+**Established:** 2026-07-26 (5 formal closes). **Updated:** 2026-08-03 (W14 7th formal 🟢; exception classes E2/E3 codified from W12/W13 Day-42 closes). **Updated 2026-09-27** (T12 Learner: +9 data points from W30/W31/W32/W33 Day-42 finals + W40 Day-42 finals; cumulative 14/15 content-quality = 93%; emerging cost/pricing pattern flagged). **Updated 2026-10-04** (T12 Learner: +6 formal 🟢 from W41 Day-42 finals + E4 exception codified; cumulative 20/21 content-quality = 95.2%; adhd-task-paralysis EXCEPTIONAL — position improved from midpoint to Day-42 final). **Updated 2026-10-11** (T12 Learner: +8 formal 🟢 from W43 Day-42 finals — 8/8 page-1; cumulative 28/29 = 96.6% ATH; cost/pricing pattern promoted to P14). **Updated 2026-11-01** (T12 Learner: +3 formal 🟢 from W-SEP15 finals — kolkata-anxiety, mumbai-anxiety, kolkata-depression; cumulative 31/32 = 96.9% NEW ATH; W-SEP16 + W-PHOBIA indexation cases excluded per E-class rules).
 
 ---
 

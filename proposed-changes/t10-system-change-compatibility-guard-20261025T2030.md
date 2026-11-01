@@ -64,3 +64,6 @@ The inserted block (step 2b) is clearly delimited and can be removed manually in
 
 To veto: rename this file to `t10-system-change-compatibility-guard-20261025T2030.vetoed.md` and add a `## Veto reason` section.
 To approve early: rename to `t10-system-change-compatibility-guard-20261025T2030.approved.md`.
+
+## Verifier 2026-11-01: NEEDS_HUMAN (left in queue, not applied)
+Intent sound, defects: block can't be overridden (.approved.md still hits 2b -> deadlock); alert would re-post daily; no applied-history COMPAT-SKIP log line; match list vague/Vercel-specific; low goal alignment. Suggested: exempt .approved.md, dedupe alert, log COMPAT-SKIP, define match list. Kushal: approve as-is (rename .approved.md won't bypass 2b!), or have Meta-Learner revise.

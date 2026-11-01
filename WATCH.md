@@ -3,6 +3,30 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ✅ T12 LEARNER — 2026-11-01 — 5🟢 closes · 1⚫ WORSE · P12 31/32=96.9% NEW ATH · 3 QDF_BLOCKED extended · 5 indexation fails · NO LEARNER FLAG
+> **WATCH closures this run (due Oct 26–Nov 01):**
+> - **W-SEP15 kolkata-anxiety CLOSED** 🟢 RESOLVED — pos 3.7, 1,022 impr at Day-42. P12 +1. Log: `memory/experiments/closed-W-SEP15-2026-11-01.md`
+> - **W-SEP15 mumbai-anxiety CLOSED** 🟢 RESOLVED — pos 4.2, 2,847 impr at Day-42. P12 +1. Log: `memory/experiments/closed-W-SEP15-2026-11-01.md`
+> - **W-SEP15 kolkata-depression CLOSED** 🟢 RESOLVED — pos 5.1, 2,184 impr at Day-42. P12 +1. Log: `memory/experiments/closed-W-SEP15-2026-11-01.md`
+> - **W-CHILD-PSYCH-BLR CLOSED** 🟢 RESOLVED — pos 11.7, 345 impr at Day-42 (target ≤30 met; not P12 — /doctors/ listing). Log: `memory/experiments/closed-CHILD-PSYCH-BLR-2026-11-01.md`
+> - **W-DELHI-THERAPISTS-0918 CLOSED** 🟢 RECOVERED — clicks +1,333% (3→43), CTR 0.04%→3.3%. Day-42 CW 10-19→10-26: 43 clicks, 1,288 impr, pos 16.1. Meta rewrite succeeded. P11 +1 evidence. Log: `memory/experiments/closed-W-DELHI-THERAPISTS-0918-2026-11-01.md`
+> - **W-B26 couples-therapy CLOSED** ⚫ WORSE — pos regression 7.8→~22+ at Day-42 (DATA_GAP: GSC window not cleanly extractable). September Core Update confounded observation window. Superseded by W-COUPLES-1023 (PR #23 full rewrite, baseline pos 32.7 28d, Day-14 gate 2026-11-06). AP12 applies (url_locked). Log: `memory/experiments/closed-W-B26-2026-11-01.md`
+> **QDF_BLOCKED extensions (NOT closed):**
+> - W-BLR-THERAPISTS-0918: extended to 2026-12-11 (T4 2026-10-30; pos 16.2→26.3 worsening; AP12 active — no edits)
+> - W-SEP15 mumbai-depression: extended to 2026-12-08 (T4 2026-10-27; QDF window still active)
+> - W-SEP15 online-psychologist-india: extended to 2026-12-08 (T4 2026-10-27; QDF window still active)
+> **Pending evaluation — INDEXATION (NOT closed, added to BLOG-INDEXATION-VERIFY-01):**
+> - W-SEP16 hindi, telugu, teenage-counselling, best-doctor-for-panic-attacks: 0 impr at Day-42 (confirmed 2x windows). Indexation failure. Kushal: GSC manual indexing request needed.
+> - W-PHOBIA-0918: 0 impr at both Day-21 + Day-42. Indexation failure. Not P12 (excluded).
+> **DATA_GAP (stays OPEN):**
+> - W-PSYCH-VS-PSYCH-CTR-1014: only pre-meta-change baseline available (pre-commit 6dc8c2a9 Oct 14). Day-14 DATA_GAP. Next check: 2026-11-11.
+> **NOT evaluated (not yet due):**
+> - W-FIND-THERAPIST-0922: 42d final 2026-11-03 · W-REL-COUNSELLORS-BLR-0922: 42d final 2026-11-03
+> - W-ASSESS × 17: Day-42 2026-11-06 · W-COUPLES-1023 + W-PSY-BLR-1023: Day-14 2026-11-06
+> **Stale check (>60 days unresolved):** None. All open watches <60 days. No pruning needed.
+> **P12 update:** 31/32 = 96.9% ALL-TIME HIGH (was 28/29 = 96.6%). PRINCIPLES.md updated.
+> **50% 🔴/⚫ check:** 1⚫ / 6 formal closes = 16.7% → NO LEARNER FLAG.
+
 > ### ℹ️ T10 STRATEGIST — 2026-10-31 — No new watches opened or closed. Observation 10-31: nothing due; 12 QDF_BLOCKED locks unchanged. Next: Day-42 finals 11-03; W-ASSESS close + W-COUPLES/W-PSY-BLR Day-14 on 11-06. PRs #21/#24/#27/#52 unmerged (watches open only after live verify).
 > ### ℹ️ T10 STRATEGIST — 2026-10-30 — No new watches opened. T4 finals: therapists-in-delhi RESOLVED, therapists-in-bangalore QDF_BLOCKED to 2026-12-11 (no edits), phobia-treatment-in-bangalore NEEDS_REFRESH = indexation (no watch). PR #52 (3 doctors-listings) awaits merge; watches open only after live verify. Day-42 finals 11-03; W-ASSESS close + W-COUPLES/W-PSY-BLR Day-14 on 11-06.
 > ### ℹ️ T10 STRATEGIST — 2026-10-27 — No new watches opened. W-SEP15 cohort (4 /doctors/ pages) closed by T4: kolkata-anxiety, mumbai-anxiety, kolkata-depression RESOLVED; mumbai-depression + online-psychologist-india QDF_BLOCKED, windows extended to 2026-12-08 (aggregators above; no edits). /blogs/anxiety-counselling = NEEDS_REFRESH is an INDEXATION case (unknown to Google; 200 + in sitemap verified), unlocked but do NOT refresh content. 7 Sep-cohort blogs show 0 impressions -> see BACKLOG BLOG5-INDEXATION-VERIFY-01. Open: W-SEP16 finals 10-28, W-PHOBIA-0918 finals 10-30, W-COUPLES/W-PSY-BLR Day-14 2026-11-06.

@@ -94,3 +94,6 @@ Alternatively, delete the "Pre-run GSC token health check" block manually — it
 
 To veto: rename this file to `t5-gsc-oauth-token-health-check-20261025T2030.vetoed.md` and add a `## Veto reason` section.
 To approve early: rename to `t5-gsc-oauth-token-health-check-20261025T2030.approved.md`.
+
+## Veto reason (Verifier, 2026-11-01)
+Not stdlib-only: unpickling needs google.oauth2 (ImportError would be mislabelled as OAuth failure and hard-block the existing PYTHONPATH retry chain). Does not detect real failure (never refreshes; log shows a timeout, pickle self-refreshed Oct 30). Log quote partly paraphrased. Resubmit as non-blocking diagnostic that distinguishes ImportError from creds and never skips retries.

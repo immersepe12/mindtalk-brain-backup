@@ -78,3 +78,6 @@ The Step 0 block can also be deleted manually in < 30 seconds.
 
 To veto: rename this file to `t9-amplify-github-preflight-check-20261025T2030.vetoed.md` and add a `## Veto reason` section.
 To approve early: rename to `t9-amplify-github-preflight-check-20261025T2030.approved.md`.
+
+## Veto reason (Verifier, 2026-11-01)
+`gh auth status` does not reflect the real ship path (gh_ship.py REST + PAT, or Path B git+keychain), so it can false-abort daily T9. Relative path scripts/gh_ship.py has no cd. Fix for resubmission: `cd` to mindtalk-setup, check `python3 scripts/gh_ship.py sha main`, fall back to `git -C /Users/agent/Documents/GitHub/mindtalk-website ls-remote origin main`, abort only if both fail (SHIP_BLOCKED_NO_PUSH).

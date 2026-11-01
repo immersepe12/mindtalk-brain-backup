@@ -1,3 +1,27 @@
+### 2026-11-01 T12 Learner — 5🟢 Day-42 closes · P12 31/32=96.9% NEW ATH · Indexation cluster 5 pages · ALGO_WATCH CLEARED ✅
+
+- ✅ **ALGO_WATCH CLEARED** (confirmed, cleared 2026-10-15). All verdicts are clean-window GSC data; Core Update confound only applies to W-B26 (observation window overlapped update).
+- 📊 **Watch evaluations this run (due Oct 26–Nov 01):**
+  - 🟢 5 RECOVERED/RESOLVED: kolkata-anxiety (W-SEP15), mumbai-anxiety (W-SEP15), kolkata-depression (W-SEP15), child-psych-blr, delhi-therapists
+  - ⚫ 1 WORSE: W-B26 couples-therapy (/blogs/couples-therapy); pos regression 12.1→~22+ at Day-42; September Core Update confounded window; superseded by W-COUPLES-1023 (PR #23 full rewrite, opened 2026-10-24, Day-14 gate 2026-11-06)
+  - QDF_BLOCKED extended (3): BLR-therapists → 2026-12-11; mumbai-depression + online-psychologist-india → 2026-12-08
+  - pending_evaluation INDEXATION (5): W-SEP16 × 4 (hindi, telugu, teenage-counselling, best-doctor-for-panic-attacks) + W-PHOBIA-0918 → all confirmed 0 impressions at Day-42; under BLOG-INDEXATION-VERIFY-01 umbrella
+  - DATA_GAP (1): W-PSYCH-VS-PSYCH-CTR-1014 — Day-14 evaluation; only pre-meta-change baseline available; stays OPEN, next check 2026-11-11
+  - NOT evaluated (as planned): W-FIND-THERAPIST (42d due 2026-11-03), W-REL-COUNSELLORS-BLR (42d due 2026-11-03), W-ASSESS × 17 (Day-42 due 2026-11-06), W-COUPLES-1023 + W-PSY-BLR-1023 (Day-14 due 2026-11-06)
+- 📈 **P12 UPDATED: 31/32 = 96.9% ALL-TIME HIGH** (was 28/29 = 96.6%). W-SEP15 three Day-42 closures added: kolkata-anxiety (pos 3.7, 1,022 impr), mumbai-anxiety (pos 4.2, 2,847 impr), kolkata-depression (pos 5.1, 2,184 impr). Evidence updated in PRINCIPLES.md.
+- ⚠️ **INDEXATION CLUSTER GROWING**: 5 confirmed zero-impression pages at Day-42 (W-SEP16 × 4 + W-PHOBIA). All are 200/sitemap-confirmed live but Google has not indexed them. BLOG-INDEXATION-VERIFY-01 umbrella active — Kushal must manually request indexing via GSC. This is the #2 BACKLOG priority.
+- 🔍 **W-DELHI-THERAPISTS 🟢 RECOVERED** (+1,333% clicks 3→43, CTR 0.04%→3.3%): Meta rewrite on /doctors/therapists-in-delhi listing page succeeded despite position regression (9.6→16.1). Clicks and CTR responded strongly. P11 evidence +1 (need 2 more to formally write/update).
+- ⚫ **W-B26 (couples-therapy) superseded**: PR #23 full rewrite (W-COUPLES-1023, baseline pos 32.7 28d, Day-14 gate 2026-11-06). AP12 applies: url_locked through at least Day-14 review. AP9 confound: listing-level meta rewrite alone insufficient for a heavily-contested page without content depth change; Core Update confound further muddies attribution.
+- 📊 **Site metrics (Oct 17–23)**: Clicks 5,016 (+0.6% WoW from 4,990), Impr 425,743 (+0.5%), CTR 1.2%, Pos 9.5 (regression from 8.8 — variance flag). 12-week trend: +57% (3,200 Aug → 5,016). TRAJECTORY.md updated.
+- 🎯 **Strategic posture for next week (Nov 3–9)**:
+  1. Merge PRs #21/#24/#27/#52 (Kushal gate) — these are live new content blocked from Amplify production
+  2. BLOG-INDEXATION-VERIFY-01: GSC manual indexing requests for 5+ confirmed zero-impression pages
+  3. W-FIND-THERAPIST + W-REL-COUNSELLORS: 42d finals on 2026-11-03
+  4. W-ASSESS × 17 Day-42 + W-COUPLES-1023 + W-PSY-BLR-1023 Day-14: all gate on 2026-11-06 (T12 next Sunday run)
+  5. Candidate principles from W-ASSESS Day-42 (P-ASSESS-byline-CTR, P-ASSESS-plain-english-retarget) — evaluate data at 11-06 gate
+  6. W-PSYCH-VS-PSYCH-CTR-1014: DATA_GAP, check 2026-11-11
+- **Site posture: GROWTH** (12-week clicks +57%, P12 96.9% ATH, indexation cluster as headwind). Position regression 8.8→9.5 WoW is a variance flag — monitor.
+
 ### 2026-10-24 T10 Strategist: ship path now works in PR mode
 - Repo access is resolved: `secrets/github-pat-mindtalk-website.txt` works via `scripts/gh_ship.py`; PR #20 and #23 merged, PRs #21 and #24 open awaiting Kushal. The 3 ported blogs are 200 on www. PR mode means the merge is the human gate; AMPLIFY_STAGING_URL is not needed.
 - Learning: /doctors-listings/ supply is capped by doctor profiles (0 of 64 tagged outside Bangalore/Hyderabad/Mysore). ~96 city briefs are unshippable until profiles exist; do not count them as runway.

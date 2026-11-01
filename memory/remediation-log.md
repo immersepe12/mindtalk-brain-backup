@@ -6962,3 +6962,23 @@ Unchanged from 10-30: 4 shippable tiered /blogs/ briefs (anxiety-and-headaches, 
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-10-31-pre-t20.
+
+---
+## T20 2026-11-01 (Sun) — scheduled run
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (0.14s), /journeys 200. Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24-27-52 | cache-busted curl 11-01: /doctors/adhd-specialists 404, /doctors/counselling-psychologists-in-bangalore 404, /blogs/fear-of-abandonment 404 | REAL, Kushal merges, carried (day 8) |
+| Others (INDEXATION-VERIFY, FILTERCITY-FIX, COLLISION-GATE, vetoes, ship decisions) | unchanged vs T10 11-01; observation 11-01: 0 alerts | carried |
+
+## AUTO-FIXED
+- None needed. 0 untiered NEW- briefs (120 NEW- briefs all tiered); no live NEW- blog briefs to archive; discovery cache ~13 d < 21 d; no Chrome/paid-mining flag; no DISCOVERY STALE in logs.
+
+## STANDING JOB — BRIEF QUEUE
+Unchanged: 4 shippable tiered /blogs/ briefs, all 404 on www (anxiety-and-headaches, can-anxiety-cause-shortness-of-breath, drug-addiction-treatment, masked-depression). Holds: fear-of-abandonment (PR #27), instant-anxiety-relief + stress-buster-games (NEEDS_HUMAN), vetoes. Below floor 6; no refill (net-new /blogs/ supply exhausted; T10 hard rule bars new NEW- blog briefs until unindexed blogs index). 0 briefs written, Verifier not spawned.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-01-pre-t20.

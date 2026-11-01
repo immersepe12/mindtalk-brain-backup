@@ -258,3 +258,9 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-10-30T20:00+05:30 | STALE-SCAN | clean (t12 proposal 5 days overdue)
 2026-10-31T20:00+05:30 | STRATEGIST-APPLY-PASS | t12-algo-watch-dual-sensor-tiebreaker-20261018T2030 | MISMATCH-SKIP #7 (Before block '#### Step 4b — Core update detection' absent from cowork-tasks/task12-learner.md) | 3 others Apply-on 2026-11-01 future | applied 0
 2026-10-31T20:00+05:30 | STALE-SCAN | clean (t12 proposal 6 days overdue; 14-day alert threshold 2026-11-08)
+2026-11-01T20:00+05:30 | STRATEGIST-APPLY-PASS | t9-amplify-github-preflight-check | Verifier VETO -> renamed .vetoed-by-verifier | applied 0
+2026-11-01T20:00+05:30 | STRATEGIST-APPLY-PASS | t5-gsc-oauth-token-health-check | Verifier VETO -> renamed .vetoed-by-verifier | applied 0
+2026-11-01T20:00+05:30 | STRATEGIST-APPLY-PASS | t10-system-change-compatibility-guard | Verifier NEEDS_HUMAN -> left in queue | applied 0
+2026-11-01T20:00+05:30 | STRATEGIST-APPLY-PASS | t12-algo-watch-dual-sensor-tiebreaker | MISMATCH-SKIP #8 (Before block absent) | applied 0
+2026-11-01T20:00+05:30 | STALE-SCAN | clean (t12 proposal 7 days overdue; 14-day alert 2026-11-08)
+2026-11-01T20:30:00+05:30 | T13-QUEUE-HYGIENE | proposal: t12-algo-watch-dual-sensor-tiebreaker-20261018T2030 | action: VETOED by T13 meta-learner (8 consecutive MISMATCH-SKIPs; Before block '#### Step 4b — Core update detection' never existed in task12-learner.md) | replaced by: t12-algo-watch-tiebreaker-corrected-20261101T2030.md
