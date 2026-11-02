@@ -6982,3 +6982,24 @@ Unchanged: 4 shippable tiered /blogs/ briefs, all 404 on www (anxiety-and-headac
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-01-pre-t20.
+
+---
+## T20 2026-11-02 (Mon) — scheduled run (15:38 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (0.19s), /journeys 200. Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24-27-52 | cache-busted curl 11-02: /blogs/fear-of-abandonment 404, /doctors/adhd-specialists 404 | REAL, Kushal merges, carried (day 9) |
+| DFSEO-402-TOPUP-02 | logs/rank-summary-2026-11-02.txt: 402 on all 30 iterations, 0/316 keywords | REAL, payment -> escalate |
+| Others (INDEXATION-VERIFY, FILTERCITY-FIX, COLLISION-GATE, vetoes) | unchanged vs T10 11-02 | carried |
+
+## AUTO-FIXED
+- None needed. 0 untiered NEW- briefs; no live NEW- blog briefs to archive; new-content-opportunities.json refreshed 11-02 (T5); no Chrome/paid-mining flag.
+
+## STANDING JOB — BRIEF QUEUE
+4 shippable tiered /blogs/ briefs (anxiety-and-headaches, can-anxiety-cause-shortness-of-breath, drug-addiction-treatment, masked-depression), all 404 on www. 9 /blogs/ briefs total, all 404. Below floor 6; no refill (net-new /blogs/ supply exhausted; T10 hard rule bars new NEW- blog briefs until unindexed blogs index). 0 briefs written, Verifier not spawned.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-11-02-pre-t20.

@@ -264,3 +264,5 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-11-01T20:00+05:30 | STRATEGIST-APPLY-PASS | t12-algo-watch-dual-sensor-tiebreaker | MISMATCH-SKIP #8 (Before block absent) | applied 0
 2026-11-01T20:00+05:30 | STALE-SCAN | clean (t12 proposal 7 days overdue; 14-day alert 2026-11-08)
 2026-11-01T20:30:00+05:30 | T13-QUEUE-HYGIENE | proposal: t12-algo-watch-dual-sensor-tiebreaker-20261018T2030 | action: VETOED by T13 meta-learner (8 consecutive MISMATCH-SKIPs; Before block '#### Step 4b — Core update detection' never existed in task12-learner.md) | replaced by: t12-algo-watch-tiebreaker-corrected-20261101T2030.md
+2026-11-02T20:00+05:30 | STRATEGIST-APPLY-PASS | 3 proposals Apply-on 2026-11-08 skipped (future); t10-system-change-compatibility-guard NEEDS_HUMAN unchanged, left in queue | applied 0
+2026-11-02T20:00+05:30 | STALE-SCAN | clean

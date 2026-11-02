@@ -121,3 +121,14 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | 2026-W44 | /illnesses/personality-disorder | Dr. Sneha | 50 | brief_generated |
 | 2026-W44 | /treatments/psychotherapy | Dr. Krishna K R | 45 | brief_generated |
 | 2026-W44 | /blogs/anger-management-therapy | Abhimanyu Chandak | 25 | brief_generated |
+
+## W45 (2026-11-03) — 2026-11-02 generated
+
+| Page | Reviewer | Score | Reason |
+|------|----------|-------|--------|
+| /illnesses/autism-spectrum-disorder | dr-arohi-vardhan | 80 | YMYL p1 0%CTR; competitor video gap; 104d since last pick; neurodev cluster |
+| /treatments/group-therapy | puja-jaiswara | 75 | YMYL pos 28.2 rank loss; competitor video gap; near-me queries; 83d |
+| /blogs/how-to-fix-your-sleep-schedule-quickly | dr-rayani-m-dessa | 70 | 4,433 impr; 0.27% CTR at pos 4.1; AI Overview candidate; non-YMYL diversity |
+| /treatments/rtms-therapy | dr-arun-kumar | 65 | YMYL; competitor TMS video gap; near-me queries; 62d |
+| /illnesses/schizophrenia | dr-thejus-kumar | 65 | YMYL p1 0%CTR; competitor video gap; 62d |
+| /illnesses/substance-use-disorder | vishal-kasal | 60 | YMYL; never picked; near-me treatment queries |
