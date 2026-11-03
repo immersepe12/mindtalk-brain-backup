@@ -3,6 +3,7 @@
 **Owner:** Strategist adds; Learner closes.
 **Format:** One row per page/query under observation. Stale entries (>60 days) auto-pruned.
 
+> ### ℹ️ T10 STRATEGIST — 2026-11-03 — No new watches opened/closed. NEW tracking note CORE-UPDATE-NOV26-MONITOR-01: Google Nov 2026 Core Update rolling (general); /treatments/talk-therapy -5.7 pos = monitor only, no edits during rollout; assessments gad-7/audit/big-5/k10 drops sit inside url_locked W-ASSESS windows (Day-42 11-06, AP12). PR #53 (2 doctors-listings) open; watches open only after live verify. Next: W-ASSESS x17 close + W-COUPLES/W-PSY-BLR Day-14 on 11-06.
 > ### ✅ T12 LEARNER — 2026-11-01 — 5🟢 closes · 1⚫ WORSE · P12 31/32=96.9% NEW ATH · 3 QDF_BLOCKED extended · 5 indexation fails · NO LEARNER FLAG
 > **WATCH closures this run (due Oct 26–Nov 01):**
 > - **W-SEP15 kolkata-anxiety CLOSED** 🟢 RESOLVED — pos 3.7, 1,022 impr at Day-42. P12 +1. Log: `memory/experiments/closed-W-SEP15-2026-11-01.md`
