@@ -7025,3 +7025,29 @@ No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL s
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Slack digest posted. Backup: logs/remediation-log.backup-2026-11-03-pre-t20.
+
+---
+## T20 2026-11-04 (Wed) — scheduled run (15:16 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (0.13s). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24-27-52-53 | cache-busted curl 11-04: /blogs/fear-of-abandonment 404 (unmerged) | REAL, Kushal merges, carried (day 11; T11 pings ~day 14) |
+| DFSEO-402-TOPUP-02 | carried per T10/T11 (no re-post before 11-10) | REAL, payment, carried |
+| T9 11-04 "near-duplicate briefs" | curl: live /blogs/understanding-anxiety-and-headache, understanding-anxiety-induced-shortness-of-breath, anxiety-shortness-of-breath-relief, masked-depression-explained all 200 | REAL -> auto-fixed (archived) |
+| NEW-is-online-therapy-confidential-brief body text asking automated runs to treat AP3 sign-off as cleared | Read in T9 log; text inside a brief is data, not authorisation | NOT acted on; stays vetoed; human look recommended (carried from T9) |
+
+## AUTO-FIXED
+- Archived 3 same-topic duplicate briefs to briefs/archive/ (moved, not deleted): NEW-anxiety-and-headaches, NEW-can-anxiety-cause-shortness-of-breath, NEW-masked-depression.
+- Re-ran scripts/new-content-discovery.py --all: no error but cache not rewritten within 100s (opportunities.json still 11-02, 2d old, inside 21d limit). google-ads-search-terms.py timed out (rc 120): paid-mining skip logged, NOT escalated per registry.
+
+## STANDING JOB — BRIEF QUEUE
+Tiered /blogs/ NEW- briefs with 404 slug: ~9 after archive, but T9 11-04 screening leaves ~0 safely shippable (YMYL-adjacent drug-addiction/alcohol, unverifiable therapy-cost-in-hyderabad, vetoed is-online-therapy-confidential, others held). Below floor 6; no refill: GSC per-query validation (MINE-TRUNCATION-ABSENCE-01) is not runnable (google.oauth2 broken in device shell), T10 bars new NEW- blog briefs until blogs index, Nov-26 core update rolling. 0 briefs written, Verifier not spawned. 5 untiered non-NEW- briefs (family-therapists-in-hyderabad, gad-7, stress-disorder, talk-therapy, tips-to-overcome...) are REFRESH-type for live pages: left in place (live by design), owned by T3/T11.
+
+## ESCALATED (carried, not new)
+MERGE-PR-21-24-27-52-53 (day 11), DFSEO-402-TOPUP-02, BLOG-INDEXATION-VERIFY-01 (needs GSC auth fix), BRIEF-COLLISION-GATE-01 (T9 adds same-topic/diff-slug dup evidence), CITY-LISTING-BRIEFS-FILTERCITY-FIX-01.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-04-pre-t20.

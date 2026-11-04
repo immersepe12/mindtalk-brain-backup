@@ -57,7 +57,7 @@
 - /doctors/psychologists-in-pune — PROPOSE (14 clicks W44, no page exists, P19 W4)
 - /doctors/psychologists-in-delhi — MAINTAIN (Delhi NCT 63 organic clicks W44)
 - /doctors/therapists-in-uttar-pradesh — PROPOSE (UP 25 organic W44, P18 W4)
-- /doctors/psychologists-in-kochi — HOLD (Kerala 12 W44 — 3rd step-back, wait W45)
+- /doctors/psychologists-in-kochi — HOLD PERMANENT (P8 ABANDONED W45 — Kerala 3 clicks, 4th step-back)
 - /doctors/psychologists-in-kolkata — WATCH (WB 16 W44 — stable, below threshold)
 
 ---
@@ -87,9 +87,9 @@
 
 ---
 
-### Pattern 8: Kerala market 🔴 CONCERN — 3-WEEK DECLINING TREND
+### Pattern 8: Kerala market ⚫ ABANDONED — 4TH CONSECUTIVE STEP-BACK
 
-**Status:** 🔴 DEMOTED TO CONCERN. Kerala 12 organic clicks W44 (-36.8% WoW from W43 19 total, 3rd consecutive step-back).
+**Status:** ⚫ ABANDONED W45. Kerala 3 organic clicks W45 (4th consecutive step-back: W41 ~33, W42 ~44, W43 19, W44 12, W45 3). Pattern non-recoverable — below minimum threshold for 4 consecutive weeks. All T5 Kerala proposals on PERMANENT HOLD until pattern re-emerges with ≥30 clicks for 3 consecutive weeks (minimum W49 earliest possible)
 
 | Week | Kerala clicks | WoW |
 |---|---:|---|
@@ -168,9 +168,9 @@
 
 ## Emerging Patterns (< 3 weeks — MONITOR)
 
-### Pattern 21: Haryana/Gurgaon NCR emerging market 🟡 WEEK 2
+### Pattern 21: Haryana/Gurgaon NCR emerging market ⚪ REVERTED TO MONITOR
 
-**Status:** 🟡 WEEK 2. Haryana 15 organic clicks W44 (2.2% of organic). First time Haryana crossed 10-click threshold.
+**Status:** ⚪ REVERTED TO MONITOR W45. W45: 2 clicks (collapsed from 15 W44). W3 confirmation FAILED — did not hold above 10-click threshold. Diwali factor possible but insufficient to override revert rule. Watch W46 for re-emergence.
 - Gurgaon/NCR as suburb of Delhi NCR market; may be showing as Haryana due to geo mapping
 - Week 2 signal — need W45 for 3rd-week confirmation before T5 action
 - Watch for: Is this growing independently or part of Delhi NCR expansion?

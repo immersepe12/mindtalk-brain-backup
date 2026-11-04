@@ -387,3 +387,47 @@ One line per Task 15 run. Most recent at bottom.
 - ✅ doctor→book CTA +6.5% (38.3%→40.8%) — structural improvement holding
 - ✅ form_submitted rate STABLE at 0.64% of page views
 - ✅ lp_form_submitted +10.1% (79→87)
+
+
+2026-11-04T10:00 IST | T15 SCHEDULED — weekly conversion monitor | 7d trailing (total events / unique funnel) |
+  NOTE: 🎄 DIWALI WEEK — Diwali Oct 29. This trailing 7-day window (Oct 28–Nov 3) covers the core festive period. All conversion metrics expected to be suppressed. Compare vs 2026-10-21 for normalized trend.
+  VOLUME (total events | unique funnel in parentheses):
+  - $mp_web_page_view: 56,426 total (funnel A entry: 14,769 unique, +11.8% WoW vs 13,210 ✅)
+  - blog_viewed: 2,303 | doctor_profile_viewed: 3,873 total (funnel: 2,090 unique, +25% WoW) | treatment_page_viewed: 604 | illness_page_viewed: 266 | riya_page_viewed: 20 (+42.9%✅ vs 14)
+  - book_appointment_clicked: 1,139 total (funnel: 481 unique, -53.9%⚠ vs 1,043 — DIWALI) | cta_clicked: 677 | whatsapp_clicked: 90 | call_clicked: 50
+  - form_submitted: 51 total (funnel: 26 unique, -69.4%⚠ vs 85 — DIWALI) | lp_form_submitted: 21 (-75.9%⚠ vs 87 — DIWALI)
+  - form_started: 504 | form_error: 1 | lead_create_failed: 12 (-47.8%✅ vs 23)
+  FUNNELS (unique users, 7d conversion window):
+  - A (main): page view 14,769 → book CTA 481 (3.3%, was 7.9%) → form_submit 26 (5.4% of CTA; 0.18% of PVs, was 0.64%)
+    ⚠⚠ All rate drops are Diwali suppression, not structural regression
+  - B (doctor-driven): doctor_profile 2,090 → book CTA 307 (14.7%, was 40.8%) → form_submit 3 (1.0% of CTA)
+    ⚠ Rate drop: 2,090 unique doctor viewers vs 1,673 prior (+25%), but book clicks 307 vs 683 (-55%) — Diwali conversion suppression
+  - C (where-to-start): viewed 16 → started 6 (37.5%) → completed 6 (100% of started; 37.5% overall, was 55.6%)
+    Note: low volume (16 viewers) — not statistically significant
+  KEY METRICS:
+  - Backend fail rate (vs form_started): 12/504 = 2.4% ✅✅ (was 2.0% last week — STABLE and HEALTHY)
+  - Backend fail rate (vs all submissions): 12/(51+21+12) = 14.3% (tracking method: last 3 wks were ~11.8%/5.5% — slight uptick but tiny absolute)
+  - Net leads (total events): 51+21 = 72 (vs 157+87=244 last week = -70.5% — DIWALI)
+  - lp:form ratio: 21/51 = 0.41:1 (on-site form dominant, consistent pattern)
+  - Doctor→book CTA: 14.7% (was 40.8% — -64% DIWALI SUPPRESSION; absolute book clicks from doctor path: 307 vs 683)
+  - Riya discovery rate: 20/14,769 = 0.135% (was 14/13,210 = 0.106% — +27.4%✅ BEST in 4 weeks)
+  WoW FLAGS (>20% vs 2026-10-28):
+  🎄 DIWALI CONTEXT: ALL negative flags below are festive-week suppression. W43 (Navratri) showed -31% payments; Diwali is the largest Indian festival — deeper dip is expected. Do NOT treat as structural regression.
+  ⚠⚠⚠ form_submitted (total) -67.5% (157→51)
+  ⚠⚠⚠ lp_form_submitted -75.9% (87→21)
+  ⚠⚠⚠ book_appointment_clicked (total) -61.1% (2,930→1,139)
+  ⚠⚠⚠ doctor→book CTA -64.0% (40.8%→14.7%)
+  ⚠⚠ form_submitted (funnel unique) -69.4% (85→26)
+  ✅ lead_create_failed -47.8% (23→12) — backend healthy; fail rate 2.4% (best sustained level since P0 resolution)
+  ✅ Unique funnel entrants +11.8% (13,210→14,769) — organic traffic growing THROUGH festival season
+  ✅ riya_page_viewed +42.9% (14→20) — +27.4% discovery rate — best in 4 weeks
+  NOT FLAGGED: form_started: 504 (vs 1,142 = -55.9%, suppressed); backend fail rate 2.0%→2.4% (stable healthy)
+  IMPLICATIONS:
+  - This is a textbook Diwali dip. TRAJECTORY.md W44 note explicitly flagged "Diwali W45 (Oct 29) — expect seasonal conversion dip."
+  - Backend fail rate at 2.4% = best sustained level since the June/July peak (was 70.9%). P0 fully resolved and holding.
+  - Unique visitors UP +11.8% through Diwali — SEO content is delivering traffic even when users are not in a booking mindset.
+  - Post-Diwali recovery expected next week (Nov 11 run). Pre-position: ads restart, content push to capture returning demand.
+  - Riya page discovery at 0.135% (best in 4 weeks) — overthinking/situationship content may be routing users to Riya even during holidays.
+  - Doctor→book CTA absolute (307 clicks) is below any recent non-Diwali week. Recovery to 38-40% rate should return next week if Diwali suppression lifts.
+
+| 2026-11-04 (7d) | 56,426 total / 14,769 funnel | 481 funnel / 1,139 total | 26 funnel / 51 total | 21 | 12 ✅ | 14.7% ⚠ | 🎄 DIWALI WEEK (Oct 29): all conversions -50% to -75% (expected seasonal — do NOT treat as regression); backend fail 2.4%✅ (sustained healthy); unique visitors +11.8%✅ (organic growing through festive); riya=20✅ (+43%, best in 4wks); recovery expected 2026-11-11 |

@@ -333,3 +333,63 @@
 7. 🟡 Kerala P8 demoted to CONCERN — 3 consecutive step-backs; hold all Kerala T5 proposals until W45 confirms recovery
 8. 🟡 Diwali effect: W45 (Oct 28–Nov 4) may show Diwali seasonal dip (Oct 29 festival) — plan for W45 data anomaly
 9. ⚫ GA4: SKIPPED — Supermetrics trial expired 2026-07-27 (14 consecutive weeks without GA4). Action: renew Supermetrics or configure GA4 direct API.
+
+---
+
+## W45 Signal Section — 2026-11-04 (Oct 28–Nov 3, Diwali Week)
+
+**T19 Conversion Intelligence run. Organic vs paid HARD SEPARATION applied.**
+
+### 🎆 DIWALI PARADOX — HEADLINE SIGNAL
+Visitors +11.8% (14,165) — large curious Diwali audience. Organic book clicks -52.7% (326). BUT organic payments -0.6% (166) + organic bookings -2.4% (202) — ESSENTIALLY FLAT. Conversion pipeline RESILIENT through festival week. Existing high-intent users converted; festival browsers did not. This is structural strength, not weakness.
+
+### Revenue Signals (Organic-Attributable)
+- **Organic-attributable payments: 166** (W44: 167, -0.6% ✅ FLAT)
+- **Organic bookings: 202** (W44: 207, -2.4% ✅ FLAT)
+- **Paid payments: 20** (google 14, GMB/gmb 6)
+- **Total payments: 185** (W44: 192, -3.6%)
+- **Total bookings: 227** (W44: 234, -3.0%)
+- UTM undefined: 158/185 (85.4%) — UTM chain broken 18+ weeks (ESCALATE)
+- mindtalk_web payments: 1 (low-vol)
+- chatgpt.com payments: 1 (Diwali dip; P5 MAJOR structure intact)
+
+### Engagement Signals
+- Assessment Completed: 468 (W44 ATH 553, -15.4% Diwali)
+- Journey Task: 34 (W44: 36, -5.6%)
+- Stress Tracker: 58 (W44: 72, -19.4%)
+- ChatGPT book clicks: 42 (W44: 84, -50% Diwali — P5 MAJOR maintained)
+- Top ChatGPT destinations: online-psychologist-india (6), online-psychiatry (6), online-therapists-india (3)
+
+### UX / Friction Signals
+- **Dead rate: 9.01% ✅ FIRST BELOW 10% THRESHOLD** (5-week downtrend: 10.4%→10.7%→10.6%→10.22%→9.01%)
+- **Rage clicks: 261 ⚠️ +18.6% spike** (W44: 220) — Diwali-week browsing friction; monitor W46
+- Dead clicks: 1,276 (-1.5% ✅)
+- /home dead clicks: CRITICAL PERSISTENT 9th week unresolved
+
+### Geographic Signals
+Karnataka 106 (32.5%) | Delhi 32 (9.8%) | Maharashtra 30 (9.2%) | Tamil Nadu 23 (7.1%) | Telangana 22 (6.7%) | UP 9 | Rajasthan 7 | MP 7 | WB 6
+International: US ~22, Gulf ~6, Europe ~7, Canada ~3
+
+### Pattern Updates
+- **P8 Kerala: ABANDONED** (4th step-back, 3 clicks W45 → 0.9% share; was CONCERN). Remove from geo-content targets.
+- **P21 Haryana: REVERTED TO MONITOR** (2 clicks W45, W3 confirmation failed; was EMERGING W2)
+- **P5 ChatGPT: MAJOR CONFIRMED maintained** (42 W45 Diwali dip, not structural collapse)
+- **P18 UP: CONFIRMED maintained** (9 clicks W45 despite Diwali -64%; hold at CONFIRMED)
+- **P19 Maharashtra: CONFIRMED maintained** (30 clicks W45 despite Diwali -58.3%; hold at CONFIRMED)
+
+### Content Angles for T5 (W45 proposals)
+1. Delhi doctors expansion (Dwarka, Rohini, Vasant Kunj sub-pages) — HIGH PRIORITY
+2. Psychiatrists-in-Mumbai page — HIGH PRIORITY (ChatGPT psychiatry demand + P19 CONFIRMED)
+3. FAQ schema on online-psychologist-india, online-psychiatry, online-therapists-india — HIGH (AI citation)
+4. Tamil Nadu specialist cluster (Coimbatore + Tamil CBT) — MEDIUM
+5. ADHD + Bangalore intersection — MEDIUM (validate W46)
+
+### Urgent Flags for T10 Strategist
+1. **Rage click spike +18.6% (261)** — Diwali trigger likely; watch W46 for persistence
+2. **UTM chain broken 18+ weeks (85.4% undefined)** — ESCALATE; impossible to prove organic SEO ROI
+3. **P8 Kerala ABANDONED** — Remove from all active planning
+4. **Dead rate below 10% for first time** — celebrate + continue UX improvement investment
+5. **W46 recovery expected** — Diwali anomaly clears; forecast organic book clicks recovery to 650-700 range if structural trend maintained
+
+### GA4 Status
+SKIPPED — Supermetrics trial expired 2026-07-27 (15 consecutive weeks). No behavioral funnel data.

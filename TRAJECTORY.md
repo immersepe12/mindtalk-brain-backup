@@ -117,6 +117,7 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 | 2026-10-14 | 55,558 | 940 | 79 | 38.4% ✅ | 32.9% ✅ | 61.2% ⚠ | 341 ✅ | +47.1% CTA ✅; -29.2% doc funnel ⚠ |
 | 2026-10-21 | 54,129 total / 12,138 funnel | 910 funnel | 78 funnel / 145 total | 79 | 13 🎉🎉🎉 | 38.3% ✅ | 🎉🎉🎉 P0 RESOLVED: backend fail 1.4% vs form_started (32.9%→1.4%, -95.8%); backend fail vs all 5.5% (was 61.2%); net leads 157 (78+79) stable (-0.6%); doctor→book CTA 38.3% STABLE ✅; all other metrics within ±5% WoW; where-to-start 23 viewed, 15 started (65%), 15 completed (100%); riya=23 stable |
 | 2026-10-28 (7d) | 58,572 total / 13,210 funnel | 1,043 funnel / 2,930 total | 85 funnel / 157 total | 87 | 23 ⚠ | 40.8% ✅ | ⚠ lead_create_failed +76.9% (13→23, backend fail creeping: 5.5%→11.8% vs all); ⚠ riya -39.1% (23→14); ✅ doctor→book CTA +6.5% (38.3%→40.8%); form_submitted rate STABLE 0.64%; ✅ book CTA +14.6% funnel |
+| 2026-11-04 (7d) | 56,426 total / 14,769 funnel | 481 funnel / 1,139 total | 26 funnel / 51 total | 21 | 12 ✅ | 14.7% ⚠ | 🎄 DIWALI WEEK (Oct 29): all conversions -50% to -75% (expected seasonal — do NOT treat as regression); backend fail 2.4%✅ (sustained healthy); unique visitors +11.8%✅ (organic SEO growing through festive); riya=20✅ (+43%, best in 4wks); recovery expected 2026-11-11 |
 
 
 **Variance > 20% WoW (2026-10-21 reading — vs 2026-10-14):**
@@ -130,6 +131,16 @@ _Maintained by T15 Conversion Monitor (Wed) — first full reading 2026-06-17 (i
 - ✅ doctor→book CTA: **+6.5%** (38.3%→40.8%) — structural improvement holding post P0 fix.
 - ✅ form_submitted rate: STABLE at 0.64% of page views.
 - ✅ lp_form_submitted: **+10.1%** (79→87).
+
+**Variance > 20% WoW (2026-11-04 reading — vs 2026-10-28 — 🎄 DIWALI WEEK):**
+- 🎄 form_submitted: **-67.5%** (157→51 total) — DIWALI WEEK (Oct 29 Diwali; trailing 7d = Oct 28–Nov 3). DO NOT treat as regression. W44 TRAJECTORY note explicitly predicted this.
+- 🎄 lp_form_submitted: **-75.9%** (87→21) — DIWALI WEEK. Expected.
+- 🎄 book_appointment_clicked: **-61.1%** (2,930→1,139 total) — DIWALI WEEK. Expected.
+- 🎄 doctor→book CTA: **-64.0%** (40.8%→14.7%) — DIWALI WEEK. Expected.
+- ✅ lead_create_failed: **-47.8%** (23→12) — backend fail rate 2.4% = best sustained level since P0 resolution. No engineering action needed.
+- ✅ Unique funnel entrants: **+11.8%** (13,210→14,769) — organic SEO growing through festive season. Content working.
+- ✅ riya_page_viewed: **+42.9%** (14→20) — discovery improving; best in 4 weeks.
+- Recovery: post-Diwali rebound expected 2026-11-11 run. Watch form_submitted + doctor→book CTA for V-shaped recovery.
 
 **Variance > 20% WoW (2026-09-23 reading — vs 2026-08-26):**
 - lead_create_failed: **+2,233%** 🚨🚨🚨 (18→420) — backend fail 13.7%→69.4% — Freshsales/webhook broken
@@ -397,3 +408,25 @@ Strategist reads this every day before deciding actions — knows where the gaps
 - **ChatGPT:** permanently skipped in auto-mode (safety classifier)
 - **Claude.ai, Google AI OV:** untested
 - **Action required:** Kushal to resolve Chrome extension duplication so T17 can run unattended again. Consider adding a browser `deviceId` preference to config.json.
+
+---
+
+### W45 Conversion KPI Update — 2026-11-04 (Oct 28–Nov 3, Diwali Week)
+
+| Metric | W45 | W44 | Δ% | Context |
+|---|---|---|---|---|
+| Unique visitors | 14,165 | 12,672 | +11.8% | Diwali browsing surge |
+| Organic book clicks | 326 | 690 | -52.7% | Diwali intent suppression |
+| Organic payments | 166 | 167 | -0.6% ✅ | FLAT — pipeline held |
+| Organic bookings | 202 | 207 | -2.4% ✅ | FLAT — pipeline held |
+| Total payments | 185 | 192 | -3.6% | Diwali |
+| Dead rate | 9.01% | 10.22% | -1.21pp ✅ | FIRST BELOW 10% THRESHOLD |
+| Rage clicks | 261 | 220 | +18.6% ⚠️ | Diwali spike |
+| Assessment Completed | 468 | 553 | -15.4% | Diwali (ATH was W44) |
+| ChatGPT book clicks | 42 | 84 | -50.0% | Diwali dip; P5 MAJOR maintained |
+| Organic intent rate | 2.30% | 5.45% | -3.15pp | Diwali anomaly — not structural |
+| Perplexity citations (T17) | 8/10 (ATH) | 8/10 | flat | Maintained all-time high |
+
+**W45 AI Citation Status:** Chrome stall 3rd consecutive week (W18-W20 unattended conflict). Perplexity 8/10 (all-time high maintained from W19). ChatGPT permanently skipped auto-mode. T17 Chrome issue remains unresolved — Kushal review needed.
+
+**W45 Conversion Headline:** 🎆 DIWALI PARADOX. Visitors +11.8% but click intent -52.7%. Organic payments held FLAT (-0.6%). Dead rate 9.01% first below 10% threshold. Conversion pipeline resilient. P8 Kerala ABANDONED (4th step-back). P21 Haryana REVERTED (W3 failed). W46 recovery forecast: organic book clicks 650-700 range.

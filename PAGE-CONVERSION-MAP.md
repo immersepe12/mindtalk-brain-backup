@@ -1,57 +1,55 @@
-# Page Conversion Map — Updated 2026-10-28 (W44)
+# Page Conversion Map — Updated 2026-11-04 (W45)
 
-**Source:** T19 Conversion Intelligence. Site-level run (W44). 7-day: Oct 21–27, 2026. Organic vs paid HARD SEPARATION applied per 2026-06-22 rule. Paid UTM sources excluded from organic metrics: google, Google, GMB, gmb, sitelink, facebook, Facebook, fb, Fb, meta, Meta, instagram, Instagram, ig, linkedin, LinkedIn.
+**Source:** T19 Conversion Intelligence. Site-level run (W45). 7-day: Oct 28–Nov 3, 2026. Organic vs paid HARD SEPARATION applied per 2026-06-22 rule. Paid UTM sources excluded from organic metrics: google, Google, GMB, gmb, sitelink, facebook, Facebook, fb, Fb, meta, Meta, instagram, Instagram, ig, linkedin, LinkedIn.
 **Read by:** T10 Strategist (action scoring), T18 Professional Input (Leaky Bucket queue), T5 New Content Discovery (pattern weighting).
 
 ---
 
-## Site-Level KPIs (W44 — 7d Oct 21–27)
+## Site-Level KPIs (W45 — 7d Oct 28–Nov 3)
 
-| Metric | W44 (7d) | vs W43 (7d) | Δ% |
+| Metric | W45 (7d) | W44 (7d) | Δ% |
 |---|---|---|---|
-| Unique visitors | 12,672 | 12,207 | +3.8% 🟢 |
-| Organic book clicks (unique) | 690 | 611 | +12.9% 🟢🟢 |
-| Organic payments | 167 | 138 | +21.0% 🔥 |
-| Organic bookings | 207 | 178 | +16.3% 🟢 |
-| Total payments | 192 | 157 | +22.3% 🔥 |
-| Total bookings | 234 | 201 | +16.4% 🟢 |
-| mindtalk_web payments | 2 | 0 | 🟢 RECOVERY |
-| mindtalk_web bookings | 2 | 0 | 🟢 RECOVERY |
-| chatgpt.com book clicks (unique, utm_source) | 84 | 76 | +10.5% 🟢 |
-| chatgpt.com payments | 2 | 3 | flat ✅ |
-| Assessment Completed | 553 | 520 | +6.3% 🔥 ALL-TIME RECORD |
-| Started Journey Task | 36 | 33 | +9.1% 🟢 3rd consecutive week |
-| Stress Tracker Started | 72 | 57 | +26.3% 🟢 |
-| Rage clicks (unique) | 220 | 222 | -0.9% ✅ |
-| Dead clicks (unique) | 1,295 | 1,296 | flat ⚠️ |
-| Rage rate | ~1.7% | ~1.8% | improving ✅ (<5% threshold) |
-| Dead rate | 10.22% | 10.6% | ⚠️ still above 10% threshold |
-| Organic intent rate | 5.45% | 5.0% | +0.45pp 🟢 |
+| Unique visitors | 14,165 | 12,672 | +11.8% 🟢 |
+| Organic book clicks (unique) | 326 | 690 | -52.7% 🔴 DIWALI |
+| Organic payments | 166 | 167 | -0.6% ✅ FLAT |
+| Organic bookings | 202 | 207 | -2.4% ✅ FLAT |
+| Total payments | 185 | 192 | -3.6% |
+| Total bookings | 227 | 234 | -3.0% |
+| mindtalk_web payments | 1 | 2 | — low vol |
+| chatgpt.com book clicks (unique, utm_source) | 42 | 84 | -50.0% 🔴 DIWALI |
+| chatgpt.com payments | 1 | 2 | — low vol |
+| Assessment Completed | 468 | 553 | -15.4% 🔴 DIWALI |
+| Started Journey Task | 34 | 36 | -5.6% |
+| Stress Tracker Started | 58 | 72 | -19.4% |
+| Rage clicks (unique) | 261 | 220 | +18.6% ⚠️ SPIKE |
+| Dead clicks (unique) | 1,276 | 1,295 | -1.5% ✅ |
+| Dead rate | 9.01% | 10.22% | ✅ FIRST BELOW 10% THRESHOLD |
+| Organic intent rate | 2.30% | 5.45% | 🔴 DIWALI SUPPRESSED |
 
-**W44 HEADLINE:** Post-Navratri/Dussehra FULL RECOVERY confirmed. Organic payments +21%, bookings +16.3%, visitors +3.8%. Assessment Completed: 553 = ALL-TIME RECORD (3rd consecutive positive WoW). mindtalk_web payments recovered from 0→2.
+**W45 HEADLINE — DIWALI PARADOX:** Visitors +11.8% (14,165 curious festival browsers) BUT organic book clicks -52.7% (326). YET organic payments -0.6% (166) + organic bookings -2.4% (202) — ESSENTIALLY FLAT. Conversion pipeline is RESILIENT. High-intent existing pipeline held through festival week while browsing intent suppressed. Dead rate 9.01% = FIRST TIME BELOW 10% THRESHOLD. Rage clicks spiked +18.6% (261 — monitor for specific UI friction).
 
 ---
 
-## Attribution Layers (W44 — 7d)
+## Attribution Layers (W45 — 7d)
 
 | Layer | Payments | Bookings | Book clicks (unique) | Notes |
 |---|---:|---:|---:|---|
-| mindtalk_web (true SEO-attributed) | 2 | 2 | — | RECOVERY from W43 zero; high variance at low volume |
-| chatgpt.com (AI search) | 2 | — | 84 | P5 W11 CONFIRMED: +10.5% WoW, 12th consecutive positive signal |
-| Perplexity (AI search) | 0 | 0 | 0 | Zero — track missing or genuine absence |
-| Paid Google/GMB (excluded from organic) | 20 Google + 7 GMB = 27 | — | ~302 est | Paid excluded from organic metrics per hard rule |
-| Paid Meta/Other | ~0 | — | — | minimal/zero |
-| direct | 7 | — | — | 3.6% of total |
-| Organic/undefined | 156 | 207 | 690 | 81.3% undefined utm_medium (UTM chain STILL broken) |
+| mindtalk_web (true SEO-attributed) | 1 | — | — | Low-vol; UTM chain still broken |
+| chatgpt.com (AI search) | 1 | — | 42 | P5 CONFIRMED MAJOR — Diwali dip, not structural collapse |
+| Perplexity (AI search) | 0 | 0 | 0 | SKIPPED this run |
+| Paid Google (excluded from organic) | 14 | — | — | google utm_source |
+| Paid GMB (excluded from organic) | 6 | — | — | GMB + gmb combined |
+| direct | 7 | — | — | 3.8% of total |
+| Organic/undefined | 166 | 202 | 326 | 89.7% organic-attributable |
 
-**UTM source breakdown (payments W44 — total 192):**
-- undefined: 156 (81.3%)
-- google (paid): 20 (10.4%)
-- gmb (paid): 7 (3.6%)
-- direct: 7 (3.6%)
-- chatgpt.com: 2 (1.0%)
-- mindtalk_web: 2 (1.0%)
-- **UTM chain still broken through checkout — PERSISTENT 17+ weeks. 81.3% of payments have no source attribution.**
+**UTM source breakdown (payments W45 — total 185):**
+- undefined: 158 (85.4%)
+- google (paid): 14 (7.6%)
+- GMB/gmb (paid): 6 (3.2%)
+- direct: 7 (3.8%)
+- chatgpt.com: 1 (0.5%)
+- mindtalk_web: 1 (0.5%)
+- **UTM chain STILL BROKEN through checkout — PERSISTENT 18+ weeks. 85.4% of payments have no source attribution (W44: 81.3%).**
 
 ---
 
@@ -59,31 +57,32 @@
 
 | Paid source | Payments | Notes |
 |---|---:|---|
-| google (Google Ads) | 20 | Increased vs W43 13 — Google Ads spend up? |
-| GMB (Google My Business) | 7 | Consistent |
+| google (Google Ads) | 14 | Diwali period — consistent |
+| GMB + gmb (Google My Business) | 6 | Consistent |
 | Meta/Facebook/Instagram | ~0 | Negligible |
-| **Paid Total** | **27** | 14.1% of all 192 payments |
+| **Paid Total** | **20** | 10.8% of all 185 payments |
+| **Organic-Attributable** | **166** | 89.7% of all 185 payments |
 
 ---
 
-## Tier Classifications (W44)
+## Tier Classifications (W45)
 
-**Note:** Per-page UTM campaign breakdown not available (site-level run only). Page-type tier classifications held from W41/W42 based on pattern evidence and site-level organic intent rate (5.45%).
+**Note:** W45 classifications held from prior weeks — Diwali suppression does not change tier (temporary event, not structural). Page-type organic intent rate 2.30% is anomalously low due to Diwali; not used for tier demotion.
 
-### 🟢 Goldmines (2 pages — protect + amplify)
+### 🟢 Goldmines (2 — protect + amplify)
 
 | URL | Notes |
 |---|---|
-| /treatments/cbt-therapy | Consistent high-intent treatment page; confirmed W10+ |
-| /doctors/* cluster + find-therapist | Doctor listing hub — majority of organic booking intent; P2 CONFIRMED W10+ |
+| /treatments/cbt-therapy | Consistent high-intent; confirmed W10+ |
+| /doctors/* cluster + find-therapist | Doctor hub — majority of organic booking intent; P2 CONFIRMED W10+ |
 
-### 🟡 Rockets (5 pages — drive traffic)
+### 🟡 Rockets (5 — drive traffic)
 
 | URL | Notes |
 |---|---|
 | /disorders/anxiety + /treatments/anxiety | P1 anxiety cluster — stable organic intent |
 | /disorders/depression | Core condition page — organic traffic anchor |
-| /assessments/* hub | Assessment Completed W44: 553 ALL-TIME RECORD — apex app engagement funnel |
+| /assessments/* hub | W45: 468 completions (Diwali dip from ATH 553 W44) |
 | /doctors/psychologists-in-[city] | Regional doctor pages — geo-conversion driven |
 | /blog/* (top posts) | Informational → assessment → booking funnel confirmed |
 
@@ -92,51 +91,47 @@
 | URL | Notes |
 |---|---|
 | App: /consult/home | HIGH FRICTION (dead clicks CRITICAL PERSISTENT — see UX-FRICTION-PAGES.md) |
-| App: Assessment flow | W44 ALL-TIME RECORD 553 completions — strongest signal in history |
-| App: Stress Tracker | 72 starts W44 (+26.3% WoW) — growing tool engagement |
-| App: Journey Task | 36 W44 — 3rd consecutive WoW increase; recovery confirmed |
+| App: Assessment flow | 468 W45 — Diwali dip from ATH; structural trend intact |
+| App: Stress Tracker | 58 W45 (Diwali -19.4% from 72) |
+| App: Journey Task | 34 W45 — holding |
 
-### 🔴 Leaky Buckets (0 classified — site-level insufficient for per-page leaky detection)
+### 🔴 Leaky Buckets (0 — site-level insufficient for per-page detection)
 
-No per-page UTM data this week. Leaky Bucket audit deferred to next per-page run.
+No per-page UTM data this run. Leaky Bucket audit deferred.
 
-### ⚫ Dead Weight (1 — no organic intent, no engagement)
+### ⚫ Dead Weight (1)
 
 | URL | Notes |
 |---|---|
-| /lp/* pages | Paid landing pages — not organic SEO pages; excluded from organic tier |
+| /lp/* pages | Paid landing pages — not organic SEO; excluded |
 
 ---
 
-## W44 Key Signals for Strategist
+## W45 Key Signals for Strategist
 
 ### 🔥 WINS
-1. **REVENUE RECOVERY: Organic payments +21.0% WoW** (167 vs 138). Full recovery from W43 Navratri/Dussehra crash. Total payments 192 = strongest week since W41 period.
-2. **Assessment ALL-TIME RECORD: 553** (+6.3% WoW vs W43 520). 3rd consecutive WoW increase. App top-of-funnel at strongest point in site history.
-3. **chatgpt.com P5 W11 CONFIRMED: 84 unique book clicks** (+10.5% WoW). 11 consecutive weeks of AI search signal. 2 payments = continued revenue signal.
-4. **mindtalk_web RECOVERY: 2 payments** (from W43 zero). True SEO attribution signal alive despite UTM chain breakage.
-5. **Geographic DIVERSIFICATION: Karnataka share compressed** 44.8%→31.3% while total organic clicks grew +12.9%. Growth is spreading across Maharashtra, Delhi, Telangana, Tamil Nadu.
-6. **Journey Task 3rd consecutive recovery** (36 vs 33 vs 29). Multi-week crash W38-W41 fully resolved.
+1. **DIWALI PARADOX CONFIRMED: Organic payments held FLAT** (-0.6%, 166 vs 167 W44). Festival browsing surge did NOT convert, but existing high-intent pipeline stayed resilient. POSITIVE structural signal — conversion quality high.
+2. **Dead rate 9.01% — FIRST BELOW 10% THRESHOLD** (W41: 10.4%, W42: 10.7%, W43: 10.6%, W44: 10.22%, W45: 9.01%). Multi-week UX improvement trend confirmed.
+3. **Visitors +11.8% (14,165)** — Diwali brought large curious audience. TAM exposure increased even if conversion intent suppressed.
+4. **Karnataka organic dominance maintained: 106 clicks = 32.5% of organic** — holding top-state share through festival week.
 
 ### 🔴 CRITICAL WARNINGS
-1. **Dead rate 10.22% — ABOVE THRESHOLD 4th consecutive week** (W41: 10.4%, W42: 10.7%, W43: 10.6%, W44: 10.22%). Rate falling slowly but not below 10%. /home dead clicks CRITICAL PERSISTENT — 8 weeks unresolved.
-2. **UTM chain BROKEN 17+ weeks** — 156/192 payments (81.3%) undefined utm_medium. Cannot attribute organic revenue by page or campaign. ESCALATE to dev team.
-3. **Google Ads paid payments jumped: 20 vs W43 13** (+53.8%). Paid spend increasing — organic/paid gap narrowed. Watch that paid isn't cannibalizing organic intent signals.
+1. **Rage clicks +18.6% (261 vs 220 W44)** — Spike during Diwali week. May indicate specific UI friction when browsing visitors encounter checkout/booking flow. No per-page breakdown available. Monitor W46 for persistence.
+2. **UTM chain BROKEN 18+ weeks** — 158/185 (85.4%) undefined. Worsening from 81.3% W44. ESCALATE to dev team.
+3. **P8 Kerala: ABANDONED** — 3 clicks W45 (4th consecutive step-back: W41 ~33, W42 ~44, W43 19, W44 12, W45 3). Pattern non-recoverable. HOLD all T5 Kerala proposals.
+4. **P21 Haryana: REVERTED TO MONITOR** — 2 clicks W45. W3 confirmation failed.
+5. **ChatGPT clicks -50% (42 vs 84 W44)** — Diwali dip; top destinations: online-psychologist-india (6), online-psychiatry (6), therapists-india (3). NOT structural — P5 MAJOR CONFIRMED maintained.
 
-### 📊 GEOGRAPHIC SHIFT (W44 notable)
-- Karnataka share dropped from 44.8% (W43) to 31.3% (W44) of organic clicks
-- **NOTE:** W43 geo was measured from TOTAL book clicks (paid+organic), W44 from organic-only. Methodology difference partially explains the shift. Karnataka absolute organic volume: ~216 clicks W44.
-- Maharashtra now 10.4% share (72 clicks) — P19 W4 → PROMOTE TO CONFIRMED
-- Delhi NCT: 63 clicks (9.1%) — approaching top-3 market
-- Telangana: 46, TN: 42 — language markets stable despite overall Karnataka compression
+### 📊 GEOGRAPHIC (W45 organic book clicks)
+Karnataka 106 (32.5%) | Delhi 32 (9.8%) | Maharashtra 30 (9.2%) | Tamil Nadu 23 (7.1%) | Telangana 22 (6.7%) | UP 9 | Rajasthan 7 | MP 7 | WB 6 | Odisha 4 | Bihar 3 | Kerala 3 | Haryana 2
 
 ### 🗓️ SEASONAL NOTE
-W44 = first full recovery week post-Dussehra (Oct 13). W43 Navratri/Dussehra effect fully cleared. W44 data is clean baseline. Next holiday: Diwali is Oct 29 (W45 starts Oct 28). W45 may show Diwali seasonal dip — PLAN FOR W45 DATA ANOMALY.
+W45 = Diwali week (Oct 29, 2026). Full festival suppression expected and observed. W46 (Nov 4–10) should show RECOVERY. Treat W45 as anomaly baseline; do NOT use 2.30% intent rate for trend analysis. W44 5.45% remains structural baseline.
 
 ---
+
+## Previous Week Reference (W44)
+Unique visitors 12,672 | Organic book clicks 690 | Organic payments 167 | Organic bookings 207 | chatgpt.com unique book clicks 84 | Assessment Completed 553 (ATH) | Journey Task 36 | Dead rate 10.22% | mindtalk_web payments 2
 
 ## Previous Week Reference (W43)
 Unique visitors 12,207 | Organic book clicks 611 | Organic payments 138 | Organic bookings 178 | chatgpt.com unique book clicks 76 | Assessment Completed 520 | Journey Task 33 | Dead rate 10.6% | mindtalk_web payments 0
-
-## Previous Week Reference (W42)
-Unique visitors 12,488 | Organic book clicks 644 | Organic payments 200 | Organic bookings 228 | chatgpt.com unique book clicks 44 | Assessment Completed 515 (prior record) | Journey Task 29 | Dead rate 10.7% | mindtalk_web payments 1

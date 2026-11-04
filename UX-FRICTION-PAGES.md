@@ -97,3 +97,34 @@
 - W39: Dead rate 11.1% (site) — crossed threshold
 - W37: /home dead clicks began (now 8 weeks unresolved — CRITICAL)
 - W36: Journey Task crash deepened (now fully recovered W42-W44)
+
+---
+## W45 UX Friction Update (Oct 28–Nov 3, 2026 — Diwali Week)
+
+### Site-Level
+| Metric | W45 | W44 | WoW | Notes |
+|---|---|---|---|---|
+| Rage clicks (unique) | 261 | 220 | +18.6% ⚠️ SPIKE | Diwali-week visitors may be hitting non-converting pages |
+| Dead clicks (unique) | 1,276 | 1,295 | -1.5% ✅ | Continuing improvement |
+| Dead rate | 9.01% | 10.22% | -1.21pp ✅ | FIRST BELOW 10% THRESHOLD |
+
+### Rage Click Spike Analysis
+- **261 rage clicks W45 (+18.6% vs W44 220)** — spike during Diwali festival week
+- Hypothesis: Higher volume of curious/non-converting visitors encountering checkout/booking friction → rage clicks
+- 14,165 visitors W45 (+11.8%) with 326 organic book clicks (-52.7%) = more frustrated non-converters
+- No per-page rage breakdown available this run — cannot pinpoint specific page(s)
+- **Action: Monitor W46 for normalization** — if rage clicks remain above 240 in a non-Diwali week, escalate for per-page investigation
+
+### Per-Page Friction (est from W44 carry-forward — no W45 per-page data)
+| Page | W45 (est) | W44 | Trend |
+|---|---|---|---|
+| /home dead | ~679 (est) | ~679 | 🔴 CRITICAL STABLE — UNRESOLVED 9W |
+| /consult/checkout dead | unknown | unknown | 🔴 MONITOR |
+| /consult/appointments dead | ~102 (est) | ~102 | 🟢 RESOLVED — holding |
+| /consult/find-therapist dead | ~129 (est) | ~129 | 🟡 STABLE PERSISTENT |
+| booking/* rage | ~35 (est) | ~35 | 🟢 IMPROVED |
+| /home rage | ~17 (est) | 17 | 🟢 STABLE |
+| **NEW: Rage spike W45** | 261 total | 220 total | ⚠️ INVESTIGATE W46 |
+
+### Historical Friction Notes (append)
+- W45: Dead rate 9.01% — FIRST BELOW 10% THRESHOLD (5-week downtrend confirmed: 10.4%→10.7%→10.6%→10.22%→9.01%). Rage clicks spiked +18.6% (261) during Diwali — Diwali factor likely; monitor W46.

@@ -246,3 +246,49 @@
 - Pattern 15 (Delhi) still on watch; P18 (UP) at W3
 - Confidence: MEDIUM (aggregate signal strong but no single-market breakthrough)
 
+
+---
+## 2026-11-04 (W45) — T19 Proposals
+
+**NOTE:** W45 = Diwali week. Organic book clicks 326 (-52.7% from W44 690). All click volumes anomalously low. Proposals below are based on STRUCTURAL patterns + available W45 signal. Do NOT use W45 absolute volumes for urgency ranking — use W44 baseline.
+
+### P1: /doctors/psychologists-in-delhi [IMMEDIATE — Delhi 32 organic even during Diwali]
+- Signal: Delhi NCT 32 organic book clicks W45 (9.8% share) — HELD even during Diwali (-49% only vs -52.7% site avg)
+- Delhi surpassed Maharashtra for first time (32 vs 30 W45) — structural demand
+- therapists-in-delhi: 9 clicks W45 (strong individual page signal during festival)
+- Proposal: Expand /doctors/psychologists-in-delhi with subspecialty pages + neighbourhood-level targeting (Dwarka, Rohini, Vasant Kunj)
+- Confidence: HIGH (P15 W6+ sustained; Delhi showing Diwali-resilience)
+- T5 priority: HIGH
+
+### P2: /doctors/psychiatrists-in-mumbai [HIGH — Mumbai Diwali-resilient]
+- Signal: Maharashtra 30 organic W45 (-58.3% Diwali); Mumbai dominant in Maharashtra
+- P19 Maharashtra CONFIRMED — holds through Diwali dip
+- Mumbai psychiatrist page missing; online-psychiatry got 6 ChatGPT clicks W45
+- Proposal: Create /doctors/psychiatrists-in-mumbai (online + offline hybrid)
+- Confidence: HIGH (P19 CONFIRMED; ChatGPT-driven demand for psychiatry)
+- T5 priority: HIGH
+
+### P3: FAQ schema expansion for ChatGPT-dominant pages [AI CITATION — P5 MAJOR]
+- Signal: ChatGPT top W45 destinations: online-psychologist-india (6 clicks), online-psychiatry (6 clicks), online-therapists-india (3 clicks)
+- These 3 pages are receiving disproportionate AI search traffic — need FAQ schema to reinforce AI citations
+- Proposal: Add structured FAQ schema (5-7 Q&A pairs) to these 3 pages for AI citation capture
+- Confidence: HIGH (P5 MAJOR CONFIRMED W11; Perplexity 8/10 from T17)
+- T5 priority: HIGH — AI citation optimization is highest-ROI content action
+
+### P4: Tamil Nadu specialist expansion [STRUCTURAL — Tamil W11 CONFIRMED]
+- Signal: Tamil Nadu 23 organic clicks W45 (7.1% share — HELD well through Diwali)
+- P1 Tamil confirmed W11 — Tamil-language pages consistently deliver
+- Proposal: Expand Tamil specialist cluster: /doctors/psychologists-in-coimbatore + Tamil-language CBT page
+- Confidence: MEDIUM-HIGH (P1 Tamil W11 CONFIRMED, TN 23 W45 Diwali-resilient)
+- T5 priority: MEDIUM
+
+### P5: ADHD + Bangalore specialist page [TRENDING — 7 clicks organic W45]
+- Signal: ADHD-related pages getting 7+ organic clicks during Diwali week (trending subcategory)
+- Bangalore + ADHD intersection underserved on current site
+- Proposal: /disorders/adhd-bangalore or expand ADHD treatment page with Bangalore specialist block
+- Confidence: MEDIUM (Diwali-week signal; validate W46)
+- T5 priority: MEDIUM
+
+### ABANDONED THIS WEEK
+- ~~P8 Kerala proposals~~ — P8 ABANDONED W45 (4th step-back, 3 clicks). PERMANENT HOLD.
+- ~~P21 Haryana proposals~~ — P21 REVERTED TO MONITOR (2 clicks, W3 confirmation failed).
