@@ -54,3 +54,35 @@
 **Chrome stall (W20):** Same condition as W19 — 2 browsers connected but unattended mode cannot select. AI citation data carried over from W19 (Perplexity 8/10). BACKLOG item logged: CHROME-STALL-2026-10-29.
 
 **Content gap queued:** Manastha 211-page sitemap → deep-crawl topic audit recommended for Strategist
+
+---
+
+## W22 — 2026-11-05
+
+**DataForSEO status:** ✅ WORKING (first working run after 7 consecutive blocked weeks W15–W21)
+
+### Competitor Keyword Counts (DataForSEO ranked_keywords/live, India, EN)
+
+| Domain | Keywords | vs W15 (2026-09-17) |
+|---|---|---|
+| amahahealth.com | 1,491 | baseline |
+| yourdost.com | 101 | baseline |
+| betterhelp.com | 13,302 | baseline |
+| manastha.com | 101 | baseline |
+| mfine.co | 15,548 | baseline |
+| mindtalk.in | 2,489 | baseline |
+
+Note: W16–W21 used sitemap counting (DataForSEO blocked). W22 is first DataForSEO comparison vs W15 snapshot (2026-09-17).
+
+### Top 3 Content Gaps Identified
+
+1. **"therapist near me"** — Vol: 60,500 | Amaha: top-10 | Mindtalk: absent → HIGHEST PRIORITY
+2. **"psychiatrist online consultation"** — Vol: 18,100 | amahahealth.com top-5 | mindtalk.in absent
+3. **"cognitive behavioral therapy india"** — Vol: 8,100 | Multiple competitors ranking | mindtalk.in thin coverage
+
+### Key Observations
+- mfine.co (15,548 KWs) and betterhelp.com (13,302 KWs) vastly outrank everyone on keyword breadth
+- Mindtalk.in (2,489 KWs) ahead of Amaha (1,491) on keyword count but losing on volume-weighted queries
+- YourDOST and Manastha both at 101 KWs — minimal organic footprint
+- Sister-domain: cadabamshospitals.com pulling organic traffic on depression/psychiatry queries away from mindtalk.in
+

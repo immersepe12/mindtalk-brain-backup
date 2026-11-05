@@ -7051,3 +7051,28 @@ MERGE-PR-21-24-27-52-53 (day 11), DFSEO-402-TOPUP-02, BLOG-INDEXATION-VERIFY-01 
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-04-pre-t20.
+
+---
+## T20 2026-11-05 (Thu) — scheduled run (15:18 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (0.11s). Ship mode = PR.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24-27-52-53 | cache-busted curl 11-05: /blogs/fear-of-abandonment 404, /doctors/adhd-specialists 404 (unmerged) | REAL, Kushal merges, carried (day 12) |
+| DFSEO-402 / DFSEO-RANK-PULL-RERUN-01 | T10 11-05: T17 got live DataForSEO data 13:44 UTC; likely recovered, rank-pull re-run queued (not mine) | payment flag likely resolvable; not re-escalated |
+| T2 vs CORE-UPDATE-NOV26 sensor conflict | T10 notes it; T12 tiebreaker Apply-on 11-08 | carried, monitor only |
+| Others (INDEXATION-VERIFY, FILTERCITY-FIX, COLLISION-GATE) | unchanged vs T10 11-05 | carried |
+
+## AUTO-FIXED
+- None needed. Untiered briefs: 16, all REFRESH-/CONSOLIDATE-/live-page briefs (live by design, owned by T3/T11) — left in place; 0 untiered NEW-. Live-slug NEW- blog briefs to archive: spot-checked blogs/fear-of-abandonment, drug-addiction-treatment, is-online-therapy-confidential = 404 (unshipped). new-content-opportunities.json 2026-11-02 (3d, inside 21d limit) so no discovery-stale flag. No Chrome/paid-mining flag.
+
+## STANDING JOB — BRIEF QUEUE
+Shippable-and-safe /blogs/ queue still below floor 6 (same state as 11-04 screening: YMYL-adjacent, vetoed, or held). No refill: T10 bars new NEW- blog briefs until unindexed blogs index; Nov-26 core update rolling; per-query GSC validation (MINE-TRUNCATION-ABSENCE-01) not runnable in device shell. 0 briefs written, Verifier not spawned.
+
+## ESCALATED (carried, not new)
+MERGE-PR-21-24-27-52-53 (day 12), BLOG-INDEXATION-VERIFY-01 (GSC auth), BRIEF-COLLISION-GATE-01, CITY-LISTING-BRIEFS-FILTERCITY-FIX-01.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-05-pre-t20.

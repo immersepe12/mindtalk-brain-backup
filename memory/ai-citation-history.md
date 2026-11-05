@@ -39,3 +39,21 @@ Google AI OV: NOT CHECKED (Chrome stall)
 | Assessment queries A1-A8 | UNTESTED (Chrome stall) | — |
 
 Note: W20 citation check blocked again by Chrome selection stall. Three consecutive weeks now (W18, W19, W20) with partial or no citation data. Resolving Chrome stall is high priority — it is blocking the AI citation track entirely. Action: human needs to manually reconnect/deduplicate Chrome extension so only 1 browser appears, or Kushal should manually run a citation check.
+
+---
+
+## W22 — 2026-11-05
+
+| Platform | Score | vs Prior |
+|---|---|---|
+| Perplexity | 7/10 | ↑ from 6/10 (W17, 2026-10-08) |
+| Google AI Overview | 0% (not triggering) | — |
+| ChatGPT | SKIPPED (auth) | — |
+| Claude.ai | SKIPPED (auth) | — |
+
+**Key event:** Q3 "psychiatrist near me bangalore" — NEW citation gain on Perplexity. First gain after sister-domain routing issue identified in prior runs.
+
+**Perplexity breakdown:** Q1❌ Q2✅ Q3✅🎉 Q4✅ Q5❌ Q6✅ Q7❌ Q8✅ Q9✅ Q10✅
+
+**Assessment queries A1–A8:** BLOCKED (free limit hit)
+
