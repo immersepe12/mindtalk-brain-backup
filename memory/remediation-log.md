@@ -7076,3 +7076,28 @@ MERGE-PR-21-24-27-52-53 (day 12), BLOG-INDEXATION-VERIFY-01 (GSC auth), BRIEF-CO
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-05-pre-t20.
+
+---
+## T20 2026-11-06 (Fri) — scheduled run (15:19 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify). www home 200 (0.29s). Ship mode = PR; T9 11-06 shipped PR #74 (awaiting merge).
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| MERGE-PR-21-24-27-52-53 | cache-busted curl 11-06: /blogs/fear-of-abandonment 200 (was 404 through 11-05), /doctors/adhd-specialists 200 | PARTLY RESOLVED: PR #27 content is live. Remaining open PRs incl. #74 still need Kushal; verify per-PR next run |
+| Sweep of 136 NEW- briefs vs live (blogs / doctors / doctors-listings paths) | 1 x 200 (fear-of-abandonment), 35 listing slugs 308 -> doctors/<slug> 404 (unshipped), 100 x 404 | only 1 shipped |
+
+## AUTO-FIXED
+- Archived briefs/NEW-fear-of-abandonment-brief.md -> briefs/archive/ (NEW- + slug 200 = shipped). Moved, not deleted.
+- Untiered briefs: 9 non-NEW (REFRESH-/audit/live-page briefs) left in place (live by design, T3/T11 own). 0 untiered NEW-.
+- new-content-opportunities.json 2026-11-02 (4d, inside 21d) -> no discovery-stale flag. No Chrome / paid-mining flag.
+
+## STANDING JOB — BRIEF QUEUE
+Nominally tiered /blogs/ NEW- briefs with 404 slug: 10 true blog briefs (can-stress-kill-you, conduct-disorder-in-adults, gender-identity-disorder, instant-anxiety-relief, stress-buster-games, yoga-for-anxiety-and-overthinking, therapy-cost-in-hyderabad + YMYL-adjacent/held: drug-addiction-treatment, which-doctor-to-consult-for-alcohol-addiction, vetoed is-online-therapy-confidential). ~90 more "NEW-" files are misfiled doctor-listing briefs (DOCTOR-LISTING-BRIEF-MISFILE-01), not blogs. Safely shippable still <6 and no refill: T10 bars new NEW- blog briefs until unindexed blogs index (fear-of-abandonment just went live: indexation check due), Nov-26 core update rolling, per-query GSC validation (MINE-TRUNCATION-ABSENCE-01) not runnable in device shell. 0 briefs written, Verifier not spawned.
+
+## ESCALATED (carried, not new)
+MERGE-PR (#24/#52/#53/#74 remaining, verify), BLOG-INDEXATION-VERIFY-01 (GSC auth), BRIEF-COLLISION-GATE-01, CITY-LISTING-BRIEFS-FILTERCITY-FIX-01, DOCTOR-LISTING-BRIEF-MISFILE-01 (T9 filed).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-06-pre-t20.
