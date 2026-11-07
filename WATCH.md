@@ -1970,3 +1970,6 @@ No watches added/closed. W-ASSESS-*-0925 midpoint reached 10-16: short-window de
 | W-HUBSPOKE-B1-1029 | FOMO, trust-issues, abandonment, situationship, domineering + 2 new spokes | PR #28 | baseline: what is fomo 10.5k impr/2 clk @10.3; trust issues meaning in hindi ~5k/0 @6.7–10 | Day-14 / Day-28 from deploy | |
 | W-HUBSPOKE-B2-1029 | attachment-styles, riasec-codes, introvert-ambivert | PR #29 | new pages | Day-42 from deploy | |
 | W-HI-BLOGS-1102 | /hi/blogs/* (6) | Hindi blog route | 'meaning in hindi' cluster ~7k impr / ~0 clk per 28d | Day-14 2026-11-16, Day-28 2026-11-30 | |
+
+
+<!-- 2026-11-07 T10: no watch changes; W-ASSESS x17 Day-42 still pending_evaluation (T12 Sun 11-08); CORE-UPDATE-NOV26-MONITOR-01 open. -->

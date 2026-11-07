@@ -7101,3 +7101,28 @@ MERGE-PR (#24/#52/#53/#74 remaining, verify), BLOG-INDEXATION-VERIFY-01 (GSC aut
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-06-pre-t20.
+
+---
+## T20 2026-11-07 (Sat) — scheduled run (15:20 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify, PR ship mode). www home 200 (0.17s), /blogs/fear-of-abandonment 200, /doctors/adhd-specialists 200. No 11-07 T9 ship; PRs #24/#52/#53/#74 still Kushal-gated per T10 11-07.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| Sweep of 135 NEW- briefs vs live /blogs/ | 0 x 200; all 404 (unshipped). fear-of-abandonment already archived 11-06 | nothing to archive |
+| Untiered NEW- briefs | 0 (every NEW- file has intent_tier) | nothing to classify |
+| Discovery stale | new-content-opportunities.json dated 11-02 (5d, inside 21d); no DISCOVERY STALE in 11-07 logs | no re-run |
+| Chrome / paid-mining | no flag in 11-07 logs | none |
+
+## AUTO-FIXED
+- None needed.
+
+## STANDING JOB — BRIEF QUEUE
+Tiered NEW- briefs with 404 slug that are true /blogs/: ~10 (can-stress-kill-you, conduct-disorder-in-adults, gender-identity-disorder, instant-anxiety-relief, stress-buster-games, yoga-for-anxiety-and-overthinking, therapy-cost-in-hyderabad, cbt-for-ocd, dbt-for-bpd, mind-therapy) + held/YMYL-adjacent (drug-addiction-treatment, which-doctor...alcohol-addiction, vetoed is-online-therapy-confidential). Remaining Tier A files are misfiled doctor/city-listing briefs (DOCTOR-LISTING-BRIEF-MISFILE-01). Safely shippable still <6; no refill: T10 11-07 bars new NEW- blog briefs until unindexed blogs index, Nov-26 core update rolling, per-query GSC validation (MINE-TRUNCATION-ABSENCE-01) not runnable in device shell. 0 briefs written, Verifier not spawned.
+
+## ESCALATED (carried, not new)
+MERGE-PR-21-24-27-52-53-74 (day 14), BLOG-INDEXATION-VERIFY-01 (GSC auth), BRIEF-COLLISION-GATE-01, CITY-LISTING-BRIEFS-FILTERCITY-FIX-01, DOCTOR-LISTING-BRIEF-MISFILE-01, CDC-EXCLUSION-BRIEF-POLICY-01, DUP-TITLE-RELATIONSHIP-301-01 (needs dev 301).
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-07-pre-t20.
