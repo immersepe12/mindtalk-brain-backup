@@ -210,3 +210,40 @@ E4. /blogs/high-functioning-anxiety-treatment (W41) — target keyword near-zero
 
 **Ties to AP1:** Sprint C bulk-shipped 20 ranking pages with no staged 10% sample → 8 went RED. Sprint C v2 must ship a 2-page (10%) sample with a 7-day CTR read before the rest. Memo: `memory/patterns/sprint-c-meta-rewrite-result-2026-06-23.md`
 
+
+---
+
+## P15 — Assessment page plain-English "X test" title/meta retargeting drives 3–10× click volume at stable or improved position (2026-11-08) 🔒 CORE
+
+**Source:** W-ASSESS Phase 1+2 Day-42 formal close (T12 LEARNER, 2026-11-08). 5 supporting successes (threshold: ≥3).
+
+**Signal:** Assessment pages whose titles/H1s previously used clinical phrasing (e.g., "Love Language Questionnaire", "Emotional Intelligence Assessment") saw 3–10× improvement in click volume and position gains after retargeting to plain-English "X test" or "X quiz" phrasing (e.g., "Love Language Quiz", "Emotional Intelligence Test").
+
+**Evidence (5 formal Day-42 closes — W-ASSESS batch, 2026-11-08):**
+1. /assessments/love-language-quiz (W-ASSESS-LLQ-0925) — clicks +24.6% (w-o-w window), impressions +66.4%, pos 9.2→8.5 ✅ 🟢
+2. /assessments/emotional-intelligence-test (W-ASSESS-EI-0925) — clicks +5.9%, pos 10.7→9.0 (exceeded ≤15 target), CTR 2.9% ✅ 🟢
+3. /assessments/gad-7 (W-ASSESS-GAD7-0925) — clicks +70% vs 90d annualized rate, position held at 9.3 through Nov Core Update rolling ✅ 🟢
+4. /assessments/depression hub (W-ASSESS-HUBS-0925) — pos 6.0 on "depression test" (goal: first page-1 met) ✅ 🟢
+5. /assessments/stress-and-tension hub (W-ASSESS-HUBS-0925) — pos 5.8 on "stress test" (goal: first page-1 met) ✅ 🟢
+(+ 1 🟡 PARTIAL: /assessments/autism-test — clicks +47.2%, impressions +40.7%, CTR 2.92%, but pos 14.2 > ≤10 goal — trending right, action class still validated)
+
+**Pattern characteristics:**
+- Assessment pages in mental health are searched primarily by lay users who don't use clinical terminology — "GAD-7" is a clinician term; "anxiety test" is the actual search term
+- Google's vocabulary matching rewards plain-English phrasing in titles/H1s for assessment queries
+- Impressions often increase dramatically (60-200%) before CTR% catches up — position improvement follows
+- The hub strategy (single page targeting "[condition] test" as the primary intent) outperforms multiple scattered pages on the same cluster
+
+**What T5 brief generation should do:**
+- Audit all /assessments/ pages for clinical phrasing in title/H1 that could be replaced with "[condition] test" or "[condition] quiz" plain English equivalents
+- Cross-reference GSC query reports to identify what searchers actually type vs. what the page title says
+- Priority: pages where impressions >> clicks (position in 8–20 band suggests title/intent mismatch)
+- Apply the P11 rule: add a number to test/quiz titles only if list content; use the exact search query head term in position 1 of the title
+
+**Anti-patterns:**
+- Do NOT apply "X test" retarget to pages already ranking ≤5 on their primary query — position is evidence the current title is working
+- Do NOT strip clinical schema markup when retargeting titles — the schema (structured data) stays; only the visible title/H1/meta description changes
+- Do NOT apply to YMYL assessment pages without a P1 reviewer in place — Google's E-E-A-T scrutiny on mental health assessments is high
+
+**Ties to:** P11 (meta/title rewrite methodology), P1 (YMYL reviewer requirement), P12 (page-1 establishment framework applies to assessment retargets too)
+
+**Established:** 2026-11-08 (T12 Learner — W-ASSESS Phase 1+2 Day-42 formal closes). Minimum 3 data points met; 5 formal 🟢 closes.

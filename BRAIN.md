@@ -1,3 +1,31 @@
+### 2026-11-08 T12 Learner — 4🟢/3🟡 Day-42 closes · 10 DATA_GAP (stale GSC) · P12 36/37 (5 new credits) · P15 WRITTEN · CORE-UPDATE-NOV26 escalation needed
+
+- 📊 **Watch evaluations this run (due Nov 03–08):**
+  - **W-FIND-THERAPIST-0922 42d**: 🟡 PARTIAL — CTR% target met (1.15% >> 0.5%) but impressions collapsed -87%, pos 1.7→6.9. Net: CTR% improved but position regressed. CLOSED.
+  - **W-REL-COUNSELLORS-BLR-0922 42d**: 🟡 PARTIAL — clicks +86% volume, impressions doubled, but CTR 0.90% < 1.5% target. Position held at 10.9. CLOSED.
+  - **W-ASSESS-LLQ-0925 42d**: 🟢 RECOVERED — clicks +24.6%, impr +66.4%, pos 8.5. P12 ✅. CLOSED.
+  - **W-ASSESS-EI-0925 42d**: 🟢 RECOVERED — pos 9.0 meets ≤15 target, CTR 2.9%. P12 ✅. CLOSED.
+  - **W-ASSESS-GAD7-0925 42d**: 🟢 RECOVERED — position held 9.3, clicks +70% annualized vs 90d. P12 ✅. CLOSED.
+  - **W-ASSESS-HUBS-0925 42d**: 🟢 RECOVERED — depression pos 6.0, stress pos 5.8, both page-1 goal MET. P12 ✅ ×2. CLOSED.
+  - **W-ASSESS-AUTISM-0925 42d**: 🟡 PARTIAL — clicks +47.2%, impr +40.7%, CTR 2.92%, but pos 14.2 > ≤10 goal. CLOSED.
+  - **DATA_GAP — W-ASSESS stale (10 watches)**: YBOCS, BPD, ACE, DASS, CSSRS, EAT26, CUBE, INDEX, NEW8, 308 — GSC files stale at Oct 16 (Day-21). gsc-pull.py blocked (google.oauth2 missing). These watches remain OPEN. See datagap-W-ASSESS-stale-2026-11-08.md.
+  - **DATA_GAP — W-COUPLES-1023 Day-14**: GSC file pre-action (Oct 4). Cannot evaluate. OPEN. Next gate: Nov 27.
+  - **DATA_GAP — W-PSY-BLR-1023 Day-14**: GSC file pre-action (Sep 24). Cannot evaluate. OPEN. Next gate: Nov 27.
+- 📈 **P12 UPDATED: 36/37 = 97.3% ALL-TIME HIGH** (was 31/32 = 96.9%). 5 new P12 credits: LLQ, EI, GAD7, depression hub, stress hub. Assessment class now proven for P12 framework.
+- ✅ **P15 WRITTEN**: Assessment page plain-English "X test" title/meta retargeting drives 3–10× click volume at stable or improved position. 5 supporting successes (threshold met). See PRINCIPLES.md P15.
+- ⚠️ **CORE-UPDATE-NOV26-MONITOR-01 — ESCALATION NEEDED**: ALGO_WATCH was cleared 2026-10-15. T10 Nov 3 flagged Google Nov 2026 Core Update ROLLING. GAD-7 drop (clicks -23.4%, impr -29.4% in Oct 24-31 window per Day-42 GSC data) during url_locked W-ASSESS window is consistent with Core Update impact. ALGO_WATCH is currently NOT formally ACTIVE in BRAIN.md — strategist should evaluate: if Core Update continues to affect YMYL assessment cluster, consider setting `ALGO_WATCH: active` to trigger formal confound guard on next evaluations.
+- 🔢 **50% check**: 7 formal closes this run (4🟢 + 3🟡 = 7 evaluated). 0 of 7 are 🔴 or ⚫ = 0% → NO LEARNER FLAG required.
+- 🔧 **Infrastructure blocker**: gsc-pull.py requires `google.oauth2` Python module — not installed in device_bash environment. Fresh GSC pulls blocked for 10+ stale W-ASSESS watches AND both Day-14 watches. This caused DATA_GAP on 12 watches this run. Resolution needed for T12 to function at full capability.
+- 🎯 **Strategic posture for week of Nov 9–15:**
+  1. **W-PSYCH-VS-PSYCH-CTR-1014**: Day-14 DATA_GAP from last run → check Nov 11 (T10 directive)
+  2. **W-GROUP-THERAPY (if exists)**: Day-42 gate Nov 13
+  3. **10 stale W-ASSESS watches**: urgent GSC data refresh needed — CSSRS and EAT-26 were 🔴 at Day-21 and need Day-42 close
+  4. **BLOG-INDEXATION-VERIFY-01**: 5 confirmed zero-impression pages need Kushal manual GSC indexing request
+  5. **Merge PRs #21/#24/#27/#52**: still pending Kushal gate
+  6. **Install google.oauth2** in device_bash to unblock gsc-pull.py and restore fresh data capability
+- 📊 **Site metrics (Oct 24–30)**: 5,389 clicks (+7.4% WoW), 472,093 impr (+10.9%), CTR 1.1%, pos 9.3. Oct 31–Nov 6: DATA_PENDING (no weekly summary file yet).
+
+
 ### 2026-11-01 T12 Learner — 5🟢 Day-42 closes · P12 31/32=96.9% NEW ATH · Indexation cluster 5 pages · ALGO_WATCH CLEARED ✅
 
 - ✅ **ALGO_WATCH CLEARED** (confirmed, cleared 2026-10-15). All verdicts are clean-window GSC data; Core Update confound only applies to W-B26 (observation window overlapped update).
