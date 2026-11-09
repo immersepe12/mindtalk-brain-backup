@@ -7151,3 +7151,31 @@ MERGE-PR-21-24-27-52-53-74 (day 15), BLOG-INDEXATION-VERIFY-01 (GSC auth), BRIEF
 
 ## Constraint check
 No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-08-pre-t20.
+
+---
+## T20 2026-11-09 (Mon) — scheduled run (15:19 UTC)
+
+**Deploy health:** Vercel gate retired (Amplify, PR ship mode). www home 200 (0.17s), /blogs/fear-of-abandonment 200.
+
+## RULE 1 — VERIFICATION
+| Flag | Verification | Verdict |
+|---|---|---|
+| Sleep-cycle CRITICAL (T1 pos 3->100) | T2 same-day GSC = noise (clicks +600%, impr -12%); already removed from flagged-drops by T10 | already closed as tracker artefact (SLEEP-CYCLE-NOISE-VERIFY-01 stays with T1) |
+| 13 NEW- true-blog briefs vs live /blogs/<slug> (cache-busted curl) | 12 x 404 (can-stress-kill-you, cbt-for-ocd, dbt-for-bpd, gender-identity-disorder, instant-anxiety-relief, mind-therapy, stress-buster-games, yoga-for-anxiety-and-overthinking, tapping-therapy, online-couple-therapy-india, conduct-disorder-in-adults, therapy-cost-in-hyderabad); 0 live | nothing to archive |
+| REFRESH-/CONSOLIDATE- briefs | pages live by design | NOT archived (per registry) |
+| Untiered briefs | NEW-online-couple-therapy-india has no intent_tier line (slug 404) | see below |
+| Discovery stale | new-content-opportunities.json 11-09 04:48; no DISCOVERY STALE | no re-run |
+| Chrome / paid-mining | no flag in 11-09 logs | none |
+| Supermetrics GA4 expired | credential/billing | ESCALATE (already SUPERMETRICS-GA4-RENEW-01 from T10) |
+
+## AUTO-FIXED
+- None needed.
+
+## STANDING JOB — BRIEF QUEUE
+Tiered true /blogs/ briefs with 404 slug: ~10 (Tier B except tapping-therapy Tier A); held/YMYL-adjacent: drug-addiction-treatment, which-doctor-to-consult-for-alcohol-addiction; vetoed: is-online-therapy-confidential. Safely shippable still <6. No refill: T10 11-09 rule bars new blog briefs until unindexed blogs index (indexation, not content, is the constraint), Nov-26 core update rolling, per-query GSC validation (MINE-TRUNCATION-ABSENCE-01) not runnable in device shell. 0 briefs written, Verifier not spawned.
+
+## ESCALATED (carried, not new)
+MERGE-PR-21-24-27-52-53-74 (day 16), BLOG-INDEXATION-VERIFY-01 (GSC auth), SUPERMETRICS-GA4-RENEW-01 (new from T10), BRIEF-COLLISION-GATE-01, CITY-LISTING-BRIEFS-FILTERCITY-FIX-01, DOCTOR-LISTING-BRIEF-MISFILE-01, CDC-EXCLUSION-BRIEF-POLICY-01, DUP-TITLE-RELATIONSHIP-301-01.
+
+## Constraint check
+No src/** edit, no push, no scripts edit, no billing/credential write, no YMYL shipped, nothing deleted, 0 shipped. Backup: logs/remediation-log.backup-2026-11-09-pre-t20.

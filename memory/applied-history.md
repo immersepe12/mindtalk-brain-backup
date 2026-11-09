@@ -277,3 +277,5 @@ Kushal, verbatim: "these decisions must be taken by the brain so things are auto
 2026-11-08T20:05+05:30 | STRATEGIST-APPLY-PASS | t5-brief-created-precheck | Verifier VETO -> renamed .vetoed-by-verifier | applied 0
 2026-11-08T20:05+05:30 | STRATEGIST-APPLY-PASS | t10-system-change-compatibility-guard | NEEDS_HUMAN unchanged (Apply-on 11-01, 7d overdue <14d) | applied 0
 2026-11-08T20:05+05:30 | STALE-SCAN | clean (compat-guard 7d overdue; STALE-ALERT fires 2026-11-15)
+2026-11-09T20:00+05:30 | STRATEGIST-APPLY-PASS | 0 eligible (3 proposals Apply-on 11-15; compat-guard NEEDS_HUMAN 8d) | applied 0
+2026-11-09T20:00+05:30 | STALE-SCAN | clean

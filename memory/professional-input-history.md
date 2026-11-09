@@ -132,3 +132,14 @@ Pages picked for clinician voice recording each week. Used to prevent re-picking
 | /treatments/rtms-therapy | dr-arun-kumar | 65 | YMYL; competitor TMS video gap; near-me queries; 62d |
 | /illnesses/schizophrenia | dr-thejus-kumar | 65 | YMYL p1 0%CTR; competitor video gap; 62d |
 | /illnesses/substance-use-disorder | vishal-kasal | 60 | YMYL; never picked; near-me treatment queries |
+
+## 2026-W46 (2026-11-09)
+
+| Week | Page | Reviewer | Selection score | Status |
+|------|------|----------|-----------------|--------|
+| 2026-W46 | /treatments/family-therapy | Dr. Swarupa Mohan Udgiri | 65 | brief_generated |
+| 2026-W46 | /illnesses/eating-disorder | Rangapriya Raghavan | 65 | brief_generated |
+| 2026-W46 | /treatments/online-therapy | Dr. Arun Kumar V | 55 | brief_generated |
+| 2026-W46 | /blogs/yoga-for-anxiety | Dr. Vishal Kasal | 55 | brief_generated |
+| 2026-W46 | /illnesses/stress-disorder | Abhimanyu Chandak | 45 | brief_generated |
+| 2026-W46 | /treatments/positive-psychology | Ms. Tejal Jaiswal | 45 | brief_generated |
